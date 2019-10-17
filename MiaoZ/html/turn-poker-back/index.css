@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    margin: 0 auto;
+    width: 800px;
+    height: 300px;
+    padding: 20px;
+}
+
+#wrap img {
+    width: 124px;
+    height: 140px;
+    margin: 2px;
+}
+
+
+/* img.rotate-animation : 即是img 也是img又有类名 rotate-animation */
+
+#wrap img.rotateY-animation {
+    animation: rotateAni 1s ease-in-out;
+}
+
+#wrap img.rotateX-animation {
+    animation: rotateHni 1s ease-in-out;
+}
+
+@keyframes rotateAni {
+    /* to相当于100% */
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotateHni {
+    /* to相当于100% */
+    to {
+        transform: rotateX(360deg);
+    }
+}

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #9bb13c;
+}
+
+.container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* translate(-50%, -50%)：往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置 
+    *transform：控制div的旋转（rotate ：3D旋转，skew：2D旋转）、缩放（scale）、移动（translate）
+    */
+    transform: translate(-50%, -50%);
+    width: 238px;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    border: 8px solid #000;
+    border-radius: 50%;
+    display: inline-block;/* inline-block：就是说他具有了行内元素的不换行特征，同时也具有块元素的可以设置宽高等特征 */
+    /*vertical-align这个是设置元素的垂直排列的 ，用来定义行内元素的基线相对于该元素所在行的基线的垂直对齐 top:对齐文本的顶部*/
+    vertical-align: top;
+}
+
+#l-ball {
+    background-color: #fff;
+    position: relative;
+    z-index: 50;
+    animation: close 4s ease infinite;
+}
+
+@keyframes close {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(20px)
+    }
+    35% {
+        transform: translate(20px)
+    }
+    55% {
+        transform: translate(0px)
+        
+    }
+    100% {
+        transform: translate(0px)
+    }
+}
+
+.face {
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    border-top-right-radius: 15px;
+}
+.face-l{
+    animation: friction 4s ease infinite;
+}
+
+@keyframes friction{
+    0% {
+        transform: rotateY(0)
+    }
+    19.9%{
+        transform: rotateY(0)
+    }
+    20% {
+        transform:rotateY(25deg)
+    }
+    30%{
+        transform: rotateY(-25deg)
+    }
+    40%{
+        transform: rotateY(0)
+    }
+    100% {
+        transform: rotateY(0)
+    }
+}
+.face::after {
+    content: '';
+    width: 18px;
+    height: 8px;
+    background-color: #badc58;
+    position: absolute;
+    left: -5px;
+    top: 20px;
+    border-radius: 50%;
+}
+
+.face:before {
+    content: '';
+    width: 18px;
+    height: 8px;
+    background-color: #badc58;
+    position: absolute;
+    right: -8px;
+    top: 20px;
+    border-radius: 50%;
+}
+
+.eye {
+    width: 15px;
+    height: 14px;
+    border-radius: 50%;
+    border-bottom: 5px solid #000;
+    position: absolute;
+}
+
+.eye-l {
+    left: 10px;
+}
+
+.eye-r {
+    right: 5px;
+}
+
+.mouth {
+    width: 30px;
+    height: 14px;
+    border-radius: 50%;
+    border-bottom: 5px solid #000;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform: translate(3px);
+    margin: auto;
+}
+
+#r-ball {
+    background-color: #fff;
+    position: relative;
+    z-index: 40px;
+    animation: close2 4s ease infinite;
+}
+
+
+.face-r {
+    left: 0;
+    top: 37px;
+}
+
+.face-r::after {
+    width: 10px;
+    height: 10px;
+    left: 5px;
+}
+
+.face-r::before {
+    width: 10px;
+    height: 10px;
+    right: -4px;
+}
+
+.eye-r-p {
+    border-top: 5px solid #000;
+    border-bottom: 0;
+}
+
+.kiss-m {
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    opacity: 0;
+    animation: kiss-m 4s ease infinite;
+}
+.mouth-r{
+    animation: van 4s ease infinite;
+}
+
+
+@keyframes close2{
+    0% {
+        transform: translate(0)
+    }
+    50% {
+        transform: translate(0px)
+    }
+    60% {
+        transform: translate(10px) rotate(15deg);
+    
+    }
+    67.5%{
+        transform: translate(-30px) rotate(-15deg);
+    }
+    75%{
+        transform: translate(-10) rotate(0)
+    }
+    100% {
+        transform: translate(0px)
+    }
+}
+
+@keyframes van{
+    0%{
+        opacity: 1;
+    }
+    65.9%{
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    75.1% {
+        opacity: 1;
+    }
+}
+@keyframes kiss-m {
+    0% {
+        opacity: 0;
+    }
+    65.9% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    75.1% {
+        opacity: 0;
+    }
+}
+
+
+.kiss {
+    width: 13px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border-left: 5px solid #000;
+}

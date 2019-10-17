@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5打击乐</title>
+    <style>
+        html {
+            /* css 继承 它下面的所有子元素字体大小都是10px */
+            font-size: 10px;
+            /* background: url(http://i.imgurl.com/b9r5sEL.jpg) bottom center; */
+            background-size: cover;
+        }
+
+        body,
+        html {
+            /* css reset 样式重置 */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            /*100%  80vh */
+            font-family: sans-serif;
+        }
+
+        .keys {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .key {
+            border: 4px solid #000;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 15px;
+            padding: 10px 5px;
+            width: 100px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, .4);
+            text-shadow: 0 0 5px black;
+        }
+
+        .key div {
+            display: block;
+            font-size: 40px;
+        }
+
+        .sound {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffc600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 音乐键盘 -->
+    <div class="keys">
+        <div class="key">
+            <div data-key="65">A</div>
+            <span class="sound">clap</span>
+        </div>
+        <div class="key">
+            <div data-key="83">S</div>
+            <span class="sound">hihat</span>
+        </div>
+        <div class="key">
+            <div data-key="68">D</div>
+            <span class="sound">kick</span>
+        </div>
+        <div class="key">
+            <div data-key="70">F</div>
+            <span class="sound">openhat</span>
+        </div>
+        <div class="key">
+            <div data-key="71">G</div>
+            <span class="sound">boom</span>
+        </div>
+        <div class="key">
+            <div data-key="72">H</div>
+            <span class="sound">ride</span>
+        </div>
+        <div class="key">
+            <div data-key="74">J</div>
+            <span class="sound">snare</span>
+        </div>
+        <div class="key">
+            <div data-key="75">K</div>
+            <span class="sound">tom</span>
+        </div>
+        <div class="key">
+            <div data-key="76">L</div>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+    <audio  data-key="65" src="sounds/clap.wav"></audio>
+    <audio  data-key="83" src="sounds/boom.wav"></audio>
+    <audio  data-key="68" src="sounds/hihat.wav"></audio>
+    <audio  data-key="70" src="sounds/kick.wav"></audio>
+    <audio  data-key="71" src="sounds/openhat.wav"></audio>
+    <audio  data-key="72" src="sounds/ride.wav"></audio>
+    <audio  data-key="74" src="sounds/snare.wav"></audio>
+    <audio  data-key="75" src="sounds/tink.wav"></audio>
+    <audio  data-key="76" src="sounds/tom.wav"></audio>
+
+    <script>
+
+        window.addEventListener('keydown', function (event) {
+            //console.log('keydown')
+            let key = event.keyCode;
+            //console.log(key);
+            const audio = document.querySelector(`audio[data-key="${key}"]`);
+            if (audio) {
+                audio.play();
+            }
+
+        });
+
+
+        window.addEventListener('click', function (event) {
+            let key = event.target.dataset.key;
+            const div=document.querySelector(`div[data-key="${key}"]`);
+            console.log(div);
+            //console.log(key);
+            const audio = document.querySelector(`audio[data-key="${key}"]`);
+            
+            if (audio) {
+                audio.play();
+            }
+
+        }, true);
+
+
+
+    </script>
+</body>
+
+</html>

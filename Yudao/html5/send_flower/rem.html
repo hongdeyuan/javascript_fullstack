@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+            function init() {
+                var width = document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = width / 10 + 'px';
+            }
+
+            init();
+            window.onresize = function (){
+                init();
+            }
+    </script>
+    <style>
+        /* ipone8 的整的一屏，高度20px rem
+        */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* html{
+            /* font-size: 41.4px; 默认值是16px 
+        } */
+        .box {
+            /* 100% rem vh 相对单位 px 绝对单位 */
+            width: 10rem;
+        }
+
+        .box,
+        .col-5 {
+            height: 20px;
+            background-color: green;
+        }
+
+        .col-1 {
+            width: 1rem;
+        }
+
+        .col-2 {
+            width: 2rem;
+        }
+
+        .col-3 {
+            width: 3rem;
+        }
+
+        .col-4 {
+            width: 4rem;
+        }
+
+        .col-5 {
+            width: 5rem;
+        }
+
+        .col-6 {
+            width: 6rem;
+        }
+
+        .col-7 {
+            width: 7rem;
+        }
+
+        .col-8 {
+            width: 8rem;
+        }
+
+        .col-9 {
+            width: 9rem;
+        }
+
+        .row {
+            /* 弹性布局 就可以让 内部的div 块元素在一行显示 */
+            display: flex;
+            margin: 5px 0;
+        }
+
+        /* 选择所有偶数列的元素 */
+        .row .box:nth-child(even) {
+            background-color: pink;
+        }
+
+        /* 10 整个宽度 5:5 二样式布局
+        8:2 左右 */
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="row">
+        <div class="box col-5"></div>
+        <div class="box col-5"></div>
+    </div>
+    <div class="row">
+        <div class="box col-8"></div>
+        <div class="box col-2"></div>
+    </div>
+    <div class="row">
+        <div class="box col-4"></div>
+        <div class="box col-3"></div>
+        <div class="box col-3"></div>
+    </div>
+</body>
+
+</html>

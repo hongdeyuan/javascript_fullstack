@@ -1,0 +1,13 @@
+{
+    "name": "stylus_douban",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile_stylus": "stylus -w common.styl -o common.css",
+        "start": "live-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

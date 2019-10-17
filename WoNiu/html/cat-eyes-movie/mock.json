@@ -1,0 +1,83 @@
+{
+    "data": {
+        "booking": {
+            "ranking": "1",
+            "bookingWeek": "8004",
+            "bookingTotal": "24316"
+        },
+        "moviePic": "https://p0.meituan.net/moviemachine/b2c5c74d33e45745fd3462e44b3698e18336620.jpg@300w_414h",
+        "name": "我和我的祖国",
+        "nameEnglish": "My People，My Country",
+        "star": 2.5,
+        "grade": 8.3,
+        "people": "89.8万",
+        "type": "剧情",
+        "where": "中国大陆",
+        "time": 155,
+        "date": "2019-09-30 09:00大陆上映",
+        "desc": "七位导演分别取材新中国成立70周年以来，祖国经历的无数个历史性经典瞬间。讲述普通人与国家之间息息相关密不可分的动人故事。聚焦大时代大事件下，小人物和国家之间，看似遥远实则密切的关联，唤醒全球华人共同回忆。",
+        "person": [{
+                "avatal": "http://p1.meituan.net/movie/8f9372252050095067e0e8d58ef3d939156407.jpg@160w_224h_1e_1c",
+                "name": "陈凯歌",
+                "sort": "导演"
+            },
+            {
+                "avatal": "http://p0.meituan.net/moviemachine/3918a42e84b707508ba775d1f584f55647145.jpg@160w_224h_1e_1c",
+                "name": "张一白",
+                "sort": "导演"
+            },
+            {
+                "avatal": "http://p1.meituan.net/movie/1783d161efda936ec32915555175ddf415527.jpg@160w_224h_1e_1c",
+                "name": "管虎",
+                "sort": "导演"
+            },
+            {
+                "avatal": "http://p0.meituan.net/moviemachine/d32347e59839fb38091d174ef31fdec544746.jpg@160w_224h_1e_1c",
+                "name": "薛晓路",
+                "sort": "导演"
+            },
+            {
+                "avatal": "http://p1.meituan.net/movie/8a5793c16dce09b98c51164cf8419b97134679.jpg@160w_224h_1e_1c",
+                "name": "徐峥",
+                "sort": "导演"
+            },
+            {
+                "avatal": "http://p1.meituan.net/movie/2897ba13cbeae096e05d2ce9ebea2f8037751.jpg@160w_224h_1e_1c",
+                "name": "宁浩",
+                "sort": "导演"
+            },
+            {
+                "avatal": "http://p0.meituan.net/movie/c6594ef2705dcaf7d9df857d228b5e1645712.jpg@160w_224h_1e_1c",
+                "name": "黄渤",
+                "sort": "演员"
+            },
+            {
+                "avatal": "http://p1.meituan.net/movie/92f35f4bec2c47fa045d0b65ddc9fe1929962.jpg@160w_224h_1e_1c",
+                "name": "张译",
+                "sort": "演员"
+            }
+        ],
+        "ranking": 2,
+        "weekOffice": 204823,
+        "allOffice": 223839,
+        "pictures": [
+            "http://p0.meituan.net/moviemachine/1cc9dd2dc4911c29e99ab32771eecab67883519.jpg@280w_186h_1e_1c",
+            "http://p0.meituan.net/movie/54ac9d4daf97648a8acb58859a5654e7424407.jpg@420w_279h_1e_1c",
+            "http://p1.meituan.net/movie/c47af2dee98e2860bd7f5bf7392148cc359741.jpg@420w_279h_1e_1c",
+            "http://p1.meituan.net/movie/e5c9aa7367fe78a2d90686860dc44553385368.jpg@420w_279h_1e_1c",
+            "http://p1.meituan.net/movie/b3469cdaa8a3d90ab06c70c34abe8ccb437857.jpg@420w_279h_1e_1c",
+            "http://p1.meituan.net/movie/9111dfb9befe8d805fbd45bca5ef07bc511052.jpg@420w_279h_1e_1c",
+            "http://p0.meituan.net/movie/6cdf08493439e62498a2bc6d6d0967c1450110.jpg@420w_279h_1e_1c",
+            "http://p1.meituan.net/movie/be8b909eed0dacb5bea6137f8e888485354298.jpg@420w_279h_1e_1c",
+            "http://p0.meituan.net/movie/352896a0a36183a39ce93d5462cd1e80330814.jpg@420w_279h_1e_1c"
+        ],
+        "commentNum": {
+            "good": 12558,
+            "bad": 177,
+            "dy": 1248,
+            "bought": 13432,
+            "author": 11,
+            "sameCity": 784
+        }
+    }
+}

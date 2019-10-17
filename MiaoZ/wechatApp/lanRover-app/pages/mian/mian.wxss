@@ -1,0 +1,13 @@
+/* pages/mian/mian.wxss */
+swiper{
+  /* 100vh当前设备的可视区域总高度 */
+  height: 100vh;
+
+}
+.swiper-slide .content{
+  text-align: center;
+}
+.img{
+  width: 100%;
+  height: 35%;
+}

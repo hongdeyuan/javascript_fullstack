@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>前端是代码界的导演</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: yellow;
+  }
+  .plane-wrapper {
+    position: absolute;
+    top: 50%;
+    left:315.5px;
+    animation: undulate 8s linear infinite alternate;
+    /* 动作导演 */
+  }
+  .plane-out {
+    animation: plane-out 1.3s ease-out forwards;
+    /* animation-delay: 2s; */
+  }
+  @keyframes plane-out {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    30% {
+      transform: scale(.8) translateX(160px);
+    }
+    100% {
+      transform: scale(1.2) translateX(-2000px);
+    }
+  }
+  @keyframes undulate {
+    0%, 100%, 50% {
+      transform: translate3d(0,0,0);
+    }
+    25% {
+      transform: translate3d(-6px, -18px, 0);
+    }
+    75% {
+      transform: translate3d(6px, 10px, 0);
+    }
+  }
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .plane-wrapper .propeller {
+    position: absolute;
+    top: 51.7003%;
+    left: 13.1%;
+    width: 27.424%;
+    height: 14.4474%;
+    /* animation-name: rotating; 
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
+    animation: rotating .2s linear infinite;
+    animation-direction: reverse;
+  }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="plane-wrapper" >
+      <img src="http://fir.im/images/plane.svg" alt="" class="plane">
+      <div class="rotate-container">
+          <img src="http://fir.im/images/propeller.svg" alt="" class="propeller">
+      </div>    
+    </div>
+  </div>
+  <script>
+    // JS事件驱动的语言
+  window
+    .addEventListener('keydown', function() {
+      // console.log('按键了');
+      document
+        .querySelector('.plane-wrapper')
+        .classList.add('plane-out')
+    
+    })
+
+  </script>
+</body>
+</html>

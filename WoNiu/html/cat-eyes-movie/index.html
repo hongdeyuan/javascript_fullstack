@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- weui的css样式框架引入 -->
+    <link href="https://cdn.bootcss.com/weui/2.1.2/style/weui.min.css" rel="stylesheet">
+    <!-- 淘宝flexble布局引入  会自动将手机屏幕划分为等比的100份 -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>猫眼电影</title>
+</head>
+
+<body>
+    <header class="nav">
+        <i class="arrow-left"></i>
+        <span>影片详情</span>
+    </header>
+    <div class="page">
+        <!-- section1 -->
+        <section class="movie-header">
+            <div class="movie">
+                <div class="movie-background"></div>
+                <div class="movie-filter"></div>
+                <div class="movie-container">
+                    <!-- pic -->
+                    <div class="movie-cover">
+                        <a href="#" class="link">
+                            <img src="" alt="" id="moviePic">
+                        </a>
+                    </div>
+                    <!-- detail -->
+                    <div class="movie-content">
+                        <div class="movie-name"><span id="movie-name"></span></div>
+                        <div class="movie-ename"><span id="movie-ename"></span></div>
+                        <!-- 评分 star -->
+                        <div class="movie-score">
+                            <div class="relesaed-score">
+                                <div class="rating" id="rating">
+                                    <!-- <img src="./images/star.png" alt="">
+                                    <img src="./images/star.png" alt="">
+                                    <img src="./images/star.png" alt="">
+                                    <img src="./images/star.png" alt="">
+                                    <img src="./images/star-h.png" alt=""> -->
+                                    <span class="rating-score"></span>
+                                </div>
+                                <div class="score-num">
+                                    (<span id="score-num"></span>人评分)
+                                </div>
+                            </div>
+                            <div class="movie-detail">
+                                <p class="movie-type">
+                                    <span>剧情</span>
+                                    <img src="https://s0.meituan.net/bs/?f=myfe/canary:/asgard/images/movie/movie-tag-2DIMAX.png" alt="">
+                                </p>
+                                <p class="address-time">
+                                    <span class="address">zhongguo</span> /
+                                    <span class="time">155</span> 分钟
+                                </p>
+                                <p class="date">2019</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="operating flex">
+                    <div class="movie-watch flex1">
+                        <img src="./images/heart.png" alt="">
+                        <span>想看</span>
+                    </div>
+                    <div class="movie-mark flex1">
+                        <img src="./images/star2.png" alt="">
+                        <span>评分</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- section2 -->
+        <section class="section-seperate section-expander">
+            <div class="text-expander">
+                <div class="text-expander__content close">
+                    <p id="desc">ffffffdasdasdafa题为
+                    </p>
+                </div>
+                <div class="text-expander__button">
+                    <i class="icon-shevron__down"></i>
+                    <!-- <i class="icon-shevron__down1"></i> -->
+                </div>
+            </div>
+        </section>
+        <!-- section3 -->
+        <section class="section-seperate">
+            <p class="action-list section-til">演职人员</p>
+            <ul class="movie-celebrities">
+                
+            </ul>
+        </section>
+        <!-- section4 -->
+        <section class="section-seperate section-expander movie-booking">
+            <p class="section-til">票房</p>
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                      <div class="placeholder">
+                            <span id="ranking">31231</span>
+                            <p>昨日票房排行</p>
+                      </div>
+                    </div>
+                    <div class="weui-flex__item">
+                      <div class="placeholder">
+                            <span id="bookingWeek">31231</span>
+                            <p>首周票房（万）</p>
+                      </div>
+                    </div>
+                    <div class="weui-flex__item">
+                      <div class="placeholder">
+                            <span id="bookingTotal">31231</span>
+                            <p>累计票房（万）</p>
+                      </div>
+                    </div>
+                </div>
+        </section>
+
+         <!-- section5 -->
+        <section class="section-seperate movie-photo">
+            <p class="action-list section-til">视频和剧照</p>
+            <ul class="movie-photo__list"></ul>
+        </section>
+        <div id="toast">
+            <div class="weui-mask__transparent"></div>
+            <div class="weui-toast">
+                <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+                <p class="weui-toast__content">已标记为想看</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        (function() {
+            $.ajax({
+                url: './mock.json',
+                type: 'get',
+                success: function(res) {
+                    console.log(res);
+                    $('#moviePic').attr('src', res.data.moviePic);
+                    $('#movie-name').html(res.data.name);
+                    $('#movie-ename').html(res.data.nameEnglish);
+                    $('#score-num').html(res.data.people);
+                    $('.rating-score').html(res.data.grade);
+                    star(res.data.star);
+                    celebrities(res.data.person);
+                    moviePhoto(res.data.pictures);
+                    $('.address-time .address').html(res.data.where)
+                    $('.address-time .time').html(res.data.time)
+                    $('.movie-detail .date').html(res.data.date)
+                    $('#desc').html(res.data.desc);
+
+                }
+
+            })
+
+            function star(e) {
+                let num = Math.floor(e);
+                let left = 5 - Math.ceil(e);
+                if (left > 0) {
+                    for (let j = 0; j < left; j++) {
+                        $('#rating').prepend('<img src="./images/star2.png" alt="">');
+                    }
+                }
+                if (e > num) {
+                    //prepend插入节点是插在之前的
+                    $('#rating').prepend('<img src="./images/star-h.png" alt="">');
+                }
+                //逻辑修改 prepend 向前添加
+                for (let i = 0; i < num; i++) {
+                    $('#rating').prepend('<img src="./images/star.png" alt="">');
+                }
+            }
+            //演职人员 append顺序添加 (let n  of e ) ->  es6 循环
+            function celebrities(e) {
+                for (let i = 0; i < e.length; i++) {
+                    $('.movie-celebrities').append(`
+                    <li>
+                        <a href="#" class="link">
+                            <div class="movie-celebrities__pic">
+                                <img src="${e[i].avatal}" alt="">
+                            </div>
+                            <span class="moie-celebrities-nick">${e[i].name}</span>
+                            <span class="movie-celebrities-roles">${e[i].sort}</span>
+                        </a>
+                    </li>
+                    `);
+                    
+                }
+            }
+
+            //电影剧照
+            function moviePhoto(e) {
+                for (let data of e) {
+                    $('.movie-photo__list').append(`
+                        <li class="stage-img-container">
+                            <a href="#" class="link">
+                                <div class="movie-celebrities__pic">
+                                    <img src="${data}" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    `);
+                    
+                }
+            }
+
+
+            //点击想看
+            //  document.querySelector('.movie-watch').addEventListener('click',()=>{
+
+            //  })
+
+            $('.movie-watch').click(function() {
+                if ($(this).hasClass('active')) {
+                    $('.movie-watch').removeClass('active');
+                    $('.movie-watch img').attr('src', './images/heart.png');
+                    $('#toast .weui-toast__content').html('已取消想看！');
+
+                } else {
+                    $('.movie-watch').addClass('active');
+                    $('.movie-watch img').attr('src', './images/heart1.png');
+                    $('#toast .weui-toast__content').html('已标记为想看！');
+                }
+                $('#toast').css('display', 'block');
+                setTimeout(() => {
+                    $('#toast').css('display', 'none');
+                }, 1500);
+
+            })
+
+            //点击下拉
+            $('.text-expander').click(function() {
+                if ($('.text-expander__content').hasClass('close')) {
+                    $('.text-expander__content').removeClass('close')
+                    $('.icon-shevron__down').addClass('icon-shevron__down__change')
+                } else {
+                    $('.text-expander__content').addClass('close')
+                    $('.icon-shevron__down').removeClass('icon-shevron__down__change')
+                }
+            })
+
+        })()
+    </script>
+</body>
+
+</html>

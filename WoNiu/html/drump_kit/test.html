@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset=utf-8>
+    <title>HTML5</title>
+    <script src="jquery-1.5.1.js"></script>
+    <style type="text/css">
+        #xu {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="xu" width="500" height="400"></canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById("xu");
+        var xx = canvas.getContext("2d");
+        xx.lineWidth = 5;
+        xx.strokeStyle = "blue";
+        var flag = false;
+
+        //当鼠标按下时
+        $("#xu").mousedown(function (e) {
+            alert("aa");
+            var mouseX = e.pageX - this.offsetLeft;//获得当前页面的x坐标
+            var mouseY = e.pageY - this.offsetTop;//y
+            flag = true;
+            xx.moveTo(mouseX, mouseY);//起始位置
+
+
+        });
+        //当鼠标抬起时
+        $("#xu").mouseup(function (e) {
+            flag = false;
+        });
+        //当鼠标移动时
+        $("#xu").mousemove(function (e) {
+
+            var mouseX = e.pageX - this.offsetLeft;//获得当前页面的x坐标
+            var mouseY = e.pageY - this.offsetTop;//y
+
+            if (flag) {
+                xx.lineTo(mouseX, mouseY);//终止位置
+                xx.stroke();//结束图形
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

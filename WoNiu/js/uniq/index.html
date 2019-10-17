@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>去重复</title>
+</head>
+
+<body>
+
+    <!-- 数组去重 -->
+    <!-- [1,2,3,2,3,5] -->
+    <!-- [1,2,3,5] -->
+    <!-- ES6 新增了 一个去重方法 -->
+    <script>
+        var nums = [1, 2, 3, 2, 3, 5];
+
+
+        // 第一种方法
+        function uniq(arr) {
+            return [...new Set(arr)]
+        }
+
+        //第二种方法
+        function uniq1(arr) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (result.indexOf(arr[i]) === -1) {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+
+        // 第三个方法
+        function uniq2(arr) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (!result.includes(arr[i])) {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+
+        // 第四种方法
+        function uniq3(arr) {
+            //解构  三元运算符  reduce  es6写法
+            return arr.reduce((prev, cur) => prev.includes(cur) ? prev : [...prev, cur], []);
+        }
+
+        // 第五种方法  array.sort();  js排序方法 给传入的数组排序，排序后相同的值会相邻，然后遍历排序后数组时，新数组只加入不与前一值重复的值
+        function unique4(arr) {
+            arr.sort();
+            var hash = [arr[0]];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] != hash[hash.length - 1]) {
+                    hash.push(arr[i]);
+                }
+            }
+            return hash;
+        }
+
+        //第六种 如果当前数组的第 i 项在当前数组中第一次出现的位置不是 i，那么表示第 i 项是重复的，忽略掉。否则存入结果数组
+        function unique5(arr) {
+            var hash = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr.indexOf(arr[i]) == i) {
+                    hash.push(arr[i]);
+                }
+            }
+            return hash;
+        }
+
+        // 第七种 双层循环，外循环表示从0到arr.length，内循环表示从i+1到arr.length
+        // 将没重复的右边值放入新数组。（检测到有重复值时终止当前循环同时进入外层循环的下一轮判断）
+        function unique6(arr) {
+            var hash = [];
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] === arr[j]) {
+                        ++i;
+                    }
+                    console.log("j :\t" + j + "\t i :\t" + i);
+                }
+                console.log(i + ':\t' + arr[i]);
+                hash.push(arr[i]);
+            }
+            return hash;
+        }
+
+        // nums = [1, 2, 3, 2, 3, 5];
+        console.log(unique6(nums));
+    </script>
+
+</body>
+
+</html>

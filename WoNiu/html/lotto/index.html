@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .luckDraw {
+            width: 420px;
+            margin: 0 auto;
+        }
+        
+        .lottery {
+            width: 240px;
+            margin: 30px auto;
+            position: relative;
+        }
+        
+        .lottery li {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 80px;
+            position: absolute;
+        }
+        
+        .lottery li:nth-of-type(1) {
+            left: 0;
+            top: 0;
+        }
+        
+        .lottery li:nth-of-type(2) {
+            left: 80px;
+            top: 0;
+        }
+        
+        .lottery li:nth-of-type(3) {
+            left: 160px;
+            top: 0;
+        }
+        
+        .lottery li:nth-of-type(4) {
+            left: 160px;
+            top: 80px;
+        }
+        
+        .lottery li:nth-of-type(5) {
+            left: 160px;
+            top: 160px;
+        }
+        
+        .lottery li:nth-of-type(6) {
+            left: 80px;
+            top: 160px;
+        }
+        
+        .lottery li:nth-of-type(7) {
+            left: 0;
+            top: 160px;
+        }
+        
+        .lottery li:nth-of-type(8) {
+            left: 0;
+            top: 80px;
+        }
+        
+        .lottery li:nth-of-type(9) {
+            left: 80px;
+            top: 80px;
+            cursor: pointer;
+            background: gold;
+        }
+        
+        .active::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="luckDraw">
+        <ul class="lottery">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>点击抽奖</li>
+        </ul>
+        <span class="prize">奖品</span>
+    </div>
+    <script>
+        var lottery = document.querySelector('.lottery')
+        var ali = lottery.querySelectorAll('li')
+        var prize = document.querySelector('.prize')
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+
+        var i = 0 //转到哪个位置
+        var count = 0 //转圈的初始值
+        var totalCount = 9
+        var speed = 500 //速度
+        var minSpeed = 500 //最小速度
+        var timer
+        var isClick = true
+        var index = 3 //转到哪一个奖品上
+
+        ali[ali.length - 1].onclick = function() {
+            if (isClick) {
+                count = 0
+                    //转圈
+                run()
+                isClick = false
+            }
+
+        }
+
+        function run() {
+            speed -= 50
+            if (speed <= 10) {
+                speed = 10
+            }
+            for (var k = 0; k < ali.length; k++) {
+                ali[k].classList.remove('active')
+
+            }
+            i++
+            if (i > ali.length - 1) {
+                i = 0
+                count++
+            }
+            prize.innerHTML = arr[i]
+            ali[i].classList.add('active')
+
+            if (count >= totalCount && (i + 1 === index)) {
+                speed = minSpeed
+                clearTimeout(timer)
+                isClick = true
+            } else {
+                timer = setTimeout(run, speed)
+                if (count >= totalCount - 1 || speed <= 50) {
+                    speed += 100
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font: 100%/1.25 Helvetica, Arial;
+    color: #ffffff;
+    perspective: 1000px;
+    background-color: #444;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#999));
+    background-image: -webkit-linear-gradient(top, #444, #999);
+    background-image: linear-gradient(top bottom, #444, #999);
+}
+
+.book {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    user-select: none;
+    transform: rotateX(60deg);
+}
+
+.page {
+    width: 300px;
+    height: 300px;
+    padding: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: 2em;
+}
+
+.front {
+    background-color: #d93e2b rgba(#d93e2b, #d93e2b, #d93e2b, 0.5);
+}
+
+.back {
+    background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569421798050&di=4fc20080602baa7a09d0ff8c7e5ac047&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201404%2F24%2F20140424154030_hyiBw.jpeg');
+    background-size: cover;
+}
+
+.front-cover {
+    cursor: move;
+    transform-origin: 0 50%;
+    transform: rotateY(0deg);
+}
+
+.front-cover .back {
+    background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569421798050&di=4fc20080602baa7a09d0ff8c7e5ac047&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201404%2F24%2F20140424154030_hyiBw.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    transform: translateZ(3px);
+}
+
+.back-cover .back {
+    transform: translateZ(-3px);
+}
+
+.p3d {
+    transform-style: preserve-3d;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.dino,
+.shadow {
+    width: 196px;
+    height: 132px;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    transform-origin: 0 100%;
+}
+
+.dino {
+    background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569510689476&di=28a31e41fbcc5a735c34eaa6aee0c75a&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201704%2F24%2F20170424185353_WdnKi.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+}

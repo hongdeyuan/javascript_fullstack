@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 100vh为屏幕大小 */
+    min-height: 100vh;
+    background: #4c4c4c url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569421798050&di=4fc20080602baa7a09d0ff8c7e5ac047&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201404%2F24%2F20140424154030_hyiBw.jpeg');
+    background-size: cover;
+}
+
+.wrapper {
+    width: 850px;
+    display: flex;
+}
+
+video {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.speed {
+    background: #fff;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.speed-bar {
+    width: 100%;
+    background: linear-gradient(-170deg, #2376ae 0%, #c16ecf 100%);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    color: #fff;
+    height: 16.3%;
+}

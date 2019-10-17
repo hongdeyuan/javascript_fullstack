@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>钟表</title>
+    <style id="css">
+        html {
+            height: 100%;
+            background: #018DED;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            font-family: 'helvetica neue';
+            text-align: center;
+            font-size: 10px;
+        }
+        
+        body {
+            margin: 0;
+            font-size: 2rem;
+            display: flex;
+            flex: 1;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .clock {
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            border: 2px solid white;
+            position: relative;
+            padding: 2rem;
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, .1), inset 0 0 0 3px #efefef, inset 0 0 5px black, 0 0 10px rgba(0, 0, 0, .2);
+        }
+        
+        .clock-face {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-3px);
+        }
+        
+        .hand {
+            width: 50%;
+            height: 6px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.05s;
+        }
+        
+        .circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="clock-face">
+            <div class="circle"></div>
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+    </div>
+    <script>
+        //获取到刻度
+
+        const secondHand = document.querySelector('.second-hand');
+        const minsHand = document.querySelector('.min-hand');
+        const hourHand = document.querySelector('.hour-hand');
+
+
+
+        function setDate() {
+            const now = new Date();
+            const seconds = now.getSeconds();
+            const mins = now.getMinutes();
+            const hours = now.getHours();
+
+            console.log("hours: \t" + hours + "\t mins: \t" + mins + " \t seconds : \t" + seconds);
+
+            const hoursDegress = hours * 30 + 90;
+            const minsDegress = mins * 6 + 90;
+            const secondsDegrees = seconds * 6 + 90;
+            secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+            minsHand.style.transform = `rotate(${minsDegress}deg)`;
+            hourHand.style.transform = `rotate(${hoursDegress}deg)`;
+        }
+        setDate();
+        setInterval(setDate, 1000)
+    </script>
+</body>
+
+</html>

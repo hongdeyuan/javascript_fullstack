@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>creat--ES6</title>
+</head>
+<body>
+  
+  <script>
+    // JS没有类，Function+prototype 基于原型的面向对象
+
+    var Person = {//对象模板
+      name: 'noname',
+      age: 0,
+      greet: function () {
+        console.log(`Hello ,${this.name}`);
+      }
+    }
+
+    function creat(obj) {
+      // 放回一个实例
+      // 对象 它的原型对象是obj
+      var creat = new Object();
+      creat.__proto__=obj;
+      return creat;
+    }
+
+    function creat1(obj) {
+      // 放回一个实例
+      // 对象 它的原型对象是obj
+      // var creat = new Object();
+      // creat.__proto__=obj;
+      function F() { };
+      F.__proto__=obj;
+        return new F();
+    }
+    //es6 新增的 creat() 方法 :传入一个对象 也会返回一个空对象，但原型对象是传入对象
+    var tom = Object.create(Person);
+    console.log(tom);
+    tom.name ='tom';
+    tom.age = '24';
+    console.log(tom);
+
+    var bob = creat(Person);
+
+    console.log(bob);
+
+    var timo = creat1(Person);
+
+    console.log(timo);
+  </script>
+</body>
+</html>

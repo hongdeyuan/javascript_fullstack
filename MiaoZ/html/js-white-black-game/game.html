@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #bg {
+            width: 300px;
+            height: 600px;
+            border: 1px solid red;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            margin-top: 100px;
+        }
+        
+        #inner1,
+        #inner2 {
+            width: 100%;
+            height: 100%;
+            background: url("./bg.png");
+            position: absolute;
+            /* background-size: cover; */
+        }
+        
+        .white {
+            width: 75px;
+            height: 100px;
+            float: left;
+            background-color: transparent;
+        }
+        
+        .black {
+            width: 75px;
+            height: 100px;
+            background-color: black;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="score">0</div>
+    <div id="bg">
+        <div id="inner2" style="top:0px">
+        </div>
+        <div id="inner1" style="top: -600px">
+        </div>
+
+    </div>
+
+    <script>
+        // [1,3] Math.random() 0~1  -> 0-4
+        draw('inner1');
+
+        function generateRandom() {
+            // [dev,dev...dev] 24个
+            let t = [];
+            for (let i = 0; i < 6; i++) {
+                var num = Math.floor(Math.random() * 4) + i * 4;
+                t.push(num);
+            }
+            return t;
+
+        }
+
+        function draw(container) {
+            let arr = generateRandom();
+            // container.removeAttribute('style')
+            document.getElementById(container).innerHTML = '';
+            for (let i = 0; i < 24; i++) {
+                const ele = document.createElement('div');
+                if (arr.indexOf(i) > -1) {
+                    ele.className = 'black';
+                    ele.addEventListener('click', function() {
+                        ele.style.backgroundColor = '#666';
+                    });
+                } else {
+                    ele.className = 'white';
+
+
+                }
+                document.getElementById(container).appendChild(ele);
+            }
+        }
+        var inner1 = document.getElementById('inner1');
+        var inner2 = document.getElementById('inner2');
+        var inner1Top = parseInt(inner1.style.top);
+        var inner2Top = parseInt(inner2.style.top);
+
+
+        function move() {
+
+            if (inner1Top === 595) {
+                draw('inner1');
+                inner1.style.top = '-600px';
+                inner1Top = -600;
+            }
+            if (inner2Top === 595) {
+                draw('inner2');
+                inner2.style.top = '-600px';
+                inner2Top = -600;
+            }
+
+            inner1Top += 5;
+            inner2Top += 5;
+            inner1.style.top = inner1Top + 'px';
+            inner2.style.top = inner2Top + 'px';
+        }
+        setInterval(move, 100);
+    </script>
+</body>
+
+</htm

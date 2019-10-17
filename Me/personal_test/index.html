@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./domReady.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="msg"></div>
+        <div id="header">测试自定义DOMready</div>
+
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569421798050&di=4fc20080602baa7a09d0ff8c7e5ac047&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201404%2F24%2F20140424154030_hyiBw.jpeg" alt="">
+
+        <p>46464</p>
+        <p>5646548</p>
+        <p>879897</p>
+        <p>78979</p>
+    </div>
+
+    <script>
+        var time1 = null,
+            time2 = null;
+        var msg = document.querySelector('#msg');
+
+        var img = document.getElementsByTagName("img");
+
+        myready(function() {
+            document.getElementById("header").style.color = "blue";
+            msg.innerHTML += "DOM已经加载 <br>";
+            time1 = new Date().getDate();
+            msg.innerHTML += "时间戳: \t" + time1 + "\t  ms<br>";
+
+        });
+
+        window.onload = function() {
+            console.log(msg);
+            msg.innerHTML += "onload 已加载 ！<br>";
+            time2 = new Date().getDate();
+            msg.innerHTML += "时间戳: \t" + time2 + "\t <br>";
+            msg.innerHTML += "DOMReady 比 onLoad 快 \t " + (time2 - time1) + "\t ms <br>";
+        }
+    </script>
+
+</body>
+
+</html>

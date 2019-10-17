@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>小鸟飞</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="headeTitle">
+      <img src="./img/bird0.png" alt="" id="headBird">
+    </div>
+    <button id="startBtn"></button>
+    <div id="grassLand1"></div>
+    <div id="grassLand2"></div>
+  </div>
+  
+  <script src="../js/js/bird.js"></script>
+  <script>
+    var jsWrapBg = document.querySelector('.wrap')
+    var jsHeadTitle = document.querySelector('.headeTitle')
+    var jsHeadBird  = document.getElementById('headBird')
+    var Y = 3
+    var index = 0
+    var imgArr = ["img/bird0.png","img/bird1.png"]
+
+    var headWaveTimer = setInterval(headWave,200)
+
+    var landTimer = setInterval(landRun,30)
+
+    function headWave() {
+      Y *= -1
+      //offsetTop:计算 顶部距离浏览器位置
+      jsHeadTitle.style.top = jsHeadTitle.offsetTop + Y + "px"
+      jsHeadBird.src=imgArr[index++]
+
+      if (index === 2) {
+        index = 0
+      }
+    }
+
+    var jsGrassLand1 = document.getElementById('grassLand1')
+    var jsGrassLand2 = document.getElementById('grassLand2')
+
+    function landRun() {
+      if (jsGrassLand1.offsetLeft <= -343) {
+        jsGrassLand1.style.left= "343px"
+      }
+      if (jsGrassLand2.offsetLeft <= -343) {
+        jsGrassLand2.style.left= "343px"
+      }
+      jsGrassLand1.style.left= jsGrassLand1.offsetLeft - 3 + "px"
+      jsGrassLand2.style.left= jsGrassLand2.offsetLeft - 3 + "px"
+
+    }
+
+    var jsStartBtn = document.getElementById('startBtn')
+
+    jsStartBtn.onclick = function () {
+      jsHeadTitle.style.display = "none"
+      clearInterval(headWaveTimer)
+      jsStartBtn.style.display = "none"
+      //出现一直小鸟
+      bird.showBird(jsWrapBg)
+      bird.flyBird()
+      bird.wingWave()//小鸟煽动翅膀
+      jsWrapBg.onclick = function () {
+        bird.fallSpeed = -8
+      }
+    }
+
+  </script>
+</body>
+</html>

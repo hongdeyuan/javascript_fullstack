@@ -1,0 +1,25 @@
+<!--pages/mian/mian.wxml-->
+<swiper class="swiper-slide" 
+  indicator-dots="{{true}}" 
+  indicator-color="rgba(0,0,0,.3)" 
+  circular="true"
+  interval="1500">
+    <block wx:for="{{slides}}" wx:key="{{index}}">
+      <swiper-item class="slide" item-id="">
+        <image class="img" src="{{item.image}}"  mode="aspectFill"/>
+        <view class="content">
+          <view class="sub-header">{{item.sub_header}}</view>
+          <view class="header">{{item.header}}</view>
+          <view class="description">{{item.description}}</view>
+          <view class="action">
+            <button>预约驾驶</button>
+            <button bind:tap="gotoDetail" data-id="{{item.id}}">了解更多</button>
+          </view>
+        </view>
+          
+      </swiper-item>
+        
+    </block>
+      
+</swiper>
+  

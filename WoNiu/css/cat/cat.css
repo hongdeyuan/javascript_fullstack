@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fdf3d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color */
+    --body: #8C887A;
+    --shadow: #7A7668;
+    --spots: #726B5D;
+    --border: #43213B;
+    --rose: #E59DB7;
+    --dark_rose: #D78AA9;
+    --white: #E0D9D0;
+    --green: #96C155;
+    --dark_green: #78983C;
+    --orange: #E67440;
+    --yellow: #F7EC54;
+}
+
+.heart {
+    position: relative;
+}
+
+.heart * {
+    position: absolute;
+}
+
+.heart *::before,
+.heart *::after {
+    content: '';
+    position: absolute;
+}
+
+.head {
+    width: 170px;
+    height: 100px;
+    background-color: var(--body);
+    border-color: var(--border) var(--border) transparent;
+    border: 10px solid;
+    border-radius: 100px 100px 0 0;
+    transform: rotate(-40deg);
+    box-shadow: inset 20px 0 var(--shadow);
+    overflow: hidden;
+    top: -100px;
+    left: -180px;
+}
+
+.head .spot-1 {
+    background-color: var(--spots);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    right: -25px;
+    top: 25px;
+    transform: rotate(-10deg) skewX(50deg);
+    box-shadow: -36px 31px var(--spots);
+}
+
+.ear {
+    width: 50px;
+    height: 50px;
+    background-color: var(--rose);
+    border-radius: 35%;
+    transform: rotate(20deg) skewX(40deg);
+    left: -140px;
+    top: -100px;
+    overflow: hidden;
+}
+
+.ear::before {
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark_rose);
+    border-radius: 50%;
+    left: 25px;
+    top: -15px;
+    transform: skewX(-40deg);
+}
+
+.ear::after {
+    width: 50px;
+    height: 50px;
+    background-color: var(--body);
+    left: 15px;
+    top: 10px;
+    transform: skewX(-40deg) rotate(27deg);
+}
+
+.ear-border-1 {
+    width: 10px;
+    height: 42px;
+    border: 10px solid #000;
+    border-radius: 50%;
+    top: -118px;
+    left: -142px;
+    transform: rotate(-20deg);
+    border-color: transparent transparent transparent var(--border);
+}
+
+.top-ear {
+    width: 41px;
+    height: 16px;
+    background-color: var(--body);
+    top: -108px;
+    left: -120px;
+    border-radius: 10px;
+    transform: skewX(40deg);
+}
+
+.top-ear::before {
+    width: 9px;
+    height: 57px;
+    background-color: var(--border);
+    transform: skewX(-40deg) rotate(-87deg);
+    top: -24px;
+    left: 14px;
+}
+
+.ear-border-2 {
+    width: 10px;
+    height: 46px;
+    border: 10px solid #000;
+    border-color: transparent var(--border) transparent transparent;
+    border-radius: 50%;
+    top: -124px;
+    left: -136px;
+    transform: rotate(-69deg);
+}
+
+.ear-border-2::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--border);
+    top: -4px;
+    left: 6px;
+}
+
+.bottom-ear {
+    width: 15px;
+    height: 5px;
+    background-color: var(--body);
+    border: solid;
+    border-width: 6px 0 0 10px;
+    border-color: var(--border) transparent transparent var(--border);
+    border-radius: 20px;
+    top: -90px;
+    left: -120px;
+    transform: rotate(-20deg) skewX(40deg);
+}
+
+.bottom-ear::before {
+    width: 10px;
+    height: 3px;
+    background-color: var(--border);
+    border-radius: 50%;
+    left: -11px;
+    top: 4px;
+    transform: rotate(-10deg) skewX(-40deg);
+}

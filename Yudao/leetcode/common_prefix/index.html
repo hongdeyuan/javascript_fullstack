@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #box {
+            width: 100px;
+            padding: 10px;
+            background-color: blue;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">1</div>
+
+    <script>
+        let box = document.getElementById('box');
+        box.addEventListener('click', (event) => {
+            //1 =>1++
+            // box.innerHTML = parseInt(box.innerHTML) + 1;
+
+            event.target.innerHTML = parseInt(event.target.innerHTML) + 1;
+            //console.log(event.target);
+
+        })
+    </script>
+</body>
+
+</html>

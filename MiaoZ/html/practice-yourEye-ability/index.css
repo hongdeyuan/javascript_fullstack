@@ -1,0 +1,57 @@
+/* 初始化 margin padding*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .container */
+
+#page-one {
+    background: yellow;
+    /* 行内元素居中：button a p ul li  */
+    text-align: center;
+    /* height: 100%; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+button {
+    /* 去除样式 */
+    outline: none;
+    border: 1px solid transparent;
+    height: 50px;
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: #428bca;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#page-one h1 {
+    margin-top: 300px;
+}
+
+#page-one p {
+    margin-top: 60px;
+}
+
+#page-one button {
+    margin-top: 50px;
+}
+
+.screen {
+    margin-top: 10px;
+}
+
+.screen .block {
+    width: 49%;
+    height: 200px;
+    float: left;
+    margin: 1px;
+    background-color: red;
+}

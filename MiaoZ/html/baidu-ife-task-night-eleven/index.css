@@ -1,0 +1,821 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 第一个主页 */
+
+header {
+    background: url(./images/mount.png) 0 0 no-repeat;
+    background-size: 100%;
+    height: 100vh;
+}
+
+header .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 1);
+    opacity: .65;
+    overflow: hidden;
+}
+
+header .content {
+    width: 970px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .7)
+}
+
+header .title {
+    font-size: 62px;
+    font-weight: 200;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    line-height: 72px;
+}
+
+header .text {
+    width: 766px;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 1);
+    line-height: 32px;
+    opacity: 0.7;
+    text-indent: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 86px;
+}
+
+header .title {
+    margin-top: 120px;
+}
+
+header .creat {
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 2px;
+    width: 970px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 52px;
+    padding: 61px 100px 52px;
+    box-sizing: border-box;
+}
+
+header .creat .title {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+}
+
+header .creat .profile {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 19px;
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.3;
+}
+
+.creat .input {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.creat .input input {
+    outline: none;
+    border-radius: 2px;
+    width: 292px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0);
+    text-indent: 22px;
+    color: #fff;
+}
+
+.creat .input input[type="button"] {
+    width: 125px;
+    border-radius: 2px;
+}
+
+
+/* 第二个主页 */
+
+.header2 {
+    background: rgba(100, 100, 100, 0.2);
+    position: relative;
+    background-size: 100%;
+    padding-top: 102px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.header2 .content2 {
+    width: 970px;
+    margin: 0 auto;
+    color: rgba(148, 148, 148, 0.7)
+}
+
+.header2 .title2 {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgba(20, 20, 20, 1);
+    line-height: 28px;
+}
+
+.header2 .text2 {
+    margin-top: 39px;
+    font-size: 42px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 52px;
+    text-align: center;
+}
+
+.header2 .items {
+    padding: 87px 0 126px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header2 .items .item1,
+.item2,
+.item3,
+.item4 {
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    width: 40%;
+    text-align: left;
+    text-indent: 20px;
+}
+
+.header2 .items .iphone,
+.check,
+.setting,
+.pencil {
+    margin-left: 65px;
+}
+
+.header2 .items .iphone-icon,
+.check-icon,
+.setting-icon,
+.pencil-icon {
+    width: 80px;
+    position: absolute;
+}
+
+.header2 .items .iphone-icon .item-pe-iphone::before {
+    content: url(./images/Iphone-Icon.png);
+}
+
+.header2 .items .check-icon .item-pe-check::before {
+    content: url(./images/Check-Icon.png);
+}
+
+.header2 .items .setting-icon .item-pe-setting::before {
+    content: url(./images/Settings-Icon.png);
+}
+
+.header2 .items .pencil-icon .item-pe-pencil::before {
+    content: url(./images/Pencil-Icon.png);
+}
+
+.iphone-title,
+.check-title,
+.setting-title,
+.pencil-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(20, 20, 20, 1);
+    line-height: 32px;
+}
+
+.iphone-text,
+.check-text,
+.setting-text,
+.pencil-text {
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+
+/* 第三个主页 */
+
+.header3 {
+    background: url(./images/forest.png) 0 0 no-repeat;
+    background-size: 100%;
+    height: 100vh;
+}
+
+.header3 .mask {
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 1);
+    opacity: .65;
+    overflow: hidden;
+    position: relative;
+}
+
+.header3 .mask .content3 {
+    width: 50%;
+    color: rgba(255, 255, 255, .2);
+    box-sizing: border-box;
+    padding-left: 135px;
+    padding-top: 104px;
+    display: inline-block;
+}
+
+.header3 .mask .content3 .material-title,
+t {
+    width: 367px;
+    font-size: 42px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 1);
+    line-height: 52px;
+}
+
+.header3 .mask .content3 .material-text {
+    width: 367px;
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 47px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    opacity: 0.7;
+    text-indent: 20px;
+}
+
+.header3 .mask .material-button {
+    box-sizing: border-box;
+    margin-top: 58px;
+}
+
+.header3 .mask .content3 .material-button input[name="check"] {
+    width: 45%;
+    height: 60px;
+    background: rgba(255, 255, 255, .8);
+    opacity: 0.35;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 2px;
+}
+
+.header3 .mask .content3 .material-button input[name="try"] {
+    width: 45%;
+    height: 60px;
+    margin-left: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+
+/* iPad */
+
+#ipad {
+    z-index: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    padding-top: 104px;
+    right: 0;
+}
+
+
+/* #ipad:hover {
+    transform: scale(1.1);
+} */
+
+.ipadbody {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    height: 550px;
+    width: 650px;
+    border-radius: 20px 0 0 20px;
+}
+
+.ipadscreen {
+    position: absolute;
+    background: url(./images/ipad.png) 0 0 no-repeat;
+    background-size: 100%;
+    height: 550px;
+    width: 625px;
+    top: 36px;
+    left: 50px;
+    opacity: 1.0;
+    filter: Alpha(Opacity=100);
+}
+
+.ipadcamera {
+    background-color: rgb(114, 109, 109);
+    height: 15px;
+    width: 15px;
+    box-shadow: inset;
+    position: absolute;
+    border-radius: 7px;
+    margin-top: 250px;
+    margin-left: 15px;
+}
+
+
+/* 第四个主页 product */
+
+.header4 {
+    background: rgba(223, 210, 210, 0.2);
+    position: relative;
+    background-size: 100%;
+    padding-top: 162px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.header4 .content4 {
+    width: 970px;
+    margin: 0 auto;
+    color: rgba(148, 148, 148, 0.7)
+}
+
+.header4 .title4 {
+    font-size: 42px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 52px;
+    text-align: center;
+}
+
+.header4 .product-items {
+    padding: 132px 0 126px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header4 .product-items .product-item1,
+.product-item2,
+.product-item3 {
+    width: 251px;
+    display: inline-block;
+    margin-left: 85px;
+    text-indent: 20px;
+}
+
+.header4 .product-items .singleton .item-pe-singleton::before {
+    content: url(./images/Singleton.png);
+}
+
+.header4 .product-items .hero .item-pe-hero::before {
+    content: url(./images/Hero.png);
+}
+
+.header4 .product-items .portland .item-pe-portland::before {
+    content: url(./images/Portland.png);
+}
+
+.header4 .product-items .singleton-introduce,
+.hero-introduce,
+.portland-introduce {
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+
+/* 第五个盒子 */
+
+.header5 {
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    background-size: 100%;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    height: 100vh;
+}
+
+.header5 .introduce-top {
+    width: 100%;
+    color: rgba(148, 148, 148, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header5 .introduce-bottom {
+    width: 100%;
+    color: rgba(148, 148, 148, 0.7);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.header5 .introduce-top img,
+.introduce-bottom img {
+    width: 35%;
+}
+
+.background-top {
+    display: inline-block;
+    width: 20%;
+    margin-left: 160px;
+}
+
+.background-bottom {
+    display: inline-block;
+    width: 20%;
+    margin-right: 160px;
+}
+
+.background-top .top-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(20, 20, 20, 1);
+    line-height: 32px;
+}
+
+.top-text,
+.bottom-text {
+    margin-top: 25px;
+    text-indent: 20px;
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 28px;
+    opacity: 0.7;
+}
+
+.background-bottom .bottom-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(20, 20, 20, 1);
+    line-height: 32px;
+}
+
+
+/* 第六个盒子 */
+
+.header6 {
+    background: rgba(100, 100, 100, 0.2);
+    background-size: 100%;
+    box-sizing: border-box;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.header6 .content6 {
+    width: 970px;
+    margin: 0 auto;
+    color: rgba(148, 148, 148, 0.7)
+}
+
+.header6 .title6 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 52px;
+}
+
+.header6 .text6 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 28px;
+    opacity: 0.7;
+}
+
+.header6 .person1-items,
+.person2-items {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.header6 .person1-items .person1 {
+    background: url(./images/person01.png) 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+}
+
+.header6 .person1-items .person2 {
+    background: url(./images/person02.png) 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+    margin-left: 50px;
+}
+
+.header6 .person2-items .person3 {
+    background: url(./images/person03.png) 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+}
+
+.header6 .person2-items .person4 {
+    background: url(./images/person04.png) 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+    margin-left: 50px;
+}
+
+.header6 .person1-items .person1 .person1-hover {
+    background: #000;
+    box-sizing: border-box;
+    padding-top: 25%;
+    opacity: .8;
+    width: 98%;
+    text-align: center;
+    height: 300px;
+}
+
+.header6 .person1-items .person1 .person1-hover .person1-item-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    line-height: 32px;
+}
+
+.header6 .person1-items .person1 .person1-hover .person1-item-category {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    opacity: 0.4;
+}
+
+.header6 .person1-items .person1 .person1-hover .icon-items .icon1::before {
+    content: url(./images/Facebook-Icon.png);
+    padding: 5px;
+}
+
+.header6 .person1-items .person1 .person1-hover .icon-items .icon2::before {
+    content: url(./images/Twitter\ Icon.png);
+    padding: 2px;
+}
+
+.header6 .person1-items .person1 .person1-hover .icon-items .icon3::before {
+    content: url(./images/Tumbler-Icon.png);
+    padding: 5px;
+}
+
+.header6 .person1-items .person1 .person1-hover .icon-items {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.header6 .person1-items .person1 .person1-hover .icon-items .icon1,
+.icon2,
+.icon3 {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.header6 .person1-items .person1 .person1-hover {
+    display: none;
+}
+
+
+/* .header6 .person1-items .person1 .person1-hover:hover {
+    display: block;
+    transform: scale(1.1);
+} */
+
+
+/* 第七个盒子 */
+
+.header7 {
+    background: rgba(35, 35, 35, 0.1);
+    background-size: 100%;
+    box-sizing: border-box;
+    padding-bottom: 104px;
+    padding-top: 10%;
+    padding-left: 25%;
+}
+
+.header7 .message-send {
+    width: 30%;
+    background: #fff;
+    /* border: 1px solid rgba(20, 20, 20, .5); */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.header7 .message-send #emil,
+#sendName,
+#message-content,
+#send-button {
+    background: #fff;
+    width: 78%;
+    border: none;
+    margin-top: 25px;
+    margin-left: 11%;
+    display: block;
+}
+
+.header7 .message-send .send-title {
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgba(10, 10, 10, 1);
+    line-height: 32px;
+    margin-top: 20px;
+}
+
+.header7 .message-send #emil,
+#sendName {
+    height: 50px;
+    border: none;
+    border: 1px solid rgba(100, 100, 100, .5);
+    background: rgba(255, 255, 255, .8);
+    color: #000;
+    font-size: 16px;
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+.header7 .message-send #message-content {
+    height: 25%;
+    border: 1px solid rgba(100, 100, 100, .5);
+    background: rgba(255, 255, 255, .8);
+    color: #000;
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+.header7 .message-send #send-button {
+    height: 50px;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.header7 .contact-info {
+    margin-left: 20%;
+    width: 30%;
+    display: inline-block;
+}
+
+.header7 .contact-info .contact-title {
+    font-size: 42px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 52px;
+}
+
+.header7 .contact-info .contact-text {
+    margin-top: 5%;
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.header7 .contact-info .contact-item1 .map-icon,
+.phone-icon,
+.mail-icon {
+    width: 80px;
+    position: absolute;
+}
+
+.header7 .contact-info .contact-item1 .map-icon .item-pe-map::before {
+    content: url(./images/Map\ Icon.png);
+}
+
+.header7 .contact-info .contact-item2 .phone-icon .item-pe-phone::before {
+    content: url(./images/Phone-Icon.png);
+}
+
+.header7 .contact-info .contact-item3 .mail-icon .item-pe-mail::before {
+    content: url(./images/Mail\ Icon.png);
+}
+
+.header7 .contact-info .contact-item1 {
+    margin-top: 20%;
+}
+
+.header7 .contact-info .contact-item2,
+.contact-item3 {
+    margin-top: 10%;
+}
+
+.header7 .contact-info .contact-item1 .map-text {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.header7 .contact-info .contact-item2 .phone-text {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.header7 .contact-info .contact-item3 .mail-text {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.header8 {
+    width: 100%;
+    height: 7%;
+    background: rgba(20, 20, 20, 1);
+    box-sizing: border-box;
+    padding-bottom: 104px;
+    padding-top: 7%;
+    padding-left: 10%;
+}
+
+.header8 .footer-items {
+    width: 100%;
+}
+
+.header8 .footer-items .footer-item1,
+.footer-item2,
+.footer-item3,
+.footer-item4 {
+    text-align: center;
+    display: inline-block;
+    margin-left: 8%;
+}
+
+.footer-item1-title,
+.footer-item2-title,
+.footer-item3-title,
+.footer-item4-title {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.footer-item1-text,
+.footer-item2-text,
+.footer-item3-text,
+.footer-item4-text {
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 1);
+    line-height: 46px;
+    opacity: 0.3;
+}
+
+.footer-item4-text {
+    width: 260px;
+    margin-top: 10%;
+}
+
+.footer-item4 .footer-icons {
+    margin-top: 10%;
+}
+
+.footer-item4 .footer-icons .footer-icon1 {
+    content: url(./images/Google-Icon.png);
+}
+
+.footer-item4 .footer-icons .footer-icon2 {
+    content: url(./images/LinkedIn-Icon.png);
+    margin-left: 10px;
+}
+
+.footer-item4 .footer-icons .footer-icon3 {
+    content: url(./images/Twitter\ Icon.png);
+    margin-left: 10px;
+}
+
+.footer-item4 .footer-icons .footer-icon4 {
+    content: url(./images/Pinterest-Icon.png);
+    margin-left: 10px;
+}
+
+.footer-item4 .footer-icons .footer-icon5 {
+    content: url(./images/Facebook-Icon.png);
+    margin-left: 10px;
+}

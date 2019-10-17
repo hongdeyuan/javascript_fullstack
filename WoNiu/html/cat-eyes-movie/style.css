@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex1 {
+  flex: 1;
+}
+.action-list.section-til {
+  padding-left: 17px;
+}
+.nav {
+  height: 1.067rem;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.067rem;
+  background-color: #e54847;
+}
+.nav .arrow-left {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.nav .arrow-left::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: rotateZ(45deg) translateY(-50%);
+  border-width: 0 0 2px 2px;
+}
+.nav span {
+  color: #fff;
+}
+.page {
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #555;
+  min-width: 3.1rem;
+  font: 14px/1.5 Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.page section {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.page .movie-header {
+  padding: 0;
+  background-color: #f8f8f8;
+  border-bottom: none;
+}
+.page .movie-header .movie {
+  color: #fff;
+  padding: 0.4rem;
+  line-height: 1;
+  position: relative;
+  box-sizing: border-box;
+  filter: blur(0);
+  overflow: auto;
+}
+.page .movie-header .movie-background,
+.page .movie-header .movie-filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.page .movie-header .movie-background {
+  background-image: url("./images/header-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+  filter: blur(0.6rem);
+  z-index: 0;
+}
+.page .movie-header .movie-filter {
+  background-color: #40454d;
+  opacity: 0.55;
+}
+.page .movie-header .movie-container {
+  z-index: 1;
+  position: relative;
+  overflow: auto;
+}
+.page .movie-header .movie-container .movie-cover {
+  float: left;
+  width: 2.854rem;
+  height: 4rem;
+  border: 1px solid #faf2f3;
+  position: relative;
+}
+.page .movie-header .movie-container .movie-cover .link {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.page .movie-header .movie-container .movie-cover .link img {
+  width: 100%;
+}
+.page .movie-header .movie-container .movie-content {
+  overflow: hidden;
+  padding-left: 0.4rem;
+}
+.page .movie-header .movie-container .movie-content .movie-name {
+  font-size: 17px;
+  margin: 0.08rem 0;
+}
+.page .movie-header .movie-container .movie-content .movie-ename {
+  font-size: 12px;
+  margin-bottom: 0.2rem;
+}
+.page .movie-header .movie-container .movie-content .movie-score {
+  font-size: 12px;
+  margin-bottom: 0.3rem;
+}
+.page .movie-header .movie-container .movie-content .movie-score .rating img {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-right: 2px;
+}
+.page .movie-header .movie-container .movie-content .movie-score .rating .rating-score {
+  font-size: 0.4rem;
+  color: #ff4600;
+}
+.page .movie-header .movie-container .movie-content .movie-detail {
+  font-size: 12px;
+  margin-bottom: 0.16rem;
+  opacity: 0.7;
+}
+.page .movie-header .movie-container .movie-content .movie-detail p {
+  margin-bottom: 0.14rem;
+}
+.page .movie-header .movie-container .movie-content .movie-detail p span {
+  vertical-align: middle;
+}
+.page .movie-header .movie-container .movie-content .movie-detail p img {
+  vertical-align: middle;
+  display: inline-block;
+  height: 0.3rem;
+}
+.page .movie-header .movie .operating {
+  margin-top: 0.5rem;
+}
+.page .movie-header .movie .operating div {
+  border: 1 solid rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+.page .movie-header .movie .operating div img,
+.page .movie-header .movie .operating div span {
+  vertical-align: middle;
+}
+.page .movie-header .movie .operating .movie-watch {
+  margin-right: 0.3rem;
+}
+.page .movie-header .movie .operating .movie-watch img {
+  width: 14px;
+  height: 14px;
+}
+.page .movie-header .movie .operating .movie-mark img {
+  width: 18px;
+  height: 18px;
+}
+.page .section-seperate {
+  padding-top: 0.4rem;
+  margin-bottom: 0.3rem;
+  border-top: 1px solid #e5e5e5;
+}
+.page .section-expander {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.page .section-expander .text-expander {
+  text-indent: 0.4rem;
+}
+.page .section-expander .text-expander__content.close {
+  min-height: 65px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.page .section-expander .text-expander__button {
+  height: 0.7rem;
+  text-align: center;
+}
+.page .section-expander .text-expander__button .icon-shevron__down {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #aaa;
+  display: inline-block;
+  transform: rotateZ(45deg);
+  border-width: 0 1px 1px 0px;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+}
+.page .section-expander .text-expander__button .icon-shevron__down__change {
+  transform: rotateZ(-135deg);
+}
+.page .section-seperate .movie-celebrities {
+  width: 100%;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+.page .section-seperate .movie-celebrities li {
+  text-align: center;
+  display: inline-block;
+  padding: 0.04rem;
+}
+.page .section-seperate .movie-celebrities li .link {
+  color: #000;
+}
+.page .section-seperate .movie-celebrities li .link .movie-celebrities__pic {
+  width: 1.7334rem;
+  height: 2.4rem;
+  margin: 0.05rem;
+}
+.page .section-seperate .movie-celebrities li .link .movie-celebrities__pic img {
+  width: 100%;
+}
+.page .section-seperate .movie-celebrities li .link span {
+  display: block;
+  font-size: 0.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.page .section-seperate .movie-celebrities li .link .movie-celebrities-roles {
+  color: #999;
+}
+.page .movie-booking {
+  padding-bottom: 0.2rem;
+}
+.page .movie-booking .weui-flex {
+  text-align: center;
+}
+.page .movie-booking .weui-flex .placeholder span {
+  font-size: 14px;
+  color: #d96a3d;
+}
+.page .movie-booking .weui-flex .placeholder p {
+  color: #bababa;
+  margin-top: 0.1rem;
+}
+.page .movie-photo__list {
+  width: 100%;
+  padding: 0.3rem 0.3rem 0.2rem 0.3rem;
+  white-space: nowrap;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+.page .movie-photo__list .stage-img-container {
+  margin-right: 0.13333rem;
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.867rem;
+}
+.page .movie-photo__list .stage-img-container .movie-celebrities__pic {
+  width: 100%;
+  height: 100%;
+}
+.page .movie-photo__list .stage-img-container .movie-celebrities__pic img {
+  width: 100%;
+  height: 100%;
+}
+.page .movie-photo:first-child {
+  width: 3.3334rem;
+  height: 1.868rem;
+}
+.page .movie-photo:last-child {
+  margin-right: 0;
+}
+#toast {
+  display: none;
+}

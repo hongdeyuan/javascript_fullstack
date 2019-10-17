@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.special {
+    /* position: absolute; */
+    background-image: linear-gradient(60deg, #f8ddd1, #faece5 73%, #fad2c0)
+}
+
+.art {
+    /* 适配 根据不同尺寸压缩不同比例 */
+    transform: scale(.5);
+    transform-origin: top right;
+    width: 750px;
+    height: 1334px;
+    top: -140px;
+    right: 0;
+    position: absolute;
+}
+
+.swing {
+    display: block;
+    position: absolute;
+    left: 226px;
+    top: -180.25px;
+    width: 478px;
+    height: 1038px;
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/swing.88545d6c8e1ac798465e367f8e5357ab.png) no-repeat;
+    animation: ani_qiuqian 6s ease-in-out infinite;
+    transform-origin: -16% -29%;
+}
+
+@keyframes ani_qiuqian {
+    0% {
+        /* rotateX: rotateY rotateZ:rotate */
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(31deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/** 一个整体拆开  分别用定位定上去
+*   分别写 animation 
+*/
+
+
+/* 腿动画 */
+
+.swing .leg2 {
+    display: block;
+    position: absolute;
+    left: 185.375px;
+    top: 958px;
+    width: 130px;
+    height: 32px;
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/leg2.d7bc44a91b6974450f2ccc430846c63d.png) no-repeat;
+    transform-origin: 91.1538461538462% 33.59375%;
+    animation: ani7_leg2 8s ease infinite;
+}
+
+@keyframes ani7_leg2 {
+    0% {
+        /* rotateX: rotateY rotateZ:rotate */
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.swing .leg2 .jiojio {
+    display: block;
+    position: absolute;
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/leg2-part.8f70bb7fc789a70bc78c48aa7718a765.png) no-repeat;
+    left: -27.75px;
+    top: -10.5px;
+    width: 57px;
+    height: 44px;
+}
+
+.swing .leg1 {
+    display: block;
+    position: absolute;
+    left: 290.375px;
+    top: 955.25px;
+    width: 63px;
+    height: 130px;
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/leg1.b1df6a7d1a794d36fbd0e1277733e1cf.png) no-repeat;
+    transform-origin: 17.8571428571429% 13.3653846153846%;
+    animation: ani5_leg1 8s ease infinite;
+}
+
+@keyframes ani5_leg1 {
+    0% {
+        /* rotateX: rotateY rotateZ:rotate */
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(80deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* 腿的一部分 */
+
+.leg1 .jiojio {
+    display: block;
+    position: absolute;
+    left: 26.25px;
+    top: 102.5px;
+    width: 39px;
+    height: 62px;
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/leg1-part.f2f17703a6af8fd2af5e0f5a9f320623.png) no-repeat;
+}
+
+.swing .neck {
+    position: absolute;
+    left: 451.125px;
+    top: 855.5px;
+    width: 51px;
+    height: 42px;
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/neck.07a0013beff9796ed79c2cea542e5af2.png) no-repeat;
+}
+
+
+/* 头 */
+
+.swing .neck,
+.swing .head {
+    display: block;
+    position: absolute;
+    left: 451.125px;
+    top: 855.5px;
+    width: 51px;
+    height: 42px;
+}
+
+
+/* 脖子 */
+
+.swing .neck {
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/neck.07a0013beff9796ed79c2cea542e5af2.png) no-repeat;
+}
+
+
+/* 头 */
+
+.swing .head {
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/head.90bf892023d7df0522a4b53fc07e38df.png) no-repeat;
+    animation: ani2_head 8s ease infinite;
+}
+
+
+/* 头发 */
+
+.swing .head .part {
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/head-part.22d4381c4bd6cb1c3afd2b1bfcfe22f1.png) no-repeat;
+    left: 20px;
+    top: 2px;
+    width: 40px;
+    height: 47px;
+    position: absolute;
+}
+
+
+/* 背景图片
+*移动 background-position 
+*/
+
+.juan {
+    background: url(http://s5.music.126.net/static_public/5c21db8d4684556c72180904/juan3.1c58874dbcd7f233bf027e9332ea6d96.png) no-repeat;
+    right: 0;
+    top: 0;
+    width: 483px;
+    height: 159px;
+    display: block;
+    position: absolute;
+    transform: scale(.5);
+    transform-origin: top right;
+    /**写法解释，动画分为28个阶段，每个阶段之前1步切换**/
+    animation: juan_ani 2s steps(1) infinite;
+}
+
+@keyframes juan_ani {
+    0% {
+        background-position: 0 0
+    }
+    3.70% {
+        background-position: -483px 0
+    }
+    7.41% {
+        background-position: -966px 0
+    }
+    11.11% {
+        background-position: -1449px 0
+    }
+    14.81% {
+        background-position: 0 -159px
+    }
+    18.52% {
+        background-position: -483px -159px
+    }
+    22.22% {
+        background-position: -966px -159px
+    }
+    25.93% {
+        background-position: -1449px -159px
+    }
+    29.63% {
+        background-position: 0 -318px
+    }
+    33.33% {
+        background-position: -483px -318px
+    }
+    37.04% {
+        background-position: -966px -318px
+    }
+    40.74% {
+        background-position: -1449px -318px
+    }
+    44.44% {
+        background-position: 0 -477px
+    }
+    48.15% {
+        background-position: -483px -477px
+    }
+    51.85% {
+        background-position: -966px -477px
+    }
+    55.56% {
+        background-position: -1449px -477px
+    }
+    59.26% {
+        background-position: 0 -636px
+    }
+    62.96% {
+        background-position: -483px -636px
+    }
+    66.67% {
+        background-position: -966px -636px
+    }
+    70.37% {
+        background-position: -1449px -636px
+    }
+    74.07% {
+        background-position: 0 -795px
+    }
+    77.78% {
+        background-position: -483px -795px
+    }
+    81.48% {
+        background-position: -966px -795px
+    }
+    85.19% {
+        background-position: -1449px -795px
+    }
+    88.89% {
+        background-position: 0 -954px
+    }
+    92.59% {
+        background-position: -483px -954px
+    }
+    96.30% {
+        background-position: -966px -954px
+    }
+    100.00% {
+        background-position: -1449px -954px
+    }
+}
