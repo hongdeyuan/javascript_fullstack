@@ -18,10 +18,14 @@
   </div>
   
   <script src="./js/bird.js"></script>
+  <script src="./js/baseObj.js"></script>
+  <script src="./js/block.js"></script>
   <script>
     var jsWrapBg = document.querySelector('.wrap')
     var jsHeadTitle = document.querySelector('.headeTitle')
     var jsHeadBird  = document.getElementById('headBird')
+    var blocksArr = []
+    var blockDistance = baseObj.randomNum(120,350)
     var Y = 3
     var index = 0
     var imgArr = ["img/bird0.png","img/bird1.png"]
@@ -54,6 +58,18 @@
       jsGrassLand1.style.left= jsGrassLand1.offsetLeft - 3 + "px"
       jsGrassLand2.style.left= jsGrassLand2.offsetLeft - 3 + "px"
 
+      //管道移动
+      if (blocksArr.length) {
+        for (let i = 0; i < blocksArr.length; i++) {
+          blocksArr[i].moveBlock()
+        }
+        if (blocksArr[blocksArr.length-1].downDivWrap.offsetLeft < (450 - blockDistance)) {
+          blockDistance = baseObj.randomNum(130,250)
+          var newBlock = new Block()
+          newBlock.createBlock()
+          blocksArr.push(newBlock)
+        }
+      }
     }
 
     var jsStartBtn = document.getElementById('startBtn')
@@ -66,10 +82,17 @@
       bird.showBird(jsWrapBg)
       bird.flyBird()
       bird.wingWave()//小鸟煽动翅膀
-      jsWrapBg.onclick = function () {
+
+      //管道
+      var b = new Block()
+      b.createBlock()//生成管道
+      blocksArr.push(b)//管道放入数组
+
+    }
+
+    jsWrapBg.onclick = function () {
         bird.fallSpeed = -8
       }
-    }
 
   </script>
 </body>
