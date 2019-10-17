@@ -60,9 +60,25 @@
 
       //管道移动
       if (blocksArr.length) {
-        for (let i = 0; i < blocksArr.length; i++) {
+        for (var i = 0; i < blocksArr.length; i++) {
           blocksArr[i].moveBlock()
+          var x = baseObj.rectangleCrashExamine(blocksArr[i].downDivWrap, bird.div)
+          var y = baseObj.rectangleCrashExamine(blocksArr[i].upDivWrap, bird.div)
+          var z = bird.div.offsetTop >= 390
+          if (x || y || z) {
+            bird.fallSpeed = 0
+            clearInterval(landTimer)
+            jsWrapBg.onclick = null
+          }
         }
+
+        if (blocksArr[0].downDivWrap.offsetLeft < -50) {
+          jsWrapBg.removeChild(blocksArr[0].downDivWrap)
+          jsWrapBg.removeChild(blocksArr[0].upDivWrap)
+          blocksArr.shift()//移除第一项
+        }
+
+
         if (blocksArr[blocksArr.length-1].downDivWrap.offsetLeft < (450 - blockDistance)) {
           blockDistance = baseObj.randomNum(130,250)
           var newBlock = new Block()
