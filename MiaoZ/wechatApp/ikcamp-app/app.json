@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/mian/main",
+    "pages/mine/mine",
+    "pages/detail/index",
+    "pages/wxParse/wxParse"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00CD00",
+    "navigationBarTitleText": "iKcamp",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/mian/main",
+      "text": "首页",
+      "iconPath": "images/shouye.png",
+      "selectedIconPath": "images/shouye-active.png"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "images/mine.png",
+      "selectedIconPath": "images/mine-active.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

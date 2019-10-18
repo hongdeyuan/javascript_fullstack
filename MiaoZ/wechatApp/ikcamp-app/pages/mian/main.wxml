@@ -1,0 +1,26 @@
+<!--pages/mian/main.wxml-->
+<view class="wrapper">
+  <view class="group" wx:for="{{articleList}}" wx:key="{{index}}">
+
+    <view class="group-bar">
+      <view class="group-title on">
+        {{item.date}}
+      </view>
+    </view>
+
+    <view class="group-content">
+    <!-- wx:for-item : 修改多次for循环的项目名 -->
+      <view class="group-content-item visited"
+        wx:for="{{item.articles}}" 
+        wx:for-item="group" 
+        bind:tap="gotoDetail"
+        wx:key="{{index}}">
+        <view class="group-content-item-desc">
+           {{group.title}}
+        </view>
+        <image class="group-content-item-img" src="{{group.cover}}" />
+      </view>
+    </view>
+  </view>
+
+</view>

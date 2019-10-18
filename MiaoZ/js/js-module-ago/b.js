@@ -1,0 +1,1 @@
+var global = '全局变量 global  改变了'
