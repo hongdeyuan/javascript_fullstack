@@ -14,7 +14,7 @@
     </view>
   </view>
   <!-- 右边详情 -->
-  <scroll-view class="category-right" scroll-y scroll-with-animation="true" scroll-into-view="{{toView}}">
+  <scroll-view class="category-right" scroll-y bindscroll="scroll" scroll-with-animation="true" scroll-into-view="{{toView}}">
     <block wx:for="{{detail}}" wx:key="{{item.id}}">
       <view class="cate-box" id="{{item.id}}">
         <view class="cate-banner">

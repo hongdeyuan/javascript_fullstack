@@ -14,7 +14,7 @@ Page({
       { name: '淡饭', id: 'danfan' }
     ],
     curentIndex:0,
-    toView:'danfan',
+    toView:'guowei',
     detail: [
       {
         banner: 'http://hbimg.b0.upaiyun.com/ad28f5eff18e75e2765043bcb53d2e4be004958027a33-MvE8WW_fw658',
@@ -160,6 +160,37 @@ Page({
     this.setData({
       curentIndex:e.currentTarget.dataset.index,
       toView: e.currentTarget.dataset.id
+    })
+  },
+  //求每一栏高度
+  length: function(e) {
+    var that = this;
+    var detail = that.data.detail;
+    for (var i = 0; i < detail.length; i++) {
+      if(detail[i]['id']==e){
+        return detail[i]['detail'].length;
+ 
+      }
+    }
+  },
+  //滚动触发
+  scroll: function(e) {
+    var scrollTop = e.detail.scrollTop,
+      height = 0;
+    var that = this;
+    let count = 0;
+
+    for (let i = 0; i < that.data.category.length; i++) {
+      var _height =26 + that.length(that.data.category[i]['id'])*102;
+      if (scrollTop >= height){//scrollTop >= height
+        count = i;
+      }
+      height +=_height;
+      console.log(height)
+    }
+
+    that.setData({
+      curentIndex: count,
     })
   },
   /**

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/list/list",
     "pages/category/category",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/address/address"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,7 +41,7 @@
         "selectedIconPath": "image/cart1.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/user/user",
         "text": "我的",
         "iconPath": "image/42.png",
         "selectedIconPath": "image/41.png"

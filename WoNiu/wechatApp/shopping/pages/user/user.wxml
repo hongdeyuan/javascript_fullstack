@@ -1,0 +1,23 @@
+<!--pages/user/user.wxml-->
+<view class="mian">
+  <view class="header">
+    <!-- open-data  去拿头像 -->
+    <open-data class="thumb" type="userAvatarUrl" open-gid=""></open-data>
+    <open-data class="nicname" type="userNickName" open-gid="" lang="zh_CN"></open-data>
+    <text class="about">关于我们 </text>
+  </view>
+  <view class="address-box">
+    <view class="address-manage">
+      <navigator url="../address/address">地址管理</navigator>
+    </view>
+    <view class="address-list">
+      <view>{{address.name}}</view>
+      <view>{{address.phone}} </view>
+      <view>{{address.detail}}</view>
+    </view>
+  </view>
+
+  <view class="orders-box">
+    <view class="orders">我的订单</view>
+  </view>
+</view>
