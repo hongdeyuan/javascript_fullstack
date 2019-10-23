@@ -56,7 +56,6 @@ page {
 .shouye-swiper, .handpick{
   height: 100%;
   width: 100%;
-  height: 80vh !important;
 }
 
 /* 精选 */

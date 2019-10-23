@@ -1,2 +1,23 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class="container">
+    <view class="header-image">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+
+    <view class="vip">
+        <image src="../../images/no_vip.png" mode="widthFix"></image>
+        <text class="h2">VIP暂未开通</text>
+        <text class="bottom">请点此登录</text>
+    </view>
+    <view class="history">
+        <text>观看历史</text><text class="fr"></text>
+    </view>
+    <view class="play-list history">
+        <text>我的看单</text><text class="fr"></text>
+    </view>
+    <view class="history">
+        <text>设置</text><text class="fr"></text>
+    </view>
+</view>
+

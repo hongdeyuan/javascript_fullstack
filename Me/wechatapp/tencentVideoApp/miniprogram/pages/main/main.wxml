@@ -19,10 +19,11 @@
     <input id="search-input" placeholder="请输入片名、主演或导演" placeholder-style="font-size: 12px;color:#9C9C9C;padding-left:4px" type="text" bindinput="bindSearch" />
   </view>
 
-  <swiper class="shouye-swiper" indicator-dots="{{false}}"  bindanimationfinish="swiperChange">
+  <swiper class="shouye-swiper" indicator-dots="{{false}}" style="height:{{swiper_height}};" bindanimationfinish="swiperChange">
     <!-- 精选 -->
     <swiper-item class="handpick">
-      
+      <view id="start" class='start-view'></view>
+
       <!-- swiper -->
       <swiper class="handpick-swiper" 
         indicator-dots="{{false}}" 
@@ -68,6 +69,7 @@
         </scroll-view> 
       </view>
 
+    <view id="end" class='start-view'></view>
     </swiper-item>
 
     <!-- 电视剧 -->

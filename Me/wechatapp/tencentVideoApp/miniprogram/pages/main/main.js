@@ -129,7 +129,33 @@ Page({
         remark: '顾小满课堂告白被截胡'
       }
     ],
-    toView:'handpick'
+    toView:'handpick',
+    swiper_height: 80
+  },
+  autoHeight() {
+    let { isIndex } = this.data;
+      wx.createSelectorQuery()
+        .select('#end').boundingClientRect()
+        .select('#start').boundingClientRect().exec(rect => {
+          let _space = rect[0].top - rect[1].top;
+          _space =  _space + 'px';
+          this.setData({
+            swiper_height: _space
+          });
+        })
+  },
+  changeNavBar: function (e) {
+    this.setData({
+      isIndex: e.detail
+    });
+ 
+  },
+  //改变swiper
+  swiperChange: function (e) {
+    this.setData({
+      isIndex: e.detail.current
+    });
+    this.autoHeight();
   },
   switchTab(e){
     this.setData({
@@ -142,6 +168,7 @@ Page({
    * 生命周期函数--监听页面加载application/json  application/x-www-form-urlencode
    */
   onLoad: function (options) {
+    this.autoHeight();
     wx.request({
       url: 'https://m.v.qq.com/play.html?cid=zr5a67l333ehzu9&vid=d0032x85stp',
       data: {},
