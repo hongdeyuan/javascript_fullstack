@@ -10,6 +10,7 @@ page {
   width: 100%;
   height: 100%;
 }
+/* 菜单 */
 .shouye-menu {
   width: 100%;
   height: 100rpx;
@@ -31,6 +32,7 @@ page {
   color: #ff7700;
   border-bottom: 1rpx solid #ff7700;
 }
+/* 搜索 */
 .shouye-search{
   position: relative;
   width: 100%;
@@ -51,17 +53,26 @@ page {
   font-size: 18px;
 }
 
-.shouye-swiper{
+
+/* 首页swiper */
+.shouye-swiper, .handpick{
+  height: 100%;
+  width: 100%;
+  height: 80vh !important;
+}
+
+/* 精选 */
+.handpick .handpick-swiper{
   height: 500rpx;
   background: #fff;
   padding: 10rpx 20rpx 10rpx 20rpx;
   box-sizing: border-box;
 }
-.shouye-swiper .slide-image{
+.handpick .handpick-swiper .slide-image{
   width: 100%;
   height: 80%;
 }
-.shouye-swiper .slide-title{
+.handpick .handpick-swiper .slide-title{
   padding: 13px 0;
   font-size: 12px;
   line-height: 20px;
@@ -69,59 +80,53 @@ page {
   width: 90%;
   height: 28px;
 }
-.shouye-chasing{
+
+/* 精选-猜你想看 */
+.handpick .handpick-chasing{
   background: #fff;
 }
-.chasing-title{
-  padding-bottom: 36rpx;
+.handpick .handpick-chasing .chasing-title{
+  padding-bottom: 16rpx;
+  padding-top: 20rpx;
   font-size: 14px;
-  margin: 10rpx 20rpx 0 20rpx;
+  margin: 20rpx 20rpx 0 20rpx;
 }
-.list {
-  width: calc(100% - 80rpx);
-  margin: 0 40rpx;
-  position: relative;
+.handpick .handpick-chasing .list {
+  width: 100%;
+  margin: 0 20rpx 0 20rpx;
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y:hidden;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
 }
 
-
-.list .detail {
-  flex:1;
-  width: 100%;
-  height: 100%;
-  
+.handpick .handpick-chasing .list .list-detail{
+  text-align: center;
+  display: inline-block;
+  padding:4rpx;
 }
-.list .detail .view-image {
-  width: 100%;
-  position: relative;
+.handpick .handpick-chasing .list .list-detail image{
+  width: 273rpx;
+  height: 180rpx;
+  margin: 5rpx;
 }
-.list .detail .view-image text {
-  position: absolute;
-  font-size: 24rpx;
-  right: 10rpx;
-  bottom: 10rpx;
-  color: #fff;
-}
-
-.list .detail image{
-  width: 100%;
-  height: 100%;
+.handpick .handpick-chasing .list .list-detail .list-detail-content .title{
   display: block;
+  text-align: left;
+  font-size: 11px;
+  text-indent: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.list .detail .font-area {
-  padding: 10rpx 0;
-}
-.list .detail .font-area text{
-  font-size: 24rpx;
-  line-height: 36rpx;
-  display: flex;
-}
-.list .vertical-space {
-  width: 18rpx;
-  height: 100%
+
+.handpick .handpick-chasing .list .list-detail .list-detail-content .remark{
+  display: block;
+  font-size: 9px;
+  text-align: left;
+  text-indent: 10rpx;
+  color: darkgrey;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

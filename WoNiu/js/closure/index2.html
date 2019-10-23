@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>闭包2</title>
+</head>
+<body>
+  <script>
+    // for (var i = 0; i <10; i++) {
+    //   setTimeout(() => {
+    //     document.write(i+'\t')
+    //   },1000)
+      
+    // }  
+
+    function test() {
+      var arr= [];
+      for (var i = 0; i < 10; i++) {
+        // arr[i] = function () {
+        //   document.write(i+'\t')
+        // }
+
+      //立即执行函数()()
+      (function (j) {
+        //  j = 0,1,2,3... 闭包手法： 此时会保存j 的变量
+        arr[j] =  document.write(j+'\t')
+        })(i)
+      }
+      //arr[]
+
+      return arr
+    }
+
+    // test()
+    var myArr = test()
+    for (var j = 0; j < 10; j++) {
+      myArr[j]()
+    }
+  </script>
+</body>
+</html>

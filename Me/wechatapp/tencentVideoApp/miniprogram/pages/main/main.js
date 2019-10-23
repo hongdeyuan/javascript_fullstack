@@ -17,6 +17,7 @@ Page({
       { name: '记录片', id: 'documentary' }
     ],
     curentIndex:0,
+    menu:3,
     movieUrls: [
       {
         img:'http://puui.qpic.cn/tv/0/314949802_1080607/0',
@@ -34,7 +35,24 @@ Page({
         img:'http://puui.qpic.cn/tv/0/329466791_1080607/0',
         title:'【演员】《情深深雨濛濛》重现依萍书桓 赵薇动容'
       }],
-    videoChasings:[
+    videoUrls: [
+      {
+        img:'http://puui.qpic.cn/tv/0/335371184_1080607/0',
+        title:'【谍海惊蛰·首播】《麻雀》团队聚首再战谍海'},
+      {
+        img:'http://puui.qpic.cn/tv/0/335071563_1080607/0',
+        title:'【明月照我心☝甜宠】不老实！王爷床边强吻明月'}
+      ,{
+        img:'http://puui.qpic.cn/tv/0/333518185_1080607/0',
+        title:'【机器人男友·新剧首播】毛晓彤追爱高冷姜潮'}
+      ,{
+        img:'http://puui.qpic.cn/tv/0/334915190_1080607/0',
+        title:'【满满喜欢你】左岸展越联手对抗沈晨阳'}
+      ,{
+        img:'http://puui.qpic.cn/tv/0/336012656_1080607/0',
+        title:'【秘密·更新】林星然求江夏留宿，小奶狗偷着乐'
+      }],
+    videoOnChasings:[
       {
         img: 'http://puui.qpic.cn/vcover_hz_pic/0/uiq0rxuywu508qr1480438739/0',
         title: '功夫',
@@ -58,7 +76,7 @@ Page({
       },{
         img: 'http://puui.qpic.cn/vcover_hz_pic/0/7qreid0d34vsmv21501617987/0',
         title: '黑土热血',
-        remark: '：张芷溪演绎多面特工'
+        remark: '张芷溪演绎多面特工'
       },{
         img: 'http://puui.qpic.cn/vcover_hz_pic/0/5y95zy4idzqf6hc1555571752/0',
         title: '捉妖记2',
@@ -71,6 +89,45 @@ Page({
         img: 'http://puui.qpic.cn/vcover_hz_pic/0/tg12lsdj2lzgptvt1444754487.jpg/0',
         title:'X战警：逆转未来',
         remark: '金刚狼穿越修复基友情'
+      }
+    ],
+    videoCanChasings:[
+      {
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/mzc00200mxyxu2t1566825599/0',
+        title: '空降利刃',
+        remark: '贾乃亮邢佳栋的热血特战人生'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/qft4f5xgll4cv6i1562658600/0',
+        title: '陆军特战队',
+        remark: '精锐部队的炼成'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/0ufmjpc8vso3bue1518071383/0',
+        title: '五号特工组',
+        remark: '中国式的007'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/v6nb9jnbp4rammw1480463082/0',
+        title: '雪域雄鹰',
+        remark: '首部高原特种兵大片'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/wlfsmo4mc5fc8k01556250690/0',
+        title: '热血尖兵',
+        remark: '90后鲜肉版“士兵突击”'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/mzc00200ejsxyf31570871085/0',
+        title: '明月照我心',
+        remark: '猪猪女孩狂撩傲娇王爷'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/r7uqpxtz1asi79w1484207876/0',
+        title: '箭在弦上',
+        remark: '靳东蒋欣情路纠结'
+      },{
+        img: 'http://puui.qpic.cn/vcover_hz_pic/0/uwr8gse5tajsfgj1556172896/0',
+        title:'大秦帝国之纵横',
+        remark: '浩浩荡荡大秦传奇'
+      },{
+        img: 'http://puui.qpic.cn/tv/0/334915413_498280/0',
+        title:'满满喜欢你[会员先看]',
+        remark: '顾小满课堂告白被截胡'
       }
     ],
     toView:'handpick'

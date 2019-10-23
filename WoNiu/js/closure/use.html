@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>闭包使用</title>
+</head>
+<body>
+  <script>
+    // var count = 0
+    // function add() {
+    //   count++
+    //   console.log(count)
+    // }
+
+    // add()
+
+  //   function add() {
+  //     var count = 0
+  //     function a() {
+  //       console.log(++count)
+  //     }
+  //     return a
+  //   }
+    
+  // var f= add()
+  // f()
+
+
+  // function test() {
+  //   var food = 'apple'
+  //   function a() {
+  //     food = 'bababa'
+  //     console.log(food)
+  //   }
+  //   function b() {
+  //     console.log(food)
+  //   }
+  // }
+
+
+  function test() {
+    var food = 'apple'
+    var obj = {
+      eatFoof:function () {
+        if (food != '') {
+          console.log("I am eating "+food)
+          food = ''
+        }else{
+          console.log('there is nothing')
+        }
+      },
+      pushfood:function(myFood) {
+        food = myFood
+      }
+    }
+
+    return obj
+  }
+
+  var p = test()
+  p.eatFoof()
+  p.eatFoof()
+  p.pushfood('pear')
+  </script>
+</body>
+</html>

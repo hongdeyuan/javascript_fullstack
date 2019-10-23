@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>闭包</title>
+</head>
+<body>
+  
+  <script>
+   
+    // function f1() {
+    //   m = 999
+    // }
+    // f1()
+    // console.log(m)
+
+    //让内部函数拿到外部时，可以访问内部作用域
+
+    function f2() {
+      var n = 88
+      function f3() {
+        console.log(n)
+      }
+      return f3
+    }
+
+    // f2()()
+    var result = f2()
+    result()
+
+  </script>
+</body>
+</html>

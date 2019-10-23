@@ -16,8 +16,19 @@
     
     解决如下：
     <swiper indicator-dots="{{false}}" autoplay="true" interval="5000" duration="300"> </swiper>
+  - 微信小程序swiper高度动态适配(子元素高度不固定)
+      swiper,swiper-item{
+        height: 100vh !important;
+      }
+    - 或者
+        swiper,swiper-item{
+          height: calc(100vh - 75rpx) !important;
+        }
+  - overflow-x: scroll 失效
+
 
 ## 参考文档
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+
 
