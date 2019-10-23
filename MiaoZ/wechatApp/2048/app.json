@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FAFAD2",
+    "navigationBarTitleText": "2048小游戏",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

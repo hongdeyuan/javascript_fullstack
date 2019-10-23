@@ -273,3 +273,18 @@ function display() {
 }
 
 display.call(); // Cannot read the property of 'sData' of undefined
+
+
+//<-------------------applay使用-------------------------------> 
+//applay() :除了 this 值 ，其他必须以数组的形式传参
+
+// b.apply(a)
+// b.apply(a,[1,2])
+//b.apply(null)  时 ，this 指向 window
+
+
+//<-------------------bind使用-------------------------------> 
+//bind(): 放回一个被修改this作用域的函数
+
+// var v = b.bind(a)//放回一个被修改的函数 b 在此时 是被调用的
+// v(1,2)

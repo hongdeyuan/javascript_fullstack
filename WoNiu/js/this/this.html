@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = {
+        name: '蜗牛',
+        fn:function (a,b){
+          console.log(this.name)
+          console.log(a + b)
+        }
+    }
+
+    // a.fn()
+
+    var b = a.fn
+
+    //call:改变 this的作用域
+    //call() 方法使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数
+    //b.call(a)
+    // b.call(a,1,6)
+
+    //applay() :除了 this 值 ，其他必须以数组的形式传参
+    // b.apply(a)
+    // b.apply(a,[1,2])
+    //b.apply(null)  时 ，this 指向 window
+
+
+    //bind(): 放回一个被修改this作用域的函数
+    var v = b.bind(a)//放回一个被修改的函数 b 在此时 是被调用的
+    v(1,2)
+  </script>
+</body>
+</html>

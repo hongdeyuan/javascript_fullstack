@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>new原理</title>
+</head>
+<body>
+  <script>
+
+    //new 原理
+    function objFactory() {
+      //第一步：创建 一个 空对象
+      //第二步： 执行[[protptype]]  连接 __proto__
+      //第三步： 让this 指向 新对象
+      var obj = {}
+      //shift:数组删除了一个元素George 并返回George ，并且数组中只剩下John,Thoma
+      // arguments:参数统称
+      console.log(arguments)
+
+      // [].shift.call(arguments) 等效于Array.prototype.slice.call( arguments )
+      const Constructor = [].shift.call(arguments)
+      console.log(Constructor.prototype)
+      //隐式原型链  显示原型链prototype
+      obj.__proto__ = Constructor.prototype
+      const ret = Constructor.apply(obj,arguments)
+
+      return typeof ret === 'object' ? ret : obj
+
+    }
+
+    function People(name, age) {
+      this.name = name
+      this.age = age
+    }
+
+    // console.log(new People('dh',18))
+
+    console.log(objFactory(People,'dh',18))
+
+  </script>
+</body>
+</html>

@@ -186,7 +186,7 @@ Page({
         count = i;
       }
       height +=_height;
-      console.log(height)
+      // console.log(height)
     }
 
     that.setData({

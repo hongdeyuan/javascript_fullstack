@@ -1,0 +1,28 @@
+<!--pages/main/index.wxml-->
+<view class="container">
+
+  <view class="head"></view>
+  <view class="game">
+    <!-- grid -->
+    <view 
+      bind:touchstart="touchstart"
+      bind:touchmove="touchmove"
+      bind:touchend="touchend">
+      
+      <view>
+        <view class="row" wx:for="{{nums}}" wx:for-item="row" wx:key="{{index}}">
+          <view class="cell" wx:for="{{row}}" wx:key="{{index}}">
+            <view class="cell-con cell-con-{{item}}">
+              {{item}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+  
+    
+</view>

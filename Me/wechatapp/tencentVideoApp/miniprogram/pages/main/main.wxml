@@ -1,0 +1,53 @@
+<!--miniprogram/pages/main/main.wxml-->
+<view class="tx-app-shouye">
+
+  <!-- 视频菜单类型 -->
+  <view class="shouye-menu">
+    <block  wx:for="{{moviesCategory}}" wx:key="{{item.id}}">
+      <text 
+          class="{{curentIndex === index ? 'active' : ''}}"
+          data-id="{{item.id}}"
+          data-index="{{index}}"
+          bind:tap="switchTab"
+          >{{item.name}}</text>
+    </block>
+  </view>
+  <!-- 视频搜索 -->
+  <view class="shouye-search">
+    <icon type="search" size="18" color="#FF4500"></icon>
+    <input id="search-input" placeholder="请输入片名、主演或导演" placeholder-style="font-size: 12px;color:#9C9C9C;padding-left:4px" type="text" bindinput="bindSearch" />
+  </view>
+  <!-- swiper -->
+  <swiper class="shouye-swiper" 
+    indicator-dots="{{false}}" 
+    autoplay="true" 
+    interval="3500" 
+    duration="500" 
+    circular="true">
+    <block wx:for="{{movieUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image class="slide-image" src="{{item.img}}"/>
+            <text class="slide-title">{{item.title}}</text>
+          </swiper-item>
+    </block>
+  </swiper>
+  <!-- 猜你想看 -->
+  <view class="shouye-chasing">
+    <view class="chasing-title">猜你在追</view>
+    <view class="list">
+      <block wx:for="{{videoChasings}}" wx:key="{{index}}">
+        <view class="detail">
+          <image src="{{item.img}}" mode="widthFix"></image>
+          <view class="font-area">
+            <text class="bold">{{item.title}}</text>
+            <text>{{item.remark}}</text>
+          </view>
+        </view>
+      </block>
+        
+    </view>
+  </view>
+    
+
+
+</view>

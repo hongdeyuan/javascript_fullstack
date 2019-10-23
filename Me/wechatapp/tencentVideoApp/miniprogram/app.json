@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/shortVideos/shortVideos",
+    "pages/brush/brush",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF4500",
+    "navigationBarTitleText": "腾讯视频",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FF4500",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye-action.png"
+      },
+      {
+        "pagePath": "pages/shortVideos/shortVideos",
+        "text": "短视频",
+        "iconPath": "images/duanshiping.png",
+        "selectedIconPath": "images/duanshiping-action.png"
+      },
+      {
+        "pagePath": "pages/brush/brush",
+        "text": "刷一刷",
+        "iconPath": "images/shuayishua.png",
+        "selectedIconPath": "images/shuayishua-action.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-action.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
