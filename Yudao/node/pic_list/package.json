@@ -1,0 +1,15 @@
+{
+  "name": "pic_list",
+  "version": "1.0.0",
+  "description": "1. 一切皆资源\r   2. DOM + CSS + JS\r   3. URL: Universal Resource Location 统一资源定位符\r   4. http://taobao.com/shop/good/2 ：明确表达 它的资源是什么意思？",
+  "main": "index.js",
+  "scripts": {
+    "dev": "json-server --watch db.json --port 1314"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

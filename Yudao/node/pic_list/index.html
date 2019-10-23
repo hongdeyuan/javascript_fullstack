@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>url</title>
+</head>
+<body>
+  
+
+  <script>
+    //fetch： 请求资源  二进制 转成json
+    //http 文件传输 二进制流
+    fetch('http://localhost:1314/posts')
+    .then(data => data.json())
+    .then(data => {
+      console.log(data);
+    })
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <title>posts</title>
+  <style>
+    .card img{
+      width: 100%;
+      height: auto;
+    }
+    .card .card-body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1 class="display-1 my-5">POSTS</h1>
+    <div class="row justify-content-center" id="cards">
+
+      
+
+    </div>
+
+  </div>
+  
+    <script>
+        //fetch： 请求资源  二进制 转成json
+        //http 文件传输 二进制流
+        fetch('http://localhost:1314/posts')
+        .then(data => data.json())
+        .then(data => {
+
+          // 数据数组
+          console.log(data);
+          // html 数组
+          const htmlArr = data.map((item) =>{
+            return `
+              <div class="col-md-6">
+                <div class="card my-3">
+                  <a href="/detail.html">
+                    <img src="${item.imageUrl}" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">${item.title}</h5>
+                      <div class="card-subtitle mb-2 text-black-50">${item.author}</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            `
+          });
+          // console.log(htmlArr);
+          document.getElementById('cards').innerHTML = htmlArr.join('');
+
+        })
+
+    
+      </script>
+</body>
+</html>

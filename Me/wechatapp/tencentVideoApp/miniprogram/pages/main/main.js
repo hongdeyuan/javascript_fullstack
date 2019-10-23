@@ -16,8 +16,7 @@ Page({
       { name: '旅游', id: 'travel' },
       { name: '记录片', id: 'documentary' }
     ],
-    curentIndex:0,
-    menu:3,
+    curentIndex: 0,
     movieUrls: [
       {
         img:'http://puui.qpic.cn/tv/0/314949802_1080607/0',

@@ -2,7 +2,7 @@
 <view class="tx-app-shouye">
 
   <!-- 视频菜单类型 -->
-  <view class="shouye-menu">
+  <scroll-view class="shouye-menu" scroll-x="{{true}}" scroll-y="{{false}}">
     <block  wx:for="{{moviesCategory}}" wx:key="{{item.id}}">
       <text 
           class="{{curentIndex === index ? 'active' : ''}}"
@@ -11,7 +11,7 @@
           bind:tap="switchTab"
           >{{item.name}}</text>
     </block>
-  </view>
+  </scroll-view>
   
   <!-- 视频搜索 -->
   <view class="shouye-search">
@@ -19,7 +19,7 @@
     <input id="search-input" placeholder="请输入片名、主演或导演" placeholder-style="font-size: 12px;color:#9C9C9C;padding-left:4px" type="text" bindinput="bindSearch" />
   </view>
 
-  <swiper class="shouye-swiper" indicator-dots="{{false}}">
+  <swiper class="shouye-swiper" indicator-dots="{{false}}"  bindanimationfinish="swiperChange">
     <!-- 精选 -->
     <swiper-item class="handpick">
       
@@ -40,7 +40,7 @@
       <!-- 猜你想看 -->
       <view class="handpick-chasing">
         <view class="chasing-title">猜你在追</view>
-        <view class="list">
+        <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
           <block wx:for="{{videoOnChasings}}" wx:key="{{index}}">
             <view class="list-detail">
               <image src="{{item.img}}" mode="widthFix"></image>
@@ -50,9 +50,24 @@
               </view>
             </view>
           </block>
-            
-        </view>
+        </scroll-view> 
       </view>
+      <!-- 重磅♨正直播KPL·RW侠遇Hero -->
+      <view class="handpick-chasing">
+        <view class="chasing-title">重磅♨正直播KPL·RW侠遇Hero</view>
+        <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
+          <block wx:for="{{videoOnChasings}}" wx:key="{{index}}">
+            <view class="list-detail">
+              <image src="{{item.img}}" mode="widthFix"></image>
+              <view class="list-detail-content">
+                <text class="title">{{item.title}}</text>
+                <text class="remark">{{item.remark}}</text>
+              </view>
+            </view>
+          </block>
+        </scroll-view> 
+      </view>
+
     </swiper-item>
 
     <!-- 电视剧 -->
@@ -75,7 +90,7 @@
       <!-- 猜你会追 -->
       <view class="handpick-chasing">
         <view class="chasing-title">猜你会追</view>
-        <view class="list">
+        <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
           <block wx:for="{{videoCanChasings}}" wx:key="{{index}}">
             <view class="list-detail">
               <image src="{{item.img}}" mode="widthFix"></image>
@@ -86,7 +101,7 @@
             </view>
           </block>
             
-        </view>
+        </scroll-view>
       </view>
     </swiper-item>
       
