@@ -8,7 +8,7 @@
     <view class="vip">
         <image src="../../images/no_vip.png" mode="widthFix"></image>
         <text class="h2">VIP暂未开通</text>
-        <text class="bottom">请点此登录</text>
+        <text class="bottom">请点此去开通</text>
     </view>
     <view class="history">
         <text>观看历史</text><text class="fr"></text>

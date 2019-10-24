@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>预编译</title>
+</head>
+<body>
+  
+  <script>
+
+    //函数声明，整体 变量提升
+
+    //变量 声明提升   
+
+    //声明 与赋值是两步操作
+    //如 var a= 2;  为两步操作  ，先声明 var a; 再执行 赋值 a = 2
+
+
+
+    // console.log(a)
+    // var a = 1
+
+
+    // test()
+    // function test() {
+    //   console.log('hello world')
+    // }
+
+    // function fn(a) {
+
+    //   console.log(a)// function(){}
+    //   var a = 12
+    //   console.log(a)//12
+    //   function a() {
+    //     console.log(a)//12 
+    //   }
+
+    //   var b = function () {
+    //     console.log(a)//12  function(){}
+    //   }
+    // }
+
+    // fn(1)
+
+    // function test(a,b) {
+    //   console.log(a);//1
+    //   c= 0;//0
+    //   var c ;
+    //   a= 3;//3
+    //   b = 2;//2
+
+    //   console.log(b);//2
+
+    //   function b() {
+        
+    //   }
+
+    //   function d() {
+        
+    //   }
+
+    //   console.log(b);//2
+    // }
+
+    // test(1)
+
+    //1
+    // AO{
+
+    // }
+
+    //  2
+    // AO{
+    //   a:undefined,
+    //   b:undefined,
+    //   c:undefined,
+    // }
+
+
+    //3
+    // AO{
+    //   a:1,
+    //   b:undefined,
+    //   c:undefined,
+    // }
+
+     //4
+    // AO{
+    //   a:1,
+    //   b:function(){},
+    //   c:undefined,
+    // }
+
+    //执行过程
+    // AO{
+    //   a:1 => 3,
+    //   b:function(){} => 2,
+    //   c:undefined => 0 ,
+    // }
+
+    //数值变换过程
+    // AO{
+    //   a:undefined => 1 => 3,
+    //   b:undefined => function(){} => 2,
+    //   c:undefined => 0 ,
+    // }
+
+
+
+    //-----------------------------------------
+      //GO
+      global = 100
+      function fn() {
+        console.log(global)//undefined
+        global = 200
+        console.log(global)//200
+        var global = 300
+      }
+      fn()
+
+      var global;
+
+    //预编译过程
+    // 1
+    // GO{
+
+    // }
+
+    //2
+    // GO{
+    //   global: undefined
+    // }
+
+    //3
+    // GO{
+    //   global: undefined
+    //   fn:function(){}
+    // }
+
+    //4
+    // AO{
+    //  global: undefined
+    // }
+
+    //函数执行 fn()
+
+      //数值变换过程
+    //GO{
+    //   global: undefined => 100
+    //   fn:function(){}
+    // }
+    // AO{
+    //  global: undefined => 200 => 300
+    // }
+
+
+  </script>
+</body>
+</html>

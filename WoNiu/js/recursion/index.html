@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>递归</title>
+</head>
+<body>
+  <script>
+    
+    function f(num) {
+      if (num == 1) {
+        return 1
+      }
+      else{
+        return f(num-1)*num
+      }
+    }
+
+    function Fibonacci(num) {
+      if (num == 1) {
+        return 1
+      }else if (num == 2) {
+        return 1
+      }
+      else{
+        return Fibonacci(num-2)+Fibonacci(num-1)
+      }
+    } 
+
+    //js数组的every
+
+    //查找数组中是否都是 偶数
+    var isEven = function(x){
+      return (x%2 == 0)?true:false;
+    }
+    var numbers = [2,4,14,16];
+    //every方法会迭代数组中的每个元素,直到返回false。
+    var result = numbers.every(isEven);
+
+
+    
+    document.write('5的阶乘 \t' + f(5) +'<br \>')
+
+    document.write('5的Fibonacci \t' + Fibonacci(6) +'<br \>')
+
+    document.write('[2,4,14,16] 中是否全为偶数 \t' + result +'<br \>')
+
+  </script>
+</body>
+</html>

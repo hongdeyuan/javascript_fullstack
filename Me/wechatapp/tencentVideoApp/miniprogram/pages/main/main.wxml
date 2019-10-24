@@ -2,7 +2,7 @@
 <view class="tx-app-shouye">
 
   <!-- 视频菜单类型 -->
-  <scroll-view class="shouye-menu" scroll-x="{{true}}" scroll-y="{{false}}">
+  <scroll-view class="shouye-menu {{scrollTop > 80 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
     <block  wx:for="{{moviesCategory}}" wx:key="{{item.id}}">
       <text 
           class="{{curentIndex === index ? 'active' : ''}}"
@@ -18,7 +18,7 @@
     <icon type="search" size="18" color="#FF4500"></icon>
     <input id="search-input" placeholder="请输入片名、主演或导演" placeholder-style="font-size: 12px;color:#9C9C9C;padding-left:4px" type="text" bindinput="bindSearch" />
   </view>
-
+  <!-- 首页菜单切换 -->
   <swiper class="shouye-swiper" indicator-dots="{{false}}" style="height:{{swiper_height}};" bindanimationfinish="swiperChange">
     <!-- 精选 -->
     <swiper-item class="handpick">
@@ -58,6 +58,22 @@
         <view class="chasing-title">重磅♨正直播KPL·RW侠遇Hero</view>
         <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
           <block wx:for="{{videoOnChasings}}" wx:key="{{index}}">
+            <view class="list-detail">
+              <image src="{{item.img}}" mode="widthFix"></image>
+              <view class="list-detail-content">
+                <text class="title">{{item.title}}</text>
+                <text class="remark">{{item.remark}}</text>
+              </view>
+            </view>
+          </block>
+        </scroll-view> 
+      </view>
+
+      <!-- 同步剧场 -->
+      <view class="handpick-chasing">
+        <view class="chasing-title">同步剧场</view>
+        <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
+          <block wx:for="{{videoHeavys}}" wx:key="{{index}}">
             <view class="list-detail">
               <image src="{{item.img}}" mode="widthFix"></image>
               <view class="list-detail-content">

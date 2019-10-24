@@ -288,3 +288,51 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 // var v = b.bind(a)//放回一个被修改的函数 b 在此时 是被调用的
 // v(1,2)
+
+
+//<-------------------every使用-------------------------------> 
+//every: 对数组中的每一项运行给定的函数，如果该函数对每一项都返回true，则返回true。
+var isEven = function(x){
+    return (x%2 == 0)?true:false;
+  }
+  var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+  //every方法会迭代数组中的每个元素,直到返回false。
+  var result = numbers.every(isEven);
+  console.log(result);//false
+
+
+//<-------------------some使用-------------------------------> 
+//some: 对数组中的每一项运行给定函数，如果任一项返回true，则返回true。
+
+//some方法会迭代数组的每个元 素,直到函数返回true.
+result = numbers.some(isEven);
+console.log(result);//true
+
+//<-------------------map使用-------------------------------> 
+// map: 对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组
+//map会迭代数组中的每个值，并且返回迭代结果
+var myMap = numbers.map(isEven);
+console.log(myMap);// [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+
+//<-------------------forEach使用-------------------------------> 
+// forEach: 对数组中的每一项运行给定函数，这个方法没有返回值
+//forEach对每一项运行给定的函数，没有返回值
+numbers.forEach(function(item,index){
+    console.log(item%2 == 0);
+  });
+
+//<-------------------filter使用-------------------------------> 
+//filter: 对数组中的每一项运行给定函数，返回改函数会返回true的项组成的数组。
+//filter方法返回的新数组由使函数返回true的元素组成
+var myFilter = numbers.filter(isEven);
+console.log(myFilter);// [2, 4, 6, 8, 10, 12, 14]
+
+
+//<-------------------reduce使用------------------------------->
+// reduce方法接收一个函数作为参数,这个函数有四个参数:previousValue、currentValue、index和array。这个函数会返回一个将被叠加到累加器的 
+// 值,reduce方法停止执行后会返回这个累加器。如果要对一个数组中的所有元素求和,这就很有用了。
+//reduct函数
+var myReduce = numbers.reduce(function(previous,current,index){
+  return previous + "" + current;
+});
+console.log(myReduce);//123456789101112131415
