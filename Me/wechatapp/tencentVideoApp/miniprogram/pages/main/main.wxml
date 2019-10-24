@@ -54,35 +54,35 @@
         </scroll-view> 
       </view>
       <!-- 重磅♨正直播KPL·RW侠遇Hero -->
-      <view class="handpick-chasing">
-        <view class="chasing-title">重磅♨正直播KPL·RW侠遇Hero</view>
-        <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
-          <block wx:for="{{videoOnChasings}}" wx:key="{{index}}">
-            <view class="list-detail">
-              <image src="{{item.img}}" mode="widthFix"></image>
-              <view class="list-detail-content">
-                <text class="title">{{item.title}}</text>
-                <text class="remark">{{item.remark}}</text>
+      <view class="handpick-synchro">
+        <view class="synchro-title">重磅♨正直播KPL·RW侠遇Hero</view>
+        <view class="lists">
+          <block wx:for="{{videoHotChasings}}" wx:key="{{index}}">
+            <view class="lists-detail">
+              <image src="{{item.img_src}}" mode="widthFix"></image>
+              <view class="lists-detail-content">
+                <text class="title">{{item.item_title}}</text>
+                <text class="remark">{{item.item_remark}}</text>
               </view>
             </view>
           </block>
-        </scroll-view> 
+        </view> 
       </view>
 
       <!-- 同步剧场 -->
-      <view class="handpick-chasing">
-        <view class="chasing-title">同步剧场</view>
-        <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
+      <view class="handpick-synchro">
+        <view class="synchro-title">同步剧场</view>
+        <view class="lists" >
           <block wx:for="{{videoHeavys}}" wx:key="{{index}}">
-            <view class="list-detail">
+            <view class="lists-detail">
               <image src="{{item.img}}" mode="widthFix"></image>
-              <view class="list-detail-content">
+              <view class="lists-detail-content">
                 <text class="title">{{item.title}}</text>
                 <text class="remark">{{item.remark}}</text>
               </view>
             </view>
           </block>
-        </scroll-view> 
+        </view> 
       </view>
 
     <view id="end" class='start-view'></view>
@@ -121,6 +121,39 @@
             
         </scroll-view>
       </view>
+
+      <!-- 热剧精选♨一波新剧来袭 -->
+      <view class="handpick-synchro">
+        <view class="synchro-title">热剧精选♨一波新剧来袭</view>
+        <view class="lists" >
+          <block wx:for="{{videoHeavys}}" wx:key="{{index}}">
+            <view class="lists-detail">
+              <image src="{{item.img}}" mode="widthFix"></image>
+              <view class="lists-detail-content">
+                <text class="title">{{item.title}}</text>
+                <text class="remark">{{item.remark}}</text>
+              </view>
+            </view>
+          </block>
+        </view> 
+      </view>
+
+      <!-- 叮咚♨好看的花絮都在这 -->
+      <view class="handpick-synchro">
+        <view class="synchro-title">叮咚♨好看的花絮都在这</view>
+        <view class="lists">
+          <block wx:for="{{videoHotChasings}}" wx:key="{{index}}">
+            <view class="lists-detail">
+              <image src="{{item.img_src}}" mode="widthFix"></image>
+              <view class="lists-detail-content">
+                <text class="title">{{item.item_title}}</text>
+                <text class="remark">{{item.item_remark}}</text>
+              </view>
+            </view>
+          </block>
+        </view> 
+      </view>
+
     </swiper-item>
       
   </swiper>

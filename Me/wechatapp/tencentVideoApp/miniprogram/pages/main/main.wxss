@@ -133,3 +133,46 @@ page {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+/* 精选-同步剧场 */
+.handpick .handpick-synchro{
+  background: #fff;
+}
+.handpick .handpick-synchro .synchro-title{
+  padding-bottom: 16rpx;
+  padding-top: 20rpx;
+  font-size: 14px;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+.lists {
+ width: 100%;
+ margin: 0 20rpx;
+}
+.lists .lists-detail {
+ display: inline-block;
+}
+.lists .lists-detail image {
+  width: 340rpx;
+  height: 220rpx;
+  margin: 10rpx;
+}
+.lists .lists-detail .lists-detail-content .title {
+  display: block;
+  text-align: left;
+  font-size: 11px;
+  text-indent: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.lists .lists-detail .lists-detail-content .remark{
+  display: block;
+  font-size: 9px;
+  text-align: left;
+  width: 340rpx;
+  text-indent: 10rpx;
+  color: darkgrey;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
