@@ -32,11 +32,11 @@ var server = http.createServer();
 //          write可以s使用多次，但是最后一定要使用end  : res.end()  来结束响应，否则客户端一直会处于等待
 server.on('request', function(req, res) {
     console.log('收到客户请求！' + req.url);
-    res.write('test');
+    res.write('test0');
     res.end(); //end 表示服务器的输入完成了，客户端可以接受到数据了
 })
 
 // //绑定端口号 ，启动服务
 server.listen(3000, () => {
-    console.log('服务器启动成功,可以通过 http://192.168.1.103/3000/ 来进行访问');
+    console.log('服务器启动成功,通过 http://192.168.1.103:3000/ 来进行访问');
 })

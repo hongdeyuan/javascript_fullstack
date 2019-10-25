@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/me/me",
+    "pages/person/person"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "鸿云开发",
+    "navigationBarTextStyle": "black"
+  },
+  "cloud": true,
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#3585f9",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "./images/plus-dark.png",
+        "selectedIconPath": "/images/plus-light.png"
+      },{
+        "pagePath": "pages/person/person",
+        "text": "朋友",
+        "iconPath": "./images/group-dark.png",
+        "selectedIconPath": "/images/group-light.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/user-dark.png",
+        "selectedIconPath": "/images/user-light.png"
+      }
+    ]
+  },
+  "usingComponents":{
+    "van-button":"./pages/dist/button/index",
+    "van-icon":"./pages/dist/icon/index",
+    "van-dialog":"./pages/dist/dialog/index",
+    "van-field":"./pages/dist/field/index",
+    "van-notify":"./pages/dist/notify/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,32 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="new-item" bindtap="showNewGroupModal">
+    <image src="https://677a-gzhiyi-154dd4-1256703754.tcb.qcloud.la/index-group.png?sign=464daa4bfd906e1a9b5bedf039bc7118&t=1545558867"></image>
+    <view class="right-conner">
+        <view class="item-name">新建群组</view>
+        <view class="icon-arrow">
+            <van-icon name="arrow"></van-icon>
+        </view>
+    </view>
+</view>
+<van-dialog
+  use-slot
+  async-close
+  show="{{newGroupModal}}"
+  show-cancel-button
+  bind:cancel="closeDialog"
+  bind:confirm="creatGroup"
+  title="创建一个群组"
+  id="new-group-modal"
+  >
+    <view class="group-dialog-body">
+    <van-field
+      value="{{ groupName }}"
+      label="群组名"
+      maxlength="{{20}}"
+      placeholder="起个名字吧"
+      bind:change="onGroupNameChange">
+    </van-field>
+  </view>
+
+</van-dialog>
+<van-notify id="notify-selector"></van-notify>

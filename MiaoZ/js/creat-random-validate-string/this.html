@@ -12,7 +12,7 @@
   <script>
 
     // 普通函数this 调用 的时候决定 定义的时候不算
-    // 箭头函数 定义的时候决定了 this 就指向它的外面一层 而且 不能后续无法改变
+    // 箭头函数 定义的时候决定了 this 就指向它的外面一层 而且 后续无法改变
       const box = document.getElementById('box')
 
       // box.addEventListener('click',function() {
@@ -23,21 +23,23 @@
         console.log(this === window)
       })
 
-      // var obj = {
-      //   a:1,
-      //   es5Fn:function(){
-      //     console.log(this === obj)
-      //   }
-      // }
-
       var obj = {
         a:1,
-        es6Fn:()=>{
-          console.log(this === window)
+        es5Fn:function(){
+          console.log(this === obj)
         }
       }
 
-      obj.es5Fn()
+      var obj1 = {
+        a:1,
+        es6Fn:()=>{
+          console.log(this === obj1)
+        }
+      }
+      obj.es5Fn();
+
+      obj1.es6Fn.call(obj);
+
 
 
   </script>
