@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js回调</title>
+</head>
+<body>
+  
+  <script>
+
+    function httpGet(url, cb) {
+      setTimeout(()=>{
+        //complete
+        cb('data');
+      },3000)
+    }
+
+    httpGet('baidu.com',(arg)=>{
+      document.write(arg);
+    });
+
+
+    function a(arg) {
+      console.log(arg)
+    }
+
+    a(123);
+
+  </script>
+</body>
+</html>

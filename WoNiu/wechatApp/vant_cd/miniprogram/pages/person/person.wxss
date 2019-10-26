@@ -1,1 +1,21 @@
 /* miniprogram/pages/person/person.wxss */
+page{
+  height: 100%;
+
+}
+.group-body{
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  padding: 40rpx 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+.creater{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  
+}

@@ -1,0 +1,16 @@
+{
+  "name": "spider-douban-250",
+  "version": "1.0.0",
+  "description": "- 协议\r     客户端  服务端\r     url  统一资源定位符\r     npm i cheerio --save -g",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
