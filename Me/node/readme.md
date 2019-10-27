@@ -3,3 +3,5 @@
     简单来说 node.js 可以解析和执行js代码
     以前只有 浏览器解析和执行js代码
     现在的js完全可以脱离浏览器运行，一切归功于nodejs
+
++ https://m.v.qq.com/play.html?cid=mzc00200pehknfq&vid=t00329pb9jg
