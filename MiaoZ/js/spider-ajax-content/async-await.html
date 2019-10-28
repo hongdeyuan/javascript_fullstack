@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>async-await</title>
+</head>
+<body>
+  
+  <script>
+    //异步
+    //回调
+    //promise  异步代码转换 同步
+
+    // fetch('./id.json')
+    // .then(res => res.json())
+    // .then(data =>{
+    //   console.log(data);
+    //   return fetch('./detail.json')
+    // })
+    // .then(detail => detail.json())
+    // .then(data =>{
+    //   console.log(data);
+    // })
+
+    
+
+    //async  使用之后 就可以使用 await
+    //await 后面接 promise
+    async function getDetail() {
+
+      //fetch 异步
+      let id = await fetch('./id.json')
+      //await 异步
+      id = await id.json();
+      console.log("id: \t",id);
+
+      let detail = await fetch('./detail.json')
+      detail = await detail.json();
+
+      console.log("await: \t",detail);
+    }
+
+    getDetail()
+
+  </script>
+</body>
+</html>

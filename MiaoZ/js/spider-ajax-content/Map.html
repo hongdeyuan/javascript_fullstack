@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map</title>
+</head>
+<body>
+
+  <button id="btn"></button>
+
+  <script>
+
+    const btn = document.getElementById('btn');
+
+
+    //考点： es5 的对象  与  es6 的map的区别
+    var map = {
+      name: 'dhyuan',
+      [btn]: 'dom node',
+      '3a': 'a val',
+      '2b': 'b val'
+    }
+    map['0'] = 'b val';
+    map['3'] = 'a val';
+    map['2'] = 'c val';
+    map['1'] = 'd val';
+
+
+    var map1 = new Map([
+      ['key','value']
+    ])
+
+    //Object.keys:获取对象中的所有 key
+
+    map1.set('key1','value1');
+    map1.get('key1');
+    map1.set(() =>{},'function')
+    for(let entey of map1){
+      console.log(entey);
+    }
+
+    console.log(map1.has('key1'));
+    map1.keys();
+    // map1.entries();//取map所有的[key,value] 的对象
+    //map1.keys()//取map所有的key  返回一个 keys 的对象
+    //map1.values()//取map所有的value  返回一个 values 的对象
+
+    console.log(Object.keys(map));
+    console.log(map1);
+
+    // 扩展运算符 :  ...   打散的数据 ...[1,2,3,4]  ： 1 2 3 4
+    console.log(...[1,2,3,4]);
+    //  扩展运算符  运用
+    console.log(Math.max(...[1,2,3,4])); // console.log(Math.max(1,2,3,4); 
+
+
+    let num = [1,2,3];
+    let b = [4,5];
+    num.push(4,5);//等效于 num.push(...b)
+
+
+
+    console.log(num)
+
+    //有什么用
+    //为什么 es6 要增加一个Map
+    //1. 以前的key 只支持 字符串
+    //以前的key 无序的 
+
+    var nameMap = {
+      lihua: 'sing',
+      lilei: 'dance',
+      lizhi: 'rap'
+    }
+
+    function dosomeing(name) {
+      //name = 'lihua' 输出 唱歌 sing
+      //name = 'lilei' 输出 跳舞 dance
+      //name = 'lizhi' 输出 说唱 rap
+
+      //方式一 if-else
+      //方式二 switch-case
+
+      //方式三 Map
+      console.log(nameMap[name]);
+
+      console.log(nameMap)
+
+    }
+
+
+    dosomeing('lilei');
+    
+  </script>
+</body>
+</html>
