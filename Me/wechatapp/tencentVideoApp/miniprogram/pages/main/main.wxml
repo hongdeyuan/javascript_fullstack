@@ -1,8 +1,7 @@
 <!--miniprogram/pages/main/main.wxml-->
-<view class="tx-app-shouye">
 
   <!-- 视频菜单类型 -->
-  <scroll-view class="shouye-menu {{scrollTop > 80 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
+  <scroll-view class="shouye-menu {{scrollTop > 41 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
     <block  wx:for="{{moviesCategory}}" wx:key="{{item.id}}">
       <text 
           class="{{curentIndex === index ? 'active' : ''}}"
@@ -12,20 +11,19 @@
           >{{item.name}}</text>
     </block>
   </scroll-view>
-  
+
   <!-- 视频搜索 -->
   <view class="shouye-search">
     <icon type="search" size="18" color="#FF4500"></icon>
-    <input id="search-input" placeholder="请输入片名、主演或导演" placeholder-style="font-size: 12px;color:#9C9C9C;padding-left:4px" type="text" bindinput="bindSearch" />
+    <input id="search-input" placeholder="请输入片名、主演或导演 {{toView}}" placeholder-style="font-size: 12px;color:#9C9C9C;padding-left:4px" type="text" bindinput="bindSearch" />
   </view>
-  <!-- 首页菜单切换 -->
-  <swiper class="shouye-swiper" indicator-dots="{{false}}" style="height:{{swiper_height}};" bindanimationfinish="swiperChange">
-    <!-- 精选 -->
-    <swiper-item class="handpick">
-      <view id="start" class='start-view'></view>
 
-      <!-- swiper -->
-      <swiper class="handpick-swiper" 
+<view class="content" style="height:{{ch}}rpx;">
+  <swiper class="swiper" bindchange='swiperChange' current='{{curentIndex}}'>
+
+    <swiper-item>
+      <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == 0}}">
+        <swiper class="handpick-swiper" 
         indicator-dots="{{false}}" 
         autoplay="true" 
         interval="3500" 
@@ -33,7 +31,11 @@
         circular="true">
         <block wx:for="{{movieUrls}}" wx:key="{{index}}">
               <swiper-item>
-                <image class="slide-image" src="{{item.img}}"/>
+                <image 
+                  class="slide-image" 
+                  src="{{item.img}}" 
+                  bind:tap="gotoDetail" 
+                  data-id="{{item.id}}"/>
                 <text class="slide-title">{{item.title}}</text>
               </swiper-item>
         </block>
@@ -84,14 +86,12 @@
           </block>
         </view> 
       </view>
-
-    <view id="end" class='start-view'></view>
+      </scroll-view>
     </swiper-item>
 
-    <!-- 电视剧 -->
-
-    <swiper-item class="handpick">
-      <!-- swiper -->
+    <swiper-item>
+      <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == 1}}">
+        <!-- swiper -->
       <swiper class="handpick-swiper" 
         indicator-dots="{{false}}" 
         autoplay="true" 
@@ -153,10 +153,9 @@
           </block>
         </view> 
       </view>
-
+      </scroll-view>
     </swiper-item>
-      
-  </swiper>
-    
 
+  </swiper>
 </view>
+

@@ -19,18 +19,23 @@ Page({
     curentIndex: 0,
     movieUrls: [
       {
+        id: 1,
         img:'http://puui.qpic.cn/tv/0/314949802_1080607/0',
         title:'【哪吒之魔童降世】吒儿来了！我命由我不由天！'},
       {
+        id: 2,
         img:'http://puui.qpic.cn/tv/0/333282049_1080607/0',
         title:'【明月照我心☝甜宠】不老实！王爷床边强吻明月'}
       ,{
+        id: 3,
         img:'http://puui.qpic.cn/tv/0/333518185_1080607/0',
         title:'【机器人男友·新剧首播】毛晓彤追爱高冷姜潮'}
       ,{
-        img:'http://puui.qpic.cn/tv/0/334351892_1080607/0',
-        title:'【没有秘密的你】是心动啊！小奶狼江夏扑倒林星然'}
+        id: 4,
+        img:'http://puui.qpic.cn/tv/0/334915190_1080607/0',
+        title:'【满满喜欢你】左岸展越联手对抗沈晨阳'}
       ,{
+        id: 5,
         img:'http://puui.qpic.cn/tv/0/329466791_1080607/0',
         title:'【演员】《情深深雨濛濛》重现依萍书桓 赵薇动容'
       }],
@@ -200,32 +205,26 @@ Page({
     ,
     toView:'handpick',
     swiper_height: 80,
-    scrollTop: 0
+    scrollTop: 0,
+    ch: 0
   },
-  autoHeight() {
-    let { isIndex } = this.data;
-      wx.createSelectorQuery()
-        .select('#end').boundingClientRect()
-        .select('#start').boundingClientRect().exec(rect => {
-          let _space = rect[0].top - rect[1].top;
-          _space =  _space + 'px';
-          this.setData({
-            swiper_height: _space
-          });
-        })
-  },
-  changeNavBar: function (e) {
-    this.setData({
-      isIndex: e.detail
-    });
- 
+  gotoDetail(event){
+    const id = event.target.dataset.id;
+
+    console.log('id :\t'+id);
+
+    wx.navigateTo({
+      url:'/pages/videoDetail/index'+"?id="+id
+    })
   },
   //改变swiper
-  swiperChange: function (e) {
-    this.setData({
-      isIndex: e.detail.current
-    });
-    this.autoHeight();
+  swiperChange: function(e) {//切换
+    if(e.detail.source == 'touch') {
+      let curentIndex = e.detail.current;
+      this.setData({
+        curentIndex
+      })
+    }
   },
   switchTab(e){
     this.setData({
@@ -238,7 +237,17 @@ Page({
    * 生命周期函数--监听页面加载application/json  application/x-www-form-urlencode
    */
   onLoad: function (options) {
-    this.autoHeight();
+
+    wx.getSystemInfo({
+      success: res => {
+        //转为rpx
+        let ch = (750 / res.screenWidth) * res.windowHeight - 80;
+        this.setData({
+          ch
+        })
+      },
+    })
+
     wx.request({
       url: 'https://m.v.qq.com/play.html?cid=zr5a67l333ehzu9&vid=d0032x85stp',
       data: {},
@@ -256,6 +265,8 @@ Page({
    * --监听页面滚动完成菜单固定
    */
   onPageScroll: function (e) {
+
+    console.log(e.scrollTop)
     this.setData({
       scrollTop: e.scrollTop
     })

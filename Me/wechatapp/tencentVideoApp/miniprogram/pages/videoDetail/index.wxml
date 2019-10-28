@@ -1,0 +1,14 @@
+<!--pages/videoDetail/index.wxml-->
+<view class="detailContainer">
+    <view class="detail_movice">
+        <video src="{{entitie.video}}" 
+        id="{{entitie.id}}"
+        hidden="{{currentVid != entitie.id}}"></video>
+        <image src="{{entitie.image}}"
+        bind:tap ="play"
+        data-vid = "{{entitie.id}}"
+        hidden="{{currentVid == entitie.id}}">
+            <view class="label">{{entitie.duration}}</view>
+        </image>
+    </view>
+</view>

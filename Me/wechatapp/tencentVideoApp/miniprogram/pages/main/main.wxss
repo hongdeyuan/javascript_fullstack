@@ -2,14 +2,7 @@
 page {
   margin: 0;
 }
-.tx-app-shouye {
-  display: flex;
-  background: #E8E8E8;
-  flex-direction: column;
-  margin-top: 31rpx;
-  width: 100%;
-  height: 100%;
-}
+
 /* 菜单 */
 .shouye-menu {
   width: 100%;
@@ -37,6 +30,11 @@ page {
   color: #ff7700;
   border-bottom: 1rpx solid #ff7700;
 }
+
+.swiper,.scroll{
+  height: 100%;
+}
+
 /* 搜索 */
 .shouye-search{
   width: 100%;
@@ -60,24 +58,19 @@ page {
 }
 
 
-/* 首页swiper */
-.shouye-swiper, .handpick{
-  height: 100%;
-  width: 100%;
-}
 
 /* 精选 */
-.handpick .handpick-swiper{
+.handpick-swiper{
   height: 500rpx;
   background: #fff;
   padding: 10rpx 20rpx 10rpx 20rpx;
   box-sizing: border-box;
 }
-.handpick .handpick-swiper .slide-image{
+.handpick-swiper .slide-image{
   width: 100%;
   height: 80%;
 }
-.handpick .handpick-swiper .slide-title{
+.handpick-swiper .slide-title{
   padding: 13px 0;
   font-size: 12px;
   line-height: 20px;
@@ -87,33 +80,33 @@ page {
 }
 
 /* 精选-猜你想看 */
-.handpick .handpick-chasing{
+.handpick-chasing{
   background: #fff;
 }
-.handpick .handpick-chasing .chasing-title{
+.handpick-chasing .chasing-title{
   padding-bottom: 16rpx;
   padding-top: 20rpx;
   font-size: 14px;
   margin: 20rpx 20rpx 0 20rpx;
 }
-.handpick .handpick-chasing .list {
+.handpick-chasing .list {
   width: 100%;
   margin: 0 20rpx 0 20rpx;
   white-space: nowrap;
   box-sizing: border-box;
 }
 
-.handpick .handpick-chasing .list .list-detail{
+.handpick-chasing .list .list-detail{
   text-align: center;
   display: inline-block;
   padding:4rpx;
 }
-.handpick .handpick-chasing .list .list-detail image{
+.handpick-chasing .list .list-detail image{
   width: 273rpx;
   height: 180rpx;
   margin: 5rpx;
 }
-.handpick .handpick-chasing .list .list-detail .list-detail-content .title{
+.handpick-chasing .list .list-detail .list-detail-content .title{
   display: block;
   text-align: left;
   font-size: 11px;
@@ -123,7 +116,7 @@ page {
   text-overflow: ellipsis;
 }
 
-.handpick .handpick-chasing .list .list-detail .list-detail-content .remark{
+.handpick-chasing .list .list-detail .list-detail-content .remark{
   display: block;
   font-size: 9px;
   text-align: left;
@@ -135,10 +128,10 @@ page {
 }
 
 /* 精选-同步剧场 */
-.handpick .handpick-synchro{
+.handpick-synchro{
   background: #fff;
 }
-.handpick .handpick-synchro .synchro-title{
+.handpick-synchro .synchro-title{
   padding-bottom: 16rpx;
   padding-top: 20rpx;
   font-size: 14px;

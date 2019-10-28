@@ -3,7 +3,8 @@
     "pages/main/main",
     "pages/shortVideos/shortVideos",
     "pages/brush/brush",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/videoDetail/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

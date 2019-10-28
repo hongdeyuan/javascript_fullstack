@@ -1,0 +1,17 @@
+/* pages/videoDetail/index.wxss */
+/* pages/stories/index.wxss */
+.detail_movice image{
+  position: relative;
+  width: 100%;
+}
+.detail_movice  video{
+  position: relative;
+  width: 100%;
+}
+.detail_movice .label{
+  position: absolute;
+  bottom:8px;
+  right:8px;
+  color:white;
+  background-color: black;
+}
