@@ -1,5 +1,8 @@
 # javascript_fullstack
-JS全栈学习
+
+# JS全栈学习 
+
+# 腾讯视频模拟实现-Me/wechatApp/tencentVideoApp 
 
 - git 是版本控制系统
   .git 存储着文件版本 ，暂存区 stage 
