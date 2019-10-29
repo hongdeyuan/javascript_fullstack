@@ -11,4 +11,42 @@
             <view class="label">{{entitie.duration}}</view>
         </image>
     </view>
+    <!-- 介绍信息 -->
+    <view class="introduce">
+        <view class="top">
+            <text class="introduce-top-title">{{entitie.header}}</text>
+            <text class="introduce-top-text" bind:tap="showModal">简介</text>
+        </view>
+        <view class="center">
+            <text class="introduce-center-text">8.6分·VIP·视频·全36集·8.8亿</text>
+        </view>
+        <view class="bottom">
+            <image class="ping" src="../../images/ping.png" lazy-load="{{true}}" bind:tap=""/>
+            <image class="like" src="../../images/like.png" lazy-load="{{true}}" bind:tap=""/>
+             <image class="share" src="../../images/share.png" lazy-load="{{true}}" bind:tap=""/>
+        </view>
+    </view>
+    <!-- 剧集 -->
+    <view class="episode">
+        <view class="top">
+            <text class="episode-top-title">剧集</text>
+            <text class="episode-top-text" bind:tap="showModal">每周一二三20点更新2集，会员多看6集</text>
+        </view>
+        <view class="center">
+            <block wx:for="{{episodes}}" wx:key="{{index}}">
+                <view class="gather">
+                    <text class="episode-nmu">{{item.num}}</text>
+                </view>
+                  
+            </block>
+              
+        </view>
+    </view>
+
+    <!--弹出框  -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+        <view class="commodity_hide" bind:tap="hideModal"></view>
+    </view>
+
+
 </view>

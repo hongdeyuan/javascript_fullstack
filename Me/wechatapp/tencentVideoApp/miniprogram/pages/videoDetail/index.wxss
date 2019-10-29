@@ -1,5 +1,8 @@
 /* pages/videoDetail/index.wxss */
 /* pages/stories/index.wxss */
+.detailContainer,.detail_movice{
+  background-color: rgb(0, 0, 0);
+}
 .detail_movice image{
   position: relative;
   width: 100%;
@@ -8,10 +11,158 @@
   position: relative;
   width: 100%;
 }
+
 .detail_movice .label{
   position: absolute;
-  bottom:8px;
-  right:8px;
-  color:white;
-  background-color: black;
+  bottom: 5px;
+  right: 7px;
+  font-size: 11px;
+  color: #fff;
+}
+/* 介绍信息 */
+.introduce{
+  background-color:#1f1e1e;
+  color: #fff;
+  height: 220rpx;
+  box-sizing: border-box;
+}
+.introduce-top-title{
+  margin-left: 30rpx;
+}
+.introduce-top-text{
+  float: right;
+  font-size: 12px;
+  margin-right: 50rpx;
+  color: #fff;
+  line-height: 25px;
+}
+.introduce .top{
+  position: relative;
+  padding-top: 15rpx;
+}
+.introduce .top::after{
+  position: absolute;
+  right: 30rpx;
+  top: 35rpx;
+  content: '';
+  color: #fff;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #7f7f7f;
+  border-right: 4rpx solid #7f7f7f;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.introduce-center-text{
+  font-size: 9px;
+  margin-left: 30rpx;
+  line-height: 25px;
+  color: #C0C0C0;
+}
+.bottom{
+  padding-top: 10rpx;
+}
+.bottom image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.bottom .ping{
+  margin-left: 30rpx;
+}
+.bottom .share{
+  float: right;
+  margin-right: 60rpx;
+}
+.bottom .like{
+  float: right;
+  margin-right: 30rpx;
+}
+
+/* 剧集 */
+.episode{
+  background-color:#1f1e1e;
+  color: #fff;
+  height: 220rpx;
+  border-top: 1px solid #696969;
+  box-sizing: border-box;
+}
+.episode-top-title{
+  margin-left: 30rpx;
+}
+.episode-top-text{
+  float: right;
+  font-size: 10px;
+  margin-right: 50rpx;
+  color: #C0C0C0;
+  line-height: 25px;
+}
+.episode .top{
+  position: relative;
+  padding-top: 30rpx;
+}
+.episode .top::after{
+  position: absolute;
+  right: 30rpx;
+  top: 50rpx;
+  content: '';
+  color: #fff;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #7f7f7f;
+  border-right: 4rpx solid #7f7f7f;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.episode .center{
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+.episode .center .gather{
+  width: 80rpx;
+  border-radius: 10rpx;
+  background-color: rgb(88, 84, 84);
+  height: 80rpx;
+  margin: 10rpx;
+  text-align: center;
+  color: #ece3e3;
+  display: inline-block;
+
+}
+
+
+
+/*对话框 */
+.commodity_attr_box {
+  width: 100%;
+  height: 650rpx;
+  color: #fff;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: rgb(0, 0, 0);
+  padding-top: 20rpx;
+}
+.commodity_hide{
+  position: relative;
+  height: 25rpx;
+}
+.commodity_hide::after{
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+  content: '';
+  color: #fff;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #ece3e3;
+  border-right: 4rpx solid #ece3e3;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }

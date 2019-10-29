@@ -1,2 +1,9 @@
 <!--miniprogram/pages/shortVideos/shortVideos.wxml-->
 <text>miniprogram/pages/shortVideos/shortVideos.wxml</text>
+
+<view bindtap="clickme">点击我可以看到底部弹框的出现</view>  
+ 
+<!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">在这里写弹出框里面的布局</view>

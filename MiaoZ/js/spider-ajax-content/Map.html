@@ -33,13 +33,19 @@
     ])
 
     //Object.keys:获取对象中的所有 key
-
+    
+    console.log(map1);
     map1.set('key1','value1');
+    console.log(map1);
     map1.get('key1');
     map1.set(() =>{},'function')
+    console.log(map1);
     for(let entey of map1){
       console.log(entey);
     }
+
+    // map1.delete("key");
+    console.log(map1);
 
     console.log(map1.has('key1'));
     map1.keys();
@@ -48,7 +54,7 @@
     //map1.values()//取map所有的value  返回一个 values 的对象
 
     console.log(Object.keys(map));
-    console.log(map1);
+    
 
     // 扩展运算符 :  ...   打散的数据 ...[1,2,3,4]  ： 1 2 3 4
     console.log(...[1,2,3,4]);
