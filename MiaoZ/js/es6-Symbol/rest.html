@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rest</title>
+</head>
+<body>
+  <script>
+
+  //参数传递进阶
+
+  // ...  扩展运算符
+  var obj ={
+    a: 1,
+    b: 2
+  } 
+  //浅拷贝
+  function copy(obj) {
+    let newobj = {};
+    for (let key in obj) {
+      newobj[key]=obj[key];
+    }
+    return newobj;
+  }
+
+  var obj1 = copy(obj);
+  var obj2 ={...obj}  //浅拷贝
+  obj.c = 3;
+  console.log("obj1" , obj1);
+  console.log("obj2" , obj2);
+
+
+  //rest 参数  发生在函数
+  function foo(...args) {//传进来的参数整理为数组
+    console.log(args);
+
+    return Math.max(...args);//打散成单个元素 1,2,3,4,5
+  }
+  
+
+  console.log(foo(1,2,3,4,5));
+  </script>
+</body>
+</html>

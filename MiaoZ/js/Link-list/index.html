@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>链表</title>
+</head>
+<body>
+  
+  <script>
+    
+    
+    let header = null;//链表头结点
+    
+    //函数来当作 结点
+    function Node(element) {
+      this.element = element;
+      this.next = null;
+    }
+
+    //建 一个链
+    function LinkList() {
+      this.header = null;
+      this.length = null;
+    }
+
+    //利用原型链 建一个  链表插入 方法
+    LinkList.prototype.append= function (element) {
+
+      //new 一个结点 ：一个对象
+      let block = new Node(element);
+
+      if (!this.header) {
+        this.header = block;
+      }
+      else{
+        let current = this.header;
+        while(current.next){
+          current = current.next;
+        }
+        //此时，找到了最后一个结点
+        current.next = block;//最加一个新增的 结点
+      }
+    }
+
+    var list = new LinkList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    console.log(list)
+
+  </script>
+</body>
+</html>

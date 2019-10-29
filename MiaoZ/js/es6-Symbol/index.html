@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Symbol</title>
+</head>
+<body>
+  <script>
+
+    //Symbol
+    //解决 变量重复的问题  每次Symbol 产生不同的变量(唯一)
+
+    var a = Symbol();
+    var b = Symbol();
+    console.log(a===b);//false
+    var obj = {//重复的key 会覆盖
+      name:'name',
+      name:'name1',
+      [a]: 'symbol'
+    }
+    console.log(obj);//{name: "name1", Symbol(): "symbol"}  此时覆盖了第一个name
+
+    //对象 key 支持 字符串 和 Symbol
+    //但是 Symbol 是不可枚举的
+
+    for(let key in obj){//此时只有 key : name， 没有 Symbol
+      console.log(key);
+    }
+
+    console.log(Object.getOwnPropertySymbols(obj));
+
+    //switch计算面积  Symbol进阶
+    const SAN_JIAO = Symbol('sanjiao');//每次都是唯一的 sanjiao144，sanjiao754等
+    const CHANG = Symbol('chang');//每次都是唯一的
+    function getArea(shapeName) {
+      switch(shapeName){
+        case SAN_JIAO:
+          return .5*10*5;
+        case CHANG:
+          return 10*5;
+      }
+    }
+
+    //Map实现计算面积
+    var areaMap = new Map();
+    areaMap.set(SAN_JIAO,()=>{
+      return .5*10*5
+    })
+    areaMap.set(CHANG,()=>{
+      return 10*5
+    })
+
+    //消除魔法字符串 
+    console.log(getArea(SAN_JIAO));
+    console.log(areaMap.get(CHANG)());
+
+
+    
+
+  </script>
+</body>
+</html>

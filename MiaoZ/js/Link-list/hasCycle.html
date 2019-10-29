@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    
+    let head = null;
+
+    let Node = function (element) {
+      this.element = element;
+      this.next = null;
+    }
+
+    let LinkList = function () {
+      this.head = null;
+      this.length = null;
+    }
+
+    LinkList.prototype.add = function (element) {
+      //new 一个结点 ：一个对象
+      let block = new Node(element);
+
+      if (!this.head) {
+        this.head = block;
+      } else {
+        let current = this.head;
+        while (current.next) {
+          current = current.next;
+        }
+        //此时，找到了最后一个结点
+        current.next = block; //最加一个新增的 结点
+      }
+
+    }
+
+    LinkList.prototype.showAll = function () {
+      if (this.head) {
+        let current = this.head;
+        while (current) {
+          console.log(current.element);
+          current = current.next;
+        }
+      }
+    }
+
+
+    var hasCycle = function (heads) {
+      let map  = new Map();
+
+      let current = heads;
+      while(current){
+        if (map.has(current)) {
+          return true
+        }else{
+          map.set(current,'123');
+        }
+
+        console.log(map)
+
+        // if (current._hasVisited) {
+        //   return true
+        // }
+        // else{
+        //   current._hasVisited = true;
+        // }
+        current = current.next;
+      }
+      return false
+
+    };
+    //快慢指针  找链环
+    var hasCycle1 = function (head) {
+
+      var slow  = fast = head;
+
+      while(slow && fast && fast.next){
+        slow = slow.next;
+        fast = fast.next.next;
+        if (slow === fast) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+
+    
+
+
+    var list = new LinkList();
+    list.add(3);
+    list.add(2);
+    list.add(0);
+    list.add(-4);
+
+
+  </script>
+</body>
+
+</html>
