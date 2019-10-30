@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>vue学习</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- v-model ：双向数据绑定 v-model="text"  那么 vue 的data中也必须是要 text的key -->
+    <input type="text" v-model="text">
+    <div class="msg">{{ text }}</div>
+
+
+    <div class="wrap">
+      <div class="wrap1" v-show="t1">风之翼</div>
+      <!-- v-on:click  等效于 @click -->
+      <div class="wrap2" @click="handle">域之雪</div>
+    </div>
+
+    <div class="wrap">
+      <ul>
+        <li v-for="list in newsList" >{{list.title}}--{{list.date}}</li>
+      </ul>
+    </div>
+
+    <div class="wrap">
+      <div class="content" v-text="content"></div>
+    </div>
+
+
+    <div class="wrap">
+        <!-- v-bind  :  用来绑定属性  如：className  -->
+        <!-- vue  中的 三元运算不需要 花括号 如下： -->
+        <!-- 绑定 类名 的几种方式  -->
+        <div class="className" v-bind:class=" isAction ? 'active' : '' ">方式一</div>
+        <div class="wn" :class="className">方式二</div>
+        <div class="wn" :class="{good:isAction}">方式三</div>
+        <div v-bind:class="[className, className1]">方式四</div>
+      </div>
+  
+
+  </div>
+
+
+
+
+  <script>
+    //全体使用ES6语法
+
+    var app = new Vue({
+      el: '#app',
+      data(){
+        return {
+          message: 'Hello Vue!',
+          text: '',
+          t1: false,
+          newsList: [
+            {title: '全国各地的梯子遭到我国长城防火墙的禁用', date:'2019/5/31'},
+            {title: '韩国瑜：准备承担2020年重担，让鬼混的民进党下台', date:'2019/6/1'},
+            {title: '冠心病“救命药”单片涨价近11倍 药企：换了包装', date:'2019/6/2'},
+            {title: '长春一天集齐雷电冰雹暴雨：有路段积水漂车，部分航班取消', date:'2019/6/3'}
+          ],
+          content: 'I love China',
+          isAction: true,
+          className: 'good',
+          className1: 'good1'
+        }
+      },
+      methods: {
+        handle(){
+         alert('凤凰');
+        }
+      },
+      //vue生命周期
+      created(){
+        console.log('created')
+      },
+      beforeCreate(){
+        console.log('beforeCreate')
+      },
+      mounted(){
+        console.log('mounted')
+      },
+      beforeMount(){
+        console.log('beforeMount')
+      },
+      updated(){
+        console.log('updated')
+      },
+      beforeUpdate(){
+        console.log('beforeUpdate')
+      },
+      destroyed(){
+        console.log('destroyed')
+      },
+      beforeDestroy(){
+        console.log('beforeDestroy')
+      }
+    })
+
+    //执行顺序：
+      // beforeCreate
+      // created
+      // beforeMount
+      // mounted
+
+
+  </script>
+</body>
+
+</html>

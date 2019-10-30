@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>computed</title>
+</head>
+
+<body>
+  <div id="app">
+    {{num}}
+    <div class="wrap">
+      <ul>
+        <li v-for="list in reverseNews">{{list.title}}--{{list.date}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    //全体使用ES6语法
+
+    var app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          message: 'Hello Vue!',
+          text: '',
+          count: 1,
+          newsList: [{
+              title: '全国各地的梯子遭到我国长城防火墙的禁用',
+              date: '2019/5/31'
+            },
+            {
+              title: '韩国瑜：准备承担2020年重担，让鬼混的民进党下台',
+              date: '2019/6/1'
+            },
+            {
+              title: '冠心病“救命药”单片涨价近11倍 药企：换了包装',
+              date: '2019/6/2'
+            },
+            {
+              title: '长春一天集齐雷电冰雹暴雨：有路段积水漂车，部分航班取消',
+              date: '2019/6/3'
+            }
+          ]
+        }
+      },
+      computed: { //拿来修改数据源的数据
+        num(){
+          return this.count + 1;
+        },
+        reverseNews() {
+          return this.newsList.reverse();
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

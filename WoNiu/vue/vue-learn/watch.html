@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>watch</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <div class="wendu">{{wendu}}</div>
+    <p class="suggest">{{suggest}}</p>
+    <div class="btn">
+      <button @click="add">add</button>
+      <button @click="reduce">reduce</button>
+    </div>
+
+  </div>
+
+  <script>
+    //全体使用ES6语法
+
+    var app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          wendu: 20,
+          suggest: '短袖'
+        }
+      },
+      methods: {
+        add() {
+          this.wendu += 5;
+        },
+        reduce() {
+          this.wendu -= 5;
+        }
+      },
+      watch: {
+        wendu:function(newVal,oldVal) {
+          if (newVal >= 26) {
+            this.suggest = '短袖';
+          }else if (newVal < 26 && newVal > 0) {
+            this.suggest = '夹克';
+          }else{
+            this.suggest = '羽绒服';
+          }
+
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
