@@ -1,7 +1,7 @@
 # VUE 用于VUE学习
 # 安装脚手架： npm i -g vue-cli
 # 安装脚手架安装指定版本：npm i -g vue-cli@2.9.6
-# vue 创建 vue项目：vue init webpack vue-router
+# vue 创建 vue项目：vue init webpack vue-router  //vue init webpack
 
 # Project initialization finished!
 # ========================
