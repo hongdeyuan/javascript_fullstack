@@ -77,6 +77,7 @@ export default {
           vertical-align top
           width 12px
           height 12px
+          vertical-align middle
           margin-right 4px
           background-size 12px 12px
           background-repeat no-repeat
@@ -93,4 +94,5 @@ export default {
         .text
           line-height 12px
           font-size 10px
+          vertical-align middle
 </style>

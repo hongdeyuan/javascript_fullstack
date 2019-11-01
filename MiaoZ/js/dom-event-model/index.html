@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>事件</title>
+  <style>
+    .out{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .in{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <a href="./readme.md" id="MD">MD文件</a>
+  <div class="out">
+    <div class="in">
+      in
+    </div>
+  </div>
+
+  <script>
+    const inNode = document.querySelector('.in');
+
+    const out = document.querySelector('.out');
+
+    window.addEventListener('click',function () {
+      console.log('window')
+    },false)//改为ture时 为捕获阶段
+
+    document.addEventListener('click',function () {
+      console.log('document')
+    },false)//改为ture时 为捕获阶段
+
+    document.documentElement.addEventListener('click',function () {
+      console.log('documentElement')
+    },false)//改为ture时 为捕获阶段
+
+    out.addEventListener('click',function () {
+      console.log('out')
+    },false)//改为ture时 为捕获阶段
+
+
+    //点击 in 时 ， 为 冒泡阶段
+    inNode.addEventListener('click',function () {
+      //阻止冒泡  阻止事件往上传播
+      event.stopPropagation();
+      //event.preventDefault();//阻止默认事件
+      console.log('in')
+    },false)
+
+    // 冒泡阶段  输出为 in   out
+
+    // 捕获阶段 输出  out   in
+
+
+    document.getElementById('MD').addEventListener('click',(e) => {
+      //阻止 a 标签的 默认 跳转事件
+      e.preventDefault();
+    })
+  </script>
+</body>
+</html>
