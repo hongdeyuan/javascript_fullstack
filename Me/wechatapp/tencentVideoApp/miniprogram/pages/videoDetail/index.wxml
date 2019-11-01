@@ -1,15 +1,29 @@
-<!--pages/videoDetail/index.wxml-->
+<!-- pages/videoDetail/index.wxml -->
 <view class="detailContainer">
-    <view class="detail_movice">
-        <video src="{{entitie.video}}" 
-        id="{{entitie.id}}"
-        hidden="{{currentVid != entitie.id}}"></video>
-        <image src="{{entitie.image}}"
-        bind:tap ="play"
-        data-vid = "{{entitie.id}}"
-        hidden="{{currentVid == entitie.id}}">
+    <!-- <view class="detail_movice">
+        <video src="{{entitie.video}}" id="{{entitie.id}}" hidden="{{currentVid != entitie.id}}"></video>
+        <image src="{{entitie.image}}" bind:tap="play" data-vid="{{entitie.id}}" hidden="{{currentVid == entitie.id}}">
             <view class="label">{{entitie.duration}}</view>
         </image>
+    </view> -->
+    <view hidden="{{tvphide}}">
+        <txv-video 
+            vid="{{vid}}" 
+            width="{{width}}" 
+            height="{{height}}" 
+            playerid="txv0" 
+            autoplay="{{autoplay}}" 
+            controls="{{controls}}" 
+            title="{{title}}" 
+            defn="{{defn}}" 
+            vslideGesture="{{true}}" 
+            enablePlayGesture="{{true}}" 
+            playBtnPosition="center" 
+            bindstatechange="onStateChange" 
+            bindtimeupdate="onTimeUpdate" 
+            showProgress="{{showProgress1}}" 
+            show-progress="{{false}}" 
+            bindfullscreenchange="onFullScreenChange"></txv-video>
     </view>
     <!-- 介绍信息 -->
     <view class="introduce">
@@ -21,9 +35,9 @@
             <text class="introduce-center-text">8.6分·VIP·视频·全36集·8.8亿</text>
         </view>
         <view class="bottom">
-            <image class="ping" src="../../images/ping.png" lazy-load="{{true}}" bind:tap=""/>
-            <image class="like" src="../../images/like.png" lazy-load="{{true}}" bind:tap=""/>
-             <image class="share" src="../../images/share.png" lazy-load="{{true}}" bind:tap=""/>
+            <image class="ping" src="../../images/ping.png" lazy-load="{{true}}" bind:tap="" />
+            <image class="like" src="../../images/like.png" lazy-load="{{true}}" bind:tap="" />
+            <image class="share" src="../../images/share.png" lazy-load="{{true}}" bind:tap="" />
         </view>
     </view>
     <!-- 剧集 -->
@@ -34,19 +48,26 @@
         </view>
         <view class="center">
             <block wx:for="{{episodes}}" wx:key="{{index}}">
-                <view class="gather">
-                    <text class="episode-nmu">{{item.num}}</text>
+                <view class="gather" data-vid="{{item.vid}}" bind:tap="select">
+                    <text class="episode-nmu" >{{item.num}}</text>
                 </view>
-                  
             </block>
-              
         </view>
     </view>
-
-    <!--弹出框  -->
+    <!-- 精彩片花 -->
+    <view class="clips">
+        <view class="clips-title">
+            <text class="clips-title-text">精彩片花</text>
+        </view>
+        <view class="clip" wx:for="{{entities}}" wx:key="{{index}}">
+            <video src="{{item.video}}" id="{{item.id}}" hidden="{{currentVid != item.id}}"></video>
+            <image src="{{item.image}}" bind:tap="play" data-vid="{{item.id}}" hidden="{{currentVid == item.id}}">
+                <view class="label">{{item.duration}}</view>
+            </image>
+        </view>
+    </view>
+    <!-- 弹出框 -->
     <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
         <view class="commodity_hide" bind:tap="hideModal"></view>
     </view>
-
-
 </view>

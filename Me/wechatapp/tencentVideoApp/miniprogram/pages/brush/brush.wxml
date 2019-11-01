@@ -1,2 +1,23 @@
 <!--miniprogram/pages/brush/brush.wxml-->
-<text>miniprogram/pages/brush/brush.wxml</text>
+<view hidden="{{tvphide}}">
+    <txv-video 
+        vid="{{vid}}" 
+        width="{{width}}"
+        height="{{height}}"
+        playerid="txv0" 
+        autoplay="{{autoplay}}"
+        controls="{{controls}}"
+
+        title="{{title}}"
+        defn="{{defn}}"
+        vslideGesture="{{true}}"
+        enablePlayGesture="{{true}}"
+        playBtnPosition="center"
+
+        bindstatechange="onStateChange"
+        bindtimeupdate="onTimeUpdate"
+        showProgress="{{showProgress1}}"
+        show-progress="{{false}}"
+        bindfullscreenchange="onFullScreenChange">
+    </txv-video>
+</view>

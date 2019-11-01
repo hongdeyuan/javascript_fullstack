@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>gird</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      min-height: 100%;
+      margin: 0;
+      font-size: 1.4rem;
+      display: grid;
+      /* place-items属性是align-items属性和justify-items属性的合并简写形式 */
+      place-items: center;
+    }
+
+    .left, .right{
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+    }
+    .middle{
+      width: 100px;
+      height: 100px;
+      background-color: rgb(30, 136, 53);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"></div>
+  </div>
+</body>
+
+</html>

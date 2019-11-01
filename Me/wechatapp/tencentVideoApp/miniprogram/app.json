@@ -6,6 +6,12 @@
     "pages/mine/mine",
     "pages/videoDetail/index"
   ],
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -43,6 +49,13 @@
         "selectedIconPath": "images/mine-action.png"
       }
     ]
+  },
+  "debug": true,
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.3.6",
+      "provider": "wxa75efa648b60994b"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }

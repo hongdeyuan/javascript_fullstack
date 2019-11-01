@@ -133,6 +133,40 @@
   display: inline-block;
 
 }
+/* 片花 */
+.clips{
+  background-color: #1f1e1e;
+  border-top: 1px solid #696969;
+}
+.clips-title{
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 25rpx;
+}
+.clips-title .clips-title-text{
+  margin-left: 10rpx;
+  font-size: 14px;
+  margin-right: 50rpx;
+  color: #fff;
+  line-height: 25px;
+}
+
+.clip image{
+  position: relative;
+  width: 100%;
+}
+.clip  video{
+  position: relative;
+  width: 100%;
+}
+.clip .label{
+  position: absolute;
+  bottom: 5px;
+  right: 7px;
+  font-size: 11px;
+  color: #fff;
+}
 
 
 

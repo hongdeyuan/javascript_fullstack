@@ -1,18 +1,42 @@
 // miniprogram/pages/brush/brush.js
+const txvContext = requirePlugin("tencentvideo");
+const config = require('../../modules/config')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tvphide: false,
+    vid: 'n003297kilf',
+    title: "全屏时会显示的视频title",
+    defn: "超清",
+    changingvid: '',
+    controls: !!config.get('controls'),
+    autoplay: !!config.get('autoplay'),
+    playState: '',
+    showProgress1: true,
+    width: "100%",
+    height: "auto"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      controls: !!config.get('controls'),
+      autoplay: !!config.get('autoplay')
+    })
+    this.txvContext = txvContext.getTxvContext('txv0');
+    this.txvContext.play();
+  },
+  onStateChange: function (e) {
+    this.setData({
+      playState: e.detail.newstate
+    })
+  },
+  onTimeUpdate: function (e) {
   },
 
   /**
@@ -62,5 +86,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onFullScreenChange: function () {
+    console.log('onFullScreenChange!!!')
   }
 })
