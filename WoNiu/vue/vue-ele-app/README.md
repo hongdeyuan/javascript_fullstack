@@ -24,3 +24,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # 组件不需要配置路由
 
 # @ 代表 ：src
+
+# stylus loader  一起 安装
+  - npm i stylus stylus-loader --save-dev
+# 装axios ： npm i axios
