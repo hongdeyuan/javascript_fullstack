@@ -2,18 +2,22 @@
   <div class="header">
     <div class="content-wrapper">
       <div class="avatar">
-        <img src="./brand@2x.png" alt="">
+        <img :src="seller.avatar" alt="" width="64" height="64">
       </div>
       <div class="content">
         <div class="title">
           <span class="brand"></span>
-          <span class="name">粥品香坊</span>
+          <span class="name">{{seller.name}}</span>
         </div>
-        <div class="description">蜂鸟转送/38分钟送达</div>
-        <div class="support">
-          <span class="icon special"></span>
-          <span class="text">在线支付满28减5</span>
+        <div class="description">{{seller.description}}/{{seller.deliveryTime}}分钟送达</div>
+        <div class="support" v-if="seller.supports">
+          <span class="icon" :class="classMap[seller.supports[0].type]"></span>
+          <span class="text">{{seller.supports[0].description}}</span>
         </div>
+      </div>
+      <div class="support-count">
+        <span class="count">5个</span>
+        <i class="icon-keyboard_arrow_right"></i>
       </div>
     </div>
   </div>
@@ -21,11 +25,18 @@
 
 <script>
 export default {
-  created () {
-    this.$http.get('/api/seller')
-      .then((res) => {
-        console.log(res)
-      })
+  props: {
+    seller: {
+      type: Object,
+      default: function () {
+        return {}
+      }
+    }
+  },
+  data () {
+    return {
+      classMap: ['decrease', 'discount', 'guarantee', 'invoice', 'special']
+    }
   }
 }
 </script>
@@ -95,4 +106,20 @@ export default {
           line-height 12px
           font-size 10px
           vertical-align middle
+    .support-count
+      position absolute
+      right 12px
+      bottom 14px
+      height 24px
+      line-height 24px
+      padding 0 8px
+      font-size 10px
+      background-color rgba(0, 0, 0, .2)
+      border-radius 14px
+      text-align center
+      .count
+        vertical-align top
+      .icon-keyboard_arrow_right
+        margin-left 2px
+        line-height 24px
 </style>

@@ -28,3 +28,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # stylus loader  一起 安装
   - npm i stylus stylus-loader --save-dev
 # 装axios ： npm i axios
+
+# 父级与 自己通信（传参）： 具体见APP.vue  与 header.vue
+
+# vue 动态修改 标签的 类名 ：见 header.vue
+  - <span class="icon" :class="classMap[seller.supports[0].type]"></span>
+  - 特别注意： 因为数组 当还未请求到时 数据为空  则会检测到 数据seller.supports[0]  的 0 为 undefined  
+    此时，需要你做一个数据判断 具体见 ：header.vue  ->  <div class="support" v-if="seller.supports">  来判断数据是否加载完成
