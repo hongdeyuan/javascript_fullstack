@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>事件 面试题</title>
 </head>
+
 <body>
   <ul>
     <li>1</li>
@@ -13,31 +15,45 @@
     <li>3</li>
   </ul>
   <script>
-  
-  // const lis = document.querySelectorAll('li');
+    // const lis = document.querySelectorAll('li');
 
-  const ul = document.querySelector('ul')
-
-  
-  // for (let li of lis) {
-  //   li.addEventListener('click',()=>{
-  //     console.log(li.innerHTML);
-  //   })
-  // }
+    const ul = document.querySelector('ul')
 
 
-  //事件委托|事件代理
-  ul.addEventListener('click',(e) => {
-    console.log(e.target)//谁绑定这个事件 -> li 
-    console.log(e.currentTarget)//谁触发这个事件 -> ul
-    if (e.target.nodeName == 'LI') {
-      console.log(e.target.innerHTML)
+    // for (let li of lis) {
+    //   li.addEventListener('click',()=>{
+    //     console.log(li.innerHTML);
+    //   })
+    // }
+
+    //var es5 写法 使用闭包  此外，也可以使用 let 替代var 就很简单了
+    //阿里考题10
+    function li() {
+      var lis = document.querySelectorAll('li')
+      for (var i = 0; i < lis.length; i++) {
+        (
+          function (i) {
+            lis[i].addEventListener('click', () => {
+              console.log(i)
+            })
+          }
+        )(i)
+      }
     }
-    
-  })
 
-  
+
+
+    //事件委托|事件代理
+    ul.addEventListener('click', (e) => {
+      console.log(e.target) //谁绑定这个事件 -> li 
+      console.log(e.currentTarget) //谁触发这个事件 -> ul
+      if (e.target.nodeName == 'LI') {
+        console.log(e.target.innerHTML)
+      }
+
+    })
   </script>
 
 </body>
+
 </html>
