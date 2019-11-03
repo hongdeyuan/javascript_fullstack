@@ -335,4 +335,4 @@ console.log(myFilter);// [2, 4, 6, 8, 10, 12, 14]
 var myReduce = numbers.reduce(function(previous,current,index){
   return previous + "" + current;
 });
-console.log(myReduce);//123456789101112131415
+console.log(myReduce);//1234567891011121
