@@ -1,6 +1,6 @@
 <!-- pages/videoDetail/index.wxml -->
 <view class="detailContainer">
-    <!-- <view class="detail_movice">
+    <!-- <view class="detail_movice">{{showModalStatus == true ? 'stopScroll' : ''}}
         <video src="{{entitie.video}}" id="{{entitie.id}}" hidden="{{currentVid != entitie.id}}"></video>
         <image src="{{entitie.image}}" bind:tap="play" data-vid="{{entitie.id}}" hidden="{{currentVid == entitie.id}}">
             <view class="label">{{entitie.duration}}</view>
@@ -67,7 +67,20 @@
         </view>
     </view>
     <!-- 弹出框 -->
+
     <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
-        <view class="commodity_hide" bind:tap="hideModal"></view>
+        <view class="commodity_hide">
+            <view class="commodity_hide__on" bind:tap="hideModal"></view>
+        </view>
+        <view class="hight" catchtouchmove="stopScroll">
+            <scroll-view scroll-y class='hightDataView' style="height:{{ch}}rpx;">
+                <view class="clip" wx:for="{{entities}}" wx:key="{{index}}">
+                    <video src="{{item.video}}" id="{{item.id}}" hidden="{{currentVid != item.id}}"></video>
+                    <image src="{{item.image}}" bind:tap="play" data-vid="{{item.id}}" hidden="{{currentVid == item.id}}">
+                        <view class="label">{{item.duration}}</view>
+                    </image>
+                </view>
+            </scroll-view>
+      </view>
     </view>
 </view>

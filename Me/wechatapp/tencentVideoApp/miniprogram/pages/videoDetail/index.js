@@ -52,7 +52,7 @@ Page({
         ],
         tvphide: false,
         vid: 'n003297kilf',
-        title: "全屏时会显示的视频title",
+        title: "电视剧",
         defn: "超清",
         changingvid: '',
         controls: !!config.get('controls'),
@@ -61,7 +61,9 @@ Page({
         showProgress1: true,
         width: "100%",
         height: "auto",
-        car:{}
+        showModalStatus: false,
+        car:{},
+        ch: 0
   },
 
   play(event){
@@ -95,6 +97,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.getSystemInfo({
+      success: res => {
+        //转为rpx
+        let ch = (750 / res.screenWidth) * res.windowHeight - 80;
+        this.setData({
+          ch
+        })
+      },
+    })
+
     const id= options.id;
     //改变page里面的data
     this.setData({
@@ -189,50 +202,53 @@ Page({
 
   },
   //显示对话框
- showModal: function () {
-  // 显示遮罩层
-  var animation = wx.createAnimation({
-    duration: 200,
-    timingFunction: "linear",
-    delay: 0
-  })
-  this.animation = animation
-  animation.translateY(300).step()
-  this.setData({
-    animationData: animation.export(),
-    showModalStatus: true
-  })
-  setTimeout(function () {
-    animation.translateY(0).step()
-    this.setData({
-      animationData: animation.export()
+  showModal: function () {
+    // 显示遮罩层
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
     })
-  }.bind(this), 200)
-},
-//隐藏对话框
-hideModal: function () {
-  // 隐藏遮罩层
-  var animation = wx.createAnimation({
-    duration: 200,
-    timingFunction: "linear",
-    delay: 0
-  })
-
-  this.animation = animation;
-  animation.translateY(300).step();
-
-  this.setData({
-    animationData: animation.export(),
-  })
-
-  console.log('hide')
-
-  setTimeout(function () {
-    animation.translateY(0).step()
+    this.animation = animation
+    animation.translateY(300).step()
     this.setData({
       animationData: animation.export(),
-      showModalStatus: false
+      showModalStatus: true
     })
-  }.bind(this), 200)
-}
+    setTimeout(function () {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 200)
+  },
+  //隐藏对话框
+  hideModal: function () {
+    // 隐藏遮罩层
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    })
+
+    this.animation = animation;
+    animation.translateY(300).step();
+
+    this.setData({
+      animationData: animation.export(),
+    })
+
+    setTimeout(function () {
+      animation.translateY(0).step()
+      this.setData({
+        animationData: animation.export(),
+        showModalStatus: false
+      })
+    }.bind(this), 200)
+  },
+  // 默认阻止滚动
+  stopScroll() {
+    console.log('hided');
+    return false;
+  }
 })

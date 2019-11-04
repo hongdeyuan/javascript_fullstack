@@ -27,6 +27,8 @@
   - overflow-x: scroll 失效 ：原因是父容器使用了 swiper ，swiper也是一个滑动，
       但优先级比 overflow-x: scroll 高，所以会导致它失效。建议：使用自定义方法处理
   - 实现固定 菜单栏 下滑
+  - 阻止底层页面穿透滑动  catchtouchmove阻止页面滚动：实质 消除 冒泡事件
+    movable-area，movable-view实现弹窗内筛选项的滚动  注意: movable-view宽高 必须大于 movable-area
 
 
 ## 参考文档
