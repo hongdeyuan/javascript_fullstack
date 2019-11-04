@@ -8,7 +8,8 @@
     </view> -->
     <view hidden="{{tvphide}}">
         <txv-video 
-            vid="{{vid}}" 
+            vid="{{vid}}"
+            class="{{detailOn ? '' : 'on'}}"
             width="{{width}}" 
             height="{{height}}" 
             playerid="txv0" 

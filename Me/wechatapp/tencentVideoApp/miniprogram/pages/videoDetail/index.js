@@ -63,6 +63,7 @@ Page({
         height: "auto",
         showModalStatus: false,
         car:{},
+        detailOn: true,
         ch: 0
   },
 
@@ -98,15 +99,17 @@ Page({
    */
   onLoad: function (options) {
 
+    //动态设置 详情的高度  防止滑动失效
     wx.getSystemInfo({
       success: res => {
         //转为rpx
-        let ch = (750 / res.screenWidth) * res.windowHeight - 80;
+        let ch = (750 / res.screenWidth) * res.windowHeight -478;
         this.setData({
           ch
         })
       },
     })
+
 
     const id= options.id;
     //改变page里面的data
@@ -213,7 +216,8 @@ Page({
     animation.translateY(300).step()
     this.setData({
       animationData: animation.export(),
-      showModalStatus: true
+      showModalStatus: true,
+      detailOn: false
     })
     setTimeout(function () {
       animation.translateY(0).step()
@@ -242,7 +246,8 @@ Page({
       animation.translateY(0).step()
       this.setData({
         animationData: animation.export(),
-        showModalStatus: false
+        showModalStatus: false,
+        detailOn: true
       })
     }.bind(this), 200)
   },
