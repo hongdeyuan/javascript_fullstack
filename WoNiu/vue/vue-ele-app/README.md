@@ -35,3 +35,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   - <span class="icon" :class="classMap[seller.supports[0].type]"></span>
   - 特别注意： 因为数组 当还未请求到时 数据为空  则会检测到 数据seller.supports[0]  的 0 为 undefined  
     此时，需要你做一个数据判断 具体见 ：header.vue  ->  <div class="support" v-if="seller.supports">  来判断数据是否加载完成
+#  ref 获取 DOM 结构
+  - 见 goods.vue
+# 保证HTML 渲染后执行
+  - this.$nextTick(() => {
+      this._initScroll()
+    })

@@ -9,27 +9,27 @@
           <span class="brand"></span>
           <span class="name">{{seller.name}}</span>
         </div>
-        <div class="description">{{seller.description}}/{{seller.deliveryTime}}分钟送达</div>
+        <div class="descriptipon">{{seller.description}}/{{seller.deliveryTime}}分钟送达</div>
         <div class="support" v-if="seller.supports">
           <span class="icon" :class="classMap[seller.supports[0].type]"></span>
           <span class="text">{{seller.supports[0].description}}</span>
         </div>
       </div>
-      <div class="support-count" @click="Detailshare" v-if="seller.supports">
-        <span class="count">{{seller.supports.length}}个</span>
+      <div class="support-count" @click="detailShow">
+        <span class="count" v-if="seller.supports">{{seller.supports.length}}个</span>
         <i class="icon-keyboard_arrow_right"></i>
       </div>
     </div>
-    <div class="bulletion-wrapper">
+    <div class="bulletin-wrapper">
       <span class="bulletin-title"></span>
-      <span class="bulletion-text">{{seller.bulletin}}</span>
+      <span class="bulletin-text">{{seller.bulletin}}</span>
       <i class="icon-keyboard_arrow_right"></i>
     </div>
-    <div class="backgroud" >
+    <div class="background">
       <img :src="seller.avatar" alt="" width="100%" height="100%">
     </div>
     <transition name="fade">
-      <div class="detial" v-show="shareDetail">
+      <div class="detail" v-show="showDetail">
         <div class="detail-wrapper">
           <div class="detail-main">
             <h1 class="name">{{seller.name}}</h1>
@@ -41,8 +41,8 @@
               <div class="text">优惠信息</div>
               <div class="line"></div>
             </div>
-            <ul class="supports" v-if="seller.supports">
-              <li class="support-item" v-for="(item,index) in seller.supports" :key="index">
+            <ul class="supports">
+              <li class="support-item" v-for="(item, index) in seller.supports" :key="index">
                 <span class="icon" :class="classMap[item.type]"></span>
                 <span class="text">{{item.description}}</span>
               </li>
@@ -52,10 +52,8 @@
               <div class="text">商家公告</div>
               <div class="line"></div>
             </div>
-            <div class="buttetin">
-              <div class="content">
-                {{seller.bulletin}}
-              </div>
+            <div class="bulletin">
+              <p class="content">{{seller.bulletin}}</p>
             </div>
           </div>
         </div>
@@ -79,17 +77,16 @@ export default {
   },
   data () {
     return {
-      classMap: ['decrease', 'discount', 'guarantee', 'invoice', 'special'],
-      shareDetail: false
+      classMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
+      showDetail: false
     }
   },
   methods: {
-    Detailshare () {
-      this.shareDetail = true
+    detailShow () {
+      this.showDetail = true
     },
     hideDetail () {
       this.showDetail = false
-      console.log(this.showDetail)
     }
   }
 }
@@ -132,7 +129,7 @@ export default {
           font-size 16px
           line-height 18px
           font-weight bold
-      .description
+      .descriptipon
         margin-bottom 10px
         line-height 12px
         font-size 12px
@@ -142,7 +139,6 @@ export default {
           vertical-align top
           width 12px
           height 12px
-          vertical-align middle
           margin-right 4px
           background-size 12px 12px
           background-repeat no-repeat
@@ -159,7 +155,6 @@ export default {
         .text
           line-height 12px
           font-size 10px
-          vertical-align middle
     .support-count
       position absolute
       right 12px
@@ -168,7 +163,7 @@ export default {
       line-height 24px
       padding 0 8px
       font-size 10px
-      background-color rgba(0, 0, 0, .2)
+      background rgba(0, 0, 0, .2)
       border-radius 14px
       text-align center
       .count
@@ -176,15 +171,15 @@ export default {
       .icon-keyboard_arrow_right
         margin-left 2px
         line-height 24px
-  .backgroud
+  .background
     position absolute
     top 0
     left 0
     width 100%
     height 100%
     z-index -1
-    filter blur(8px)
-  .bulletion-wrapper
+    filter blur(10px)
+  .bulletin-wrapper
     position relative
     height 28px
     line-height 28px
@@ -192,7 +187,7 @@ export default {
     white-space nowrap
     overflow hidden
     text-overflow ellipsis
-    background rgba(7, 17, 27,0.2)
+    background rgba(7, 17, 27, 0.2)
     .bulletin-title
       display inline-block
       // margin-top 8px
@@ -203,34 +198,34 @@ export default {
       background-repeat no-repeat
       vertical-align middle
     .bulletin-text
-      font-size 8px
+      font-size 10px
       margin 0 4px
       vertical-align middle
     .icon-keyboard_arrow_right
       position absolute
-      right 1px
+      right 12px
       top 8px
       font-size 10px
-  .detial
+  .detail
     position fixed
     top 0
     left 0
     right 0
     bottom 0
     overflow auto
-    background rgba(7, 17, 27, .8)
+    background rgba(7, 17, 27, 0.8)
     backdrop-filter blur(10px)
     &.fade-enter,
-    &.fade-leave-active
+    &.fade-leave-to
       opacity 0
       background rgba(7, 17, 27, 0)
     &.fade-enter-active,
     &.fade-leave-active
       transition all 0.5s
-    .detail-wrapper
-      overflow auto
+    &-wrapper
       width 100%
       min-height 100%
+      overflow hidden
       .detail-main
         margin-top 64px
         padding-bottom 64px
@@ -244,7 +239,7 @@ export default {
           width 80%
           margin 28px auto 24px auto
         .line
-          border-bottom 1px solid rgba(255, 255, 255, .2)
+          border-bottom 1px solid rgba(255, 255, 255, 0.2)
           flex 1
           position relative
           top -6px
@@ -282,7 +277,7 @@ export default {
             .text
               line-height 16px
               font-size 12px
-        .buttetin
+        .bulletin
           width 80%
           margin 0 auto
           .content
