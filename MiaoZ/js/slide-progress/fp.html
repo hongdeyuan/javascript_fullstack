@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数时编程</title>
+</head>
+<body>
+  
+  <script>
+    // 过程抽象
+
+
+    // 无参化
+    function add(a, b, c) {
+      console.log(a, b, c)
+    }
+
+    add(1, 2, 3);// 1, 2, 3
+
+    let arr = [1, 2, 3];
+    arr.forEach(add);
+    // 函数式 一等公民
+    //函数和其他变量一样 有平等的地位
+
+    // 与 arr.forEach(add); 等效 ===
+    arr.forEach((item, i, arr) => {
+      console.log(item, i, arr);
+    })
+
+    console.log([1, 2, '01010'].map(parseInt));
+
+    console.log(parseInt(1, 0, [1, 2, 3])); // 0 -> 10进制  特别注意 parseInt 直接收 前两个参数 第三个参数无效 ，不会解析，但在arguments中存在
+    console.log(parseInt(1, 0, [1, 2, 3])); // 0 -> 10进制  特别注意 
+    parseInt(2, 1, [1, 2, 3]); // NaN 没有 一进制  所以 为NaN
+    parseInt(3, 2, [1, 2, 3]); //2 01010 NaN  二进制 没有3 所以 为NaN
+
+    // 把多少进制的 XX 转为 10 进制的 XX
+
+
+  </script>
+</body>
+</html>

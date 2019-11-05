@@ -4,11 +4,11 @@ const fs = require('fs')
 
 let swipers = []
 
-doubanSpider('https://m.v.qq.com/x/channel/select/index',(data) => {
+doubanSpider('https://v.qq.com/x/cover/mzc00200ejsxyf3/z0032cheokf.html',(data) => {
   //得到结果
   console.log(data);
 
-  fs.writeFile('./data/data.json', JSON.stringify(data), (err, data) => {
+  fs.writeFile('./data/starsIntroduce.json', JSON.stringify(data), (err, data) => {
     if (!err) {
         console.log('文件写入成功');
     } else {
@@ -28,21 +28,28 @@ function doubanSpider(url, cb){
     res.on('data',(chunk)=>{
       html += chunk;
     })
+
     res.on('end',()=>{
-      // console.log(html);
+      fs.writeFile('./data/first.html', html, (err, data) => {
+        if (!err) {
+            console.log('文件写入成功');
+        } else {
+            console.log('写入失败！');
+        }
+      })
       //jquery 类似的 $ 选择器
       const $ = cheerio.load(html);
 
-      $('.swiper .swiper-wrapper .swiper-slide').each(function(){
+      $('.container_main .mod_people_tabs .mod_people_inner _starlist').each(function(){
         //拿到每一个电影
         //当前的 .pic img
-        const picUrl = $('.item_content img',this).attr('src');
+        const picUrl = $('.item .img img',this).attr('src');
 
-        const title =  $('.item_title',this).text();
+        const name =  $('.item .name',this).text();
 
-        const count = $('.item_content .item_count',this).text();
+        // const count = $('.item_content .item_count',this).text();
 
-        swipers.push({picUrl,title,count})
+        swipers.push({picUrl,name})
 
       })
 
