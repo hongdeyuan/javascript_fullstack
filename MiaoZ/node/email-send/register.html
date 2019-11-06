@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>邮箱注册</title>
+</head>
+<body>
+  
+  <form action="/register1" name="registerForm" method="POST" enctype="text/plain">
+    <input type="email" placeholder="输入你的邮箱" name="email" value="445@qq.com">
+    <input type="text" placeholder="输入你的验证码" name="code">
+    <span id="sendEmail">发送验证码</span>
+    <input type="submit" value="提交">
+  </form>
+
+  <script>
+    const sendEamil = document.getElementById('sendEmail');
+    const email = document.forms['registerForm']['email'];
+    sendEamil.addEventListener('click', () =>{
+      // get 提交 email 
+      fetch('/sendEmail' + '?email=' + email.value)
+      .then(res => res.json())
+      .then(data => {
+        console.log('data',data);
+      })
+    })
+  </script>
+</body>
+</html>

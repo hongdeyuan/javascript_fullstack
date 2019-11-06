@@ -1,0 +1,15 @@
+{
+  "name": "email-send",
+  "version": "1.0.0",
+  "description": "- 请求行\r   - 请求头\r   - 请求体",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.3.1"
+  }
+}
