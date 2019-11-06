@@ -83,6 +83,16 @@
                     <view class="top-text">每周一二三20点更新2集，会员多看6集</view>
                     <view class="top-descrese">{{entitie.score}}分·VIP·{{entitie.type}}·全{{entitie.universe}}集·8.8亿</view>
                 </view>
+                <view class="center">
+                    <scroll-view class="star-list" scroll-x="{{true}}" scroll-y="{{false}}">
+                        <block wx:for="{{entitie.stars}}" wx:key="{{index}}">
+                            <view class="item">
+                                <image class="starImg" src="{{item.starImg}}"  lazy-load="ture"/>
+                                <view class="name">{{item.name}}</view>
+                            </view>
+                        </block>
+                    </scroll-view>
+                </view>
             </scroll-view>
       </view>
     </view>

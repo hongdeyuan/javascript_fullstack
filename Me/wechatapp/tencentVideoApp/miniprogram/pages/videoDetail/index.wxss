@@ -240,21 +240,51 @@
 .commodity_attr_box .hightDataView .top{
   background-color:#1f1e1e;
   color: #fff;
-  height: 220rpx;
-  border-top: 1px solid #696969;
+  height: 140rpx;
   box-sizing: border-box;
+  border-bottom: 4rpx solid #8b8989;
 }
 .commodity_attr_box .hightDataView .top .top-text{
-  float: left;
-  font-size: 10px;
+  font-size: 12px;
+  margin-top: 35rpx;
+  margin-left: 30rpx;
   margin-right: 50rpx;
   color: #C0C0C0;
   line-height: 25px;
 }
 .commodity_attr_box .hightDataView .top .top-descrese{
-  font-size: 9px;
   margin-left: 30rpx;
-  float: left;
+  font-size: 12px;
   line-height: 25px;
   color: #C0C0C0;
 }
+.commodity_attr_box .hightDataView .center{
+  border-bottom: 4rpx solid #8b8989;
+}
+
+.commodity_attr_box .hightDataView .center .star-list {
+  width: 100%;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-bottom: 50rpx;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.commodity_attr_box .hightDataView .center .star-list .item{
+  text-align: center;
+  display: inline-block;
+  padding:4rpx;
+}
+
+.commodity_attr_box .hightDataView .center .star-list .item image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 10rpx;
+}
+.commodity_attr_box .hightDataView .center .star-list .item .name{
+  font-size: 10px;
+  font-weight: normal;
+}
+

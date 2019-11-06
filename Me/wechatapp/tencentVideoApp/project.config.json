@@ -41,6 +41,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 1,
 			"list": [
@@ -54,6 +58,13 @@
 					"id": -1,
 					"name": "pages/mine/mine",
 					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/videoDetail/index",
+					"pathName": "pages/videoDetail/index",
 					"scene": null
 				}
 			]

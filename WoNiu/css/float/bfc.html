@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bfc</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box-wrapper {
+      width: 100%;
+      /* overflow: hidden; */
+      /* overflow: hidden; auto  : 会使容器会变成 上下文格式化的容器 (BFC : 祛除浮动的影响)  宽度塌陷问题*/
+      /* float: left : 也会达到清除浮动效果 宽度塌陷问题 */
+      /* display: table-cell;  也能达到容器内部 宽度塌陷问题 */
+      /* position: absolute;  不推荐 它还会造成 本身脱离文档流*/
+      /* fixed  不推荐 ,它还会造成 本身脱离文档流*/
+      /* 以上都会触发 BFC 容器 */
+      /* position: absolute; */
+      overflow: hidden;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      line-height: 100px;
+      color: #ffffff;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- BFC : block formating context -->
+  <div class="box-wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+  <div class="text">dhyuan!</div>
+</body>
+
+</html>

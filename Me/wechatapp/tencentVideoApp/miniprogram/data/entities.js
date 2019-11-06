@@ -53,7 +53,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -125,7 +124,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -197,7 +195,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -269,7 +266,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -341,7 +337,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -413,7 +408,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -485,7 +479,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -557,7 +550,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
@@ -629,7 +621,6 @@ module.exports = [
         starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
         name: '李金阳'
       },
-      ,
       {
         id: 9,
         starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',

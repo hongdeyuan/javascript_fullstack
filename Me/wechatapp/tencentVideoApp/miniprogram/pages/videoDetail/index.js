@@ -137,6 +137,8 @@ Page({
     let entitie = entities.find(function(item){
       return item.id == id;
     })
+
+    console.log(entitie);
     this.setData({
       entitie
     })

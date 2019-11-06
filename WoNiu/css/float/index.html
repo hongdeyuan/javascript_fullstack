@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float浮动</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box-wrapper{
+      width: 100%;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      float: left;
+      line-height: 100px;
+      color: #ffffff;
+      text-align: center;
+    }
+    /* .clearfix{
+      clear: left;
+    } */
+    .clearfix::after{
+      content: '';
+      /* both left  right */
+      clear: both;
+      /* block flex gird */
+      display: table;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 方式二  父容器 加伪类-->
+  <div class="box-wrapper clearfix">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <!-- <div class="clearfix"></div>  方式一-->
+  </div>
+  <div class="text">hello dhyuan </div>
+</body>
+</html>
