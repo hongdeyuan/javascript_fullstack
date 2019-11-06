@@ -137,14 +137,18 @@
 .episode .center .gather{
   width: 80rpx;
   border-radius: 10rpx;
-  background-color: rgb(88, 84, 84);
+  background-color: rgba(88, 84, 84, .2);
   height: 80rpx;
   margin: 10rpx;
   text-align: center;
   color: #ece3e3;
   display: inline-block;
-
+  box-sizing: border-box;
 }
+.episode-num{
+  color: #f84904;
+}
+
 /* 片花 */
 .clips{
   background-color: #1f1e1e;
@@ -204,10 +208,17 @@
   position: relative;
   height: 50rpx;
 }
+.commodity_hide .title{
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  line-height: 35rpx;
+  font-weight: 40;
+}
 .commodity_hide .commodity_hide__on{
   width: 50rpx;
   height: 50rpx;
   position: absolute;
+  display: inline-block;
   right: 20rpx;
 }
 
@@ -225,4 +236,25 @@
 }
 .commodity_attr_box .hightDataView{
   width: 100%;
+}
+.commodity_attr_box .hightDataView .top{
+  background-color:#1f1e1e;
+  color: #fff;
+  height: 220rpx;
+  border-top: 1px solid #696969;
+  box-sizing: border-box;
+}
+.commodity_attr_box .hightDataView .top .top-text{
+  float: left;
+  font-size: 10px;
+  margin-right: 50rpx;
+  color: #C0C0C0;
+  line-height: 25px;
+}
+.commodity_attr_box .hightDataView .top .top-descrese{
+  font-size: 9px;
+  margin-left: 30rpx;
+  float: left;
+  line-height: 25px;
+  color: #C0C0C0;
 }

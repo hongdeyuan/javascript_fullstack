@@ -8,7 +8,68 @@ module.exports = [
     video: 'https://resources.ninghao.net/landrover/fall-field-guide-480.mp4',
     image: 'http://puui.qpic.cn/tv/0/329466791_1080607/0',
     duration_raw: 79,
-    duration: '01:19'
+    duration: '01:19',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ]
   },
   {
     id: 4,
@@ -20,6 +81,67 @@ module.exports = [
     image: 'https://puui.qpic.cn/vcover_hz_pic/0/mzc0020059t7f7t1570794903/0',
     duration_raw: 94,
     duration: '01:34',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ]
   },
   {
     id: 3,
@@ -30,18 +152,140 @@ module.exports = [
     video: 'https://resources.ninghao.net/landrover/fall-field-guide-480.mp4',
     image: 'http://puui.qpic.cn/tv/0/333518185_1080607/0',
     duration_raw: 93,
-    duration: '01:33'
+    duration: '01:33',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ],
   },
   {
     id: 2,
     header: '明月照我心',
     original_header: 'The Outsider',
     description: "【明月照我心☝甜宠】不老实！王爷床边强吻明月",
-    original_description: "Adventurous founder of Outside, America's first outdoor lifestyle magazine, Larry Burke takes us on a tour of his New Mexico ranch in a LR4.",
+    original_description: "该剧讲述了互看不顺眼的汐月公主李明月和北宣资王李谦被迫和亲，被李明月施展催眠术的李谦意外想起了此前经历的事情，为恢复记忆李谦接受这个妻子，两人携手经历种种事情，最终修成正果。",
     video: 'https://resources.ninghao.net/landrover/fall-field-guide-480.mp4',
     image: 'https://puui.qpic.cn/vcover_hz_pic/0/mzc00200ejsxyf31570871085/0',
     duration_raw: 180,
-    duration: '05:00'
+    duration: '05:00',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ],
   },
   {
     id: 1,
@@ -53,6 +297,67 @@ module.exports = [
     image: 'https://puui.qpic.cn/vcover_hz_pic/0/zr5a67l333ehzu91570759226/0',
     duration_raw: 148,
     duration: '05:28',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ],
   },
   {
     id: 9,
@@ -64,6 +369,67 @@ module.exports = [
     image: 'https://resources.ninghao.net/landrover/finding-adventure-at-home-480.jpg',
     duration_raw: 269,
     duration: '04:30',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ],
   },
   {
     id: 8,
@@ -74,7 +440,68 @@ module.exports = [
     video: 'https://resources.ninghao.net/landrover/fall-field-guide-480.mp4',
     image: 'https://resources.ninghao.net/landrover/fall-field-guide-480.jpg',
     duration_raw: 60,
-    duration: '01:00'
+    duration: '01:00',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ],
   },
   {
     id: 7,
@@ -86,6 +513,67 @@ module.exports = [
     image: 'https://resources.ninghao.net/landrover/range-rover-sport-downhill-challenge-480.jpg',
     duration_raw: 339,
     duration: '05:39',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ],
   },
   {
     id: 6,
@@ -96,6 +584,67 @@ module.exports = [
     video: 'https://resources.ninghao.net/landrover/alive-in-alaska-480-v3.mp4',
     image: 'https://resources.ninghao.net/landrover/alive-in-alaska-480.jpg',
     duration_raw: 193,
-    duration: '03:13'
-  },
+    duration: '03:13',
+    score: 8.5,
+    universe: 36,
+    type: '古装',
+    stars: [
+      {
+        id: 1,
+        starImg: 'https://puui.qpic.cn/media_img/0/1511121556439082/0',
+        name: '方逸伦'
+      },
+      {
+        id: 2,
+        starImg: 'https://puui.qpic.cn/media_img/0/82643671569738548/0',
+        name: '凌美仕'
+      },
+      {
+        id: 3,
+        starImg: 'https://puui.qpic.cn/media_img/0/1666021571025889/0',
+        name: '张博涵'
+      },
+      {
+        id: 4,
+        starImg: 'https://puui.qpic.cn/media_img/0/14833141555642878/0',
+        name: '周紫馨'
+      },
+      {
+        id: 5,
+        starImg: 'https://puui.qpic.cn/media_img/0/16538761571105031/0',
+        name: '董岩磊'
+      },
+      {
+        id: 6,
+        starImg: 'https://puui.qpic.cn/media_img/0/82496601571025321/0',
+        name: '倪寒尽'
+      },
+      {
+        id: 7,
+        starImg: 'https://puui.qpic.cn/media_img/0/82167041571105312/0',
+        name: '廖慧佳'
+      },
+      {
+        id: 8,
+        starImg: 'https://puui.qpic.cn/media_img/0/12895381571032798/0',
+        name: '李金阳'
+      },
+      ,
+      {
+        id: 9,
+        starImg: 'https://puui.qpic.cn/media_img/0/null1513843570/0',
+        name: '廖彦龙'
+      },
+      {
+        id: 10,
+        starImg: 'https://puui.qpic.cn/media_img/0/13352041571105791/0',
+        name: '关畅'
+      },
+      {
+        id: 11,
+        starImg: 'https://puui.qpic.cn/vstar_pic/0/name_1570471_688t1500031600.jpg/0',
+        name: '王浩歌'
+      }
+    ]
+  }
 ]

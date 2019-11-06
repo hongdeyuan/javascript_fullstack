@@ -1,6 +1,6 @@
 // pages/videoDetail/index.js
 const entities = require('../../data/entities.js')
-const cars = require('../../data/detail.js')
+const clips = require('../../data/clips.js')
 const txvContext = requirePlugin("tencentvideo");
 const config = require('../../modules/config')
 
@@ -15,38 +15,39 @@ Page({
         entitie: null,
         id: null,
         entities,
+        clips: clips,
         currentVid:null,
         episodes:[
           {
-            num:1,
+            num: 1,
             vid: 'n003297kilf'
           },
           {
-            num:2,
+            num: 2,
             vid: 'i0032carjfk'
           },{
-            num:3,
+            num: 3,
             vid: 'r0032hv0gd5'
           },{
-            num:4,
+            num: 4,
             vid: 'm0032ogkrbo'
           },{
-            num:5,
+            num: 5,
             vid: 'x0032sp4x8h'
           },{
-            num:6,
+            num: 6,
             vid: 's0032thyy8b'
           },{
-            num:7,
+            num: 7,
             vid: 'x0032jrra8o'
           },{
-            num:8,
+            num: 8,
             vid: 'h0032w6grwg'
           },{
-            num:9,
+            num: 9,
             vid: 'b003206mdos'
           },{
-            num:10,
+            num: 10,
             vid: 'd0032kjdt4y'
           }
         ],
@@ -64,7 +65,8 @@ Page({
         showModalStatus: false,
         car:{},
         detailOn: true,
-        ch: 0
+        ch: 0,
+        currentIndex: 0
   },
 
   play(event){
@@ -86,9 +88,11 @@ Page({
   select(e){
     const target = e.target;
     const currentVid = target.dataset.vid;
-    console.log(currentVid);
+    const num = target.dataset.num;
+    console.log(currentVid, num);
     this.setData({
-      vid: currentVid
+      vid: currentVid,
+      currentIndex: num - 1
     })
     this.txvContext = txvContext.getTxvContext('txv0');
     this.txvContext.play();
@@ -117,24 +121,25 @@ Page({
       id
     })
 
-    entities.find(function(item){
-      return item.id == id;
-    })
+    // clips[this.data.currentIndex].clips.find(function(item){
+    //   return item.id == id;
+    // })
 
     this.setData({
       controls: !!config.get('controls'),
-      autoplay: !!config.get('autoplay')
+      autoplay: !!config.get('autoplay'),
+      clips: clips
     })
     this.txvContext = txvContext.getTxvContext('txv0');
     this.txvContext.play();
 
 
-    // let entitie = entities.find(function(item){
-    //   return item.id == id;
-    // })
-    // this.setData({
-    //   entitie
-    // })
+    let entitie = entities.find(function(item){
+      return item.id == id;
+    })
+    this.setData({
+      entitie
+    })
 
 
   },
@@ -167,7 +172,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -202,7 +207,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    console.log('share success!')
   },
   //显示对话框
   showModal: function () {

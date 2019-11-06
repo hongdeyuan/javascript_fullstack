@@ -38,7 +38,7 @@
         <view class="bottom">
             <image class="ping" src="../../images/ping.png" lazy-load="{{true}}" bind:tap="" />
             <image class="like" src="../../images/like.png" lazy-load="{{true}}" bind:tap="" />
-            <image class="share" src="../../images/share.png" lazy-load="{{true}}" bind:tap="" />
+            <image class="share" src="../../images/share.png" lazy-load="{{true}}" bind:tap="onShareAppMessage" />
         </view>
     </view>
     <!-- 剧集 -->
@@ -49,8 +49,11 @@
         </view>
         <view class="center">
             <block wx:for="{{episodes}}" wx:key="{{index}}">
-                <view class="gather" data-vid="{{item.vid}}" bind:tap="select">
-                    <text class="episode-nmu" >{{item.num}}</text>
+                <view class="gather" data-vid="{{item.vid}}" data-num="{{item.num}}" bind:tap="select">
+                   <view class="{{vid == item.vid ? 'episode-num' : '' }}" data-vid="{{item.vid}}" data-num="{{item.num}}">
+                       {{item.num}}
+                   </view>
+                     
                 </view>
             </block>
         </view>
@@ -60,9 +63,9 @@
         <view class="clips-title">
             <text class="clips-title-text">精彩片花</text>
         </view>
-        <view class="clip" wx:for="{{entities}}" wx:key="{{index}}">
-            <video src="{{item.video}}" id="{{item.id}}" hidden="{{currentVid != item.id}}"></video>
-            <image src="{{item.image}}" bind:tap="play" data-vid="{{item.id}}" hidden="{{currentVid == item.id}}">
+        <view class="clip" wx:for="{{clips[currentIndex].clips}}" wx:key="{{index}}">
+            <video src="{{item.videoUrl}}" id="{{item.id}}" hidden="{{currentVid != item.id}}"></video>
+            <image src="{{item.img}}" bind:tap="play" data-vid="{{item.id}}" hidden="{{currentVid == item.id}}">
                 <view class="label">{{item.duration}}</view>
             </image>
         </view>
@@ -71,15 +74,14 @@
 
     <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
         <view class="commodity_hide">
+            <text class="title">{{entitie.header}}</text>
             <view class="commodity_hide__on" bind:tap="hideModal"></view>
         </view>
         <view class="hight" catchtouchmove="stopScroll">
             <scroll-view scroll-y class='hightDataView' style="height:{{ch}}rpx;">
-                <view class="clip" wx:for="{{entities}}" wx:key="{{index}}">
-                    <video src="{{item.video}}" id="{{item.id}}" hidden="{{currentVid != item.id}}"></video>
-                    <image src="{{item.image}}" bind:tap="play" data-vid="{{item.id}}" hidden="{{currentVid == item.id}}">
-                        <view class="label">{{item.duration}}</view>
-                    </image>
+                <view class="top">
+                    <view class="top-text">每周一二三20点更新2集，会员多看6集</view>
+                    <view class="top-descrese">{{entitie.score}}分·VIP·{{entitie.type}}·全{{entitie.universe}}集·8.8亿</view>
                 </view>
             </scroll-view>
       </view>
