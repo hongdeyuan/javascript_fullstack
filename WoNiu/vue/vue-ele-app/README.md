@@ -41,3 +41,22 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   - this.$nextTick(() => {
       this._initScroll()
     })
+
+# vue 中 选中 DOM 结构
+  - 在div 中 加入 ref=" this.$refs.foodList"
+    <div class="foots-list" ref=" this.$refs.foodList">
+  - 在 js 中 去 拿到  DOM 结构
+    let footList = this.$refs.foodList
+
+# BScroll 实现 点击 滑动到 指定的 DOM 结构
+  - 拿到 BScroll 渲染的 DOM 
+    this.footsScroll = new BScroll(this.$refs.footsWrapper, {
+        click: true,
+        probeType: 3
+      })
+  - 实现 点击 滑动 调用 scrollToElement  两个参数 第一个参数： 指定的DOM 元素 ； 第二个参数 ： 指等待多少时间去执行滑动
+    this.footsScroll.scrollToElement(el, 300)
+    
+# BScroll  执行页面滚动
+  - 先使用 on()  监听 'scroll' 滑动事件
+  - scroll

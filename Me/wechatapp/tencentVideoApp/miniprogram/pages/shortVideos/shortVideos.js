@@ -1,5 +1,6 @@
 // miniprogram/pages/shortVideos/shortVideos.js
 const shortCategory = require('../../data/shortCategory.js')
+const video = require('../../data/videoUrl.js')
 Page({
 
   /**
@@ -8,9 +9,12 @@ Page({
   data: {
     shortCategory: shortCategory,
     curentIndex: 0,
+    video: video,
     swiper_height: 80,
     scrollTop: 0,
-    ch: 0
+    ch: 0,
+    curentIndex: 0,
+    currentVid: 1
   },
   //改变swiper
   swiperChange: function(e) {//切换
@@ -27,6 +31,29 @@ Page({
       toView: e.currentTarget.dataset.id
     })
   },
+  onPicClick(e) {
+        let dataset = e.currentTarget.dataset;
+        this.currIndex=dataset.index
+        this.setData({
+            "currVideo.vid":dataset.vid
+        })
+        this.getTop()
+    },
+  getTop(){
+      let query = this.createSelectorQuery();
+      query.selectViewport().scrollOffset();
+       query
+          .selectAll(`.mod_poster`)
+          .boundingClientRect()
+          .exec(res => {
+          let originTop = res[0].scrollTop;
+          let currNode = res[1][this.currIndex];
+          console.log('111',originTop,currNode)
+          this.setData({
+            top:currNode.top+originTop
+          })
+      });
+  },
 
   /**
    * 生命周期函数--监听页面加载application/json  application/x-www-form-urlencode
@@ -42,6 +69,8 @@ Page({
         })
       },
     })
+
+    this.videoContext = wx.createVideoContext('tvp');
       
   },
   /**

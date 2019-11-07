@@ -1,12 +1,41 @@
-<!--miniprogram/pages/shortVideos/shortVideos.wxml-->
-  <!-- 视频菜单类型 -->
-  <scroll-view class="short-menu {{scrollTop > 40 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
-    <block  wx:for="{{shortCategory}}" wx:key="{{item.id}}">
-      <text 
-          class="{{curentIndex === index ? 'active' : ''}}"
-          data-id="{{item.id}}"
-          data-index="{{index}}"
-          bind:tap="switchTab"
-          >{{item.name}}</text>
+<!-- miniprogram/pages/shortVideos/shortVideos.wxml -->
+<!-- 视频菜单类型 -->
+<scroll-view class="short-menu {{scrollTop > 40 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
+  <block wx:for="{{shortCategory}}" wx:key="{{item.id}}">
+    <text class="{{curentIndex === index ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bind:tap="switchTab">
+      {{item.name}}
+    </text>
+  </block>
+</scroll-view>
+<view class="content" style="height:{{ch}}rpx;">
+  <swiper class="swiper" bindchange='swiperChange' current='{{curentIndex}}'>
+    <block wx:for="{{video}}" wx:key="{{index}}">
+      <swiper-item>
+        <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == index}}">
+
+            <view class="mod_box mod_feeds_list">
+              <view class="mod_bd">
+                <view class="figure_box" wx:for="{{item.lol}}" wx:for-item="video" wx:for-index="index" wx:key="{{index}}">
+                  <view class="mod_poster" data-vid="{{items.vid}}" data-index="{{index}}" bindtap="onPicClick">
+                    <image class="poster" src="{{items.img}}"></image>
+                    <!-- 标题、时间和播放按钮 -->
+                    <view>
+                      <image class="play_icon" src="{{items.img}}"></image>
+                      <view class="time">{{items.time}}</view>
+                      <view class="toptitle two_row">{{items.title}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <view wx:if="{{items.vid}}" style="top:{{top+'px'}};" class="videoContainer">
+                <txv-video vid="{{items.vid}}" playerid="tvp" autoplay="{{true}}" bindcontentchange="onTvpContentChange" bindplay="onTvpPlay" bindended="onTvpEnd" bindpause="onTvpPause" bindstatechange="onTvpStateChanage" bindtimeupdate="onTvpTimeupdate" bindfullscreenchange="onFullScreenChange"></txv-video>
+              </view>
+
+            </view>
+
+        </scroll-view>
+      </swiper-item>
     </block>
-  </scroll-view>
+  </swiper>
+</view>

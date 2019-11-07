@@ -213,6 +213,7 @@ export default {
     right 0
     bottom 0
     overflow auto
+    z-index 20
     background rgba(7, 17, 27, 0.8)
     backdrop-filter blur(10px)
     &.fade-enter,
