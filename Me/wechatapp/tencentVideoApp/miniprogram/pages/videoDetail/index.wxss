@@ -288,3 +288,24 @@
   font-weight: normal;
 }
 
+.commodity_attr_box .hightDataView .bottom{
+  width: 100%;
+}
+
+.commodity_attr_box .hightDataView .bottom .title{
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  line-height: 35rpx;
+  font-weight: 40;
+  margin-top: 30rpx;
+}
+
+.commodity_attr_box .hightDataView .bottom .text{
+  font-size: 12px;
+  font-weight: normal;
+  text-indent: 34rpx;
+  margin-top: 20rpx;
+  color: #C0C0C0;
+  margin-left: 30rpx;
+}
+

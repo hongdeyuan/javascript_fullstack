@@ -1,27 +1,38 @@
 /* miniprogram/pages/shortVideos/shortVideos.wxss */
 
-/*使屏幕变暗  */
-.commodity_screen {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #000;
-  opacity: 0.2;
-  overflow: hidden;
-  z-index: 1000;
-  color: #fff;
+/* miniprogram/pages/main/main.wxss */
+page {
+  margin: 0;
 }
-/*对话框 */
-.commodity_attr_box {
-  height: 600rpx;
+
+/* 菜单 */
+.short-menu {
   width: 100%;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 2000;
+  height: 100rpx;
+  line-height: 90rpx;
   background: #fff;
-  padding-top: 20rpx;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.menu-fixed{
+  position:fixed;
+  width:100%;
+  height:100rpx;
+  top:0rpx;
+  background:white;
+  z-index: 1;
+}
+.short-menu text {
+  font-size: 28rpx;
+  margin: 0 20rpx 0 44rpx;
+  font-weight: bold;
+  display: inline-block;
+}
+.short-menu text.active {
+  color: #ff7700;
+  border-bottom: 1rpx solid #ff7700;
+}
+
+.swiper,.scroll{
+  height: 100%;
 }

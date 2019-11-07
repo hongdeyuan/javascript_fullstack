@@ -4,11 +4,11 @@ const config = require('../../modules/config')
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据d0032x85stp
    */
   data: {
     tvphide: false,
-    vid: 'n003297kilf',
+    vid: 't3015tikssm',
     title: "全屏时会显示的视频title",
     defn: "超清",
     changingvid: '',

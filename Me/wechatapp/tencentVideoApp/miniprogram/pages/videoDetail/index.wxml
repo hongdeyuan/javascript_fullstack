@@ -93,6 +93,10 @@
                         </block>
                     </scroll-view>
                 </view>
+                <view class="bottom">
+                    <view class="title">简介</view>
+                    <view class="text">{{entitie.original_description}}</view>
+                </view>
             </scroll-view>
       </view>
     </view>

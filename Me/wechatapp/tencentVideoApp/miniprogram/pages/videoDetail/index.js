@@ -138,7 +138,6 @@ Page({
       return item.id == id;
     })
 
-    console.log(entitie);
     this.setData({
       entitie
     })
@@ -260,7 +259,6 @@ Page({
   },
   // 默认阻止滚动
   stopScroll() {
-    console.log('hided');
     return false;
   }
 })

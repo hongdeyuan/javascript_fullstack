@@ -1,7 +1,7 @@
 <!--miniprogram/pages/main/main.wxml-->
 
   <!-- 视频菜单类型 -->
-  <scroll-view class="shouye-menu {{scrollTop > 41 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
+  <scroll-view class="shouye-menu {{scrollTop > 40 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
     <block  wx:for="{{moviesCategory}}" wx:key="{{item.id}}">
       <text 
           class="{{curentIndex === index ? 'active' : ''}}"
