@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>矢量图 位图</title>
+</head>
+
+<body>
+  <img src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg" alt="">
+
+  <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" alt="">
+
+
+  <svg width="200" height="200" style="transform: rotate(-90deg);">
+    <circle r="45" cx="100" cy="100" stroke-width="3" stroke="rgba(299, 233, 242)" fill="none">
+
+    </circle>
+    <circle r="45" cx="100" cy="100" stroke-width="3" stroke="#FF0000" fill="none" stroke-dasharray="282.7">
+
+    </circle>
+  </svg>
+
+  <script>
+    let percent = 0;
+    setInterval(() => {
+      if (percent > 100) {
+        percent = 0;
+      } else {
+        percent++;
+        let len = 2 * Math.PI * 45;
+        let offset = ((100 - percent) / 100) * len;
+        document.querySelectorAll('svg circle')[1].setAttribute('stroke-dashoffset', offset);
+      }
+    }, 500)
+
+
+    // let percent = 10;
+    // let len = 2 * Math.PI * 45;
+    // let offset = ((100-percent) / 100) * len;
+    // document.querySelectorAll('svg circle')[1].setAttribute('stroke-dashoffset', offset);
+  </script>
+</body>
+
+</html>

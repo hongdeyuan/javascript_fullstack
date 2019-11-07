@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>svg</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td{
+      border: 1px solid #ebeef5;
+      text-align: center;
+      font-size: 19px;
+      height: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span>类型: </span>
+    <ul class="canDrag">
+      <li draggable="true">optimal</li>
+      <li draggable="true">good</li>
+      <li draggable="true">medium</li>
+      <li draggable="true">badly</li>
+    </ul>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Weeks</th>
+          <th>Mon</th>
+          <th>Tuss</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    // window.onload = function() {}
+    // window.addEventListener('domcontentLoaded', () => {})
+    // $(function() {})
+    // 以上三者等价
+
+    $(function() {
+      $('.canDrag li').bind('dragstart', function(e) {
+        const event = e.originalEvent;
+        event.target.style.opacity = .5;
+        event.dataTransfer.setData('text', $(event.target).html());
+      })
+
+      $('.canDrag li').bind('dragend', function(e) {
+        const event = e.originalEvent;
+        event.target.style.opacity = 1;
+      })
+
+      $('table td').bind('dragenter', function(e) {
+        const event = e.originalEvent;
+        event.target.style.backgroundColor = '#fdfdfd';
+      })
+
+      $('table td').bind('dragleave', function(e) {
+        const event = e.originalEvent;
+        event.target.style.backgroundColor = '';
+      })
+      
+      // dragover  会阻止 后续的 拖动事件
+      $('table td').bind('dragover', function(e) {
+        e.originalEvent.preventDefault();
+      })
+
+      $('table td').bind('drop', function(e) {
+        const event = e.originalEvent;
+        const text = event.dataTransfer.getData('text');
+        $(event.target).html(text);
+        event.target.style.backgroundColor = '';
+      })
+
+
+    })
+
+  </script>
+</body>
+</html>
