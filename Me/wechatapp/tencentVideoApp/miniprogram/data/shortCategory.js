@@ -1,7 +1,7 @@
 module.exports = [
-  { name: '英雄联盟', id: ' iWatch' },
+  { name: '英雄联盟', id: 'LoL' },
   { name: '游戏', id: 'game'},
-  { name: '爱看', id: 'LoL'},
+  { name: '爱看', id: 'iWatch'},
   { name: '汽车', id: 'cars'},
   { name: '美食', id: 'cate'},
   { name: '健康', id: 'health' },

@@ -13,7 +13,6 @@ Page({
     swiper_height: 80,
     scrollTop: 0,
     ch: 0,
-    curentIndex: 0,
     currentVid: 1
   },
   //改变swiper
@@ -35,7 +34,7 @@ Page({
         let dataset = e.currentTarget.dataset;
         this.currIndex=dataset.index
         this.setData({
-            "currVideo.vid":dataset.vid
+          currentVid: dataset.vid
         })
         this.getTop()
     },
@@ -63,7 +62,7 @@ Page({
     wx.getSystemInfo({
       success: res => {
         //转为rpx
-        let ch = (750 / res.screenWidth) * res.windowHeight - 180;
+        let ch = (750 / res.screenWidth) * res.windowHeight - 80;
         this.setData({
           ch
         })
