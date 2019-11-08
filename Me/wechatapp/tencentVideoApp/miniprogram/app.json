@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/main/main",
-    "pages/shortVideos/shortVideos",
+    "pages/shortVideo/index",
     "pages/brush/brush",
     "pages/mine/mine",
     "pages/videoDetail/index"
@@ -31,7 +31,7 @@
         "selectedIconPath": "images/shouye-action.png"
       },
       {
-        "pagePath": "pages/shortVideos/shortVideos",
+        "pagePath": "pages/shortVideo/index",
         "text": "短视频",
         "iconPath": "images/duanshiping.png",
         "selectedIconPath": "images/duanshiping-action.png"
