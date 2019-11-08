@@ -65,6 +65,13 @@
 					"id": -1,
 					"name": "pages/videoDetail/index",
 					"pathName": "pages/videoDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shortVideo/index",
+					"pathName": "pages/shortVideo/index",
 					"scene": null
 				}
 			]

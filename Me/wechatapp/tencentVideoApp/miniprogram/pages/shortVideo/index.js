@@ -1,17 +1,48 @@
 // pages/shortVideo/index.js
+const config = require('../../modules/config')
+const txvContext = requirePlugin("tencentvideo");
+const shortCategory = require('../../data/shortCategory.js')
+const videoUrl = require('../../data/videoUrl.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    curentIndex: 0,
+    shortCategory: shortCategory,
+    videos: videoUrl,
+    ch: 0
   },
-
+  //改变swiper
+  swiperChange: function(e) {//切换
+    if(e.detail.source == 'touch') {
+      let curentIndex = e.detail.current;
+      this.setData({
+        curentIndex
+      })
+    }
+  },
+  switchTab(e){
+    this.setData({
+      curentIndex:e.currentTarget.dataset.index,
+      toView: e.currentTarget.dataset.id
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.getSystemInfo({
+      success: res => {
+        //转为rpx
+        let ch = (750 / res.screenWidth) * res.windowHeight - 80;
+        this.setData({
+          ch
+        })
+      },
+    })
 
   },
 

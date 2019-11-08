@@ -1,2 +1,22 @@
-<!--pages/shortVideo/index.wxml-->
-<text>pages/shortVideo/index.wxml</text>
+<!-- pages/shortVideo/index.wxml -->
+<scroll-view class="short-menu {{scrollTop > 40 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
+  <block wx:for="{{shortCategory}}" wx:key="{{item.id}}">
+    <view class="name {{curentIndex === index ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bind:tap="switchTab">
+      {{item.name}}
+    </view>
+  </block>
+</scroll-view>
+<view class="content" style="height:{{ch}}rpx;">
+  <swiper class="swiper" bindchange='swiperChange' current='{{curentIndex}}'>
+    <block wx:for="{{videos}}" wx:key="{{index}}" wx:for-item="videoList">
+      <swiper-item class="{{index}}">
+        <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == index}}">
+          <block wx:for="{{videoList.video}}" wx:for-item="video" wx:key="{{index}}">
+            
+          </block>
+
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

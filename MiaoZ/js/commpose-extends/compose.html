@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore.js"></script>
+  <title>函数式编程</title>
+</head>
+<body>
+  
+
+  <script>
+    // 函数编程
+    // 函数 是 一等公民
+
+    function request(err, success) {
+      setTimeout(() => {
+        let rmd = Math.random();
+        if (rmd < 0.5) {
+          success({code: 200})
+        }else{
+          err({code: 500})
+        }
+      }, 3000)
+    }
+
+    request((res) => {
+      console.log(res);
+    }, (res) => {
+      console.log(res);
+    })
+
+
+    // 函数式编程 提倡 单独的功能 拆为 函数
+
+    // 函数式 通过组合单一的功能
+
+    function setRedColor(btn) {
+      btn.style.color = 'red';
+      console.log('color')
+      return btn;
+    }
+
+    function setInnerHTML(btn) {
+      btn.innerHTML = '立即购买';
+      console.log('html')
+      return btn;
+    }
+
+    function append(btn) {
+      document.body.appendChild(btn);
+      console.log('append')
+      return btn;
+    }
+
+    // let btn = document.createElement('button');
+    // setRedColor(btn);setInnerHTML(btn);append(btn);
+
+    // underscore : _  把方法组合
+    let nFn = _.compose(append, setInnerHTML, setRedColor);
+    let btn1 = document.createElement('button');
+    nFn(btn1)
+
+
+    // 自定义组合 compose 方法  考点  
+    function compose1(f1, f2, f3) {
+      // 1 compose1
+      return function (params) {
+        // 2 nFn
+        f1(f2(f3(params)))
+      }
+    }
+
+    // 自定义组合 compose 方法  接收任意 个参数
+    function compose2(...fns) {
+      return function (arg) {
+        let res = fns.pop()(arg);
+        while(fns.length){
+          let fn = fns.pop();
+          res = fn(res)
+        }
+        return res
+      }
+    }
+
+    let btn2 = document.createElement('button');
+
+    let nfn2 = compose2(append, setInnerHTML, setRedColor);
+
+    nfn2(btn2)
+
+
+  </script>
+</body>
+</html>

@@ -1,20 +1,20 @@
 module.exports = [
   {
     id: 1,
-    lol: [
+    video: [
       {
         id: 1,
         vid: 'x3018a9ph4a',
         title: '阿改吕布神勇跳大斩三杀',
         img: 'https://puui.qpic.cn/vupload/0/1573052045770_h5xtwnuh3d.gif/0',
-        time: '0:50'
+        time: '28:10'
       },
       {
         id: 2,
         vid: 'y301735xpwo',
         title: 'FPX四人领跑KDA榜单',
         img: 'http://puui.qpic.cn/tv/0/362561693_175100/0',
-        time: '1:15'
+        time: '28:15'
       },
       {
         id: 3,
@@ -146,7 +146,7 @@ module.exports = [
   },
   {
     id: 2,
-    game: [
+    video: [
       {
         id: 1,
         vid: 'x3018a9ph4a',
