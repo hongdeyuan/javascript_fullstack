@@ -13,7 +13,7 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view/>
+    <router-view :seller="seller" />
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
   created () {
     this.$http.get('http://localhost:8080/static/seller.json')
       .then((res) => {
-        console.log(res)
+        // console.log(res)
         if (res.data.errno === 0) {
           // this.seller = res.data.data
           // Object.assign合并对象

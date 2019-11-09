@@ -1,6 +1,6 @@
 // pages/shortVideo/index.js
 const config = require('../../modules/config')
-const txvContext = requirePlugin("tencentvideo");
+const TxvContext = requirePlugin("tencentvideo");
 const shortCategory = require('../../data/shortCategory.js')
 const videoUrl = require('../../data/videoUrl.js')
 Page({
@@ -28,6 +28,31 @@ Page({
       curentIndex:e.currentTarget.dataset.index,
       toView: e.currentTarget.dataset.id
     })
+  },
+  onPlay: function (params) {
+    let txvContext = TxvContext.getTxvContext('tvp') 
+    // txv1即播放器组件的playerid值
+    txvContext.play()
+  },
+  onContentChange: function (params) {
+    
+  },
+  onEnd: function (params) {
+    
+  },
+  onPause: function (params) {
+    let txvContext = TxvContext.getTxvContext('tvp') 
+    // txv1即播放器组件的playerid值
+    txvContext.pause()
+  },
+  onStateChanage: function (params) {
+    
+  },
+  onTimeupdate: function (params) {
+    
+  },
+  onFullScreenChange: function (params) {
+    
   },
   /**
    * 生命周期函数--监听页面加载

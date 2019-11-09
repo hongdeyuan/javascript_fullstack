@@ -12,7 +12,20 @@
       <swiper-item class="{{index}}">
         <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == index}}">
           <block wx:for="{{videoList.video}}" wx:for-item="video" wx:key="{{index}}">
-            
+            <txv-video
+              vid="{{video.vid}}" 
+              playerid="tvp" 
+              autoplay="{{false}}"
+              danmu-btn="{{true}}"
+              sendDanmu= "{{true}}"
+              bindcontentchange="onContentChange"
+              bindplay="onPlay"
+              bindended="onEnd"
+              bindpause="onPause"
+              bindstatechange="onStateChanage"
+              bindtimeupdate="onTimeupdate"
+              bindfullscreenchange="onFullScreenChange">
+            </txv-video>
           </block>
 
         </scroll-view>

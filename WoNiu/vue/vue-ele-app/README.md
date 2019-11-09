@@ -60,3 +60,13 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # BScroll  执行页面滚动
   - 先使用 on()  监听 'scroll' 滑动事件
   - scroll
+
+# vue 给没有设置的数据 增加 一个字段
+  - this.$set(this.food, 'count', 1)  : 给 food 添加 count  默认值 为 1
+
+# 阻止冒泡 和捕获事件 
+ -  @click.stop.prevent="addCart"
+
+# vue  中向父 组件 发散 数据   父组件并接收 : 见goods.vue  & cartcontrol.vue
+  - this.$emit('add', event.target)
+  - @add="addFood"

@@ -1,25 +1,33 @@
 <template>
   <div>
     <div class="goods">
-      <div class="menu-wrapper" ref="menuwrapper">
-        <ul v-if="goods">
-          <li v-for="(item, index) in goods" :key="index" @click="selectMenu(index)" class="menu-item" :class="{'current' : currentIndex == index}">
+      <div class="menu-wrapper" ref="menuWrapper">
+        <ul>
+          <li v-for="(item, index) in goods"
+          :key="index"
+          class="menu-item"
+          @click="selectMenu(index)"
+          :class="{'current' : currentIndex === index}"
+          >
             <span class="text border-1px">
-              <span class="icon" :class="classMap[item.type]" v-if="item.type > 0"></span>
+              <span v-if="item.type > 0" class="icon" :class="classMap[item.type]"></span>
               {{item.name}}
             </span>
           </li>
         </ul>
       </div>
-      <div class="foots-wrapper" ref="footsWrapper">
+      <div class="foods-wrapper" ref="foodsWrapper">
         <ul>
           <li class="food-list"
-            ref="foodList"
-            v-for="(item, index) in goods" :key="index">
+          v-for="(item, index) in goods"
+          :key="index"
+          ref="foodList"
+          >
             <h1 class="title">{{item.name}}</h1>
             <ul>
               <li class="food-item border-1px"
-                v-for="(food, index) in item.foods" :key="index">
+                v-for="(food, index) in item.foods"
+                :key="index" >
                 <div class="icon">
                   <img :src="food.icon" alt="">
                 </div>
@@ -31,8 +39,12 @@
                     <span>好评率{{food.rating}}%</span>
                   </div>
                   <div class="price">
-                    <span class="now">￥{{food.price}}</span>
-                    <span class="old" v-if="food.oldPrice">￥{{food.oldPrice}}</span>
+                    <span class="now">¥{{food.price}}</span>
+                    <span class="old" v-if="food.oldPrice">¥{{food.oldPrice}}</span>
+                  </div>
+                  <div class="cartcontrol-wrapper">
+                    <!-- + -->
+                    <cartcontrol :food="food" @add="addFood"></cartcontrol>
                   </div>
                 </div>
               </li>
@@ -41,18 +53,26 @@
         </ul>
       </div>
     </div>
-     <!-- 购物车 -->
-     <div style="position:absolute ;z-index: 998">
-       <v-cart></v-cart>
-     </div>
+    <!-- 购物车 -->
+    <shopcart
+      :selectFoods = "selectFoods"
+      :deliveryPrice = "seller.deliveryPrice"
+      :minPrice = "seller.minPrice"
+    ></shopcart>
   </div>
 </template>
 
 <script>
-import shopCart from '@/components/shopcart/shopcart.vue'
 import BScroll from 'better-scroll'
+import shopcart from '@/components/shopcart/shopcart'
+import cartcontrol from '@/components/cartcontrol/cartcontrol'
 export default {
   name: 'Goods',
+  props: {
+    seller: {
+      type: Object
+    }
+  },
   data () {
     return {
       goods: [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -62,16 +82,15 @@ export default {
     }
   },
   components: {
-    'v-cart': shopCart
+    shopcart,
+    cartcontrol
   },
   created () {
     this.$http.get('http://localhost:8080/static/goods.json')
-      .then(res => {
+      .then((res) => {
+        console.log(res)
         if (res.data.errno === 0) {
-          // Object.assign合并对象
-          this.goods = Object.assign({}, this.goods, res.data.data)
-          // console.log(this.goods)
-          // 保证html 渲染之后才执行
+          this.goods = res.data.data
           this.$nextTick(() => {
             this._initScroll()
             this._calculateHeight()
@@ -85,35 +104,45 @@ export default {
         let height1 = this.listHeight[i]
         let height2 = this.listHeight[i + 1]
         if (!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
-          // console.log(i)
           return i
         }
       }
       return 0
+    },
+    selectFoods () {
+      let foods = []
+      for (let good of this.goods) {
+        if (good.foods) {
+          for (let food of good.foods) {
+            if (food.count) {
+              foods.push(food)
+            }
+          }
+        }
+      }
+      return foods
     }
   },
   methods: {
     _initScroll () {
-      this.menuScroll = new BScroll(this.$refs.menuwrapper, {
+      this.menuScroll = new BScroll(this.$refs.menuWrapper, {
         click: true
       })
-      // probeType: 3 :指在什么时候派发滚动事件
-      this.footsScroll = new BScroll(this.$refs.footsWrapper, {
+      this.foodsScroll = new BScroll(this.$refs.foodsWrapper, {
         click: true,
         probeType: 3
       })
-      this.footsScroll.on('scroll', pos => {
+      this.foodsScroll.on('scroll', pos => {
         // console.log(pos)
-        // round 四舍五入 abs 求绝对值
         this.scrollY = Math.abs(Math.round(pos.y))
       })
     },
     selectMenu (idx) {
+      console.log(idx)
       // this.currentIndex = idx
-      // console.log(idx)
-      let footList = this.$refs.foodList
-      let el = footList[idx]
-      this.footsScroll.scrollToElement(el, 300)
+      let foodList = this.$refs.foodList
+      let el = foodList[idx]
+      this.foodsScroll.scrollToElement(el, 300)
     },
     _calculateHeight () {
       let foodList = this.$refs.foodList
@@ -124,7 +153,9 @@ export default {
         height += item.clientHeight
         this.listHeight.push(height)
       }
-      // console.log(this.listHeight)
+    },
+    addFood () {
+
     }
   }
 }
@@ -151,9 +182,9 @@ export default {
       line-height 14px
       &.current
         position relative
-        z-index 0
+        z-index 10
         margin-top -1px
-        background-color #fff
+        background #fff
         font-weight 700
         .text
           border-none()
@@ -181,8 +212,9 @@ export default {
         vertical-align middle
         border-1px(rgba(7, 17, 27, 0.1))
         font-size 12px
-  .foots-wrapper
+  .foods-wrapper
     flex 1
+    // overflow scroll
     .title
       padding-left 14px
       height 26px
