@@ -11,19 +11,20 @@
     <block wx:for="{{videos}}" wx:key="{{index}}" wx:for-item="videoList">
       <swiper-item class="{{index}}">
         <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == index}}">
-          <block wx:for="{{videoList.video}}" wx:for-item="video" wx:key="{{index}}">
+          <block wx:for="{{videoList.video}}" wx:for-item="video" wx:key="{{index}}" >
             <txv-video
               vid="{{video.vid}}" 
-              playerid="tvp" 
+              playerid="tvp"
+              isNeedMutex="{{true}}"
+              isHiddenStop="{{true}}"
+              showCenterPlayBtn="{{true}}"
               autoplay="{{false}}"
-              danmu-btn="{{true}}"
-              sendDanmu= "{{true}}"
+              defn="杜比"
               bindcontentchange="onContentChange"
               bindplay="onPlay"
               bindended="onEnd"
               bindpause="onPause"
               bindstatechange="onStateChanage"
-              bindtimeupdate="onTimeupdate"
               bindfullscreenchange="onFullScreenChange">
             </txv-video>
           </block>

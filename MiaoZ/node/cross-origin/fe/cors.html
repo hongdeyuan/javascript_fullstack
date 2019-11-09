@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fe</title>
+</head>
+<body>
+
+  <!-- url-encode: url 编码 ?a=1&b2 -->
+  <!-- text.plain: 纯文本 -->
+  <!-- form-data: 文件上传 -->
+  <form action="" method="POST" enctype="application/x-www-form-urlencoded"></form>
+
+  <script>
+    let requestHeaders = new Headers();
+    requestHeaders.append('X-auth', 'dhyaun')
+    requestHeaders.append('content-type', 'application/json')
+    fetch('http://localhost:3000/api/getBook', {
+      method: 'POST',
+      data:{page: 1},
+      headers:requestHeaders
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+    })
+  </script>
+</body>
+</html>

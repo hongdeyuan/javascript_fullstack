@@ -33,26 +33,26 @@ Page({
     let txvContext = TxvContext.getTxvContext('tvp') 
     // txv1即播放器组件的playerid值
     txvContext.play()
+    console.log('play')
   },
   onContentChange: function (params) {
     
   },
-  onEnd: function (params) {
-    
+  onEnd: function (e) {
+    console.log(e)
+    console.log('是否 是广告：', e.detail.isAd)
   },
   onPause: function (params) {
     let txvContext = TxvContext.getTxvContext('tvp') 
     // txv1即播放器组件的playerid值
     txvContext.pause()
+    console.log('pause')
   },
   onStateChanage: function (params) {
     
   },
-  onTimeupdate: function (params) {
-    
-  },
   onFullScreenChange: function (params) {
-    
+    console.log('Screen')
   },
   /**
    * 生命周期函数--监听页面加载
@@ -118,5 +118,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 默认阻止滚动
+  stopScroll() {
+    return false;
   }
 })
