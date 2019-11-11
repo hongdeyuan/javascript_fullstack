@@ -1,19 +1,49 @@
-
+const searchCategory = require('../../data/searchCategory.js')
+const hotSearch = require('../../data/hotSearch.js')
 Page({
 
   data: {
-    hotvideos: [],//获取热门搜索
-    inputValue: null,//输入框输入的值
-    history: [], //搜索历史存放数组
+    hotvideos: [],// 获取热门搜索
+    inputValue: null,// 输入框输入的值
+    history: [], // 搜索历史存放数组
+    searchCategory: searchCategory,// 搜索菜单栏
     searchsuggest: [], //搜索建议
-    showView: true,//组件的显示与隐藏
+    showView: true,// 组件的显示与隐藏
     showvideoresult: true,
-    searchresult: [],//搜索结果
+    searchresult: [],// 搜索结果
     searchKey: [],
-    share: false
+    hotSearch: hotSearch,// 热门搜索
+    share: false,
+    curentIndex: 0,
+    ch: 0
   },
-
+  //改变swiper
+  swiperChange: function(e) {//切换
+    if(e.detail.source == 'touch') {
+      let curentIndex = e.detail.current;
+      this.setData({
+        curentIndex
+      })
+    }
+  },
+  switchTab(e){
+    this.setData({
+      curentIndex:e.currentTarget.dataset.index,
+      toView: e.currentTarget.dataset.id
+    })
+  },
   onLoad() {
+
+    wx.getSystemInfo({
+      success: res => {
+        //转为rpx
+        let ch = (750 / res.screenWidth) * res.windowHeight - 360;
+        this.setData({
+          ch
+        })
+      },
+    })
+
     wx.showLoading({
       title: '加载中',
     });
@@ -38,13 +68,14 @@ Page({
       name: 'search',
       data:{ key: self.data.searchKey },
       success(res){
-        console.log(res);
+        // console.log(res);
         self.setData({
+          showvideoresult: true,
           searchsuggest: res.result
         })
       },
       fail(err){
-        console.log(err);
+        // console.log(err);
         self.setData({
           showvideoresult: false
         })
@@ -77,7 +108,7 @@ Page({
 
   //获取input文本并且实时搜索,动态隐藏组件
   getsearchKey: function (e) {
-    console.log(e.detail.value) //打印出输入框的值
+    // console.log(e.detail.value) //打印出输入框的值
     let that = this;
     if (e.detail.cursor != that.data.cursor) { //实时获取输入框的值
       that.setData({
@@ -120,7 +151,7 @@ Page({
 
   // input失去焦点函数
   routeSearchResPage: function (e) {
-    console.log(e.detail.value)
+    // console.log(e.detail.value)
     // 将数据存入本地
     if (this.data.searchKey) {
       let history = wx.getStorageSync("history") || [];
@@ -138,7 +169,7 @@ Page({
 
   // 搜索结果
   searchResult() {
-    console.log(this.data.searchKey)
+    // console.log(this.data.searchKey)
     const self = this;
     //展示标题栏的loding
     wx.showNavigationBarLoading();
@@ -148,14 +179,14 @@ Page({
       name: 'searchResult',
       data:{ key: self.data.searchKey },
       success(res){
-        console.log(res);
+        // console.log(res);
         self.setData({
           showvideoresult: false,
           searchresult: res.result
         })
       },
       fail(err){
-        console.log(err);
+        // console.log(err);
         self.setData({
           showvideoresult: false
         })

@@ -26,6 +26,27 @@
       </view>
     </view>
   </view>
+  <!-- 热搜 -->
+  <scroll-view class="hot-menu {{scrollTop > 112 ? 'menu-fixed' : ''}} {{showView?'':'header_view_hide'}}" scroll-x="{{true}}" scroll-y="{{false}}">
+    <block wx:for="{{searchCategory}}" wx:key="{{item.id}}">
+      <view class="name {{curentIndex === index ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bind:tap="switchTab">
+        {{item.name}}
+      </view>
+    </block>
+  </scroll-view>
+  <view class="content {{showView?'':'header_view_hide'}} {{scrollTop > 112 ? 'menu-fixed' : ''}}" style="height:{{ch}}rpx;">
+    <swiper class="swiper" bindchange='swiperChange' current='{{curentIndex}}'>
+      <block wx:for="{{hotSearch}}" wx:key="{{index}}" wx:for-item="hotList">
+        <swiper-item class="{{index}}">
+          <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == index}}">
+            <text wx:for="{{hotList.hotKeys}}" wx:key="" class="search_result" data-value='{{item.keyword}}' bindtap='fill_value'>
+              {{item.keyword}}
+            </text>
+          </scroll-view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 
   <!-- 搜索建议 -->
   <view class="{{showvideoresult?'search_suggest':'header_view_hide'}}">
