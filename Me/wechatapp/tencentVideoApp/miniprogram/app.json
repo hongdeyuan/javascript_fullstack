@@ -4,7 +4,8 @@
     "pages/shortVideo/index",
     "pages/brush/brush",
     "pages/mine/mine",
-    "pages/videoDetail/index"
+    "pages/videoDetail/index",
+    "pages/search/search"
   ],
   "networkTimeout": {
     "request": 30000,

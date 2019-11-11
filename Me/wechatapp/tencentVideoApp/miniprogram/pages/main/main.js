@@ -31,7 +31,7 @@ Page({
     console.log('id :\t'+id);
 
     wx.navigateTo({
-      url:'/pages/videoDetail/index'+"?id="+id
+      url:`/pages/videoDetail/index?id=${id}`
     })
   },
   //改变swiper
@@ -49,6 +49,12 @@ Page({
       toView: e.currentTarget.dataset.id
     })
   },
+  // 点击跳转到搜索页面
+  go_search: function() {
+    wx.navigateTo({
+      url: '../search/search',
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载application/json  application/x-www-form-urlencode
@@ -65,23 +71,27 @@ Page({
       },
     })
 
-    wx.request({
-      url: 'https://m.v.qq.com/play.html?cid=zr5a67l333ehzu9&vid=d0032x85stp',
-      data: {},
-      header: {'content-type':'application/json'},
-      success: (res) => {
-        // success
-      },
-      fail: () => {},
-      complete: () => {}
-    });
+    // wx.request({
+    //   url: 'https://v.qq.com/x/search/?q=斗破',
+    //   method: 'get',
+    //   data: {},
+    //   header: {
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   },
+    //   success: (res) => {
+    //     // success
+    //     console.log(res)
+    //   },
+    //   fail: () => {},
+    //   complete: () => {}
+    // });
       
   },
   /**
    * --监听页面滚动完成菜单固定
    */
   onPageScroll: function (e) {
-    console.log(e.scrollTop)
+    // console.log(e.scrollTop)
     this.setData({
       scrollTop: e.scrollTop
     })

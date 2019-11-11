@@ -1,0 +1,140 @@
+/* pages/search/search.wxss */
+page {
+  background-color: #FBFCFE;
+  width:100%;
+  height: 100%;
+}
+/* 搜索bar */
+.page__bd {
+  position: fixed;
+  top:0;
+  width:100%;
+  background-color:#FF4500;
+  z-index:1;
+}
+.search-bar {
+  width:100%;
+  display: flex;
+  background-color:#FF4500;
+  border: 1px  solid #DC4238;
+}
+.search-bar__box{
+  vertical-align: middle;
+  height: 65.52rpx;
+  margin: 20rpx 10rpx 20rpx 25rpx;
+  background-color:#DE655C;
+  border-radius: 20rpx;
+  width: 75%;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: inline-block;
+  align-items: center;
+}
+.icon-search_in-box{
+  width: 32.76rpx;
+  height: 32.76rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+.icon-clear{
+  width: 32.76rpx;
+  height: 32px 0.76rpx;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 80rpx;
+}
+.search-bar__input{
+  vertical-align: middle;
+  display: inline-block;
+}
+.search-bar__cancel-btn {
+  color:#ffffff;
+  display: inline-block;
+  font-size:32rpx;
+}
+
+
+
+/* 搜索历史 */
+.header_view_hide{
+  display: none;
+}
+.hot_keys {
+  /* background: #fff; */
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  margin-top:96rpx;
+  /* display: block; */
+}
+.title {
+  color: #FF4500;
+  font-size: 30rpx;
+  font-weight: 800;
+  display: inline-block;
+}
+.hot_key_box{
+  display: flex;
+  flex-flow: row wrap;
+}
+.hot_keys_box_item{
+  font-size: 14px;
+  color: #FF4500;
+  background-color: #EDEEF0;
+  border-radius: 15rpx;
+  padding: 15rpx;
+  margin: 10rpx;
+}
+.record{
+  position: absolute;
+  right: 0;
+  transform: translate(-50%,-10%)
+}
+
+/* //改变光标和输入的子的颜色 */
+input{
+  color:#ffffff;
+}
+
+
+/* 搜索建议 */
+.search_suggest{
+  width:100%;
+  height:100%;
+  margin-top: 100rpx;
+}
+
+
+/* 搜索结果 */
+.search_result{
+  display: block;
+  font-size: 14px;
+  color: #000000;
+  /* background-color: #EDEEF0; */
+  /* border-radius: 15rpx; */
+  padding: 15rpx;
+  margin: 15rpx;
+  border-bottom: 1px solid #EDEEF0;
+}
+.search_result_videos{
+  margin-top: 100rpx;
+  width: 100%;
+  height: 100%;
+}
+.search_result_video_item{
+   display: block;
+   /* background-color: #EDEEF0; */
+   /* border-radius: 15rpx; */
+   margin: 15rpx;
+   border-bottom: 1px solid #EDEEF0;
+}
+.search_result_video_video_name{
+  font-size: 15px;
+  color: #000000;
+  /* letter-spacing: 2rpx; */
+  margin-bottom: 15rpx;
+}
+.search_result_video_video_art-album{
+  font-size: 11px;
+  color: #000000;
+  font-weight:lighter;
+  margin-bottom: 5rpx;
+}

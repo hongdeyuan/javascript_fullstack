@@ -1,0 +1,45 @@
+<!-- pages/search/search.wxml -->
+<view class="searchPage">
+  <!-- 搜索框 -->
+  <view class="page__bd">
+    <view class="searchsearch-bar">
+      <view class="search-bar__box">
+        <icon class="icon-search_in-box" type="search" size="14" color='#EDA8A3'></icon>
+        <input focus='true' type="text" class="search-bar__input" placeholder="请输入片名、主演或导演" placeholder-style="font-size: 14px;color:#EDA8A3;padding-left:4px" value='{{inputValue}}' bindinput="getsearchKey" bindblur="routeSearchResPage" bindconfirm="searchover" />
+        <!-- 点击×可以清空正在输入 -->
+        <view class="icon-clear" wx:if="{{share}}">
+          <icon type="clear" size="14" color='#EDA8A3' bindtap="clearInput"></icon>
+        </view>
+      </view>
+      <view class="search-bar__cancel-btn {{isCancel?'':'hide'}}" bindtap="cancel">取消</view>
+    </view>
+  </view>
+  <!-- 搜索历史 -->
+  <view class="{{showView?'hot_keys':'header_view_hide'}}">
+    <view class="title history">搜索历史</view>
+    <icon type='clear' bindtap="clearHistory" class="title record" color="#DE655C"></icon>
+    <view class='hot_key_box'>
+      <view wx:for="{{history}}" wx:key="{{index}}">
+        <view class='hot_keys_box_item'  data-value='{{item}}' data-index="{{index}}" bindtap="fill_value">
+          {{item}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索建议 -->
+  <view class="{{showvideoresult?'search_suggest':'header_view_hide'}}">
+    <text wx:for="{{searchsuggest}}" wx:key="" class='search_result' data-value='{{item.keyword}}' bindtap='fill_value'>
+      {{item.keyword}}
+    </text>
+  </view>
+  <!-- 搜索结果 -->
+  <view class="search_result_videos {{searchresult?'':'header_view_hide'}}">
+    <view wx:for="{{searchresult}}" wx:key="" class='search_result_video_item' data-id="{{item.id}}" bindtap='handlePlayAudio'>
+      <view class='search_result_video_video_name'>{{item.title}}</view>
+      <view class='search_result_video_video_art-album'>
+        {{item.artists}}
+      </view>
+    </view>
+  </view>
+</view>
