@@ -138,7 +138,7 @@ export default {
       })
     },
     selectMenu (idx) {
-      console.log(idx)
+      // console.log(idx)
       // this.currentIndex = idx
       let foodList = this.$refs.foodList
       let el = foodList[idx]
