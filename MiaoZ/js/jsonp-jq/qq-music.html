@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>qq-music</title>
+</head>
+
+<body>
+
+  <!-- 第一步 创建 全局方法-->
+  <script>
+    function jsonpReceive(data) {
+      console.log(data)
+    }
+  </script>
+  <!-- 第二部 script发请求 -->
+  <script
+    src="https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?g_tk=1928093487&inCharset=utf-8&outCharset=utf-8&notice=0&format=jsonp&platform=h5&uin=0&needNewCode=1&jsonpCallback=jsonpReceive">
+  </script>
+
+  <!-- jquery 的 jsonp -->
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $.ajax({
+      dataType: 'jsonp',
+      url: 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg',
+      data: {
+        g_tk: 1928093487,
+        inCharset: 'utf-8',
+        outCharset: 'utf-8',
+        notice: 0,
+        format: 'jsonp',
+        platform: 'h5',
+        uin: 0,
+        needNewCode: 1
+      },
+      jsonp: 'jsonpCallback',// 告诉后端 我预先定义好的 方法名，
+      // 通过jsonpCallback 这个字段 传给它  
+      success: function (json) {
+        console.log('jq receive', json)
+      },
+      error: function () {
+        console.log('fail')
+      }
+    })
+  </script>
+
+  <!-- 手写 jquery的 jsonp -->
+
+  <script>
+    function ajaxJsonp (option) {
+      // 解构 取值
+      const { url, data, jsonp, success, error } = option;
+      const methodName = `ajaxJsonp${new Date().getTime()}`;
+      // 全局方法
+      window[methodName] = function (data) {
+        success(data);
+      }
+      // Object.keys(data) 获取 data 的所有 key  
+      // 拼接 key 和 value
+      let keyValueMap = Object.keys(data).map(key => {
+        return `${key}=${data[key]}`
+      })
+      // console.log('keyValueMap', keyValueMap);
+      // 插入 script
+      let scriptNode = document.createElement('script');
+      scriptNode.src = url + '?' + keyValueMap.join('&') + `&${jsonp}=${methodName}`;
+      document.body.appendChild(scriptNode);
+      // 调用自身的 onerror 方法
+      scriptNode.onerror = function (err) {
+        error(err);
+      }
+    }
+
+    // 类似于 $.ajax({})  的jsonp 调用
+    ajaxJsonp({
+      dataType: 'jsonp',
+      url: 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg',
+      data: {
+        g_tk: 1928093487,
+        inCharset: 'utf-8',
+        outCharset: 'utf-8',
+        notice: 0,
+        format: 'jsonp',
+        platform: 'h5',
+        uin: 0,
+        needNewCode: 1
+      },
+      jsonp: 'jsonpCallback',// 告诉后端 我预先定义好的 方法名，
+      // 通过jsonpCallback 这个字段 传给它  
+      success: function (json) {
+        console.log('jq receive', json)
+      },
+      error: function () {
+        console.log('fail')
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mutation</title>
+</head>
+<body>
+  <div id="kolor-kolor"></div>
+
+  <script>
+    // MutationObserver 移动或改变
+    var observer = new MutationObserver((mutationList) => {
+      // console.log(mutationList);
+      if (mutationList[0].type == 'attributes') {
+        console.log('attributes changed');
+        let color = document.getElementById('kolor-kolor').style.backgroundColor;
+        console.log(color);
+        document.querySelectorAll('#kolor-options a').forEach((e) => {
+          if (e.style.backgroundColor == color) {
+            e.click();
+          }
+        })
+      }
+    });
+    const targetNodes = document.getElementById('kolor-kolor')
+    observer.observe(targetNodes, {
+      attributes: true
+    });
+
+    setTimeout(() => {
+      targetNodes.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+    }, 1000)
+  </script>
+</body>
+</html>
