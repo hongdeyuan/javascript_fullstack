@@ -65,7 +65,7 @@
         </view>
         <view>
           主演：
-          <text>{{item.average}}</text>
+          <text>{{item.artists}}</text>
         </view>
         <view>年份: {{item.year}}</view>
       </view>
