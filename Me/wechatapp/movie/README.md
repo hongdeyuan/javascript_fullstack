@@ -1,12 +1,12 @@
-# 云开发 quickstart
+# 最新电影小程序
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+- 数据API：采用豆瓣API http://api.douban.com || https://douban.uieee.com/
+  - 特别注意： 
+    -  http://api.douban.com 该接口 目前需要带上 apikey  如： http://api.douban.com/v2/movie/subject/${event.movieid}?     apikey=0df993c66c0c636e29ecbb5344252a4a
+    - https://douban.uieee.com/ 则不需要 带上 apikey  因为 这个豆瓣提供 的代理服务网址 ，
+      具体见： https://github.com/zce/douban-api-docs
+- 使用了 Vant UI 框架 具体见： https://youzan.github.io/vant-weapp/#/quickstart
+- 云函数：云函数使用具体见： https://mp.weixin.qq.com/
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
 
-## 参考文档
-
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
