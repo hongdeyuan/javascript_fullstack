@@ -1,9 +1,6 @@
 const http = require('http')
-
 http.createServer((req, res) => {
-
   console.log(req.url, req.method)
-
   // 'Access-Control-Allow-Credentials': true 是否允许 cookie 传输
   res.writeHead(200, {
     'content-type': 'application/json',
@@ -12,16 +9,13 @@ http.createServer((req, res) => {
     'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
     'Access-Control-Allow-Credentials': true
   })
-
-  // res.end(JSON.stringify({
-  //   bookName: 'php'
-  // }))
-
+  res.end(JSON.stringify({
+    bookName: 'php'
+  }))
   // jsonP
-  res.end(`
-    getBook(${JSON.stringify({bookName: 'php'})})
-  `)
-
+  // res.end(`
+  //   getBook(${JSON.stringify({bookName: 'php'})})
+  // `)
 })
 .listen(3000,() => {
   console.log('启动成功： http://localhost:3000')
