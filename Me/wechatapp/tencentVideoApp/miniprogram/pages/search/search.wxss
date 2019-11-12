@@ -157,15 +157,40 @@ input{
    margin: 15rpx;
    border-bottom: 1px solid #EDEEF0;
 }
-.search_result_video_video_name{
-  font-size: 15px;
-  color: #000000;
-  /* letter-spacing: 2rpx; */
-  margin-bottom: 15rpx;
+
+/* 搜索详情 */
+.video_result{
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
-.search_result_video_video_art-album{
-  font-size: 11px;
-  color: #000000;
-  font-weight:lighter;
-  margin-bottom: 5rpx;
+
+.video_result-img{
+  width: 200rpx;
+  height: 300rpx;
+  margin-right: 20rpx;
+}
+
+.video_result-info{
+  flex: 1;
+	font-size: 28rpx;
+	line-height: 1.8;
+}
+
+.video_result-title{
+  color: #666;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+.video_result-score{
+  color: #faaf00;
+}
+
+.video_result-comment{
+  height: 60rpx;
+  background: #E54847;
+  color: #fff;
+  font-size: 26rpx;
+  margin-top: 120rpx;
 }

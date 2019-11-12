@@ -45,7 +45,7 @@
         <view class="chasing-title">猜你在追</view>
         <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
           <block wx:for="{{videoOnChasings}}" wx:key="{{index}}">
-            <view class="list-detail">
+            <view class="list-detail" bindtap="lookBans">
               <image src="{{item.img}}" mode="widthFix"></image>
               <view class="list-detail-content">
                 <text class="title">{{item.title}}</text>
@@ -60,7 +60,7 @@
         <view class="synchro-title">重磅♨正直播KPL·RW侠遇Hero</view>
         <view class="lists">
           <block wx:for="{{videoHotChasings}}" wx:key="{{index}}">
-            <view class="lists-detail">
+            <view class="lists-detail" bindtap="lookBans">
               <image src="{{item.img_src}}" mode="widthFix"></image>
               <view class="lists-detail-content">
                 <text class="title">{{item.item_title}}</text>
@@ -76,7 +76,7 @@
         <view class="synchro-title">同步剧场</view>
         <view class="lists" >
           <block wx:for="{{videoHeavys}}" wx:key="{{index}}">
-            <view class="lists-detail">
+            <view class="lists-detail" bindtap="lookBans">
               <image src="{{item.img}}" mode="widthFix"></image>
               <view class="lists-detail-content">
                 <text class="title">{{item.title}}</text>
@@ -110,7 +110,7 @@
         <view class="chasing-title">猜你会追</view>
         <scroll-view class="list" scroll-x="{{true}}" scroll-y="{{false}}">
           <block wx:for="{{videoCanChasings}}" wx:key="{{index}}">
-            <view class="list-detail">
+            <view class="list-detail" bindtap="lookBans">
               <image src="{{item.img}}" mode="widthFix"></image>
               <view class="list-detail-content">
                 <text class="title">{{item.title}}</text>
@@ -127,7 +127,7 @@
         <view class="synchro-title">热剧精选♨一波新剧来袭</view>
         <view class="lists" >
           <block wx:for="{{videoHeavys}}" wx:key="{{index}}">
-            <view class="lists-detail">
+            <view class="lists-detail" bindtap="lookBans">
               <image src="{{item.img}}" mode="widthFix"></image>
               <view class="lists-detail-content">
                 <text class="title">{{item.title}}</text>
@@ -143,7 +143,7 @@
         <view class="synchro-title">叮咚♨好看的花絮都在这</view>
         <view class="lists">
           <block wx:for="{{videoHotChasings}}" wx:key="{{index}}">
-            <view class="lists-detail">
+            <view class="lists-detail" bindtap="lookBans">
               <image src="{{item.img_src}}" mode="widthFix"></image>
               <view class="lists-detail-content">
                 <text class="title">{{item.item_title}}</text>

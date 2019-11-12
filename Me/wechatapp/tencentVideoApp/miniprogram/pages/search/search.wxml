@@ -20,7 +20,7 @@
     <icon type='clear' bindtap="clearHistory" class="title record" color="#DE655C"></icon>
     <view class='hot_key_box'>
       <view wx:for="{{history}}" wx:key="{{index}}">
-        <view class='hot_keys_box_item'  data-value='{{item}}' data-index="{{index}}" bindtap="fill_value">
+        <view class='hot_keys_box_item' data-value='{{item}}' data-index="{{index}}" bindtap="fill_value">
           {{item}}
         </view>
       </view>
@@ -47,7 +47,6 @@
       </block>
     </swiper>
   </view>
-
   <!-- 搜索建议 -->
   <view class="{{showvideoresult?'search_suggest':'header_view_hide'}}">
     <text wx:for="{{searchsuggest}}" wx:key="" class='search_result' data-value='{{item.keyword}}' bindtap='fill_value'>
@@ -56,10 +55,19 @@
   </view>
   <!-- 搜索结果 -->
   <view class="search_result_videos {{searchresult?'':'header_view_hide'}}">
-    <view wx:for="{{searchresult}}" wx:key="" class='search_result_video_item' data-id="{{item.id}}" bindtap='handlePlayAudio'>
-      <view class='search_result_video_video_name'>{{item.title}}</view>
-      <view class='search_result_video_video_art-album'>
-        {{item.artists}}
+    <view wx:for="{{searchresult}}" wx:key="{{index}}" class='video_result' data-id="{{item.id}}" bindtap='handlePlayAudio'>
+      <image class="video_result-img" src="{{item.img}}"></image>
+      <view class="video_result-info">
+        <view class="video_result-title">{{item.title}}</view>
+        <view>
+          观众评分：
+          <text class="video_result-score">{{item.average}}分</text>
+        </view>
+        <view>
+          主演：
+          <text>{{item.average}}</text>
+        </view>
+        <view>年份: {{item.year}}</view>
       </view>
     </view>
   </view>

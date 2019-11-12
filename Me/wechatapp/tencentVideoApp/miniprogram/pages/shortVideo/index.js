@@ -29,6 +29,9 @@ Page({
       toView: e.currentTarget.dataset.id
     })
   },
+  onClose(e){
+    console.log(e)
+  },
   onPlay: function (params) {
     let txvContext = TxvContext.getTxvContext('tvp') 
     // txv1即播放器组件的playerid值

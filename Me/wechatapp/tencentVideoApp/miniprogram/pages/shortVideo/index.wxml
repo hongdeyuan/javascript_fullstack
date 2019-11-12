@@ -23,6 +23,7 @@
               bindcontentchange="onContentChange"
               bindplay="onPlay"
               bindended="onEnd"
+              bindadclose="onClose"
               bindpause="onPause"
               bindstatechange="onStateChanage"
               bindfullscreenchange="onFullScreenChange">

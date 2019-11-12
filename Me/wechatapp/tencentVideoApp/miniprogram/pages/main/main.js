@@ -55,6 +55,17 @@ Page({
       url: '../search/search',
     });
   },
+  lookBans: function () {
+    const that = this;
+    wx.showModal({
+      content: '程序员正在加班赶工噢！',
+      showCancel: false,
+      confirmColor: '#FF4500',
+      success(res) {
+
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载application/json  application/x-www-form-urlencode
