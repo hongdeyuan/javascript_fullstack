@@ -1,0 +1,16 @@
+<!--pages/movie/movie.wxml-->
+<view class="movie" wx:for="{{movieList}}" wx:key="{{index}}">
+  <image class="movie-img" src="{{item.images.small}}"></image>
+  <view class="movie-info">
+    <view class="movie-title">{{item.title}}</view>
+    <view>观众评分：
+      <text class="movie-score"> {{item.rating.average}}分</text>
+    </view>
+    <view>主演：
+      <text wx:key="{{index}}" wx:for="{{item.casts}}">{{item.name}} </text>
+    </view>
+    <view>年份: {{item.year}}</view>
+  </view>
+  <!--bindtap :绑定js函数 ，该属性会继承给子类，也就是子类元素点击是，也会触发它；   cathchtap:也相当于绑定函数，但是不会继承给子类，它是捕获的  -->
+  <button bindtap="gotoComment" data-movieid="{{item.id}}" class="movie-comment">评价</button>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-button": "vant-weapp/button"
+  },
+  "navigationBarTitleText": "个人信息"
+}
