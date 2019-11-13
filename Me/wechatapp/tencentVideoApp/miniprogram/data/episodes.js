@@ -1093,5 +1093,41 @@ module.exports = [
         ]
       }
     ]
+  },
+  {
+    id: 5,
+    episodes: [
+      {
+        num: 1,
+        vid: 'd0032tmqvow',
+        clips: [
+          {
+            id: 1,
+            vid: 'd0032tmqvow'
+          },{
+            id: 2,
+            vid: 'd0032tmqvow'
+          },{
+            id: 3,
+            vid: 'd0032tmqvow'
+          },{
+            id: 4,
+            vid: 'c1918i6qwzk'
+          },{
+            id: 5,
+            vid: 'x1919luby72'
+          },{
+            id: 6,
+            vid: 'n191775vs5l'
+          },{
+            id: 7,
+            vid: 'q0906njat59'
+          },{
+            id: 8,
+            vid: 'o0906qtm4v7'
+          }
+        ]
+      }
+    ]
   }
 ]
