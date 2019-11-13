@@ -63,11 +63,27 @@
         <view class="clips-title">
             <text class="clips-title-text">精彩片花</text>
         </view>
-        <view class="clip" wx:for="{{clips[currentIndex].clips}}" wx:key="{{index}}">
-            <video src="{{item.videoUrl}}" id="{{item.id}}" hidden="{{currentVid != item.id}}"></video>
-            <image src="{{item.img}}" bind:tap="play" data-vid="{{item.id}}" hidden="{{currentVid == item.id}}">
-                <view class="label">{{item.duration}}</view>
-            </image>
+        <view class="clip" wx:for="{{clips}}" wx:key="{{index}}">
+            <txv-video 
+            vid="{{item.vid}}"
+            width="{{width}}"
+            height="{{height}}"
+            playerid="txv1"
+            autoplay="{{false}}"
+            controls="{{controls}}"
+            title="{{title}}"
+            defn="{{defn}}"
+            isHiddenStop="{{true}}"
+            vslideGesture="{{true}}"
+            enablePlayGesture="{{true}}"
+            playBtnPosition="center"
+            bindplay="onTvpPlay"
+            bindstatechange="onStateChange"
+            bindtimeupdate="onTimeUpdate"
+            bindcontentchange="onTvpContentChange"
+            showProgress="{{showProgress1}}"
+            show-progress="{{false}}"
+            bindfullscreenchange="onFullScreenChange"></txv-video>
         </view>
     </view>
     <!-- 弹出框 -->

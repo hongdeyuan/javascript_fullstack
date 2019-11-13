@@ -208,10 +208,23 @@ Page({
   },
 
   handlePlayAudio: function (event) { //event 对象，自带，点击事件后触发，event有type,target，timeStamp，currentTarget属性
-    const videoId = event.currentTarget.dataset.id; //获取到event里面的歌曲id赋值给audioId
-    wx.navigateTo({                                 //获取到id带着完整url后跳转到play页面
-      url: `/pages/videoDetail/index?vid=${videoId}`
-    })
+    const videoId = event.currentTarget.dataset.id; //获取到event里面的视频id赋值给audioId
+    if (videoId > 4 || videoId <= 0) {
+      wx.showModal({
+        content: '您搜索的资源，暂时未开放，请搜索其他资源！',
+        showCancel: false,
+        confirmColor: '#FF4500',
+        success(res) {
+  
+        }
+      })
+    }else{
+      //获取到id带着完整url后跳转到播放页面
+      wx.navigateTo({
+        url: `/pages/videoDetail/index?id=${videoId}`
+      })
+    }
+    
   },
 
   // 点击热门搜索值或搜索历史，填入搜索框

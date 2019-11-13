@@ -1,8 +1,8 @@
 // pages/videoDetail/index.js
 const entities = require('../../data/entities.js')
-const clips = require('../../data/clips.js')
-const txvContext = requirePlugin("tencentvideo");
+const txvContext = requirePlugin("tencentvideo")
 const config = require('../../modules/config')
+const episodes = require('../../data/episodes.js')
 
 let currentVideo;
 
@@ -15,44 +15,11 @@ Page({
         entitie: null,
         id: null,
         entities,
-        clips: clips,
+        clips: null,
         currentVid:null,
-        episodes:[
-          {
-            num: 1,
-            vid: 'n003297kilf'
-          },
-          {
-            num: 2,
-            vid: 'i0032carjfk'
-          },{
-            num: 3,
-            vid: 'r0032hv0gd5'
-          },{
-            num: 4,
-            vid: 'm0032ogkrbo'
-          },{
-            num: 5,
-            vid: 'x0032sp4x8h'
-          },{
-            num: 6,
-            vid: 's0032thyy8b'
-          },{
-            num: 7,
-            vid: 'x0032jrra8o'
-          },{
-            num: 8,
-            vid: 'h0032w6grwg'
-          },{
-            num: 9,
-            vid: 'b003206mdos'
-          },{
-            num: 10,
-            vid: 'd0032kjdt4y'
-          }
-        ],
+        episodes: null,
         tvphide: false,
-        vid: 'n003297kilf',
+        vid: null,
         title: "电视剧",
         defn: "超清",
         changingvid: '',
@@ -92,7 +59,7 @@ Page({
     console.log(currentVid, num);
     this.setData({
       vid: currentVid,
-      currentIndex: num - 1
+      clips: this.data.episodes[num-1].clips
     })
     this.txvContext = txvContext.getTxvContext('txv0');
     this.txvContext.play();
@@ -116,23 +83,11 @@ Page({
 
 
     const id= options.id;
-    //改变page里面的data
-    this.setData({
-      id
+    console.log('id', id);
+
+    let episode = episodes.find(function(item){
+      return item.id == id;
     })
-
-    // clips[this.data.currentIndex].clips.find(function(item){
-    //   return item.id == id;
-    // })
-
-    this.setData({
-      controls: !!config.get('controls'),
-      autoplay: !!config.get('autoplay'),
-      clips: clips
-    })
-    this.txvContext = txvContext.getTxvContext('txv0');
-    this.txvContext.play();
-
 
     let entitie = entities.find(function(item){
       return item.id == id;
@@ -141,21 +96,35 @@ Page({
     this.setData({
       entitie
     })
+    //改变page里面的data
+    this.setData({
+      id: id,
+      episodes: episode.episodes,
+      vid: episode.episodes[0].vid,
+      clips: episode.episodes[0].clips
+    })
+    // console.log('vid', this.data.vid);
 
+    this.setData({
+      controls: !!config.get('controls'),
+      autoplay: !!config.get('autoplay')
+    })
+    this.txvContext = txvContext.getTxvContext('txv0');
+    this.txvContext.play();
 
+  },
+  onTvpPlay: function () {
+    console.log('play')
   },
   onStateChange: function (e) {
     this.setData({
       playState: e.detail.newstate
     })
   },
+  onTvpContentChange: function () {
+  },
   onTimeUpdate: function (e) {
   },
-  onStateChange: function (e) {
-		this.setData({
-			playState: e.detail.newstate
-		})
-	},
   requestFullScreen: function () {
 		this.txvContext.requestFullScreen();
   },

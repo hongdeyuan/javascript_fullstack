@@ -20,6 +20,11 @@ exports.main = async (event, context) => {
         regexp: '.*' + event.key,
         options: 'i',
       })
+    },{
+      artists: db.RegExp({
+        regexp: '.*' + event.key,
+        options: 'i',
+      })
     }
   ])).get({
     success: res => {
