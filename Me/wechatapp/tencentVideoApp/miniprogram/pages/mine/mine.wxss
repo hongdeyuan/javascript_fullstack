@@ -17,6 +17,15 @@
   width: 120rpx;
   height: 120rpx;
 }
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.container .history text{
+  margin-left: 40rpx;
+  vertical-align: middle;
+}
 
 .container .header-image text {
     display: block;
@@ -85,4 +94,5 @@
 .container .fr {
     float:  right;
     margin-right: 40rpx;
+    vertical-align: middle;
 }

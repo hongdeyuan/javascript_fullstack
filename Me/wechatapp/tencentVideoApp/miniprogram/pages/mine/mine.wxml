@@ -8,16 +8,19 @@
     <view class="vip">
         <image src="../../images/no_vip.png" mode="widthFix"></image>
         <text class="h2">VIP暂未开通</text>
-        <text class="bottom">请点此去开通</text>
+        <text class="bottom" bindtap="lookBans">请点此去开通</text>
     </view>
-    <view class="history">
-        <text>观看历史</text><text class="fr"></text>
+    <view class="history" bindtap="lookBans">
+      <image class="icon" src="../../images/history.png" mode="widthFix"></image>
+      <text>观看历史</text><text class="fr"></text>
     </view>
-    <view class="play-list history">
-        <text>我的看单</text><text class="fr"></text>
+    <view class="play-list history" bindtap="lookBans">
+      <image class="icon" src="../../images/view.png" mode="widthFix"></image>
+      <text>我的看单</text><text class="fr"></text>
     </view>
-    <view class="history">
-        <text>设置</text><text class="fr"></text>
+    <view class="history" catchtap='navigatItem' data-url='/pages/setting/setting' data-open='true'>
+      <image class="icon" src="../../images/settings.png" mode="widthFix"></image>
+      <text>设置</text><text class="fr"></text>
     </view>
 </view>
 

@@ -1,0 +1,38 @@
+/* pages/setting/setting.wxss */
+
+page {
+  -webkit-font-smoothing: antialiased;
+  font-family: "PingHei", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+  font-size: 28rpx;
+  background: #f4f6f9;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.content {
+  width: 100%;
+  margin-left: 0;
+}
+
+.item {
+  margin-left: 0;
+}
+
+.history {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 36rpx 0 0 0;
+  padding: 56rpx 0 56rpx 40rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+
+.fr {
+  float: right;
+  margin-right: 40rpx;
+}

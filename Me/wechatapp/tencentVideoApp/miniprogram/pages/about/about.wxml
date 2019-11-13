@@ -1,0 +1,51 @@
+<view class='container'>
+  <view class='content'>
+    <view class='item'>
+      <view class='title'>声明</view>
+      <view>该小程序仅用于学习交流，禁止用于其他用途。</view>
+    </view>
+    <view class='item'>
+      <view class='title'>代码已开源</view>
+      <view class='i' catchtap='copy' data-title='项目地址' data-content='{{projectAddress}}'>
+        <view class='icon'>
+          <image src='/images/github.png'></image>
+        </view>
+        <view class='text'>
+          <view>可随意 star</view>
+          <view class="github">{{projectAddress}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>联系开发者</view>
+      <view class='i' catchtap='copy' data-title='GitHub' data-content='{{github}}'>
+        <view class='icon'>
+          <image src='/images/github.png'></image>
+        </view>
+        <view class='text'>
+          <view>通过 GitHub 反馈</view>
+          <view class="github">{{github}}</view>
+        </view>
+      </view>
+      <view class='i' catchtap='copy' data-title='邮箱' data-content='{{email}}'>
+        <view class='icon'>
+          <image src='/images/email.png'></image>
+        </view>
+        <view class='text'>
+          <view>通过 Email 反馈</view>
+          <view>{{email}}</view>
+        </view>
+      </view>
+      <view class='i' catchtap='copy' data-title='QQ' data-content='{{qq}}'>
+        <view class='icon'>
+          <image src='/images/qq.png'></image>
+        </view>
+        <view class='text'>
+          <view>通过 QQ 反馈</view>
+          <view>{{qq}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>开发者 · dhyuan</view>
+</view>

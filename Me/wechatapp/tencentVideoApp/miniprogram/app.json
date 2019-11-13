@@ -5,7 +5,9 @@
     "pages/brush/brush",
     "pages/mine/mine",
     "pages/videoDetail/index",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/setting/setting",
+    "pages/about/about"
   ],
   "networkTimeout": {
     "request": 30000,

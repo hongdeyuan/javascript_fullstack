@@ -1,0 +1,21 @@
+<!--pages/setting/setting.wxml-->
+<view class='container'>
+  <view class='content'>
+     <view class='item' catchtap='clearStorage'>
+        <view class='history'>
+          <view>清除缓存数据</view>
+        </view>
+      </view>
+
+    <view class='item'>
+      <navigator url='/pages/about/about'>
+        <view class='item'>
+          <view class='history'>
+            <view>关于</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+</view>

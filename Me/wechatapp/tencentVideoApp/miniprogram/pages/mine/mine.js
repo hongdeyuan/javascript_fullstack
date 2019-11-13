@@ -1,5 +1,5 @@
 // miniprogram/pages/mine/mine.js
-
+const utils = require('../../utils/utils.js')
 //获取应用实例
 const app = getApp()
 Page({
@@ -10,13 +10,27 @@ Page({
   data: {
     userInfo: {}
   },
+  navigatItem(e) {
+    return utils.navigatItem(e)
+  },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo
     })
-  }
-  ,
+  },
+  
+  lookBans: function () {
+    const that = this;
+    wx.showModal({
+      content: '暂时未开发！',
+      showCancel: false,
+      confirmColor: '#FF4500',
+      success(res) {
+
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
