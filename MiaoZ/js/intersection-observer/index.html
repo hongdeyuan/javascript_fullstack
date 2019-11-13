@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .scrollContainer {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000000;
+      overflow-y: scroll;
+    }
+    .targetBox {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      margin-top: 400px;
+    }
+  </style>
+  <title>observer</title>
+</head>
+<body>
+  <div class="scrollContainer">
+    <div class="targetBox"></div>
+  </div>
+  <script>
+    const insectionObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log(entry);
+        }
+      })
+    }, {
+      threshold: [0.3, 0.5, 1],
+      rootMargin: '0px 0px 30px 0px'
+    });
+    insectionObs.observe(document.querySelector('.targetBox'));
+
+  </script>
+</body>
+</html>

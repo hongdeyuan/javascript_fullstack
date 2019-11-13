@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #container{
+      width: 100%;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      color: aliceblue;
+      background-color: #444;
+      font-size: 30px;
+    }
+    #container1{
+      width: 100%;
+      margin-top: 10px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      color: aliceblue;
+      background-color: #444;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- mouseover resize -->
+  <div id="container"></div>
+  <div id="container1"></div>
+
+  <script>
+    // 节流处理
+    const container = document.getElementById('container');
+    let init = 0;
+    let previous = 0;
+    function buyitnow() {
+      let now  = new Date().getTime();
+      if (now - previous >= 1000) {
+        container.innerHTML = init ++;
+        previous = now;
+      }
+    }
+
+    container.onmousemove = buyitnow;
+
+
+    const container1 = document.getElementById('container1');
+
+    function addCart() {
+      console.log('addCart');
+    }
+
+    let throlltedAdd = myThrottle(addCart, 1000);
+
+    container1.onmousemove = throlltedAdd;// 节流方法 节流时间
+
+
+    // 函数时编程是 过程抽象
+    // 高阶函数 ： 输入的是函数 ，输出的也是函数
+    // 高阶函数 体现的也是 过程抽象
+    // _.throttle(func, title); 节流
+
+    function add(a, b) {
+      return a + b;
+    }
+    function myThrottle(func, wait) {
+
+      // 每个 函数必经之路 则可以 抽象 如下 过程抽象
+      return function () {
+        let now = new Date().getTime();
+        if (now - previous >= wait) {
+          func();
+          previous = now;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
