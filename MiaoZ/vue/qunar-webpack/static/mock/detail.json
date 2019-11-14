@@ -1,0 +1,332 @@
+{
+  "ret": true,
+  "data": [
+    {
+      "id": "01",
+      "sightName": "武隆天坑地缝国家地质公园(AAAAA景区)",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_600x330_9eb9410c.jpg",
+      "gallaryImgs": [
+        "http://img1.qunarzz.com/sight/p0/1505/be/be4802e10f3b3107.water.jpg_350x240_40073ef0.jpg",
+        "http://img1.qunarzz.com/sight/p0/201401/17/72e8ef351fc2129b8e1911fc9d8a6fc3.jpg_350x240_b33f4023.jpg",
+        "http://img1.qunarzz.com/sight/p0/201401/17/849db06904ffe8c7997a2ba85f78672f.jpg_350x240_c73295d7.jpg",
+        "http://img1.qunarzz.com/sight/p0/201401/17/3162227fc2c70b05292d7c89259983e3.jpg_350x240_00d77f81.jpg"
+      ],
+      "priceType": [
+        {
+          "name": "成人票",
+          "children": [
+            {
+              "name": "成人组团联票",
+              "children": [
+                {
+                  "name": "成人组团 - 大型团体联票"
+                }
+              ]
+            }
+          ]
+        }, {
+          "name": "学生票",
+          "children": [
+            {
+              "name": "学生组团票"
+            }, {
+              "name": "大学生(学生证)优惠票"
+            }
+          ]
+        }, {
+          "name": "儿童票"
+        }, {
+          "name": "特惠票",
+          "children": [
+            {
+              "name": "退伍军人票"
+            }, {
+              "name": "老年人票"
+            }, {
+              "name": "残疾人票"
+            }
+          ]
+        }
+      ]
+    }, {
+      "id": "02",
+      "sightName": "重庆柏联温泉",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/201401/29/8e60d7bb448bc8d4652efb382324076f.jpg_600x330_6bbc3349.jpg",
+      "gallaryImgs": [
+        "http://img1.qunarzz.com/sight/p0/201401/29/8e60d7bb448bc8d4652efb382324076f.jpg_350x240_19f897b1.jpg",
+        "http://img1.qunarzz.com/sight/p0/201401/29/f4e8fc8ecb69625c6c5ecc7a96c285e4.jpg_350x240_61840051.jpg",
+        "http://img1.qunarzz.com/sight/p0/1411/59/51e6bc8b9b8a24b05be103f0b097676d.water.jpg_350x240_5a81a022.jpg",
+        "http://img1.qunarzz.com/sight/p0/1411/6b/3c0f516dd29020e7a27e876f62206b6a.water.jpg_350x240_91b04228.jpg",
+        "http://img1.qunarzz.com/sight/p0/1408/29/2f35cebcac3b75c0d5131c6d293f7679.jpg_350x240_c2160f31.jpg",
+        "http://img1.qunarzz.com/sight/p0/201401/29/d8e051a97e6727724499143010b1ac39.jpg_350x240_cdf2f29a.jpg",
+        "http://img1.qunarzz.com/sight/p0/201401/29/560939ab2be4397b4083b7af75d1f838.jpg_350x240_2dc3004d.jpg",
+        "http://img1.qunarzz.com/sight/p0/1501/3c/3c36b64e0f83627c.water.jpg_350x240_63c1d401.jpg"
+      ],
+      "priceType": [
+        {
+          "name": "成人票",
+          "children": [
+            {
+              "name": "成人组团联票",
+              "children": [
+                {
+                  "name": "成人组团 - 大型团体联票"
+                }
+              ]
+            }
+          ]
+        }, {
+          "name": "儿童票"
+        }, {
+          "name": "特惠票",
+          "children": [
+            {
+              "name": "退伍军人票"
+            }, {
+              "name": "老年人票"
+            }
+          ]
+        }
+      ]
+    }, {
+      "id": "03",
+      "sightName": "梦幻奥陶纪",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/1707/c5/c568c1adf9b18efa3.img.jpg_600x330_199e968e.jpg",
+      "gallaryImgs": [
+        "http://img1.qunarzz.com/sight/p0/1707/c5/c568c1adf9b18efa3.img.jpg_350x240_f3408757.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/73/73c19796227a9ddda3.img.jpg_350x240_0be7df73.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/b9/b9bc15fc941a2e8ba3.img.jpg_350x240_9661e152.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/e0/e06593616adaa606a3.img.jpg_350x240_3d102c41.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/29/291e280292d5b8fa3.img.jpg_350x240_f6015021.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/b2/b217402e197ab999a3.img.jpg_350x240_f7e9fa40.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/2f/2fb7c5ac72da4a21a3.img.jpg_350x240_69117de1.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/7f/7f76368c17307b85a3.img.jpg_350x240_8e2496d6.jpg",
+        "http://img1.qunarzz.com/sight/p0/1803/2c/2c36393a5aa211dba3.img.jpg_350x240_af835876.jpg",
+        "http://img1.qunarzz.com/sight/p0/1707/81/819491b2613f0a84a3.img.jpg_350x240_617de618.jpg",
+        "http://img1.qunarzz.com/sight/p0/1707/5b/5bd0395e02644459a3.img.png_350x240_1efd0da6.png",
+        "http://img1.qunarzz.com/sight/p0/1707/10/103668be75a61809a3.img.png_350x240_7e879ce0.png",
+        "http://img1.qunarzz.com/sight/p0/1707/cd/cd5bda74bcefba5ca3.img.jpg_350x240_01eef836.jpg",
+        "http://img1.qunarzz.com/sight/p0/1707/d8/d8bbe86c45d54821a3.img.jpg_350x240_dd443247.jpg",
+        "http://img1.qunarzz.com/sight/p0/1707/35/35cd9fc51dc6b561a3.img.jpg_350x240_4f4dccdf.jpg",
+        "http://img1.qunarzz.com/sight/p0/1707/e8/e83fd9f1137466a5a3.img.jpg_350x240_c424cbef.jpg"
+      ],
+      "priceType": [
+        {
+          "name": "成人票",
+          "children": [
+            {
+              "name": "成人组团联票",
+              "children": [
+                {
+                  "name": "成人组团 - 大型团体联票"
+                }
+              ]
+            }
+          ]
+        }, {
+          "name": "学生票",
+          "children": [
+            {
+              "name": "学生组团票"
+            }, {
+              "name": "大学生(学生证)优惠票"
+            }
+          ]
+        }, {
+          "name": "儿童票"
+        }, {
+          "name": "特惠票",
+          "children": [
+            {
+              "name": "退伍军人票"
+            }, {
+              "name": "老年人票"
+            }, {
+              "name": "残疾人票"
+            }
+          ]
+        }
+      ]
+    }, {
+      "id": "04",
+      "sightName": "酉阳桃花源",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/1708/ef/ef538bb8d9911483a3.img.jpg_600x330_c3a0d8fa.jpg",
+      "gallaryImgs": [
+        "http://img1.qunarzz.com/sight/p0/1708/ef/ef538bb8d9911483a3.img.jpg_350x240_420b2203.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/2b/2bc2dad4898a2bb4a3.img.jpg_350x240_9ff7aa55.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/bf/bf03742ef7966762a3.img.jpg_350x240_5dc03ee4.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/99/99e190e5a1d97276a3.img.jpg_350x240_e6a5f591.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/ea/ea6f5a2acfdb527ea3.img.jpg_350x240_0b5298e8.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/7d/7daddb8ce28b9d1ea3.img.jpg_350x240_c580903d.jpg",
+        "http://img1.qunarzz.com/sight/p0/1505/c3/c3037e8701c7292d.water.jpg_350x240_f86e2b80.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/57/5713263c6cdec4d0a3.img.jpg_350x240_4d275ae6.jpg",
+        "http://img1.qunarzz.com/sight/p0/1507/5f/5f64faa1cd3c2d89.img.jpg_350x240_befae8a1.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/b4/b4ea2cefb04e4965a3.img.jpg_350x240_9afa1a9a.jpg",
+        "http://img1.qunarzz.com/sight/p0/1507/e4/e428cb316753baf1.img.jpg_350x240_564a53e8.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/f6/f6c24194ba10c844a3.img.jpg_350x240_8489afef.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/4c/4c2cd755ee7797fba3.img.jpg_350x240_d6edc04a.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/9e/9e3ee4db2c7f354ba3.img.jpg_350x240_6c6e4cef.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/96/966c7761e5cad3cda3.img.jpg_350x240_d0f54648.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/60/601d8a8be25e3e36a3.img.jpg_350x240_fdc62b50.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/85/856d7ae25b28cc6ca3.img.jpg_350x240_73160e34.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/7a/7ac0366e5c10586ca3.img.jpg_350x240_12afe5a8.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/54/542e9d36ae143d1fa3.img.jpg_350x240_38b401de.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/49/49efb2d852ad502ea3.img.jpg_350x240_ad322125.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/bd/bd5db408fe91f73a3.img.jpg_350x240_cf2879a9.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/bf/bf4c3ce1281d2eb3a3.img.jpg_350x240_28e977cb.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/62/627dc2836e36fec0a3.img.jpg_350x240_f2650c73.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/ed/ed4304b7f7dfa3cea3.img.jpg_350x240_153556ed.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/3c/3ccd783da2fcabda3.img.jpg_350x240_f6eada3c.jpg",
+        "http://img1.qunarzz.com/sight/p0/1708/ec/ec9491dfc86fa8a2a3.img.jpg_350x240_9a039570.jpg"
+      ],
+      "priceType": [
+        {
+          "name": "成人票",
+          "children": [
+            {
+              "name": "成人组团联票"
+            }
+          ]
+        }, {
+          "name": "儿童票"
+        }, {
+          "name": "特惠票",
+          "children": [
+            {
+              "name": "退伍军人票"
+            }, {
+              "name": "老年人票"
+            }
+          ]
+        }
+      ]
+    }, {
+      "id": "05",
+      "sightName": "黑山谷",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/201305/08/8638c7dbd656cafac8d65eac.jpg_600x330_af87cf27.jpg",
+      "gallaryImgs": [
+        "http://img1.qunarzz.com/sight/p0/201305/08/8638c7dbd656cafac8d65eac.jpg_350x240_3cc0cbe4.jpg",
+        "http://img1.qunarzz.com/sight/p0/1603/fe/fee344a10a57e65a90.water.jpg_350x240_adc37100.jpg",
+        "http://img1.qunarzz.com/wugc/p58/201306/06/4b7c95616039702f93835fbb.jpg_350x240_cff52b6d.jpg",
+        "http://img1.qunarzz.com/sight/p0/201305/10/51f35174fff7cec5c8d65eac.jpg_350x240_629b8d55.jpg",
+        "http://img1.qunarzz.com/sight/p0/201305/10/086710f494ba444cc8d65eac.jpg_350x240_c9b4422b.jpg",
+        "http://img1.qunarzz.com/sight/p0/1507/9b/24cbe6e536a8306ffe17bad4937e61bc.water.jpg_350x240_99e4adca.jpg",
+        "http://img1.qunarzz.com/sight/p0/1507/fd/b6860e6ffac4fa792546527da013552c.water.jpg_350x240_37d8b18c.jpg"
+      ],
+      "priceType": [
+        {
+          "name": "成人票",
+          "children": [
+            {
+              "name": "成人组团联票",
+              "children": [
+                {
+                  "name": "成人组团 - 大型团体联票"
+                }
+              ]
+            }
+          ]
+        }, {
+          "name": "儿童票"
+        }, {
+          "name": "特惠票",
+          "children": [
+            {
+              "name": "退伍军人票"
+            }, {
+              "name": "老年人票"
+            }
+          ]
+        }, {
+          "name": "本地年票",
+          "children": [
+            {
+              "name": "一年票"
+            }, {
+              "name": "二年票(优惠)"
+            }
+          ]
+        }
+      ]
+    }, {
+      "id": "06",
+      "sightName": "重庆欢乐谷",
+      "bannerImg": "http://img1.qunarzz.com/sight/p0/1709/7b/7bf5984d7e6a3c2da3.img.jpg_600x330_c6e086d3.jpg",
+      "gallaryImgs": [
+        "http://img1.qunarzz.com/sight/p0/1709/7b/7bf5984d7e6a3c2da3.img.jpg_350x240_48d80d88.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/39/39b5b5a87f82aac2a3.img.jpg_350x240_7ee37c0e.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/17/1795c6ab21a4cf8aa3.img.jpg_350x240_3cbad75d.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/32/3225e0be43eec8aba3.img.jpg_350x240_8e1ce507.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/e4/e4b97c2fbb4e696a3.img.png_350x240_65dca2e7.png",
+        "http://img1.qunarzz.com/sight/p0/1709/cc/cce6bf0aa9b8530da3.img.jpg_350x240_f5c53e4b.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/9c/9c715cadb75bbaafa3.img.jpg_350x240_9be5b4b8.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/1d/1d4124a7ca205ab6a3.img.png_350x240_4c71d1d7.png",
+        "http://img1.qunarzz.com/sight/p0/1709/64/64b4f1b7a5201f02a3.img.jpg_350x240_2a3649c1.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/a5/a530e96a42a0bb61a3.img.jpg_350x240_ff38b672.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/8f/8f0e04eb414ca850a3.img.jpg_350x240_56f09286.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/12/123503f5773e3eeaa3.img.jpg_350x240_c7846ab4.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/4a/4a7443c5f2cce1dca3.img.jpg_350x240_2e0b330e.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/6d/6d618c054dbee616a3.img.jpg_350x240_6bd0cb3f.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/dd/dd1c7209264d4b7ba3.img.jpg_350x240_786dba21.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/50/505b2fd4666d23aba3.img.jpg_350x240_70fc3c8d.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/59/59d80988e0b92c43a3.img.jpg_350x240_3c9d83c4.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/be/bee110fb54b1cc07a3.img.jpg_350x240_20807f07.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/a0/a096de3d4646a5a6a3.img.jpg_350x240_04b581f2.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/3a/3a654cfc7cfab8bba3.img.png_350x240_57e06fb6.png",
+        "http://img1.qunarzz.com/sight/p0/1709/23/23080213c2d1a9fea3.img.jpg_350x240_4245c194.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/ab/ab3c9cfbd8174619a3.img.jpg_350x240_efe3e1d5.jpg",
+        "http://img1.qunarzz.com/sight/p0/1709/29/29f69aaaa6973ec7a3.img.png_350x240_b3fffa2a.png"
+      ],
+      "priceType": [
+        {
+          "name": "成人票",
+          "children": [
+            {
+              "name": "成人组团联票",
+              "children": [
+                {
+                  "name": "成人组团 - 大型团体联票"
+                }
+              ]
+            }
+          ]
+        }, {
+          "name": "儿童票"
+        }, {
+          "name": "特惠票",
+          "children": [
+            {
+              "name": "退伍军人票"
+            }, {
+              "name": "老年人票"
+            }
+          ]
+        }, {
+          "name": "月票"
+        }, {
+          "name": "季票",
+          "children": [
+            {
+              "name": "旺季"
+            }, {
+              "name": "淡季"
+            }
+          ]
+        }, {
+          "name": "年票",
+          "children": [
+            {
+              "name": "半年票"
+            }, {
+              "name": "一年票"
+            }, {
+              "name": "二年票"
+            }, {
+              "name": "五年票"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>module</title>
+</head>
+<body>
+  
+
+  <script type="module">
+    // 必须再 script 写 type="module" 浏览器才能读到
+    // ES 6 模块化 知识
+    // import {
+    //   foo
+    // } from './module.js'
+
+    // 不可以的 ES 6
+    // if (true) {
+    //   import {
+    //     foo
+    //   } from './module.js'
+    // }
+
+    // ES 7 写法 导入
+    setTimeout(() => {
+      import('./module.js')
+      .then(mod => {
+        mod.foo();
+      })
+    }, 3000);
+
+  </script>
+</body>
+</html>
