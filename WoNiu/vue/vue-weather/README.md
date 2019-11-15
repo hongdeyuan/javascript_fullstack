@@ -1,6 +1,6 @@
-# vue-communication
+# vue-weather
 
-> A Vue.js project
+> this is a weather app
 
 ## Build Setup
 
@@ -19,7 +19,3 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-## computed : 计算属性的使用情况： 响应式改变数据
-
-## VueX 状态数据管理

@@ -13,3 +13,6 @@ To get started:
   npm run dev
 
 Documentation can be found at https://vuejs-templates.github.io/webpack
+
+
+## 兄弟组件 之间 通信
