@@ -1,42 +1,39 @@
 <template>
-  <div class="seller">
+  <div class="seller" ref="sellerScoll">
     <div class="seller-content">
       <div class="overview">
-        <h1 class="title">粥品香坊（回龙观）</h1>
+        <h1 class="title">{{seller.name}}</h1>
         <div class="desc border-1px">
           <div class="star star-36">
-            <span class="star-item on"></span>
-            <span class="star-item on"></span>
-            <span class="star-item on"></span>
-            <span class="star-item on"></span>
-            <span class="star-item off"></span>
+            <span class="star-item on" v-for="(item,index) in stars" :key="index"></span>
+            <span class="star-item off" v-for="(item,index) in (5 - stars)" :key="index+4"></span>
           </div>
-          <span class="text">(24)</span>
-          <span class="text">月售90单</span>
+          <span class="text">{{seller.ratingCount}}</span>
+          <span class="text">月售{{seller.sellCount}}单</span>
         </div>
         <ul class="remark">
           <li class="block">
             <h2>起送价</h2>
             <div class="content">
-              <span class="stress">20</span>元
+              <span class="stress">{{seller.minPrice}}</span>元
             </div>
           </li>
           <li class="block">
             <h2>商家配送</h2>
             <div class="content">
-              <span class="stress">4</span>元
+              <span class="stress">{{seller.deliveryPrice}}</span>元
             </div>
           </li>
           <li class="block">
             <h2>平均配送时间</h2>
             <div class="content">
-              <span class="stress">38</span>分钟
+              <span class="stress">{{seller.deliveryTime}}</span>分钟
             </div>
           </li>
         </ul>
-        <div class="favorite">
-          <span class="icon-favorite active"></span>
-          <span class="text">收藏</span>
+        <div class="favorite" @click="like">
+          <span class="icon-favorite" :class="{'active': pick=== true}"></span>
+          <span class="text">{{pick === true ? '已收藏': '收藏'}}</span>
         </div>
       </div>
       <div class="split"></div>
@@ -45,29 +42,31 @@
         <div class="content-wrapper border-1px">
           <p
             class="content"
-          >粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。</p>
+          >{{seller.bulletin}}</p>
         </div>
         <ul class="supports">
-          <li class="support-item border-1px">
-            <span class="icon decrease"></span>
-            <span class="text">在线支付满28减5</span>
+          <li class="support-item" v-for="(item, index) in seller.supports" :key="index+8">
+            <span class="icon" :class="classMap[item.type]"></span>
+            <span class="text">{{item.description}}</span>
           </li>
-          <li class="support-item border-1px">
-            <span class="icon discount"></span>
-            <span class="text">VC无限橙果汁全场8折</span>
-          </li>
-          <li class="support-item border-1px">
-            <span class="icon special"></span>
-            <span class="text">单人精彩套餐</span>
-          </li>
-          <li class="support-item border-1px">
-            <span class="icon invoice"></span>
-            <span class="text">该商家支持发票,请下单写好发票抬头</span>
-          </li>
-          <li class="support-item border-1px">
-            <span class="icon guarantee"></span>
-            <span class="text">已加入“外卖保”计划,食品安全保障</span>
-          </li>
+        </ul>
+      </div>
+      <div class="split"></div>
+      <div class="pics">
+        <h1 class="title">商家实景</h1>
+        <div class="pic-wrapper">
+          <ul class="pic-list" ref="picScoll">
+            <li class="pic-item" v-for="(pic, index) in seller.pics" :key="index+16">
+              <img :src="pic" width="120" height="90"/>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="split"></div>
+      <div class="info">
+        <h1 class="title border-1px">商家信息</h1>
+        <ul>
+          <li class="info-item" v-for="(info, index) in seller.infos" :key="index+32">{{info}}</li>
         </ul>
       </div>
     </div>
@@ -75,8 +74,54 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
-
+  props: {
+    seller: {
+      type: Object
+    }
+  },
+  data () {
+    return {
+      classMap: ['decrease', 'discount', 'special', 'invoice', 'guarantee'],
+      data: [],
+      pick: false
+    }
+  },
+  created () {
+    let self = this
+    this.$http.get('http://localhost:8080/static/seller.json').then((res) => {
+      if (res.data.errno === 0) {
+        self.data = res.data.data
+        self.$nextTick(() => {
+          self._initScroll()
+        })
+      }
+    })
+  },
+  methods: {
+    _initScroll () {
+      let self = this
+      self.sellerScoll = new BScroll(self.$refs.sellerScoll, {
+        click: true,
+        probeType: 3
+      })
+      self.picScoll = new BScroll(self.$refs.picScoll, {
+        click: true,
+        scrollX: true,
+        scrollY: false,
+        probeType: 3
+      })
+    },
+    like () {
+      this.pick = !this.pick
+    }
+  },
+  computed: {
+    stars () {
+      return Math.floor(this.seller.score)
+    }
+  }
 }
 </script>
 
@@ -90,9 +135,6 @@ export default {
   width 100%
   overflow hidden
   .seller-content
-    transition-timing-function cubic-bezier(0.165, 0.84, 0.44, 1)
-    transition-duration 0ms
-    transform translate(0px, 0px) translateZ(0px)
     .overview
       position relative
       padding 18px
@@ -201,8 +243,52 @@ export default {
             margin-right 6px
             background-size 16px 16px
             background-repeat no-repeat
+            &.decrease
+              bg-image('decrease_2')
+            &.discount
+              bg-image('discount_2')
+            &.guarantee
+              bg-image('guarantee_2')
+            &.invoice
+              bg-image('invoice_2')
+            &.special
+              bg-image('special_2')
           .text
             line-height 16px
             font-size 12px
             color #07111b
+    .pics
+      padding 18px
+      .title
+        margin-bottom 12px
+        line-height 14px
+        color #07111b
+        font-size 14px
+      .pic-wrapper
+        width 100%
+        overflow hidden
+        white-space nowrap
+        .pic-list
+          width 498px
+          font-size 0
+          .pic-item
+            display inline-block
+            margin-right 6px
+            width 120px
+            height 90px
+    .info
+      padding 18px 18px 0
+      color #07111b
+      .title
+        padding-bottom 12px
+        line-height 14px
+        position relative
+        font-size 14px
+        border-1px(rgba(7, 17, 27, 0.1))
+      ul
+        .info-item
+          padding 16px 12px
+          line-height 16px
+          position relative
+          font-size 12px
 </style>
