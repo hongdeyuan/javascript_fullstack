@@ -269,7 +269,6 @@ export default {
         overflow hidden
         white-space nowrap
         .pic-list
-          width 498px
           font-size 0
           .pic-item
             display inline-block
