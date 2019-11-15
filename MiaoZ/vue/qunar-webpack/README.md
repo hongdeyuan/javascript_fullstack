@@ -24,3 +24,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   - 引入better-scroll:  npm install better-scroll --save
   - cnpm install -D sass-loader@7.3.1  node-sass
   - cnpm i axios vue-awesome-swiper -S
+
+## 代理
+ - 反向代理 ： 可以解决 跨域
+
+
+ ## better-scroll使用注意事项
+  - 使用了的  better-scroll 子容器 只能是一个，不能出现多个，否则无效

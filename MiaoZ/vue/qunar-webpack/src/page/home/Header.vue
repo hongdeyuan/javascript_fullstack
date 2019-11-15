@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <div class="header-left">446</div>
+    <div class="header-left">
+      <div class="iconfont back-icon"></div>
+    </div>
     <div class="header-input">
       <input type="text" value="dhyuan"/>
     </div>
@@ -20,6 +22,24 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss' scoped>
+.header {
+  display: flex;
+  line-height: .86rem;
+  background: #00bcd4;
+  color: #fff;
+  .header-left {
+    width: .64rem;
+    float: left;
+    .iconfont {
+      font-size: 16px;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+    }
+    .back-icon {
+      text-align: center;
+      font-size: .4rem;
+    }
+  }
+}
 </style>

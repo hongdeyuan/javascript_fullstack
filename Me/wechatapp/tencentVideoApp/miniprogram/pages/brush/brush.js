@@ -8,7 +8,7 @@ Page({
    */
   data: {
     tvphide: false,
-    vid: 'n00322mspyk',
+    vid: 't30205m59tr',
     title: "全屏时会显示的视频title",
     defn: "超清",
     changingvid: '',
