@@ -1,6 +1,6 @@
-# vue-weather
+# vuex
 
-> this is a weather app
+> A Vue.js project
 
 ## Build Setup
 
@@ -20,7 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## 所用的 UI 何工具
- - vant: npm i vant -S
- - echarts
- - 高德地图
+## VueX 学习
+  - 安装VueX :npm install vuex --save
+
+  - mapState 

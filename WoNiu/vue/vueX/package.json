@@ -1,7 +1,7 @@
 {
-  "name": "vue-weather",
+  "name": "vuelearn",
   "version": "1.0.0",
-  "description": "this is a weather app",
+  "description": "A Vue.js project",
   "author": "hongdeyuan <1737407069@qq.com>",
   "private": true,
   "scripts": {
@@ -10,9 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vant": "^2.2.13",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
