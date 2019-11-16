@@ -202,7 +202,7 @@ export default {
       }
     },
     dropping (el, done) {
-      // let rf = el.offsetHeight
+      let rf = el.offsetHeight
       this.$nextTick(() => {
         el.style.transform = `translate3d(0, 0, 0)`
         let inner = el.getElementsByClassName('inner-hook')[0]
