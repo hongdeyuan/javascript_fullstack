@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import './assets/stylus/reset.css'
 import 'swiper/dist/css/swiper.css'
+import './assets/iconfont/iconfont.css'
 import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 

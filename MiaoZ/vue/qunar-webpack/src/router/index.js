@@ -13,6 +13,11 @@ export default new Router({
       component: () => import('@/page/home/Home')
     },
     {
+      path: '/detail',
+      name: 'Detail',
+      component: () => import('@/page/detail/Detail')
+    },
+    {
       path: '/city',
       name: 'City',
       component: () => import('@/page/city/City'),

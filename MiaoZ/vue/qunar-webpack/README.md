@@ -31,3 +31,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
  ## better-scroll使用注意事项
   - 使用了的  better-scroll 子容器 只能是一个，不能出现多个，否则无效
+
+## Vant  
+  - 安装： npm i vant -S
