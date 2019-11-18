@@ -13,37 +13,66 @@
       ],
       "priceType": [
         {
-          "name": "成人票",
+          "text": "成人票",
+          "info": 0,
+          "dot": true,
+          "className": "item1",
           "children": [
             {
-              "name": "成人组团联票",
-              "children": [
-                {
-                  "name": "成人组团 - 大型团体联票"
-                }
-              ]
+              "text": "成人组团联票",
+              "id": 1,
+              "disabled": false
+            },
+            {
+              "text": "成人单人票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "学生票",
+        },
+        {
+          "text": "学生票",
+          "info": 0,
+          "dot": true,
+          "className": "item2",
           "children": [
             {
-              "name": "学生组团票"
-            }, {
-              "name": "大学生(学生证)优惠票"
+              "text": "学生组团联票",
+              "id": 1,
+              "disabled": false
+            },
+            {
+              "text": "大学生(学生证)优惠票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "儿童票"
-        }, {
-          "name": "特惠票",
+        },
+        {
+          "text": "特惠票",
+          "info": 0,
+          "dot": true,
+          "className": "item3",
           "children": [
             {
-              "name": "退伍军人票"
-            }, {
-              "name": "老年人票"
-            }, {
-              "name": "残疾人票"
+              "text": "儿童票",
+              "id": 1,
+              "disabled": false
+            },
+            {
+              "text": "退伍军人票",
+              "id": 2,
+              "disabled": false
+            },
+            {
+              "text": "老年人票残疾人票",
+              "id": 3,
+              "disabled": false
+            },
+            {
+              "text": "残疾人票",
+              "id": 4,
+              "disabled": false
             }
           ]
         }
@@ -64,26 +93,66 @@
       ],
       "priceType": [
         {
-          "name": "成人票",
+          "text": "成人票",
+          "info": 3,
+          "dot": true,
+          "className": "item1",
           "children": [
             {
-              "name": "成人组团联票",
-              "children": [
-                {
-                  "name": "成人组团 - 大型团体联票"
-                }
-              ]
+              "text": "成人组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "成人单人票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "儿童票"
-        }, {
-          "name": "特惠票",
+        },
+        {
+          "text": "学生票",
+          "info": 3,
+          "dot": false,
+          "className": "item2",
           "children": [
             {
-              "name": "退伍军人票"
-            }, {
-              "name": "老年人票"
+              "text": "学生组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "大学生(学生证)优惠票",
+              "id": 2,
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "text": "特惠票",
+          "info": 3,
+          "dot": false,
+          "className": "item3",
+          "children": [
+            {
+              "text": "儿童票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "退伍军人票",
+              "id": 2,
+              "disabled": false
+            },
+            {
+              "text": "老年人票残疾人票",
+              "id": 3,
+              "disabled": false
+            },
+            {
+              "text": "残疾人票",
+              "id": 4,
+              "disabled": false
             }
           ]
         }
@@ -112,37 +181,66 @@
       ],
       "priceType": [
         {
-          "name": "成人票",
+          "text": "成人票",
+          "info": 3,
+          "dot": true,
+          "className": "item1",
           "children": [
             {
-              "name": "成人组团联票",
-              "children": [
-                {
-                  "name": "成人组团 - 大型团体联票"
-                }
-              ]
+              "text": "成人组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "成人单人票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "学生票",
+        },
+        {
+          "text": "学生票",
+          "info": 3,
+          "dot": false,
+          "className": "item2",
           "children": [
             {
-              "name": "学生组团票"
-            }, {
-              "name": "大学生(学生证)优惠票"
+              "text": "学生组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "大学生(学生证)优惠票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "儿童票"
-        }, {
-          "name": "特惠票",
+        },
+        {
+          "text": "特惠票",
+          "info": 3,
+          "dot": false,
+          "className": "item3",
           "children": [
             {
-              "name": "退伍军人票"
-            }, {
-              "name": "老年人票"
-            }, {
-              "name": "残疾人票"
+              "text": "儿童票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "退伍军人票",
+              "id": 2,
+              "disabled": false
+            },
+            {
+              "text": "老年人票残疾人票",
+              "id": 3,
+              "disabled": false
+            },
+            {
+              "text": "残疾人票",
+              "id": 4,
+              "disabled": false
             }
           ]
         }
@@ -181,21 +279,66 @@
       ],
       "priceType": [
         {
-          "name": "成人票",
+          "text": "成人票",
+          "info": 3,
+          "dot": true,
+          "className": "item1",
           "children": [
             {
-              "name": "成人组团联票"
+              "text": "成人组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "成人单人票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "儿童票"
-        }, {
-          "name": "特惠票",
+        },
+        {
+          "text": "学生票",
+          "info": 3,
+          "dot": false,
+          "className": "item2",
           "children": [
             {
-              "name": "退伍军人票"
-            }, {
-              "name": "老年人票"
+              "text": "学生组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "大学生(学生证)优惠票",
+              "id": 2,
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "text": "特惠票",
+          "info": 3,
+          "dot": false,
+          "className": "item3",
+          "children": [
+            {
+              "text": "儿童票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "退伍军人票",
+              "id": 2,
+              "disabled": false
+            },
+            {
+              "text": "老年人票残疾人票",
+              "id": 3,
+              "disabled": false
+            },
+            {
+              "text": "残疾人票",
+              "id": 4,
+              "disabled": false
             }
           ]
         }
@@ -215,35 +358,66 @@
       ],
       "priceType": [
         {
-          "name": "成人票",
+          "text": "成人票",
+          "info": 3,
+          "dot": true,
+          "className": "item1",
           "children": [
             {
-              "name": "成人组团联票",
-              "children": [
-                {
-                  "name": "成人组团 - 大型团体联票"
-                }
-              ]
+              "text": "成人组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "成人单人票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "儿童票"
-        }, {
-          "name": "特惠票",
+        },
+        {
+          "text": "学生票",
+          "info": 3,
+          "dot": false,
+          "className": "item2",
           "children": [
             {
-              "name": "退伍军人票"
-            }, {
-              "name": "老年人票"
+              "text": "学生组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "大学生(学生证)优惠票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "本地年票",
+        },
+        {
+          "text": "特惠票",
+          "info": 3,
+          "dot": false,
+          "className": "item3",
           "children": [
             {
-              "name": "一年票"
-            }, {
-              "name": "二年票(优惠)"
+              "text": "儿童票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "退伍军人票",
+              "id": 2,
+              "disabled": false
+            },
+            {
+              "text": "老年人票残疾人票",
+              "id": 3,
+              "disabled": false
+            },
+            {
+              "text": "残疾人票",
+              "id": 4,
+              "disabled": false
             }
           ]
         }
@@ -279,50 +453,66 @@
       ],
       "priceType": [
         {
-          "name": "成人票",
+          "text": "成人票",
+          "info": 3,
+          "dot": true,
+          "className": "item1",
           "children": [
             {
-              "name": "成人组团联票",
-              "children": [
-                {
-                  "name": "成人组团 - 大型团体联票"
-                }
-              ]
+              "text": "成人组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "成人单人票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "儿童票"
-        }, {
-          "name": "特惠票",
+        },
+        {
+          "text": "学生票",
+          "info": 3,
+          "dot": false,
+          "className": "item2",
           "children": [
             {
-              "name": "退伍军人票"
-            }, {
-              "name": "老年人票"
+              "text": "学生组团联票",
+              "id": 1,
+              "disabled": true
+            },
+            {
+              "text": "大学生(学生证)优惠票",
+              "id": 2,
+              "disabled": false
             }
           ]
-        }, {
-          "name": "月票"
-        }, {
-          "name": "季票",
+        },
+        {
+          "text": "特惠票",
+          "info": 3,
+          "dot": false,
+          "className": "item3",
           "children": [
             {
-              "name": "旺季"
-            }, {
-              "name": "淡季"
-            }
-          ]
-        }, {
-          "name": "年票",
-          "children": [
+              "text": "儿童票",
+              "id": 1,
+              "disabled": true
+            },
             {
-              "name": "半年票"
-            }, {
-              "name": "一年票"
-            }, {
-              "name": "二年票"
-            }, {
-              "name": "五年票"
+              "text": "退伍军人票",
+              "id": 2,
+              "disabled": false
+            },
+            {
+              "text": "老年人票残疾人票",
+              "id": 3,
+              "disabled": false
+            },
+            {
+              "text": "残疾人票",
+              "id": 4,
+              "disabled": false
             }
           ]
         }

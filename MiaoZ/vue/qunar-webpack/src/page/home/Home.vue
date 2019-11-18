@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <v-header></v-header>
+    <v-header :cityName="cityName"></v-header>
     <div class="scroll" ref="homeScroll">
       <div>
         <v-swiper :list="swiperList"></v-swiper>
@@ -55,6 +55,7 @@
 import Header from './Header'
 import Swiper from './Swiper'
 import BScroll from 'better-scroll'
+import Bus from '@/assets/bus'
 export default {
   data () {
     return {
@@ -67,7 +68,8 @@ export default {
         centeredSlides: true,
         autoplay: false
       },
-      weekendList: []
+      weekendList: [],
+      cityName: null
     }
   },
   components: {
@@ -83,7 +85,7 @@ export default {
       })
     },
     detail (id) {
-      console.log('id:', id)
+      // console.log('id:', id)
       this.$router.push({path: '/detail', query: {id: id}})
     }
   },
@@ -95,7 +97,8 @@ export default {
         this.weekendList = res.data.data.weekendList
         let self = this
         let n = 0
-
+        this.cityName = this.$route.query.cityName
+        Bus.$emit('getCityName', this.cityName)
         // 对iconList 数据进行特殊处理
         while (n < self.iconList.length) {
           if (n + 8 < self.iconList.length) {

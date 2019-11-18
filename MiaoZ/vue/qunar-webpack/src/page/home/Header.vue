@@ -9,7 +9,7 @@
     </div>
     <a href="#/city">
       <div class="header-right">
-        {{ this.city }}
+        {{ cityName }}
         <span class="iconfont">&#xe642;</span>
       </div>
     </a>
@@ -17,11 +17,24 @@
 </template>
 
 <script>
+// import Bus from '@/assets/bus'
 export default {
   data () {
     return {
-      city: '北京'
+      // citys: '北京'
     }
+  },
+  props: {
+    cityName: {
+      type: String,
+      default: '北京'
+    }
+  },
+  mounted () {
+    // Bus.$emit('currentCityName', this.cityName)
+    // this.$nextTick(() => {
+    //   this.$emit('cityName', this.cityName)
+    // })
   }
 }
 </script>

@@ -2,7 +2,8 @@
 	"ret": true,
 	"data":{
 		"location": "重庆",
-		"hotCities": [{
+		"hotCities": [
+			{
 			"id": 1,
 			"spell": "beijing",
 			"name": "北京"
@@ -28,7 +29,8 @@
 			"name": "桂林"
 		}],
 		"cities": {
-			"A": [{
+			"A": [
+				{
 				"id": 56,
 				"spell": "aba",
 				"name": "阿坝"

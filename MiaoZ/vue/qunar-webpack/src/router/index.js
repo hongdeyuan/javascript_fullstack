@@ -21,6 +21,9 @@ export default new Router({
       path: '/city',
       name: 'City',
       component: () => import('@/page/city/City'),
+      redirect () {
+        return '/city/in'
+      },
       children: [
         {
           path: '/city/in',

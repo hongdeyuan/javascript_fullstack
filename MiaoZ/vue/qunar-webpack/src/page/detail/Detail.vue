@@ -1,34 +1,107 @@
 <template>
   <div class="detail">
-    <div class="banner">
-      <img
-        src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg"
-        class="banner-img"
-      />
-      <div class="banner-info">
-        <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
-        <div class="banner-number">
-          <span class="iconfont banner-icon">&#xe617;</span>
-          2
+    <div>
+      <div class="banner" @click="showImg">
+        <img
+          :src="firstImg"
+          class="banner-img"
+        />
+        <div class="banner-info">
+          <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
+          <div class="banner-number">
+            <span class="iconfont banner-icon">&#xe617;</span>
+            {{gallaryImgs.length}}
+          </div>
         </div>
+      </div>
+      <div class="container" v-show="show">
+        <div class="wrapper" @click="showImg">
+          <swiper :options="swiperOption">
+            <swiper-slide v-for="(gallary, index) of gallaryImgs" :key="index">
+              <img :src="gallary" alt="" class="gallary-img">
+            </swiper-slide>
+            <div class="swiper-pagination swiper-pagination-fraction" slot="pagination">
+              <span class="swiper-pagination-current">1</span>
+              "/"
+              <span class="swiper-pagination-total">{{gallaryImgs.length}}</span>
+            </div>
+          </swiper>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="header-abs router-link-active">
+        <a href="#/" class="home">
+          <div class="iconfont header-abs-back">&#xe600;</div>
+        </a>
       </div>
     </div>
     <div class="content">
-      <div class="item">
-        <div class="item-title border-bottom">
-          <span class="item-title-icon"></span>
-            成人票
-        </div>
-      </div>
+      <van-tree-select
+        :items="items"
+        :active-id.sync="activeIds"
+        :main-active-index.sync="activeIndex"
+        :height = "133"
+        @click-item="clickItem"
+      />
     </div>
-    详情页{{this.$route.query.id}}
   </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {}
+    return {
+      items: [],
+      details: [],
+      detail: [],
+      activeIds: [1, 2],
+      activeIndex: 0,
+      swiperOption: {
+        loop: false,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: false,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          clickable: true
+        }
+      },
+      gallaryImgs: [],
+      firstImg: null,
+      show: false
+    }
+  },
+  mounted () {
+    this.$http.get('static/mock/detail.json').then(res => {
+      if (res.data) {
+        // console.log(res.data.data)
+        // console.log('id : ', this.$route.query.id)
+        this.details = res.data.data
+        this.details.map(item => {
+          if (item.id === this.$route.query.id) {
+            this.detail = item
+            this.gallaryImgs = item.gallaryImgs
+            this.firstImg = item.gallaryImgs[0]
+            this.items = item.priceType
+            // console.log(this.items, this.gallaryImgs)
+          }
+        })
+        // 在数据渲染后 再启动滑动的特效
+        // this.$nextTick(() => {
+        //   self._initScroll()
+        // })
+      }
+    })
+  },
+  methods: {
+    showImg () {
+      this.show = !this.show
+    },
+    clickItem (e) {
+      console.log(e)
+    }
   }
 }
 </script>
@@ -65,13 +138,65 @@ export default {
         margin-top: .14rem;
         padding: 0 .4rem;
         border-radius: .2rem;
-        background: rgba(0,0,0,.8);
+        background: rgba(0,0,0,.7);
         font-size: .24rem;
         .banner-icon{
           font-size: .24rem;
         }
       }
     }
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    .wrapper{
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      .gallary-img{
+        width: 100%;
+        vertical-align: middle;
+        border: 0;
+      }
+      .swiper-pagination{
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .header-abs{
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: .4rem;
+    background: rgba(0,0,0,.8);
+    text-align: center;
+    line-height: .8rem;
+    .home{
+      display: block;
+      width: 40px;
+      height: 40px;
+      .header-abs-back{
+        color: #fff;
+        font-size: .4rem;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .van-tree-select{
+    height: 180px;
   }
 }
 
