@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>countBy</title>
+</head>
+<body>
+  
+  <script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js"></script>
+  <script>
+    // console.log(_.countBy([2.6, 4.3, 7, 2.1, 4, 8, 1, 2], Math.floor))
+    // {5: 3, 1: 2}
+    function myCountBy (arr) {
+      let obj = {}
+      arr.map((item) => {
+        let key = Math.floor(item)
+        if(!obj[key]){
+          obj[key] = 1
+        }
+        else {
+          obj[key] ++
+        }
+      })
+
+      return obj
+    }
+    // let num =  myCountBy([2.6, 4.3, 7, 2.1, 4, 8, 1, 2])
+    // console.log(num)
+
+    function myCountBy1 (arr, fn) {
+      let obj = {}
+      arr.forEach(element => {
+        let res = fn(element)
+        if (obj[res] !== undefined) {
+          obj[res]++
+        } else {
+          obj[res] = 1
+        }
+      });
+      return obj
+    }
+
+    // map filter reduce 
+    // 函数式编程 风格 的 api
+
+    // reduce  [2.6, 4.3, 7, 2.1, 4, 8, 1, 2]
+    function myCountBy2 (arr, fnc) {
+      return arr.reduce((pre, next) =>{
+        // 第一次循环 如果 有第二个 参数 (pre === 第二个参数 -> {} )
+        console.log(pre, next)
+        let res = fnc(next)
+        // 第二次以后的循环 pre 是上一次的 放回 值
+        if (pre[res] !== undefined) {
+          pre[res] ++
+        } else {
+          pre[res] = 1
+        }
+        return pre
+      }, {})
+    }
+    console.log( myCountBy2([2.6, 4.3, 7, 2.1, 4, 8, 1, 2], Math.floor) )
+  </script>
+</body>
+</html>
