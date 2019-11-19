@@ -44,11 +44,11 @@
     <!-- 精彩片花 -->
     <view class="clips">
         <view class="clips-title">
-            <text class="clips-title-text">精彩片花{{clips}}{{index}}{{item.vid}}</text>
+            <text class="clips-title-text">精彩片花</text>
         </view>
         <view class="mod_box mod_feeds_list">
             <view class="mod_bd">
-                <view class="figure_box" wx:for="{{videoList.video}}" wx:for-item="video" wx:for-index="index" wx:key="{{video.vid}}">
+                <view class="figure_box" wx:for="{{clips}}" wx:for-item="video" wx:for-index="index" wx:key="{{video.vid}}">
                     <view class="mod_poster" data-vid="{{video.vid}}" data-index="{{index}}" bindtap="onPicClick">
                         <image class="poster" src="{{video.img}}"></image>
                         <!-- 标题、时间和播放按钮 -->

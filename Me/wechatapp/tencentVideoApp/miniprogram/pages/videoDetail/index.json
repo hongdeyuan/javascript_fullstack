@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "txv-video": "plugin://tencentvideo/video"
+    "txv-video": "plugin://tencentvideo/video",
+    "footer": "/components/footer/footer"
   }
 }

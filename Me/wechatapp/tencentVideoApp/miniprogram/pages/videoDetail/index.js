@@ -12,28 +12,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-        entitie: null,
-        id: null,
-        entities,
-        clips: null,
-        currentVid:null,
-        episodes: null,
-        tvphide: false,
-        vid: null,
-        title: "电视剧",
-        defn: "超清",
-        changingvid: '',
-        controls: !!config.get('controls'),
-        autoplay: !!config.get('autoplay'),
-        playState: '',
-        showProgress1: true,
-        width: "100%",
-        height: "auto",
-        showModalStatus: false,
-        car:{},
-        detailOn: true,
-        ch: 0,
-        currentIndex: 0
+    entitie: null,
+    id: null,
+    entities,
+    clips: null,
+    currentVid:null,
+    episodes: null,
+    tvphide: false,
+    vid: null,
+    title: "电视剧",
+    defn: "超清",
+    changingvid: '',
+    controls: !!config.get('controls'),
+    autoplay: !!config.get('autoplay'),
+    playState: '',
+    showProgress1: true,
+    width: "100%",
+    height: "auto",
+    showModalStatus: false,
+    car:{},
+    detailOn: true,
+    ch: 0,
+    currentIndex: 0,
+    top: 0,
+		currVideo:{}
   },
 
   play(event){
@@ -111,10 +113,11 @@ Page({
     })
     this.txvContext = txvContext.getTxvContext('txv0');
     this.txvContext.play();
+    this.videoContext = wx.createVideoContext('tvp');
 
   },
   onTvpPlay: function () {
-    console.log('play')
+    // console.log('play')
   },
   onStateChange: function (e) {
     this.setData({
@@ -129,8 +132,36 @@ Page({
 		this.txvContext.requestFullScreen();
   },
 	onFullScreenChange: function () {
-		console.log('onFullScreenChange!!!')
-	},
+		// console.log('onFullScreenChange!!!')
+  },
+  onTvpTimeupdate: function(){
+  },
+  onTvpPause: function () {
+  },
+  onTvpStateChanage: function () {
+  },
+  onPicClick(e) {
+    let dataset = e.currentTarget.dataset;
+    this.currIndex=dataset.index
+    this.setData({
+        "currVideo.vid":dataset.vid
+    })
+    // console.log(this.data.currVideo)
+    this.getTop()
+  },
+  getTop(){
+      let query = this.createSelectorQuery();
+      query.selectViewport().scrollOffset();
+      query
+          .selectAll(`.mod_poster`)
+          .boundingClientRect()
+          .exec(res => {
+            let originTop = 0;
+            this.setData({
+                top: originTop + this.currIndex * 224.5
+            })
+          });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
