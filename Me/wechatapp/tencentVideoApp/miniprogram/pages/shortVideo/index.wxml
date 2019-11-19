@@ -11,25 +11,41 @@
     <block wx:for="{{videos}}" wx:key="{{index}}" wx:for-item="videoList">
       <swiper-item class="{{index}}">
         <scroll-view scroll-y class="scroll" wx:if="{{curentIndex == index}}">
-          <block wx:for="{{videoList.video}}" wx:for-item="video" wx:key="{{index}}" >
-            <txv-video
-              vid="{{video.vid}}" 
-              playerid="tvp"
-              isNeedMutex="{{true}}"
-              isHiddenStop="{{true}}"
-              showCenterPlayBtn="{{true}}"
-              autoplay="{{false}}"
-              defn="杜比"
-              bindcontentchange="onContentChange"
-              bindplay="onPlay"
-              bindended="onEnd"
-              bindadclose="onClose"
-              bindpause="onPause"
-              bindstatechange="onStateChanage"
-              bindfullscreenchange="onFullScreenChange">
-            </txv-video>
-          </block>
-
+            <view class="mod_box mod_feeds_list">
+              <view class="mod_bd">
+                <view class="figure_box" wx:for="{{videoList.video}}" wx:for-item="video" wx:for-index="index" wx:key="{{video.vid}}">
+                  <view class="mod_poster" data-vid="{{video.vid}}" data-index="{{index}}" bindtap="onPicClick">
+                    <image class="poster" src="{{video.img}}"></image>
+                    <!-- 标题、时间和播放按钮 -->
+                    <view>
+                      <image class="play_icon" src="https://puui.qpic.cn/vupload/0/20181023_1540283106706_mem4262nz4.png/0"></image>
+                      <view class="time">{{video.time}}</view>
+                      <view class="toptitle two_row">{{video.title}}</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view wx:if="{{currVideo.vid}}" style="top:{{top+'px'}};" class="videoContainer">
+                <txv-video
+                  vid="{{currVideo.vid}}"
+                  playerid="tvp"
+                  autoplay="{{true}}"
+                  danmu-btn="{{true}}"
+                  width="{{'100%'}}"
+                  height="{{'194px'}}"
+                  bindcontentchange="onTvpContentChange"
+                  bindplay="onTvpPlay"
+                  bindended="onTvpEnd"
+                  bindpause="onTvpPause"
+                  bindstatechange="onTvpStateChanage"
+                  bindtimeupdate="onTvpTimeupdate"
+                  bindfullscreenchange="onFullScreenChange">
+                </txv-video>
+                <view class='pinList'>
+                  <footer></footer>
+                </view>
+              </view>
+            </view>
         </scroll-view>
       </swiper-item>
     </block>

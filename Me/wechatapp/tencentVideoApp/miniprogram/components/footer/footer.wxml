@@ -1,0 +1,13 @@
+<view class='footer'>
+  <view class='i' bindtap="lookBans">
+    <image src='../../images/zan_grey_feidian3.png'></image>
+    <text>赞</text>
+  </view>
+  <view class='i' bindtap="lookBans">
+    <image src='../../images/fd_reply.png'></image><text>评论</text>
+  </view>
+  <view class='i'>
+    <image src='../../images/fd_share.png'></image>
+    <button data-item='1' plain='true' open-type='share' class='share'></button>
+  </view>
+</view>

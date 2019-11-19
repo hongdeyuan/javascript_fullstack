@@ -7,24 +7,7 @@
         </image>
     </view> -->
     <view hidden="{{tvphide}}">
-        <txv-video 
-            vid="{{vid}}"
-            class="{{detailOn ? '' : 'on'}}"
-            width="{{width}}" 
-            height="{{height}}" 
-            playerid="txv0" 
-            autoplay="{{autoplay}}" 
-            controls="{{controls}}" 
-            title="{{title}}" 
-            defn="{{defn}}" 
-            vslideGesture="{{true}}" 
-            enablePlayGesture="{{true}}" 
-            playBtnPosition="center" 
-            bindstatechange="onStateChange" 
-            bindtimeupdate="onTimeUpdate" 
-            showProgress="{{showProgress1}}" 
-            show-progress="{{false}}" 
-            bindfullscreenchange="onFullScreenChange"></txv-video>
+        <txv-video vid="{{vid}}" class="{{detailOn ? '' : 'on'}}" width="{{width}}" height="{{height}}" playerid="txv0" autoplay="{{autoplay}}" controls="{{controls}}" title="{{title}}" defn="{{defn}}" vslideGesture="{{true}}" enablePlayGesture="{{true}}" playBtnPosition="center" bindstatechange="onStateChange" bindtimeupdate="onTimeUpdate" showProgress="{{showProgress1}}" show-progress="{{false}}" bindfullscreenchange="onFullScreenChange"></txv-video>
     </view>
     <!-- 介绍信息 -->
     <view class="introduce">
@@ -38,7 +21,8 @@
         <view class="bottom">
             <image class="ping" src="../../images/ping.png" lazy-load="{{true}}" bind:tap="" />
             <image class="like" src="../../images/like.png" lazy-load="{{true}}" bind:tap="" />
-            <image class="share" src="../../images/share.png" lazy-load="{{true}}" bind:tap="onShareAppMessage" />
+            <image class="share" src="../../images/share.png" lazy-load="{{true}}" />
+            <button data-item='1' plain='true' open-type='share' class='share'></button>
         </view>
     </view>
     <!-- 剧集 -->
@@ -50,10 +34,9 @@
         <view class="center">
             <block wx:for="{{episodes}}" wx:key="{{index}}">
                 <view class="gather" data-vid="{{item.vid}}" data-num="{{item.num}}" bind:tap="select">
-                   <view class="{{vid == item.vid ? 'episode-num' : '' }}" data-vid="{{item.vid}}" data-num="{{item.num}}">
-                       {{item.num}}
-                   </view>
-                     
+                    <view class="{{vid == item.vid ? 'episode-num' : '' }}" data-vid="{{item.vid}}" data-num="{{item.num}}">
+                        {{item.num}}
+                    </view>
                 </view>
             </block>
         </view>
@@ -61,33 +44,31 @@
     <!-- 精彩片花 -->
     <view class="clips">
         <view class="clips-title">
-            <text class="clips-title-text">精彩片花</text>
+            <text class="clips-title-text">精彩片花{{clips}}{{index}}{{item.vid}}</text>
         </view>
-        <view class="clip" wx:for="{{clips}}" wx:key="{{index}}">
-            <txv-video 
-            vid="{{item.vid}}"
-            width="{{width}}"
-            height="{{height}}"
-            playerid="txv1"
-            autoplay="{{false}}"
-            controls="{{controls}}"
-            title="{{title}}"
-            defn="{{defn}}"
-            isHiddenStop="{{true}}"
-            vslideGesture="{{true}}"
-            enablePlayGesture="{{true}}"
-            playBtnPosition="center"
-            bindplay="onTvpPlay"
-            bindstatechange="onStateChange"
-            bindtimeupdate="onTimeUpdate"
-            bindcontentchange="onTvpContentChange"
-            showProgress="{{showProgress1}}"
-            show-progress="{{false}}"
-            bindfullscreenchange="onFullScreenChange"></txv-video>
+        <view class="mod_box mod_feeds_list">
+            <view class="mod_bd">
+                <view class="figure_box" wx:for="{{videoList.video}}" wx:for-item="video" wx:for-index="index" wx:key="{{video.vid}}">
+                    <view class="mod_poster" data-vid="{{video.vid}}" data-index="{{index}}" bindtap="onPicClick">
+                        <image class="poster" src="{{video.img}}"></image>
+                        <!-- 标题、时间和播放按钮 -->
+                        <view>
+                            <image class="play_icon" src="https://puui.qpic.cn/vupload/0/20181023_1540283106706_mem4262nz4.png/0"></image>
+                            <view class="time">{{video.time}}</view>
+                            <view class="toptitle two_row">{{video.title}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{currVideo.vid}}" style="top:{{top+'px'}};" class="videoContainer">
+                <txv-video vid="{{currVideo.vid}}" playerid="tvp" autoplay="{{true}}" danmu-btn="{{true}}" width="{{'100%'}}" height="{{'194px'}}" bindcontentchange="onTvpContentChange" bindplay="onTvpPlay" bindended="onTvpEnd" bindpause="onTvpPause" bindstatechange="onTvpStateChanage" bindtimeupdate="onTvpTimeupdate" bindfullscreenchange="onFullScreenChange"></txv-video>
+                <view class='pinList'>
+                    <footer></footer>
+                </view>
+            </view>
         </view>
     </view>
     <!-- 弹出框 -->
-
     <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
         <view class="commodity_hide">
             <text class="title">{{entitie.header}}</text>
@@ -97,13 +78,15 @@
             <scroll-view scroll-y class='hightDataView' style="height:{{ch}}rpx;">
                 <view class="top">
                     <view class="top-text">每周一二三20点更新2集，会员多看6集</view>
-                    <view class="top-descrese">{{entitie.score}}分·VIP·{{entitie.type}}·全{{entitie.universe}}集·8.8亿</view>
+                    <view class="top-descrese">
+                        {{entitie.score}}分·VIP·{{entitie.type}}·全{{entitie.universe}}集·8.8亿
+                    </view>
                 </view>
                 <view class="center">
                     <scroll-view class="star-list" scroll-x="{{true}}" scroll-y="{{false}}">
                         <block wx:for="{{entitie.stars}}" wx:key="{{index}}">
                             <view class="item">
-                                <image class="starImg" src="{{item.starImg}}"  lazy-load="ture"/>
+                                <image class="starImg" src="{{item.starImg}}" lazy-load="ture" />
                                 <view class="name">{{item.name}}</view>
                             </view>
                         </block>
@@ -114,6 +97,6 @@
                     <view class="text">{{entitie.original_description}}</view>
                 </view>
             </scroll-view>
-      </view>
+        </view>
     </view>
 </view>

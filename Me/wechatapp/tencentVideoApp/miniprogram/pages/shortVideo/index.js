@@ -1,6 +1,7 @@
 // pages/shortVideo/index.js
 const config = require('../../modules/config')
-const TxvContext = requirePlugin("tencentvideo");
+const txvContext = requirePlugin("tencentvideo");
+const sysInfo =wx.getSystemInfoSync()
 const shortCategory = require('../../data/shortCategory.js')
 const videoUrl = require('../../data/videoUrl.js')
 Page({
@@ -12,7 +13,9 @@ Page({
     curentIndex: 0,
     shortCategory: shortCategory,
     videos: videoUrl,
-    ch: 0
+    ch: 0,
+    top: 0,
+		currVideo:{}
   },
   //改变swiper
   swiperChange: function(e) {//切换
@@ -29,33 +32,39 @@ Page({
       toView: e.currentTarget.dataset.id
     })
   },
-  onClose(e){
-    console.log(e)
+  onTvpTimeupdate: function(){
   },
-  onPlay: function (params) {
-    let txvContext = TxvContext.getTxvContext('tvp') 
-    // txv1即播放器组件的playerid值
-    txvContext.play()
-    console.log('play')
+  onTvpPlay: function () {
   },
-  onContentChange: function (params) {
-    
+  onTvpPause: function () {
   },
-  onEnd: function (e) {
-    console.log(e)
-    console.log('是否 是广告：', e.detail.isAd)
+  onTvpContentChange: function () {
   },
-  onPause: function (params) {
-    let txvContext = TxvContext.getTxvContext('tvp') 
-    // txv1即播放器组件的playerid值
-    txvContext.pause()
-    console.log('pause')
+  onTvpStateChanage: function () {
   },
-  onStateChanage: function (params) {
-    
+  onPicClick(e) {
+    let dataset = e.currentTarget.dataset;
+    this.currIndex=dataset.index
+    this.setData({
+        "currVideo.vid":dataset.vid
+    })
+    console.log(this.data.currVideo)
+    this.getTop()
   },
-  onFullScreenChange: function (params) {
-    console.log('Screen')
+  getTop(){
+      let query = this.createSelectorQuery();
+      query.selectViewport().scrollOffset();
+      query
+          .selectAll(`.mod_poster`)
+          .boundingClientRect()
+          .exec(res => {
+            console.log(res)
+            console.log(res[0].scrollTop, res[1][this.currIndex].top)
+            let originTop = res[0].scrollTop;
+            this.setData({
+                top: originTop + this.currIndex * 224.5
+            })
+          });
   },
   /**
    * 生命周期函数--监听页面加载
@@ -71,6 +80,8 @@ Page({
         })
       },
     })
+
+    this.videoContext = wx.createVideoContext('tvp');
 
   },
 

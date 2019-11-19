@@ -7,7 +7,8 @@
     "pages/videoDetail/index",
     "pages/search/search",
     "pages/setting/setting",
-    "pages/about/about"
+    "pages/about/about",
+    "components/footer/footer"
   ],
   "networkTimeout": {
     "request": 30000,

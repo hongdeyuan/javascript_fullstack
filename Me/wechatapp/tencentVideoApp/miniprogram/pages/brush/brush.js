@@ -1,93 +1,78 @@
-// miniprogram/pages/brush/brush.js
 const txvContext = requirePlugin("tencentvideo");
-const config = require('../../modules/config')
+const sysInfo =wx.getSystemInfoSync()
+
 Page({
-
-  /**
-   * 页面的初始数据d0032x85stp
-   */
-  data: {
-    tvphide: false,
-    vid: 't30205m59tr',
-    title: "全屏时会显示的视频title",
-    defn: "超清",
-    changingvid: '',
-    controls: !!config.get('controls'),
-    autoplay: !!config.get('autoplay'),
-    playState: '',
-    showProgress1: true,
-    width: "100%",
-    height: "auto"
+	data: {
+		top: 0,
+		currVideo:{},
+		videoList: [{
+			vid:'i0918g4tzmr',
+			title:'新闻大事件'
+		},{
+			vid:'p0918qdhft3',
+			title:'大小新闻大事件'
+		},{
+			vid:'b0031gp84xn',
+			title:'video'
+		},{
+			vid:'c0898tfcokc',
+			title:'video'
+		},{
+			vid:'e0816ok9kfq',
+			title:'video'
+		},{
+			vid:'f0701t219c8',
+			title:'video'
+		},{
+			vid:'h0854tbemqm',
+			title:'video'
+		},{
+			vid:'i08832ne4ea',
+			title:'video'
+		},{
+			vid:'i0918bgrk2j',
+			title:'video'
+		},{
+			vid:'n09183xhhar',
+			title:'video'
+		},{
+			vid:'u0918slhvow',
+			title:'video'
+		}]
+	},
+  onTvpTimeupdate: function(){
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.setData({
-      controls: !!config.get('controls'),
-      autoplay: !!config.get('autoplay')
-    })
-    this.txvContext = txvContext.getTxvContext('txv0');
-    this.txvContext.play();
+  onTvpPlay: function () {
   },
-  onStateChange: function (e) {
-    this.setData({
-      playState: e.detail.newstate
-    })
+  onTvpPause: function () {
   },
-  onTimeUpdate: function (e) {
+  onTvpContentChange: function () {
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onTvpStateChanage: function () {
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  onFullScreenChange: function () {
-    console.log('onFullScreenChange!!!')
-  }
-})
+	onLoad(){
+		this.videoContext = wx.createVideoContext('tvp');
+	},
+    onPicClick(e) {
+        let dataset = e.currentTarget.dataset;
+        this.currIndex=dataset.index
+        this.setData({
+            "currVideo.vid":dataset.vid
+        })
+        this.getTop()
+    },
+    getTop(){
+        let query = this.createSelectorQuery();
+        query.selectViewport().scrollOffset();
+        query
+            .selectAll(`.mod_poster`)
+            .boundingClientRect()
+            .exec(res => {
+            let originTop = res[0].scrollTop;
+            let currNode = res[1][this.currIndex];
+            this.setData({
+                top:currNode.top+originTop
+            })
+            });
+    }
+});

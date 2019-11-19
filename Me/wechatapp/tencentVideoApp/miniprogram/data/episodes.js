@@ -8,28 +8,44 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'j0903nug34p'
+            vid: 'j0903nug34p',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 2,
-            vid: 'y1918v6i4zl'
+            vid: 'y1918v6i4zl',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 3,
-            vid: 'v19184lrp7u'
+            vid: 'v19184lrp7u',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 4,
-            vid: 'c1918i6qwzk'
+            vid: 'c1918i6qwzk',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 5,
-            vid: 'x1919luby72'
+            vid: 'x1919luby72',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 6,
-            vid: 'n191775vs5l'
+            vid: 'n191775vs5l',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 7,
-            vid: 'q0906njat59'
+            vid: 'q0906njat59',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           },{
             id: 8,
-            vid: 'o0906qtm4v7'
+            vid: 'o0906qtm4v7',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
+            time: '00:13'
           }
         ]
       }
@@ -46,49 +62,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },
@@ -100,49 +116,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -153,49 +169,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -206,49 +222,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -259,49 +275,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -312,49 +328,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -369,49 +385,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -422,49 +438,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
             vid: 'e1919maces9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           }
         ]
       },{
@@ -475,49 +491,49 @@ module.exports = [
             id: 1,
             vid: 'd1918dk09t9'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/d1918dk09t9_496_280/0',
-            duration: '00:13'
+            time: '00:13'
           },
           {
             id: 2,
             vid: 'p1920o3uccq'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/p1920o3uccq_496_280/0',
-            duration: '00:30'
+            time: '00:30'
           },
           {
             id: 3,
             vid: 'x19193sku34'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/x19193sku34_496_280/0',
-            duration: '00:14'
+            time: '00:14'
           },
           {
             id: 4,
             vid: 'e19184hk1nm'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 5,
             vid: 'k1919d6i578'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/e19184hk1nm_496_280/0',
-            duration: '00:17'
+            time: '00:17'
           },
           {
             id: 6,
             vid: 'o1920hlaoh6'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/k1919d6i578_496_280/0',
-            duration: '00:15'
+            time: '00:15'
           },
           {
             id: 7,
             vid: 'u1920bcfari'
             ,img : 'https://puui.qpic.cn/qqvideo_ori/0/o1920hlaoh6_496_280/0',
-            duration: '00:27'
+            time: '00:27'
           },
           {
             id: 8,
-            vid: 'e1919maces9'
-            ,img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
-            duration: '00:30'
+            vid: 'e1919maces9',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       }
@@ -532,22 +548,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -557,22 +585,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -582,22 +622,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -607,22 +659,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -632,22 +696,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -657,22 +733,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -682,22 +770,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -707,22 +807,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -732,22 +844,34 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'r1921yj1mul'
+            vid: 'r1921yj1mul',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'l19202xzl9r'
+            vid: 'l19202xzl9r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'f1920j5ebkq'
+            vid: 'f1920j5ebkq',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'k1918dvv7qr'
+            vid: 'k1918dvv7qr',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 's1920efg6iu'
+            vid: 's1920efg6iu',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n1920pvhf03'
+            vid: 'n1920pvhf03',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       }
@@ -762,25 +886,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -790,25 +928,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -818,25 +970,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -846,25 +1012,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -874,25 +1054,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -902,25 +1096,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -930,25 +1138,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -958,25 +1180,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -986,25 +1222,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -1014,25 +1264,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -1042,25 +1306,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       },
@@ -1070,25 +1348,39 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'b19203mdh3w'
+            vid: 'b19203mdh3w',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'z1919tyx0fj'
+            vid: 'z1919tyx0fj',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 't1920zo2ofb'
+            vid: 't1920zo2ofb',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'm1919xhtdmt'
+            vid: 'm1919xhtdmt',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'j19176r2q4r'
+            vid: 'j19176r2q4r',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'j1920k8eicx'
+            vid: 'j1920k8eicx',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'r1920huqwhy'
+            vid: 'r1920huqwhy',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       }
@@ -1103,28 +1395,44 @@ module.exports = [
         clips: [
           {
             id: 1,
-            vid: 'd0032tmqvow'
+            vid: 'd0032tmqvow',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 2,
-            vid: 'd0032tmqvow'
+            vid: 'd0032tmqvow',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 3,
-            vid: 'd0032tmqvow'
+            vid: 'd0032tmqvow',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 4,
-            vid: 'c1918i6qwzk'
+            vid: 'c1918i6qwzk',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 5,
-            vid: 'x1919luby72'
+            vid: 'x1919luby72',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 6,
-            vid: 'n191775vs5l'
+            vid: 'n191775vs5l',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 7,
-            vid: 'q0906njat59'
+            vid: 'q0906njat59',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           },{
             id: 8,
-            vid: 'o0906qtm4v7'
+            vid: 'o0906qtm4v7',
+            img : 'https://puui.qpic.cn/qqvideo_ori/0/u1920bcfari_496_280/0',
+            time: '00:30'
           }
         ]
       }
