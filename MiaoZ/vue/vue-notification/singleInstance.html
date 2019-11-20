@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>单例</title>
+</head>
+<body>
+  <script>
+    // function Foo () {
+    //   this.a = 1;
+    //   this.b = 2;
+    //   // 有返回值 且是对象
+    //   return {}
+    // }
+
+    // 特别注意： 在一个函数中 如果 有返回值 ，且放回值是 一个对象，则 接收到该对象{}，否则接收该函数对象Foo
+
+    // let f1 = new Foo();
+    // console.log(f1)
+
+    let globalIns;
+
+
+    // new 过程
+    // 生成一个对象 放回一个对象  return obj
+    // 单例
+    function Notify () {
+      // this.a = 1;
+      if (globalIns) {
+        return globalIns;
+      }
+      globalIns = this
+    }
+
+    let ins1 = new Notify();
+    let ins2 = new Notify();
+
+    // ins1.a = 2
+
+    // 无论new 多少次只有 一个实例
+
+    console.log(ins1 === ins2)
+
+    // console.log(ins2)
+
+
+    // 单例 应用场景 通知 弹窗的创建： 当你只需要修改 dom 的数据 而不需要新的dom则可采用 单例模式
+  </script>
+</body>
+</html>
