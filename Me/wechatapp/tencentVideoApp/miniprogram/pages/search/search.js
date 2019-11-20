@@ -126,7 +126,20 @@ Page({
       })
     }
     if (e.detail.value != "") { //解决 如果输入框的值为空时，传值给搜索建议，会报错的bug
-      that.searchSuggest();
+      that.debounce(that.searchSuggest(), 300)
+    }
+  },
+  // 去除输入抖动
+  debounce (func, delay) {
+    let timer
+    let self = this
+    return function (...args) {
+      if (timer) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(() => {
+        func.apply(self, args)
+      }, delay)
     }
   },
 
