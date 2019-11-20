@@ -8,16 +8,23 @@
         <i class="icon">&#xe63c;</i>
       </router-link>
     </v-header>
-    <!-- <router-view/> -->
+    <!-- tab -->
+    <v-tab />
+    <v-siderbar />
+    <router-view/>
   </div>
 </template>
 
 <script>
 import header from '@/components/header'
+import siderbar from '@/components/sidebar'
+import tab from '@/components/tab'
 export default {
   name: 'App',
   components: {
-    'v-header': header
+    'v-header': header,
+    'v-siderbar': siderbar,
+    'v-tab': tab
   }
 }
 </script>
