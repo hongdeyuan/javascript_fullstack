@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
+  <script>
+    //此处的代码 ，已经通过导入 见 index.js
+
+    // let loadingNode = document.createElement('div');
+    // loadingNode.style.backgroundColor = '#eee';
+    // loadingNode.style.opacity = '.6';
+    // loadingNode.style.position = 'absolute';
+    // loadingNode.style.top = '0';
+    // loadingNode.style.left = '0';
+    // loadingNode.style.right = '0';
+    // loadingNode.style.bottom = '0';
+    // function toggleLoading(el, binding) {
+    //   if (binding.value) {
+    //     el.appendChild(loadingNode);
+    //   } else {
+    //     // el.contains(loadingNode): 判断 是否有 loadingNode 结点
+    //     el.contains(loadingNode) && el.removeChild(loadingNode); 
+    //   }
+    // }
+    // Vue.directive('loading', {
+    //   bind: function(el, binding) {
+    //     // console.log(el, binding)
+    //     // 第一次绑定的时候 只会调用一次
+    //     toggleLoading(el, binding);
+    //   },
+    //   // 指令的值更新时，调用
+    //   update(el, binding) {
+    //     toggleLoading(el, binding);
+    //   }
+    // })
+    Vue.component('my-loading-text', {
+      template: `
+      <div v-loading="loading">
+        <li>1</li>
+        <li>2</li>
+      </div>
+      `,
+      data() {
+        return {
+          loading: false
+        }
+      },
+      mounted() {
+        setTimeout(() => {
+          this.loading =true;
+        }, 2000)
+      }
+    })
+    new Vue({
+      el: '#app',
+      template: `
+      <div>
+        <my-loading-text />
+      </div>`
+    })
+  </script>
+</body>
+</html>
