@@ -24,3 +24,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 组件设计
 
  - 弹窗是全局的 单例的
+
+## element
+ - npm i element-ui -S
+ -  -D : --save-dev  开发环境  /src
+ -  -S : --save     生成环境   /dist
+ -  npm run build
