@@ -37,29 +37,25 @@ console.log(list.element)
 
  console.log(detectCycle(list)) 
 
-function detectCycle (head) {
-  let target = targeted(head)
-  let current = head;
-
-  while (current !== null && target !== null) {
-    if (current === target && current != null && target != null) {
-      return current
-    }
-    current = current.next
-  }
-
-  return null;
-};
-
-function targeted(head) {
+ var detectCycle = function(head) {
   var slow  = fast = head;
+  let hasCycle = false;
   while (slow && fast && fast.next) {
     slow = slow.next;
     fast = fast.next.next;
     if (slow === fast) {
-      return slow
+      hasCycle = true
+      break 
     }
   }
-  return null;
+    if (hasCycle) {
+        let q = head;
+        while (slow != q) {
+            slow = slow.next;
+            q = q.next;
+        }
+        return q;
+    } else 
+        return null;
 }
 
