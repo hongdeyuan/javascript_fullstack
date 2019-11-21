@@ -52,5 +52,9 @@ export default {
   // 歌单
   DiscList (params) {
     return fetchGet ('/top/playList', params)
+  },
+  // 热搜
+  HotSearchKey () {
+    return fetchGet('search/hot')
   }
 }

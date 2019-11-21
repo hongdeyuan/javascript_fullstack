@@ -1,20 +1,30 @@
 import * as types from './types' // 取出types所有的抛出
 
 const state = {
-  showSidebar: false
+  showSidebar: false,
+  searchHistoey: ['许嵩', '胡歌']
 }
 const mutations = {
   [types.COM_SHOW_SIDE_BAR] (state, status) {
     state.showSidebar = status
+  },
+  [types.COM_SAVE_SEARCH_HISTORY] (state, status){
+    state.searchHistoey = status
   }
 }
 const actions = {
   setShowSidebar ({commit}, status) {
     commit(types.COM_SHOW_SIDE_BAR, status)
+  },
+  saveSearchHistory ({commit, state}, query) {
+    let searchHistoey = [query, ...state.searchHistoey.slice()]
+    searchHistoey = [...new Set(searchHistoey)]
+    commit(types.COM_SAVE_SEARCH_HISTORY, searchHistoey)
   }
 }
 const getters = {
-  showSidebar: state => state.showSidebar
+  showSidebar: state => state.showSidebar,
+  searchHistoey: state => state.searchHistoey
 }
 
 export default {
