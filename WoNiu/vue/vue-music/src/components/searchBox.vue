@@ -2,8 +2,8 @@
   <div class="search-box">
     <i class="icon icon-search">&#xe638;</i>
     <!-- 防止抖动 debounce-> 当输入停止时，才发起查询 -->
-    <input type="text" class="box" :placeholder="placeholder" v-model="query">
-    <i class="icon icon-dismiss"></i>
+    <input ref="query" type="text" class="box" :placeholder="placeholder" v-model="query">
+    <i class="icon icon-dismiss" v-show="query" @click="clear">&#xe656;</i>
   </div>
 </template>
 
@@ -26,6 +26,18 @@ export default {
     this.$watch('query', debounce((newQuery) => {
       this.$emit('query', newQuery)
     }, 300))
+  },
+  methods: {
+    blur () {
+      // input自带 blur 失去焦点
+      this.$refs.query.blur()
+    },
+    clear () {
+      this.query = ''
+    },
+    setQuery (query) {
+      this.query = query
+    }
   }
 }
 </script>

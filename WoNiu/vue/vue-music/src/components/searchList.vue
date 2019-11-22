@@ -1,9 +1,10 @@
 <template>
   <div class="search-list">
     <transition-group name="list" tag="ul">
-      <li class="search-item" v-for="item in searches" :key="item">
+      <li class="search-item" v-for="(item, index) in searches" :key="item" @click="selectItem(item)">
         <span class="text">{{item}}</span>
-        <span class="icon-box">
+        <!-- 阻止冒泡 click 后面加stop -->
+        <span class="icon-box" @click.stop="deleteOne(index)">
           <i class="icon">&#xe656;</i>
         </span>
       </li>
@@ -24,6 +25,15 @@ export default {
   data () {
     return {
       searchs: ['许嵩']
+    }
+  },
+  methods: {
+    selectItem (item) {
+      // console.log(item)
+      this.$emit('select', item)
+    },
+    deleteOne (index) {
+      this.$emit('delete', index)
     }
   }
 }
