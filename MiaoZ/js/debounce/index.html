@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #container{
+      width: 100%;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+
+  </div>
+  <button id="buyItnow">购买</button>
+  <script>
+    const container = document.getElementById('container');
+    let count = 0;
+    let timer;
+    function getUser() {
+    clearTimeout(timer);
+    timer =  setTimeout(() => {
+        container.innerHTML = count ++;
+      }, 2000);
+    }
+    // 高阶函数
+    container.onmousemove = getUser
+
+    function buy(e) {
+      console.log(24, e)
+    }
+
+    // HOF : 高阶函数
+    function debounce(func, delay) {
+      let timeout;
+      // onclick onmousemove 调用
+      return function (e) {
+        if (timer) {  
+          clearTimeout(timer);
+        }
+        timeout = setTimeout(() => {
+          func(e);
+        }, delay);
+      }
+    }
+    const buys = document.getElementById('buyItnow')
+    buys.onclick = debounce(buy, 1500);
+
+    // buys.addEventListener('click', () => {
+    //   console.log('success')
+    // })
+    
+
+  </script>
+</body>
+</html>
