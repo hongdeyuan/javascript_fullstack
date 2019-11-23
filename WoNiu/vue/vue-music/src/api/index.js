@@ -60,5 +60,9 @@ export default {
   // 歌曲搜索
   MusicSearch (params) {
     return fetchGet('/search', params)
+  },
+  // 根据id 查询获取 歌曲的 url
+  MusicUrl (id) {
+    return fetchGet('/song/url', {id})
   }
 }

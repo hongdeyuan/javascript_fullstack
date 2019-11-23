@@ -1,4 +1,4 @@
-import * as types from './types' // 取出types所有的抛出
+import * as types from '../types' // 取出types所有的抛出
 
 const state = {
   showSidebar: false,
