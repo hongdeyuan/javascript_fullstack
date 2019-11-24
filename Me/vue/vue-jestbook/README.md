@@ -1,6 +1,6 @@
-# vue-music
+# vue-jestbook
 
-> A Vue.js project
+> 用于实现笑话大全的webApp
 
 ## Build Setup
 
@@ -19,16 +19,12 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-## 网易云音乐- vue实现
-  -  npm install axios -S ：接口请求
-  - axios 封装 ： 在 src/api 中
-  - Promise
+## 安装工具
+  - npm i stylus stylus-loader --save-dev
+  - npm install axios -S ：接口请求
   - npm i vuex --save-dev
   - npm i stylus stylus-loader --save-dev
   - npm install --save fastclick
   - cnpm install better-scroll --save
 
-  - vue -插槽
-    <!-- 不具名插槽：span 对应 header 中的 slot -->
-    <!-- <span>1</span> -->
+## axios 跨域问题解决

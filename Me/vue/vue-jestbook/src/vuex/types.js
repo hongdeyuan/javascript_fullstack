@@ -1,0 +1,1 @@
+export const COM_SET_PICS = 'COM_SET_PICS'// 趣图更新
