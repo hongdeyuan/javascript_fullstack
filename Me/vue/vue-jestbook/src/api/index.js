@@ -6,7 +6,7 @@ const vue = new Vue()
 
 // axios 配置
 axios.defaults.timeout = 10000// 请求不能超时10S
-axios.defaults.baseURL = '/api'
+// axios.defaults.baseURL = '/api'
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 // 判断返回状态, 响应拦截
@@ -44,18 +44,21 @@ export function fetchGet (url, param) {
 export default {
   // 按更新时间查询笑话
   GetJokeByTime (params) {
-    return fetchGet ('/Joke/QueryJokeByTime', params)
+    return fetchGet ('/api/Joke/QueryJokeByTime', params)
   },
   // 最新笑话
   NewJoke (params) {
-    return fetchGet ('/Joke/NewstJoke', params)
+    return fetchGet ('/api/Joke/NewstJoke', params)
   },
   // 按更新时间查询趣图
   GetImgByTime (params) {
-    return fetchGet ('/Joke/QueryImgByTime', params)
+    return fetchGet ('/api/Joke/QueryImgByTime', params)
   },
   // 最新趣图
   NewImg (params) {
-    return fetchGet ('/Joke/NewstImg', params)
-  }
+    return fetchGet ('/api/Joke/NewstImg', params)
+  },
+  HeadLine (params) {
+    return fetchGet ('/api//TouTiao/Query', params)
+  },
 }

@@ -67,7 +67,7 @@ export default {
       */
     refreshDelay: {
       type: Number,
-      default: 20
+      default: 10
     },
     direction: {
       type: String,
@@ -103,7 +103,7 @@ export default {
       // 派发 上拉 加载更多
       if (this.pullup) {
         this.scroll.on('scrollEnd', ()=>{
-          if (this.scroll.y <= this.scroll.maxScrollY + 50) {
+          if (this.scroll.y <= this.scroll.maxScrollY + 150) {
             this.$emit('scrollToEnd')
           }
         })

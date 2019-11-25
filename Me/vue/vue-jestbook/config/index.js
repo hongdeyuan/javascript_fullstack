@@ -18,6 +18,14 @@ module.exports = {
           '^/api': ''
         }
       }
+      // 第二个域名代理
+      // '/top': {
+      //   target: 'https://www.toutiao.com/',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/top': ''
+      //   }
+      // }
     },
 
     // Various Dev Server settings

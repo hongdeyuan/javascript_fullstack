@@ -1,6 +1,6 @@
 <template>
   <div class="tab">
-    <router-link to="/main" tag="div" class="tab-item">
+    <router-link to="/recommend" tag="div" class="tab-item">
       <div class="icon">&#xe606;</div>
       <div class="tab-link">推荐</div>
     </router-link>
