@@ -1,11 +1,18 @@
 # javascript_fullstack
+  ## JS全栈学习 
 
-## JS全栈学习 
+# 项目汇总列表
+  ## 腾讯视频模拟实现-Me/wechatApp/tencentVideoApp
+  ## 笑话大全 - ME/vue/vue-jestbook
+  ## 最新电影小程序 - ME/wechatApp/movie
+  ## 饿了么-WoNiu/vue/vue-ele-app
+  ## 网易云音乐 - WoNiu/vue/vue-music
+  ## 天气预报 - WoNiu/vue/vue-weather
+  ## 滴滴单车小程序 - Yudao/wechatApp/didi_bike
+  ## 去哪儿旅行 - MaoZ/vue/qunar-webpack
+  ## ikcamp英语学习小程序 - MaoZ/wechatApp/ikcamp-app
 
-## 腾讯视频模拟实现-Me/wechatApp/tencentVideoApp 
-## 饿了么-WoNiu/vue/vue-ele-app
-## 网易云音乐 - WoNiu/vue/vue-music
-## 天气预报 - WoNiu/vue/vue-weather
+
 
 - git 是版本控制系统
   .git 存储着文件版本 ，暂存区 stage 

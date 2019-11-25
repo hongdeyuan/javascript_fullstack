@@ -30,6 +30,7 @@ export default {
   bottom 0
   left 0
   width 100%
+  background-color #fff
   border-1px(#F5F5F5)
   font-size 12px
   height px2rem(140px)

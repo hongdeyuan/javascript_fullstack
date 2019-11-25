@@ -79,23 +79,28 @@
         </div>
       </v-scroll>
     </div>
+    <!-- loading -->
+    <v-loading v-show="show"></v-loading>
   </div>
 </template>
 
 <script>
 import mHeader from '@/components/mHeader'
 import scroll from  '@/components/scroll'
+import loading from  '@/components/loading'
 import api from '@/api'
 export default {
   name: 'Mine',
   components: {
     'v-scroll': scroll,
-    'v-header': mHeader
+    'v-header': mHeader,
+    'v-loading': loading
   },
   data () {
     return {
       result: [],
-      page: 1
+      page: 1,
+      show: true
     }
   },
   methods: {
@@ -116,6 +121,9 @@ export default {
   },
   mounted () {
     // this._getNewJoke()
+    setTimeout(() => {
+      this.show = false
+    }, 1500)
   }
 }
 </script>

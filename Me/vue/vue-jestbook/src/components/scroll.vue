@@ -6,7 +6,7 @@
 
 <script>
 import BScroll from 'better-scroll'
-
+import { debounce } from '@/common/utils'
 const DIRECTION_H = 'horizontal'
 const DIRECTION_V = 'vertical'
 
@@ -91,9 +91,14 @@ export default {
       })
       // 监听 滑动， 并抛出其滚动距离
       if (this.listenScroll) {
-        this.scroll.on('scroll', (pos) => {
-          this.$emit('scrol', pos)
-        })
+        debounce(this.scroll.on('scroll', (pos) => {
+          // this.$emit('scrol', pos)
+          // console.log(pos.y)
+          if (pos.y > 100) {
+            this.$emit('scrol')
+          }
+        }), 300)
+        
       }
       // 派发 上拉 加载更多
       if (this.pullup) {
