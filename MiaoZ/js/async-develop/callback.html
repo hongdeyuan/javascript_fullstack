@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>异步学习</title>
+  <style>
+    .light{
+      width: 20px;
+      height: 20px;
+      background-color: #000;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="light"></div>
+  <script>
+    // 回调地狱
+    // setTimeout(() => {
+    //   const light = document.querySelector('.light').style.backgroundColor = 'red'
+    //   light.innerHTML = 'dhyuan'
+    // }, 1000)
+    
+
+    // 回调做法
+    function waitLightRed(cb) {
+      setTimeout(() => {
+        console.log('改变了噢')
+        const light = document.querySelector('.light').style.backgroundColor = 'red'
+        cb()
+      }, 1000)
+    }
+    waitLightRed(() => {
+      setTimeout(() => {
+        console.log('又改变了噢')
+        document.querySelector('.light').style.backgroundColor = 'blue'
+      }, 2000)
+    })
+
+    // Promise 做法
+    
+  </script>
+</body>
+</html>

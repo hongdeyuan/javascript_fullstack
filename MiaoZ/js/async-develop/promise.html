@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Promise解决回调地狱</title>
+  <style>
+      .light{
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+        border: 1px solid #000;
+      }
+    </style>
+</head>
+<body>
+  <div class="light"></div>
+
+  <script>
+
+    /**
+     * 实现思路 ：promise 又 step1 与step2 来实现 颜色变化
+     * 首先： 第一步step1 执行完之后，通过 resolve 来通知 
+     * step1.then()可以执行了，此时触发step2去执行T
+     * 特别注意： step1与 step2时，不要直接代码块，给它加一个方法包裹，以防止两个setTime同时开始
+     * 这样做目的就是 为了 让它调用时才开始触发
+     **/
+
+    const light =  document.querySelector('.light')
+    let step1 = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        light.style.backgroundColor = 'red'
+        resolve();
+      }, 2000)
+    })
+
+    let step2 = () => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        light.style.backgroundColor = 'blue'
+        resolve();
+      }, 4000)
+    })
+
+    // // then 
+    // step1().then(res => {
+    //   // then return promise 之后 后面还可以接着 回调 .then
+    //   return step2
+    // })
+
+    // step2().then(res => {
+    //   console.log('step2 执行完')
+    // })
+
+
+
+    // 异步
+    async function run() {
+      await step1();
+      await step2();
+    }
+    run()
+  </script>
+</body>
+</html>
