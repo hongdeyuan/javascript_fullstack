@@ -78,7 +78,7 @@ export default {
     }
   },
   mounted () {
-    // this._getNewImg()
+    this._getNewImg()
     setTimeout(() => {
       this.show = false
     }, 1500)
@@ -91,7 +91,7 @@ export default {
 .content-wrapper
   position fixed
   top 0
-  bottom 0
+  bottom 60px
   width 100%
   .content-scroll
     height 100%
