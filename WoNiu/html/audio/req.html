@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .box, .box1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .box1{
+    top: 60px;
+    background-color: blue;
+  }
+</style>
+<body>
+  <div class="box"></div>
+  <div class="box1"></div>
+  <!-- 16ms 人眼能识别 -->
+  <script>
+    var box = document.querySelector('.box')
+    var box1 = document.querySelector('.box1')
+    var dis = 0, timer = 0;
+    timer = setInterval(() => {
+      box.style.left = ++ dis + 'px'
+      if(dis >= 500 ) 
+        clearInterval(timer)
+    }, 16);
+
+    var diss = 0;
+    function animation() {
+      requestAnimationFrame(function() {
+        box1.style.left = ++ dis + 'px'
+        if (diss < 500) {
+          animation()
+        }
+        if (diss > 500) {
+          dis = 0
+        }
+      })
+    }
+
+    animation()
+  </script>
+</body>
+</html>

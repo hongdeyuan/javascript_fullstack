@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #myCanvas{
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+
+  <script>
+
+    // requestAnimationFrame 必定会问到，注意多学习
+
+    var c = document.getElementById('myCanvas');
+    var ctx = c.getContext('2d');
+    ctx.fillStyle = 'red';
+    // 填充一个盒子
+    ctx.fillRect(0, 0, 300, 150);
+    ctx.clearRect(20, 20, 100, 50);
+    var dis = 0;
+    function animation() {
+      requestAnimationFrame(function() {
+        ctx.clearRect(0, 0, 300, 150);
+        ctx.fillStyle = `rgba(0, ${dis++}, ${dis++})`;
+        ctx.fillText(dis++, 110, 90)
+        ctx.font = "50px Verdana"
+        animation()
+        if (dis >= 255) {
+          dis = 0
+        }
+      })
+    }
+    animation();
+  </script>
+</body>
+</html>
