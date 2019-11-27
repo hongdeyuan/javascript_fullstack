@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" name="" id="text">
+    <p id="show-txt">0</p>
+  </div>
+
+  <script>
+    var text = document.getElementById('text')
+    var obj = {}
+    Object.defineProperty(obj, 'val', {
+      // get 读取属性 调用的方法
+      get() {
+        return obj
+      },
+      set(newVal) {
+        document.getElementById('show-txt').innerHTML = newVal
+      }
+    })
+
+    document.addEventListener('keyup', (e) => {
+      obj['val'] = e.target.value
+    })
+  </script>
+</body>
+
+</html>
