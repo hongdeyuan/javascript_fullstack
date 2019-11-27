@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- vue -->
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <title>vue图片上传</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<body>
+  <div id="app">
+    <!-- 内容 -> url -->
+    <el-button type="primary" @click="handleUpload">上传图片</el-button>
+    <div 
+      v-loading="loading"
+      element-loading-text="拼命上传中"
+      element-loading-spinner="el-icon-loading"
+      element-loading-background="rgba(0, 0, 0, 0.8)"
+    >
+      <img :src="imgSrc" alt="">
+    </div>
+    <!-- 本地预览 img -->
+    <!-- <form action="" name="upload" method="POST" enctype="multipart/form-data"> -->
+      <input type="file" name="avatar" id="avatar" @change="preview" class="hidden" ref="hidden"/>
+      <input type="button" value="提交"
+        @click="submit" />
+    <!-- </form> -->
+  </div>
+
+
+  <script>
+    new Vue({
+      el: '#app',
+      data () {
+        return {
+          loading: false,
+          imgSrc: ''
+        }
+      },
+      methods: {
+        handleUpload() {
+          this.$refs.hidden.click();
+        },
+        preview (event) {
+          // 预览
+          const file = event.target.files[0]
+          const fileReader = new FileReader()
+          fileReader.onload = () => {
+            this.imgSrc = fileReader.result
+          }
+          // data://  base64格式
+          fileReader.readAsDataURL(file)
+        },
+        submit() {
+          // 提交
+          this.loading = true;
+          const formData = new FormData();
+          const avatarFile = document.querySelector('.hidden').files[0];
+          formData.append('avatar', avatarFile);
+          fetch('http://localhost:3000/upload', {
+            method: 'POST',
+            body: formData
+          })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+          })
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "- backend for frontend: 为前端服务的后端\r   - fe : api -> Rd\r     1. api -> userCenter\r     2. api -> orderCenter\r   // 速度到达 理论上限\r   - api ->>> node ->>> Rd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-cors": "0.0.16",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  }
+}
