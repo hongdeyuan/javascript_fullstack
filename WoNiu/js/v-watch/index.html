@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vue - watch监听原理</title>
+</head>
+<body>
+  <div id="app">hello dhyuan</div>
+  <button onclick="btn1()">click1</button>
+  <button onclick="btn2()">click2</button>
+  <script src="./watcher.js"></script>
+  <script>
+    let vm = new watcher ({
+      data: {
+        inner: ''
+      },
+      watch: {
+        inner (newVal, oldVal) {
+          document.getElementById('app').innerHTML = newVal
+        }
+      }
+    })
+    function btn1() {
+      vm.inner = '你好'
+    }
+    function btn2() {
+      vm.inner = 'good'
+    }
+  </script>
+</body>
+</html>
