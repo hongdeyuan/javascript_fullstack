@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>聊天室</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" name="" id="" placeholder="请输入用户名" v-model="userName" />
+    <textarea name="" v-model="message" id="" cols="30" rows="10" placeholder="聊天内容"></textarea>
+    <button @click="handleSure">确定发送</button>
+    <ul>
+      <li v-for="(item, i) in msgList" :key="i">
+        {{ item.userName }}
+        {{ item.message }}
+      </li>
+    </ul>
+  </div>
+
+  
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script>
+  new Vue({
+    el: '#app',
+    data () {
+      return {
+        userName: '',
+        message: '',
+        msgList: []
+      }
+    },
+    wss: null,
+    mounted () {
+      this.wss = new WebSocket('ws://localhost:3000')
+      this.wss.onmessage = (msg) => {
+        let item = JSON.parse(msg.data)
+        // console.log('msg', msg)
+        this.msgList.push(item)
+      }
+        
+    },
+    methods: {
+      handleSure(){
+        let msg = JSON.stringify({
+          userName: this.userName,
+          message: this.message
+        })
+        this.wss.send(msg)
+      }
+    }
+  })
+  </script>
+</body>
+</html>

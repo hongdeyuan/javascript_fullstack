@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>检测数组</title>
+</head>
+<body>
+  
+  <ul id="list">
+    <li></li>
+  </ul>
+  <script>
+    let msgLsit = [{msg : '1'}]
+    function h () {
+      document.getElementById('list').innerHTML = msgLsit
+      .map((item) => {
+        return `<li>${item.msg}</li>`
+      }).join('')
+    }
+    h();
+    const originPush = Array.prototype.push;
+
+    Array.prototype.push = function(...args) {
+      // 1
+      // 第一次this
+      // this === msgLsit
+      console.log(this, '数组改变了')
+      // 2 回复push的功能
+      originPush.apply(this, args)
+      h()
+      
+    }
+
+    msgLsit.push({msg: 2})
+    msgLsit.push({msg: 3})
+    msgLsit.push({msg: 4})
+    console.log(msgLsit)
+  </script>
+</body>
+</html>
