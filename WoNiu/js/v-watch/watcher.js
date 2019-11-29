@@ -17,8 +17,10 @@ class watcher{
           return val
         }
         this.$data[_key] = val
-        this.$watch[_key] && typeof this.$watch[_key] === 'function'
-        this.$watch[_key].call(this, val, oldVal)
+        this.$watch[_key] && typeof this.$watch[_key] === 'function' && (
+          this.$watch[_key].call(this, val, oldVal)
+        )
+        
         return val
       }
     })
