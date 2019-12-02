@@ -15,7 +15,9 @@ Page({
     videos: videoUrl,
     ch: 0,
     top: 0,
-		currVideo:{}
+    currVideo:{},
+    windowWidth: 0,
+    navScrollLeft: 300
   },
   //改变swiper
   swiperChange: function(e) {//切换
@@ -27,9 +29,13 @@ Page({
     }
   },
   switchTab(e){
+    const cur = e.currentTarget.dataset.index;
+    // console.log(cur)
+    let windowWidth = this.data.windowWidth / 6
     this.setData({
       curentIndex:e.currentTarget.dataset.index,
-      toView: e.currentTarget.dataset.id
+      toView: e.currentTarget.dataset.id,
+      navScrollLeft: (cur - 1) * windowWidth
     })
   },
   onTvpTimeupdate: function(){
@@ -70,6 +76,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var w = wx.getSystemInfoSync().windowWidth;
+    this.setData({
+      windowWidth: w
+    })
 
     wx.getSystemInfo({
       success: res => {

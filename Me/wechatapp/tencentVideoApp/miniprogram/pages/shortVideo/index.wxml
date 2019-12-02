@@ -1,5 +1,5 @@
 <!-- pages/shortVideo/index.wxml -->
-<scroll-view class="short-menu {{scrollTop > 40 ? 'menu-fixed' : ''}}" scroll-x="{{true}}" scroll-y="{{false}}">
+<scroll-view class="short-menu {{scrollTop > 40 ? 'menu-fixed' : ''}}" scroll-left="{{navScrollLeft}}" scroll-x="{{true}}" scroll-y="{{false}}">
   <block wx:for="{{shortCategory}}" wx:key="{{item.id}}">
     <view class="name {{curentIndex === index ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bind:tap="switchTab">
       {{item.name}}

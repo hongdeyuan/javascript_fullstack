@@ -23,7 +23,9 @@ Page({
     toView:'handpick',
     swiper_height: 80,
     scrollTop: 0,
-    ch: 0
+    windowWidth: 0,
+    ch: 0,
+    navScrollLeft: 300
   },
   gotoDetail(event){
     const id = event.target.dataset.id;
@@ -44,9 +46,13 @@ Page({
     }
   },
   switchTab(e){
+    const cur = e.currentTarget.dataset.index;
+    // console.log(cur)
+    let windowWidth = this.data.windowWidth / 6
     this.setData({
       curentIndex:e.currentTarget.dataset.index,
-      toView: e.currentTarget.dataset.id
+      toView: e.currentTarget.dataset.id,
+      navScrollLeft: (cur - 1) * windowWidth
     })
   },
   // 点击跳转到搜索页面
@@ -71,6 +77,11 @@ Page({
    * 生命周期函数--监听页面加载application/json  application/x-www-form-urlencode
    */
   onLoad: function (options) {
+
+    var w = wx.getSystemInfoSync().windowWidth;
+    this.setData({
+      windowWidth: w
+    })
 
     wx.getSystemInfo({
       success: res => {
