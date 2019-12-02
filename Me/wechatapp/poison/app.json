@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/identify/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "毒App-copy",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#2c2c2c",
+    "list": [{
+      "pagePath": "pages/main/index",
+      "text": "购买",
+      "iconPath": "images/shopping.png",
+      "selectedIconPath": "images/shopping-active.png"
+    },
+    {
+      "pagePath": "pages/identify/index",
+      "text": "鉴别查询",
+      "iconPath": "images/identify.png",
+      "selectedIconPath": "images/identify-active.png"
+    },
+    {
+      "pagePath": "pages/mine/index",
+      "text": "我",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me-active.png"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
