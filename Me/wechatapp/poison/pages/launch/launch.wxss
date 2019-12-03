@@ -1,0 +1,12 @@
+/* pages/launch/launch.wxss */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bcg {
+  /* position: fixed; */
+  z-index: 1;
+  width: 100%;
+}

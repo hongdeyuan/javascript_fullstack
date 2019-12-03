@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/launch/launch",
     "pages/main/index",
     "pages/identify/index",
     "pages/mine/index"

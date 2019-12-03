@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = [1, [2, [3, 4]], [5], 6]
+    // [1, 2, 3, 4]
+    // console.log(Object.prototype.toString.apply(arr[0]) === '[object Array]')
+
+    // 递归 循环
+    function flattenArr(arr) {
+      let result = []
+      for (let i = 0; i < arr.length; i++) {
+        if(Array.isArray(arr[i])){
+          // 递归
+          result = result.concat(flattenArr(arr[i]))
+        } else {
+          result.push(arr[i])
+        }
+      }
+      return result
+    }
+    // 递归 reduce 函数式编程
+    function flattenArr1(arr) {
+      return arr.reduce((pre, next) => {
+        if(Array.isArray(next)){
+          // 递归
+          return pre.concat(flattenArr1(next))
+        } else {
+          pre.push(next)
+          return pre
+        }
+      }, [])
+    }
+
+    // 非递归 循环
+    // [1, [2, [3, 4]], [5], 6]
+    function flattenArr2(arr) {
+      while (arr.length !== 0) {
+        let data = arr.shift()
+        if(Array.isArray(data)){
+          // result = result.concat(flattenArr(data))
+
+        } else {
+          arr.push(data)
+        }
+      }
+      return result
+    }
+
+    console.log(flattenArr1(arr))
+  </script>
+</body>
+</html>

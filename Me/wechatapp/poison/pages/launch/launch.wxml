@@ -1,0 +1,4 @@
+<!--pages/launch/launch.wxml-->
+<view class='container'>
+  <image mode='widthFix' class='bcg' src='../../images/launch_bg.jpg'></image>
+</view>
