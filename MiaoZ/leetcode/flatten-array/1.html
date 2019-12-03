@@ -38,22 +38,25 @@
       }, [])
     }
 
-    // 非递归 循环
+    // 非递归 循环 栈
     // [1, [2, [3, 4]], [5], 6]
     function flattenArr2(arr) {
+      let result = []
       while (arr.length !== 0) {
         let data = arr.shift()
         if(Array.isArray(data)){
           // result = result.concat(flattenArr(data))
-
+          for (let i = data.length - 1; i >= 0; i--) {
+            arr.unshift(data[i])
+          }
         } else {
-          arr.push(data)
+          result.push(data)
         }
       }
       return result
     }
 
-    console.log(flattenArr1(arr))
+    console.log(flattenArr2(arr))
   </script>
 </body>
 </html>

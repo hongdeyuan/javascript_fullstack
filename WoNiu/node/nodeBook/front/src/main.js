@@ -16,8 +16,8 @@ Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
-  console.log(from)
-  console.log(to)
+  // console.log(from)
+  // console.log(to)
   next()
 })
 

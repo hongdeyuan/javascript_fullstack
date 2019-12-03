@@ -38,6 +38,13 @@ let getAllusers = function () {
   return allServices.query(_sql)
 }
 
+// 用户登录时  查找用户密码 匹配判断
+let userLogin = function (username, userpwd) {
+  let _sql = `select * from users where username="${username}" and userpwd="${userpwd}";`
+  return allServices.query(_sql)
+}
+
 module.exports = {
-  getAllusers
+  getAllusers,
+  userLogin
 }
