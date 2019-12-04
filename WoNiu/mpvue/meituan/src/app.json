@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/orderList/main",
+    "pages/self/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美团",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#06ceae",
+    "borderStyle": "white",
+
+    "list": [{
+      "text": "首页",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/images/tab1.png",
+      "selectedIconPath": "static/images/tab1-s.png"
+    }, {
+      "text": "订单",
+      "pagePath": "pages/orderList/main",
+      "iconPath": "static/images/tab2.png",
+      "selectedIconPath": "static/images/tab2-s.png"
+    }, {
+      "text": "我的",
+      "pagePath": "pages/self/main",
+      "iconPath": "static/images/tab3.png",
+      "selectedIconPath": "static/images/tab3-s.png"
+    }],
+    "position": "bottom"
+  }
+}
