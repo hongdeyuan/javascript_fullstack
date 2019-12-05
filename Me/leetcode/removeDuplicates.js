@@ -1,10 +1,10 @@
-// 删除排序数组中的重复项
-var nums = [0,0,1,1,1,2,2,3,3,4]
+// 删除排序数组中的重复项I 21
+var nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 // [1, 1, 1]
 // [1, 1]
-var removeDuplicates = function(nums) {
+var removeDuplicates = function (nums) {
   let i = 0
-  while(i < nums.length) {
+  while (i < nums.length) {
     if (nums[i] == nums[i + 1]) {
       nums.splice(i, 1)
       i = 0
@@ -15,15 +15,61 @@ var removeDuplicates = function(nums) {
   return nums.length
 };
 // var nums = [0,0,1,1,1,2,2,3,3,4]
-var removeDuplicates1 = function(nums) {
+var removeDuplicates1 = function (nums) {
   let count = 0
   for (let j = 0; j < nums.length; j++) {
-    if (nums[count]!=nums[j]) {
-      nums[count+1]=nums[j]
-      count+=1
+    if (nums[count] != nums[j]) {
+      nums[count + 1] = nums[j]
+      count += 1
     }
   }
-  return count+1
+  return count + 1
 };
 
-console.log(removeDuplicates1(nums))
+
+// 删除排序数组中的重复项II 80
+var num = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+// [0, 0, 1, 1, 1, 2, 3, 3]  -> i = 3, length = 8
+
+
+// [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+var removeDuplicates2 = function (nums) {
+  let i = 0
+  let count = 0
+  while (i < nums.length) {
+    if (nums[i] == nums[i + 1] && count < 2) {
+      count++
+      i++
+    } else if (count == 2) {
+      nums.splice(i, 1)
+      count = 0
+      i = i - 2
+    } else {
+      count = 0
+      i++
+    }
+  }
+
+  return nums.length
+};
+
+// [1,1,1,2,2,3]
+var removeDuplicates3 = function (nums) {
+  let i = 0
+  let count = 0
+  for (let j = 1; j < nums.length; j++) {
+    if (nums[i] != nums[j]) {
+      nums[++i] = nums[j];
+      count = 1;
+    } else if (count >= 2) {
+      continue;
+    } else {
+      nums[++i] = nums[j];
+      count++;
+    }
+  }
+  return i + 1
+};
+
+console.log(removeDuplicates3(num))

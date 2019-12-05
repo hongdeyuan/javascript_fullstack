@@ -53,16 +53,10 @@ let insertUser = function (value) {
   let _sql = `INSERT INTO users set username=?, userpwd=?, nickname=?`
   return allServices.query(_sql, value)
 }
-// 根据分类的名称查找 对应的笔记列表
-let findNoteListByType = function (note_type) {
-  let  _sql = `select * from note where note_type ="${note_type}";`
-  return allServices.query(_sql)
-} 
 
 module.exports = {
   getAllusers,
   userLogin,
   findUser,
-  insertUser,
-  findNoteListByType
+  insertUser
 }

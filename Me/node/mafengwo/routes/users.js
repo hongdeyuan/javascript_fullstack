@@ -111,32 +111,4 @@ router.post('/userRegister', async(ctx, next) => {
 
 })
 
-// 根据分类的名称查找 对应的笔记列表 findNoteListByType
-router.post('/findNoteListByType', async(ctx, next) => {
-  let note_type = ctx.request.body.note_type
-  await userServices.findNoteListByType(note_type).then((res) => {
-    let r = ''
-    if (res.length) {
-      r = 'ok'
-      ctx.body = {
-        code: 200,
-        data: res,
-        message: '查询成功'
-      }
-    } else {
-      r = 'error'
-      ctx.body = {
-        code: 404,
-        data: r,
-        message: '查询失败'
-      }
-    }
-  }).catch((err) => {
-    ctx.body = {
-      code: 500,
-      data: err
-    }
-  })
-})
-
 module.exports = router
