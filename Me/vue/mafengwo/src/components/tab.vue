@@ -55,10 +55,22 @@ export default {
       color #bfbfbf
       font-family 'Microsoft YaHei','微软雅黑','MicrosoftJhengHei','华文细黑','STHeiti','MingLiu'
     &.router-link-active
+      &::after
+        content ''
+        position absolute
+        font-size px2rem(96px)
+        margin-top px2rem(-96px)
+        margin-left px2rem(-10px)
+        background-color #f0fa66
+        z-index -1
+        box-shadow 0 0 10px #f0fa66
+        width px2rem(30px)
+        height px2rem(30px)
+        border-radius 50%
       .tab-link
         color #1C1C1C
       .icon
-        color #f4ea2a
+        color #1C1C1C
   .issue
     font-size px2rem(96px)
     text-align center
