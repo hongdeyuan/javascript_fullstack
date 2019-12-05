@@ -53,6 +53,7 @@ export default {
 .note-list {
   width: 100vw;
   padding: 1.066667rem 0.666667rem 0;
+  box-sizing: border-box;
   ul {
     display: flex;
     flex-direction: row;
