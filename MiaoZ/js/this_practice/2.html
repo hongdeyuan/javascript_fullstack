@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>this</title>
+</head>
+<body>
+  <iframe src="http://www.baidu.com" frameborder="0"></iframe>
+  <iframe src="" frameborder="0"></iframe>
+  <a href=""></a>
+  <script>
+    function fn () {
+      console.log(this.length)
+    }
+    // fn();  // window.length iframe 节点的个数
+
+    var bar = {
+      length: 5,
+      fn1: function() {
+        console.log(this)// bar1: {length: 6}
+        fn();// window
+        // 每一个 普通函数都可以用的一个对象
+        // 所有的参数
+        arguments[0]()// 2  - window
+      }
+    }
+
+    var bar1 = {length: 6}
+
+    const res = bar.fn1.bind(bar1)
+    res(fn, 123456)
+
+    // this 绑定优先级
+    // obj.fn < call/apply/bind  < new
+
+
+
+    // foo(1, 2, 3)
+
+
+
+    function foo() {
+      // 类数组对象
+      // 1:arguments[0]  arguments[1]
+      // 2. .length
+      console.log(arguments)
+      // X 2 
+      // map
+      // Array.from() : 类数组 - > 真数组
+      let arr1 = Array.from(arguments)
+
+      // 借用数组的 slice 的方法
+      let arr2 = Array.prototype.slice.call(arguments)
+
+      // 使用 ...
+      let arr3 = [...arguments]
+      console.log(typeof arr3.map)
+    }
+
+    function Person(age) {
+      this.age = age || 0
+    }
+
+    Person.prototype.reduceAge = function() {
+      return this.age - 10
+    }
+
+    // var person = new Person(20)
+
+    // var p2 = {
+    //   age: 36
+    // }
+
+    // console.log(person)
+  </script>
+</body>
+</html>

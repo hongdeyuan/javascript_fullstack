@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    this.a = 20
+    function Go() {
+      // 1 {}
+      // 2 继承 {}.__proto__ = Go.prototype
+      // Go.prototype.__proto__ = Object.prototype
+      // this 实例
+      console.log(this.a)// 
+      // 3 赋值 属性
+      // 4 return {
+      // a: 30
+      // __proto__: {
+      // a: 40
+      // }
+      // }
+      console.log(a) // 
+      this.a = 30
+    }
+
+    Go.prototype.a = 40
+
+    var test = {
+      a: 50,
+      init: function(fn) {
+        fn()
+        console.log(this.a) // 
+        return fn
+      }
+    }
+
+    // 1
+    // console.log(new Go().a) 
+
+    // 2
+    test.init(Go) // 20 50
+
+    // 3
+    var p = test.init(Go) // 30  50 
+
+    // 4
+    p() // 30
+
+  </script>
+</body>
+</html>

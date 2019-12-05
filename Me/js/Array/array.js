@@ -284,7 +284,8 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 
 //<-------------------bind使用-------------------------------> 
-//bind(): 放回一个被修改this作用域的函数
+//bind(): 放回一个被修改this作用域的函数， 传的是一个一个的参数， 与 call相同
+// bind 于 call apply 区别在于 绑定时未调用  ，放回一个被修改this作用域的函数
 
 // var v = b.bind(a)//放回一个被修改的函数 b 在此时 是被调用的
 // v(1,2)
