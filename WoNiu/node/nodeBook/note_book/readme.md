@@ -11,3 +11,5 @@
   - npm i vue-quill-editor -S
   - npm i amfe-flexible axios vant -S
   - npm i less less-loader -D
+  -  npm i vue-quill-editor -S
+  - npm install quill -S

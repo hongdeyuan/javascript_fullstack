@@ -9,7 +9,6 @@ import axios from 'axios'
 import 'amfe-flexible'
 
 Vue.use(Swipe).use(SwipeItem).use(Icon).use(Field).use(ActionSheet).use(Toast).use(Panel).use(Uploader).use(axios)
-
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
