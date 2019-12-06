@@ -29,25 +29,25 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "../assets/css/function"
   .mHeader
-    height px2rem(88px)
-    line-height px2rem(88px)
+    height 1.173rem
+    line-height 1.173rem
     background-color  #f4ea2a
     position fixed
     width 100%
     display flex
+    z-index 4
     align-items center
     justify-content space-between
     color #746ca8
-    font-size px2rem(30px)
+    font-size 0.4rem
     &-icon
-      flex 0 0 px2rem(88px)
-      margin-top px2rem(6px)
+      flex 0 0 1.173rem
+      margin-top 0.08rem
       cursor pointer
       .icon
-        font-size px2rem(64px)
+        font-size 0.853rem
         color #1C1C1C
       .left
-        margin-left px2rem(15px)
+        margin-left 0.213rem
 </style>

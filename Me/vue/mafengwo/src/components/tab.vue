@@ -32,81 +32,82 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/css/function.styl'
 .tab
   display flex
-  position absolute
+  // position absolute
+  position fixed
   z-index 150
   bottom 0
   left 0
   width 100%
   background-color #fff
-  border-1px(#fff)
-  font-size 12px
-  height px2rem(140px)
+  border-top 1px solid #fff
+  font-size 0.37rem
+  height 1.87rem
   &-item
     flex 1
     text-align center
     .icon
-      margin-top px2rem(15px)
+      font-size 0.667rem
+      margin-top 0.213rem
     .tab-link
-      margin-top px2rem(15px)
-      padding-bottom 5px
+      margin-top 0.213rem
+      padding-bottom 0.133rem
       color #bfbfbf
       font-family 'Microsoft YaHei','微软雅黑','MicrosoftJhengHei','华文细黑','STHeiti','MingLiu'
     &.router-link-active
       &::after
         content ''
         position absolute
-        font-size px2rem(96px)
-        margin-top px2rem(-96px)
-        margin-left px2rem(-10px)
+        font-size 1.28rem
+        margin-top -1.28rem
+        margin-left -0.133rem
         background-color #f0fa66
         z-index -1
-        box-shadow 0 0 10px #f0fa66
-        width px2rem(30px)
-        height px2rem(30px)
+        box-shadow 0 0 0.267rem #f0fa66
+        width 0.4rem
+        height 0.4rem
         border-radius 50%
       .tab-link
         color #1C1C1C
       .icon
         color #1C1C1C
   .issue
-    font-size px2rem(96px)
+    font-size 1.28rem
     text-align center
     margin 0 auto
     display flex
     justify-content center
     align-items center
-    margin-top px2rem(-50px)
-    width px2rem(120px)
-    height px2rem(120px)
+    margin-top -0.667rem
+    width 1.6rem
+    height 1.6rem
     border-radius 50%
     background #fff
-    border-1px(#fff)
+    border-top 1px solid #fff
     &::before
       content ''
       position absolute
-      width px2rem(80px)
-      height px2rem(80px)
-      border-radius 100px 0
+      width 1.067rem
+      height 1.067rem
+      border-radius 2.667rem 0
       border-left transparent
       border-bottom transparent
-      transform translateX(px2rem(-48px))
+      transform translateX(-0.64rem)
       z-index -1
       background #fff
     &::after
       content ''
       position absolute
-      width px2rem(80px)
-      height px2rem(80px)
-      border-radius 100px 0
+      width 1.067rem
+      height 1.067rem
+      border-radius 2.667rem 0
       border-left transparent
       border-bottom transparent
-      transform translateX(px2rem(48px)) rotate(90deg)
+      transform translateX(0.64rem) rotate(90deg)
       z-index -1
       background #fff
     .issue-img
-      width px2rem(84px)
-      height px2rem(84px)
+      width 1.12rem
+      height 1.12rem
 </style>

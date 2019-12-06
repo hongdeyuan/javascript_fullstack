@@ -27,7 +27,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/css/function.styl'
 .lanuch
   width 100%
   position absolute
@@ -41,17 +40,17 @@ export default {
     left 50%
     transform translate(-50%, -50%)
     .logo
-      width px2rem(256px)
-      height px2rem(256px)
+      width 3.413rem
+      height 3.413rem
     .title
       font-weight 600
-      font-size px2rem(42px)
+      font-size 0.56rem
       font-family 'STXingkai','微软雅黑','MicrosoftJhengHei','华文细黑','STHeiti','MingLiu'
   .foot
     position absolute
-    bottom px2rem(40px)
+    bottom 0.533rem
     left 50%
     transform translateX(-50%)
     color #8B8989
-    font-size px2rem(24px)
+    font-size 0.32rem
 </style>

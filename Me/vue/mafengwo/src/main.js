@@ -6,7 +6,11 @@ import router from './router'
 import fastclick from 'fastclick'
 import axios from 'axios'
 import '../static/css/reset.styl'
+import 'amfe-flexible'
+import Vant from 'vant'
+import 'vant/lib/index.css'
 
+Vue.use(Vant)
 Vue.prototype.$http = axios
 // 去除 300ms的处理时间
 fastclick.attach(document.body)
