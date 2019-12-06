@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person() {
+      this.age = 30,
+      this.name = name
+      return {a: 1}
+    }
+
+    Person.prototype.say = () => {
+      console.log('say')
+    }
+
+    var s = new Person()
+    // console.log(s)
+
+
+    function myNew(constructor, ...args) {
+      // 1
+      let obj = {}
+      // 2
+      let res =  constructor.call(obj, ...args)
+      // 3
+      obj.__proto__ = constructor.prototype
+      //4
+      return res !== undefined ? res : obj
+    }
+
+    // var s1 = myNew(Person, 4)
+
+    // console.log(s1)
+
+    function myCall(fn, obj) {
+      obj.__fn__ = fn
+      // 注意返回值
+      let ret = obj.__fn__()
+      delete obj.__fn__
+      return ret
+    } 
+
+
+    var obj = {
+      abc: 50,
+      __fn__: fn
+    }
+
+    // obj.__fn__()
+
+    function fn() {
+      console.log(this.abc)
+      return true
+    }
+
+    console.log(myCall(fn, obj), obj)
+  </script>
+</body>
+</html>
