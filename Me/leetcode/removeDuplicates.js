@@ -28,7 +28,7 @@ var removeDuplicates1 = function (nums) {
 
 
 // 删除排序数组中的重复项II 80
-var num = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+var num = [0,0,1,2,2,2,3,4,4,4]
 // [0, 0, 1, 1, 1, 2, 3, 3]  -> i = 3, length = 8
 
 
@@ -54,10 +54,15 @@ var removeDuplicates2 = function (nums) {
   return nums.length
 };
 
-// [1,1,1,2,2,3]
+// [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+// [1,1,1,2,2,3]   i = 1 j = 1
+// [1,1,1,2,2,3]   i = 1 j = 2
+// [1,1,2,2,2,3]   i = 2 j = 3
+// [1,1,2,2,2,3]   i = 3 j = 4
+// [1,1,2,2,3,3]   i = 4 j = 5
 var removeDuplicates3 = function (nums) {
   let i = 0
-  let count = 0
+  let count = 1
   for (let j = 1; j < nums.length; j++) {
     if (nums[i] != nums[j]) {
       nums[++i] = nums[j];
@@ -69,6 +74,7 @@ var removeDuplicates3 = function (nums) {
       count++;
     }
   }
+  console.log(nums)
   return i + 1
 };
 
