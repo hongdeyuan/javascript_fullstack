@@ -9,6 +9,19 @@
  */
 
 var countAndSay = function(n) {
+  if (n === 1) {
+    return '1'
+  }
+  return createSay(1, [1], n)
+}
+
+function createSay(index, str, n) {
+  
+}
+
+
+
+var countAndSay1 = function(n) {
   return createStr(1, ['1'], n)
 
 function createStr(index, str, n) {
