@@ -52,6 +52,45 @@ function quickSort(arr) {
   return quickSort(left).concat([pivot], quickSort(right))
 }
 
+// 归并排序
+
+// 具体算法描述如下：
+// 把长度为n的输入序列分成两个长度为n/2的子序列；
+// 对这两个子序列分别采用归并排序；
+// 将两个排序好的子序列合并成一个最终的排序序列。
+
+function mergeSort(arr) {  //采用自上而下的递归方法
+  var len = arr.length;
+  if(len < 2) {
+      return arr;
+  }
+  var middle = Math.floor(len / 2),
+      left = arr.slice(0, middle),
+      right = arr.slice(middle);
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right)
+{
+  var result = [];
+  console.time('归并排序耗时');
+  while (left.length && right.length) {
+      if (left[0] <= right[0]) {
+          result.push(left.shift());
+      } else {
+          result.push(right.shift());
+      }
+  }
+
+  while (left.length)
+      result.push(left.shift());
+
+  while (right.length)
+      result.push(right.shift());
+  console.timeEnd('归并排序耗时');
+  return result;
+}
+
 console.log(quickSort(arr))
 
 console.log(mpFun(test))
