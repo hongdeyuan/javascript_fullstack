@@ -1,0 +1,24 @@
+{
+  "name": "my-cli",
+  "version": "1.0.0",
+  "description": "1. vue init projectName\r     - 第一步 是否在当前 目录创建\r     - 第二步 下载模板 ，git 仓库\r     - 第三步 收集配置： 项目名、项目描述，作者\r     - 第四步 生成文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mycli": "./bin/mycli"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^4.0.1",
+    "download-git-repo": "^3.0.2",
+    "glob": "^7.1.6",
+    "handlebars": "^4.5.3",
+    "inquirer": "^7.0.0",
+    "metalsmith": "^2.3.0",
+    "ora": "^4.0.3"
+  }
+}
