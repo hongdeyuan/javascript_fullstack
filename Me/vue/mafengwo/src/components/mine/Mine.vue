@@ -170,6 +170,7 @@ export default {
   methods: {
     go_login_register () {
       this.$toast('去登录/注册')
+      this.$router.push({ path: '/Login'})
     },
     go_get () {
       this.$toast('去领取')
