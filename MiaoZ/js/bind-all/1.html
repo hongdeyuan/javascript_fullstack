@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function sum(a, b, c) {
+      return a + b + c
+    }
+    // sum(1, 2, 3)
+    // 对sum 这个函数的柯里化
+    // bind 放回一个函数
+    // var currySum =  sum.bind(null, 1, 2)
+    // var res = currySum(3)
+    // console.log(res)
+
+    function matchStr(reg, str) {
+      return reg.test(str)
+    }
+    // + : 代表 1 到任意长度 ; \s : 代表空白符； g: global  //flag
+    // console.log(matchStr(/\s+/g, 'a b'))
+    // console.log(matchStr(/\s+/g, 'ab '))
+
+    // 柯里化实现 字符串匹配
+    // const hasWhiteSpace = matchStr.bind(null, /\s+/g)
+    // console.log(hasWhiteSpace('a b c'))
+    // console.log(hasWhiteSpace('ab c'))
+
+    // 判断字符串是否有数字
+    // const hasNum = matchStr.bind(null, /[0-9]+/g)
+
+    // console.log(hasNum('da4da'))
+
+
+    // 判断类型
+    function type(type, param) {
+      return Object.prototype.toString.call(param) === `[object ${type}]`
+    }
+
+    console.log(type('Array', [1, 2, 3]))
+    // 柯里化实现类型判断
+    const isArray = type.bind(null, 'Array')
+    console.log(isArray([1]))
+
+  </script>
+</body>
+</html>

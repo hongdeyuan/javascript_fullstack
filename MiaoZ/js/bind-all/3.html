@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // slice
+    // Array.prptotype.slice
+    Function.prototype.myBind = function (oThis, ...aArgs) {
+      // sum 
+      // this === sum
+      // 先获取 要绑定的函数
+      var fToBind = this
+      var fBound = function () {
+        // call apply
+        fToBind.apply(oThis)
+      }
+      return fBound
+    }
+    function sum(a, b, c) {
+      return a + b + c
+    }
+    //返回值是 一个函数
+    // 第一步调用
+    var a = sum.myBind(null, 1)
+    // 第二步调用
+    a(2, 3)
+
+
+    function Foo() {
+      
+    }
+    Foo.prototype.say = function () {
+      console.log(this === f) // true
+    }
+    var f = new Foo()
+    f.say()
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function Foo() {
+      // new调用过程
+     //1 {}
+     //2 继承 Foo.prototype
+     //3 网这个对象上面 添加属性
+     //4 return {}
+     console.log(this instanceof Foo)
+    }
+    var a = new Foo()
+ </script>
+</body>
+</html>
