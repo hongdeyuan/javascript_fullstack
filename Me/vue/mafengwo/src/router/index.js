@@ -4,6 +4,7 @@ import Lanuch from '@/components/lanuch'
 import HelloWorld from '@/components/HelloWorld'
 import Mine from '@/components/mine/Mine'
 import Login from '@/components/login/Login'
+import Register from '@/components/register/Register'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ]
 })

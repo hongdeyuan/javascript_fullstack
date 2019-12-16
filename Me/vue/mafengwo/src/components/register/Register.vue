@@ -1,14 +1,14 @@
 <template>
-  <div class="login" ref="login">
+  <div class="register" ref="register">
     <div class="back" @click="go_mine">
       <div class="icon">&#xe610;</div>
     </div>
-    <div class="login_top">
+    <div class="register_top">
       <h2 class="title">登录后更精彩</h2>
       <p class="desc">全世界的旅行故事都在期待与你的相遇</p>
     </div>
-    <div class="login_middle">
-      <div class="login_acount_pwd">
+    <div class="register_middle">
+      <div class="register_acount_pwd">
         <div class="phone_email_input">
           <input class="phone_email_input_account" @input="inputAcount" @focus="focusAcount" @blur="blurAcount" v-model="account" type="text"  placeholder="请输入手机号/邮箱">
           <i class="icon" v-show="shareClear" @click="clearAcount">&#xe625;</i>
@@ -20,34 +20,20 @@
           <i class="icon visible" v-show="!ifDisplay" @click="ifDisplay=!ifDisplay">&#xe637;</i>
           <i class="icon visible" v-show="ifDisplay" @click="ifDisplay=!ifDisplay">&#xe675;</i> 
         </div>
-        <div class="phone_email_go_login">登录</div>
+        <div class="pwd_input">
+          <input class="pwd_input_password" @input="inputPwd1" @focus="focusPwd1" @blur="blurPwd1" v-model="confirmPwd" type="password"  placeholder="请再次输入密码" v-if="!ifDisplay1">
+          <input class="pwd_input_password" @input="inputPwd1" @focus="focusPwd1" @blur="blurPwd1" v-model="confirmPwd" type="text"  placeholder="请再次输入密码" v-if="ifDisplay1">
+          <i class="icon" v-show="shareClear2" @click="clearPwd1">&#xe625;</i>
+          <i class="icon visible" v-show="!ifDisplay1" @click="ifDisplay1=!ifDisplay1">&#xe637;</i>
+          <i class="icon visible" v-show="ifDisplay1" @click="ifDisplay1=!ifDisplay1">&#xe675;</i> 
+        </div>
+        <div class="phone_email_go__register" @click="register">注册</div>
       </div>
       <div class="login-middle-bottom">
         <div class="content">
           <div class="left">
-            <div class="go_register" @click="go_register">去注册</div>|
-            <div class="overseas_phone">海外手机账号</div>
+            <div class="go_login" @click="go_login">去登录</div>
           </div>
-          <div class="right">忘记密码</div>
-        </div>
-      </div>
-    </div>
-    <div class="quick-login">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <h4 class="txt-otherLogin">其他登录方式</h4>
-      <div class="quick-type">
-        <div class="quick-qq">
-          <img src="../../assets/imgs/QQ.png" alt="qq">
-          <div class="txt-qq">QQ</div>
-        </div>
-        <div class="quick-wx">
-          <img src="../../assets/imgs/weixin.png" alt="wx">
-          <div class="txt-wx">微信</div>
-        </div>
-        <div class="quick-wb">
-          <img src="../../assets/imgs/weibo.png" alt="wb">
-          <div class="txt-wb">微博</div>
         </div>
       </div>
     </div>
@@ -56,17 +42,40 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'Register',
   data () {
     return {
       account: '',
       pwd: '',
+      confirmPwd: '',
       shareClear: false,
       shareClear1: false,
-      ifDisplay: false
+      shareClear2: false,
+      ifDisplay: false,
+      ifDisplay1: false
     }
   },
   methods: {
+    register () {
+      var regEmail = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/
+      var reg = 11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/
+      //var url="/nptOfficialWebsite/apply/sendSms?mobile="+this.ruleForm.phone;
+      if(this.account==''){
+        this.$toast('请输入手机号码/邮箱')
+      } else if(this.pwd == '' || this.confirmPwd == '') {
+        this.$toast('请输入密码')
+      } else if ( this.pwd !== this.confirmPwd) {
+        this.$toast('两次密码不一致!')
+      } else if ( (reg.test(this.account) && this.pwd === this.confirmPwd) || (regEmail.test(this.account) && this.pwd === this.confirmPwd) ){
+        console.log('go to register')
+        /*this.$http.post(url).then(
+          res=>{
+            this.phonedata=res.data;
+        })*/
+      } else {
+        this.$toast('手机号码/邮箱格式不正确')
+      }
+    },
     inputAcount (e) {
       // console.log(e)
       if(this.account.length > 0){
@@ -83,12 +92,24 @@ export default {
       this.pwd = ''
       this.shareClear1 = false
     },
+    clearPwd1 () {
+      this.confirmPwd = ''
+      this.shareClear2 = false
+    },
     inputPwd (e) {
       // console.log(e)
       if (this.pwd.length > 0) {
         this.shareClear1 = true
       } else {
         this.shareClear1 = false
+      }
+    },
+    inputPwd1 (e) {
+      // console.log(e)
+      if (this.confirmPwd.length > 0) {
+        this.shareClear2 = true
+      } else {
+        this.shareClear2 = false
       }
     },
     focusAcount (e) {
@@ -105,21 +126,30 @@ export default {
       } else {
         this.shareClear1 = false
       }
-    }
-    ,
+    },
+    focusPwd1 (e) {
+      if (this.confirmPwd.length > 0) {
+        this.shareClear2 = true
+      } else {
+        this.shareClear2 = false
+      }
+    },
     blurAcount (e) {
       this.shareClear = false
-    }
-    ,
+    },
     blurPwd (e) {
       // console.log(e)
       this.shareClear1 = false
     },
+    blurPwd1 (e) {
+      // console.log(e)
+      this.shareClear2 = false
+    },
     go_mine () {
       this.$router.push({ path: '/Mine'})
     },
-    go_register () {
-      this.$router.push({ path: '/Register'})
+    go_login () {
+      this.$router.push({ path: '/Login'})
     }
   },
   mounted () {
@@ -130,8 +160,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.login
-  background url('../../assets/imgs/login_bg1.gif')
+.register
+  background url('../../assets/imgs/login_bg2.gif')
   width 100%
   height 100vh
   background-size cover
@@ -145,7 +175,7 @@ export default {
     padding-left 0.25rem
     .icon
       font-weight 600
-  .login_top
+  .register_top
     padding 0.96rem 0.5rem
     color #fff
     .title
@@ -154,10 +184,10 @@ export default {
     .desc
       font-size 0.48rem
       padding-top 0.5rem
-  .login_middle
+  .register_middle
     position relative
     margin-top 1.2rem
-    .login_acount_pwd
+    .register_acount_pwd
       position relative
       .phone_email_input
         width 85%
@@ -230,7 +260,7 @@ export default {
           margin-left 0.56rem
           font-size 0.64rem
           color #fff
-      .phone_email_go_login
+      .phone_email_go__register
         margin-top 0.72rem
         width 85%
         margin-left 0.75rem
@@ -253,72 +283,15 @@ export default {
         width 85%
         font-size 0.42rem
         line-height 0.42rem
+        margin-top 1.2rem
+        display flex
+        justify-content center
+        align-items center
+        box-sizing border-box
         color #fff
         .left
           display inline-block
-          .go_register
+          .go_login
             display inline-block
-            margin-right 0.24rem
-          .overseas_phone
-            display inline-block
-            margin-left 0.24rem
-        .right
-          display inline-block
-          float right
-  .quick-login
-    position relative
-    margin 1.5rem auto 0
-    width 85%
-    .line1
-      position absolute
-      width 30%
-      left 0
-      top 0.16rem
-      height 0.05rem
-      background-color rgba(255, 255, 255, 0.6)
-    .line2
-      width 30%
-      height 0.05rem
-      top 0.16rem
-      right 0
-      background-color rgba(255, 255, 255, 0.6)
-      position absolute
-    .txt-otherLogin
-      color rgba(255, 255, 255, 0.5)
-      width 3.73rem
-      font-size 0.427rem
-      font-weight 600
-      margin -0.24rem auto 0
-      text-align center
-    .quick-type
-      text-align: center
-      margin: 0.64rem 0 0.12rem
-      color rgba(255, 255, 255, 0.6)
-      .quick-qq
-        position relative
-        width 25%
-        display inline-block
-        img 
-          width 50%
-          height 0.72rem
-        .txt-qq
-          font-size 0.42rem
-      .quick-wx
-        position relative
-        width 25%
-        display inline-block
-        img
-          width 50%
-          height 0.72rem
-        .txt-wx
-          font-size 0.42rem
-      .quick-wb
-        position relative
-        width 25%
-        display inline-block
-        img
-          width 50%
-          height 0.72rem
-        .txt-wb
-          font-size 0.42rem
+            color #0000FF
 </style>

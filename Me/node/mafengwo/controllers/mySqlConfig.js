@@ -34,7 +34,7 @@ let allServices = {
 
 // 读取所有 users表数据
 let getAllusers = function () {
-  let _sql = `select * from users;`
+  let _sql = `select * from users, user_auths where users.id = user_auths.user_id;`
   return allServices.query(_sql)
 }
 
