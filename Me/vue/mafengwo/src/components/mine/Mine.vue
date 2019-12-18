@@ -42,7 +42,7 @@
                 </div>
               </div>
               <div class="right">
-                <div class="person_page">个人主页<i class="icon">&#xe64a;</i></div>
+                <div class="person_page" @click="personPage">个人主页<i class="icon">&#xe64a;</i></div>
               </div>
             </div>
             <div class="bottom">
@@ -206,6 +206,9 @@ export default {
     },
     go_share () {
       this.$toast('去分享你的旅行照片')
+    },
+    personPage () {
+      this.$toast('去个人信息')
     },
     _initScroll () {
       this.contentScroll = new BScroll(this.$refs.contentScroll, {
