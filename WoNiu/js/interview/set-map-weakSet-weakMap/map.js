@@ -63,7 +63,7 @@
 // console.log(map)
 
 
-let map = new Map()
+// let map = new Map()
 // map.set(-0, 124)
 // console.log(map.get(+0)) // 123
 
@@ -80,10 +80,131 @@ let map = new Map()
 // console.log(map.get(NaN)) // 22
 
 
-const data = {
-  0: {name: 'dhyuan'},
-  1: {name: 'dhyuan1'},
-  2: {name: 'dhyuan2'}
+// const data = {
+//   0: {name: 'dhyuan'},
+//   1: {name: 'dhyuan1'},
+//   2: {name: 'dhyuan2'}
+// }
+
+// console.log(data[0])
+
+
+
+// 实例属性 和操作方法
+// const map = new Map()
+// map.set('foo', true)
+// map.set('bar', false)
+// console.log(map.size)
+// map.set('abc', 222).set(222, 'abc').set(undefined, NaN) // 链式调用
+// console.log(map.get(222))
+// console.log(map.has(NaN)) // 没有 NaN 为 key 的数据
+// map.delete(222) // 删除指定 key的数据
+// map.clear() // 删除所有元素
+// console.log(map)
+
+// key 值不能相等， 否则会被后面的覆盖
+
+// 遍历
+
+// Map 的遍历顺序一定会按照数据本身的顺序进行
+
+// const map = new Map([
+//   ['foo', 'no'],
+//   ['bar', 'yes']
+// ])
+
+// for (let key of map.keys()) {
+//   console.log(key)
+// }
+
+// for (let key of map.values()) {
+//   console.log(key)
+// }
+
+// for (let key of map.entries()) {
+//   console.log(key)
+// }
+
+// for (let [key, value] of map.entries()) {
+//   console.log(key, value)
+// }
+
+// for (let [key, value] of map) {
+//   console.log(key, value)
+// }
+
+
+// for of  只能遍历 具备迭代器的结构
+// for in  遍历对象 ， 但不能遍历Map
+
+// console.log(Map.prototype[Symbol.iterator] === Map.prototype.entries)
+
+//  数组 转换为 Map
+// const map = new Map([
+//   [1, 'one'],
+//   [2, 'two'],
+//   [3, 'three']
+// ])
+
+// let arr = [...map.keys()]
+// [...map.values()]
+// [...map.entries()]
+// console.log(arr)
+
+
+// map.forEach((value, key, map) => {
+//   console.log(key + ':' + value)
+// });
+
+// map.map((value, key) => {
+//   console.log(key + ':' + value) // 报错 map不是一个方法
+// });
+
+// const map = new Map()
+// map.set(1, 'one').set(2, 'two').set(3, 'three')
+
+// map 转 数组
+//  let arr = [...map]
+// arr.filter(([key, value]) => {
+//   console.log(key + ': \t' + value) // 报错 map不是一个方法
+// });
+
+
+// map 转 对象
+// function setMapToObj(strMap) {
+//   let obj = Object.create(null) // {}
+//   for (let [k, v]  of strMap) {
+//     obj[k] = v
+//   }
+//   return obj
+// }
+
+// let obj = setMapToObj(map)
+// console.log(obj)
+
+
+
+// 对象转 map
+let obj = {
+  'yes': true,
+  'no': false
 }
 
-console.log(data[0])
+// function setObjToMap(obj) {
+//   let strMap = new Map()
+//   for (let item in obj) {
+//     strMap.set(item, obj[item])
+//   }
+//   return strMap
+// }
+
+function setObjToMap(obj) {
+  let strMap = new Map()
+  for (let item of Object.keys(obj)) {
+    strMap.set(item, obj[item])
+  }
+  return strMap
+}
+
+
+console.log(setObjToMap(obj))
