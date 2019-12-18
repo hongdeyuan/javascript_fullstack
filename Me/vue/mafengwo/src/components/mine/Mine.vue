@@ -24,6 +24,32 @@
             <div class="text">愿每一旅行愿望得以达成</div>
             <van-button round class="login-btn" @click="go_login_register">登录/注册</van-button>
           </div>
+          <div class="login-wrapper" v-if="!show">
+            <div class="top">
+              <div class="left">
+                <div class="img">
+                  <img src="../../assets/imgs/QQ.png" alt="QQ">
+                </div>
+                <div class="right">
+                  <div class="top">
+                    <div class="h2">JAVA</div>
+                    <i class="icon">&#xe613;</i>
+                  </div>
+                  <div class="bottom">
+                    <div class="level">LV.1</div>
+                    <div class="open_vip"><i class="icon">&#xe61f;</i>开通会员</div>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="person_page">个人主页<i class="icon">&#xe64a;</i></div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+          </div>
         </div>
         <div class="bottom">
           <div class="my-application">
@@ -164,7 +190,7 @@ export default {
   data () {
     return {
       result: [],
-      show: true
+      show: false
     }
   },
   methods: {
@@ -234,6 +260,19 @@ export default {
   position absolute
   box-sizing border-box
   background-color: rgba(200, 200, 200, 0.2)
+  &::before
+    content ''
+    display block
+    background-color #f4ea2a
+    border-radius 0 0 0.36rem 0.36rem
+    width 100%
+    height 35%
+  &::after
+    content ''
+    display block
+    background-color: rgba(200, 200, 200, 0.2)
+    width 100%
+    height 50%
   .content-wrapper
     overflow hidden
     position absolute
@@ -272,6 +311,82 @@ export default {
             font-size 0.426rem
             margin-top 0.533rem
             width 3.6rem
+        .login-wrapper
+          width 100%
+          height 4rem
+          .top
+            background-color: rgba(200, 200, 200, 0)
+            width 90%
+            height 50%
+            margin-left 0.5rem
+            box-sizing border-box
+            .left
+              position relative
+              height 100%
+              width 65%
+              display inline-block
+              .img
+                position absolute
+                left 0
+                top 0.1536rem
+                border-radius 50%
+                width 1.64rem
+                background-color rgba(200, 200, 200, 0.7)
+                height 1.64rem
+                img
+                  width 100%
+                  height 100%
+              .right
+                position absolute
+                left 1.2rem
+                width 3.5rem
+                height 100%
+                .top
+                  position relative
+                  margin-top 0.32rem
+                  height 0.74rem
+                  .h2
+                    display inline-block
+                    font-size 0.72rem
+                    font-weight 600
+                  .icon
+                    font-size 0.72rem
+                .bottom
+                  position relative
+                  height 0.74rem
+                  .level
+                    display inline-block
+                    font-size 0.36rem
+                    background-color #fbf68e
+                    border-radius 0.16rem
+                    border 0.08rem solid #fbf68e
+                  .open_vip
+                    display inline-block
+                    background-color rgba(100, 100, 100, 0.6)
+                    font-size 0.36rem
+                    border-radius 0.16rem
+                    border 0.08rem solid rgba(100, 100, 100, 0.1)
+                    .icon
+                      font-size 0.36rem
+            .right
+              height 100%
+              width 30%
+              display inline-block
+              .person_page
+                position absolute
+                top 0.85rem
+                right 0
+                font-size 0.42rem
+                .icon
+                  padding-left 0.16rem
+                  font-size 0.42rem
+                  font-weight 500
+          .bottom
+            background-color: rgba(200, 200, 200, 0)
+            width 90%
+            margin-left 0.5rem
+            height 50%
+            box-sizing border-box
       .bottom
         width 100%
         height 100%
@@ -281,7 +396,7 @@ export default {
           display flex
           width 90%
           margin-left 0.5rem
-          margin-top -0.96rem
+          margin-top -0.72rem
           border-radius 0.24rem
           border none
           background-color #fff

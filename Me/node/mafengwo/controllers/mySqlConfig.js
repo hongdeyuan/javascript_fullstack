@@ -39,8 +39,8 @@ let getAllusers = function () {
 }
 
 // 用户登录时  查找用户密码 匹配判断
-let userLogin = function (username, userpwd) {
-  let _sql = `select * from users where username="${username}" and userpwd="${userpwd}";`
+let userLogin = function (username, userpwd, type) {
+  let _sql = `select * from users, user_auths where users.id = user_auths.user_id and user_auths.identity_type_id=${type}  and user_auths.identifier="${username}" and user_auths.credential="${userpwd}";`
   return allServices.query(_sql)
 }
 // 查找用户

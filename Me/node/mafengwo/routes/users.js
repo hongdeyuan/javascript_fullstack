@@ -22,15 +22,16 @@ router.get('/all', async(ctx, next) => {
 router.post('/userLogin', async(ctx, next) => {
   var username = ctx.request.body.username
   var userpwd = ctx.request.body.userpwd
-  await userServices.userLogin(username, userpwd).then((res) => {
-    // console.log('打印结果：', JSON.stringify(res))
+  var type = ctx.request.body.type
+  await userServices.userLogin(username, userpwd, type).then((res) => {
+    console.log('打印结果：', JSON.stringify(res))
     let r = ''
     if (res.length) {
       r = 'ok'
       let result = {
         id: res[0].id,
         nickname: res[0].nickname,
-        username: res[0].username
+        username: res[0].identifier
       }
       ctx.body = {
         code: 200,

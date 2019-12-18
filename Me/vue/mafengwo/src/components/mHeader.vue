@@ -33,6 +33,7 @@ export default {
     height 1.173rem
     line-height 1.173rem
     background-color  #f4ea2a
+    top 0
     position fixed
     width 100%
     display flex

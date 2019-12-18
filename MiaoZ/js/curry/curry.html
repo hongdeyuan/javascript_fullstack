@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>柯里化</title>
+</head>
+<body>
+  <script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js"></script>
+  <script>
+    function sum(a, b, c) {
+      return a + b + c
+    }
+    // const add30 = sum.bind(null, 10, 20)
+    // bind 分为 两次 
+    // curry 0 ~ fn.length (arguments.length)
+
+
+    // lodash 柯里化后 的 sum
+    // const sumCurried = _.curry(sum)
+    // const add10 = sumCurried(10)
+    // const add30 = add10(20)
+    // const sumRes = add30(30)
+    // console.log(sumRes)
+    // console.log(sumCurried(30)(40)(50))
+
+    // 如果 函数参数数量 === 已经接收到的参数数量  开始求值
+    // 否则 放回一个函数
+
+    function myCurry(func) {
+      let len = func.length // 表示 取传进来的函数的参数数量 如 function a(z, c, b){}  -> a.length : 3
+      const _curry = function(...args) {
+        // 
+        // console.log(args)
+        // >= 如果多传了 就丢弃后面的
+        if (args.length === len) {
+          return func(...args)
+        }
+        return function(...params) {
+          let _args = [...args, ...params]
+          if ( _args.length === len) {
+            console.log(..._args)
+            return func(..._args)
+          } else {
+            return _curry(..._args)
+          }
+        }
+      }
+      return _curry
+    }
+
+    const sumCurry = myCurry(sum)
+    console.log(sumCurry(10, 20)(30))
+  </script>
+</body>
+</html>

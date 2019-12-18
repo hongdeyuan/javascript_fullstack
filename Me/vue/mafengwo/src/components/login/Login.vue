@@ -20,7 +20,7 @@
           <i class="icon visible" v-show="!ifDisplay" @click="ifDisplay=!ifDisplay">&#xe637;</i>
           <i class="icon visible" v-show="ifDisplay" @click="ifDisplay=!ifDisplay">&#xe675;</i> 
         </div>
-        <div class="phone_email_go_login">登录</div>
+        <div class="phone_email_go_login" @click="go_login">登录</div>
       </div>
       <div class="login-middle-bottom">
         <div class="content">
@@ -61,6 +61,7 @@ export default {
     return {
       account: '',
       pwd: '',
+      type: 1,
       shareClear: false,
       shareClear1: false,
       ifDisplay: false
@@ -114,6 +115,50 @@ export default {
     blurPwd (e) {
       // console.log(e)
       this.shareClear1 = false
+    },
+    go_login () {
+
+      var regEmail = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/
+      var reg = 11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/
+
+      if(this.account==''){
+        this.$toast('请输入手机号码/邮箱')
+        return
+      }
+      if(this.pwd == '') {
+        this.$toast('请输入密码')
+        return
+      }
+      if ( reg.test(this.account) || regEmail.test(this.account) ){
+        this.type = reg.test(this.account) ? 2 : 1
+        console.log(this.type)
+        // post 加密请求
+        this.$http({
+          method: 'post',
+          url: 'http://localhost:3000/users/userLogin',
+          data: {
+            username: this.account.trim(),
+            userpwd: this.pwd.trim(),
+            type: this.type
+          }
+        }).then((res) => {
+          console.log(res)
+          if (res.data.code === 200) {
+            // 本地存储数据
+            this.$toast(res.data.message)
+            // sessionStorage.setItem('userInfo', JSON.stringify(res.data.data))
+            this.$router.push({ path: '/Mine' })
+          } else {
+            this.$toast(res.data.message)
+          }
+        }).catch((err) =>{
+          console.log(err)
+        })
+        
+      } else {
+        this.$toast('手机号码/邮箱格式不正确')
+        return
+      }
     },
     go_mine () {
       this.$router.push({ path: '/Mine'})

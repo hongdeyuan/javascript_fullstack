@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 斐波那契数列
+    // 缓存 - 需要优化
+    let map = new Map()
+    var fb = (function f(n) {
+      if (n === 1 || n === 2){
+        return 1
+      } 
+      if (map.get(n)) return map.get(n)
+      
+      let result = f(n - 1) + f(n -2)
+      map.set(n, result)
+      return result
+    })
+    console.time('fb')
+    let res = fb(35)
+    console.timeEnd('fb')
+    console.log(res)
+  </script>
+</body>
+</html>
