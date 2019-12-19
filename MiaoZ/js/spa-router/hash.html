@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html,body{
+      scroll-behavior: smooth;
+    }
+    .box{
+      height: 3000px;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <!-- 锚点 -->
+  <a id="top"></a>
+
+  <div class="box pink"></div>
+  <a href="#top">回到顶部</a>
+  <a href="#/homme">首页</a>
+  <a href="#/detail">详情</a>
+  <script>
+    window.onhashchange = function () {
+      console.log('render')
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 1
+    const backout = history.pushState
+    // 2
+    history.pushState = function (...args) {
+      console.log('我知道 url 改变了')
+      // 3
+      backout.call(this, ...args)
+    }
+
+    // 重定向 到登录页
+
+    // ['/a', '/person', '/login']
+    // ['/a', '/person']  => ['/a', '/login']
+
+    // ['baidu.com', 'baidu.com/1', 'baidu.com/2']
+    // 页面不会刷新，但会发生页面的的 url变化
+    history.pushState({}, '', '/url1')
+    history.pushState({}, '', '/url2')
+    history.pushState({}, '', '/url3')
+    // history.go(-2) // 后退2步
+    // history.forward() // 向前一步
+    // history.back() // 向后一步
+
+
+    // 应用场景  重定向
+    // history.replaceState({}, '', '/') // 替换当前的记录
+
+
+    setTimeout(() => {
+      history.replaceState({}, '', '/url4')
+    })
+    
+
+    // 检测数组变化
+    // // 1
+    // const baclPush = Array.prototype.push
+    // // 2
+    // Array.prototype.push = function() {
+    //   console.log('array change')
+    //   // 3
+    //   baclPush()
+    // }
+
+  </script>
+</body>
+</html>

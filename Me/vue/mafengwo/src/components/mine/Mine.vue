@@ -46,8 +46,23 @@
               </div>
             </div>
             <div class="bottom">
-              <div class="left"></div>
-              <div class="right"></div>
+              <div class="left">
+                <div class="item">
+                  <div class="num">8</div>
+                  <div class="title">关注</div>
+                </div>
+                <div class="item">
+                  <div class="num">0</div>
+                  <div class="title">粉丝</div>
+                </div>
+                <div class="item">
+                  <div class="num">1</div>
+                  <div class="title">访客</div>
+                </div>
+              </div>
+              <div class="right">
+                <van-button round class="punchCard" @click="go_get">打卡1天</van-button>
+              </div>
             </div>
           </div>
         </div>
@@ -190,7 +205,7 @@ export default {
   data () {
     return {
       result: [],
-      show: false
+      show: true
     }
   },
   methods: {
@@ -388,8 +403,39 @@ export default {
             background-color: rgba(200, 200, 200, 0)
             width 90%
             margin-left 0.5rem
+            position relative
             height 50%
             box-sizing border-box
+            .left
+              position relative
+              height 100%
+              width 65%
+              display flex
+              justify-content center
+              align-items center
+              .item
+                flex 1
+                .num
+                  font-size 0.42rem
+                  font-weight 600
+                .title
+                  margin-top 0.36rem
+                  font-size 0.42rem
+                  font-weight 500
+            .right
+              height 100%
+              width 30%
+              top 0
+              right 0
+              position absolute
+              .punchCard
+                width 2.4rem
+                height 0.86rem
+                font-size 0.38rem
+                text-align center
+                line-height 0.86rem
+                margin-top 0.36rem
+                margin-right 0
       .bottom
         width 100%
         height 100%
