@@ -1,0 +1,9 @@
+.box {
+  background-color: blue; }
+
+.box {
+  background-color: #ee1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
