@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.6.1/react-dom.js"></script>
+  <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script type="text/babel">
+    var Hello = React.createClass({
+      getInitialState: function(){
+        return {
+          opacity: 1
+        }
+      },
+      componentDidMount: function(){
+        setInterval(() => {
+          this.opacityJian()
+        }, 1000);
+      },
+      opacityJian: function(){
+        var opa = this.state.opacity
+        opa = opa - 0.1
+        if(opa< 0.01){
+          opa = 1
+        }
+        this.setState({
+            opacity: opa
+        })
+      },
+      render: function(){
+        return(
+          <div style={{opacity: this.state.opacity}}>
+            <h2>hello {this.props.name}</h2>
+          </div>
+        )
+      }
+    })
+    ReactDOM.render(
+      <Hello name="wn"/>,
+      document.getElementById('demo')
+    )
+  </script>
+</body>
+</html>

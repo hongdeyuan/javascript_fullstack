@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.6.1/react-dom.js"></script>
+  <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script type="text/babel">
+    // mounting: 表示正在挂载虚拟dom到真实dom
+    // updating： 表示正在被重新渲染时
+    // unmounting：表示正在移除真实dom 
+
+    // 生命周期
+    var AddCount = React.createClass({
+      getInitialState: function() {
+        console.log('1-----getInitialState')
+        return {count: 1}
+      },
+      componentWillMount: function () {
+        console.log('2-----componnentWillMount')
+      },
+      componentDidMount: function () {
+        console.log('3-----componentDildMount')
+      },
+      componentWillUpdate: function () {
+        console.log('4-----componentWillUpdate')
+      },
+      componentDidUpdate: function () {
+        console.log('5-----componentDildUpdate')
+      },
+      handleClick: function () {
+        this.setState({
+          count: this.state.count+1
+        })
+      },
+      render: function() {
+        return (
+          <p>
+            {this.state.count}<br/>
+            <button onClick={this.handleClick}>Add</button>  
+          </p>
+        )
+      }
+    })
+
+    ReactDOM.render(
+      <AddCount/>,
+      document.getElementById('reactContainer')
+    )
+  </script>
+</body>
+</html>

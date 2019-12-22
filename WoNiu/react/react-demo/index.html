@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.6.1/react-dom.js"></script>
+  <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="reactContainer">
+
+  </div>
+  <script type="text/babel">
+    // jsx => javascript XML
+
+    //state
+    let names = ['猛哥', '喻导', 'wn']
+    var HelloComponent = React.createClass({
+      // 注册一个组件
+      render: function() {
+        // return React.createElement('h1', null, 'hello world' )// 标签，属性，内容
+        return <div>
+          {this.props.a.map(function(name) {
+            return <div>hello, {name}!</div>
+          })}
+          <h1>hello {this.props.name ? this.props.name : 'world'} word</h1>
+        </div>
+      }
+    })
+    ReactDOM.render( // 将模板转化为html语言
+      // React.createElement(HelloComponent, null),
+      <HelloComponent name="wn" a={names}/>,
+      document.getElementById('reactContainer')
+    )
+  </script>
+</body>
+</html>

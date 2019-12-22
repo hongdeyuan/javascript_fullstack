@@ -1,0 +1,8 @@
+.box {
+    color: red;
+    background-color: #ee1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: url(8752fea91650a23d46dc54f896029189.jpg)
+}
