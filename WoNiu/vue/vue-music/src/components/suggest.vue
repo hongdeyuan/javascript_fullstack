@@ -62,7 +62,7 @@ export default {
       api.MusicSearch(params).then(res => {
         console.log(res)
         if (res.code === 200) {
-          this.result = [...this.result,...res.result.songs]
+          this.result = [...this.result, ...res.result.songs]
           this._checkMore(res.result)
         }
       })
@@ -106,38 +106,38 @@ export default {
 
 <style scoped lang="stylus">
 @import "../assets/css/function.styl"
-.suggest 
+.suggest
   height 100%
   overflow hidden
-  .suggest-list 
+  .suggest-list
     padding 0 px2rem(60px)
-    .suggest-item 
+    .suggest-item
       display flex
       align-items center
       line-height px2rem(80px)
-    .icon 
+    .icon
       flex 0 0 px2rem(60px)
       width px2rem(60px)
       font-size 14px
       color hsla(0,0%,100%,.3)
-    .name 
+    .name
       flex 1
       font-size 14px
       color hsla(0,0%,100%,.3)
       overflow hidden
-      .text 
+      .text
         white-space nowrap
         overflow hidden
         text-overflow ellipsis
-    .loading-wraper 
+    .loading-wraper
       height px2rem(80px)
-  .no-result-wrapper 
+  .no-result-wrapper
     position absolute
     width 100%
     top 50%
     transform translateY(-50%)
     text-align center
-    span 
+    span
       font-size 14px
       color hsla(0,0%,100%,.3)
 </style>

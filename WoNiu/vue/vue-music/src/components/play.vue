@@ -32,7 +32,7 @@
       </div>
     </transition>
     <!-- 播放器 -->
-    <audio 
+    <audio
       ref="audio"
       @playing="ready"
       @error="error"
@@ -73,6 +73,7 @@ export default {
       }
       if (!newSong.url) {
         // alert('请求音乐出错！')
+        // eslint-disable-next-line no-unused-vars
         const {data, code} = await api.MusicUrl(newSong.id)
         console.log(data)
         if (data && data[0].code === 200) {
@@ -126,7 +127,6 @@ export default {
           padding 0 px2rem(30px)
           font-size 22px
 
-
       .title
         width 70%
         margin 0 auto
@@ -143,7 +143,6 @@ export default {
         text-align center
         font-size 14px
         color #fff
-
 
     .middle
       position fixed

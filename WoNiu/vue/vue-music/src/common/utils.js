@@ -9,9 +9,10 @@ export function debounce (func, delay) {
     }, delay)
   }
 }
-export function findIndex(list, song) {
+export function findIndex (list, song) {
   // findIndex 原生js数组自带的方法 ，找到数组首个该元素的 下标
   return list.findIndex((item) => {
+    // eslint-disable-next-line no-return-assign
     return item.id = song.id
   })
 }

@@ -40,21 +40,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.search-list 
-  .search-item 
+.search-list
+  .search-item
     display flex
     align-items center
     height 40px
     overflow hidden
-    &.list-enter-active, &.list-leave-active 
+    &.list-enter-active, &.list-leave-active
       transition all 0.1s
-    &.list-enter, &.list-leave-to 
+    &.list-enter, &.list-leave-to
       height 0
-    .text 
+    .text
       flex 1
       color hsla(0,0%,100%,.5)
-    .icon-box 
-      .icon 
+    .icon-box
+      .icon
         font-size 18px
         color hsla(0,0%,100%,.3)
 </style>

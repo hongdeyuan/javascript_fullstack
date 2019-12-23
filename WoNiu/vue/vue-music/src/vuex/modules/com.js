@@ -8,7 +8,7 @@ const mutations = {
   [types.COM_SHOW_SIDE_BAR] (state, status) {
     state.showSidebar = status
   },
-  [types.COM_SAVE_SEARCH_HISTORY] (state, status){
+  [types.COM_SAVE_SEARCH_HISTORY] (state, status) {
     state.searchHistoey = status
   },
   [types.COM_DELETE_SEARCH_HISTORY] (state, index) {
