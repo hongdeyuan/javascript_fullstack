@@ -5,6 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Mine from '@/components/mine/Mine'
 import Login from '@/components/login/Login'
 import Register from '@/components/register/Register'
+import Setting from '@/components/setting/Setting'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register
+    },
+    {
+      path: '/setting',
+      name: 'Setting',
+      component: Setting
     }
   ]
 })

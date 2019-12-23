@@ -55,6 +55,8 @@
 </template>
 
 <script>
+import { loginMixin } from '@/common/mixin'
+import { mapActions } from 'vuex'
 export default {
   name: 'Login',
   data () {
@@ -67,6 +69,7 @@ export default {
       ifDisplay: false
     }
   },
+  mixins: [loginMixin],
   methods: {
     inputAcount (e) {
       // console.log(e)
@@ -145,6 +148,7 @@ export default {
           console.log(res)
           if (res.data.code === 200) {
             // 本地存储数据
+            this.saveUserInfo(res.data.data)
             this.$toast(res.data.message)
             // sessionStorage.setItem('userInfo', JSON.stringify(res.data.data))
             this.$router.push({ path: '/Mine' })
@@ -165,7 +169,10 @@ export default {
     },
     go_register () {
       this.$router.push({ path: '/Register'})
-    }
+    },
+    ...mapActions([
+      'saveUserInfo'
+    ])
   },
   mounted () {
     let loginNode = this.$refs.login

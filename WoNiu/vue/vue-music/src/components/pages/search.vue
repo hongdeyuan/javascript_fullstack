@@ -40,7 +40,7 @@
 
 <script>
 import searchBox from '@/components/searchBox'
-import scroll from  '@/components/scroll'
+import scroll from '@/components/scroll'
 import api from '@/api'
 import searchList from '@/components/searchList'
 import suggest from '@/components/suggest'
@@ -64,6 +64,7 @@ export default {
     _getHotKey () {
       api.HotSearchKey().then((res) => {
         // console.log(res)
+        // eslint-disable-next-line eqeqeq
         if (res.code == 200) {
           this.hotkey = res.result.hots.slice(0, 10)
         }

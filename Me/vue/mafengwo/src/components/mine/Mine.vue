@@ -2,14 +2,14 @@
   <div class="mine">
     <!-- 头部 -->
     <v-header>
-      <router-link to="/message" slot="left-icon">
+      <router-link to="/setting" slot="left-icon">
         <i class="icon left">&#xe608;</i>
       </router-link>
       <router-link to="/scan" slot="left-icon">
         <i class="icon left">&#xe60f;</i>
       </router-link>
       <span slot="content"></span>
-      <router-link to="/seting" slot="right-icon" class="right">
+      <router-link to="/message" slot="right-icon" class="right">
         <i class="icon">&#xe61a;</i>
       </router-link>
     </v-header>
@@ -19,12 +19,12 @@
           <div class="ball0"></div>
           <div class="ball1"></div>
           <div class="ball2"></div>
-          <div class="unLogin-wrapper" v-if="show">
+          <div class="unLogin-wrapper" v-if="!currentUser.id">
             <div class="title">Hi~欢迎来到马蜂窝</div>
             <div class="text">愿每一旅行愿望得以达成</div>
             <van-button round class="login-btn" @click="go_login_register">登录/注册</van-button>
           </div>
-          <div class="login-wrapper" v-if="!show">
+          <div class="login-wrapper" v-if="currentUser.id">
             <div class="top">
               <div class="left">
                 <div class="img">
@@ -107,13 +107,13 @@
           <div class="travel">
             <div class="travel-title">
               <div class="name">我的旅行</div>
-              <div class="medal" v-if="false">旅行勋章<span class="medal-count">0枚</span><i class="icon">&#xe64a;</i></div>
+              <div class="medal" v-if="currentUser.id">旅行勋章<span class="medal-count">0枚</span><i class="icon">&#xe64a;</i></div>
             </div>
             <div class="travel-share">
               <van-button round class="share-btn" @click="go_share"><i class="icon">&#xe629;</i>分享你的旅行图片</van-button>
               <p class="share-desc">用照片记录旅行的小技巧</p>
             </div>
-            <div class="travel-application" v-if="false">
+            <div class="travel-application" v-if="currentUser.id">
               <div class="note">笔记</div>|
               <div class="travel-notes">游记</div>|
               <div class="video">视频</div>|
@@ -197,6 +197,7 @@
 <script>
 import mHeader from '@/components/mHeader'
 import BScroll from 'better-scroll'
+import { mapGetters } from 'vuex'
 export default {
   name: 'Mine',
   components: {
@@ -231,6 +232,11 @@ export default {
         probeType: 3
       })
     }
+  },
+  computed: {
+    ...mapGetters([
+      'currentUser',
+    ])
   },
   mounted () {
     this.$nextTick(() => {

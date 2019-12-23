@@ -8,6 +8,7 @@ import axios from 'axios'
 import '../static/css/reset.styl'
 import 'amfe-flexible'
 import Vant from 'vant'
+import store from './vuex/store'
 import 'vant/lib/index.css'
 
 Vue.use(Vant)
@@ -20,6 +21,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
