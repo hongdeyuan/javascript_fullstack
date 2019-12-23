@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let map  = new Map()
+    // function add(a) {
+    //   if (map.has(a)) {
+    //     return map.get(a)
+    //   }
+    //   let res = a + 30
+    //   map.set(a, res)
+    //   return res
+    // }
+
+    // function reduce(c, d) {
+    //   let key = JSON.stringify(Array.from(arguments))
+    //   if (map.has(key)) {
+    //     return map.get(key)
+    //   }
+    //   let res = c - d
+    //   map.set(key, res)
+    //   return key
+    // }
+
+    function sum(a, b, c) {
+      return a + b + c
+    }
+
+    // add/reduce
+    // 同： 缓存的过程 1，2，3...
+    // 不同： 做的功能不一样， 函数
+
+    // 过程 抽象
+    // 体现在：高阶函数
+    function memorize(fn) {
+      let cache = new Map()
+      // fn => memorizeFn
+      return (...args) => {
+        // 这个函数 具有缓存功能
+        let key = JSON.stringify(args)
+        if (cache.has(key)) {
+          console.log('from cache...')
+          return cache.get(key)
+        }
+
+        // 计算逻辑
+        let res = fn(...args)
+        cache.set(key, res)
+        return res
+      }
+    }
+
+    const mSum = memorize(sum)
+    console.log(mSum(1, 2, 3)) // 计算
+    console.log(mSum(1, 2, 3)) /// 不计算， 直接取缓存值
+
+    // key 值的异常情况
+    // [1, 2, undefined] // JSON.stringify 之后 => [1, 2, null]
+    // [1, 2, null] // JSON.stringify 之后 =>  [1, 2, null]
+
+
+    // lodash 处理方式
+    // _.memorize(sum, () => {
+    //   // 让你生成 key
+    // })
+  </script>
+</body>
+</html>

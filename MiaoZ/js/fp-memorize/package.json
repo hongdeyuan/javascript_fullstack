@@ -1,0 +1,16 @@
+{
+  "name": "fp-memorize",
+  "version": "1.0.0",
+  "description": "1. 相同的输入 会有相同的输出\r   2. 不会产生 副作用\r     f(x) = x ^ 2\r     f(1) = 1 ^ 2\r     f(2) = 2 ^ 2\r     f(3) = 3 ^ 2\r   3. 纯函数好处\r     - 易于测试\r     - 易于缓存\r ## 常见 不纯函数 \r     1. I/O\r     2. Math.random()\r     3. appendChild ... DOM操作",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  }
+}
