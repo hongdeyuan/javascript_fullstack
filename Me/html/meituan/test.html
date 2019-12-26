@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <video id="video" autoplay="autoplay" style="background: #ccc;" style="float: left" width="640px"
+    height="480px"></video>
+  <canvas id="canvas" style="display:none;background-color:#F00;" width="640px" height="480px"></canvas>
+  <script src="https://cdn.bootcss.com/qrcode-generator/1.4.2/qrcode.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    var video = document.getElementById("video");
+    var aCanvas = document.getElementById('canvas');
+    var context = aCanvas.getContext("2d");
+    var errocb = function (code) {
+      alert(code);
+    };
+
+    if (navigator.getUserMedia) { // 标准的API
+      navigator.getUserMedia({ "video": true }, function (stream) {
+        video.srcObject = stream;
+        video.play();
+      }, errocb);
+    } else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+      console.log(navigator.webkitGetUserMedia);
+      navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+        video.srcObject = window.webkitURL.createObjectURL(stream);
+        video.play();
+      }, errocb);
+    }
+    CatchCode()
+    function CatchCode() {
+      if (canvas != null) {
+        context.drawImage(video, 0, 0, 640, 480);
+        let img = document.createElement('img')
+        img.src = canvas.toDataURL("image/png");
+        try {
+          qrcode.decode(img.src);
+          qrcode.callback = function (imgMsg) {
+            console.log(imgMsg);
+            if (imgMsg == "error decoding QR Code") {
+              //alert("请抓稳扶好");
+              return;
+            }
+            var data = StringToBytes(imgMsg);
+            var hex_string = BytesToHexString(data);
+            console.log("二维码解析：" + hex_string);
+            //alert("二维码解析：" + hex_string);
+            $("#QRCode").html(hex_string);
+            request(hex_string);
+          }
+        } catch (m) {
+          alert(m);
+        }
+      }
+    }
+    function StringToBytes(str) {
+      var ch, st, re = [];
+      for (var i = 0; i < str.length; i++) {
+        ch = str.charCodeAt(i);  // get char
+        st = [];                // set up "stack"
+        do {
+          st.push(ch & 0xFF);  // push byte to stack
+          ch = ch >> 8;          // shift value down by 1 byte
+        } while (ch);
+        // add stack contents to result
+        // done because chars have "wrong" endianness
+        re = re.concat(st.reverse());
+      }
+      // return an array of bytes
+      return re;
+    }
+
+    function BytesToHexString(bytes) {
+      return bytes.map(function (byte) {
+        return ("00" + (byte & 0xFF).toString(16)).slice(-2)
+      }).join('')
+    }
+  </script>
+</body>
+
+</html>

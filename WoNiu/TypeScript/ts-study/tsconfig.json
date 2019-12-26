@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES5",// 指定js版本为ES5
+    "module": "commonjs",// 指定commonjs规范
+    "moduleResolution": "node",// 选择模块解析器
+    "experimentalDecorators": true,// 启用实验性的ES装饰器
+    "allowSyntheticDefaultImports": true,// 允许从没有默认导出的模块当中默认导入
+    "sourceMap": true,// 生成相应的 .map文件,方便调试
+    "strict": true,// 严格模式
+    "noImplicitAny": true,//不允许默认的any类型
+    "alwaysStrict": true,// 以严格模式解析并为每个源文件生成 "use strict"语句
+    "declaration": true, // 生成对于的.d.ts文件（声明文件）
+    "removeComments": true,// 删除编译后的所有注释
+    "noImplicitReturns": true,//  不是函数所有放回路径都有返回值时报错
+    "importHelpers": true,// 辅助工具
+    "lib": ["es6", "dom"],// 指定要包含再编译中的库文件
+    "typeRoots": ["node_modules/@types"],
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
