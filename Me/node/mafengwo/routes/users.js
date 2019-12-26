@@ -31,7 +31,8 @@ router.post('/userLogin', async(ctx, next) => {
       let result = {
         id: res[0].id,
         nickname: res[0].nickname,
-        username: res[0].identifier
+        username: res[0].identifier,
+        avatar: res[0].avatar
       }
       ctx.body = {
         code: 200,

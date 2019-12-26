@@ -30,7 +30,7 @@
 
 <script>
 import BScroll from 'better-scroll'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Setting',
   data () {
@@ -45,8 +45,14 @@ export default {
       this.$router.push({ path: '/Mine'})
     },
     loginOut () {
-      
-    }
+      console.log('退出')
+      this.deleteUserInfo()
+      this.$toast('退出成功')
+      this.$router.push({ path: '/Mine'})
+    },
+    ...mapActions([
+      'deleteUserInfo'
+    ])
   },
   computed: {
     ...mapGetters([
@@ -144,7 +150,7 @@ export default {
           .text
             font-size .36rem
             line-height 1.2rem
-            right 1.5rem
+            right 1.2rem
             position absolute
           .icon
             font-size 0.48rem

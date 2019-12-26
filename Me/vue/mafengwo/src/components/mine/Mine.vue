@@ -28,11 +28,11 @@
             <div class="top">
               <div class="left">
                 <div class="img">
-                  <img src="../../assets/imgs/QQ.png" alt="QQ">
+                  <img :src="currentUser.avatar" alt="QQ">
                 </div>
                 <div class="right">
                   <div class="top">
-                    <div class="h2">JAVA</div>
+                    <div class="h2">{{currentUser.nickname}}</div>
                     <i class="icon">&#xe613;</i>
                   </div>
                   <div class="bottom">
@@ -360,6 +360,7 @@ export default {
                 img
                   width 100%
                   height 100%
+                  border-radius 50%
               .right
                 position absolute
                 left 1.2rem

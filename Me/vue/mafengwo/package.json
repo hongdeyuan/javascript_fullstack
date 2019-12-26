@@ -16,6 +16,7 @@
     "fastclick": "^1.0.6",
     "vant": "^2.2.16",
     "vue": "^2.5.2",
+    "vue-qr": "^2.2.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

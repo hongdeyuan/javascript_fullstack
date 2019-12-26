@@ -6,6 +6,7 @@ import Mine from '@/components/mine/Mine'
 import Login from '@/components/login/Login'
 import Register from '@/components/register/Register'
 import Setting from '@/components/setting/Setting'
+import Scan from '@/components/scan/Scan'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/setting',
       name: 'Setting',
       component: Setting
+    },
+    {
+      path: '/scan',
+      name: 'Scan',
+      component: Scan
     }
   ]
 })
