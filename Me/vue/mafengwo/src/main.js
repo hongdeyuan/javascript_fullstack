@@ -10,7 +10,9 @@ import 'amfe-flexible'
 import Vant from 'vant'
 import store from './vuex/store'
 import 'vant/lib/index.css'
+import plus from 'vue-h5-plus'
 
+Vue.use(plus)
 Vue.use(Vant)
 Vue.prototype.$http = axios
 // 去除 300ms的处理时间
