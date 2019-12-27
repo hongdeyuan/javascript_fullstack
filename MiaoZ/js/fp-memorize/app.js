@@ -1,6 +1,7 @@
 var Koa = require('koa');
 var Router = require('koa-router');
 const koaStatic = require('koa-static')
+const md5 = require('md5')
  
 var app = new Koa();
 var router = new Router();
@@ -33,8 +34,22 @@ router.get('/app1.js', async (ctx) => {
   console.log('app1.js 请求')
   const fs = require('fs')
   const content = fs.readFileSync('./app1.js', 'utf-8')
-  const time = Date.now() + 1000 * 30 // 30s
+  const state = fs.statSync('./app1.js')
+  // const time = Date.now() + 1000 * 30 // 30s
+  const etag = md5(content)
+  if (ctx.req.headers['if-none-match'] === etag) {
+    ctx.status = 304
+    ctx.body = ''
+    return
+  }
+  if (ctx.req.headers['if-modified-since'] === state.mtime) {
+    ctx.status = 304
+    ctx.body = ''
+    return
+  }
   ctx.set('cache-control', 'public,max-age=30') // 30s过期
+  ctx.set('ETag', etag)
+  ctx.set('Last-Modified', state.mtime)
   ctx.body = content
 })
 app.use(router.routes())

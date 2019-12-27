@@ -1,0 +1,23 @@
+## 前端存储
+  - localStorage
+    - 永久性存储
+
+  - sessionStorage
+    - 当前页面或浏览器关闭存储自动消失
+  - cookie
+    - domain : cookie 生效的域
+    - 客户端
+      - .baidu.com: pan.baidu.com ，zhidao.baidu.com
+      - map.baidu.com : 只有自己
+    - path: 路径
+      - /
+      - /mobile
+    - domain + path ：构成cookie 生效的范围
+    - Expires/max-age 生效的时间
+    - httpOnly: 
+      - cookie: 
+        - 来源 服务器
+        - 来源 js
+      - 如果为httpOnly： true, cookie 不可以js操作
+    - Secure
+      - 只在https 环境传输 cookie
