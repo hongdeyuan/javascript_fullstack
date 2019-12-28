@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 等待上步完成  非常耗时
+    let worker = new Worker('worker.js')
+
+    // 线程之间通信  接受信息
+    worker.onmessage = function(e) {
+      console.log('接收到结果为： ', e.data)
+    }
+    worker.postMessage('开始打印 100')
+    console.log(100)
+  </script>
+</body>
+</html>
