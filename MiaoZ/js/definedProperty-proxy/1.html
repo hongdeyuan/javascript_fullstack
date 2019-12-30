@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p class="name">dhyuan</p>
+  <script>
+    // let data = {
+    //   name: 'dhyuan'
+    // }
+    // 模板 要知道 name 什么时候被改了
+    // Object.defineProperty(data, 'sex', {
+    //   enumerable: false,// 不可枚举
+    //   writable: false,// 不可修改
+    //   value: 'boy'
+    // })
+
+    // data.sex = 'nv';// 无效修改， 因为writable: false
+    // console.log(data.name)
+    // for (let key in data) {
+    //   console.log(key)// 输出name  因为name 是可枚举的
+    // }
+
+    // 第二部分
+    // let obj = {
+    //   _name: undefined,
+    //   // name: 'dhyuan'// 等价于下面的写法
+    //   get name () {
+    //     return this._name
+    //   },
+    //   set name (val) {
+    //     this._name = val
+    //   }
+    // }
+    // console.log(obj)
+    // // 第三个参数：数据描述符
+    // // defineProperty定义属性：１. value, 2. get/set
+    // Object.defineProperty(obj, 'name', {
+    //   get: function() {
+    //     return obj._name
+    //   },
+    //   set: function(newVal) {
+    //     console.log('数据改变了', newVal)
+    //     obj._name = newVal
+    //   }
+    // })
+    // obj.name = 'dhyuan'
+    // console.log(obj.name)
+
+    let data = {
+      list: [1, 2, 3]
+    }
+
+    data.list.push(5)
+
+    console.log(data.list)
+
+    // 监测数组的改变? array.html
+  </script>
+</body>
+</html>

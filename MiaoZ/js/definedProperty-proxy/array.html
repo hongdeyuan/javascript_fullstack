@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 如何知道arr 被改变了
+      let arr = [1, 2, 3];
+      arr.push(6);
+      arr[4] = 4; // 不会更新页面数值
+    const originPush = Array.prototype.push;
+    Array.prototype.push = function(...args) {
+      // 1
+      // 第一次this
+      // this === msgLsit
+      console.log(this, '数组改变了');
+      // 2 回复push的功能
+      originPush.apply(this, args);
+    }
+    arr.push(6);
+  </script>
+</body>
+</html>
