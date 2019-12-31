@@ -138,7 +138,7 @@ export default {
         // post 加密请求
         this.$http({
           method: 'post',
-          url: 'http://192.168.31.183:3000/users/userLogin',
+          url: 'http://192.168.1.102:3000/users/userLogin',
           data: {
             username: this.account.trim(),
             userpwd: this.pwd.trim(),

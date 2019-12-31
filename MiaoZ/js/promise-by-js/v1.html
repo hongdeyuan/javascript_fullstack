@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ----------
+    function myPromise(cb) {
+      let self = this;
+      function resolve(val) {
+        console.log(val);
+        self.data = val;
+      }
+      cb(resolve);
+    }
+    myPromise.prototype.then = function(onResolve) {
+      onResolve(this.data);
+    }
+
+    let p1 = new myPromise((resolve) => {
+      resolve('200');
+    })
+
+    p1.then(res => {
+      console.log(res)
+    })
+
+    // ------------
+    let p = new Promise((resolve) => {
+      resolve('ok');
+    })
+
+    p.then(res => {
+      console.log(res);
+    })
+  </script>
+</body>
+</html>
