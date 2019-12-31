@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function readFile(path, cb) {
+      setTimeout(() => {
+        cb('文件不存在')
+      }, 3000)
+    }
+    readFile('./jq.js', (data)=> {
+      console.log(data) // 3s data === 文件不存在
+    })
+
+
+    // 实现一个 myForeach 功能 和 forEach
+    var arr = [0, 1, 2, 3]
+    arr.forEach((el, i, ctx) => {
+      console.log(el, i, ctx)
+    })
+
+    function myForEach(cb) {
+      for (let i = 0; i < arr.length; i++) {
+        cb(arr[i], i, arr)
+      }
+    }
+  </script>
+</body>
+</html>

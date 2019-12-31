@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="name"></div>
+  <!-- <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script> -->
+  <!-- <script>
+    $.ajax({
+      url: './mock.json',
+      type: 'get',// 数据类型
+      dataType: 'json',
+      timeout: 5000,// 请求时长
+      async: true,// 异步,
+      success: function(data) {
+        console.log(data);
+        $('.name').html(data.name)
+      }
+    })
+  </script> -->
+
+  
+  <script>
+    var xhr = null;
+    xhr = new XMLHttpRequest();
+    // get:请求方式；'./mock.json': 访问接口；true: 异步请求
+    xhr.open('get', './mock.json', true);
+    // 发起请求
+    xhr.send();
+    // 状态变化回调
+    // readyState取值描述
+    // 0: 请求未初始化
+    // 1: 服务器连接已建立
+    // 2: 请求已接收 接收到了响应头
+    // 3: 请求处理中 正在下载响应体
+    // 4: 请求已完成，且响应已就绪
+    xhr.onreadystatechange = function() {
+      // console.log(xhr.readyState, xhr.status)
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        console.log(JSON.parse(xhr.responseText))
+        let data = JSON.parse(xhr.responseText)
+        document.querySelector('.name').innerHTML = data.name
+      }
+      
+    }
+  </script>
+</body>
+</html>
