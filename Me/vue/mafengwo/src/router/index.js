@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Lanuch from '@/components/lanuch'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/home/Home'
 import Mine from '@/components/mine/Mine'
 import Login from '@/components/login/Login'
 import Register from '@/components/register/Register'
@@ -19,8 +19,8 @@ export default new Router({
     },
     {
       path: '/home',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     },
     {
       path: '/mine',
