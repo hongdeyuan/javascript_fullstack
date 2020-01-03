@@ -1,0 +1,12 @@
+{
+  "presets": [],
+  "plugins": [[
+    "import",
+    {
+      "libraryName": "lodash",// 转换哪个库
+      "libraryDirectory": "",//dist -> lodash/dist/includes
+      "camel2DashComponentName": false // default: true
+    }
+  ]
+  ]
+}
