@@ -1,0 +1,45 @@
+{
+  "name": "vue",
+  "version": "3.0.0-alpha.1",
+  "description": "vue",
+  "main": "index.js",
+  "module": "dist/vue.runtime.esm-bundler.js",
+  "types": "dist/vue.d.ts",
+  "unpkg": "dist/vue.global.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "buildOptions": {
+    "name": "Vue",
+    "formats": [
+      "esm-bundler",
+      "esm-bundler-runtime",
+      "cjs",
+      "global",
+      "esm"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vue.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Evan You",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuejs/vue/issues"
+  },
+  "homepage": "https://github.com/vuejs/vue/tree/dev/packages/vue#readme",
+  "dependencies": {
+    "@vue/compiler-dom": "3.0.0-alpha.1",
+    "@vue/runtime-dom": "3.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.15",
+    "marked": "^0.7.0",
+    "todomvc-app-css": "^2.3.0"
+  }
+}
