@@ -7,6 +7,7 @@ import Login from '@/components/login/Login'
 import Register from '@/components/register/Register'
 import Setting from '@/components/setting/Setting'
 import Scan from '@/components/scan/Scan'
+import Test from '@/components/test'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/issue',
+      name: 'Test',
+      component: Test
     },
     {
       path: '/mine',

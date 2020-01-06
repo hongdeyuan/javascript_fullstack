@@ -53,10 +53,22 @@ let insertUser = function (value) {
   let _sql = `INSERT INTO users set username=?, userpwd=?, nickname=?`
   return allServices.query(_sql, value)
 }
+//查找首页热门搜索城市
+let findHomeHotCities = function () {
+  let _sql = `select * from home_search_city_name;`
+  return  allServices.query(_sql)
+}
+//获取首页应用列表
+let findHomeApplications = function () {
+  let _sql = `select * from home_application_icon;`
+  return  allServices.query(_sql)
+}
 
 module.exports = {
   getAllusers,
   userLogin,
   findUser,
-  insertUser
+  insertUser,
+  findHomeHotCities,
+  findHomeApplications
 }

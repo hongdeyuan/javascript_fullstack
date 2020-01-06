@@ -11,9 +11,12 @@ import Vant from 'vant'
 import store from './vuex/store'
 import 'vant/lib/index.css'
 import plus from 'vue-h5-plus'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.use(plus)
 Vue.use(Vant)
+Vue.use(VueAwesomeSwiper)
 Vue.prototype.$http = axios
 // 去除 300ms的处理时间
 fastclick.attach(document.body)
