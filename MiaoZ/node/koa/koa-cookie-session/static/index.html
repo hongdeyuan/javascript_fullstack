@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="status"></p>
+  <button id="login">提交</button>
+
+  <script>
+    // max-age: cookie 生效的时间
+    // 不加， 生效的时间是session 表示当前这次会话
+    // document.cookie = 'isLogin=true;max-age=60'
+
+    const btn = document.getElementById('login')
+    const status = document.getElementById('status')
+    btn.addEventListener('click', ()=> {
+      fetch('/login')
+      .then(res => res.json())
+      .then(data => {
+        if(data.code === 0) {
+          status.innerHTML = '用户已经登录'
+        }
+      })
+    })
+
+    check ();
+    function check () {
+      fetch('/islogin')
+      .then(res => res.json())
+      .then(data => {
+        if (data.code === 0) {
+          status.innerHTML = `${data.uid}已经登录`
+        }　else {
+          status.innerHTML = `请登录`
+        }
+      })
+    }
+  </script>
+</body>
+</html>

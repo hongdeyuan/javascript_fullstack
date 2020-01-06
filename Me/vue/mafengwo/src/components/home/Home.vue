@@ -131,4 +131,17 @@ export default {
         color black
         right 0
         top 0.24rem
+    .home_applications
+      position relative
+      box-sizing border-box
+      width 100%
+      .icon
+        width 95%
+        position relative
+        box-sizing border-box
+        .icon-img
+          width 100%
+          .icon-img-content
+            width 2rem
+            height 2rem
 </style>
