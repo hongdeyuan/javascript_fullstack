@@ -13,16 +13,18 @@
         </van-button>
         <i class="icon imessage">&#xe615;</i>
       </div>
-      <div class="home_applications">
-        <div class="icon" v-for="item of home_application_list" :key="item.id">
-          <div class="icon-img">
-            <img
-              :src="item.icon"
-              class="icon-img-content"
-              />
-          </div>
-          <p class="icon-desc">{{item.name}}</p>
-        </div>
+      <div class="home_applications" ref="wraper">
+        <ul class="applicationScroll" ref="applicationScroll">
+          <li class="icon" v-for="item of home_application_list" :key="item.id">
+            <div class="icon-img">
+              <img
+                :src="item.icon"
+                class="icon-img-content"
+                />
+            </div>
+            <p class="icon-desc">{{item.name}}</p>
+          </li>
+        </ul>
       </div>
       <div class="home_content"></div>
     </div>
@@ -30,11 +32,13 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
   data () {
     return {
       home_hot_search_cities: [],
       home_application_list: [],
+      home_menus_list: [],
       swiperOption: {
         direction: 'vertical',
         loop: true,
@@ -56,6 +60,17 @@ export default {
     go_search (e) {
       console.log(e)
       this.$toast('去搜索')
+    },
+    _initScroll () {
+      let self = this
+      let width = this.home_application_list.length * 2// 动态计算出滚动区域的大小，前面已经说过了，产生滚动的原因是滚动区域宽度大于父盒子宽度
+      this.$refs.applicationScroll.style.width = width + 'rem'  // 修改滚动区域的宽度
+      self.wraper = new BScroll(self.$refs.wraper, {
+        click: true,
+        probeType: 3,
+        scrollX: true,
+        scrollY: false
+      })
     }
   },
   mounted() {
@@ -83,6 +98,24 @@ export default {
         // 本地存储数据
         this.home_application_list = res.data.data
         sessionStorage.setItem('home_application_list', JSON.stringify(res.data.data))
+        this.$nextTick(() => { // 使用 this.$nextTick 为了确保组件已经渲染完毕
+          this._initScroll()
+        })
+      }
+    }).catch((err) =>{
+      console.log(err)
+    })
+
+    // 获取菜单列表
+    this.$http({
+      method: 'post',
+      url: 'http://localhost:3000/home/menus',
+    }).then((res) => {
+      console.log(res)
+      if (res.data.code === 200) {
+        // 本地存储数据
+        this.home_menus_list = res.data.data
+        sessionStorage.setItem('home_menus_list', JSON.stringify(res.data.data))
       }
     }).catch((err) =>{
       console.log(err)
@@ -94,6 +127,8 @@ export default {
 <style lang="stylus" scoped>
 .home
   position relative
+  width 100%
+  height 100%
   background-color #fff
   .home_waper
     margin auto
@@ -134,14 +169,30 @@ export default {
     .home_applications
       position relative
       box-sizing border-box
+      overflow hidden
+      padding-bottom 0.4rem
       width 100%
-      .icon
-        width 95%
-        position relative
-        box-sizing border-box
-        .icon-img
-          width 100%
-          .icon-img-content
+      .applicationScroll
+        list-style none
+        overflow hidden
+        white-space nowrap
+        .icon
+          width 2rem
+          height 2rem
+          padding-top 0.4rem
+          position relative
+          display inline-block
+          box-sizing border-box
+          .icon-img
             width 2rem
-            height 2rem
+            height 1.4rem
+            .icon-img-content
+              margin auto
+              width 1.2rem
+              height 1.4rem
+          .icon-desc
+            width 2rem
+            height 0.6rem
+            padding-top 0.2rem
+            font-size 0.36rem
 </style>

@@ -68,4 +68,31 @@ router.post('/applications', async(ctx, next) => {
   })
 })
 
+// 获取首页菜单列表
+router.post('/menus', async(ctx, next) => {
+  await homeServices.findHomeMenus().then((res) => {
+    if (res.length) {
+      ctx.body = {
+        code: 200,
+        data: res,
+        message: '获取成功'
+      }
+    } else {
+      ctx.body = {
+        code: 404,
+        data: 'error',
+        message: '没有该数据资源'
+      }
+    }
+
+  })
+  .catch((err) => {
+    ctx.body = {
+      code: 500,
+      data: 'error',
+      message: err
+    }
+  })
+})
+
 module.exports = router

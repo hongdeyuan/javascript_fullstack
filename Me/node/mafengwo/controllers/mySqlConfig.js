@@ -64,11 +64,18 @@ let findHomeApplications = function () {
   return  allServices.query(_sql)
 }
 
+// 获取首页菜单
+let findHomeMenus = function() {
+  let _sql = `select * from home_menus;`
+  return  allServices.query(_sql)
+}
+
 module.exports = {
   getAllusers,
   userLogin,
   findUser,
   insertUser,
   findHomeHotCities,
-  findHomeApplications
+  findHomeApplications,
+  findHomeMenus
 }
