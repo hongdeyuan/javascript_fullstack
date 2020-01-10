@@ -1,21 +1,22 @@
+import { Component } from 'vue-property-decorator';
 <template>
-  <div class='home'>
-    <canvas id='sakura'></canvas>
-    <div class='content'>
-      <div class='home-header'>
-        <router-link class='link' to='/home'>
-          <img src='../assets/tian.jpg' alt='' class='home-logo'>
+  <div class="home">
+    <canvas id="sakura"></canvas>
+    <div class="content">
+      <div class="home-header">
+        <router-link class="link" to="/home">
+          <img src="../assets/logo.jpg" alt="" class="home-logo">
         </router-link>
       </div>
       <div class='home-body'>
         <div class='list'>
           <router-link class='link' to='/articles'>文章</router-link>
           <router-link class='link' to='/project'>项目</router-link>
-          <a class='link' target='_blank' href='https://github.com/hongdeyuan'>Github</a>
-          <a class='link' target='_blank' href='https://github.com/hongdeyuan'>掘金</a>
-          <a class='link' target='_blank' href='https://github.com/hongdeyuan'>知乎</a>
-          <a class='link' target='_blank' href='https://github.com/hongdeyuan'>segmentfault</a>
-          <a class='link' target='_blank' href='https://github.com/hongdeyuan'>简书</a>
+          <a class='link' target='_blank' href='https://github.com/cleversnail'>Github</a>
+          <a class='link' target='_blank' href='https://github.com/cleversnail'>掘金</a>
+          <a class='link' target='_blank' href='https://github.com/cleversnail'>知乎</a>
+          <a class='link' target='_blank' href='https://github.com/cleversnail'>segmentfault</a>
+          <a class='link' target='_blank' href='https://github.com/cleversnail'>简书</a>
         </div>
       </div>
       <div class="introduce">我要一步一步往上爬</div>
@@ -23,13 +24,12 @@
   </div>
 </template>
 
-
 <script lang="ts">
-// @ is an alias to /src
+import { Vue, Component } from 'vue-property-decorator'
 
-export default {
-  name: "home",
-  mounted() {
+@Component
+export default class Home extends Vue {
+  mounted () {
     let sakura_point_vsh: string = `
     uniform mat4 uProjection;
     uniform mat4 uModelview;
@@ -1299,14 +1299,16 @@ export default {
         };
     })(window, 'equestAnimationFrame');
   }
-};
+}
 </script>
+
 
 <style lang='less' scoped>
 .home {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10;
   .content {
     position: fixed;
     left: 0;
