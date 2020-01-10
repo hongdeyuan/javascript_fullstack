@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+			ul {
+				font-size: 0;
+			}
+      /* > : 表示 直接子元素 */
+      ul > li{
+        display: inline-block;
+				background-color: aqua;
+				font-size: initial;
+      }
+    </style>
+</head>
+<body>
+  <ul>
+    <li>A</li><li>B</li><li>C</li>
+    <!-- 231 -->
+	</ul>
+	
+	<script>
+		const ul = document.querySelector('ul');
+		console.log(ul.childNodes);// NodeList(7) [text, li, text, li, text, li, text]
+		// 为什么 第一个和第二个是为 0 X 0 -> 原因在于 html 元渲染规则： 首位没为0，其它文本节点多个空格合并为一个
+		
+		// 解决方式一 ： 把所有元素换成一行
+    // 解决方案二： font-size: 0, 子集换回: font-size: initial;
+    
+    ul.childNodes.forEach(node => {
+      console.log(node, node.nodeType, node.nodeValue)
+    })
+	</script>
+</body>
+</html>
