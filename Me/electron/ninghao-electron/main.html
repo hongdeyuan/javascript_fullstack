@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  hello, 2020
+  <script>
+    const { ipcRenderer } = require('electron')
+    // 事件机制
+    // 向外发布一个 greet
+    ipcRenderer.send('greet', {
+      message: 'hello main'
+    })
+    ipcRenderer.on('greet', (event, args) => {
+      console.log(args)
+    })
+  </script>
+</body>
+</html>

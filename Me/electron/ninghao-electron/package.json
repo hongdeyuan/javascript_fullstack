@@ -1,0 +1,12 @@
+{
+  "name": "ninghao-electron",
+  "version": "1.0.0",
+  "description": "-- 美团美食店里 为啥web?不ok?  可安装的 electron exe应用呢？\r    浏览器有可能 不是应用\r    单页应用没有一个 壳\r    vue/ react APP + 给你一个应用的 exe的壳",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
