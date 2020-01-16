@@ -1,0 +1,51 @@
+.index{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .search{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 25rpx 0 10rpx;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+
+    div:nth-child(1) {
+      width: 115rpx;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 20rpx;
+      padding-right: 15rpx;
+    }
+
+    div:nth-child(2) {
+      flex: 1;
+      position: relative;
+
+      input{
+        width: 100%;
+        height: 56rpx;
+        border-radius: 8rpx;
+        background: #ededed;
+        box-sizing: border-box;
+        padding-left: 40rpx;
+      }
+      .icon{
+        position: absolute;
+        top: 15rpx;
+        left: 10rpx;
+        background: url('http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/search2-2fb94833aa.png') center no-repeat;
+        background-size: 100%;
+        width: 28rpx;
+        height: 28rpx;
+        margin-right: 10rpx;
+      }
+    }
+  }
+}
