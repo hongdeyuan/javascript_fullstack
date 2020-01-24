@@ -12,11 +12,11 @@ import { Component } from 'vue-property-decorator';
         <div class='list'>
           <router-link class='link' to='/articles'>文章</router-link>
           <router-link class='link' to='/project'>项目</router-link>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>Github</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>掘金</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>知乎</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>segmentfault</a>
-          <a class='link' target='_blank' href='https://github.com/cleversnail'>简书</a>
+          <a class='link' target='_blank' href='https://github.com/hongdeyuan'>Github</a>
+          <a class='link' target='_blank' href='https://juejin.im/user/5d6b46176fb9a06b032015c0'>掘金</a>
+          <a class='link' target='_blank' href='https://www.zhihu.com/people/yuan-de-hong-6'>知乎</a>
+          <a class='link' target='_blank' href='https://segmentfault.com/u/honghong_5d6b45aecc578'>segmentfault</a>
+          <a class='link' target='_blank' href='https://www.jianshu.com/u/9f7af95aca31'>简书</a>
         </div>
       </div>
       <div class="introduce">我要一步一步往上爬</div>
