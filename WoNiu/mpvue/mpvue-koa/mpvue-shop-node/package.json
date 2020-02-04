@@ -1,0 +1,17 @@
+{
+  "name": "mpvue-shop-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knext": "^0.1.0",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.6"
+  }
+}
