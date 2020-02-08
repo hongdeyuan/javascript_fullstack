@@ -40,18 +40,10 @@ export default {
   padding: 200rpx 0;
   box-sizing: border-box;
 }
-/* this rule will be remove */
-* {
-  transition: width 2s;
-  -moz-transition: width 2s;
-  -webkit-transition: width 2s;
-  -o-transition: width 2s;
-}
 page{
-  height: 100%;
   background: #f4f4f4;
+  height: 100%;
 }
-
 button{
   background: none;
   padding: 0;
@@ -64,7 +56,7 @@ button::after{
 }
 view,text{
   font-size: 28rpx;
-  color: #333;
+  color: #333333;
 }
 .wxParse .p{
   margin: 0 !important;

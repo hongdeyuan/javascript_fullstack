@@ -10,4 +10,4 @@ const CONF = {
   }
 }
 
-module.exports = CONF;
+module.exports = CONF

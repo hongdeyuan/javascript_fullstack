@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "knext": "^0.1.0",
+    "knex": "^0.20.8",
     "koa": "^2.11.0",
-    "koa-router": "^8.0.6"
+    "koa-router": "^8.0.6",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
