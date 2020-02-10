@@ -108,11 +108,13 @@ export default {
   },
   methods: {
     async goodsDetail () {
+      this.id = this.$root.$mp.query.id// 获取页面id
+      // console.log(this.id)
       const data = await get('/goods/detailaction', {
-        id: 1009024,
+        id: this.id,
         openId: this.openId
       })
-      console.log(data)
+      // console.log(data)
       this.info = data.info
       this.gallery = data.gallery
       this.attribute = data.attribute
