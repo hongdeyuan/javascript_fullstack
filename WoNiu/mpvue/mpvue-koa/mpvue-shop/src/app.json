@@ -1,7 +1,8 @@
 {
   "pages": [
+    "pages/addressSelect/main",
     "pages/index/main",
-    "pages/goods/main",
+    "pages/order/main",
     "pages/search/main",
     "pages/topic/main",
     "pages/category/main",
@@ -10,7 +11,9 @@
     "pages/mappage/main",
     "pages/brandlist/main",
     "pages/newgoods/main",
-    "pages/topicdetail/main"
+    "pages/topicdetail/main",
+    "pages/goods/main",
+    "pages/addaddress/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
