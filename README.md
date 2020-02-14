@@ -10,6 +10,7 @@
   ## 饿了么-WoNiu/vue/vue-ele-app
   ## 网易云音乐 - WoNiu/vue/vue-music
   ## 天气预报 - WoNiu/vue/vue-weather
+  ## 网易严选 - WoNiu/mpvue/mpvue-koa
   ## noteBook - WoNiu/node/nodeBook
   ## 滴滴单车小程序 - Yudao/wechatApp/didi_bike
   ## 去哪儿旅行 - MaoZ/vue/qunar-webpack
