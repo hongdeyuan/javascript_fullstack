@@ -81,8 +81,38 @@ export default {
         }
       }
     },
-    orderDown () {
-      
+    async orderDown () {
+      if (this.Listids.length === 0) {
+        wx.showToast({
+          title: '请选择商品',
+          icon: 'none',
+          duration: 1500,
+        });
+        return false
+      }
+      // 祛除数组中的false
+      let newgoodsid = []
+      for (let i = 0; i < this.Listids.length; i++) {
+        const element = this.Listids[i];
+        if (element) {
+          newgoodsid.push(element)
+        }
+      }
+
+      let goodsId = newgoodsid.join(',')
+      const data = await post('/order/submitAction', {
+        goodsId: goodsId,
+        openId: this.openId,
+        allPrice: this.allPrice
+      })
+
+      // console.log(data)
+
+      if (data) {
+        wx.navigateTo({
+          url: '/pages/order/main'
+        });
+      }
     }
   },
   computed: {

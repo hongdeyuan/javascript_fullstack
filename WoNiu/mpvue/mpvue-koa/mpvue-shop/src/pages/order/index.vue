@@ -67,7 +67,7 @@ export default {
     return {
       address: {},
       price: '',
-      allprice: '',
+      allprice: 0,
       openId: '',
       addressId: '',
       listData: []
