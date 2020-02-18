@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App'
+import Cartsample from './component/CartSample'
 
-ReactDOM.render(<App/>, document.querySelector('#root'))
+ReactDOM.render(<Cartsample/>, document.querySelector('#root'))
