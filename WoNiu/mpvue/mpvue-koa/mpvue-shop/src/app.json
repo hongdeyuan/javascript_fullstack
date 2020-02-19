@@ -13,7 +13,8 @@
     "pages/newgoods/main",
     "pages/topicdetail/main",
     "pages/goods/main",
-    "pages/addaddress/main"
+    "pages/addaddress/main",
+    "pages/categroylist/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
