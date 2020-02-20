@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
 class App extends Component {
-  render () {// jsx
+  render () { // jsx
     return <div>
-      <button>hello</button>
-    </div>
+            <button>hello</button>
+          </div>
   }
 }
 
-export default App;
+export default App
