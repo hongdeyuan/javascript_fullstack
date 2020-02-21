@@ -6,6 +6,8 @@ import CommentVs from './components/CommentVs'
 import PureComponentTest from './components/PureComponentTest'
 import ButtonTest from './components/ButtonTest'
 import Hoc from './components/Hoc'
+import KFormSample from './components/KFormSample'
+import HooksTest from './components/HooksTest'
 import ContextSample from './components/ContextSample'
 // import App from './App'
 
@@ -159,4 +161,4 @@ class FeatureReturnFraments extends React.Component {
 
 // ReactDOM.render(<PureComponentTest body='vue is very good' author='youyuxi'/>, document.querySelector('#root'))
 // ReactDOM.render(<Hoc state="React"/>, document.getElementById('root'))
-ReactDOM.render(<ContextSample/>, document.getElementById('root'))
+ReactDOM.render(<KFormSample/>, document.getElementById('root'))
