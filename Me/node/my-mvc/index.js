@@ -1,6 +1,8 @@
-const app = new(require('koa'))()
-const { initRouter } = require('./lm-loader')
-// router.routes()作用：启动路由
-app.use(initRouter().routes())
+// const app = new(require('koa'))()
+// const { initRouter } = require('./lm-loader')
+// app.use(initRouter().routes())
+// app.listen(3000)
 
-app.listen(3000)
+const lm = require('./lm')
+const app = new lm()
+app.start(3000)
