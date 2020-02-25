@@ -42,10 +42,10 @@ function initRouter (app) {
 }
 
 
-function initController () {
+function initController (app) {
   const controllers = {}
   load('controller', (filename, controller) => {
-    controllers[filename] = controller
+    controllers[filename] = controller(app)
   })
   return controllers
 }
@@ -58,11 +58,45 @@ function initService () {
   return services
 }
 
+const Sequelize = require('sequelize')
+function loadConfig (app) {
+  load('config', (filename, conf) => {
+    if (conf.db) {
+      app.$db = new Sequelize(conf.db)
+
+      // 加载模型
+      app.$model = {}
+      load('model', (filename, { schema, options}) => {
+        app.$model[filename] = app.$db.define(filename, schema, options)// define用来创建模板层 
+      })
+      app.$db.sync()// 模块同步
+    }
+    // 中间件加载
+    if (conf.middleware) {
+      conf.middleware.forEach(mid => {
+        const  midPath = path.resolve(__dirname, 'middleware', mid)
+        app.$app.use(require(midPath))
+      })
+    }
+  })
+}
+
+// 定时任务
+const schedule = require('node-schedule')
+function initSchedule () {
+  load('schedule', (filename, {interval, handler}) => {
+    // console.log(interval, handler)
+    schedule.scheduleJob(interval, handler)
+  })
+}
+
 
 module.exports = {
   initRouter,
   initController,
-  initService
+  initService,
+  loadConfig,
+  initSchedule
 }
 
 // load('routes', filename => console.log('routes:' + filename))
