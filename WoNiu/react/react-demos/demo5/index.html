@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../build/react.development.js"></script>
+  <script src="../build/react-dom.development.js"></script>
+  <script src="../build/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="example"></div>
+
+  <!-- this.props.children -->
+
+  <script type="text/babel">
+
+    class NotesList extends React.Component {
+      render() {
+        return (
+          <ol>
+            {
+              React.Children.map(this.props.children, function(child) {
+                return <li>{child}</li>
+              })
+            }
+          </ol>
+        )
+      }
+    }
+    
+
+    // this.props对象的属性与组件的属性是一一对应
+    // 但是this.props.children属性是一个例外，它表示组件所有子节点
+    // vue要使用solt才能在组件中加html标签, react不用
+    ReactDOM.render(
+      // 组件被调用时内部再插入html内容，该内部会被视为参数
+      <div>
+        <NotesList name="wn">
+          <span>德哈卡</span>
+          <span>打手i发</span>
+        </NotesList>
+      </div>,
+      document.getElementById('example')
+    )
+  </script>
+</body>
+</html>
