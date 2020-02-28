@@ -32,6 +32,11 @@
 
     // this.props对象的属性与组件的属性是一一对应
     // 但是this.props.children属性是一个例外，它表示组件所有子节点
+    // this.props.children值有三种情况：
+    // 1. 如果当前没有子节点，则为undefined
+    // 2. 如果当前有一个子节点，类型则为object
+    // 3. 如果当前有多个子节点，则为array
+
     // vue要使用solt才能在组件中加html标签, react不用
     ReactDOM.render(
       // 组件被调用时内部再插入html内容，该内部会被视为参数

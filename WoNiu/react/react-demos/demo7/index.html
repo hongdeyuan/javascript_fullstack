@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../build/react.development.js"></script>
+  <script src="../build/react-dom.development.js"></script>
+  <script src="../build/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="example"></div>
+
+  <script type="text/babel">
+
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props)
+        this.myTextInput  = React.createRef()
+        this.handleClick = this.handleClick.bind(this)
+      }
+
+      handleClick () {
+        this.myTextInput.current.focus()
+      }
+
+      render() {
+        // ref 的值一定要是被 React.creatrRef()认证过的
+        return (
+          <div>
+            <input type="text" ref={this.myTextInput}/>
+            <input type="button" value="Focus the text input" onClick={this.handleClick} />
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(
+      <MyComponent/>,
+      document.getElementById('example')
+    )
+  </script>
+</body>
+</html>
