@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { Layout, Row, Col, Menu } from 'antd'
 import {
   SmileOutlined,
-  HomeOutlined
+  HomeOutlined,
+  StarOutlined,
+  EditOutlined,
+  TeamOutlined
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import menus from '../../../Router/web'
@@ -25,8 +28,8 @@ class HeaderCustom extends Component {
     const menuList = list.map((item, i) => {
       return <Menu.Item key={i}>
               <Link to={item.path}>
-                {/* <item.icon /> */}
-                <HomeOutlined />
+                <item.icon />
+                {/* <HomeOutlined /> */}
                 <span className="nav-text">{item.title}</span>
               </Link>
              </Menu.Item>
