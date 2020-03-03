@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { List, Tag } from 'antd'
+// import api from '../../../api/index'
 import {
-  StarOutlined,
-  LikeOutlined,
-  MessageOutlined
+  TagsOutlined,
+  FolderOutlined,
+  CalendarOutlined,
+  EyeOutlined
 } from '@ant-design/icons'
 import { color } from '../../../utils'
 import './list.less'
@@ -103,6 +105,29 @@ class BlogList extends Component {
     }
   }
 
+  // componentDidMount() {
+  //   this.getList()
+  // }
+  // async getList () {
+  //   this.setState({
+  //     loading: true
+  //   })
+    // const params = {
+    //   pageNo: this.state.pageNo,
+    //   pageSize: this.state.pageSize
+    // }
+  //   const { data, code, total } = await api.get('http://xiangxi.red/api/article/list', params)
+    
+  //   if ( code === 1000) {
+  //     console.log(data)
+  //     this.setState({
+  //       data,
+  //       total
+  //     })
+  //   }
+
+  // }
+
   render() {
     const IconText = ({ icon, text }) => (
       <span>
@@ -113,18 +138,30 @@ class BlogList extends Component {
     return (
       <div className="list-wrapper">
         <List
+          pagination = {
+             {pageSize: 3}
+          }
           dataSource={this.state.data}
           renderItem={(item, index) => (
             <List.Item
               key={index}
               actions={[
-                <IconText icon={StarOutlined} text="156" key="list-vertical-star-o" />,
-                <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
-                <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
+                <IconText icon={TagsOutlined} text={
+                  item.tag.map(v => (
+                  <Tag color={color[Math.floor(Math.random()*color.length)]} key={item + Math.random()}>{v}</Tag>
+                  ))
+                } key="list-vertical-star-o" />,
+                <IconText icon={FolderOutlined} text={
+                  item.category.map(v => (
+                    <Tag color={color[Math.floor(Math.random()*color.length)]} key={item + Math.random()}>{v}</Tag>
+                    ))
+                } key="list-vertical-like-o" />,
+                <IconText icon={CalendarOutlined} text={item.createdAt} key="list-vertical-message" />,
+                <IconText icon={EyeOutlined} text={item.readedCount} key="list-vertical-message" />,
               ]}>
               <List.Item.Meta
-                title="标题"
-                description="描述"
+                title={item.title}
+                description={item.summary}
               />
             </List.Item>
           )}

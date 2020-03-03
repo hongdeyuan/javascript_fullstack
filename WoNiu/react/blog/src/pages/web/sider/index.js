@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import avatar from '../../../assets/test.jpg'
+import avatar from '../../../assets/dhyuan.jpg'
 import { Card, Tag, Divider } from 'antd'
 import './index.less'
 import { color } from '../../../utils'
@@ -101,12 +101,12 @@ class SiderCustom extends Component {
             <img src={avatar} alt="avatar" title="hello world" />
           </header>
           <p className="admin-name">
-            蜗牛
+            红红
           </p>
           <p className="admin-desc">
-            爱唱歌，爱coding
+            爱旅游，爱coding
             <br />
-            猛哥贼拉帅
+            帅气的程序猿
           </p>
         </div>
         <div className="recent-article">

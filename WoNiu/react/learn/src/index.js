@@ -161,4 +161,4 @@ class FeatureReturnFraments extends React.Component {
 
 // ReactDOM.render(<PureComponentTest body='vue is very good' author='youyuxi'/>, document.querySelector('#root'))
 // ReactDOM.render(<Hoc state="React"/>, document.getElementById('root'))
-ReactDOM.render(<KFormSample/>, document.getElementById('root'))
+ReactDOM.render(<Lifecycle/>, document.getElementById('root'))
