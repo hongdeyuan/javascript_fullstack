@@ -31,7 +31,7 @@ class Archive extends Component {
     .then(function (response) {
       
       if (response.data.code === 1000) {
-        // console.log(response.data.data);
+        console.log(response.data.data);
         that.setState({
           data: response.data.data
         })
