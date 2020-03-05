@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Timeline, Card } from 'antd';
 import { color } from '../../../utils'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { ClockCircleOutlined } from '@ant-design/icons';
 import './index.less'
@@ -53,7 +54,7 @@ class Archive extends Component {
             {
               this.state.data.map((item, index) => (
                 <Timeline.Item  color={color[Math.floor(Math.random()*color.length)]} key={item + Math.random()} key={index}>
-                  {item.createdAt}   {item.title}
+                  <Link to={{pathname: '/web/detail', query :{ id: item.id}}}>{item.createdAt}   {item.title}</Link>
                 </Timeline.Item>
               ))
             }

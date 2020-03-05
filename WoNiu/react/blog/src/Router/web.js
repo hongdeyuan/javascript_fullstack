@@ -10,6 +10,7 @@ const List = loadable(() => import('../pages/web/list/list'))
 const Archive = loadable(() => import('../pages/web/archive'))
 const Star = loadable(() => import('../pages/web/star'))
 const About = loadable(() => import('../pages/web/about'))
+const Detail = loadable(() => import('../pages/web/detail'))
 
 const webRoutes = [
   {
@@ -39,6 +40,13 @@ const webRoutes = [
     title: '关于',
     path: '/web/about',
     component: About
+  },
+  {
+    menu: false,
+    icon: TeamOutlined,
+    title: '详情',
+    path: '/web/detail',
+    component: Detail
   }
 ]
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { List, Tag } from 'antd'
+import { Link } from 'react-router-dom'
 // import api from '../../../api/index'
 import {
   TagsOutlined,
@@ -143,27 +144,29 @@ class BlogList extends Component {
           }
           dataSource={this.state.data}
           renderItem={(item, index) => (
-            <List.Item
-              key={index}
-              actions={[
-                <IconText icon={TagsOutlined} text={
-                  item.tag.map(v => (
-                  <Tag color={color[Math.floor(Math.random()*color.length)]} key={item + Math.random()}>{v}</Tag>
-                  ))
-                } key="list-vertical-star-o" />,
-                <IconText icon={FolderOutlined} text={
-                  item.category.map(v => (
+            <Link to={{pathname: '/web/detail', query :{ id: item.id}}}>
+              <List.Item
+                key={index}
+                actions={[
+                  <IconText icon={TagsOutlined} text={
+                    item.tag.map(v => (
                     <Tag color={color[Math.floor(Math.random()*color.length)]} key={item + Math.random()}>{v}</Tag>
                     ))
-                } key="list-vertical-like-o" />,
-                <IconText icon={CalendarOutlined} text={item.createdAt} key="list-vertical-message" />,
-                <IconText icon={EyeOutlined} text={item.readedCount} key="list-vertical-message" />,
-              ]}>
-              <List.Item.Meta
-                title={item.title}
-                description={item.summary}
-              />
-            </List.Item>
+                  } key="list-vertical-star-o" />,
+                  <IconText icon={FolderOutlined} text={
+                    item.category.map(v => (
+                      <Tag color={color[Math.floor(Math.random()*color.length)]} key={item + Math.random()}>{v}</Tag>
+                      ))
+                  } key="list-vertical-like-o" />,
+                  <IconText icon={CalendarOutlined} text={item.createdAt} key="list-vertical-message" />,
+                  <IconText icon={EyeOutlined} text={item.readedCount} key="list-vertical-message" />,
+                ]}>
+                <List.Item.Meta
+                  title={item.title}
+                  description={item.summary}
+                />
+              </List.Item>
+            </Link>
           )}
         >
           {/* {
