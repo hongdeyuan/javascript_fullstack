@@ -42,8 +42,8 @@
       let timeout;
       // onclick onmousemove 调用
       return function (e) {
-        if (timer) {  
-          clearTimeout(timer);
+        if (timeout) {  
+          clearTimeout(timeout);
         }
         timeout = setTimeout(() => {
           func(e);

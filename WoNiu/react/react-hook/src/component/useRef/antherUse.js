@@ -15,11 +15,19 @@ function Example() {
   }
 
   const [text, setText] = useState('dhyuan')
+  const textRef = useRef()
+
+  useEffect(() => {
+    textRef.current = text 
+    console.log(textRef.current)
+  })
   return (
     <div>
       <input ref={inputEl} type="text"/>
       <button onClick={onButtonClick}>在input上展示文字</button>
       <br/>
+      <hr/>
+      <input type="text" onChange={(e) => {setText(e.target.value)}} value={text}/>
     </div>
   )
 }
