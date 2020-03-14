@@ -1,0 +1,44 @@
+{
+  "id": "1689475",
+  "name": "jianshu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "这是简述icon仓库",
+  "glyphs": [
+    {
+      "icon_id": "7926822",
+      "name": "下载",
+      "font_class": "download",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "8497374",
+      "name": "指南针",
+      "font_class": "zhinanzhen3",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "677569",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "1621077",
+      "name": "Aa",
+      "font_class": "Aa",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "2356808",
+      "name": "毛笔",
+      "font_class": "maobi",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}
