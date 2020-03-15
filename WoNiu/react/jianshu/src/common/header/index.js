@@ -1,68 +1,72 @@
-import React, { Component } from 'react'
+import React from 'react'
 //  react-transition-group 为react样式库
 import { CSSTransition } from 'react-transition-group'
+import { connect } from 'react-redux'
 
-import {HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition, Button, SearchWrapper} from './style'
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      focused: false
-    }
-  }
+import { actionCreators } from './store'
 
-  handleFocus = () => {
-    this.setState({
-      focused: true
-    })
-  }
+import { HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition, Button, SearchWrapper } from './style'
 
-  handleBlur = () => {
-    this.setState({
-      focused: false
-    })
-  }
-  
-  render() {
-    return (
-      <HeaderWrapper>
-        <Logo/>
-        <Nav>
-          <NavItem className="left active">
-            <span className="iconfont">&#xe600;</span>首页
+// 无状态组件的性能比有状态组件高
+const Header = (props) => {
+  return (
+    <HeaderWrapper>
+      <Logo />
+      <Nav>
+        <NavItem className="left active">
+          <span className="iconfont">&#xe600;</span>首页
           </NavItem>
-          <NavItem className="left">
-            <span className="iconfont">&#xe611;</span>下载App
+        <NavItem className="left">
+          <span className="iconfont">&#xe611;</span>下载App
           </NavItem>
-          <NavItem className="right">登录</NavItem>
-          <NavItem className="right">
-            <span className="iconfont">&#xe636;</span>
-          </NavItem>
-          <SearchWrapper>
-            <CSSTransition 
-              timeout={200} 
-              in={this.state.focused}
-              classNames="slide"
-              >
-                {/* slide-enter slide-enter-active slide-exit slide-exit-active */}
-              <NavSearch 
-                onFocus={this.handleFocus}
-                className={this.state.focused ? 'focused' : ''}
-                onBlur={this.handleBlur}
-                ></NavSearch>
-              </CSSTransition>
-            <span className={this.state.focused ? 'iconfont focused' : 'iconfont'}>&#xe617;</span>
-          </SearchWrapper>
-        </Nav>
-        <Addition>
-          <Button className="writting">
-            <span className="iconfont">&#xe62e;</span>写文章
+        <NavItem className="right">登录</NavItem>
+        <NavItem className="right">
+          <span className="iconfont">&#xe636;</span>
+        </NavItem>
+        <SearchWrapper>
+          <CSSTransition
+            timeout={200}
+            in={props.focused}
+            classNames="slide"
+          >
+            {/* slide-enter slide-enter-active slide-exit slide-exit-active */}
+            <NavSearch
+              onFocus={props.handleFocus}
+              className={props.focused ? 'focused' : ''}
+              onBlur={props.handleBlur}
+            ></NavSearch>
+          </CSSTransition>
+          <span className={props.focused ? 'iconfont focused' : 'iconfont'}>&#xe617;</span>
+        </SearchWrapper>
+      </Nav>
+      <Addition>
+        <Button className="writting">
+          <span className="iconfont">&#xe62e;</span>写文章
           </Button>
-          <Button className="reg">注册</Button>
-        </Addition>
-      </HeaderWrapper>
-    );
+        <Button className="reg">注册</Button>
+      </Addition>
+    </HeaderWrapper>
+  )
+}
+
+
+const mapStateToProps = (state) => {
+  return {
+    focused: state.header.get('focused')
+  }
+}
+// store.dispatch => props
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleFocus() {
+      const action = actionCreators.searchFocus()
+      dispatch(action)
+    },
+    handleBlur() {
+      const action = actionCreators.searchBlur()
+      dispatch(action)
+    }
   }
 }
 
-export default Header
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
