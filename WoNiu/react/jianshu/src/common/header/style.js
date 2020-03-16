@@ -21,11 +21,11 @@ export const Logo = styled.a.attrs({
   background-size: contain;
 `
 export const Nav = styled.div`
-  width: 50%;
+  width: 800px;
   margin: 0 auto;
-  height: 100%;
+  height: 58px;
   background: #fff;
-  padding-right: 3.24%;
+  padding-right: 68px;
   box-sizing: border-box;
 `
 
