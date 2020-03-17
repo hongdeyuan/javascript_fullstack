@@ -6,6 +6,27 @@
   "description": "这是简述icon仓库",
   "glyphs": [
     {
+      "icon_id": "886993",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "7235516",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e704",
+      "unicode_decimal": 59140
+    },
+    {
+      "icon_id": "7556165",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
       "icon_id": "7926822",
       "name": "下载",
       "font_class": "download",

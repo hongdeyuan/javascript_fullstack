@@ -1,23 +1,37 @@
 import { fromJS } from 'immutable'
+import { types } from './index'
 // fromJS 转换成 immutable对象
 // immutable.js
 // immutable对象 - 不可改变的对象
 const defaultState = fromJS({
-  topicList: [
-    {
-    id: 1,
-    title: '社会热点',
-    imgUrl: 'https://upload.jianshu.io/users/upload_avatars/3950651/acfaa0ce-42fe-424a-b7c8-9a0136fb96ec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp'
-  },
-  {
-    id: 2,
-    title: '手绘',
-    imgUrl: 'https://upload.jianshu.io/users/upload_avatars/7416466/fc1a1a0d-e3c7-4bca-9720-028c5c9914f3.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp'
-  }
-]
+  topicList: [],
+  articleList: [],
+  recommendList: [],
+  users: [],
+  display: true,
+  showScroll: true,
+  articlePage: 1
 })
 
 export default (state = defaultState, action) => {
-
-  return state
+  switch (action.type) {
+    case types.CHANGE_HOME_DATA:
+      return state.merge({// 把多个对象合并成一个对象
+        topicList: fromJS(action.topicList),
+        articleList: fromJS(action.articleList),
+        recommendList: fromJS(action.recommendList),
+        users: fromJS(action.users)
+      });
+    case types.CHANGE_HOME_QRCODE: 
+      return state.set('display', false);
+    case types.CHANGE_HOME_QRCODE_NONE: 
+      return state.set('display', true);
+    case types.ADD_HOME_ARTICLE_LIST:
+      return state.merge({
+        articleList: state.get('articleList').concat(action.list),
+        articlePage: action.nextPage
+      });
+    default:
+      return state;
+  }
 }
