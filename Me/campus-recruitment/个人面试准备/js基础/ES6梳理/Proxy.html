@@ -1,0 +1,27 @@
+<script>
+  // Proxy 是针对整个对象， 而defineProperty是针对对象的属性
+  let a = [1, 2, 3] //{ a: 1}
+  // set get
+  // Object.defineProperty 只能对已有的元素进行劫持
+  let b = new Proxy(a, {
+    get: (...rest) => {
+      console.log('get')
+      return Reflect.get(...rest)
+    },
+    set: (...rest) => { 
+      console.log('set')
+      return Reflect.set(...rest)
+     },
+    deleteProperty: (...rest) => { 
+      console.log('deleteProperty')
+      return Reflect.deleteProperty(...rest)
+     },
+    getPrototypeOf: (...rest) => { 
+      console.log('getPrototypeOf')
+      return Reflect.getPrototypeOf(...rest)
+     }
+  })
+
+  b.push(4)
+  console.log(b)
+</script>
