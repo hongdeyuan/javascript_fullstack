@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import logoPic from '../../static/logo.png'
 
-export const HeaderWrapper = styled.div `
+export const HeaderWrapper = styled.div`
   position: relative;
   height: 4.17%;
   border-bottom: 1px solid #f0f0f0;
@@ -34,15 +34,20 @@ export const NavItem = styled.div`
   padding: 0 15px;
   font-size: 16px;
   color: #333333;
+  a {
+    text-decoration: none;
+    color: #ea6f5a;
+    color: #333333;
+    &.active {
+      color: #ea6f5a;
+    }
+  }
   &.left {
     float: left;
   }
   &.right {
     float: right;
     color: #969696;
-  }
-  &.active {
-    color: #ea6f5a;
   }
   .iconfont {
     font-size: 18px;

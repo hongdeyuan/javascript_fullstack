@@ -10,14 +10,16 @@ class List extends Component {
       <>
         {list.map((item, index) => (
           <ListItem key={index}>
-            <img
-              className="pic"
-              src={item.get('imgUrl')}
-              alt="" />
-            <ListInfo>
-              <h3 className="title">{item.get('title')}</h3>
-              <p className="desc">{item.get('desc')}</p>
-            </ListInfo>
+            <a href="/detail">
+              <img
+                className="pic"
+                src={item.get('imgUrl')}
+                alt="" />
+              <ListInfo>
+                <h3 className="title">{item.get('title')}</h3>
+                <p className="desc">{item.get('desc')}</p>
+              </ListInfo>
+            </a>
           </ListItem>
         ))}
         <>

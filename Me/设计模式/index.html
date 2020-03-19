@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 独立对象， 创建2个 一个是xiaowang   一个是xiaoli
+    // 让 xiaoli 跟 xiaowang 通过门铃进行通信
+    // 先看 xiaowang 家有没有门， 如果有们，直接敲门didi，如果没有门，先建门
+    // 两个单例开始通信
+
+    var xiaowang = (function (argument) {
+      var xiaowangjia = function (message) {
+        this.menling = message
+      }
+      var men;
+      var info = {
+        sendMessage: function (message) {
+          if (!men) {
+            men = new xiaowangjia(message)
+          }
+          return men
+        }
+      }
+      return info
+    })()
+
+
+
+    var xiaoli = { //静态的，常驻到内存里
+      callXiaowang: function (msg) {
+        var _xw = xiaowang.sendMessage(msg)
+        alert(_xw.menling)
+        _xw = null // 被垃圾回收
+      }
+    }
+
+    xiaoli.callXiaowang('didi')
+  </script>
+
+  <script>
+    // 页面上有4个按钮 a b c d
+    var top = {
+      init: function () {
+        this.render()
+        this.bind()
+      },
+      a: 4,
+      render: function () {
+        var me  = this
+        me.btna = $('#a')
+      },
+      bind: function () {
+        var me = this
+        me.btna.click(function () {
+          me.test()
+        })
+      },
+      test: function() {
+        a = 5
+      }
+    }
+
+
+    var banner = {
+      init: function () {
+        this.render()
+        this.bind()
+      },
+      a: 4,
+      render: function () {
+        var me  = this
+        me.btna = $('#c')
+      },
+      bind: function () {
+        var me = this
+        me.btna.click(function () {
+          me.test()
+        })
+      },
+      test: function() {
+        top.a = 10
+      }
+    }
+
+    top.init()
+    banner.init()
+
+    $('#a').click(function () {
+      // 逻辑
+      var a = 4
+    })
+
+    $('#b').click(function () {
+      // 逻辑
+    })
+
+    $('#c').click(function () {
+      // 逻辑
+    })
+
+    $('#d').click(function () {
+      // 逻辑
+    })
+  </script>
+</body>
+
+</html>

@@ -13,24 +13,32 @@ const defaultState = fromJS({
   articlePage: 1
 })
 
+const changeHomeData = (state, action) => {
+  return state.merge({// 把多个对象合并成一个对象
+    topicList: fromJS(action.topicList),
+    articleList: fromJS(action.articleList),
+    recommendList: fromJS(action.recommendList),
+    users: fromJS(action.users)
+  });
+}
+
+const addArticleList = (state, action) => {
+  return state.merge({
+    articleList: state.get('articleList').concat(action.list),
+    articlePage: action.nextPage
+  });
+}
+
 export default (state = defaultState, action) => {
   switch (action.type) {
     case types.CHANGE_HOME_DATA:
-      return state.merge({// 把多个对象合并成一个对象
-        topicList: fromJS(action.topicList),
-        articleList: fromJS(action.articleList),
-        recommendList: fromJS(action.recommendList),
-        users: fromJS(action.users)
-      });
+      return changeHomeData(state, action);
     case types.CHANGE_HOME_QRCODE: 
       return state.set('display', false);
     case types.CHANGE_HOME_QRCODE_NONE: 
       return state.set('display', true);
     case types.ADD_HOME_ARTICLE_LIST:
-      return state.merge({
-        articleList: state.get('articleList').concat(action.list),
-        articlePage: action.nextPage
-      });
+      return addArticleList(state, action);
     default:
       return state;
   }

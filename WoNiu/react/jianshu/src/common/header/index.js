@@ -14,7 +14,8 @@ const Header = (props) => {
       <Logo />
       <Nav>
         <NavItem className="left active">
-          <span className="iconfont">&#xe600;</span>首页
+          <span className="iconfont">&#xe600;</span>
+          <a href="/" className="active">首页</a>
           </NavItem>
         <NavItem className="left">
           <span className="iconfont">&#xe611;</span>下载App
