@@ -10,11 +10,11 @@ class Detail extends Component {
 
 
   componentDidMount(){
-    this.props.getDetail()
+    this.props.getDetail(this.props.match.params.id)
   }
 
   render() {
-
+    // console.log(this.props.match.params.id)
     return (
       <DetailWrapper>
         <DetailHeader>{this.props.title}</DetailHeader>
@@ -33,8 +33,8 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => {
   return {
-    getDetail() {
-      const action = actionCreators.getDetail()
+    getDetail(id) {
+      const action = actionCreators.getDetail(id)
       action(dispatch)
     }
   } 

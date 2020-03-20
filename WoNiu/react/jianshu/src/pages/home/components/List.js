@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ListItem, ListInfo, LoadMore } from '../style'
 import { actionCreators } from '../store'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 class List extends Component {
 
   render() {
@@ -9,8 +10,8 @@ class List extends Component {
     return (
       <>
         {list.map((item, index) => (
-          <ListItem key={index}>
-            <a href="/detail">
+          <Link to={"/detail/" + item.get('id')} key={index}>
+            <ListItem>
               <img
                 className="pic"
                 src={item.get('imgUrl')}
@@ -19,8 +20,8 @@ class List extends Component {
                 <h3 className="title">{item.get('title')}</h3>
                 <p className="desc">{item.get('desc')}</p>
               </ListInfo>
-            </a>
-          </ListItem>
+            </ListItem>
+          </Link>
         ))}
         <>
           <LoadMore onClick={() => getMoreList(page)}>加载更多。。</LoadMore>

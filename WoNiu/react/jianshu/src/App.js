@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from './pages/home/index'
 import Detail from './pages/detail/index'
+import Login from './pages/login/index'
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
         <BrowserRouter>
           <div>
             <Route exact path='/' component={Home}></Route>
-            <Route path='/detail' component={Detail}></Route>
+            {/* 1.问号： 传参 */}
+            {/* <Route path='/detail?id' component={Detail}></Route> */}
+            <Route path='/detail/:id' component={Detail}></Route>
+            <Route path='/login' component={Login}></Route>
           </div>
         </BrowserRouter>
       </Provider>

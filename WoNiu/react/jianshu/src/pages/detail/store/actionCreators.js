@@ -8,9 +8,13 @@ const changeDetail = (title, content) => ({
   content
 })
 
-export const getDetail = () => {
+export const getDetail = (id) => {
+
+  // 1.动态路由传参
+  // 2. 编程式路由跳转 ，想vue的this.$route.push({path: 'detail', param= {id: id}})
+
   return (dispatch) => {
-    axios.get('/api/detail.json').then((res) => {
+    axios.get('/api/detail.json?id=' + id).then((res) => {
       const result = res.data.data
       dispatch(changeDetail(result.title, result.content))
     })
