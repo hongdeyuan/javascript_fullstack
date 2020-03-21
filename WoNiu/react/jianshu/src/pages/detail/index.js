@@ -5,6 +5,8 @@ import {
   DetailContent
 } from './style'
 import { connect } from 'react-redux'
+// withRouter 可以获取路由上面的所有属性和方法
+import { withRouter } from 'react-router-dom'
 import { actionCreators } from './store'
 class Detail extends Component {
 
@@ -39,4 +41,4 @@ const mapDispatch = (dispatch) => {
     }
   } 
 }
-export default connect(mapState, mapDispatch)(Detail)
+export default connect(mapState, mapDispatch)(withRouter(Detail))
