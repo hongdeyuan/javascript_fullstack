@@ -1,13 +1,2 @@
-var test = {
+// 构造函数模式-实战
 
-}
-
-class Test {
-  constructor(msg) {
-    name: msg
-    fn: () => {
-      
-    }
-  }
-  
-}
