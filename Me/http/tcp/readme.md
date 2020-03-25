@@ -22,3 +22,29 @@
 
 2. 说说 TCP 三次握手的过程？为什么是三次而不是两次、四次？
   SYN：同步序列编号（Synchronize Sequence Numbers）。是TCP/IP建立连接时使用的握手信号
+  - ack —— 确认号码
+  - seq —— 顺序号码
+  - ISN —— 初始序列号
+  - ACK —— 确认，使得确认号有效（握手使用
+  - SYN —— 用于初始化一个连接的序列号，建立联机
+  - FIN —— 该报文的发送方已经结束向对方发送数据
+
+  第一次握手：(SYN=1, ACK=0, seq=x):Client发送SYN标志位1的包到Server，以及初始序号x（保存在包头的序列号seq字段，简称ISN），和ACK标志位为0，并进入SYN_SEND状态，等待Server确认。
+
+  第二次握手：(SYN=1, ACK=1, seq=y, ack=x+1):Server发回确认包(ACK)应答。即 SYN 标志位和 ACK 标志位均为1。Server确认ISN序列号，放到seq域里，同时将确认序号(ack)设置为Client的ISN加1，即x+1。 发送完毕后，Server进入 SYN_RCVD 状态。
+
+  第三次握手：(ACK=1，seq=x+1，ack=y+1)Client再次发送确认包(ACK)，ACK标志位为1，并且把Server发来ISN的序号字段+1，放在确定字段中发送给对方。发送完毕后，Client和Server建立连接，TCP 握手结束。
+
+  ### TCP四次挥手
+
+  - 第一次挥手(FIN=1，seq=u)
+  Client 想要关闭连接，Client 会发送一个FIN标志位置为1，当前序列号为u的包，表示需要关闭连接了。Client进入 FIN_WAIT_1 状态。
+
+  - 第二次挥手(ACK=1，seq=v，ack=u+1)
+  Server收到Client的FIN包之后，会发送一个确认序号为收到的序列号u+1的包，表明自己接受到了Client关闭连接的请求，但还未准备好关闭连接。Server进入 CLOSE_WAIT 状态，Client进入 FIN_WAIT_2 状态。
+  
+  - 第三次挥手(FIN=1，ACK=1，seq=w，ack=u+1)
+  当Server将剩余数据发送完之后，会发送一个自己的FIN包，序列号为u+1。Server进入 LAST_ACK 状态，等待来自Client的最后一个ACK。
+
+  - 第四次挥手(ACK=1，seq=u+1，ack=w+1)
+  Client接收到来自Server端的关闭请求之后，发送最后一个ACK确认包，确认序号设置为收到序号加1。Client进入 TIME_WAIT状态，等待可能出现的要求重传的 ACK 包。Server接收到这个确认包之后，关闭连接，进入CLOSED状态。(Client会等待2MSL之后，没有收到Server的ACK ，就确认Server进入CLOSED状态，自己也关闭进入CLOSED状态。)
