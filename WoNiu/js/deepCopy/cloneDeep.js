@@ -1,15 +1,15 @@
 // 浅拷贝
-// function cloneShallow(param) {
-//   var target = {}
-//   for (var key in param) {
-//     // target.key = key
-//     if (Object.prototype.hasOwnProperty.call(param,key)) {
-//       target[key] = param[key]
-//     }
-//   }
+function cloneShallow(param) {
+  var target = {}
+  for (var key in param) {
+    // target.key = key
+    if (Object.prototype.hasOwnProperty.call(param,key)) {
+      target[key] = param[key]
+    }
+  }
 
-//   return target
-// }
+  return target
+}
 
 
 // 深拷贝
