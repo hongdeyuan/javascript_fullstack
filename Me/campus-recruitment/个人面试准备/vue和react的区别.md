@@ -8,7 +8,7 @@
     - React 默认是通过比较引用的方式进行的，如果不优化（PureComponent/shouldComponentUpdate）可能导致大量不必要的VDOM的重新渲染
   - 注意： Vue 使用的是可变数据，而React更强调数据的不可变
 
-  ## 数据流的不同
+  ## 数据流不同
 
   - Vue1.0中我们可以实现两种双向绑定： 双向数据流
     1. 父子组件之间，props 可以双向绑定
