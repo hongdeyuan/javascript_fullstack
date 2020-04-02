@@ -103,6 +103,8 @@
   - 2. IE 盒模型：
       属性width,height包含border和padding，指的是content+padding+border
 
+  - 因为若不声明DOCTYPE类型，IE浏览器会将盒子模型解释为IE盒子模型，FireFox等会将其解释为W3C盒子模型；若在页面中声明了DOCTYPE类型，所有的浏览器都会把盒模型解释为W3C盒模型
+
 11. [position 取值区别](https://blog.csdn.net/Zetang_Wu/article/details/81589687)
   Position属性有以下四个取值：
 
