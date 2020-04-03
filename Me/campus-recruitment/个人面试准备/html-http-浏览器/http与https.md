@@ -22,3 +22,14 @@
   - https握手阶段比较费时，会使页面加载时间延长50%
   - https缓存不如http高效，会增加数据开销
   - SSL证书需要绑定IP，不能再同一个ip上绑定多个域名，ipv4资源支持不了这种消耗
+
+
+### 长连接、短连接
+  - HTTP/1.0中默认使用短连接。也就是说，客户端和服务器每进行一次HTTP操作，就建立一次连接，任务结束就中断连接
+  - HTTP/1.1起，默认使用长连接，用以保持连接特性。使用长连接的HTTP协议，会在响应头加入这行代码：Connection:keep-alive
+
+  [参考一](https://www.cnblogs.com/blogtech/p/10981606.html)
+  
+### keep-alive
+  [参考一](https://www.jianshu.com/p/f7248870f7f0)
+  [参考二]

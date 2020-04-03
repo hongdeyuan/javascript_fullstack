@@ -11,7 +11,7 @@
 
 ## undefined
   > undefined表示缺少值，即此处应该有值，但是还未定义
-  - 变量声明了，但是还未复制，就为undefined
+  - 变量声明了，但是还未赋值，就为undefined
   - 函数没有返回值，默认为undefined
 
 ## 不同点
