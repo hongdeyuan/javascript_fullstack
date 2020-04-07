@@ -1,6 +1,5 @@
 function add(func) {
   let len = func.length
-  console.log(len)
   const _curry = function (...args) {
     if (args.length === len) {
       return func(...args)

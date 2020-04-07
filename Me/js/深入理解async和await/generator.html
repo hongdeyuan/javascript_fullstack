@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function foo(params) {
+      console.log('foo')
+    }
+  function * test(params) {
+    console.log('start')
+    let a = yield foo();// 不会等着定时器2秒后才执行往后的代码
+    // a ??? yield a 与 yield 没有任何关系， 
+    // a的值可以通过next方法传递给它
+    // return 可以使 done 为 true 所以可以正常退出
+    // 每一个yield 对应一个next,只有当再次调用next才会去执行yield行之后逻辑代码
+    console.log('a', a)
+    console.log('mid')
+    let b = yield 2;
+    console.log('b', b)
+    console.log('end')
+  }
+  // let g = test()
+  // g.next()
+  // g.next('A')
+  // g.next('B')
+  // 插入新的任务
+
+  // generator 内部相比普通函数而言，是可以被终止的
+  // 相比普通函数而已，调用的时候，通过一步一步的next来调用的
+
+
+  // 协程： 任务可以被打断
+
+  function generateAutoRun(gen) {
+    let g = gen()
+    function next(value) {
+      // console.log(g)
+      let res = g.next(value)
+      if(res.done) return
+      next(res.value)
+    }
+    next()
+  }
+  generateAutoRun(test)
+
+  </script>
+</body>
+</html>
