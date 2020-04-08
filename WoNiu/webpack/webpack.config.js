@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, './build')
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {sourceMap: true}
+            options: { sourceMap: true }
           },
           {
             loader: 'postcss-loader',
@@ -39,9 +39,40 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
-            options: {sourceMap: true}
+            options: { sourceMap: true }
           }
         ]
+      },
+      {
+        test: /\.js$/, //匹配文件
+        exclude: /node_modules/,// 排除node_modules的js
+        use: {
+          loader: 'babel-loader'
+          // options: {
+          //   // "presets": [
+          //   //   [
+          //   //     "@babel/preset-env",
+          //   //     {
+          //   //       useBuiltIns: "usage",// 按需加载
+          //   //       corejs: 2
+          //   //     }
+          //   //   ]
+          //   // ],
+          //   "plugins": [
+          //     [
+          //       "@babel/plugin-transform-runtime",
+          //       {
+          //         "absoluteRuntime": false,
+          //         "corejs": 2,
+          //         "helpers": true,
+          //         "regenerator": true,
+          //         "useESModules": false,
+          //         "version": "7.0.0-beta.0"
+          //       }
+          //     ]
+          //   ]
+          // }
+        } //指明使用什么加载器
       }
     ]
   },

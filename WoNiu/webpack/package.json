@@ -4,12 +4,17 @@
   "description": "- npm i webpack webpack-cli --save-dev\r   - npm i lodash --save-dev",
   "main": "webpack.config.js",
   "dependencies": {
+    "@babel/polyfill": "^7.8.7",
     "lodash": "^4.17.15",
-    "webpack-cli": "^3.3.10",
-    "webpack": "^4.41.4"
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.1.0",
     "css-loader": "^3.4.0",
     "mini-css-extract-plugin": "^0.8.2",
     "node-sass": "^4.13.0",
