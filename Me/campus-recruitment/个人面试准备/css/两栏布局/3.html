@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #main {
+      /* overflow: hidden; */
+      /* display: inline; :使用它会有点瑕疵*/
+      /* display: table 虽然能让 右边自动增长，但是缩小全部时，无法保证左边的不变  */
+      display: table;
+      width: 100%;
+      border: 1px solid red;
+    }
+
+    .left {
+      display: table-cell;
+      width: 200px;
+      height: 200px;
+      background: purple;
+    }
+
+    .right {
+      display: table-cell;
+      margin-left: 200px;
+      background: skyblue;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+
+</html>

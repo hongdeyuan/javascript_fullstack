@@ -22,3 +22,21 @@
 
 
 ## 抽取样式将css打包
+
+## tree shaking
+
+  - 只有ES module 引入方式
+
+  - optimization: {
+    usedExports: true
+  }
+
+  - "sideEffect": false,
+
+## development Vs production 模式区分打包
+
+## code Spliting 代码分割
+
+## 打包分析
+
+## 官方推荐

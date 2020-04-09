@@ -17,13 +17,44 @@ function add(func) {
   return _curry
 }
 
-function sum(a, b, c) {
-  // console.log(args)
-  return a + b + c
+function currying (fn) {
+  let args = []
+	return function _curry (...newArgs) {
+		if (newArgs.length) {
+			args = [
+				...args,
+				...newArgs
+			]
+			return _curry
+		} else {
+			return fn.apply(this, args)
+		}
+	}
+}
+
+function sum (...args) {
+	return args.reduce((a, b) => a + b)
 }
 
 // console.log(sum(1, 10))
-const sumCurry = add(sum)
+// const sumCurry = add(sum)
 // console.log(sumCurry(1)(10)(100))
 
-console.log(sumCurry(10, 20)(30))
+let addCurry = currying(sum)
+// 注意调用方式的变化
+console.log(addCurry(1, 10)())
+
+console.log(addCurry(1)(10)(100)())
+
+
+function curry (fn) {
+  let args = []
+  return function _curry(..._args) {
+    if (_args.length) {
+      args = [...args, ..._args]
+      return _curry
+    } else {
+      return fn.bind(this, args)
+    }
+  }
+}

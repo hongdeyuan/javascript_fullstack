@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简单的进行CSS reset</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .left,
+    .right {
+      position: absolute;
+      top: 0px;
+      background: red;
+      height: 100%;
+    }
+
+    .left {
+      left: 0;
+      width: 100px;
+    }
+
+    .right {
+      right: 0px;
+      width: 200px;
+    }
+
+    .main {
+      margin: 0px 200px 0px 100px;
+      height: 100%;
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="left">Left</div>
+  <div class="main">Main</div>
+  <div class="right">Right</div>
+</body>
+
+</html>

@@ -1,53 +1,51 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, './build')
+  mode: 'production',//development 开发环境 production // 生成环境
+  entry: "./src/index.js", // 指定打包的入口文件
+  output: {// 指定打包后的资源位置
+    // 公共路径设置
+    // publicPath: "https://cdn.biadu.com",
+    path: path.resolve(__dirname, "./build"),
+    filename: "index.js"
   },
+  // devtool: "cheap-module-eval-source-map",// 开发环境
+  devtool: "cheap-eval-source-map",// 线上环境
   module: {
+    // 遇到不认识的模块，就在这里找loader
     rules: [
-      // {
-      //   test: /\.css$/, //匹配文件
-      //   use: ['style-loader', 'css-loader'] //指明使用什么加载器
-      // },
-      // {
-      //   test: /\.scss$/, //匹配文件
-      //   use: ['style-loader', 'css-loader', 'sass-loader'] //指明使用什么加载器
-      // },
       {
-        test: /\.(sc|c|sa)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true }
+        test: /\.jpg$/,
+        use: {
+          // url-loader 可以限制模块的体积，根据体积判断是否需要转换base64格式
+          loader: "url-loader",// 就是把模块，放在了另一个目录里，并且把位置
+          options: {
+            // name 打包前模块的名称，ext是打包前的模块格式
+            name: "[name]_[hash].[ext]",// test.jpg
+            outputPath: 'images/', // 输出路径
+            limit: 240000,// 图片大小临界值，当小于直接以base64格式
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: loader => [
-                require('autoprefixer')(),
-                // 这里还能引入更多别的插件
-              ]
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: { sourceMap: true }
-          }
-        ]
+        }
       },
       {
-        test: /\.js$/, //匹配文件
-        exclude: /node_modules/,// 排除node_modules的js
+        test: /\.css$/,
+        use: ['style-loader', "css-loader", "postcss-loader"]
+
+        // use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
+      },
+      {
+        test: /\.scss$/,// loader是有顺序的, 从后往前
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: "babel-loader",
           // options: {
           //   // "presets": [
           //   //   [
@@ -58,28 +56,47 @@ module.exports = {
           //   //     }
           //   //   ]
           //   // ],
-          //   "plugins": [
-          //     [
-          //       "@babel/plugin-transform-runtime",
-          //       {
-          //         "absoluteRuntime": false,
-          //         "corejs": 2,
-          //         "helpers": true,
-          //         "regenerator": true,
-          //         "useESModules": false,
-          //         "version": "7.0.0-beta.0"
-          //       }
-          //     ]
-          //   ]
+          //   "plugins": [["@babel/plugin-transform-runtime"]]
           // }
-        } //指明使用什么加载器
-      }
+        }
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        }
+      },
     ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css', // 最终输出的文件名
-      chunkFilename: '[id].css'
-    })
-  ]
+  plugins: [// 插件
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      title: "标题自己取de",
+      filename: "index.html"
+    }),
+    // 打包 前把上一次生成的目录删掉
+    new CleanWebpackPlugin(),
+
+    // 把css单独打包成一个文件
+    // new MiniCssExtractPlugin({
+    //   filename: "[name].css"
+    // })
+    new webpack.HotModuleReplacementPlugin({})
+  ],
+  // 跑成一个服务
+  devServer: {
+    contentBase: "./build",
+    open: true,
+    hot: true,
+    hotOnly: true,// 即使HMR不生效，浏览器也不会自动刷新
+    port: "8080",
+    // proxy: {// 跨域代理
+    //   '/api': 'http://localhost:3000'
+    // }
+  },
+  optimization: {
+    usedExports: true
+  }
+
 }
