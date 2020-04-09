@@ -36,7 +36,9 @@
 ## development Vs production 模式区分打包
 
 ## code Spliting 代码分割
+  - 自定义的代码分割方式： js 可以发并行请求， 比一次性发一个更大的会更好点,
+  - splitChunks
 
 ## 打包分析
 
-## 官方推荐
+## 官方推荐编码方式（异步加载）

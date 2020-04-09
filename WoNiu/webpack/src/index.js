@@ -42,6 +42,9 @@
 // ReactDom.render(<App/>, document.getElementById('app'))
 
 
-import { add } from './a.js'
+// import { add } from './a.js'
 
-add( 1 , 1)
+// add( 1 , 1)
+import _ from 'lodash'
+
+console.log(_.join(["a", "b", "c"], "***"))// 1Mb

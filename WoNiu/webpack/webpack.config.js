@@ -10,7 +10,7 @@ module.exports = {
   output: {// 指定打包后的资源位置
     // 公共路径设置
     // publicPath: "https://cdn.biadu.com",
-    path: path.resolve(__dirname, "./build"),
+    path: path.resolve(__dirname, "./dist"),
     filename: "index.js"
   },
   // devtool: "cheap-module-eval-source-map",// 开发环境
@@ -86,7 +86,7 @@ module.exports = {
   ],
   // 跑成一个服务
   devServer: {
-    contentBase: "./build",
+    contentBase: "./dist",
     open: true,
     hot: true,
     hotOnly: true,// 即使HMR不生效，浏览器也不会自动刷新
