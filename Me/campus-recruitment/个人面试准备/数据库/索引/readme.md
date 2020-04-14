@@ -9,6 +9,21 @@
 ```js
 SELECT * FROM mytable WHERE category_id=1;
 CREATE INDEX mytable_categoryid ON mytable (category_id);
+ALTER TABLE mytable ADD INDEX name_city_age (name(10),city,age);
+```
+## 主键索引
+
+它是一种特殊的唯一索引，不允许有空值。一般是在建表的时候同时创建主键索引：
+```js
+CREATE TABLE mytable(  
+ 
+ID INT NOT NULL,   
+ 
+username VARCHAR(16) NOT NULL,  
+ 
+PRIMARY KEY(ID)  
+ 
+);
 ```
 
 - 优点：

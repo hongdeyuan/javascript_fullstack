@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 工厂应该有厂长 来决定运行到低哪一条产品线
+
+    var gongchang = {}
+    gongchang.changyifu = function (argument){
+      this.gongren = 50
+      // alert("我们有"+ this.gongren+"人")
+    }
+
+    gongchang.changxie = function () {
+      alert("产鞋~")
+    }
+
+    gongchang.yunshun = function () {
+      alert("运输~")
+    }
+
+    gongchang.changzhang = function (para) {
+      // new js中 构造函数模式  单例模式
+      return new gongchang[para]()
+    }
+
+    var me = gongchang.changzhang("changyifu")
+
+    alert(me.gongren)
+  </script>
+</body>
+</html>
