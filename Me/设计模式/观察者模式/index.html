@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script>
+    // 1.支持简单的广播通信，自动 通知所有已经订阅过的对象
+    // 2.页面载入后，目标对象很容易与观察者存在一种关联，增加了灵活性
+    // 3.目标对象和观察者之间的抽象耦合关系 能够 单独扩展及重用
+    // ~/+/- 加快自执行函数速度
+
+    ~(function () {// 主题对象
+      var o = $({}) // 转换成jquery对象
+      $.jianting = function() {
+        o.on.apply(o, arguments)// jquery里面的on方法此刻理解为订阅
+      }
+
+      $.fabu = function() {
+        o.trigger.apply(o, arguments)// 发布
+      }
+
+      $.qingchu = function() {
+        o.off.apply(o, arguments)// 取消订阅
+      }
+
+    })()
+
+    $.jianting('/test/ls', function(e, a, b, c) {
+      alert(a + '||'+ b + '||'+  c)
+    })
+
+    $.jianting('/test/ls', function(e, a, b, c) {
+      alert('ok')
+    })
+
+    setTimeout(() => {
+      $.fabu('/test/ls', [1, 2, 3])
+    }, 3000)
+  </script>
+</body>
+</html>
