@@ -46,7 +46,7 @@ app.use(async (ctx, next) => {
     // ctx.set('X-FRAME-OPTIONS', 'DENY')
     // const referer = ctx.request.header.referer
     // console.log('Referer:', referer)
-    ctx.set('X-FRAME-OPTIONS', 'DENY')
+    // ctx.set('X-FRAME-OPTIONS', 'DENY')
     // const referer = ctx.request.header.referer
     // console.log('Referer:', referer)
 
@@ -83,6 +83,7 @@ router.post('/login', async (ctx) => {
     WHERE username = '${ctx.request.body.username}' 
     AND password = '${ctx.request.body.password}'
     `
+    // '1'or'1'='1'
     console.log('sql', sql)
     res = await query(sql)
     console.log('db', res)
