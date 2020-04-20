@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app'
+import App from 'next/app'
 
 import 'antd/dist/antd.css'
 
@@ -11,11 +11,11 @@ import Layout from '../components/Layout'
 class MyApp extends App {
 
   // 判断当前的组件中的 getInitialProps
-  static async getInitialProps ({ Component }) {
+  static async getInitialProps ({ Component, ctx }) {
     let pageProps
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps()
+      pageProps = await Component.getInitialProps(ctx)
     }
 
     return {
@@ -27,14 +27,10 @@ class MyApp extends App {
 
     // Component: 代表pages下所有的页面
     const { Component, pageProps } = this.props
-    // const { Component } = this.props
     return (
-      <Container>
         <Layout>
           <Component { ...pageProps} />
-          {/* <Component /> */}
         </Layout>
-      </Container>
     )
   }
 }

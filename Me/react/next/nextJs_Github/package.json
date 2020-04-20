@@ -15,10 +15,13 @@
     "@zeit/next-css": "^1.0.1",
     "antd": "^4.1.4",
     "babel-plugin-import": "^1.13.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "koa": "^2.11.0",
     "koa-router": "^8.0.8",
+    "moment": "^2.24.0",
     "next": "^9.3.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
   }
 }

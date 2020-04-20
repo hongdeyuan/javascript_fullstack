@@ -12,13 +12,24 @@ app.prepare().then(() => {
   const server = new Koa()
 
   const router = new Router()
-  router.get('/test/a/:id' , async (ctx) => {
-    const id = ctx.params.id
+  router.get('/test/a' , async (ctx) => {
+    // const id = ctx.params.id
     await handle(ctx.req, ctx.res, {
-      pathname: '/test/a',
-      query: {
-        id: id
-      }
+      pathname: '/test/a'
+      // query: {
+      //   id: id
+      // }
+    })
+    ctx.respond = false
+  })
+
+  router.get('/test/b' , async (ctx) => {
+    // const id = ctx.params.id
+    await handle(ctx.req, ctx.res, {
+      pathname: '/test/b'
+      // query: {
+      //   id: id
+      // }
     })
     ctx.respond = false
   })

@@ -6,6 +6,12 @@
       "libraryName": "antd"
       // "libraryDirectory": "es",
       // "style": "css" // 此项会自动加载css,你不需要自己import css `style: true` 会加载 less 文件
-    }]
+    }],
+    [
+      "styled-components",
+      {
+        "ssr": true
+      }
+    ]
   ]
 }
