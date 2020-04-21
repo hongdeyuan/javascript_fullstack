@@ -114,4 +114,34 @@
   2. key 和无状态组件
   3. pureComponent  shouldComponentUpdate
   4. 少在Render中绑定事件
-  5. 长列表优化
+  5. 长列表优化---- react-virtualized
+
+
+# 浏览器渲染
+  1. 浏览器执行所有的加载解析逻辑，解析html的过程中发出了页面渲染所需要的各种外部资源请求
+  2. 浏览器识别所有的css样式信息与DOM树合并，生成render树
+  3. 页面中所有元素中的几何信息都在这一步计算出来
+  4. 这一步中浏览器会更具我们的DOM代码结果，把每一个图层转换成像素，对所有媒体文件进行解码
+  5. 最后浏览器合并各个图层，将数据有CPU输出给GPU,最终绘制在屏幕上
+
+# css
+
+# 算法
+  排序
+  动态规划
+
+# vue的DOM diff做了哪些优化
+  1. vue 中，使用defineProperty实际上知道所有数据的修改，知道了修改哪个数据，然后去修改dom (vue1.0就是这么做的)
+  2. 虚拟dom是什么，数据修改后，我们通过 dom diff 算出哪个数据被修改了，然后再去修改dom
+  3. 我们有defineProperty 为啥还需要虚拟dom
+    - vue1.0:  的问题是 每个数据都有监听器，watcher太多了，项目庞大之后问题尤其明显；
+    data: {
+      name: '',
+      age: ''
+    }
+
+
+    - vue2.0: 做了一个折中的操作，watcher只到组件层，一个组件只有一个watcher，组件内部使用 dom diff
+
+
+    vue的dom diff 和 react 比 做了哪些优化
