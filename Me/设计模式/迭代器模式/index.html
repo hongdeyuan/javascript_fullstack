@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = ['test', '2', 'add']
+
+    var diedai = (function () {
+      var length = arr.length,
+        index = 0;
+      return {
+        hasNext: function () {
+          return index < length
+        },
+        next: function () {
+          var data = arr[index]
+          index += 1
+          return data
+        },
+        reset: function () {
+          index = 0
+        }
+      }
+    })()
+
+    while (diedai.hasNext()) {
+      console.log(diedai.next())
+    }
+
+
+    // jquery的迭代器
+    // $.each(arr, function (index, item) {
+    //   console.log(index, item)
+    // })
+  </script>
+</body>
+</html>

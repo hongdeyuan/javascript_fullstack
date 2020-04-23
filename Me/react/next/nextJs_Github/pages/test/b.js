@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 class  Mycount  extends React.Component {
   constructor(props) {
@@ -31,4 +31,18 @@ class  Mycount  extends React.Component {
     );
   }
 }
-export default Mycount
+
+function MyCountFunc() {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    const interval =  setInterval(() => {
+      setCount(c => c + 1)
+    }, 1000);
+    // 组件卸载时，return 才会执行
+    return () => { clearInterval(interval) }
+  }, [])// 仅在count更改时更新
+
+  return <span>{count}</span>
+}
+export default MyCountFunc

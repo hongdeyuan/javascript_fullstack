@@ -42,7 +42,7 @@ A.getInitialProps = async(ctx) => {
     setTimeout(() => {
       resolve({
           name: 'dhyuan',
-          time: moment(Date.now() - 60 * 1000).fromNow()
+          time: moment.default(Date.now() - 60 * 1000).fromNow()
       })
     }, 1000)
   })

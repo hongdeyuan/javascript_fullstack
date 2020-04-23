@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function laoban(xiangmujingli) {
+      if (xiangmujingli) {
+        this.xiangmujingli = xiangmujingli
+      }
+    }
+    laoban.prototype.write = function (vue) {
+      this.xiangmujingli.write(vue)
+    }
+
+    function xiangmujingli(coder) {
+      if(coder) {
+        this.coder = coder
+      }
+    }
+
+    xiangmujingli.prototype.write = function (vue) {
+      this.coder.write(vue)
+    }
+
+    function coder(vue) {
+      // this.write(vue)
+    }
+
+    coder.prototype.write = function (vue) {
+      console.log('coding...'+ vue)
+    }
+
+    var begin = new laoban(new xiangmujingli(new coder()))
+    begin.write('VUE')
+  </script>
+</body>
+</html>
