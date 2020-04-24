@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var aa = {
+    //   test: function () {
+        
+    //   },
+    //   go: function () {
+        
+    //   }
+    // }
+
+    // aa.test()
+
+    // 休假去了------
+    
+    // 被别人重构了 
+    function pp() {
+      this.test = function () {
+        console.log('我是新的test')
+      }
+    }
+
+    pp.prototype.gogo = function () {
+      console.log('我是新的gogo')
+    }
+
+    // pp.test()
+
+    function shipeiqi() {
+      var s = new pp()
+      var aa = {
+        test: function () {
+          s.test()
+        },
+        go: function() {
+          s.gogo()
+        }
+      }
+
+      return aa
+    }
+
+    var _aa =  shipeiqi()
+    
+    _aa.test()
+    _aa.go()
+  </script>
+</body>
+</html>
