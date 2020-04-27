@@ -7,6 +7,7 @@
 // import { Button } from 'antd/lib/button'
 // import { Button } from 'antd'// babel会自动干 antd/lib/button
 // import Link from 'next/link'
+import store from '../store/store'
 import Router from 'next/router'
 
 // 路由钩子
