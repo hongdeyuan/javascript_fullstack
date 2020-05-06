@@ -1,17 +1,21 @@
 // 抽象类
-// abstract class Animal {
-//   abstract makeSound (): void ;
-//   move(): void{
-//     console.log('roaming the earth...')
-//   }
-// }
+abstract class Animal {
+  abstract makeSound (): void ;
+  move(): void{
+    console.log('roaming the earth...')
+  }
+}
 
-// 继承抽象类
-// class Cat extends Animal{
-//   makeSound () {
-//     console.log('miao miao')
-//   }
-// }
+// 继承抽象类 && 重写 move
+class Cat extends Animal{
+  makeSound () {
+    console.log('miao miao')
+  }
+  move(): void{
+    super.move()
+    console.log('Cat Move')
+  }
+}
 
 // const cat = new Cat()
 

@@ -49,6 +49,7 @@
 // tuple 元组: 存放多种数据类型
 // let x: [string, number]
 // x = ['hello', 100]
+
 // interface Tuple extands Array<string | number> {
 //   0: string,
 //   1: number,
