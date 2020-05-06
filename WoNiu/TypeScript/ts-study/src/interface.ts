@@ -7,8 +7,8 @@ const getUserName  = (user: User) => {
 
 
 interface User {
-  name: string,
-  age?: number,// ?表示可能存在可能不存在
+  name: string,// 必选
+  age?: number,// ?表示 可选 可能存在可能不存在
   readonly isMale: boolean,// 只读，不可修改
   say: Say// (words: string) => string
 }
@@ -17,10 +17,17 @@ interface Say {
   (words: string): string
 }
 
-// interface Config {
-//   width?: number,
-//   // [propName: string]: any // 添加字符串索引签名时使用
-// }
+// 任意属性
+interface Config {
+  width?: number,// 可选
+  [propName: string]: any // 添加字符串索引签名时使用
+}
+
+let conf: Config = {
+  width: 18,// 可选属性匹配
+  height: 20// 任意属性匹配
+}
+
 // function CalculateAreas(config: Config): {area: number} {
 //   let square = 100
 //   if (config.width) {
