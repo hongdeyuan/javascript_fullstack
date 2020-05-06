@@ -1,5 +1,6 @@
 import { createElement, render, renderDom } from './element'
 import diff from './diff'
+import patche from './patche'
 
 let vertualDOM  = createElement('ul', {class: 'list'}, [
   createElement('li', {class: 'item'}, ['aaa']),
@@ -13,11 +14,15 @@ let vertualDOM1  = createElement('ul', {class: 'list-group'}, [
   createElement('li', {class: 'item'}, ['111']),
 ])
 
+// 给元素打补丁
 let patchs = diff(vertualDOM, vertualDOM1)
 
 console.log(patchs)
+patche(patchs)
 
 let el = render(vertualDOM)
+
+
 
 // console.log(el)
 
