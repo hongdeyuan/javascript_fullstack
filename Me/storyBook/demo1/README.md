@@ -45,3 +45,5 @@
   // src/storybook.test.js  
   import initStoryshots from '@storybook/addon-storyshots';  initStoryshots();
   ```
+
+  [参考](https://www.learnstorybook.com/intro-to-storybook/react/en/test/)
