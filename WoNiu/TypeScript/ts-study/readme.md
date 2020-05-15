@@ -133,7 +133,7 @@ function searchFlower(name:string = "dhyuan",feature?:string = '热心的'):stri
 }
 
 var result:string = searchFlower()
-console.log(result)  //返回 找到了荷花白色花朵
+console.log(result)  //返回 觉得dhyuanljc
 ```
 
 ### 剩余参数的函数
