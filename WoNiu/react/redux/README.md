@@ -1,68 +1,83 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# redux学习
 
-## Available Scripts
 
-In the project directory, you can run:
+## redux-form
 
-### `yarn start`
+1. 将 redux-form 作为一个 reducer 给到 redux的 store 状态管理仓库中
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```js
+import { createStore, combineReducers} from 'redux'
+import { reducer as formReducer } from 'redux-form'
+import reducer from './reducer'
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+const reducers = combineReducers({
+    reducer: reducer,
+    form: formReducer
+})
 
-### `yarn test`
+const store = createStore(reducers)// store 已经知道笔记本中记过两个笔记
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export default store
+```
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. 表单组件构建，并且将 redux-form 的 方法解构到 表单组件 中
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```js
+import { Field, reduxForm } from 'redux-form'
+const SimpleForm = props => {
+    const { 
+     handleSubmit, 
+     pristine, 
+     reset, 
+     submitting } = this.props
+    return (
+     <form onSubmit={handleSubmit}>
+       <div>
+         <Field
+           name="firstName"
+           component="input"// 此处可以是 自定义组件，或者textarea、select
+           type="text"
+         />
+       </div>
+       <div>
+         <button type="submit">添加</button>
+       </div>
+     </form>
+    )
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default reduxForm({
+  form: 'simple' // 表单名称，唯一标识一个表单
+})(SimpleForm);
+```
 
-### `yarn eject`
+注意：`<Field/>` 组件可以连接所有input类型组件的数据到store中,提供了诸如 value onChange onBlur等属性，
+   用于跟踪和维护此组件的各种状态
+   - 这里的 handleSumbit, pristine, reset, submitting 都是从redux-form 传递过来的。
+   pristine: 表示表单还没有进行任何动作，如输入，获取焦点，失去焦点等
+   submitting: 表示正在提交表单
+   reset： 表示剩余参数
+   handleSumbit： 表示 操作提交
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 常见参数介绍
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+必要参数
+- `form : String[required]`: 用于命名自己的表单，在store生成此命名的数据节点（唯一）
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+可选参数
+- `onChange : Function [optional]` : 表单触发 onChange 事件后的回调
+- `onSubmit : Function [optional` : 表单提交配置，可以配置需要提交哪些参数，还有提交时触发的 dispatch等
+- `onSubmitSuccess : Function [optional] & onSubmitFail : Function [optional`: 提交表单成功和失败的回调
+- `shouldValidate(params) : boolean [optional]` : 同步验证
+- `shouldAsyncValidate(params) : boolean [optional]`: 异步验证
+- `touchOnBlur : boolean [optional] & touchOnChange : boolean [optional]`: 标识 onBlur 或 onChange 的触发。
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### 常用属性
+- pristine : true 表示表单数据为原始数据没被修改过，反之为 dirty。
+- submitting : 用于表示您的表单提交状态，他只会在您的表单提交后返回一个 promise 对象时起作用。 false 表示 promise 对象为 resolved 或   rejected 状态。
+- handleSubmit(eventOrSubmit) : Function : 提交表单的函数，如果表单需要验证，验证方法会被执行(包括同步和异步)。调用方法有两种:
+    组件内部直接调用 <form onSubmit={handleSubmit}>
+    赋值给prop外部调用 <MyDecoratedForm onSubmit={data => {//do something with data.}}/>
