@@ -7,7 +7,7 @@ var schema = {
   "properties": {
     "smaller": {
       "type": "number",
-      "maximum": { "$data": "1/larger" }
+      "maximum": 100
     },
     "larger": { "type": "number" }
   }
