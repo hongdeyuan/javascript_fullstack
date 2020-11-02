@@ -1,0 +1,12 @@
+{% if news_list %}
+  <ul>
+  {% for elem in news_list %}
+    <li>
+      <h3>{{ elem.title }}</h3>
+      <p>{{ elem.content }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>暂无新闻</p>
+{% endif %}
