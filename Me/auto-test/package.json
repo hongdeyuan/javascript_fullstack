@@ -1,0 +1,23 @@
+{
+    "name": "auto-test",
+    "version": "1.0.0",
+    "author": "",
+    "description": "automatically test the front-end projects after depolyment",
+    "scripts": {
+        "test": "node ./runner.js"
+    },
+    "keywords": [
+        "e2e",
+        "auto-test"
+    ],
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "devDependencies": {
+        "chromedriver": "^87.0.0",
+        "cross-spawn": "^5.0.1",
+        "nightwatch": "^0.9.12",
+        "selenium-server": "^3.0.1"
+    }
+}

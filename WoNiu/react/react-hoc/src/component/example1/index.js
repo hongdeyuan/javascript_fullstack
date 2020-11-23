@@ -26,7 +26,7 @@ function withMouse(Component) {
     render() {
       return (
         <div style={{height: '100vh'}} onMouseMove={this.handleMouseMove}>
-          <Component {...this.props} mouse= {this.state}/>
+          <Component {...this.props} mouse= {this.state}  handleMouseMove={handleMouseMove}/>
         </div>
       );
     }
@@ -36,6 +36,8 @@ function withMouse(Component) {
 
 const App = (props) => {
   const { x, y } = props.mouse
+  const { handleMouseMove } = props;
+  handleMouseMove();
   return (
     <div style={{height: '100vh'}}>
       <h1>the mouse position is {x} - {y}  </h1>
