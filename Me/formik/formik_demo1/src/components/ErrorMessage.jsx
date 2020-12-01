@@ -17,8 +17,8 @@ export const ValidationSchemaExample = () => (
     <h1>Signup</h1>
     <Formik
       initialValues={{
-        name: '',
-        email: '',
+        name: '12',
+        email: '2321',
       }}
       validationSchema={SignupSchema}
       onSubmit={values => {

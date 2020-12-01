@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 // import Formik from './components/Formik'
-// import { ValidationSchemaExample } from './components/ErrorMessage'
-import { FriendList } from './components/FieldArray'
+import UseFormik from './components/useFormik'
+// import { FriendList } from './components/FieldArray'
 // import Connect from './components/Connect'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FriendList />
+    <UseFormik />
   </React.StrictMode>,
   document.getElementById('root')
 );
