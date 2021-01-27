@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.2.1"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0"
+  }
 }
