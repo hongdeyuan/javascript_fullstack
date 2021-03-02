@@ -49,27 +49,27 @@ function deepCopy(data) {
 
 
 // 兼容 数组 和对象
-// function cloneDeep(param) {
+const diffValue = (param1: any, param2: any) => {
 
-//   if (typeof param !== 'object') {
-//     return param
-//   }
+  if (typeof param1 !== 'object') {
+    return param1
+  }
 
-//   var target = (Array.isArray(param) ? []  : {})
+  let target: any = (Array.isArray(param1) ? [] : {})
 
-//   for (var key in param) {
-//     // target.key = key
-//     if (Object.prototype.hasOwnProperty.call(param,key)) {
+  for (let key in param1) {
+    // target.key = key
+    if (Object.prototype.hasOwnProperty.call(param1, key)) {
 
-//       if ( typeof param[key] === 'object') {
-//         target[key] = cloneDeep(param[key])
-//       }else{
-//         target[key] = param[key]
-//       }
-//     }
-//   }
-//   return target
-// }
+      if (typeof param1[key] === 'object' && param2[key]) {
+        target[key] = diffValue(param1[key], param2[key]);
+      } else {
+        (lodash.isEqual(param1[key], param2[key]) || !param2[key]) ? target[key] = param1[key] : target[key] = param2[key]
+      }
+    }
+  }
+  return target
+}
 
 
 
