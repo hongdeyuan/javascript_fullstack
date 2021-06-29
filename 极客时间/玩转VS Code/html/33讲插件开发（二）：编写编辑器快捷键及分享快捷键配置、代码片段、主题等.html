@@ -1,0 +1,176 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ群170701297</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                33讲插件开发（二）：编写编辑器快捷键及分享快捷键配置、代码片段、主题等
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/a3/6c/a3d320334b5712e61c73e5100120f26c.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>今天的专栏主要分为两个部分：第一部分我会介绍如何编写编辑器快捷键；第二部分则是介绍如何分享快捷键配置、代码片段和颜色主题。</p><h2>一、编写编辑器命令</h2><p>在专栏第一部分的编辑器学习中，我们学习了不少命令和快捷键，用于快速地编辑和阅览代码。这些命令可以说是前人的经验总结，有了它们，我们就能够更好地完成编码工作。但是有的时候，我们还是会发现这些操作不够用。这时候，就轮到插件 API 发挥作用了，<strong>我们可以通过插件 API 来编写编辑器内的命令</strong>。下面我们来看看，要实现一个编辑器操作相关的插件，需要使用哪些 API？都有什么步骤？</p><p>关于如何创建一个命令，以及给这个命令命名并且注册，在上一讲中我们已经有一个简单的代码示例了。今天我们继续使用这个代码示例。这个代码示例中 extension.js 的内容现在如下：</p><pre><code>const vscode = require('vscode');
+
+function activate(context) {
+    console.log('Congratulations, your extension &quot;myextension&quot; is now active!');
+    let disposable = vscode.commands.registerCommand('extension.sayHello', function () {
+        vscode.window.showInformationMessage('Hello World!');
+    });
+
+    context.subscriptions.push(disposable);
+}
+exports.activate = activate;
+
+function deactivate() {
+}
+exports.deactivate = deactivate;
+</code></pre><h3>1、访问编辑器</h3><p>既然是编辑器相关的命令，那么我们肯定需要能够访问到编辑器，以及其中的内容。首先我们要获取的就是：当前工作区内，用户正在使用的编辑器。</p><pre><code>let editor = vscode.window.activeTextEditor;
+</code></pre><p>如果你是手动敲入上面的代码，你可以看到 VS Code 提示的插件 API 建议。</p><p>有了这个编辑器，我们就能获取非常多的信息了。不过先别急，editor 这个变量并非一定总是有效的值，比如用户现在并没有打开任何文件，编辑器是空的，那么此时 editor 的值就是 undefined。所以， 在正式使用 editor 之前，我们要判断一下，editor 是否为 undefined，是的话就结束命令的运行。</p><!-- [[[read_end]]] --><pre><code>if (!editor) {
+    return;
+}
+</code></pre><p>接下来，我们可以输入 <code>editor.</code>，自动补全立刻给我们提示了不少的属性。</p><p><img src="https://static001.geekbang.org/resource/image/b7/70/b780ee410a4e9850f80b57d079f3c070.gif" alt=""></p><center><span class="reference">editor API</span></center><p>这其中几个值得一提的有如下：</p><ul>
+<li>document，也就是当前编辑器中的文档内容；</li>
+<li>edit，用于修改编辑器中的内容；</li>
+<li>revealRange，用于将某段代码滚动到当前窗口中；</li>
+<li>selection，当前编辑器内的主光标；</li>
+<li>selections，当前编辑器中的所有光标，第一个光标就是主光标，后面的则是用户创建出来的多光标；</li>
+<li>setDecorations，设置编辑器装饰器（我会在后面的章节专门介绍这个 API 的使用）。</li>
+</ul><p>我们在编辑器快捷键里介绍过 “转置字母”（Transpose Letters）这个命令，这个命令可以将光标左、右两侧的字母位置调换。</p><p><img src="https://static001.geekbang.org/resource/image/ec/93/ec1c2786e6b2b6cf24d76fa0cd82ee93.gif" alt=""></p><center><span class="reference">反转字母</span></center><p>不过如果你将多个字符选中，然后运行这个命令，该命令并不能将它们反转。下面，我们就来看看<strong>如何实现字符串反转</strong>。</p><p>首先，我们要读取的信息就是当前的文档信息和主光标的信息。</p><pre><code>let document = editor.document;
+let selection = editor.selection;
+</code></pre><p>有了这两个信息，读取光标选中的内容就简单了。</p><pre><code>let text = document.getText(selection);
+</code></pre><p>document 一共哪些 API 这里我就不介绍了，相信你可以自己探索，这里我们使用就是 getText，以获取某段代码。</p><p>接下来就是将这段文本进行反转了，我们可以写一个非常简单的版本，将字符串分割成字母数组，然后反转，最后重新组合成字符串。</p><pre><code>let result = text.split('').reverse().join('');
+</code></pre><p>最后一步操作就是将原来编辑器内的文本进行替换了。此时我们就要用到 edit 这个 API 了。值得注意的是，这个 API 的第一参数，是一个 callback，callback 的参数是 editBuilder，也就是真正用于修改代码的对象。editBuilder 有以下几个 API：</p><ul>
+<li>delete</li>
+<li>insert</li>
+<li>replace</li>
+<li>setEndOfLine</li>
+</ul><p>这里我们要使用的当然就是 replace 了。</p><pre><code>editBuilder.replace(selection, result);
+</code></pre><p>我们只需将原先的 selection 里的内容，替换成新的 result 即可。</p><p>好了，这就是这个命令的全部内容。虽然还很简陋，但是我们可以运行看看。</p><p><img src="https://static001.geekbang.org/resource/image/ed/3a/ed416906652978430932a591a26bb83a.gif" alt=""></p><center><span class="reference">反转字符串</span></center><p>当我们把代码调试运行起来，选中代码 “path”，运行 “Hello World” 命令，“path” 就被替换为了 “htap”。</p><h3>2、注意事项</h3><p>绝大多数的编辑器命令的工作方式，基本上跟上面的示例如出一辙。下面我来总结一下，一共分为三部分：</p><ul>
+<li>首先，读取文档中的内容。需要使用的 API 是 selection、selections、getText 等。</li>
+<li>其次，对这些内容进行二次加工，这部分就是 business logic 了。</li>
+<li>最后，修改编辑器内的内容。我们可以使用 edit 来修改文本，也可以直接修改 editor.selection 和 editor.selections 来改变光标的位置。</li>
+</ul><p>在专栏<a href="https://time.geekbang.org/column/article/40098">第四讲《如何做到双手不离键盘？》</a>和<a href="https://time.geekbang.org/column/article/40238">第五讲《快捷键进阶攻略》</a>中，我们介绍的各种命令其实都可以通过上面的步骤，以插件的形式实现。</p><p>不过，如果要书写一个没有bug且性能出色的编辑器命令，可就没那么简单了。比如上面的示例里面，我们没有对多光标进行支持，反转字符串也是很暴力的，而这一部分，才是插件真正体现差距的地方。</p><h3>3、快捷键</h3><p>上面我们介绍了如何去书写一个命令，但是这只是完成了工作的一半，剩下的一半则是为这个命令绑定一个快捷键了。要完成快捷键的绑定，我们需要在 package.json 中的 contributes 片段添加一段新的配置：</p><pre><code>&quot;contributes&quot;: {
+    &quot;commands&quot;: [
+        {
+            &quot;command&quot;: &quot;extension.sayHello&quot;,
+            &quot;title&quot;: &quot;Hello World&quot;
+        }
+    ],
+   &quot;keybindings&quot;: [
+        {
+            &quot;key&quot;: &quot;ctrl+t&quot;,
+            &quot;command&quot;: &quot;extension.sayHello&quot;,
+            &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+    ]
+},
+</code></pre><p>我们在 contributes 添加了新的字段 “keybindings” ，它的值是一个数组，里面就是所有的快捷键设置了。如果你是跟着专栏一步步走来的话，那你对这个设置应该就非常熟悉了，因为 VS Code 的快捷键设置里写法跟这个一模一样。我们给 “extension.sayHello” 这个命令，绑定了 ctrl+t ，同时只有当 “editorTextFocus” 为真时才会激活这个快捷键。</p><p>此时如果我们运行这个插件，就可以直接使用 ctrl + t 来反转字符串了。</p><p>不过看到这里，你可能会有疑问了。keybindings 这个配置，能不能用来给 VS Code 已经存在的命令重新指定快捷键呢？没问题！</p><h3>4、分享快捷键</h3><p>VS Code 有这样一套插件，叫做 keymap。你可以在插件市场找到所有的<a href="https://marketplace.visualstudio.com/search?target=VSCode&amp;category=Keymaps&amp;sortBy=Downloads">keymap</a>。这里面除了 Vim 比较特殊以外，其他的 keymap 基本上都是使用 keybindings 来重新指定快捷键。</p><p>如果你查看一下<a href="https://github.com/Microsoft/vscode-notepadplusplus-keybindings">Notpad++</a>的源代码时， 你会发现这个插件连 javascript 文件都没有，只有<a href="https://github.com/Microsoft/vscode-notepadplusplus-keybindings/blob/master/package.json">一个长达 258 行的 package.json</a>。</p><p><img src="https://static001.geekbang.org/resource/image/75/00/75b668997ff21f4f6cb619f21a4fe500.png" alt=""></p><center><span class="reference">Notepad++ keymap 配置</span></center><p>通过这套 keybindings，你就可以在 VS Code 中使用 Notepad++ 的快捷键了。</p><p>相信在上面的截图中，你还发现了一个小小的变化：</p><pre><code>&quot;activationEvents&quot;: [&quot;*&quot;]
+</code></pre><p>Notepad++ keymap 的 activationEvents 是 * ，它的意思是：不管什么条件，永远都会激活这个插件。对于 keymap 这样需要覆盖绝大多数命令的插件而言，将其设置为  * 无伤大雅。不过，如果你的插件被使用的频率并不算高，你还是需要精心设计 activationEvents，关于可以使用的 activationEvents，还请查看<a href="https://code.visualstudio.com/docs/extensionAPI/activation-events">VS Code 文档</a>，这里不多加赘述。</p><h2>二、分享代码片段和主题</h2><p>既然说到了快捷键是如何通过插件分享的，那我就顺带再聊一聊如何分享代码片段和主题好了。</p><h3>1、代码片段</h3><p>首先是代码片段，我们可以通过 yeoman 脚手架来创建一个代码片段分享的插件模板，脚本依然是 <code>yo code</code>。</p><p><img src="https://static001.geekbang.org/resource/image/49/22/499219e2d730544caa7d73d84a075d22.png" alt=""></p><center><span class="reference">选择 New Code Snippets</span></center><p>这一次我们选择 Code Snippet 。</p><p><img src="https://static001.geekbang.org/resource/image/4f/4b/4fcc80e810870d1bee3e0641409edf4b.png" alt=""></p><center><span class="reference">创建新 Snippet</span></center><p>下一个问题很有趣，我们可以提供 TextMate 或者 Sublime 的代码片段文件，VS Code 脚手架工具会自动将它们转成 VS Code 支持的格式。如果我们并不是要从已有的代码片段转换过来也没关系，可以直接按下回车创建新的代码片段文件。</p><p>在输入了插件名称、id、发布者名称等之后，脚手架又提问，这个代码片段是为哪个语言准备的。每个语言都会拥有一个自己的代码片段。</p><p><img src="https://static001.geekbang.org/resource/image/95/31/9529d112e278c9bec43218f7a5053e31.png" alt=""></p><center><span class="reference">为 Snippet 选择语言</span></center><p>在输入语言后， 这个插件模板就被创建出来了。打开新创建出来的文件夹后，你会发现，这个模板比上面的 JavaScript 的插件模板还简单，没有了 extension.js 、eslint 配置等文件，而是多出了一个 snippets/snippets.json 文件。</p><p><img src="https://static001.geekbang.org/resource/image/4c/33/4c5edaa611a78e97a13346a57a0eb633.png" alt=""></p><center><span class="reference">代码片段插件模板 package.json</span></center><p>这个 snippets.json 文件，跟专栏<a href="https://time.geekbang.org/column/article/40896">第十讲《拒绝重复，你的代码百宝箱：如何书写code snippet？》</a>中介绍的书写方式是一样的。如果不熟悉的话，可以翻回去再看看。</p><p>我在这里要着重介绍的就是：package.json 里 contributes 的变化。</p><pre><code>&quot;contributes&quot;: {
+    &quot;snippets&quot;: [
+        {
+            &quot;language&quot;: &quot;javascript&quot;,
+            &quot;path&quot;: &quot;./snippets/snippets.json&quot;
+        }
+    ]
+}
+</code></pre><p>现在 contributes 中的值不再是 commands，而是 snippets，它里面为 javascript 这个语言指定一个 snippet 文件的相对地址。</p><p>你可以将你觉得不错的代码片段放入到 snippets/snippets.json 文件中去，然后就可以通过插件分享给其他人了。</p><h3>2、主题</h3><p>主题的分享就更简单了，我们依然是通过脚手架来创建模板。首先我们选择的模板类型是 New Color Theme，接着脚手架询问我们是否要倒入已经存在的主题文件。这里我们可以使用 TextMate、Atom 或者 Sublime 的主题文件（tmTheme 文件），因为大家使用的主题引擎都是一样的。</p><p><img src="https://static001.geekbang.org/resource/image/0a/b4/0a05ff524d0b7802407c7805af63fdb4.png" alt=""></p><center><span class="reference">选择创建新主题文件</span></center><p>不过，从零开始创建一个主题文件也非常简单。我们就选择 “No, start fresh” 好了。</p><p><img src="https://static001.geekbang.org/resource/image/09/05/09a317fd16d0cf0113e033bbde91b105.png" alt=""></p><center><span class="reference">选择基础主题颜色</span></center><p>主题创建的最后一个问题则是，想要创建的主题是深色的，浅色的还是高对比度的？选择后，VS Code 会根据基础主题（base theme）默认提供一部分颜色，然后我们可以基于它再进行拓展。</p><p><img src="https://static001.geekbang.org/resource/image/09/0e/092c2c9cfc64e9f691d2ff6f2e0fdf0e.png" alt=""></p><center><span class="reference">颜色主题 package.json </span></center><p>插件被创建好后，你会发现它跟代码片段的模板很接近，只不过现在多了一个 themes/mytheme-color-theme.json 文件。</p><p><img src="https://static001.geekbang.org/resource/image/d4/49/d485ba8395f91143d9984693d8b00a49.png" alt=""></p><center><span class="reference">颜色主题文件</span></center><p>这个文件里就是对编辑器内代码以及工作区的颜色设置了。我在专栏<a href="https://time.geekbang.org/column/article/68475">《如何深度定制自己的主题？》</a>里介绍了如何在个人设置里修改主题，当我们基于某个现成的主题修改配色后，可以将添加的配置 workbench.colorCustomizations 和editor.tokenColorCustomizations，拷贝进这个文件中。</p><p>不过还有一个更简单的方式：打开命令面板，搜索“使用当前设置生成主题”并执行。</p><p><img src="https://static001.geekbang.org/resource/image/c8/55/c8ac174aee351675186be82887f86f55.gif" alt=""></p><center><span class="reference">生成主题文件</span></center><p>这个生成出来的文件，就可以当作我们在插件中进行分享的主题文件了。总结来说，要创建一个颜色主题我们可以：</p><ul>
+<li>在个人设置中修改工作区或者编辑器内的主题；</li>
+<li>然后使用命令 “使用当前设置生成主题” 生成主题文件，并为这个主题文件添加 name 名字；</li>
+<li>将这个文件分享成插件。</li>
+</ul><p>看到这里，相信你一定想到了，要真正分享这个主题，还差一步，那就是在 package.json 的 contributes 部分注册这个主题文件。</p><pre><code>&quot;contributes&quot;: {
+    &quot;themes&quot;: [
+        {
+            &quot;label&quot;: &quot;mytheme&quot;,
+            &quot;uiTheme&quot;: &quot;vs-dark&quot;,
+            &quot;path&quot;: &quot;./themes/mytheme-color-theme.json&quot;
+        }
+    ]
+}
+</code></pre><p>这个配置里，label 是这个主题的名字，uiTheme 就是基础主题，而 path 就是主题文件的相对地址了。</p><h2>小结</h2><p>好了，以上就是今天内容的全部了。今天我介绍了如何使用编辑器相关的 API，进行编辑器命令的开发。如果你要想熟悉这套 API，不妨试试将 VS Code 里的一些命令自己重新实现一遍。</p><p>此外，我还介绍了如何创建快捷键、代码片段和主题相关的插件。相信你已经发现了，这三种类型的插件，其实就是通过 contributes 中 keybindings、snippets和 themes 进行注册。明白了这一点，你就不需要每次都通过 yeoman 脚手架来专门创建插件模板了，只需修改 package.json 即可。甚至，你还可以将这几种插件类型组合到一起。而至于如何发布插件，我会在后面的章节中介绍。</p><hr></hr><p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/4f/6fb51ff1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">一步</span>
+                            </div>
+                            <div class="bd">老师这边有个问题啊，就是绑定快捷键的时候的 使用使用的 数字呢？<br>比如 ctrl+6 没有起作用的 <br></div>
+                            <span class="time">2018-11-27 10:23</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>26-JavaScript词法：为什么12.toString会报错？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>26-JavaScript词法：为什么12.toString会报错？</h1>
+<p>你好，我是winter。</p><p>在前面的文章中，我们已经从运行时的角度了解过JavaScript的知识内容，在接下来的几节课，我们来了解一下JavaScript的文法部分。</p><p>文法是编译原理中对语言的写法的一种规定，一般来说，文法分成词法和语法两种。</p><p>词法规定了语言的最小语义单元：token，可以翻译成“标记”或者“词”，在我的专栏文章中，我统一把token翻译成词。</p><p>从字符到词的整个过程是没有结构的，只要符合词的规则，就构成词，一般来说，词法设计不会包含冲突。词法分析技术上可以使用状态机或者正则表达式来进行，我们的课程主要是学习词法，关于它们实现的细节就不多谈了。</p><h2>概述</h2><p>我们先来看一看JavaScript的词法定义。JavaScript源代码中的输入可以这样分类：</p><ul>
+<li>WhiteSpace 空白字符</li>
+<li>LineTerminator 换行符</li>
+<li>Comment 注释</li>
+<li>Token 词
+<ul>
+<li>IdentifierName 标识符名称，典型案例是我们使用的变量名，注意这里关键字也包含在内了。</li>
+<li>Punctuator 符号，我们使用的运算符和大括号等符号。</li>
+<li>NumericLiteral 数字直接量，就是我们写的数字。</li>
+<li>StringLiteral 字符串直接量，就是我们用单引号或者双引号引起来的直接量。</li>
+<li>Template 字符串模板，用反引号<code>`</code> 括起来的直接量。</li>
+</ul>
+</li>
+</ul><!-- [[[read_end]]] --><p>这个设计符合比较通用的编程语言设计方式，不过，JavaScript中有一些特别之处，我下面就来讲讲特别在哪里。</p><p>首先是除法和正则表达式冲突问题。我们都知道，JavaScript不但支持除法运算符“ / ”和“ /= ”，还支持用斜杠括起来的正则表达式“ /abc/ ”。</p><p>但是，这时候对词法分析来说，其实是没有办法处理的，所以JavaScript的解决方案是定义两组词法，然后靠语法分析传一个标志给词法分析器，让它来决定使用哪一套词法。</p><p>JavaScript词法的另一个特别设计是字符串模板，模板语法大概是这样的：</p><pre><code class="language-JavaScript">`Hello, ${name}`
+</code></pre><p>理论上，“ ${ } ”内部可以放任何JavaScript表达式代码，而这些代码是以“ } ” 结尾的，也就是说，这部分词法不允许出现“ } ”运算符。</p><p>是否允许“ } ”的两种情况，与除法和正则表达式的两种情况相乘就是四种词法定义，所以你在JavaScript标准中，可以看到四种定义：</p><ul>
+<li>InputElementDiv；</li>
+<li>InputElementRegExp；</li>
+<li>InputElementRegExpOrTemplateTail；</li>
+<li>InputElementTemplateTail。</li>
+</ul><p>为了解决这两个问题，标准中还不得不把除法、正则表达式直接量和“ } ”从token中单独抽出来，用词上，也把原本的 Token 改为 CommonToken。</p><p>但是我认为，从理解的角度上出发，我们不应该受到影响，所以在本课，我们依然把它们归类到token来理解。</p><p>对一般的语言的词法分析过程来说，都会丢弃除了token之外的输入，但是对JavaScript来说，不太一样，换行符和注释还会影响语法分析过程，这个我们将会在语法部分给你详细讲解（所以要实现JavaScript的解释器，词法分析和语法分析非常麻烦，需要来回传递信息）。</p><p>接下来我来给你详细介绍一下。</p><h3>空白符号 Whitespace</h3><p>说起空白符号，想必给大家留下的印象就是空格，但是实际上，JavaScript可以支持更多空白符号。</p><ul>
+<li>
+<p><code>&lt;HT&gt;</code>(或称<code>&lt;TAB&gt;</code>)是U+0009，是缩进TAB符，也就是字符串中写的 \t 。</p>
+</li>
+<li>
+<p><code>&lt;VT&gt;</code>是U+000B，也就是垂直方向的TAB符 \v，这个字符在键盘上很难打出来，所以很少用到。</p>
+</li>
+<li>
+<p><code>&lt;FF&gt;</code>是U+000C，Form Feed，分页符，字符串直接量中写作 \f ，现代已经很少有打印源程序的事情发生了，所以这个字符在JavaScript源代码中很少用到。</p>
+</li>
+<li>
+<p><code>&lt;SP&gt;</code>是U+0020，就是最普通的空格了。</p>
+</li>
+<li>
+<p><code>&lt;NBSP&gt;</code>是U+00A0，非断行空格，它是SP的一个变体，在文字排版中，可以避免因为空格在此处发生断行，其它方面和普通空格完全一样。多数的JavaScript编辑环境都会把它当做普通空格（因为一般源代码编辑环境根本就不会自动折行……）。HTML中，很多人喜欢用的 <code>&amp;nbsp;</code> 最后生成的就是它了。</p>
+</li>
+<li>
+<p><code>&lt;ZWNBSP&gt;</code>(旧称<code>&lt;BOM&gt;</code>)是U+FEFF，这是ES5新加入的空白符，是Unicode中的零宽非断行空格，在以UTF格式编码的文件中，常常在文件首插入一个额外的U+FEFF，解析UTF文件的程序可以根据U+FEFF的表示方法猜测文件采用哪种UTF编码方式。这个字符也叫做“bit order mark”。</p>
+</li>
+</ul><p>此外，JavaScript支持所有的Unicode中的空格分类下的空格，我们可以看下表：</p><p><img src="https://static001.geekbang.org/resource/image/dd/60/dd26aa9599b61d26e7de807dee2c6360.png" alt=""></p><p>很多公司的编码规范要求JavaScript源代码控制在ASCII范围内，那么，就只有<code>&lt;TAB&gt;</code> <code>&lt;VT&gt;</code> <code>&lt;FF&gt;</code> <code>&lt;SP&gt;</code> <code>&lt;NBSP&gt;</code>五种空白可用了。</p><h3>换行符 LineTerminator</h3><p>接下来我们来看看换行符，JavaScript中只提供了4种字符作为换行符。</p><ul>
+<li><code>&lt;LF&gt;</code></li>
+<li><code>&lt;CR&gt;</code></li>
+<li><code>&lt;LS&gt;</code></li>
+<li><code>&lt;PS&gt;</code></li>
+</ul><p>其中，<code>&lt;LF&gt;</code>是U+000A，就是最正常换行符，在字符串中的<code>\n</code>。</p><p><code>&lt;CR&gt;</code>是U+000D，这个字符真正意义上的“回车”，在字符串中是<code>\r</code>，在一部分Windows风格文本编辑器中，换行是两个字符<code>\r\n</code>。</p><p><code>&lt;LS&gt;</code>是U+2028，是Unicode中的行分隔符。<code>&lt;PS&gt;</code>是U+2029，是Unicode中的段落分隔符。</p><p>大部分LineTerminator在被词法分析器扫描出之后，会被语法分析器丢弃，但是换行符会影响JavaScript的两个重要语法特性：自动插入分号和“no line terminator”规则。</p><h3>注释 Comment</h3><p>JavaScript的注释分为单行注释和多行注释两种：</p><pre><code class="language-JavaScript">/* MultiLineCommentChars */ 
+// SingleLineCommentChars
+</code></pre><p>多行注释中允许自由地出现<code>MultiLineNotAsteriskChar</code>，也就是除了<code>*</code>之外的所有字符。而每一个<code>*</code>之后，不能出现正斜杠符<code>/</code>。</p><p>除了四种LineTerminator之外，所有字符都可以作为单行注释。</p><p>我们需要注意，多行注释中是否包含换行符号，会对JavaScript语法产生影响，对于“no line terminator”规则来说，带换行的多行注释与换行符是等效的。</p><h2>标识符名称 IdentifierName</h2><p><code>IdentifierName</code>可以以美元符<code>$</code>下划线<code>_</code>或者Unicode字母开始，除了开始字符以外，<code>IdentifierName</code>中还可以使用Unicode中的连接标记、数字、以及连接符号。</p><p><code>IdentifierName</code>的任意字符可以使用JavaScript的Unicode转义写法，使用Unicode转义写法时，没有任何字符限制。</p><p><code>IdentifierName</code>可以是<code>Identifier</code>、<code>NullLiteral</code>、<code>BooleanLiteral</code>或者<code>keyword</code>，在<code>ObjectLiteral</code>中，<code>IdentifierName</code>还可以被直接当做属性名称使用。</p><p>仅当不是保留字的时候，<code>IdentifierName</code>会被解析为<code>Identifier</code>。</p><p>注意<code>&lt;ZWNJ&gt;</code>和<code>&lt;ZWJ&gt;</code>是ES5新加入的两个格式控制字符，它们都是0宽的。</p><p>我在前面提到了，关键字也属于这个部分，在JavaScript中，关键字有:</p><pre><code>await break case catch class const continue debugger default delete do else export extends finally for function if import ininstance of new return super switch this throw try typeof var void while with yield
+</code></pre><p>除了上述的内容之外，还有1个为了未来使用而保留的关键字:</p><pre><code>enum
+</code></pre><p>在严格模式下,有一些额外的为未来使用而保留的关键字:</p><pre><code>implements package protected interface private public
+</code></pre><p>除了这些之外，<code>NullLiteral</code>（<code>null</code>）和<code>BooleanLiteral</code>（<code>true false</code>）也是保留字，不能用于<code>Identifier</code>。</p><h3>符号 Punctuator</h3><p>因为前面提到的除法和正则问题, /和/=两个运算符被拆分为DivPunctuator，因为前面提到的字符串模板问题，<code>}</code>也被独立拆分。加在一起，所有符号为：</p><pre><code>{ ( ) [ ] . ... ; , &lt; &gt; &lt;= &gt;= == != === !== + - * % ** ++ -- &lt;&lt; &gt;&gt; &gt;&gt;&gt; &amp; | ^ ! ~ &amp;&amp; || ? : = += -= *= %= **= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;= &amp;= |= ^= =&gt; / /= }
+</code></pre><h3>数字直接量 NumericLiteral</h3><p>我们来看看今天标题提出的问题，JavaScript规范中规定的数字直接量可以支持四种写法：十进制数、二进制整数、八进制整数和十六进制整数。</p><p>十进制的Number可以带小数，小数点前后部分都可以省略，但是不能同时省略，我们看几个例子：</p><pre><code class="language-javascript">.01
+12.
+12.01
+</code></pre><p>这都是合法的数字直接量。这里就有一个问题，也是我们标题提出的问题，我们看一段代码：</p><pre><code class="language-javascript">12.toString()
+</code></pre><p>这时候<code>12.</code> 会被当做省略了小数点后面部分的数字而看成一个整体，所以我们要想让点单独成为一个token，就要加入空格，这样写：</p><pre><code class="language-javascript">12 .toString()
+</code></pre><p>数字直接量还支持科学计数法，例如：</p><pre><code class="language-javascript">10.24E+2
+10.24e-2
+10.24e2
+</code></pre><p>这里e后面的部分，只允许使用整数。当以<code>0x</code> <code>0b</code> 或者<code>0o</code> 开头时，表示特定进制的整数：</p><pre><code class="language-javascript">0xFA
+0o73
+0b10000
+</code></pre><p>上面这几种进制都不支持小数，也不支持科学计数法。</p><h3>字符串直接量 StringLiteral</h3><p>JavaScript中的StringLiteral支持单引号和双引号两种写法。</p><pre><code class="language-JavaScript">    " DoubleStringCharacters "
+    ' SingleStringCharacters '
+</code></pre><p>单双引号的区别仅仅在于写法，在双引号字符串直接量中，双引号必须转义，在单引号字符串直接量中，单引号必须转义。字符串中其他必须转义的字符是<code>\</code>和所有换行符。</p><p>JavaScript中支持四种转义形式，还有一种虽然标准没有定义，但是大部分实现都支持的八进制转义。</p><p>第一种是单字符转义。 即一个反斜杠<code>\</code>后面跟一个字符这种形式。</p><p>有特别意义的字符包括有<code>SingleEscapeCharacter</code>所定义的9种，见下表：</p><p><img src="https://static001.geekbang.org/resource/image/02/75/022c2c77d0a3c846ad0d61b48c4e0e75.png" alt=""></p><p>除了这9种字符、数字、x和u以及所有的换行符之外，其它字符经过<code>\</code>转义后都是自身。</p><h3>正则表达式直接量 RegularExpressionLiteral</h3><p>正则表达式由Body和Flags两部分组成，例如：</p><pre><code>/RegularExpressionBody/g
+</code></pre><p>其中Body部分至少有一个字符，第一个字符不能是*（因为/*跟多行注释有词法冲突）.</p><p>正则表达式有自己的语法规则，在词法阶段，仅会对它做简单解析。</p><p>正则表达式并非机械地见到<code>/</code>就停止，在正则表达式<code>[ ]</code>中的<code>/</code>就会被认为是普通字符。我们可以看一个例子：</p><pre><code class="language-javascript">/[/]/.test("/");
+</code></pre><p>除了<code>\</code>、<code>/</code> 和<code>[</code> 三个字符之外，JavaScript正则表达式中的字符都是普通字符。</p><p>用\和一个非换行符可以组成一个转义，<code>[ ]</code>中也支持转义。正则表达式中的flag在词法阶段不会限制字符。</p><p>虽然只有ig几个是有效的，但是任何IdentifierPart（Identifier中合法的字符）序列在词法阶段都会被认为是合法的。</p><h3>字符串模板 Template</h3><p>从语法结构上，Template是个整体，其中的 <code>${ }</code> 是并列关系。</p><p>但是实际上，在JavaScript词法中，包含 <code>${ }</code> 的 Template，是被拆开分析的，如：</p><pre><code class="language-javascript">`a${b}c${d}e`
+</code></pre><p>它在JavaScript中被认为是：</p><pre><code>`a${
+b
+}c${
+d
+}e`
+</code></pre><p>它被拆成了五个部分：</p><ul>
+<li><code>`a${</code> 这个被称为模板头</li>
+<li><code>}c${</code> 被称为模板中段</li>
+<li><code>}e`</code> 被称为模板尾</li>
+<li><code>b</code> 和 <code>d</code> 都是普通标识符</li>
+</ul><p>实际上，这里的词法分析过程已经跟语法分析深度耦合了。</p><p>不过我们学习的时候，大可不必按照标准和引擎工程师这样去理解，可以认为模板就是一个由反引号括起来的、可以在中间插入代码的字符串。</p><p>模板支持添加处理函数的写法，这时模板的各段会被拆开，传递给函数当参数：</p><pre><code class="language-javascript">function f(){
+    console.log(arguments);
+}
+
+var a = "world"
+f`Hello ${a}!`; // [["Hello", "!"], world]
+</code></pre><p>模板字符串不需要关心大多数字符的转义，但是至少 <code>${</code> 和 <code>`</code> 还是需要处理的。</p><p>模板中的转义跟字符串几乎完全一样，都是使用 <code>\</code>。</p><h2>总结</h2><p>今天我们一起学习JavaScript的词法部分，这部分的内容包括了空白符号、换行符、注释、标识符名称、符号、数字直接量、字符串直接量、正则表达式直接量、字符串模板。掌握词法对我们平时调试代码至关重要。</p><p>最后，给你留一个问题：用零宽空格和零宽连接符、零宽非连接符，写一段好玩的代码。你可以给我留言，我们一起讨论。</p><h1>猜你喜欢</h1><p><a href="https://time.geekbang.org/course/intro/163?utm_term=zeusMTA7L&amp;utm_source=app&amp;utm_medium=chongxueqianduan&amp;utm_campaign=163-presell"><img src="https://static001.geekbang.org/resource/image/1a/08/1a49758821bdbdf6f0a8a1dc5bf39f08.jpg" alt="unpreview"></a></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Snow同學  2019-03-24 05:24:33
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            只有我看完，还是不知道12.toString()为什么会报错嘛？ [28赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            🐻🔫🐸  2019-03-24 21:44:47
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            为啥不支持直接回复呢？<br><br>这里讨论一下@Snow同学的问题 别忘了JS是允许直接写小数的，也就说12.toString() 他无法分辨你是想要创建一个小数位为toString()的数 还是创建一个12 然后调用toString()这种情况。也就说 JS里面的. 是拥有两种含义的 一种是小数点 一种是方法调用。 你可以试试12..toString() 这样就可以消除这种歧义 [4赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            田野的嘴好冰  2019-03-26 21:07:18
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            零宽空格<br>var a = &#39;\uFEFF&#39;,b = &#39;b&#39;, c = &#39;c&#39;, d = (b+a+c);<br>console.log(d); &#47;&#47;bc<br>console.log(d.length); &#47;&#47;3<br>console.log(d.indexOf(a)); &#47;&#47;1 [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            华洛  2019-03-25 19:13:01
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我真的觉得这些东西已经超出普通前端对于基础的定义了。 [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            商志远🤪  2019-03-19 09:25:55
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            【理论上，“ ${ } ”内部可以放任何 JavaScript 表达式代码，而这些代码是以“ } ” 结尾的，也就是说，这部分词法不允许出现“ } ”运算符。】<br>这段话没理解 [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            水儿涵涵  2019-03-20 15:22:59
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师好，前端工作一年多，需要学一门后端语言吗？我是想把精力放到前端上，但是现在很多公司都要求熟练一门后端语言，但是工作又用不上后端语言，现在有点纠结。希望给点建议，感谢！ [2赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            曾侃  2019-04-10 15:55:01
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            之前没有接触过零宽字符，学完这节课后网上搜了下零宽字符的应用，看到了这篇文章《[翻译]小心你复制的内容：使用零宽字符将用户名不可见的插入文本中》，受益匪浅。自己用这个思路实现了一样的给字符串添加水印的功能。<br>代码地址：https:&#47;&#47;github.com&#47;zengkan0703&#47;text-watermark，有不对的地方请同学们指正。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            一步  2019-03-29 08:13:22
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            正则表达式冲突，这时候对词法分析来说，其实是没有办法处理的，所以 JavaScript 的解决方案是定义两组词法，然后靠语法分析传一个标志给词法分析器，让它来决定使用哪一套词法。<br><br>对于这句活我有个疑问，不是先进行词法分析，然后在进行语法分析吗？<br><br>难道这里是词法分析分析出来两种，然后在语法分析的选择其中的一种？？？？？ [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            0xAC7  2019-04-14 18:13:46
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            @Snow同學 <br>--------------------------------<br>只有我看完，还是不知道12.toString()为什么会报错嘛？<br>--------------------------------<br><br>我的理解是，12.toString() 前面的“12.”（注意有点）对于引擎来讲是有歧义的，这到底是代表浮点数，还是代表要转为数字的包装对象，然后调用 toString 方法呢？引擎默认代表是浮点数，这个时候如果要调用 toString 方法，需要再加一个点，像这样：12..toString()。<br>顺便说一句，中文也有很多歧义呢。 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Sherry  2019-04-12 09:42:59
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            一篇不落看到现在，真心想说一句，这些知识，对于我们工作中做开发，或者进阶，或者成长为能独当一面的大神，真的有用吗……自己一直很重视基础，只是，老师讲的这些东西，不止感官上觉得比较偏，而且感觉逻辑性真的有点弱啊……知识哪怕再偏再难，系统性讲出来，讲清楚，也会看得懂吧。但是到现在，我的感觉是，一头雾水…3年多的开发经验，我怕是个假的前端😔 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            桂马  2019-04-02 00:42:19
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            经典的USD.replace(&#47;\B(?=(\d{3})+$)&#47;g,&#39;,&#39;) 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            一步  2019-03-29 08:29:34
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            @商志远🤪<br>你可以尝试一下在控制台输入：`test } ${}`  看看会发生什么？<br><br>Uncaught SyntaxError: Unexpected token } 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Skyling  2019-03-21 09:30:57
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            重学前端是夯实前端基础，那前端进阶方向在哪里?还是一定要修一门后端语言扩展服务端，希望老师可以指点迷津😊 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            leslee  2019-03-19 20:25:45
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            是否允许“ } ”的两种情况，与除法和正则表达式的两种情况相乘就是四种词法定义，所以你在 JavaScript 标准中，可以看到四种定义：…… 有点蒙 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

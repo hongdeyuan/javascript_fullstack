@@ -1,0 +1,1204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>开篇词-从今天起，重新理解前端</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>开篇词-从今天起，重新理解前端</h1>
+<p>你好，我是winter。接下来的3个月里，我将带你重新认识前端。</p><h2>前端发展史：从青铜到黄金时代</h2><p>我自己是在2006年开始接触前端的。现在回想起来，那会儿前端还处于史前的“青铜时代”，甚至网页的主要交互都还是依靠切换超链接来完成的。</p><h3>1.前端的史前记忆：“青铜时代”</h3><p>那时候，谷歌刚刚基于Ajax发布的Gmail也没多久，虽然这项伟大的技术标志着Web 1.0（静态网页）到Web 2.0（动态网页）的迈进，但在国内依然少有人懂，如果当时谁可以对这项技术侃侃而谈，那简直就是大神的级别了。</p><p>当时我还是个学生，喜欢前端纯粹是兴趣使然。那时我混黑白棋社区，想着给黑白棋界面写插件，但自己又不懂界面相关的知识，于是开始通过各种方式学习前端。</p><p>真想学的时候才发现网络上的前端资料很是稀缺，所以我基本上都是先从图书馆借书，然后再在电脑上跑案例验证这样的方式来学习的，现在想起来，还真是一段艰难的岁月。</p><p>当然，这段经历也为我日后的前端生涯悄悄埋下了一颗种子，我逐渐开始把自己的职业规划路线放在了前端上。</p><p>这在当时是个不可思议的想法，因为那时的前端岗位不论从收入上还是在职责上，都远落后于其他岗位。但是，我基于对技术发展趋势的判断，认为前端在未来会越来越重要。</p><!-- [[[read_end]]] --><h3>2. 进入发展期的前端：“白银时代”</h3><p>2008年，我毕业了，也很幸运地得到了一个既能发挥我的C++长处，又能兼顾前端发展规划的职位：微软北京的软件开发工程师，恰好负责的是Windows CE上的IE浏览器开发，在这里，我接触到了当时最先进的软件工程体系，并且积累了很多UI架构经验。</p><p>两年后，我加入了盛大做电子书，负责电子书的文本排版工作，这个工作是一个既写底层又写JavaScript的岗位，同时排版引擎也是浏览器的重要组成部分，也让我对浏览器的工作原理有了更深入的理解。</p><p>在盛大后期，我加入了WebOS项目，负责前端框架，我开始基于移动的角度思考前端交互和框架，这份工作让我离前端又近了一步。</p><p>但是很遗憾，因为种种原因，我在微软和盛大的几个项目都不算成功，除了电子书实际上市但销量不高，Windows CE 7.0 和盛大的 WebOS 都在公司内部夭折。</p><p>自己亲手构建的产品，却因为非技术原因没有服务到最终用户，对我来说，是件非常遗憾的事情。不过，这段时间，也让我更加确信前端技术的价值。</p><p>回过来看，那几年，前端技术开始了它的大踏步发展，那一段时间，可以说是前端的“白银时代”。最直观的表现之一就是前端逐步从后端分离了出来，它的代码也变得复杂了起来，还需要保存数据、处理数据、生成视图等等。</p><p>悄然之间，我发现前端已经从零散的“工序”逐步发展成为有体系和发展目标的职能，同时，在越来越大的前端团队中，工程化的思想也逐渐萌芽。我深有感触，前端已经不再是别人眼中的“小菜一碟”了。</p><h3>3. 从前端到“全端”：“黄金时代”</h3><p>在这样的行业背景里，从盛大离职后，我加入了阿里巴巴做手机淘宝开发，这也是我首次从事真正的前端工作。</p><p>在手机淘宝，前端团队的各种基础设施也逐渐建立了起来，从最开始的多屏适配方案、基础库、工具链到页面搭建平台和性能体系，最后到客户端融合方案Weex，我随着团队一起经历了业务发展、团队自身成长和行业变革。</p><p>与此同时，在我加入阿里巴巴后的这段时间里，随着移动时代的到来，前端也开启了自己的“黄金时代”，它的职责变得更加重要，有了独立的发布权限，技术也变得更加复杂。</p><p>一些传统软件开发和互联网服务端的方法论逐步移植到前端开发中，并形成了前端自己的工程体系，诸如持续集成、前后端分离、线上监控……</p><p>架构方面，前端架构的任务也从简单的解决兼容和风格问题，逐步过渡到提倡组件化和UI架构模式，最后形成了新一代的前端框架React、Vue和Angular，他们也在竞争和互相学习中成长。</p><h2>前端开发之痛：散点自学+基础不牢</h2><p>正当处于“黄金时代”的前端技术在全力以赴极速前行之时，我却发现，前端开发者们的步伐似乎渐渐有些跟不上了。</p><p>因为在我职业发展的后半段，面试和培养前端工程师已经成为我的长期工作职责。在这期间，我意识到，目前的前端教育几乎是完全缺失的。</p><p>在面试应届生过程中，我会习惯性地问表现比较好的同学“你是如何学习前端的”，而我得到的答案多是“自学”“在社团学习”，却从未听到过“在学校学习过”这样的答案。</p><p>而对于工作之后的前端开发者来说，没有系统学习的问题仍然存在，常常有一些具有多年从业经验的工程师，仍然会在看到一些用法时惊呼：“还可以这样！”</p><p>在我看来，这些用法都是一些基础的不能再基础的知识点，但是他们却浑然不知。</p><p><strong>如果深入进去了解，你会发现，表面上看他们可能是一时忘记了，或者之前没注意，但实际上是他们对于前端的知识体系和底层原理没有真正系统地理解。</strong></p><p>在阿里工作的时候，我戏称很多同学学前端的方式是“土法学前端”，他们对于知识的理解基本都停留在点上，从来没有大范围把这些点串成线，形成自己的知识体系，因此才会出现上面说的遗漏和盲点。</p><p>这个问题在一些一直在小公司工作的前端工程师身上非常突出。</p><p>经常能看到一些案例，一些有技术追求、有热情的工程师，因为技术敏感度和主观能动性都不错，所以工作了五六年之后，逐步开始在自己的公司做一些技术管理相关的事情了。</p><p>但是，由于他们所在公司的业务并不复杂，也没有技术积累，所以他们自身的技术水平其实并不高，可以说还处于非常初级的阶段（可能面试连阿里P6都过不了）。</p><p><strong>做了管理，技术没跟上，并且还错过了最佳的学习时间，这个境遇可想而知，他们在工作中大概率只能是被动地接受需求解决问题，然后也同时焦虑着自己的未来，焦虑着自己的竞争力。</strong></p><p>关于前端工程师成长，我认为需要两个视角。一是立足标准，系统性总结和整理前端知识，建立自己的认知和方法论；二是放眼团队，从业务和工程角度思考前端团队的价值和发展需要。只有这样做，才能够持续发展，在高速发展的技术和工程浪潮中稳稳立足。</p><p>这也正是“重学前端”这个专栏的初衷，我希望提供一些视角，带你以完备、体系化的方式理解和思考前端的基础知识和工程实践。</p><p>除此之外，前端工程师也是开发工程师的一员，除了前端自身的领域知识和工程特点外，你还需要了解程序员通用的编程能力和架构能力。</p><p>所以，想要成为优秀的前端工程师，我觉得你需要通过系统地学习和总结获取知识，通过练习获取编程能力，通过工作经验来获取架构和工程能力。</p><p>当然，一个为期3个月的专栏无法穷尽前端庞杂的知识，讲知识点也不是我们的目标。知识点讲的再好再全，也不一定能记得住。</p><p>我们专栏的目标是帮助你建立自己的知识体系，根据你自己的理解把前端的领域知识链接起来，形成结构，这样做，不但能帮助你记忆知识，还能在其中发现自己知识的缺失，甚至可以凭借知识体系来判断知识的重要性，来决定是否要深入学习。</p><p>在这个专栏里，我将知识分成了四个模块来讲解：</p><ul>
+<li>JavaScript；</li>
+<li>CSS和HTML；</li>
+<li>浏览器实践；</li>
+<li>前端综合应用。</li>
+</ul><p>前三个模块是前端的基础知识，是个人的前端能力提升，而模块四则是前端团队发展相关的内容，有助于你和团队的整体提高。</p><p>在<strong>JavaScript部分</strong>中，我主要会从文法和运行时的角度去讨论JavaScript语言。它们是互相关联的，而语义就是文法到运行时之间的桥梁；它们分别又是完备的，任何语言特性都离不开两者，所以从语法和运行时的角度，我们都可以了解完整的JavaScript。</p><p><strong>CSS和HTML部分</strong>，会侧重从语言和设计思想的角度来讲解，我们同样可以对两者的全貌建立一些认知。</p><p><strong>浏览器部分</strong>，包含了浏览器工作的原理和一些重要的API，包括BOM、DOM、CSSOM和其他一些内容。了解了这些知识，你才能把JavaScript和HTML、CSS连接起来，用JavaScript来实现功能。</p><p><strong>前端综合应用部分</strong>，主要是我的一些工作经验，我会选择我在手淘和淘宝工作中的一些案例来辅助讲解。</p><p>前面，我说到前端是一个非常年轻的职业，但我仍然认为前端具有很多空间和机会，一些基础设施仍然简陋，前端的能力可以带来更多的业务场景，这些有待于我们去发掘。</p><p>前端社区非常活跃，新技术也在不断出现。在这样的环境下，机会和竞争并存，学习也犹如逆水行舟，不进则退，建立自己的知识体系和方法论，你才能够保持领先优势。</p><p>我希望从我的经验出发，给你一些启发和帮助，并借由这个专栏帮你建立自己的前端知识体系。同时，我也相信，在你们中间一定会产生更多能够带领前端领域取得突破的、优秀的前端工程师。</p><p>最后，也希望你能和我分享你的前端故事和经历，你是怎么走上前端道路的？你希望将来成为怎样的前端工程师？欢迎在留言区与我分享。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            无敌娜娜  2019-01-14 21:59:08
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            作为一个已婚未育准备去异地生活换工作的女前端，还不是本专业自学的，这几天找工作尝到了人生百态，希望通过这个学习，可以让公司注重我的能力而不是已婚未育，毕竟真没打算这么早生娃，加油加油加油，向大牛看齐，渣渣也有美好的明天😊 [146赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            恋着歌  2019-01-14 17:29:23
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            希望老师能介绍一两个，活跃的前端社区。以及怎样参与进去，影响社区和个人。 [101赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-15 13:58:34</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">现在传统社区不行了，最活跃的可能是npm和github</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            假巴尼  2019-01-14 17:47:29
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            培训机构出来的，但是对it行业充满了敬意 [76赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            郑旭  2019-01-14 19:11:26
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            目前我就在自学前端，大概也属于土法，瞎看，像没头苍蝇一样。<br>说说用到的我觉得比较好的资料吧。<br><br>https:&#47;&#47;www.theodinproject.com&#47;home<br>odin project： 一个小的教程合集，作者列出学习步骤和每一步的实践项目。<br>后端部分是学习rails，我就不打算看了。<br><br>frontend master <br>上边都是一些国外有名前端开发者讲的课。最出名的应该是You don&#39;t know js的作者的课吧。javascript讲的不错。CSS flexbox and Grid 我觉得挺不错的。CSS in depth没有很多实际的例子，但知识点很全。这个网站课程大都是讲知识点，实践项目比较少或是比较初级。<br><br>然后在油管上搜一些小教程，演示如何做网站，或是一些特殊效果。<br><br>面对茫茫多的CSS知识总感到很茫然，看到codepen上不管是炫技还是实用的trick，都会感慨自己啥时能学到那个地步。 [74赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-15 14:03:12</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">感谢分享，不必羡慕，我想建立知识体系的目的就是让trick不再是trick，真正有价值的东西永远是建立高楼大厦的工程知识，而不是雕刻在砖面的小花纹。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            木子烁束岸  2019-01-14 20:07:22
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            不得不说这营销真的很成功。骗走了我的第一次……在极客时间买专栏。没办法，这痛点戳的太准了。尤其这些年半道出家的前端真不少。我认了。希望有收获 [37赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            荏苒  2019-01-14 20:38:53
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            2014年毕业，找不到工作半路出家学Java<br>第一份工作，“新来的，写服务的人够了，你去写页面” [30赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-15 14:16:26</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">也是一种缘分</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Gloria_前端程序媛  2019-01-15 14:48:27
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            嘿嘿～大二准前端程序媛前来报道#^_^#我爱前端！软件工程专业，web前端与信息技术方向，已形成自己的知识体系与学习路径，不断完善枝叶中，我要成为一位强大的前端程序员，不破楼兰终不还！！！ [28赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-15 20:14:40</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">气势不错。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            鲁鹏  2019-01-14 17:39:21
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            一直全栈开发，然而每次前端花的时间最长，希望通过学习少走一些弯路。 [24赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            二货小Y爱手工  2019-01-15 01:06:05
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            16年毕业的幼师，跳出自己的舒适圈自学前端，计划年后找工作中。js方面比较弱，期待老师的课 [22赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            SQYuns  2019-01-14 17:38:13
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            w老师刚好说到了我的痛点，前端我一直都是一个人在自学。学校又只教c。学的很多知识比较零散，为了更加系统化地学习前端。我开始用思维导图来做记录我学习的知识，但却一直缺一个指点方向的老师。今天我选择了你，希望老师也能不辜负我们对你的信任 [20赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            宁静致远  2019-01-14 20:29:42
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            做了管理，技术没跟上，并且还错过了最佳的学习时间，这个境遇可想而知，他们在工作中大概率只能是被动地接受需求解决问题，然后也同时焦虑着自己的未来，焦虑着自己的竞争力。<br>理解的这么深透，这就是我的瓶颈！ [18赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-15 14:09:34</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">面试这么多年，见了太多感叹可惜的案例了，希望你能有所突破。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            lovedebug  2019-01-14 18:51:20
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            作为一个喜欢的前端的后端，其实前后端一起应证学习很有趣，也很深刻。 [18赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Thoughtful valiant.  2019-01-15 21:58:28
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            今年大四了，因为专业原因自学了一些WebGL，从而对前端产生了兴趣。<br>从看《高程3》到《权威指南》，进入大四以来的5个月，基本把论坛中各位推荐的当年的“神书”学了一遍。又开始学阮一峰老师的ES6，再到跟着React官方文档学习。还买了一些课程和小册学习。接下来还要学Redux，Dva，Node等等等。<br>感觉前端要学好多，但是一想还有那么多要学，自己又莫名的开心。希望自己能一直这么有动力！<br>希望能从老师的课程中解决自己学习前端的痛点，同时还希望自己的前端之路走的更加顺畅，更体系划，加油！ [13赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            郭光景  2019-01-15 10:06:17
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            Winter is coming, it&#39;s so cool! [12赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            棚头傀儡  2019-01-15 20:29:36
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            黑马培训半年出身，今年第一份工作就过万了，但是依旧觉得成长速度慢下来了，每天都是增删改查，样式bug调整，甚至学的好多东西都生疏了，我觉得前端能做的比我现在会的要多的多，我想做点深入的 [11赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            慎独  2019-01-15 19:42:22
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            学前端也算是半个培训班吧，在腾讯课堂上报了一个班。在前端的基础上讲的还算是挺系统的，这个讲课的人曾经也是阿里巴巴的，他讲课的时候还给我们提到过你，(他叫姬成不知道认不认识)。目前的还是大四还没有踏上工作，开年就要找工作了，加油加油！！。自认为js的基础还算行，希望能更好的提升。 [10赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            闰土  2019-01-14 17:27:48
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            作为后端开发人员，早已明白前端的重要性了。期待了半年多的前端专栏终于到来了，期望能借此专栏系统的提升下自己对前端的认知。 [9赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            958  2019-01-14 20:34:19
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            顺利找到工作就来还愿，会买下老师出的所有学习资料 [8赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-15 14:14:54</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">咱们不搞封建迷信那一套。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            萧润曦  2019-01-14 23:25:03
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我是做后端开发的 在创业公司又做后端又做前端 前端目前的架构设计越来越与后端很接近 尤其是引入typescript这种语言 把component、service、api 、communication这些都分离的很清楚，做好层与层之间的解耦，清楚每一层的职责，建立起一个可维护可扩展的前端项目。我主要用的是angular开发，目前只是在架构以及angular API的使用，并没有去很深入研究底层，时间不允许。项目目前运行良好，希望看了winter的课程，能够让我在业余时间学到精髓所在。 [7赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            BarryLu白瑞  2019-01-14 17:36:51
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            前端的初学者，希望能少走弯路。 [7赞]
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

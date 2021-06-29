@@ -1,0 +1,223 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                19讲概率和统计：编程为什么需要概率和统计
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/1f/b9/1fef3fbb1e49dbf17de52ee2d7706eb9.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>通过第一个模块的学习，我想你对离散数学在编程领域中的应用，已经有了比较全面的认识。可以看出来，数据结构和基础算法体现的大多数都是离散数学的思想。这些思想更多的时候是给我们提供一种解决问题的思路，在具体指导我们解决问题的时候，我们还需要更多的数学知识。</p><p>比如说，在机器学习、数据挖掘等领域，概率统计就发挥着至关重要的作用。那关于概率统计，我们需要掌握哪些知识呢？这些知识究竟可以用在什么地方呢？第二模块的第一节，我们就来聊聊这些问题，让你对这一模块的学习做到心中有数。</p><h2>概率和统计里有哪些需要掌握的概念？</h2><p>在第一个模块中，我们认为所有事件都是一分为二的，要么必然发生，要么必然不发生。换句话说，事件的发生只有必然性，没有随机性。但是现实生活中，我们常常会碰到一些模棱两可的情况。</p><p>比如，你读到一则新闻，它报道了某个娱乐圈明星投资了一家互联网公司。那么，这则报道是属于娱乐新闻，还是科技新闻呢？你仔细读了读，觉得全篇大部分的内容都是讲述这家互联网企业的发展，而只有少部分的内容涉及了这位明星的私生活。你可能会说，这篇新闻80%的可能属于科技新闻，只有20%的可能属于娱乐新闻。这里面的数字表示了事件发生的可能性。<strong>概率</strong>（Probability）就是描述这种可能性的一个数值。</p><!-- [[[read_end]]] --><p>在概率的世界里，有很多概念。但是这几个非常基本的概念，你一定要知道。</p><p>我们用<strong>随机变量</strong>（Random Variable）来描述事件所有可能出现的状态，并使用<strong>概率分布</strong>（Probability Distribution）来描述每个状态出现的可能性。而随机变量又可以分为<strong>离散型随机变量</strong>（Discrete Random Variable）和<strong>连续型随机变量</strong>（Continuous Random Variable）。</p><p>这几个概念非常简单，但是其实也很抽象。我举个具体的例子，帮你加深印象。</p><p>假设我们使用一个随机变量x来表示新闻类型，如果在100篇新闻中，有60篇是娱乐新闻，有20篇是科技新闻，有20篇是体育新闻，那么你看到娱乐新闻的概率就是60%，看到科技新闻的概率就是20%，看到体育新闻的概率就是20%。而这三组数据就可以构成变量x的<strong>概率分布</strong>P(x)。</p><p>在这个概率分布中，我们只有一个随机变量x，现在我再添加另一个随机变量y，表示新闻属于国际的还是国内的。这个时候，新的概率分布就需要由x和y这两个变量联合起来才能决定，我们把这种概率称为<strong>联合概率</strong>（Joint Probability）。</p><p>比如说，刚才那100篇新闻中有30篇是国际新闻，而这30篇中有5篇是科技新闻，那么国际科技新闻的联合概率就是5/100=5%。不同的x和y取值的组合，就对应了不同的联合概率，我们用P(x, y)来表示。</p><p>对于离散型随机变量，通过联合概率P(x, y)在y上求和，就可以得到P(x)，这个P(x)就是<strong>边缘概率</strong>（Marginal Probability）。对于连续型随机变量，我们可以通过联合概率P(x, y)在y上的积分，推导出边缘概率P(x)。边缘概率有啥用呢？有的时候，情况看起来很复杂，而我们其实只需要研究单个事件对概率分布的影响就可以了。这个时候，边缘概率可以帮助我们去除那些我们不需要关心的事件，把联合概率转换为非联合概率，例如从P(x, y)得到P(x)，从而忽略y事件。</p><p>对于多个随机变量，还有一个很重要的概念是<strong>条件概率</strong>。我估计很多人可能搞不清楚这个概念。我还是举例子跟你说。比如说，我们现在假设100篇中有30篇是国际新闻，而这30篇中有5篇是科技新闻，那在国际新闻中出现科技新闻的概率是多少呢？</p><p>这时候，我们就需要条件概率了。也就是某个事件受其他事件影响之后出现的概率，放到咱们的例子里，在国际新闻中出现科技新闻的概率就是5/30=16.67%，在科技新闻中出现国际新闻的概率就是5/20=25%。</p><p>说了这么多，不知道你有没有一种感觉，<strong>其实<strong><strong>概率论研究</strong></strong>的就是这些概率<strong><strong>之间相互转化的关系</strong></strong>，比如联合概率、条件概率和边缘概率</strong>。通过这些关系，概率论中产生了著名的<strong>贝叶斯定理</strong>（Bayes’ theorem）。加上变量的独立性，我们就可以构建<strong>朴素贝叶斯（Naive Bayes）分类算法</strong>，这个算法在机器学习中的应用非常广泛，我们后面也会有一节课专门来讲。</p><p>此外，基于概率发展而来的信息论，提出了很多重要的概率，例如<strong>信息熵</strong>（Entropy）/ <strong>香农熵</strong>（Shannon Entropy）、<strong>信息增益</strong>（Information Gain）、<strong>基尼指数</strong>（Gini）等。这些概念都被运用到了<strong>决策树</strong>（Decision Tree）的算法中。</p><p>提到概率论，就一定要提统计学。这是因为，<strong>概率和统计</strong><strong>其实是互逆的。</strong>怎么个互逆呢？概率论是对数据产生的过程进行建模，然后研究某种模型所产生的数据有什么特性。而统计学正好相反，它需要通过已知的数据，来推导产生这些数据的模型是怎样的。因此统计特别关注数据的各种分布、统计值及其对应的统计意义。</p><p>比如，现在有一大堆的新闻稿，我们想知道这里面有多少是娱乐新闻，有多少是科技新闻等等。我们可以先拿出一小部分采样数据，逐个来判断它属于哪个类型。比如说，分析了10篇之后，我们发现有7篇是科技新闻，2篇是娱乐新闻，1篇是体育新闻，那么从统计结果来看，三个类型的概率分别是70%、20%和10%。然后，我们根据从这个小采样得来的结论，推测出科技新闻、娱乐新闻和体育新闻所占的比例。这就是统计学要做的事情。</p><p>在真实的世界里，我们通常只能观测到一些数据，而无法事先知道，是什么模型产生了这些数据，这时候就要依赖统计学。所以，海量数据的分析、实验和机器学习，都离不开统计学。</p><h2>概率和统计可以帮我们做什么？</h2><p>弄清楚这些基本概念之后，我们来看看概率和统计的知识能帮我们做点什么。</p><p>首先，我还是要提到复杂度分析。你可能会奇怪，之前讨论的复杂度分析好像没有涉及到概率啊。这是因为，在计算平均复杂度的时候，我们其实做了一个假设：所有情况出现的概率都是一样的。</p><p>我以最简单的查找算法为例。假设一个数组包含了n个元素，我们对其中的元素采取逐个扫描的方式，来查找其中的某个元素。如果这个元素一定会被找到，那么最好时间复杂度是O(1)，最差时间复杂度是O(n)，平均时间复杂度是O((n+1)/2)。</p><p>等等，为什么平均复杂度是O((n+1)/2)呢？我们假设一共扫描了n次，第1次扫描了1个元素，第2次扫描了2个元素，一直到第n次扫描了n个元素，那么总共的扫描次数是(1+2+…+n) = ((n+1)*n)/2，然后除以n次，得到每次扫描的元素数量平均值是(n+1)/2，所以时间复杂度就是O((n+1)/2)。</p><p>我把上述求和式改写成下面这样：</p><center><img src="https://static001.geekbang.org/resource/image/76/65/76e322a0aa5db3bf9cc2e21ae4c6b265.png"></center><p>如果1/n是每种情况发生的概率，那么平均的扫描次数就是，不同情况下扫描次数按照概率进行的加权平均。问题来了，为什么这n种情况发生的概率都是1/n呢？这是因为之前我们做了一个默认的假设，我们每种情况发生的概率是一样的。但在实际生活中，概率很可能不是均匀分布的。</p><p>比如说，一个网站要对它的用户发放优惠券，那我们就需要先找到这些用户。我们用一个长度为n的数组代表某个网站的用户列表。我们假设第一个注册用户ID是1，第二个注册用户的ID是2，以此类推，最近刚刚注册的用户ID为n。如果网站的发放策略是倾向于奖励新用户，那么被查找的用户ID有很大的概率会非常接近n，因此平均复杂度就会非常接近O(n)。相反，如果网站的发放策略是倾向于奖励老用户，那么搜索的用户ID有很大的概率是非常接近1的，因此平均复杂度会非常接近O(1)。</p><p>你可以看到，现实中每种情况出现的可能性是不一样的，这也就意味者概率分布其是不均匀的。而不均匀的概率分布，最终会影响平均复杂度的加权平均计算。因此，要想获得更加准确的复杂度分析结果，我们必须要学习概率知识。</p><p>除此之外，概率和统计对于机器学习和大数据分析而言更为重要。对于机器学习而言，统计的运用是显而易见的。机器学习中的监督式学习，就是通过训练样本，估计出模型的参数，最后使用训练得出的模型，对新的数据进行预测。通过训练样本来估计模型，我们可以交给统计来完成。在机器学习的特征工程步骤中，我们可以使用统计的正态分布，<strong>标准化</strong>（standardization）不同取值范围的特征，让它们具有可比性。</p><p>此外，对机器学习算法进行效果评估时，AB测试可以减少不同因素对评测结果的干扰。为了获得更可靠的结论，我们需要理解统计意义，并为每个AB测试计算相应的统计值。</p><p>最后，概率模型从理论上对某些机器学习算法提供了支持。朴素贝叶斯分类充分利用了贝叶斯定理，使用先验概率推导出后验概率，并通过变量之间相互独立的假设，把复杂的计算进行大幅的简化。简化之后，我们就可以把这个算法运用在海量文本的分类任务上。</p><p>而决策树使用了信息熵和信息增益，挑出最具有区分力的条件，构建决策树的结点和分支。这样构建出的树，不仅分类效率更高，而且更利于人脑的理解。谷歌的PageRank算法利用马尔科夫链的概率转移，有效地刻画了人们浏览互联网的行为，大幅提升了互联网搜索的体验。</p><h2>学习这部分内容，需要做哪些准备？</h2><p>听我说了这么多专栏的内容，你是不是有点担心，专栏的内容太深奥，不好理解。甚至在想，有没有必要做些准备？</p><p>学习不是件容易的事，因此进步的过程，从来不会轻松。努力需要你自己来，但是我也会从我的角度出发助力你的学习。我会争取讲清楚每个知识点背后的前因后果，以及不同知识点之间的联系，避免平铺直叙地罗列一堆理论和公式。但是，这部分内容，有公式是不可避免的，我尽量只保留那些最核心的公式。因此，即使你之前不太了解概率和统计，也没有关系。只有跟着我的节奏，搞懂每一节的重点，相信你很快就能领悟其中的精髓。</p><p>另外，我们无法脱离应用来讲知识，不然就本末倒置了。毕竟，我们学任何知识，都是为了用的。机器学习的知识纷繁复杂，涉及广泛，很多问题甚至是跨学科、跨领域的。不过，你不用担心，这里面会有太多看不懂的名词。我在讲解的时候，尽量给你抽象出最核心的部分，讲清楚来龙去脉，让你了解它整体的运作方式，不影响你对核心知识点的吸收。</p><p>当然，你可以适度地补一些概率知识，这样理解起来会更快。我在之前的<a href="https://time.geekbang.org/column/article/79048">加餐三</a>中推荐了几本书，你可以找来看看，了解一些基本概念。另外，你可以准备一些实际工作和项目中的问题。例如，你之前参与的任务，哪些可以使用概率论来解决？碰到的难题有哪些？你是如何解决的？带着这些问题，再来看我的专栏，并且多在留言区写下你的疑问和收获，相信会有到事半功倍的效果。</p><h2>小结</h2><p>概率中的概念看起来很多，但是，其实最重要就是你耳熟能详的这几个：随机变量、概率分布、联合概率、条件概率和边缘概率。它们是整个概率的基础，我后面会详细来讲。</p><p>通过这些概念之间的相互推导，我们可以得到贝叶斯定理，这是朴素贝叶斯等系列算法的核心。而在概率基础之上发展而来的信息论，定义了信息熵、信息增益和基尼指数等，构成了决策树等系列算法的核心。</p><p>概率研究的是模型如何产生数据，统计研究的是如何通过数据来推导其背后的模型。所以说，概率和统计其实是互逆的。</p><p>概率和统计的运用非常多，我这里主要讲了三个方面。第一，概率可以帮助我们进行更精准的复杂度分析；第二，概率统计更多的是用在机器学习和大数据分析中；第三，概率统计还可以用在各种机器学习的算法中。这些内容，在之后的章节我会进行非常详细的讲解。</p><h2>思考题</h2><p>之前你对概率统计的认识是什么样的呢？对这块内容，你觉得最难的是什么？</p><p><span class="orange">欢迎留言和我分享，也欢迎你在留言区写下今天的学习笔记。</span><span class="orange">你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c7/12/4158bfdc.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">strentchRise</span>
+                            </div>
+                            <div class="bd">在机器学习的特征工程步骤中，我们可以使用统计的&quot;正太&quot;分布，<br>这个正太应该是“正态”吧？<br> <br></div>
+                            <span class="time">2019-01-28 16:19</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对 是个错别字...看来这个输入法使用了很多年轻人的样本...</p>
+                                <p class="reply-time">2019-01-28 23:47</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/4a/2c/f8451d77.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">石维康</span>
+                            </div>
+                            <div class="bd">在科技新闻中出现国际新闻的概率就是 5&#47;20=25%。<br>请问这个是怎么算的？ <br></div>
+                            <span class="time">2019-01-28 09:54</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">还是沿用了前面的100篇里有20篇是科技新闻</p>
+                                <p class="reply-time">2019-01-29 01:36</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/ed/4e/ef406442.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">唯她命</span>
+                            </div>
+                            <div class="bd">对于离散型随机变量，通过联合概率 P(x, y) 在 y 上求和，就可以得到 P(x)，这个 P(x) 就是边缘概率<br><br>看不懂啥意思啊，老师能举个剧透例子吗 <br></div>
+                            <span class="time">2019-02-14 18:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">举个生活化的例子，100人里有10个人是学编程的，那么以这100人为全体样本，P(编程)=10&#47;100=10%，而10个人中，3个人是前端编程的，7个人是学后端编程的，那么P(前端, 编程)=3&#47;100=3%，P(后端, 编程)=7&#47;100=7%，这两者加起来就是10%，也就是P(编程)。<br>简单的理解，如果把y所有出现情况的P(x, y)相加，就是P(x)了，联合概率变成了边缘概率。至于“边缘”这个名字的来源，你可以想象一下2维的联合概率分布，也就是一张表格，这个过程就是在二维的联合概率分布表格中，对一行或者一列加和，和就写在了表的边缘，这个概率就是“边缘”概率。</p>
+                                <p class="reply-time">2019-02-15 01:24</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/94/e3/ed118550.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Being</span>
+                            </div>
+                            <div class="bd">准备专栏结合《程序员的数学2》认真学习 <br></div>
+                            <span class="time">2019-01-28 10:01</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/a2/aa/bf65e8be.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Thinking</span>
+                            </div>
+                            <div class="bd">迫不及待开始学习 <br></div>
+                            <span class="time">2019-01-29 12:42</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/d4/f3/b73d8abf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">三木子</span>
+                            </div>
+                            <div class="bd">举个列：硬币只有正反两面，抛硬币正面朝上的概率为50%，假如我抛了三次，结果三次正面朝下。这就违背与直觉观察，这是最初理解概率比较困惑的地方。 <br></div>
+                            <span class="time">2019-01-28 13:19</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">硬币正面朝上的概率为50%，这个是理论值，在实际中受到很多因素的影响。比如，这个硬币构造不够均匀，导致正面朝下的可能性更高。<br>另外，假设这三次抛的事件都是独立的，那么三次正面朝下的概率仍有50% * 50% * 50% = 12.5%。<br><br>所以从实验观测的角度来说，我们要抛足够多的次数，才可能获得更接近理论的值，否则偶然性太大。这些我会在后面的专栏介绍。</p>
+                                <p class="reply-time">2019-01-29 01:48</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6f/c0/9ef191b4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">杨志</span>
+                            </div>
+                            <div class="bd">各种统计模型的基本概念及适用范围一直困惑着，比如置信度，置信区间等半懂似懂，再比如泊松分布，t分布等常见统计模型适用场景等 <br></div>
+                            <span class="time">2019-01-28 10:40</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/ec/0d/43d46889.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">alic</span>
+                            </div>
+                            <div class="bd">也就是某个事件受其他事件影响之后出现的概率，放到咱们的例子里。在国际新闻中出现科技新闻的概率就是 5&#47;30=16.67%，在科技新闻中出现国际新闻的概率就是 5&#47;20=25%。<br>这个后面25%是怎么得来的？<br><br> <br></div>
+                            <span class="time">2019-01-28 10:38</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">还是沿用了前面的100篇里有20篇是科技新闻</p>
+                                <p class="reply-time">2019-01-29 01:36</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/2d/58/aa35c402.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">无法言喻.</span>
+                            </div>
+                            <div class="bd">这些概念太多了，感觉不知道怎么记忆 <br></div>
+                            <span class="time">2019-01-28 08:34</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">不用担心，我会逐个讲解</p>
+                                <p class="reply-time">2019-01-28 23:46</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

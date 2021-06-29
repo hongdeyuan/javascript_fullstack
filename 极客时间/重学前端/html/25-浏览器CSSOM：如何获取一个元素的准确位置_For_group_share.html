@@ -1,0 +1,1077 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>25-浏览器CSSOM：如何获取一个元素的准确位置</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>25-浏览器CSSOM：如何获取一个元素的准确位置</h1>
+<p>你好，我是winter。</p><p>在前面的课程中，我们已经学习了DOM相关的API，狭义的DOM API仅仅包含DOM树形结构相关的内容。今天，我们再来学习一类新的API：CSSOM。</p><p>我想，你在最初接触浏览器API的时候，应该都有跟我类似的想法：“好想要element.width、element.height这样的API啊”。</p><p>这样的API可以直接获取元素的显示相关信息，它们是非常符合人的第一印象直觉的设计，但是，偏偏 DOM API 中没有这样的内容。</p><p>随着学习的深入，我才知道，这样的设计是有背后的逻辑的，正如HTML和CSS分别承担了语义和表现的分工，DOM和CSSOM也有语义和表现的分工。</p><p>DOM中的所有的属性都是用来表现语义的属性，CSSOM的则都是表现的属性，width和height这类显示相关的属性，都属于我们今天要讲的CSSOM。</p><p>顾名思义，CSSOM是CSS的对象模型，在W3C标准中，它包含两个部分：描述样式表和规则等CSS的模型部分（CSSOM），和跟元素视图相关的View部分（CSSOM View）。</p><p>在实际使用中，CSSOM View比CSSOM更常用一些，因为我们很少需要用代码去动态地管理样式表。</p><!-- [[[read_end]]] --><p>在今天的文章中，我来分别为你介绍这两部分的API。</p><h2>CSSOM</h2><p>首先我们来介绍下CSS中样式表的模型，也就是CSSOM的本体。</p><p>我们通常创建样式表也都是使用HTML标签来做到的，我们用style标签和link标签创建样式表，例如：</p><pre><code>&lt;style title=&quot;Hello&quot;&gt;
+a {
+  color:red;
+}
+&lt;/style&gt;
+&lt;link rel=&quot;stylesheet&quot; title=&quot;x&quot; href=&quot;data:text/css,p%7Bcolor:blue%7D&quot;&gt;
+</code></pre><p>我们创建好样式表后，还有可能要对它进行一些操作。如果我们以DOM的角度去理解的话，这些标签在DOM中是一个节点，它们有节点的内容、属性，这两个标签中，CSS代码有的在属性、有的在子节点。这两个标签也遵循DOM节点的操作规则，所以可以使用DOM API去访问。</p><p>但是，这样做的后果是我们需要去写很多分支逻辑，并且，要想解析CSS代码结构也不是一件简单的事情，所以，这种情况下，我们直接使用CSSOM API去操作它们生成的样式表，这是一个更好的选择。</p><p>我们首先了解一下CSSOM API的基本用法，一般来说，我们需要先获取文档中所有的样式表：</p><pre><code>document.styleSheets
+</code></pre><p>document的styleSheets属性表示文档中的所有样式表，这是一个只读的列表，我们可以用方括号运算符下标访问样式表，也可以使用item方法来访问，它有length属性表示文档中的样式表数量。</p><p>样式表只能使用style标签或者link标签创建（对XML来说，还可以使用<!--?xml-styleSheet ... ?-->，咱们暂且不表）。</p><p>我们虽然无法用CSSOM API来创建样式表，但是我们可以修改样式表中的内容。</p><pre><code class="language-JavaScript">document.styleSheets[0].insertRule("p { color:pink; }", 0)
+document.styleSheets[0].removeRule(0)
+</code></pre><p>更进一步，我们可以获取样式表中特定的规则（Rule），并且对它进行一定的操作，具体来说，就是使用它的cssRules属性来实现：</p><pre><code class="language-JavaScript">document.styleSheets[0].cssRules
+</code></pre><p>这里取到的规则列表，同样是支持item、length和下标运算。</p><p>不过，这里的Rules可就没那么简单了，它可能是CSS的at-rule，也可能是普通的样式规则。不同的rule类型，具有不同的属性。</p><p>我们在CSS语法部分，已经为你整理过at-rule的完整列表，多数at-rule都对应着一个rule类型：</p><ul>
+<li>CSSStyleRule</li>
+<li>CSSCharsetRule</li>
+<li>CSSImportRule</li>
+<li>CSSMediaRule</li>
+<li>CSSFontFaceRule</li>
+<li>CSSPageRule</li>
+<li>CSSNamespaceRule</li>
+<li>CSSKeyframesRule</li>
+<li>CSSKeyframeRule</li>
+<li>CSSSupportsRule</li>
+</ul><p>具体的规则支持的属性，建议你可以用到的时候，再去查阅MDN或者W3C的文档，在我们的文章中，仅为你详细介绍最常用的 CSSStyleRule。</p><p>CSSStyleRule有两个属性：selectorText 和 style，分别表示一个规则的选择器部分和样式部分。</p><p>selector部分是一个字符串，这里显然偷懒了没有设计进一步的选择器模型，我们按照选择器语法设置即可。</p><p>style部分是一个样式表，它跟我们元素的style属性是一样的类型，所以我们可以像修改内联样式一样，直接改变属性修改规则中的具体CSS属性定义，也可以使用cssText这样的工具属性。</p><p>此外，CSSOM还提供了一个非常重要的方法，来获取一个元素最终经过CSS计算得到的属性：</p><pre><code>window.getComputedStyle(elt, pseudoElt);
+</code></pre><p>其中第一个参数就是我们要获取属性的元素，第二个参数是可选的，用于选择伪元素。</p><p>好了，到此为止，我们可以使用CSSOM API自由地修改页面已经生效的样式表了。接下来，我们来一起关注一下视图的问题。</p><h2>CSSOM View</h2><p>CSSOM View 这一部分的API，可以视为DOM API的扩展，它在原本的Element接口上，添加了显示相关的功能，这些功能，又可以分成三个部分：窗口部分，滚动部分和布局部分，下面我来分别带你了解一下。</p><h2>窗口 API</h2><p>窗口API用于操作浏览器窗口的位置、尺寸等。</p><ul>
+<li>moveTo(x, y) 窗口移动到屏幕的特定坐标；</li>
+<li>moveBy(x, y) 窗口移动特定距离；</li>
+<li>resizeTo(x, y) 改变窗口大小到特定尺寸；</li>
+<li>resizeBy(x, y) 改变窗口大小特定尺寸。</li>
+</ul><p>此外，窗口API还规定了 window.open() 的第三个参数：</p><pre><code>window.open(&quot;about:blank&quot;, &quot;_blank&quot; ,&quot;width=100,height=100,left=100,right=100&quot; )
+</code></pre><p>一些浏览器出于安全考虑没有实现，也不适用于移动端浏览器，这部分你仅需简单了解即可。下面我们来了解一下滚动API。</p><h2>滚动 API</h2><p>要想理解滚动，首先我们必须要建立一个概念，在PC时代，浏览器可视区域的滚动和内部元素的滚动关系是比较模糊的，但是在移动端越来越重要的今天，两者必须分开看待，两者的性能和行为都有区别。</p><h3>视口滚动API</h3><p>可视区域（视口）滚动行为由window对象上的一组API控制，我们先来了解一下：</p><ul>
+<li>scrollX 是视口的属性，表示X方向上的当前滚动距离，有别名 pageXOffset；</li>
+<li>scrollY 是视口的属性，表示Y方向上的当前滚动距离，有别名 pageYOffset；</li>
+<li>scroll(x, y) 使得页面滚动到特定的位置，有别名scrollTo，支持传入配置型参数 {top, left}；</li>
+<li>scrollBy(x, y) 使得页面滚动特定的距离，支持传入配置型参数 {top, left}。</li>
+</ul><p>通过这些属性和方法，我们可以读取视口的滚动位置和操纵视口滚动。不过，要想监听视口滚动事件，我们需要在document对象上绑定事件监听函数：</p><pre><code>document.addEventListener(&quot;scroll&quot;, function(event){
+  //......
+})
+</code></pre><p>视口滚动API是页面的顶层容器的滚动，大部分移动端浏览器都会采用一些性能优化，它和元素滚动不完全一样，请大家一定建立这个区分的意识。</p><h3>元素滚动API</h3><p>接下来我们来认识一下元素滚动API，在Element类（参见DOM部分），为了支持滚动，加入了以下API。</p><ul>
+<li>scrollTop 元素的属性，表示Y方向上的当前滚动距离。</li>
+<li>scrollLeft 元素的属性，表示X方向上的当前滚动距离。</li>
+<li>scrollWidth 元素的属性，表示元素内部的滚动内容的宽度，一般来说会大于等于元素宽度。</li>
+<li>scrollHeight 元素的属性，表示元素内部的滚动内容的高度，一般来说会大于等于元素高度。</li>
+<li>scroll(x, y) 使得元素滚动到特定的位置，有别名scrollTo，支持传入配置型参数 {top, left}。</li>
+<li>scrollBy(x, y) 使得元素滚动到特定的位置，支持传入配置型参数 {top, left}。</li>
+<li>scrollIntoView(arg) 滚动元素所在的父元素，使得元素滚动到可见区域，可以通过arg来指定滚到中间、开始或者就近。</li>
+</ul><p>除此之外，可滚动的元素也支持scroll事件，我们在元素上监听它的事件即可：</p><pre><code>element.addEventListener(&quot;scroll&quot;, function(event){
+  //......
+})
+</code></pre><p>这里你需要注意一点，元素部分的API设计与视口滚动命名风格上略有差异，你在使用的时候不要记混。</p><h2>布局API</h2><p>最后我们来介绍一下布局API，这是整个CSSOM中最常用到的部分，我们同样要分成全局API和元素上的API。</p><h3>全局尺寸信息</h3><p>window对象上提供了一些全局的尺寸信息，它是通过属性来提供的，我们一起来了解一下来这些属性。</p><p><img src="https://static001.geekbang.org/resource/image/b6/10/b6c7281d86eb7214edf17069f95ae610.png" alt=""></p><ul>
+<li>
+<p>window.innerHeight, window.innerWidth 这两个属性表示视口的大小。</p>
+</li>
+<li>
+<p>window.outerWidth, window.outerHeight 这两个属性表示浏览器窗口占据的大小，很多浏览器没有实现，一般来说这两个属性无关紧要。</p>
+</li>
+<li>
+<p>window.devicePixelRatio 这个属性非常重要，表示物理像素和CSS像素单位的倍率关系，Retina屏这个值是2，后来也出现了一些3倍的Android屏。</p>
+</li>
+<li>
+<p>window.screen （屏幕尺寸相关的信息）</p>
+<ul>
+<li>window.screen.width, window.screen.height 设备的屏幕尺寸。</li>
+<li>window.screen.availWidth, window.screen.availHeight 设备屏幕的可渲染区域尺寸，一些Android机器会把屏幕的一部分预留做固定按钮，所以有这两个属性，实际上一般浏览器不会实现的这么细致。</li>
+<li>window.screen.colorDepth, window.screen.pixelDepth 这两个属性是固定值24，应该是为了以后预留。</li>
+</ul>
+</li>
+</ul><p>虽然window有这么多相关信息，在我看来，我们主要使用的是innerHeight、innerWidth和devicePixelRatio三个属性，因为我们前端开发工作只需要跟视口打交道，其它信息大概了解即可。</p><h3>元素的布局信息</h3><p>最后我们来到了本节课一开始提到的问题，我们是否能够取到一个元素的宽（width）和高（height）呢？</p><p>实际上，我们首先应该从脑中消除“元素有宽高”这样的概念，我们课程中已经多次提到了，有些元素可能产生多个盒，事实上，只有盒有宽和高，元素是没有的。</p><p>所以我们获取宽高的对象应该是“盒”，于是CSSOM View为Element类添加了两个方法：</p><ul>
+<li>getClientRects();</li>
+<li>getBoundingClientRect()。</li>
+</ul><p>getClientRects 会返回一个列表，里面包含元素对应的每一个盒所占据的客户端矩形区域，这里每一个矩形区域可以用 x, y, width, height 来获取它的位置和尺寸。</p><p>getBoundingClientRect ，这个API的设计更接近我们脑海中的元素盒的概念，它返回元素对应的所有盒的包裹的矩形区域，需要注意，这个API获取的区域会包括当overflow为visible时的子元素区域。</p><p>根据实际的精确度需要，我们可以选择何时使用这两个API。</p><p>这两个API获取的矩形区域都是相对于视口的坐标，这意味着，这些区域都是受滚动影响的。<br>
+如果我们要获取相对坐标，或者包含滚动区域的坐标，需要一点小技巧：</p><pre><code class="language-JavaScript">var offsetX = document.documentElement.getBoundingClientRect().x - element.getBoundingClientRect().x;
+</code></pre><p>如这段代码所示，我们只需要获取文档跟节点的位置，再相减即可得到它们的坐标。<br>
+这两个API的兼容性非常好，定义又非常清晰，建议你如果是用JavaScript实现视觉效果时，尽量使用这两个API。</p><h2>结语</h2><p>今天我们一起学习了CSSOM这一类型的API。我们首先就说到了，就像HTML和CSS分别承担了语义和表现的分工，DOM和CSSOM也有语义和表现的分工。</p><p>CSSOM是CSS的对象模型，在W3C标准中，它包含两个部分：描述样式表和规则等CSS的模型部分（CSSOM），和跟元素视图相关的View部分（CSSOM View）。</p><p>最后留给你一个问题，写好欢迎留言来讨论，请找一个网页，用我们今天讲的API，把页面上的所有盒的轮廓画到一个canvas元素上。</p><h1>猜你喜欢</h1><p><a href="https://time.geekbang.org/course/intro/163?utm_term=zeusMTA7L&amp;utm_source=app&amp;utm_medium=chongxueqianduan&amp;utm_campaign=163-presell"><img src="https://static001.geekbang.org/resource/image/1a/08/1a49758821bdbdf6f0a8a1dc5bf39f08.jpg" alt="unpreview"></a></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-03-16 13:47:52
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            Look via gist: https:&#47;&#47;gist.github.com&#47;aimergenge&#47;2bcf41ac4c4d2586e48ccd5cec5c9768<br><br>void function () {<br>  const canvas = document.createElement(&#39;canvas&#39;)<br><br>  canvas.width = document.documentElement.offsetWidth<br>  canvas.height = document.documentElement.offsetHeight<br><br>  canvas.style.position = &#39;absolute&#39;<br>  canvas.style.left = &#39;0&#39;<br>  canvas.style.right = &#39;0&#39;<br>  canvas.style.top = &#39;0&#39;<br>  canvas.style.bottom = &#39;0&#39;<br>  canvas.style.zIndex = &#39;99999&#39;<br><br>  document.body.appendChild(canvas)<br><br>  const ctx = canvas.getContext(&#39;2d&#39;)<br>  draw(ctx, getAllRects())<br><br>  function draw (ctx, rects) {<br>    let i = 0<br>    ctx.strokeStyle = &#39;red&#39;<br>    window.requestAnimationFrame(_draw)<br><br>    function _draw () {<br>      let {x, y, width, height} = rects[i++]<br>      ctx.strokeRect(x, y, width, height)<br>      if (i &lt; rects.length) {<br>        window.requestAnimationFrame(_draw)<br>      } else {<br>        console.log(&#39;%cDONE&#39;, &#39;background-color: green; color: white; padding: 0.3em 0.5em;&#39;)<br>      }<br>    }<br>  }<br><br>  function getAllRects () {<br>    const allElements = document.querySelectorAll(&#39;*&#39;)<br>    const rects = []<br>    const {x: htmlX, y: htmlY} = document.documentElement.getBoundingClientRect()<br>    allElements.forEach(element =&gt; {<br>      const eachElRects = Array.from(element.getClientRects()).filter(rect =&gt; {<br>        return rect.width || rect.height<br>      }).map(rect =&gt; {<br>        return {<br>          x: rect.x - htmlX,<br>          y: rect.y - htmlY,<br>          width: rect.width,<br>          height: rect.height<br>        }<br>      })<br>      rects.push(...eachElRects)<br>    })<br>    return rects<br>  }<br>}()<br> [19赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            welkin  2019-03-25 00:11:03
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            希望作者能讲一下虚拟dom<br>还有浏览器的重绘和重排<br>以及性能优化，跨域的常用操作(希望细致一点)<br>包括一些漏洞和攻击，比如xss，sql注入<br>还有一些技术栈，和一些对于前端需要了解的方案，比如离线方案等 [5赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            痕近痕远  2019-03-17 06:53:52
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            请问老师，如何解决UI自动化测试，定位标签显示元素不可见的问题 [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            宋宋  2019-03-16 22:52:49
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            前面讲浏览器渲染时有讲到，CSS经过词法分析和语法分析被解析成一颗抽象语法树。<br>这个抽象语法树和CSSOM有什么关联么？因为很多文章都讲CSS经过词法分析和语法分析被解析成CSSOM，感觉很疑惑。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            周飞  2019-04-07 15:27:13
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            &lt;body&gt;<br> &lt;canvas id=&quot;rect&quot;&gt;&lt;&#47;canvas&gt; <br>&lt;script type=&quot;text&#47;javascript&quot;&gt;    <br>             const canvas = document.getElementById(&#39;rect&#39;);<br>             canvas.width =document.documentElement.getBoundingClientRect().width;<br>             canvas.height = document.documentElement.getBoundingClientRect().height;<br>             canvas.style.position=&quot;absolute&quot;;<br>             canvas.style.top=0;<br>             canvas.style.left=0;<br>             canvas.style.border=&#39;1px solid red&#39;;<br>             const ctx = canvas.getContext(&#39;2d&#39;);<br>             function travaldom(root){                    <br>               if(root.tagName &amp;&amp; root.tagName !==&#39;text&#39; &amp;&amp; root.tagName!==&#39;canvas&#39;){<br>                  const startX = root.getBoundingClientRect().x;<br>                  const startY = root.getBoundingClientRect().y;<br>                  const width = root.getBoundingClientRect().width;<br>                  const height = root.getBoundingClientRect().height;<br>                  ctx.beginPath();<br>                  ctx.lineWidth=&quot;1&quot;;<br>                  ctx.strokeStyle=&quot;blue&quot;;<br>                  ctx.rect(startX,startY,width,height);<br>                  ctx.stroke();<br>               }<br>               root.childNodes.forEach(node=&gt;{<br>                   travaldom(node);<br>               });<br>             }<br>             travaldom(document);<br>        &lt;&#47;script&gt;	<br>&lt;&#47;body&gt; 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Russell  2019-04-03 15:14:26
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            emm~~ 我又读了一遍文档，发现了对我来说很关键词，“狭义的”。 那我现在的理解是酱紫的。  广义的理解，就是BOM+DOM，CSSOM是DOM扩展的一部分；如果狭义的认为DOM就是树形结构的话，就可以分出来DOM、CSSOM两部分内容了。 我这样想对么？ 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Russell  2019-04-03 14:18:30
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            不对，我觉得我这么理解不对。。。 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Russell  2019-04-03 14:08:00
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            这个咋换行啊。。。 不好意思，老师好，我想咨询浏览器API的种类。 我可以认为是，DOM，BOM，CSSOM这几类么？ 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-04-09 18:22:34</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">这是几个大类，还有好多游离的</div>
+</div>
+            
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

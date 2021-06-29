@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                数学专栏课外加餐（三）：程序员需要读哪些数学书
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/6e/34/6e6cb90acec32f70ec48cce056525634.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。欢迎来到第三次加餐时间！之前很多同学问我能否推荐一些数学方面的书，今天我就来分享几本。</p><p>数学领域涉及的面很广，相关的书籍也很多。咱们这个专栏我从数学的三个主要方面，介绍程序员常用的数学知识，包括离散数学、概率和统计和线性代数。所以我还是围绕这个专栏的三大模块，来给你推荐相应的书籍。</p><h2>基础思想篇推荐书籍：《离散数学及其应用》</h2><p>第一模块是“基础思想篇”。这一模块，我尝试用实际项目中的案例，把不同的离散数学知识点串了起来，并加以解释。如果你对其中某些点，有更深的兴趣，可以参考Kenneth H·Rosen所著的《<strong>离散数学及其应用</strong>》，英文原名是$Discrete$ $Mathematics$ $and$ $Its$ $Applications$。</p><p><img src="https://static001.geekbang.org/resource/image/42/48/4219469a129f55f25373045081867848.jpg" alt=""></p><p>这本书是国外高校的教材，对所有离散数学的知识点介绍的比较全面。咱们讲过的同余定理、数学归纳法、递归、分治算法、排列和组合、树和树的遍历、图和最短路径、逻辑以及集合等概念，这里面都有非常详细的介绍。我看很多人对这些内容很感兴趣，可以参考这本书的相关章节，深入学习。</p><!-- [[[read_end]]] --><p>除此之外，这本书还有几个特点，我觉得非常好。</p><p>第一，介绍了不少证明的方法。计算机算法的正确性是很重要的，专栏中我在不同的地方介绍并使用了数学归纳法，在解释Dijkstra算法时也用到了反证法和分情形证明的思想。数学中用于证明的方法其实还有很多，这本书涉及了穷举证明、存在性证明等。相信这些证明方法，可以让你更好地理解，为什么有些算法是可行的，有些算法是有问题的，并帮助你在理解算法、学习算法，甚至设计算法时保证它的正确性。</p><p>第二，介绍了不少逻辑和集合相关的知识。这些我在专栏里没有涉及太多。主要是因为程序员经常接触各种条件和查询语句，对这些内容已经很熟悉了，所以我没有花太多的篇幅。如果你想知道更多关于逻辑、集合和布尔代数这些基础内容的解释，也可以看看这本书。</p><p>第三，和编程结合得非常紧密。主要体现在两个方面：第一，它介绍了一些基于伪代码的算法，也对这些算法进行了时间和空间复杂度的分析，例如常见的排序、搜索算法。第二，它介绍了不少离散数学在计算机科学中的应用场景，例如关系型数据库和SQL查询语言是如何设计的。另外，它也提供了不少课后习题，可以加深你对这些知识点的理解。所以，当你读到这本书的某些章节时，会发现，怎么和计算机的数据结构和算法这么像啊？确实，离散数学和数据结构和基础算法有着紧密的联系，加上这本书使用了不少计算机的语言、例子和应用，自然有不少共同的内容了。</p><p>专栏的第二模块是“概率统计篇”，这本书也谈到了一些离散概率的内容。在学习第二个模块的时候，你也可以搭配这本书的内容来看，相信对你会很有帮助。</p><p>当然，这本书的某些内容讲得比较深，而且有些知识点在程序员日常编码中基本上用不到。你可以结合我专栏的主题和内容，并针对自己的日常工作，挑出一些重点来学习。</p><h2>概率统计篇推荐书籍：《概率统计》</h2><p>专栏第一模块已经结束了，接下来的“概率统计篇”我会着重介绍概率统计及其在计算机领域中的主要应用。你可以预先阅读一些相关的书籍，热热身。这里我推荐另一本国外高校的教材，Morris H．DeGroot和Mark J．Schervish所著的《<strong>概率统计</strong>》，英文原名是$Probability$ $and$ $Statistics$。本书的两位作者，DeGroot和Schervish都是贝叶斯统计理论的重量级人物。</p><p><img src="https://static001.geekbang.org/resource/image/8a/76/8aa4bee1c0b435fd4dbe8bae7f955076.png" alt=""></p><p>这本书包含了概率论常用的知识点，包括了随机变量及其分布、条件概率、期望值、贝叶斯理论、马尔科夫链等等。专栏的第二模块，我也会介绍这些知识点，以及它们在计算机领域，特别是机器学习中的应用。</p><p>我们再来说这本书的几个特色。</p><p>第一，这本书通常以列举非常实用的例子开始，然后详尽地讲解理论及其扩展应用。比如，一开篇解释“概率”的时候，作者使用了抛硬币的例子，分别从“频率”“经典”和“主观”的角度来解释概率，并又阐述了“概率理论”和“概率”有何不同。这样的写法会给你很多思路上的启发，让你获得更直观的认识。文章中也不乏很多来源于各个领域的案例，比如经济学和金融学等等。</p><p>第二，对概念的解释非常详细。比如“充分统计量（sufficient statistic）”这个概念，一般的书可能两句话就解释完了，然后就是大堆的公式，但是这本书用了差不多两页的篇幅来解释它。我觉得这点对自学者而言是非常有帮助的。</p><p>第三，这本书几乎没有任何涉及计算机算法和代码的部分，哪怕是伪代码也没有。我想作者是希望完全从概率和统计本身的角度来写，而避免过多的实现细节。不过，对于这点你也不用过于担心，因为在专栏中，我会结合一些具体的机器学习算法及其应用，给你展示这些理论知识是如何运用到实践中的。</p><p>总的来说，这是一本相当不错的概率和统计方面的专业书籍。如果你预先读读这本书的内容，对概念有了理解，再看我的专栏也会更有感触。</p><h2>线性代数篇推荐书籍：《线性代数及其应用》</h2><p>如今的机器学习模型，除了基于概率和统计，还会使用线性代数的知识，本专栏的第三个模块就是“线性代数”。介绍线性代数的书籍不少，我这里推荐一本David C. Lay和Steven R. Lay合著的《<strong>线性代数及其应用</strong>》，英文原名$Linear$ $Algebra$ $and$ $Its$ $Applications$。</p><p><img src="https://static001.geekbang.org/resource/image/41/65/4103851f3c50c4f1048bbe144178c965.png" alt=""></p><p>这本书最大的特色在于：</p><p>第一，使用通俗易懂的口吻和大量的插图来阐述概念。而且在我看来，这些概念他解释得也相当清楚，比如线性方程、向量空间、特征向量、奇异值的分解等等，这些都是在机器学习算法中常用的模型或技术。</p><p>第二，写作的逻辑也相当清晰。这本书基本上都是先提出一个实际的问题，然后对这个问题进行分析，最终才进行定理式的归纳和证明。通俗易懂的同时，不乏数学的严谨性。和前面两本推荐的书一样，这本书中也结合了很多生动的案例，特别是经济学领域的。</p><p>第三，这本书还配套了一本优秀的学习指南$Linear$ $Algebra$ $and$ $Its$ $Applications$: $Study$ $Guide$。这本指南，加上原书课后的习题，对于自学的读者巩固知识很有帮助。不过我没有找到这本指南的中文翻译版。如果哪位同学有好的练习题推荐，也可以在留言区分享出来。</p><h2>入门、通识类书籍推荐</h2><p>除了上述三本重量级的专业书籍，我觉得还有几本通俗的入门书也是不错的。</p><p>一套是几位日本作家写的《<strong>程序员的数学</strong>》系列，包括《程序员的数学》《程序员的数学：概率统计》《程序员的数学：线性代数》。这套书也强调了和计算机领域紧密相连的三大模块。这几位作者使用朴实的语言，把最重要的一些概念给说明白了。相比前面三本，这套书所涵盖的内容可能没有那么全面、也没有那么深入，不过对于初学者来讲，是不错的入门书籍。</p><p><img src="https://static001.geekbang.org/resource/image/c1/69/c1cf06f722b99ee0a3efd2a530c33c69.png" alt=""></p><p>最后一本书是吴军老师的《<strong>数学之美</strong>》。这本书最大的特点是和计算机领域结合得非常紧密。所有的问题和解决方案，最后都联系到了计算机中的某个应用。可以说，作者更多的是从计算机从业者的角度出发，深入探讨了背后的数学思想和知识。除此之外，吴军老师广博的学识和深刻的见解，在这本书中也体现得淋漓尽致。这本书的写作风格对我写作这个专栏也是非常有启发的。</p><p><img src="https://static001.geekbang.org/resource/image/07/21/07a3b6e3dcbb918f3f9458c23dc32921.png" alt=""></p><p>读书在精，不在多。我选的这些书，你可能多多少少见过，但是能静下心来读完一本的人可能寥寥无几。我相信，订阅这个专栏的你，一定有颗不甘于平庸的心。你一定有你的目标和追求。开卷有益，坚持下去，学下去、读下去，相信你一定会有所收获！</p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/63/14/06eff9a4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jerry银银</span>
+                            </div>
+                            <div class="bd">「读书在精，不在多。我选的这些书，你可能多多少少见过，但是能静下心来读完一本的人可能寥寥无几。我相信，订阅这个专栏的你，一定有颗不甘于平庸的心。你一定有你的目标和追求。开卷有益，坚持下去，学下去、读下去，相信你一定会有所收获！」<br><br>读到这句话，心里荡起了涟漪。随着年龄见涨，我越来越觉得书贵精的重要性。 <br></div>
+                            <span class="time">2019-01-25 07:13</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/f0/89/130a91a6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Zoctopus</span>
+                            </div>
+                            <div class="bd">读过《数学之美》和《程序员的数学》，现在开始尝试看更深层次的理论数学书，感谢老师的推荐！ <br></div>
+                            <span class="time">2019-01-28 15:17</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/bc/a0/97c7679b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username"></span>
+                            </div>
+                            <div class="bd">老师开头介绍的那几本书，就算不考虑英文障碍，对于基础一般的人来说也有点难把。我当时先买了吴军的数学之美看了两遍，还是能吸收一些的。然后慕名买了thinking java和算法导论，两本差不多有1800多页，看起来很痛苦。我觉得通俗的读物对初学者会好点。 <br></div>
+                            <span class="time">2019-01-25 09:43</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">可以先提纲挈领的看一些，了解脉络，我在后面的专栏中会给你细讲重点</p>
+                                <p class="reply-time">2019-01-26 00:53</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/4d/d3/67bdcca9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">林铭铭</span>
+                            </div>
+                            <div class="bd">老师好，概率统计有没有中文版的书籍推荐？ <br></div>
+                            <span class="time">2019-02-09 13:14</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">浙江大学出版的《概率论与数理统计》第4版<br>同济大学出版的《概率论与数理统计》<br>这两本还不错</p>
+                                <p class="reply-time">2019-02-10 06:53</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/f0/89/130a91a6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Zoctopus</span>
+                            </div>
+                            <div class="bd">老师您觉得《具体数学》这本书怎么样呢？适合什么时候看。 <br></div>
+                            <span class="time">2019-01-28 15:23</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你好，这本书我还没看过，感谢推荐，我看过之后和大家分享一下。目前我看了些目录和简介，感觉更偏数学，和计算机应用远一点。</p>
+                                <p class="reply-time">2019-01-29 01:55</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

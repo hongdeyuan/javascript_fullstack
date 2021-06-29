@@ -1,0 +1,185 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                35讲插件开发（四）：Decorations装饰器
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/8a/50/8a4675b8ece99225120fa608a6e06e50.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>今天，我们一起来聊一聊 Decorations 装饰器。</p><p>在<a href="https://time.geekbang.org/column/article/68800">专栏第29讲《不错的插件推荐》</a>里，我介绍过<a href="https://marketplace.visualstudio.com/items?itemName=jaspernorth.vscode-pigments">Pigment</a> 这个插件，有了这个插件，你在代码中书写的颜色，将会以背景色的形式，直接被渲染在代码下面。</p><p><img src="https://static001.geekbang.org/resource/image/ac/78/ac44f3d462cd89505d12348e66357278.png" alt=""></p><center><span class="reference">Pigment 插件效果</span></center><p>这个功能，就是通过 Decorations API 来实现的。同样的，我之前介绍的 <a href="https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets">Rainbow Brackets</a> 和 <a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent Rainbow</a>，都是使用的这套 API。</p><p><img src="https://static001.geekbang.org/resource/image/42/af/425a1271b291c24d7c75953a586f06af.png" alt=""></p><center><span class="reference">Rainbow Brackets 插件效果</span>
+<p><img src="https://static001.geekbang.org/resource/image/44/8e/4484cf14c18cd46ca118e9a390c58b8e.png" alt=""></p>
+<p><span class="reference">Indent Rainbow 插件效果</span></p></center><p></p><p><strong>那今天我们就来看看如何使用 Decorations API 来实现类似的效果，以及在这个过程中有哪些注意点。</strong></p><h2>样例</h2><p>首先，我们依然使用<a href="https://time.geekbang.org/column/article/69768">专栏插件部分第一讲</a>里使用的 JavaScript 插件模板。这个模板的 extension.js 文件，现在被修改成如下内容：</p><pre><code>const vscode = require('vscode');
+
+function activate(context) {
+    vscode.commands.registerCommand('extension.sayHello', () =&gt; {
+        let decorationType = vscode.window.createTextEditorDecorationType({
+            backgroundColor: '#fff'
+        });
+        let editor = vscode.window.activeTextEditor;
+        editor.setDecorations(decorationType, [new vscode.Range(0, 0, 0, 1)]);
+    });
+}
+exports.activate = activate;
+
+function deactivate() {
+}
+exports.deactivate = deactivate;
+</code></pre><p>这段代码依然是注册了一个名为 extension.sayHello 的命令，只不过命令执行的内容变了。这段代码做的第一件事情，就是创建了一个 DecorationType：</p><pre><code>let decorationType = vscode.window.createTextEditorDecorationType({
+    backgroundColor: '#fff'
+})
+</code></pre><p>从中可以看到我们使用了 vscode.window.createTextEditorDecorationType API，同时传入了一个参数对象，对象里添加了属性 backgroundColor，顾名思义，这个参数是用于定义背景色的。</p><!-- [[[read_end]]] --><p>接着我们就获取了当前的编辑器对象 editor。然后使用了 editor 上的方法 setDecorations，并且传入两个参数，第一个就是我们上面创建的 DecorationType，第二个则是代码范围 Range。通过这个 API，我们在这个代码片段 Range 上使用 decorationType 所代表的装饰器，也就是将背景色调整成 <code>#fff</code>，即白色。</p><p>下面，我们就运行这个插件看看：</p><p><img src="https://static001.geekbang.org/resource/image/75/5d/75a553ed534fcd2baae2462936ecf45d.gif" alt=""></p><center><span class="reference">运行 Decoration 插件</span></center><p>无论是Pigment、Rainbow Brackets，还是GitLens，它们修改编辑器内代码颜色和背景色的逻辑，跟上面的这一小段代码基本一致。只不过 VS Code 的 Decoration API，有非常多不同的属性可以设置，这也让 Decoration 效果千差万别。</p><p>下面我们就来看看都有哪些不同的设置。</p><h2>DecorationRenderOptions</h2><p>如果我们在 createTextEditorDecorationType 运行 F12，我们就能够跳转到 createTextEditorDecorationType 函数的定义处，接着我们就能看到这个函数的参数类型是 DecorationRenderOptions。</p><p><img src="https://static001.geekbang.org/resource/image/df/d6/dfad049e00dbd5c5581ce70cefa1f4d6.png" alt=""></p><center><span class="reference">createTextEditorDecorationType</span></center><p>而 createTextEditorDecorationType 的结构如下：</p><pre><code>export interface DecorationRenderOptions extends ThemableDecorationRenderOptions {
+        isWholeLine?: boolean;
+        rangeBehavior?: DecorationRangeBehavior;
+        overviewRulerLane?: OverviewRulerLane;
+        light?: ThemableDecorationRenderOptions;
+        dark?: ThemableDecorationRenderOptions;
+}
+</code></pre><p>createTextEditorDecorationType 继承自 ThemableDecorationRenderOptions ，不过它多加了几个属性。比如是否将这个 decoration 运用在整行代码上，是否要将颜色渲染在滚动条上等。不过比较重要的两个属性其实是 light 和 dark。</p><p><strong>light</strong> 和 <strong>dark</strong> 的类型，都是 ThemableDecorationRenderOptions，只要设置了这两个值，VS Code 就会根据当前的主题是深色还是浅色，决定是加载 light 还是 dark 的值，如果这两个值没有设置的话，那么就会查看 DecorationRenderOptions 上的其他属性。</p><p>接下来，我们就看看 ThemableDecorationRenderOptions 里有哪些属性：</p><pre><code>    export interface ThemableDecorationRenderOptions {
+        backgroundColor?: string | ThemeColor;
+        outline?: string;
+        outlineColor?: string | ThemeColor;
+        outlineStyle?: string;
+        outlineWidth?: string;
+        border?: string;
+        borderColor?: string | ThemeColor;
+        borderRadius?: string;
+        borderSpacing?: string;
+        borderStyle?: string;
+        borderWidth?: string;
+        fontStyle?: string;
+        fontWeight?: string;
+        textDecoration?: string;
+        cursor?: string;
+        color?: string | ThemeColor;
+        opacity?: string;
+        letterSpacing?: string;
+        gutterIconPath?: string | Uri;
+        gutterIconSize?: string;
+        overviewRulerColor?: string | ThemeColor;
+        before?: ThemableDecorationAttachmentRenderOptions;
+        after?: ThemableDecorationAttachmentRenderOptions;
+    }
+</code></pre><p>看到这里你可能会大吃一惊，这也太多了，那应该从哪里学起呢？别着急，我们来给这些属性归归类。</p><h3>1、Color</h3><p>首先，就是跟代码颜色和背景相关的属性。</p><pre><code>backgroundColor?: string | ThemeColor;
+color?: string | ThemeColor;
+overviewRulerColor?: string | ThemeColor;
+</code></pre><p>我们除了使用类似于 “#fff” 这样的字符串以外，还可以使用 ThemeColor，也就是颜色主题（themes）里的颜色定义，比如：</p><pre><code>new vscode.ThemeColor('editorWarning.foreground') 
+</code></pre><p>这样一来，当我们切换主题的时候，这个颜色就会随之改变了。这几个属性的效果，通过文章一开始的例子，相信你已经有所了解，这里不多赘述。</p><h3>2、Border</h3><p>第二类就是 Border 边框，熟悉 CSS 的同学肯定不会觉得陌生。</p><pre><code>border?: string;
+borderColor?: string | ThemeColor;
+borderRadius?: string;
+borderSpacing?: string;
+borderStyle?: string;
+borderWidth?: string;
+</code></pre><p>比如，我们对上面的样例代码略作修改：</p><pre><code>vscode.commands.registerCommand('extension.sayHello', () =&gt; {
+        let decorationType = vscode.window.createTextEditorDecorationType({
+            border: '1px solid red;'
+        });
+        let editor = vscode.window.activeTextEditor;
+        editor.setDecorations(decorationType, [new vscode.Range(0, 0, 0, 1)]);
+    }); 
+</code></pre><p>然后运行代码，就能够给代码块添加边框了。</p><p><img src="https://static001.geekbang.org/resource/image/6c/8d/6c2bdb50a9e84b3f3e3d4f74c371288d.gif" alt=""></p><center><span class="reference">设置 Border</span></center><h3>3、Outline</h3><p>在 CSS 中 Outline （轮廓）是用于在 Border 边框的周围画一条线，以突出元素。我们同样可以使用下面这些配置，来分别控制 Outline 的各个属性。</p><pre><code>        outline?: string;
+        outlineColor?: string | ThemeColor;
+        outlineStyle?: string;
+        outlineWidth?: string;
+</code></pre><p>比如，我们将样例代码修改成如下：</p><pre><code>    vscode.commands.registerCommand('extension.sayHello', () =&gt; {
+        let decorationType = vscode.window.createTextEditorDecorationType({
+            outline: '#00FF00 dotted'
+        });
+        let editor = vscode.window.activeTextEditor;
+        editor.setDecorations(decorationType, [new vscode.Range(1, 1, 1, 4)]);
+    });
+</code></pre><p>然后运行，</p><p><img src="https://static001.geekbang.org/resource/image/03/58/03a4815ef2347ed4a854f9dbc6b9ed58.gif" alt=""></p><center><span class="reference">设置 Outline</span></center><p>这里还请注意，为了更好地看到效果，我把 range 修改成了 new vscode.Range(1, 1, 1, 4)。</p><h3>4、Font</h3><p>下一组属性则是跟文字相关，我们可以通过 fontStyle 和 fontWeight 来控制字体，也可以通过 opacity 来控制透明度，或者使用 letterSpacing 控制文字之间的间距。</p><pre><code>fontStyle?: string;
+fontWeight?: string;
+opacity?: string;
+letterSpacing?: string;
+</code></pre><p>比如我们将代码修改为：</p><pre><code>vscode.commands.registerCommand('extension.sayHello', () =&gt; {
+        let decorationType = vscode.window.createTextEditorDecorationType({
+            fontStyle: 'italic',
+            letterSpacing: '3px'
+        });
+        let editor = vscode.window.activeTextEditor;
+        editor.setDecorations(decorationType, [new vscode.Range(1, 1, 1, 4)]);
+    });
+</code></pre><p>然后运行代码。</p><p><img src="https://static001.geekbang.org/resource/image/97/da/978bb1b4b0ec815ef939353f78299fda.gif" alt=""></p><center><span class="reference">设置字体</span></center><h3>5、其他</h3><p>除此之外，我们还可以通过 gutterIconPath 和 gutterIconSize 在行号旁边添加图标。</p><pre><code>gutterIconPath?: string | Uri;
+gutterIconSize?: string;
+</code></pre><p>比如说 VS Code 中的断点，就可以通过这个属性在插件中实现。</p><p><img src="https://static001.geekbang.org/resource/image/a7/fa/a7038aa3cf0473b115a50dc292284cfa.png" alt=""></p><center><span class="reference">断点</span></center><p>另外，也可以通过 before 和 after 在某个代码的前面或者后面创建 decorations，</p><pre><code>before?: ThemableDecorationAttachmentRenderOptions;
+after?: ThemableDecorationAttachmentRenderOptions;
+</code></pre><p>比如说，CSS 文件里颜色前的 Color Decorator “小方格”，就是使用 before 属性来实现。</p><p><img src="https://static001.geekbang.org/resource/image/59/54/59d224b4a17fb767b0ef6bbe3d932554.png" alt=""></p><center><span class="reference">CSS color decorator</span></center><h2>小结</h2><p>以上就是 Decoration API 的大部分知识了，可能还有部分 API 或者属性，我没有介绍，不过相信你可以自己挖掘出它们的作用。</p><p>最后，我想对 Decoration 的使用讲讲我自己的心得体会。</p><p>DecorationRenderOptions 里的大部分属性，其实就是 CSS 里的各种属性，如果你知道如何使用 CSS 来对元素布局的话，那么使用这些 API 就难不倒你。不过，最难的还是想象力，如何活用这套 API，将重要的信息呈现给用户，而又不会打扰到用户的正常体验，这就体现功力了。</p><p>比如说，我们之前介绍过 Import Cost 插件，这个插件就巧妙地将每个 javascript 模块的大小，渲染在了这一行代码的最后，十分显眼，但又不会影响到你查看代码。</p><p><img src="https://static001.geekbang.org/resource/image/2d/e6/2db7c8e03f575e26584b54a5c2ccace6.gif" alt=""></p><center><span class="reference">Import Cost</span></center><p>GitLens 插件也有类似的设计，它可以把当前这行是谁写的从 Git 中读取出来，然后渲染在本行代码的最后，同时，这些信息的颜色比较浅，从而不会喧宾夺主，但是当你需要的时候，也可以轻松迅速地查看代码的修改信息。</p><p><img src="https://static001.geekbang.org/resource/image/31/f7/315e769c1adf971248640648f56d00f7.png" alt=""></p><center><span class="reference">GitLens Blame 信息</span></center><p>而文章最开始介绍的 Rainbow Brackets 等，也都是对 Decoration API 的活用。看完这些例子后，不知道你有没有酝酿出什么有趣的想法和技巧，不妨和我们分享分享，一起学习 ;)</p><hr></hr><p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

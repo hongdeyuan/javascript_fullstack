@@ -1,0 +1,156 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                41讲线性回归（下）：如何使用最小二乘法进行效果验证
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/a4/a2/a458644e97007fabe96d54ea63b793a2.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>上一节我们已经解释了最小二乘法的核心思想和具体推导过程。今天我们就用实际的数据操练一下，这样你的印象就会更加深刻。我会使用几个具体的例子，演示一下如何使用最小二乘法的结论，通过观测到的自变量和因变量值，来推算系数，并使用这个系数来进行新的预测。</p><h2>基于最小二乘法的求解</h2><p>假想我们手头上有一个数据集，里面有3条数据记录。每条数据记录有2维特征，也就是2个自变量，和1个因变量。</p><p><img src="https://static001.geekbang.org/resource/image/94/b4/9427dc10b0745cb5680e911e0d0d15b4.png" alt=""></p><p>如果我们假设这些自变量和因变量都是线性的关系，那么我们就可以使用如下这种线性方程，来表示数据集中的样本：</p><p>$b_1·0+b_2·1=1.5$<br>
+$b_1·1-b_2·1=-0.5$<br>
+$b_1·2+b_2·8=14$</p><p>也就是说，我们通过观察数据已知了自变量$x_1$、$x_2$和因变量_y_的值，而要求解的是$b_1$和$b_2$这两个系数。如果我们能求出$b_1$和$b_2$，那么在处理新数据的时候，就能根据新的自变量$x_1$和$x_2$的取值，来预测$y$的值。</p><!-- [[[read_end]]] --><p>可是我们说过，由实际项目中的数据集所构成的这类方程组，在绝大多数情况下，都没有精确解。所以这个时候我们没法使用之前介绍的高斯消元法，而是要考虑最小二乘法。根据上一节的结论，我们知道对于系数矩阵$B$，有：</p><p>$B=(X’X)^{-1}X’Y$</p><p>既然有了这个公式，要求$B$就不难了，让我们从最基本的几个矩阵开始。</p><p><img src="https://static001.geekbang.org/resource/image/f2/9d/f2f70be34564a2e64071cd623d0e3f9d.png" alt=""></p><p>矩阵$(X’X)^{-1}$的求解稍微繁琐一点。逆矩阵的求法我还没讲解过，之前我们说过线性方程组之中，高斯消元和回代的过程，就是把系数矩阵变为单位矩阵的过程。我们可以利用这点，来求解$X^{-1}$。我们把原始的系数矩阵$X$列在左边，然后把单位矩阵列在右边，像$[X | I]$这种形式，</p><p>其中$I$表示单位矩阵。</p><p>然后我们对左侧的矩阵进行高斯消元和回代，把左边矩阵X变为单位矩阵。同时，我们也把这个相应的矩阵操作运用在右侧。这样当左侧变为单位矩阵之后，那么右侧的矩阵就是原始矩阵$X$的逆矩阵$X^{-1}$，具体证明如下：</p><p>$[X | I]$<br>
+$[X^{-1}X | X^{-1}I]$<br>
+$[I | X^{-1}I]$<br>
+$[I | X^{-1}]$</p><p>好了，给定下面的$X’X$矩阵之后，我们使用上述方法来求$(X’X)^{-1}$ 。我把具体的推导过程列在了这里。</p><p><img src="https://static001.geekbang.org/resource/image/1a/ad/1a6f3815a9895fc80f54124a1dae7cad.png" alt=""></p><p>求出$(X’X)^{-1}$之后，我们就可以使用$B=(X’X)^{-1}X’Y$来计算矩阵B。</p><p><img src="https://static001.geekbang.org/resource/image/fe/3d/fe4c0b674649e5a18b5992c71316253d.png" alt=""></p><p>最终，我们求出系数矩阵为$[1 1.5]$，也就是说$b_1 = 1$, $b_2 = 1.5$。实际上，这两个数值是精确解。我们用高斯消元也是能获得同样结果的。接下来，让我稍微修改一下$y$值，让这个方程组没有精确解。</p><p>$b_1·0+b_2·1=1.4$<br>
+$b_1·1-b_2·1=-0.48$<br>
+$b_1·2+b_2·8=13.2$</p><p>你可以尝试高斯消元法对这个方程组求解，你会发现只要两个方程就能求出解，但是无论是哪两个方程求出的解，都无法满足第三个方程。</p><p>那么通过最小二乘法，我们能不能求导一个近似解，保证_ε_足够小呢？下面，让我们遵循之前求解$(X’X)^{-1}X’Y$的过程，来计算$B$。</p><p><img src="https://static001.geekbang.org/resource/image/f3/10/f3653f2fd1220936834777b62cced310.png" alt=""></p><p>计算完毕之后，你会发现两个系数的值分别变为$b_1 = 0.938, b_2 = 1.415$。由于这不是精确解，所以让我们看看有了这系数矩阵$B$之后，原有的观测数据中，真实值和预测值的差别。</p><p>首先我们通过系数矩阵$B$和自变量矩阵$X$计算出来预测值。</p><p><img src="https://static001.geekbang.org/resource/image/a3/7a/a3cf56dc09e8e53304060a418ea9707a.png" alt=""></p><p>然后是样本数据中的观测值。这里我们假设这些值是真实值。</p><p><img src="https://static001.geekbang.org/resource/image/a6/d9/a693f3f03a81c01d7f34e615ce473cd9.png" alt=""></p><p>根据误差$ε$的定义，我们可以得到：</p><p><img src="https://static001.geekbang.org/resource/image/94/20/947a02d7580305c8f3a6e19d64dbf120.png" alt=""></p><p>说到这里，你可能会怀疑，通过最小二乘法所求得的系数$b_1 = 0.949$和$b_2 = 1.415$，是不是能让$ε$最小呢？这里，我们随机的修改一下这两个系数，变为$b_1 = 0.95$和$b_2 = 1.42$，然后我们再次计算预测的$y$值和$ε$。</p><p><img src="https://static001.geekbang.org/resource/image/36/0e/36d8fb93ae5967f2e75cabd4da43890e.png" alt=""></p><p>很明显，0.064是大于之前的0.0158。</p><p>这两次计算预测值_y_的过程，其实也是我们使用线性回归，对新的数据进行预测的过程。简短地总结一下，线性回归模型根据大量的训练样本，推算出系数矩阵$B$，然后根据新数据的自变量$X$向量或者矩阵，计算出因变量的值，作为新数据的预测。</p><h2>Python代码实现</h2><p>这一部分，我们使用Python的代码，来验证一下之前的推算结果是不是正确，并看看最小二乘法和Python sklearn库中的线性回归，这两种结果的对比。</p><p>首先，我们使用Python numpy库中的矩阵操作来实现最小二乘法。主要的函数操作涉及矩阵的转置、点乘和求逆。具体的代码和注释我列在了下方。</p><pre><code>from numpy import *
+
+x = mat([[0,1],[1,-1],[2,8]])
+y = mat([[1.4],[-0.48],[13.2]])
+
+# 分别求出矩阵X'、X'X、(X'X)的逆
+# 注意，这里的I表示逆矩阵而不是单位矩阵
+print(&quot;X矩阵的转置X'：\n&quot;, x.transpose())
+print(&quot;\nX'点乘X：\n&quot;, x.transpose().dot(x))
+print(&quot;\nX'X矩阵的逆\n&quot;, (x.transpose().dot(x)).I)
+
+print(&quot;\nX'X矩阵的逆点乘X'\n&quot;, (x.transpose().dot(x)).I.dot(x.transpose()))
+print(&quot;\n系数矩阵B：\n&quot;, (x.transpose().dot(x)).I.dot(x.transpose()).dot(y))
+</code></pre><p>通过上述代码，你可以看到每一步的结果，以及最终的矩阵$B$。你可以把输出结果和之前手动推算的结果进行对比，看看是不是一致。</p><p>除此之外，我们还可把最小二乘法的线性拟合结果和sklearn库中的LinearRegression().fit()函数的结果相比较，具体的代码和注释我也放在了这里。</p><pre><code>import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+df = pd.read_csv(&quot;/Users/shenhuang/Data/test.csv&quot;)
+df_features = df.drop(['y'], axis=1)     #Dataframe中除了最后一列，其余列都是特征，或者说自变量
+df_targets = df['y']                     #Dataframe最后一列是目标变量，或者说因变量
+
+print(df_features, df_targets)
+regression = LinearRegression().fit(df_features, df_targets)        #使用特征和目标数据，拟合线性回归模型
+print(regression.score(df_features, df_targets))        #拟合程度的好坏
+print(regression.intercept_)
+print(regression.coef_)            #各个特征所对应的系数
+</code></pre><p>其中，test.csv文件的内容我也列在了这里。</p><p>$x_1,x_2,y$<br>
+$0,1,1.4$<br>
+$1,-1,-0.48$<br>
+$2,8,13.2$</p><p>这样写是为了方便我们使用pandas读取csv文件并加载为dataframe。</p><p>在最终的结果中，1.0表示拟合程度非常好，而-0.014545454545452863表示一个截距，[0.94909091 1.41454545]表示系数$b_1$和$b_2$的值。这个结果和我们最小二乘法的结果有所差别，主要原因是LinearRegression().fit()默认考虑了有线性函数存在截距的情况。那么我们使用最小二乘法是不是也可以考虑有截距的情况呢？答案是肯定的，不过我们首先要略微修改一下方程组和矩阵$X$。如果我们假设有截距存在，那么线性回归方程就要改写为：</p><p>$b_0+b_1·x_1+b_2·x_2+…+b_{n-1}·x_{n-1}+b_n·x_n=y$</p><p>其中，$b_0$表示截距，而我们这里的方程组用例就要改写为：</p><p>$b_0+b_1·0+b_2·1=1.4$<br>
+$b_0+b_1·1-b_2·1=-0.48$<br>
+$b_0+b_1·2+b_2·8=13.2$</p><p>而矩阵$X$要改写为：</p><p><img src="https://static001.geekbang.org/resource/image/41/fb/417cf726043be38e7cf0a46a9eea3bfb.png" alt=""></p><p>然后我们再执行下面这段代码。</p><pre><code>from numpy import *
+
+x = mat([[1,0,1],[1,1,-1],[1,2,8]])
+y = mat([[1.4],[-0.48],[13.2]])
+
+print(&quot;\n系数矩阵B：\n&quot;, (x.transpose().dot(x)).I.dot(x.transpose()).dot(y))
+</code></pre><p>你就会得到：</p><pre><code> 系数矩阵B：
+     [[-0.01454545]
+     [ 0.94909091]
+     [ 1.41454545]]
+
+</code></pre><p>这个结果和LinearRegression().fit()的结果就一致了。</p><p>需要注意的是，使用线性回归的时候，我们都有一个前提假设，那就是数据的自变量和因变量之间现线性关系。如果不是线性关系，那么使用线性模型来拟合的效果一定不好。比如，之前在解释欠拟合的时候，我用过下面这个例子。</p><p><img src="https://static001.geekbang.org/resource/image/0b/a5/0b9f8c88a846626c74a803ee645bc1a5.png" alt=""></p><p>上面这张图的数据分布并没有表达线性关系，所以我们需要对原始的数据进行非线性的变换，或者是使用非线性的模型来拟合。</p><p>那么，我们如何判断一个数据集是不是能用线性模型表示呢？在线性回归中，我们可以使用决定系数R2。这个统计指标使用了回归平方和与总平方和之比，是反映模型拟合度的重要指标。它的取值在0到1之间，越接近于1表示拟合的程度越好、数据分布越接近线性关系。随着自变量个数的增加，R2将不断增大，因此我们还需要考虑方程所包含的自变量个数对R2的影响，这个时候可使用校正的决定系数Rc2。所以，在使用各种科学计算库进行线性回归时，你需要关注R2或者Rc2，来看看是不是一个好的线性拟合。在之前的代码实践中，我们提到的regression.score函数，其实就是返回了线性回归的R2。</p><h2>总结</h2><p>今天我们使用了具体的案例来推导最小二乘法的计算过程，并用Python代码进行了验证。通过最近3节的讲解，相信你对线性方程组求精确解、求近似解、以及如何在线性回归中运用这些方法，有了更加深入的理解。</p><p>实际上，从广义上来说，最小二乘法不仅可以用于线性回归，还可以用于非线性的回归。其主要思想还是要确保误差ε最小，但是由于现在的函数是非线性的，所以不能使用求多元方程求解的办法来得到参数估计值，而需要采用迭代的优化算法来求解，比如梯度下降法、随机梯度下降法和牛顿法。</p><h2>思考题</h2><p>我这里给出一个新的方程组，请通过最小二乘法推算出系数的近似解，并使用你熟悉的语言进行验证。</p><p>$b_1+b_2·3+b_3·(-7)=-7.5$<br>
+$b_1·2+b_2·5+b_3·4=5.2$<br>
+$b_1·(-3)+b_2·(-7)+b_3·(-2)=-7.5$<br>
+$b_1·1+b_2·4+b_3·(-12)=-15$</p><p>欢迎留言和我分享，也欢迎你在留言区写下今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6a/8e/7b6ea886.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Joe</span>
+                            </div>
+                            <div class="bd">回答与疑问：<br>1. 非线性关系的数据拟合，可以先将自变量转为非线性。如转化为多项式（sklearn的PolynomialFeatures）。再用线性回归的方法去拟合。<br>2. 请问老师对于求解逆矩阵有没有什么高效的方法？<br>附上以前写的polyfit方法，请老师指点。谢谢<br>    def oneDPolynomiaTransform(self, x_origin):<br>        &#39;&#39;&#39;<br>        @description: generate polynomial for 1D input data. rule: [x0, x0^2, x0^3,...,x0^degreee]<br>        @param {type} x_origin- data before transformed[nX1]<br>        @return: x_transformed- data after transformed[nXdegree]<br>        &#39;&#39;&#39;<br>        len_features = len(x_origin)<br>        # polynomial feature data after transformed.<br>        x_transformed = np.array([])<br>        for i in range(len_features):<br>            for j in range(self.degree+1):<br>                x_transformed = np.append(<br>                    x_transformed, [(x_origin[i])**(j)])<br>        x_transformed = x_transformed.reshape(-1, self.degree+1)<br>        return x_transformed <br></div>
+                            <span class="time">2019-03-21 23:11</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">写得很好，至于逆矩阵更好的求法，我要查一下资料看看有无更优的解。</p>
+                                <p class="reply-time">2019-03-23 01:12</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

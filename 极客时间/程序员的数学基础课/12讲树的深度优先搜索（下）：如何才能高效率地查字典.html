@@ -1,0 +1,315 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                12讲树的深度优先搜索（下）：如何才能高效率地查字典
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/45/00/453b00085ec71524a31c04ca6ee4be00.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。今天咱们继续聊前缀树。</p><p>上节结尾我给你留了道思考题：如何实现前缀树的构建和查询？如果你动手尝试之后，你会发现，这个案例的实现没有我们前面讲的那些排列组合这么直观。</p><p>这是因为，从数学的思想，到最终的编程实现，其实需要一个比较长的流程。我们首先需要把问题转化成数学中的模型，然后使用数据结构和算法来刻画数学模型，最终才能落实到编码。</p><p>而在前缀树中，我们需要同时涉及树的结构、树的动态构建和深度优先搜索，这个实现过程相对比较复杂。所以，这节我就给你仔细讲解一下，这个实现过程中需要注意的点。只要掌握这些点，你就能轻而易举实现深度优先搜索。</p><h2>如何使用数据结构表达树？</h2><p>首先，我想问你一个问题，什么样的数据结构可以表示树？</p><p>我们知道，计算机中最基本的数据结构是数组和链表。数组适合快速地随机访问。不过，数组并不适合稀疏的数列或者矩阵，而且数组中元素的插入和删除操作也比较低效。相对于数组，链表的随机访问的效率更低，但是它的优势是，不必事先规定数据的数量，表示稀疏的数列或矩阵时，可以更有效地利用存储空间，同时也利于数据的动态插入和删除。</p><p>我们再来看树的特点。树的结点及其之间的边，和链表中的结点和链接在本质上是一样的，因此，我们可以模仿链表的结构，用编程语言中的指针或对象引用来构建树。</p><!-- [[[read_end]]] --><p>除此之外，我们其实还可以用二维数组。用数组的行或列元素表示树中的结点，而行和列共同确定了两个树结点之间是不是存在边。可是在树中，这种二维关系通常是非常稀疏的、非常动态的，所以用数组效率就比较低下。</p><p>基于上面这些考虑，我们可以设计一个TreeNode类，表示有向树的结点和边。这个类需要体现前缀树结点最重要的两个属性。</p><ul>
+<li>
+<p>这个结点所代表的字符，要用label变量表示。</p>
+</li>
+<li>
+<p>这个结点有哪些子结点，要用sons哈希映射表示。之所以用哈希，是为了便于查找某个子结点（或者说对应的字符）是否存在。</p>
+</li>
+</ul><p>另外，我们还可以用变量prefix表示当前结点之前的前缀，用变量explanation表示某个单词的解释。和之前一样，为了代码的简洁，所有属性都用了public，避免读取和设置类属性的代码。</p><p>这里我写了一段TreeNode类的代码，来表示前缀树的结点和边，你可以看看。</p><pre><code>/**
+* @Description: 前缀树的结点
+* 
+*/
+ 
+ public class TreeNode {
+  
+  public char label;  // 结点的名称，在前缀树里是单个字母
+  public HashMap&lt;Character, TreeNode&gt; sons = null; // 使用哈希映射存放子结点。哈希便于确认是否已经添加过某个字母对应的结点。
+  public String prefix = null;   // 从树的根到当前结点这条通路上，全部字母所组成的前缀。例如通路b-&gt;o-&gt;y，对于字母o结点而言，前缀是b；对于字母y结点而言，前缀是bo
+  public String explanation = null;  // 词条的解释
+  
+  // 初始化结点
+  public TreeNode(char l, String pre, String exp) {
+   label = l;
+   prefix = pre; 
+   explanation = exp;
+   sons = new HashMap&lt;&gt;();
+   
+  }
+  
+ }
+</code></pre><p>说到这里，你可能会好奇，为什么只有结点的定义，而没有边的定义呢？实际上，这里的有向边表达的是父子结点之间的关系，我把这种关系用sons变量来存储父结点。</p><p>需要注意的是，我们需要动态地构建这棵树。每当接收一个新单词时，代码都需要扫描这个单词的每个字母，并使用当前的前缀树进行匹配。如果匹配到某个结点，发现相应的字母结点并不存在，那么就建立一个新的树结点。这个过程不好理解，我也写了几行代码，你可以结合来看。其中，str表示还未处理的字符串，parent表示父结点。</p><pre><code>// 处理当前字符串的第一个字母
+char c = str.toCharArray()[0];
+TreeNode found = null;
+
+// 如果字母结点已经存在于当前父结点之下，找出它。否则就新生成一个
+if (parent.sons.containsKey(c)) {
+	found = parent.sons.get(c);
+} else {
+	TreeNode son = new TreeNode(c, pre, &quot;&quot;);
+	parent.sons.put(c, son);
+	found = son;
+}
+</code></pre><h2>如何使用递归和栈实现深度优先搜索？</h2><p>构建好了数据结构，我们现在需要考虑，<strong>什么样的编程方式可以实现对树结点和边的操作？</strong></p><p>仔细观察前缀树构建和查询，你会发现这两个不断重复迭代的过程，都可以使用递归编程来实现。换句话说，<strong>深度优先搜索的过程和递归调用在逻辑上是一致的</strong>。</p><p>我们可以把函数的嵌套调用，看作访问下一个连通的结点；把函数的返回，看作没有更多新的结点需要访问，回溯到上一个结点。在之前的案例中，我已经讲过很多次递归编程的例子，这里我就不列举代码细节了。如果忘记的话，你可以回去前面章节复习一下。</p><p>在查询的过程中，至少有三种情况是无法在字典里找到被查的单词的。于是，我们需要在递归的代码中做相应的处理。</p><p><strong>第一种情况：被查单词所有字母都被处理完毕，但是我们仍然无法在字典里找到相应的词条。</strong></p><p>每次递归调用的函数开始，我们都需要判断待查询的单词，看看是否还有字母需要处理。如果没有更多的字母需要匹配了，那么再确认一下当前匹配到的结点本身是不是一个单词。如果是，就返回相应的单词解释，否则就返回查找失败。对于结点是不是一个单词，你可以使用Node类中的explanation变量来进行标识和判断，如果不是一个存在的单词，这个变量应该是空串或者Null值。</p><p><strong>第二种情况：搜索到前缀树的叶子结点，但是被查单词仍有未处理的字母，就返回查找失败。</strong></p><p>我们可以通过结点对象的sons变量来判断这个结点是不是叶子结点。如果是叶子结点，这个变量应该是空的HashMap，或者Null值。</p><p><strong>第三种情况：搜索到中途，还没到达叶子结点，被查单词也有尚未处理的字母，但是当前被处理的字母已经无法和结点上的label匹配，返回查找失败。是不是叶子仍然通过结点对象的sons变量来判断。</strong></p><p>好了，现在你已经可以很方便地在字典里查找某个单词，看看它是否存在，或者看看它的解释是什么。我这里又有一个新的问题了：<strong>如果我想遍历整个字典中所有的单词，那该怎么办呢？</strong></p><p>仔细观察一下，你应该能发现，查找一个单词的过程，其实就是在有向树中，找一条从树的根到代表这个单词的结点之通路。那么如果要遍历所有的单词，就意味着我们要找出从根到所有代表单词的结点之通路。所以，在每个结点上，我们不再是和某个待查询单词中的字符进行比较，而是要遍历该结点所有的子结点，这样才能找到所有可能的通路。我们还可以用递归来实现这一过程。</p><p>尽管函数递归调用非常直观，可是也有它自身的弱点。函数的每次嵌套，都可能产生新的变量来保存中间结果，这可能会消耗大量的内存。所以这里我们可以用一个更节省内存的数据结构，栈（Stack）。</p><p>栈的特点是先进后出（First In Last Out），也就是，最先进入栈的元素最后才会得到处理。我画了一张元素入栈和出栈的过程图，你可以看看。</p><p><img src="https://static001.geekbang.org/resource/image/53/c1/5391e9f266cb795cec532cc54928b8c1.jpg" alt=""></p><p>为什么栈可以进行深度优先搜索呢？你可以先回顾一下上一节，我解释深度优先搜索时候的例子。为了方便你回想，我把图放在这里了。</p><p><img src="https://static001.geekbang.org/resource/image/90/b7/900c981c816375268eefdf274cb149b7.jpg" alt=""></p><p>然后，我们用栈来实现一下这个过程。</p><p>第1步，将初始结点110压入栈中。</p><p>第2步，弹出结点110，搜出下一级结点123、879、945和131。</p><p>第3步，将结点123、879、945和131压入栈中。</p><p>第4步，重复第2步和第3步弹出和压入的步骤，处理结点123，将新发现结点162和587压入栈中。</p><p>第5步，处理结点162，由于162是叶子结点，所以没有发现新的点。第6步，重复第2和第3步，处理结点587，将新发现结点681压入栈中。</p><p>……</p><p>第n-1步，重复第2和第3步，处理结点131，将新发现结点906压入栈中。</p><p>第n步，重复第2和第3步，处理结点906，没有发现新的结点，也没有更多待处理的结点，整个过程结束。</p><p><img src="https://static001.geekbang.org/resource/image/89/45/893203ec268e095397966b58e1c71d45.jpg" alt=""></p><p>从上面的步骤来看，栈先进后出的特性，可以模拟函数的递归调用。实际上，计算机系统里的函数递归，在内部也是通过栈来实现的。如果我们不使用函数调用时自动生成的栈，而是手动使用栈的数据结构，就能始终保持数据的副本只有一个，大大节省内存的使用量。</p><p>用TreeNode类和栈实现深度优先搜索的代码我写出来了，你可以看看。</p><pre><code>// 使用栈来实现深度优先搜索
+public void dfsByStack(TreeNode root) {
+
+  Stack&lt;TreeNode&gt; stack = new Stack&lt;TreeNode&gt;(); 
+	  // 创建堆栈对象，其中每个元素都是TreeNode类型
+  stack.push(root);		// 初始化的时候，压入根结点
+
+  while (!stack.isEmpty()) {	// 只要栈里还有结点，就继续下去
+	
+	TreeNode node = stack.pop();	// 弹出栈顶的结点
+	
+	if (node.sons.size() == 0) {
+		// 已经到达叶子结点了，输出
+		System.out.println(node.prefix + node.label);
+	} else {
+		// 非叶子结点，遍历它的每个子结点
+		Iterator&lt;Entry&lt;Character, TreeNode&gt;&gt; iter 
+			= node.sons.entrySet().iterator();
+		
+		// 注意，这里使用了一个临时的栈stackTemp
+		// 这样做是为了保持遍历的顺序，和递归遍历的顺序是一致的
+		// 如果不要求一致，可以直接压入stack
+		Stack&lt;TreeNode&gt; stackTemp = new Stack&lt;TreeNode&gt;();
+		while (iter.hasNext()) {
+			stackTemp.push(iter.next().getValue());
+		}
+		while (!stackTemp.isEmpty()) {
+			stack.push(stackTemp.pop());
+		}
+	}
+  }
+
+}	
+</code></pre><p>这里面有个细节需要注意一下。当我们把某个结点的子结点压入栈的时候，由于栈“先进后出”的特性，会导致子结点的访问顺序，和递归遍历时子结点的访问顺序相反。如果你希望两者保持一致，可以用一个临时的栈stackTemp把子结点入栈的顺序颠倒过来。</p><h2>小结</h2><p>这一节我们用递归来实现了深度优先搜索。说到这，你可能会想到，之前讨论的归并排序、排列组合等课题，也采用了递归来实现，那它们是不是也算深度优先搜索呢？</p><p>我把归并排序和排列的分解过程放在这里，它们是不是也可以用有向树来表示呢？</p><p>在归并排序的数据分解阶段，初始的数据集就是树的根结点，二分之前的数据集代表父节点，而二分之后的左半边的数据集和右半边的数据集都是父结点的子结点。分解过程一直持续到单个的数值，也就是最末端的叶子结点，很明显这个阶段可以用树来表示。如果使用递归编程来进行数据的切分，那么这种实现就是深度优先搜索的体现。</p><p><img src="https://static001.geekbang.org/resource/image/54/12/5410fb301ffce57355ad7ef074e8fd12.jpg" alt=""></p><p>在排列中，我们可以把空集认为是树的根结点，如果把每次选择的元素作为父结点，那么剩下可选择的元素，就构成了这个父结点的子结点。而每多选择一个元素，就会把树的高度加1。因此，我们也可以使用递归和深度优先搜索，列举所有可能的排列。</p><p><img src="https://static001.geekbang.org/resource/image/98/15/98df21876ad52195217709e298707515.jpg" alt=""></p><p>从这两个例子，我们可以看出有些数学思想都是相通的，例如递归、排列和深度优先搜索等等。</p><p>我来总结一下，其实深度优先搜索的核心思想，就是按照当前的通路，不断地向前进，当遇到走不通的时候就回退到上一个结点，通过另一个新的边进行尝试。如果这一个点所有的方向都走不通的时候，就继续回退。这样一次一次循环下去，直到到达目标结点。树中的每个结点，既可以表示某个子问题和它所对应的抽象状态，也可以表示某个数据结构中一部分具体的值。</p><p>所以，我们需要做的是，观察问题是否可以使用递归的方式来逐步简化，或者是否需要像前缀树这样遍历，如果是，就可以尝试使用深度优先搜索来帮助我们思考并解决问题。</p><p><img src="https://static001.geekbang.org/resource/image/ae/c7/aeef1d5f6be9b5d09618a189520055c7.jpg" alt=""></p><h2>思考题</h2><p>这两节我讲的是树的深度优先搜索。如果是在一般的图中进行深度优先搜索，会有什么不同呢？</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/4d/20/02a1d4ac.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jsoulan</span>
+                            </div>
+                            <div class="bd">感觉后面栈描述的过程像广度优先遍历呢 <br></div>
+                            <span class="time">2019-01-09 09:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">栈是先进后出，还是深度优先。队列先进先出，适合广度优先</p>
+                                <p class="reply-time">2019-01-09 23:33</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6a/8e/7b6ea886.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Joe</span>
+                            </div>
+                            <div class="bd">老师讲解的树有多个分支，这里用C++简单演示了下二叉树的DFS。<br>&#47;**<br> * Objective:Given a b-tree, do the depth-first-search(DFS) or traversal.<br> * Appraoch: stack, no recursion.<br> * Example:<br> *        1<br> *       &#47; \<br> *      2    3<br> *     &#47; \  &#47; \<br> *    4   5 6  7<br> * Output: <br> * preorder: 1 2 4 5 3 6 7<br> *&#47;<br><br>#include &lt;iostream&gt;<br>#include &lt;stack&gt;<br>using namespace std;<br><br>&#47;&#47; tree node<br>class TreeNode {<br>  public:<br>  int data;<br>  TreeNode* left = NULL;<br>  TreeNode* right = NULL;<br><br>  public:<br>  TreeNode(int data)<br>      : data(data) { <br>  } <br>};<br>&#47;&#47; depth-first-search<br>class DFS {<br>  public:<br>  void printDFS(TreeNode* root) { <br>    stack&lt;TreeNode*&gt; s;<br>    s.push(root);<br>    &#47;&#47; begins!<br>    while (!s.empty()) {<br>      TreeNode* temp = s.top();<br>      s.pop();<br>      &#47;&#47; push right first<br>      if (temp-&gt;right != NULL) {<br>        s.push(temp-&gt;right);<br>      }<br>      if (temp-&gt;left != NULL) {<br>        s.push(temp-&gt;left);<br>      }<br>      &#47;&#47; print data<br>      cout &lt;&lt; temp-&gt;data &lt;&lt; &quot; &quot;;<br>    }<br>  }<br>};<br>&#47;&#47; test!<br>int main(void) {<br>  &#47;&#47; build tree.<br>  TreeNode* root = new TreeNode(1);<br>  root-&gt;left = new TreeNode(2);<br>  root-&gt;right = new TreeNode(3);<br>  root-&gt;left-&gt;left = new TreeNode(4);<br>  root-&gt;left-&gt;right = new TreeNode(5);<br>  root-&gt;right-&gt;left = new TreeNode(6);<br>  root-&gt;right-&gt;right = new TreeNode(7);<br><br>  DFS test;<br>  cout &lt;&lt; &quot;Depth-First-Search: &quot; &lt;&lt; endl;<br>  test.printDFS(root);<br>}<br>输出：<br>Depth-First-Search: <br>1 2 4 5 3 6 7 <br></div>
+                            <span class="time">2019-01-17 22:51</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">很好的实现，代码简洁</p>
+                                <p class="reply-time">2019-01-18 03:24</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/0c/0f/93d1c8eb.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">mickey</span>
+                            </div>
+                            <div class="bd">勘误：<br><br>栈是先进后出。<br><br>第3步将结点123、879、945和131压入栈中。<br><br>第4步，重复第2步和第3步弹出和压入的步骤，处理结点123，.....<br><br>123结点应该是最后处理的，应该先处理131. <br></div>
+                            <span class="time">2019-01-10 08:55</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">图里画的是对的，文字表达有歧义，我稍后改一下</p>
+                                <p class="reply-time">2019-01-10 23:11</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/94/e3/ed118550.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Being</span>
+                            </div>
+                            <div class="bd">广度优先一般用队列来做，FIFO，这样做到层级遍历；深度优先则用栈来做，FILO，这样做到按深度一条条的遍历下去。在实现上是这么区别的，我看上面有同学混淆了。 <br></div>
+                            <span class="time">2019-01-09 19:25</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">总结的很好</p>
+                                <p class="reply-time">2019-01-09 23:22</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/d5/38/b6ffa3be.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">xlcoder</span>
+                            </div>
+                            <div class="bd">你好，黄老师 示例代码是否有 github 的地址，拿手机看示例代码 太痛苦了 <br></div>
+                            <span class="time">2019-01-12 10:35</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我会在专栏第一个大部分结束后，整理并放到Github上，请关注后续的总结和加餐文章。</p>
+                                <p class="reply-time">2019-01-14 03:08</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">梅坊帝卿</span>
+                            </div>
+                            <div class="bd">有没有reverse iterator 这样里面那个临时栈就不需要了 <br></div>
+                            <span class="time">2019-01-12 10:09</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">好想法，Java里可以使用collection.reverse，这样不用自己实现reverse功能了</p>
+                                <p class="reply-time">2019-01-14 03:07</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/4d/20/02a1d4ac.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jsoulan</span>
+                            </div>
+                            <div class="bd">感觉先序遍历根结点应该也是最后出栈的吧😂😂 <br></div>
+                            <span class="time">2019-01-10 23:12</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">如果只要求输出结点，输出后并且获得它的子结点之后，可以出栈</p>
+                                <p class="reply-time">2019-01-11 23:24</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/4d/20/02a1d4ac.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jsoulan</span>
+                            </div>
+                            <div class="bd">第一步110节点入栈，然后找其子节点，子节点入栈，直到叶子节点，然后叶子节点出栈，回溯父节点依次出栈，110节点不应该是最后出栈吗？？😂😂 <br></div>
+                            <span class="time">2019-01-09 23:39</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">好问题，其实深度优先有几种细分，前序、中序和后序，我这里讲的是前序，每个父结点第一次被访问的时候就输出</p>
+                                <p class="reply-time">2019-01-10 23:09</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/eb/63/09e7f442.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">溯雪</span>
+                            </div>
+                            <div class="bd">正好最近在用neo4j做一些无向图遍历的东西，遍历的时候还要考虑到节点是否已访问过。在多线程环境下，直接在节点对象上作访问标记不太好搞，我是用一个hashset来记录已访问过的节点id并作判断，当数据量大的时候这个hashset还是比较占空间的，老师有木有比较好的方法。。<br><br>还有就是辅助遍历的栈java.util.Stack，jdk中是这样建议的：<br>“<br>Deque 接口及其实现提供了 LIFO 堆栈操作的更完整和更一致的 set，应该优先使用此 set，而非此类。例如： <br><br>   Deque&lt;Integer&gt; stack = new ArrayDeque&lt;Integer&gt;();<br>”<br>请问老师这里的更完整和更一致指的是？ <br></div>
+                            <span class="time">2019-01-09 14:29</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对于neo4j我不太熟悉，你可以看看这种语言下boolean是几个字节，如果是1位甚至1个bit，而且结点相对稳定，那就可以考虑boolean数组。或者自己实现一个二进制加餐那节提到的bit array，不过工作量比较大一点</p>
+                                <p class="reply-time">2019-01-09 23:31</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

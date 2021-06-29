@@ -1,0 +1,183 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                25讲后端语言支持（一）：Go、Java
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/bd/d3/bd6fabd30efbe0964ac9eaa5c82560d3.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>上一讲中，我们介绍了VS Code里的 JavaScript 和 Node.js 支持。JavaScript 和 Node.js 是VS Code团队自己就在使用的语言，用微软的话来说就是：VS Code团队在吃自己的狗粮。不过，VS Code对后端语言也有不错的支持。所以接下来，我们就来介绍一下，VS Code中的 Go、Python、Java、C# 的支持。</p><p>这篇文章的目的，并不是要充当VS Code某个语言支持的中文文档或者问答，这些工作还是由插件开发者自己来做更好。我们在这篇文章中，会主要专注于以下几个主题：</p><ul>
+<li>为了获得最好的语言支持，你需要使用的插件。这个插件在哪里维护？你如何找到它的文档、Wiki 和反馈渠道？</li>
+<li>这些插件支持了哪些VS Code的语言功能（智能提示，代码跳转，调试，测试等等）？它们是借助哪些工具和库（library）来实现这个语言功能的？</li>
+<li>第一次使用这些插件来编程的注意点。</li>
+<li>这些插件的已知问题和 Roadmap。</li>
+</ul><p>如果你还在使用别的开发工具进行 Go、Java、Python、C# 的开发，并且在犹豫是否可以使用VS Code进行这些语言的开发或它是否适合你的项目，那么通过这篇文章，你可以得出答案。</p><p>首先，今天会先介绍 Go 和 Java 这两门语言。</p><!-- [[[read_end]]] --><h1>一、Go</h1><p>VS Code上的 Go 语言插件，是由微软官方推出的。Go 语言插件，是VS Code推出插件 API 时的首批插件，直到现在，也依然由VS Code团队成员进行维护开发，项目地址是 <a href="https://github.com/microsoft/vscode-go%E3%80%82">https://github.com/microsoft/vscode-go。</a> 作为 VS Code 团队维护的项目，GitHub issues 是它唯一的反馈渠道。要安装这个插件，你可以在VS Code的插件视图里搜索 Go，也可以通过<a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go">插件市场</a>进行下载。</p><p><img src="https://static001.geekbang.org/resource/image/74/39/743f7c914490e27e27bb084a2753ed39.png" alt=""></p><center><span class="reference">Go 插件</span></center><p>VS Code也是 Go 团队官方推荐的开发工具。</p><h2>（一）安装使用</h2><p>当你从插件市场安装了 Go 插件后，重启VS Code，Go 插件就会在你第一次打开 Go 文件的时候被启动。</p><p>启动后，如果你还没有设置过 GOPATH 的话，VS Code会提示你，你既可以在自己的系统环境变量里添加 GOPATH，也可以在当前项目的配置文件里配置 GOPATH。</p><p><img src="https://static001.geekbang.org/resource/image/da/3b/da670ac7ac5ae07da2229df5d11d133b.png" alt=""></p><center><span class="reference">设置 GOPATH</span></center><p>设置正确的 GOPATH 后，VS Code就知道安装 Go 的 package 保存到哪个文件夹内了。</p><p>紧接着VS Code又跳出多个提示。这些提示是告诉你，如果想要在VS Code中使用自动补全、代码跳转等功能，你需要安装额外的 Go 的 package。所以，这里我建议选择 Install All，之后如果你对某个 package 的效果不满意，也可以通过设置再进行修改的。</p><p><img src="https://static001.geekbang.org/resource/image/52/ed/52261f4e42cdc486dc453d1d4faf5eed.png" alt=""></p><center><span class="reference">安装 Package 提示</span></center><p>比如，在我的系统上，我将 GOPATH 设置为 /Users/penlv/code/prototypes/gopath。然后选择 Install All 后，我就能在输出面板里，看到 Go 插件将要安装的 packages。</p><p><img src="https://static001.geekbang.org/resource/image/d8/a9/d8fb666626b6fddccad1048214b937a9.png" alt=""></p><center><span class="reference">安装 Package</span></center><p>不过值得注意的是，如果上面的安装失败了，输出窗口中会提供错误信息。因为，这一步操作，底层运行的命令行其实就是：</p><pre><code>go get -u -v github.com/...
+</code></pre><p>像我就曾遇到了 Go 的版本太老，导致更新失败的问题。如果你遇到了自己无法解决的问题，也可以到插件的 GitHub repository 留言，请注意要提供完整的信息，比如VS Code版本、插件版本以及 Go 的版本，以便更好地 toubleshoot。</p><h2>（二）语言支持</h2><h3>1、IntelliSense</h3><p>首先，你可以在 Go 代码中，进行代码跳转（Go To Definition）、自动补全（Auto Complete）以及获取悬浮信息（Hover）。</p><p><img src="https://static001.geekbang.org/resource/image/15/0b/15b05e4efaa399c403e86e53a6aa630b.gif" alt=""></p><center><span class="reference">Go: 代码跳转和悬浮窗口</span></center><p><img src="https://static001.geekbang.org/resource/image/33/55/33b2db633bd82c075f44b8035c26ba55.gif" alt=""></p><center><span class="reference">Go: 自动补全</span></center><p>Go 插件默认是借助 <a href="https://github.com/mdempsky/gocode">gocode</a>、<a href="https://github.com/zmb3/gogetdoc">gogetdoc</a>和 <a href="https://github.com/rogpeppe/godef">godef</a> 分析代码，然后提供这些信息的。</p><h3>2、构建（build）、检测（vet, lint）和格式化（Format）</h3><p>在编写 Go 代码时，经常会用到<code>go build</code>、<code>go tool vet</code>、<code>golint</code>等脚本去构建代码，或者是对代码进行检测。Go 插件已经将这些功能集成到插件中了，你可以：</p><ul>
+<li>打开 go.buildOnSave ，当代码保存时，go build 将会自动执行。同时，你可以使用 go.buildFlags 来指定 build 的参数。</li>
+<li>打开 go.vetOnSave 并且使用 go.vetFlags 来指定 vet 参数。</li>
+<li>打开 go.lintOnSave 并且使用 go.lintFlags 来指定 lint 参数。并且，你可以通过 go.lintTool 来选择你想要的 lint 工具。</li>
+<li>打开 go.testOnSave 在代码保存时测试代码。</li>
+</ul><p>当你使用这些参数来自动触发脚本时，Go 插件会将这些脚本的输出结果进行分析，然后将错误和警告放入到问题面板中。</p><p><img src="https://static001.geekbang.org/resource/image/8e/e6/8e8c8a0bd63aed007f5d17693680bce6.gif" alt=""></p><center><span class="reference">保存代码时检测代码错误</span></center><p>默认情况下，当保存代码时，VS Code会自动给 Go 代码进行格式化。如果你不喜欢这个功能，也可以通过 go.formatOnSave 来取消。</p><p><img src="https://static001.geekbang.org/resource/image/47/d0/4762153eb246dac0ff58c6802074b2d0.gif" alt=""></p><center><span class="reference">保存代码时自动格式化</span></center><h3>3、调试</h3><p>Go 插件同样支持调试 Go 的代码，而其底层的 debugger 则是 delve。如果你第一次使用 Go 插件时选择了 Install All 安装所有的 package，那么就无需再安装任何的 package了。而如果你没有全部安装，那么你可能需要手动安装 dlv 这个 package。</p><p>和之前我们介绍的 Node.js 调试一样，如果没有 launch.json 的话，VS Code会默认调试当前文件。</p><p><img src="https://static001.geekbang.org/resource/image/58/e9/5881d1c0cdec6dbd58489f92ed9a9de9.gif" alt=""></p><center><span class="reference">自动调试 Go 代码</span></center><p>同样，Go 插件也提供了多个调试的模板</p><p><img src="https://static001.geekbang.org/resource/image/14/1b/1409255bfc173ad0ade970407632841b.gif" alt=""></p><center><span class="reference">添加 Go launch.json 调试模板</span></center><h3>4、Language Server（experimental）</h3><p>VS Code的 Go 插件，默认是使用 gocode、godef 等 package 来提供智能语言服务的。不过 GO 插件中还有一个正在处于试验阶段的 Language Server （也就是 LSP 的实现），你可以通过设置 go.useLanguageServer 将其打开。但是这个 Language Server 并不支持 Windows，且处于试验阶段，关于更多的信息，请查看<a href="https://github.com/Microsoft/vscode-go#go-language-server-experimental">文档</a>。</p><h2>（三）问题和前瞻</h2><p>综合我个人使用 Go 插件时候的体验，以及 Go 插件维护者的分享，下面这些问题是新用户经常会遇到的：</p><ul>
+<li>
+<p>GOPATH 的设置。如果你从来没有写过 Go 的话，一开始可能会对 GOPATH 摸不着头脑，那你可以通过 <a href="https://github.com/golang/go/wiki/GOPATH">Go 的官方文档</a>了解它的用途。</p>
+</li>
+<li>
+<p>如果你在设置中添加了 GOPATH，而不是系统的环境变量的话，要注意 Go 插件最终使用的 GOPATH 跟你在集成终端中使用命令行脚本时会不一样。</p>
+</li>
+<li>
+<p>Go 插件默认使用的格式化工具是 SourceGraph 正在使用的 goreturns，如果你发现默认的格式化效果并不是你想要的，那你可以通过修改 go.formatTool 将其替换，比如使用官方的 gofmt。</p>
+</li>
+</ul><p>根据每年Go相关的 Survey 和官方数据，Go 社区的新晋用户更倾向于使用VS Code来进行 Go 的编程。于是 Go 团队决定亲自书写一套 Go 的 Language Server，以提升VS Code上 Go 的书写体验。上面我提到的 Language Server 是 SourceGraph 团队实现的，Go 团队可能不会基于它们的代码进行修改，而是重起炉灶。对于官方团队的投入，让我对 Go 在VS Code里前景非常有信心。</p><h1>二、Java</h1><p>VS Code上的 Java 语言支持，可以说是多家大企业通力合作了。最早成熟的 Java 插件，是由 Red Hat 公司实现的，叫做 Language Support for Java™ by Red Hat。 它背后使用的技术则是 Java Language Server，也就是 Language Server Protocol 的 Java 实现。除了VS Code的这个 Java 插件在使用以外，Eclipse Che 现在也在使用 Java Language Server。而说到 Java Language Server ，又不得不提它的底层一个非常重要的库 Eclipse JDT （Eclipse Java development tools ），VS Code的项目领导 Erich Gamma，在加入微软之前，就是在 IBM 负责 Eclipse JDT 这个项目的。</p><p>好了，扯完了八卦，继续回到 Java 插件上。Language Support for Java™ by Red Hat 这个插件，能够提供代码跳转、自动补全、重构等智能语言功能。不过，它并不支持 Java 代码的调试。如果要对 Java 代码进行调试，则需要安装另一个插件 Debugger for Java ，这个插件则是由微软 Visual Studio 中国团队开发和维护的。而现在 Red Hat 和 Visual Studio 中国团队正在一起合作，共同为 Java 用户在VS Code上提供更好的编程体验。</p><h2>（一）安装使用</h2><p>为了保证你能有比较完整的 Java 开发体验，你可以下载插件包 <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">Java Extension Pack</a>。</p><p><img src="https://static001.geekbang.org/resource/image/47/30/47acd35fc34255ee0befd7a87b615b30.png" alt=""></p><p>这个插件包，包含了四个插件：</p><ul>
+<li>
+<p>Language Support for Java™ by Red Hat，提供智能语言服务，项目地址是 <a href="https://github.com/redhat-developer/vscode-java%EF%BC%9B">https://github.com/redhat-developer/vscode-java；</a></p>
+</li>
+<li>
+<p>Debugger for Java，提供调试功能，项目地址是 <a href="https://github.com/Microsoft/vscode-java-debug%EF%BC%9B">https://github.com/Microsoft/vscode-java-debug；</a></p>
+</li>
+<li>
+<p>Java Test Runner，在VS Code中运行和调试 JUint 测试，项目地址是 <a href="https://github.com/Microsoft/vscode-java-test%EF%BC%9B">https://github.com/Microsoft/vscode-java-test；</a></p>
+</li>
+<li>
+<p>Maven for Java，提供更丰富的 Maven 支持，<a href="https://github.com/Microsoft/vscode-maven%E3%80%82">https://github.com/Microsoft/vscode-maven。</a></p>
+</li>
+</ul><p>不过，要注意的是，要想这些插件能够正常工作，你需要安装好 JDK 。如果你的环境变量里设置好了  JDK_HOME 或者 JAVA_HOME，那么插件就可以正常启动了。而如果插件无法找到 JDK，你也可以通过在个人或者项目设置中添加 java.home 指定 JDK 的位置。</p><h2>（二）语言支持</h2><p>在安装完上面的插件后，你可以在VS Code中使用 Maven、Eclipse 和 Gradle 项目。上面我提到了 Java 语言服务的最底层是 Eclipse JDT，无论是代码提示，还是重构、代码跳转等，Eclipse 里能够完成的，VS Code中都能有接近的体验。而关于相关操作，在前面的章节中我们也已经有所介绍，如果你不太清楚，可以阅读第7篇文章<a href="https://time.geekbang.org/column/article/40555">《如何快速在文件、符号、代码之间跳转？》</a>和第9篇<a href="https://time.geekbang.org/column/article/40847">《代码自动补全、快速修复和重构的二三事》</a>。</p><h3>1、调试</h3><p>当你打开一个 Java 项目后，你可以点击调试视图里的齿轮按钮，创建 launch.json 。选择了 Java 这个环境后，Java 插件会为我们创建两个调试的模板。</p><p><img src="https://static001.geekbang.org/resource/image/4f/b6/4f46771cbe03f3baea110a26b142bbb6.gif" alt=""></p><center><span class="reference">Java 插件创建两个调试模板</span></center><p>第一个模板，就是调试本地的项目，要注意的是，你需要填写设置 mainClass，这个设置的值则是你想要调试的 Java Main Class，而且这个地址必须是这个类的完整地址，类似于 com.example.Main 。而第二个模板，则是将调试器 attach 到已经在调试中的 Java 代码，你则需要提供正在运行的调试器的地址（hostName）和端口（port）。</p><p>Java 调试配置支持的属性，可以参考<a href="https://github.com/Microsoft/vscode-java-debug#options">官方文档</a>。不过，这里有三个功能值得特别提一下。</p><p>第一个功能是跟用户输入有关。VS Code内置的调试面板，并不支持用户输入。也就是说，如果你写的 Java 程序，依赖于用户从命令行中输入代码，Java 程序会打开一个系统终端，然后你需要在这个系统终端中输入内容。而如果你希望使用VS Code的集成终端来进行输入的话，就可以使用调试配置属性 “console: integratedTerminal” 。</p><p>第二个功能是Step filtering。它是什么意思呢? 当你在使用跳转入函数（Step in），或者继续执行函数（Step through）等方法时，有的时候，你会跳入到 Java 语言本身的代码中，或者进入到某些第三方库的代码中。但是你可能只是要调试自己的代码，那么你就可以通过 stepFilters 这个属性，对类的名字进行过滤，所有匹配了这个列表的类，在调试时都可以被直接跳过。你甚至还可以指定你是否要跳过构造函数、静态函数等等。</p><p>下面就是一段 stepFilters 属性的例子。</p><pre><code>&quot;stepFilters&quot;: {
+    &quot;classNameFilters&quot;: [
+        &quot;java.*&quot;,
+        &quot;javax.*&quot;,
+        &quot;com.sun.*&quot;,
+        &quot;sun.*&quot;,
+        &quot;sunw.*&quot;,
+        &quot;org.omg.*&quot;
+    ],
+    &quot;skipSynthetics&quot;: false,
+    &quot;skipStaticInitializers&quot;: false,
+    &quot;skipConstructors&quot;: false
+}
+</code></pre><p>第三个功能是Hot Code replacement，即“热代码替换”。相信对前端有经验的朋友已经比较熟悉这个功能了。这个功能的作用是，当你在调试代码的时候，如果发现代码哪里写错了，可以立即修改。然后调试器就会默默地在底层将整个代码执行切换到一个新的 JVM instance 上，而你无需重启整个调试进程，就能够继续调试最新的代码了。</p><h3>2、JUnit 测试</h3><p>接下来，我们看看 Java 的插件对 JUnit 测试的支持情况如何。当你打开一个 JUnit 测试时，Java Test Runner 这个插件就会被激活了。此时，在界面最左侧活动栏的最下面，多了一个按钮，点击这个按钮，你就能看到一个测试视图，这个视图里展示的就是当前项目中的所有测试。</p><p><img src="https://static001.geekbang.org/resource/image/18/1d/18d01ef83459a668be95e7e5da50ca1d.png" alt=""></p><center><span class="reference">测试视图</span></center><p>在这个视图中，你可以在测试项目上进行右击，调出上下文菜单，然后执行单个，或者多个测试。</p><p><img src="https://static001.geekbang.org/resource/image/c0/ba/c0b269775bf16307913a08c261eb3bba.gif" alt=""></p><center><span class="reference">执行测试</span></center><p>与此同时，在编辑器中，你可以看到每个测试的上方，都有 “Run Test” 和 “Debug Test” 等字样。通过点击它们，同样可以执行和调试测试。</p><p><img src="https://static001.geekbang.org/resource/image/f1/b3/f1b891da645d14ed38be26607b101fb3.png" alt=""></p><center><span class="reference">运行和调试测试快捷方式</span></center><p>另外，在上图中，你还能够看到一个问号，它说明测试没有被正确执行。你可以点击它，这之后，VS Code则会打开一个新的编辑器，详细介绍这个测试相关的情况。</p><p><img src="https://static001.geekbang.org/resource/image/c7/b9/c7dce322c1833910f5ade32e08f76fb9.gif" alt=""></p><center><span class="reference">查看测试运行结果</span></center><p>当然，如果你觉得左侧的测试视图已经足够好用了，不希望在编辑器中再看到 “Run Test” 等字样，那你也可以通过 “editor.codelens” 将其关闭。</p><h2>（三）问题和前瞻</h2><p>虽然VS Code上的 Java 支持，无论是代码积淀还是团队阵容，都是非常强大的，但是还是有一些不尽如人意的地方：</p><ul>
+<li>首先，就是配置还是相对繁琐，在开发 Java 项目时，还是 IDE 那样开箱即用更省力一些。</li>
+<li>其次，支持还没有完整，比如还不支持 ant ，对 Android 支持也不够好。</li>
+<li>最后，也是我心目中比较重要的，性能相比较于其他重型的 IDE ，并没有太大的优势。</li>
+</ul><p>我以前在上海时，就隶属于微软 Visual Studio 中国团队。当我得知他们要和 Red Hat 合作一起进行 Java 的支持时，我是非常高兴的，因为团队实力非常强，也推出过非常多不错的产品，执行力不错。像 Java Test Runner、Java Debugger，都是他们最近的产品。基于此，我对于 Java 在VS Code里的前景，依然是比较看好的。而且 Red Hat 即将被 IBM 收购，相信对于 Java 的支持和跨公司团队之间的合作都有积极的影响。</p><h1>小结</h1><p>今天我介绍的两门语言，它们源自其他公司，但是微软官方都有专门的团队或者专人在进行开发维护。总体而言，它们都属于质量非常高的语言插件。尤其是 Go 插件，它甚至帮助VS Code成为了 Go 社区最流行的开发工具，这是很让人喜出望外的。如果你还在犹豫和观望的话，不知道今天的文章有没有打消你的顾虑？欢迎留言分享给我们，让我们一起共同学习和进步！</p><hr></hr><p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/66/29/8b471f9d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">半缘君</span>
+                            </div>
+                            <div class="bd">我的gocode安装成功了，一直提示要更新，然后代码提示全是PANIC，到底是什么原因，一点头绪都没有！ <br></div>
+                            <span class="time">2018-12-04 17:31</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/b3/40e8fa1d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风的叹息</span>
+                            </div>
+                            <div class="bd">在使用vscode看github上的golang repo时，如何设置方便跳转呢？<br>文章中提的插件都已经下载OK了。gopath也配置。<br>实际在看xx源码时对于import &quot;github.com&#47;xx&#47;yy&quot;的均不能正常跳转。这块是否只能将依赖module下载后（即在gopath下存在后）才能跳转？或者自己手工建立某种映射？软连接到源码？<br>一不说实际下载的版本是否一致（或许go module可解决），这种重复代码让人有点不舒服。向老师请教最佳实践 <br></div>
+                            <span class="time">2018-11-27 16:58</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/de/c2/037264da.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">蔡振东</span>
+                            </div>
+                            <div class="bd">竟然没有PHP嘛？ <br></div>
+                            <span class="time">2018-11-13 18:29</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/6a/12/7667053d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">ysyou</span>
+                            </div>
+                            <div class="bd">vscode 有没有办法向 sourcegraph 一样用 docker 的形式启动 language server 呢？公司项目很多，技术栈和使用的语言版本都不太一样，如果每个项目都有一个 docker 镜像来配置所用到的 language server，会让开发环境的管理干净和方便很多。 <br></div>
+                            <span class="time">2018-11-09 14:11</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

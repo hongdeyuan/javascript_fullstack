@@ -1,0 +1,1105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>38-CSS动画与交互：为什么动画要用贝塞尔曲线这么奇怪的东西？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>38-CSS动画与交互：为什么动画要用贝塞尔曲线这么奇怪的东西？</h1>
+<p>你好，我是winter，今天我们来学习一下CSS的动画和交互。</p><p>在CSS属性中，有这么一类属性，它负责的不是静态的展现，而是根据用户行为产生交互。这就是今天我们要讲的属性。</p><p>首先我们先从属性来讲起。CSS中跟动画相关的属性有两个：animation和transition。</p><h2>animation属性和transition属性</h2><p>我们先来看下animation的示例，通过示例来了解一下animation属性的基本用法:</p><pre><code class="language-CSS">@keyframes mykf
+{
+  from {background: red;}
+  to {background: yellow;}
+}
+
+div
+{
+    animation:mykf 5s infinite;
+}
+</code></pre><p>这里展示了animation的基本用法，实际上animation分成六个部分：</p><ul>
+<li>animation-name 动画的名称，这是一个keyframes类型的值（我们在第9讲“CSS语法：除了属性和选择器，你还需要知道这些带@的规则”讲到过，keyframes产生一种数据，用于定义动画关键帧）；</li>
+<li>animation-duration 动画的时长；</li>
+<li>animation-timing-function	动画的时间曲线；</li>
+<li>animation-delay	动画开始前的延迟；</li>
+<li>animation-iteration-count	动画的播放次数；</li>
+<li>animation-direction	动画的方向。</li>
+</ul><!-- [[[read_end]]] --><p>我们先来看 <code>animation-name</code>，这个是一个keyframes类型，需要配合@规则来使用。</p><p>比如，我们前面的示例中，就必须配合定义 mymove 这个 keyframes。keyframes的主体结构是一个名称和花括号中的定义，它按照百分比来规定数值，例如：</p><pre><code class="language-CSS">@keyframes mykf {
+  0% { top: 0; }
+  50% { top: 30px; }
+  75% { top: 10px; }
+  100% { top: 0; }
+}
+</code></pre><p>这里我们可以规定在开始时把top值设为0，在50%是设为30px，在75%时设为10px，到100%时重新设为0，这样，动画执行时就会按照我们指定的关键帧来变换数值。</p><p>这里，0%和100%可以写成from和to，不过一般不会混用，画风会变得很奇怪，比如：</p><pre><code class="language-CSS">@keyframes mykf {
+  from { top: 0; }
+  50% { top: 30px; }
+  75% { top: 10px; }
+  to { top: 0; }
+}
+</code></pre><p>这里关键帧之间，是使用 <code>animation-timing-function</code> 作为时间曲线的，稍后我会详细介绍时间曲线。</p><p>接下来我们来介绍一下transition。transition与animation相比来说，是简单得多的一个属性。</p><p>它有四个部分：</p><ul>
+<li>transition-property 要变换的属性；</li>
+<li>transition-duration 变换的时长；</li>
+<li>transition-timing-function 时间曲线；</li>
+<li>transition-delay 延迟。</li>
+</ul><p>这里的四个部分，可以重复多次，指定多个属性的变换规则。</p><p>实际上，有时候我们会把transition和animation组合，抛弃animation的timing-function，以编排不同段用不同的曲线。</p><pre><code class="language-CSS">@keyframes mykf {
+  from { top: 0; transition:top ease}
+  50% { top: 30px;transition:top ease-in }
+  75% { top: 10px;transition:top ease-out }
+  to { top: 0; transition:top linear}
+}
+</code></pre><p>在这个例子中，在keyframes中定义了transition属性，以达到各段曲线都不同的效果。</p><p>接下来，我们就来详细讲讲刚才提到的timing-function，动画的时间曲线。</p><h2>三次贝塞尔曲线</h2><p>我想，你能从很多CSS的资料中都找到了贝塞尔曲线，但是为什么CSS的时间曲线要选用（三次）贝塞尔曲线呢？</p><p>我们在这里首先要了解一下贝塞尔曲线，贝塞尔曲线是一种插值曲线，它描述了两个点之间差值来形成连续的曲线形状的规则。</p><p>一个量（可以是任何矢量或者标量）从一个值到变化到另一个值，如果我们希望它按照一定时间平滑地过渡，就必须要对它进行插值。</p><p>最基本的情况，我们认为这个变化是按照时间均匀进行的，这个时候，我们称其为线性插值。而实际上，线性插值不大能满足我们的需要，因此数学上出现了很多其它的插值算法，其中贝塞尔插值法是非常典型的一种。它根据一些变换中的控制点来决定值与时间的关系。</p><p>贝塞尔曲线是一种被工业生产验证了很多年的曲线，它最大的特点就是“平滑”。时间曲线平滑，意味着较少突兀的变化，这是一般动画设计所追求的。</p><p>贝塞尔曲线用于建筑设计和工业设计都有很多年历史了，它最初的应用是汽车工业用贝塞尔曲线来设计车型。</p><p>K次贝塞尔插值算法需要k+1个控制点，最简单的一次贝塞尔插值就是线性插值，将时间表示为0到1的区间，一次贝塞尔插值公式是：</p><p><img src="https://static001.geekbang.org/resource/image/d7/f8/d7e7c3bcc1e2b2ce72fde79956e872f8.png" alt=""></p><p>“二次贝塞尔插值”有3个控制点，相当于对P0和P1，P1和P2分别做贝塞尔插值，再对结果做一次贝塞尔插值计算</p><p><img src="https://static001.geekbang.org/resource/image/14/84/14d6a5396b7c0cc696c52a9e06e45184.png" alt=""></p><p>“三次贝塞尔插值”则是“两次‘二次贝塞尔插值’的结果，再做一次贝塞尔插值”：</p><p><img src="https://static001.geekbang.org/resource/image/65/b2/65ff1dd9b8e5911f9dd089531acea2b2.png" alt=""></p><p>贝塞尔曲线的定义中带有一个参数t，但是这个t并非真正的时间，实际上贝塞尔曲线的一个点(x, y)，这里的x轴才代表时间。</p><p>这就造成了一个问题，如果我们使用贝塞尔曲线的直接定义，是没办法直接根据时间来计算出数值的，因此，浏览器中一般都采用了数值算法，其中公认做有效的是牛顿积分，我们可以看下JavaScript版本的代码：</p><pre><code class="language-JavaScript">function generate(p1x, p1y, p2x, p2y) {
+    const ZERO_LIMIT = 1e-6;
+    // Calculate the polynomial coefficients,
+    // implicit first and last control points are (0,0) and (1,1).
+    const ax = 3 * p1x - 3 * p2x + 1;
+    const bx = 3 * p2x - 6 * p1x;
+    const cx = 3 * p1x;
+
+    const ay = 3 * p1y - 3 * p2y + 1;
+    const by = 3 * p2y - 6 * p1y;
+    const cy = 3 * p1y;
+
+    function sampleCurveDerivativeX(t) {
+        // `ax t^3 + bx t^2 + cx t' expanded using Horner 's rule.
+        return (3 * ax * t + 2 * bx) * t + cx;
+    }
+
+    function sampleCurveX(t) {
+        return ((ax * t + bx) * t + cx ) * t;
+    }
+
+    function sampleCurveY(t) {
+        return ((ay * t + by) * t + cy ) * t;
+    }
+
+    // Given an x value, find a parametric value it came from.
+    function solveCurveX(x) {
+        var t2 = x;
+        var derivative;
+        var x2;
+
+        // https://trac.webkit.org/browser/trunk/Source/WebCore/platform/animation
+        // First try a few iterations of Newton's method -- normally very fast.
+        // http://en.wikipedia.org/wiki/Newton's_method
+        for (let i = 0; i &lt; 8; i++) {
+            // f(t)-x=0
+            x2 = sampleCurveX(t2) - x;
+            if (Math.abs(x2) &lt; ZERO_LIMIT) {
+                return t2;
+            }
+            derivative = sampleCurveDerivativeX(t2);
+            // == 0, failure
+            /* istanbul ignore if */
+            if (Math.abs(derivative) &lt; ZERO_LIMIT) {
+                break;
+            }
+            t2 -= x2 / derivative;
+        }
+
+        // Fall back to the bisection method for reliability.
+        // bisection
+        // http://en.wikipedia.org/wiki/Bisection_method
+        var t1 = 1;
+        /* istanbul ignore next */
+        var t0 = 0;
+
+        /* istanbul ignore next */
+        t2 = x;
+        /* istanbul ignore next */
+        while (t1 &gt; t0) {
+            x2 = sampleCurveX(t2) - x;
+            if (Math.abs(x2) &lt; ZERO_LIMIT) {
+                return t2;
+            }
+            if (x2 &gt; 0) {
+                t1 = t2;
+            } else {
+                t0 = t2;
+            }
+            t2 = (t1 + t0) / 2;
+        }
+
+        // Failure
+        return t2;
+    }
+
+    function solve(x) {
+        return sampleCurveY(solveCurveX(x));
+    }
+
+    return solve;
+}
+
+</code></pre><p>这段代码其实完全翻译自WebKit的C++代码，牛顿积分的具体原理请参考相关数学著作，注释中也有相关的链接。</p><p>这个JavaScript版本的三次贝塞尔曲线可以用于实现跟CSS一模一样的动画。</p><h2>贝塞尔曲线拟合</h2><p>理论上，贝塞尔曲线可以通过分段的方式拟合任意曲线，但是有一些特殊的曲线，是可以用贝塞尔曲线完美拟合的，比如抛物线。</p><p>这里我做了一个示例，用于模拟抛物线：</p><pre><code class="language-JavaScript">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width"&gt;
+  &lt;title&gt;Simulation&lt;/title&gt;
+  &lt;style&gt;
+    .ball {
+      width:10px;
+      height:10px;
+      background-color:black;
+      border-radius:5px;
+      position:absolute;
+      left:0;
+      top:0;
+      transform:translateY(180px);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;label&gt;运动时间：&lt;input value="3.6" type="number" id="t" /&gt;s&lt;/label&gt;&lt;br/&gt;
+  &lt;label&gt;初速度：&lt;input value="-21" type="number" id="vy" /&gt; px/s&lt;/label&gt;&lt;br/&gt;
+  &lt;label&gt;水平速度：&lt;input value="21" type="number" id="vx" /&gt; px/s&lt;/label&gt;&lt;br/&gt;
+  &lt;label&gt;重力：&lt;input value="10" type="number" id="g" /&gt; px/s²&lt;/label&gt;&lt;br/&gt;
+  &lt;button onclick="createBall()"&gt;来一个球&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><pre><code class="language-JavaScript">function generateCubicBezier (v, g, t){
+    var a = v / g;
+    var b = t + v / g;
+
+    return [[(a / 3 + (a + b) / 3 - a) / (b - a), (a * a / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)],
+        [(b / 3 + (a + b) / 3 - a) / (b - a), (b * b / 3 + a * b * 2 / 3 - a * a) / (b * b - a * a)]];
+}
+
+function createBall() {
+  var ball = document.createElement("div");
+  var t = Number(document.getElementById("t").value);
+  var vx = Number(document.getElementById("vx").value);
+  var vy = Number(document.getElementById("vy").value);
+  var g = Number(document.getElementById("g").value);
+  ball.className = "ball";
+  document.body.appendChild(ball)
+  ball.style.transition = `left linear ${t}s, top cubic-bezier(${generateCubicBezier(vy, g, t)}) ${t}s`;
+  setTimeout(function(){ 
+    ball.style.left = `${vx * t}px`; 
+    ball.style.top = `${vy * t + 0.5 * g * t * t}px`; 
+  }, 100);
+  setTimeout(function(){ document.body.removeChild(ball); }, t * 1000);
+}
+
+</code></pre><p>这段代码中，我实现了抛物线运动的小球，其中核心代码就是 generateCubicBezier 函数。</p><p>这个公式完全来自于一篇论文，推理过程我也不清楚，但是不论如何，它确实能够用于模拟抛物线。</p><p>实际上，我们日常工作中，如果需要用贝塞尔曲线拟合任何曲线，都可以找到相应的论文，我们只要取它的结论即可。</p><h2>总结</h2><p>我们今天的课程，重点介绍了动画和它背后的一些机制。</p><p>CSS用transition和animation两个属性来实现动画，这两个属性的基本用法很简单，我们今天还介绍了它们背后的原理：贝塞尔曲线。</p><p>我们中介绍了贝塞尔曲线的实现原理和贝塞尔曲线的拟合技巧。</p><p>最后，留给你一个小问题，请纯粹用JavaScript来实现一个transition函数，用它来跟CSS的transition来做一下对比，看看有哪些区别。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-04-20 12:28:46
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            跟CSS的transition比，JS更加偏向指令式，而CSS更加偏向声明式，当然，这本身也是两门语言自身的特点，CSS用法简单直观，JS则在控制方面有更大的灵活性。<br><br>上面我只实现了 linear timing function（其他的函数实现网上大把大把的...），具体用法如下：<br>&lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&lt;head&gt;<br>  &lt;meta charset=&quot;UTF-8&quot;&gt;<br>  &lt;title&gt;Document&lt;&#47;title&gt;<br>  &lt;style&gt;<br>    #ball {<br>      width: 100px;<br>      height: 100px;<br>      background: blue;<br>    }<br>  &lt;&#47;style&gt;<br>&lt;&#47;head&gt;<br>&lt;body&gt;<br>  &lt;div id=&quot;ball&quot;&gt;&lt;&#47;div&gt;<br><br>  &lt;script src=&quot;transition.js&quot;&gt;&lt;&#47;script&gt;<br>  &lt;script&gt;<br>    transitionTo(document.getElementById(&#39;ball&#39;), [<br>      {name: &#39;transform&#39;, duration: 1000, value: &#39;translate(400px, 200px) rotate(40deg)&#39;},<br>      {name: &#39;backgroundColor&#39;, duration: 1000, value: &#39;red&#39;},<br>      {name: &#39;width&#39;, duration: 1000, value: &#39;200px&#39;},<br>      {name: &#39;height&#39;, duration: 1000, value: &#39;200px&#39;}<br>    ])<br>  &lt;&#47;script&gt;<br>&lt;&#47;body&gt;<br>&lt;&#47;html&gt; [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            许童童  2019-04-20 11:00:51
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            这个课后练习有点难啊。希望老师可以带着大家过一遍。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-04-20 12:24:06
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            const tweenFns = {<br>  linear: (from, to, t, d) =&gt; from + (to - from) * (t &#47; d)<br>}<br><br>&#47;**<br> * only support &quot;linear&quot; timing-function<br> * duration unit is &quot;ms&quot;<br> * @param {HTMLElement} el<br> * @param {({prop: String, value: String, duration: Number})[]} list<br> *&#47;<br>function transitionTo(el, list) {<br>  let startTime<br>  let oldStyle = new Map()<br>  let newStyle = new Map()<br>  for (let prop of list) {<br>    oldStyle.set(prop.name, window.getComputedStyle(el)[prop.name])<br>  }<br>  for (let prop of list) {<br>    el.style[prop.name] = prop.value<br>  }<br>  for (let prop of list) {<br>    newStyle.set(prop.name, window.getComputedStyle(el)[prop.name])<br>  }<br>  for (let prop of list) {<br>    el.style[prop.name] = oldStyle.get(prop.name)<br>  }<br><br><br>  requestAnimationFrame(run)<br><br>  function run(time) {<br>    if (startTime == null) startTime = time<br>    let t = time - startTime<br>    let done = true<br>    for (let prop of list) {<br>      if (t &gt;= prop.duration) {<br>        el.style[prop.name] = newStyle.get(prop.name)<br>        continue<br>      }<br>      done = false<br>      let oldPropValue = oldStyle.get(prop.name)<br>      let newPropValue = newStyle.get(prop.name)<br>      if (prop.name === &#39;transform&#39;) {<br>        if (oldPropValue === &#39;none&#39;) oldPropValue = &#39;matrix(1, 0, 0, 1, 0, 0)&#39;<br>        if (newPropValue === &#39;none&#39;) newPropValue = &#39;matrix(1, 0, 0, 1, 0, 0)&#39;<br>      }<br>      el.style[prop.name] = generateNewStyle(oldPropValue, newPropValue, t, prop.duration, tweenFns.linear)<br>    }<br>    if (!done) requestAnimationFrame(run)<br>  }<br>}<br><br>function generateNewStyle(from, to, t, duration, tweenFn) {<br>  let fromExp = &#47;[\d.-]+&#47;g<br>  let toExp = &#47;[\d.-]+&#47;g<br>  let fromMatch<br>  let toMatch<br>  let result = &#39;&#39;<br>  let lastIndex = 0<br>  while (fromMatch = fromExp.exec(from)) {<br>    result += from.slice(lastIndex, fromMatch.index)<br>    toMatch = toExp.exec(to)<br>    result += tweenFn(+fromMatch[0], +toMatch[0], t, duration)<br>    lastIndex = fromExp.lastIndex<br>  }<br>  result += from.slice(lastIndex)<br>  return result<br>} 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

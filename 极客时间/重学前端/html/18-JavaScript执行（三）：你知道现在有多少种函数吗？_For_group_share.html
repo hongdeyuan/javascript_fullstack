@@ -1,0 +1,1283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>18-JavaScript执行（三）：你知道现在有多少种函数吗？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>18-JavaScript执行（三）：你知道现在有多少种函数吗？</h1>
+<p>在前一篇文章中，我们大致了解了执行上下文是什么，也知道了任何语句的执行都会依赖特定的上下文。</p><p>一旦上下文被切换，整个语句的效果可能都会发生改变。那么，切换上下文的时机就显得非常重要了。</p><p>在JavaScript，切换上下文最主要的场景是函数调用。在这一课，我们就来讲讲函数调用切换上下文的事情。我们在讲函数调用之前，首先来认识一下函数家族。</p><h2>函数</h2><p>在ES2018中，函数已经是一个很复杂的体系了，我在这里整理了一下。</p><p><strong>第一种，普通函数：用function关键字定义的函数。</strong></p><p>示例：</p><pre><code>function foo(){
+    // code
+}
+</code></pre><p><strong>第二种，箭头函数：用 =&gt; 运算符定义的函数。</strong><br>
+示例:</p><pre><code>const foo = () =&gt; {
+    // code
+}
+</code></pre><p><strong>第三种，方法：在class中定义的函数。</strong></p><p>示例：</p><pre><code>class C {
+    foo(){
+        //code
+    }
+}
+</code></pre><p><strong>第四种，生成器函数：用function * 定义的函数。</strong></p><p>示例：</p><pre><code>function foo*(){
+    // code
+}
+</code></pre><p><strong>第五种，类：用class定义的类，实际上也是函数。</strong></p><p>示例：</p><pre><code>class Foo {
+    constructor(){
+        //code
+    }
+}
+</code></pre><p><strong>第六/七/八种，异步函数：普通函数、箭头函数和生成器函数加上async关键字。</strong></p><p>示例：</p><pre><code>async function foo(){
+    // code
+}
+const foo = async () =&gt; {
+    // code
+}
+async function foo*(){
+    // code
+}
+</code></pre><p>ES6以来，大量加入的新语法极大地方便了我们编程的同时，也增加了很多我们理解的心智负担。要想认识这些函数的执行上下文切换，我们必须要对它们行为上的区别有所了解。</p><!-- [[[read_end]]] --><p>对普通变量而言，这些函数并没有本质区别，都是遵循了“继承定义时环境”的规则，它们的一个行为差异在于this关键字。</p><p>那么，this关键字是什么呢，我们一起来看一看。</p><h2>this关键字的行为</h2><p>this是JavaScript中的一个关键字，它的使用方法类似于一个变量（但是this跟变量的行为有很多不同，上一节课我们讲了一些普通变量的行为和机制，也就是var声明和赋值、let的内容）。</p><p><strong>this是执行上下文中很重要的一个组成部分。同一个函数调用方式不同，得到的this值也不同</strong>，我们看一个例子：</p><pre><code>function showThis(){
+    console.log(this);
+}
+
+var o = {
+    showThis: showThis
+}
+
+showThis(); // global
+o.showThis(); // o
+</code></pre><p>在这个例子中，我们定义了函数showThis，我们把它赋值给一个对象o的属性，然后尝试分别使用两个引用来调用同一个函数，结果得到了不同的this值。</p><p>普通函数的this值由“调用它所使用的引用”决定，其中奥秘就在于：我们获取函数的表达式，它实际上返回的并非函数本身，而是一个Reference类型（记得我们在类型一章讲过七种标准类型吗，正是其中之一）。</p><p>Reference类型由两部分组成：一个对象和一个属性值。不难理解 o.showThis 产生的Reference类型，即由对象o和属性“showThis”构成。</p><p>当做一些算术运算（或者其他运算时），Reference类型会被解引用，即获取真正的值（被引用的内容）来参与运算，而类似函数调用、delete等操作，都需要用到Reference类型中的对象。</p><p>在这个例子中，Reference类型中的对象被当作this值，传入了执行函数时的上下文当中。</p><p>至此，我们对this的解释已经非常清晰了：<strong>调用函数时使用的引用，决定了函数执行时刻的this值。</strong></p><p>实际上从运行时的角度来看，this跟面向对象毫无关联，它是与函数调用时使用的表达式相关。</p><p>这个设计来自JavaScript早年，通过这样的方式，巧妙地模仿了Java的语法，但是仍然保持了纯粹的“无类”运行时设施。</p><p>如果，我们把这个例子稍作修改，换成箭头函数，结果就不一样了：</p><pre><code>const showThis = () =&gt; {
+    console.log(this);
+}
+
+var o = {
+    showThis: showThis
+}
+
+showThis(); // global
+o.showThis(); // global
+</code></pre><p><strong>我们看到，改为箭头函数后，不论用什么引用来调用它，都不影响它的this值。</strong></p><p>接下来我们看看“方法”，它的行为又不一样了：</p><pre><code>class C {
+    showThis() {
+        console.log(this);
+    }
+}
+var o = new C();
+var showThis = o.showThis;
+
+showThis(); // undefined
+o.showThis(); // o
+</code></pre><p>这里我们创建了一个类C，并且实例化出对象o，再把o的方法赋值给了变量showThis。</p><p>这时候，我们使用showThis这个引用去调用方法时，得到了undefined。</p><p>所以，在方法中，我们看到this的行为也不太一样，它得到了undefined的结果。</p><p>按照我们上面的方法，不难验证出：生成器函数、异步生成器函数和异步普通函数跟普通函数行为是一致的，异步箭头函数与箭头函数行为是一致的。</p><h2>this关键字的机制</h2><p>说完了this行为，我们再来简单谈谈在JavaScript内部，实现this这些行为的机制，让你对这部分知识有一个大概的认知。</p><p>函数能够引用定义时的变量，如上文分析，函数也能记住定义时的this，因此，函数内部必定有一个机制来保存这些信息。</p><p>在JavaScript标准中，为函数规定了用来保存定义时上下文的私有属性[[Environment]]。</p><p>当一个函数执行时，会创建一条新的执行环境记录，记录的外层词法环境（outer lexical environment）会被设置成函数的[[Environment]]。</p><p>这个动作就是<strong>切换上下文</strong>了，我们假设有这样的代码：</p><pre><code>var a = 1;
+foo();
+
+在别处定义了foo：
+
+var b = 2;
+function foo(){
+    console.log(b); // 2
+    console.log(a); // error
+}
+</code></pre><p>这里的foo能够访问b（定义时词法环境），却不能访问a（执行时的词法环境），这就是执行上下文的切换机制了。</p><p>JavaScript用一个栈来管理执行上下文，这个栈中的每一项又包含一个链表。如下图所示：</p><p><img src="https://static001.geekbang.org/resource/image/e8/31/e8d8e96c983a832eb646d6c17ff3df31.jpg" alt=""></p><p>当函数调用时，会入栈一个新的执行上下文，函数调用结束时，执行上下文被出栈。</p><p>而this则是一个更为复杂的机制，JavaScript标准定义了 [[thisMode]] 私有属性。</p><p>[[thisMode]] 私有属性有三个取值。</p><ul>
+<li>lexical：表示从上下文中找this，这对应了箭头函数。</li>
+<li>global：表示当this为undefined时，取全局对象，对应了普通函数。</li>
+<li>strict：当严格模式时使用，this严格按照调用时传入的值，可能为null或者undefined。</li>
+</ul><p>非常有意思的是，方法的行为跟普通函数有差异，恰恰是因为class设计成了默认按strict模式执行。</p><p>我们可以用strict达成与上一节中方法的例子一样的效果:</p><pre><code>&quot;use strict&quot;
+function showThis(){
+    console.log(this);
+}
+
+var o = {
+    showThis: showThis
+}
+
+showThis(); // undefined
+o.showThis(); // o
+</code></pre><p>函数创建新的执行上下文中的词法环境记录时，会根据[[thisMode]]来标记新纪录的[[ThisBindingStatus]]私有属性。</p><p>代码执行遇到this时，会逐层检查当前词法环境记录中的[[ThisBindingStatus]]，当找到有this的环境记录时获取this的值。</p><p>这样的规则的实际效果是，嵌套的箭头函数中的代码都指向外层this，例如：</p><pre><code>var o = {}
+o.foo = function foo(){
+    console.log(this);
+    return () =&gt; {
+        console.log(this);
+        return () =&gt; console.log(this);
+    }
+}
+
+o.foo()()(); // o, o, o
+</code></pre><p>这个例子中，我们定义了三层嵌套的函数，最外层为普通函数，两层都是箭头函数。</p><p>这里调用三个函数，获得的this值是一致的，都是对象o。</p><p>JavaScript还提供了一系列函数的内置方法来操纵this值，下面我们来了解一下。</p><h2>操作this的内置函数</h2><p>Function.prototype.call 和 Function.prototype.apply 可以指定函数调用时传入的this值，示例如下：</p><pre><code>function foo(a, b, c){
+    console.log(this);
+    console.log(a, b, c);
+}
+foo.call({}, 1, 2, 3);
+foo.apply({}, [1, 2, 3]);
+</code></pre><p>这里call和apply作用是一样的，只是传参方式有区别。</p><p>此外，还有 Function.prototype.bind 它可以生成一个绑定过的函数，这个函数的this值固定了参数：</p><pre><code>function foo(a, b, c){
+    console.log(this);
+    console.log(a, b, c);
+}
+foo.bind({}, 1, 2, 3)();
+</code></pre><p>有趣的是，call、bind和apply用于不接受this的函数类型如箭头、class都不会报错。</p><p>这时候，它们无法实现改变this的能力，但是可以实现传参。</p><h2>总结</h2><p>在这一节课程中，我们认识了ES2018中规定的各种函数，我一共简单介绍了8种函数。</p><p>我们围绕this这个中心，介绍了函数的执行上下文切换机制。同时我们还讲解了this中的一些相关知识。包括了操作this的内置函数。</p><p>最后，留给你一个问题，你在日常开发中用过哪些函数类型呢？欢迎给我留言，我们一起讨论。</p><hr></hr><h2>补充阅读：new与this</h2><p>我们在之前的对象部分已经讲过new的执行过程，我们再来看一下：</p><ul>
+<li>以构造器的 prototype 属性（注意与私有字段[[prototype]]的区分）为原型，创建新对象；</li>
+<li>将 this 和调用参数传给构造器，执行；</li>
+<li>如果构造器返回的是对象，则返回，否则返回第一步创建的对象。</li>
+</ul><p>显然，通过new调用函数，跟直接调用的this取值有明显区别。那么我们今天讲的这些函数跟new搭配又会产生什么效果呢？</p><p>这里我整理了一张表：</p><p><img src="https://static001.geekbang.org/resource/image/6a/da/6a9f0525b713a903c6c94f52afaea3da.png" alt=""></p><p>我们可以看到，仅普通函数和类能够跟new搭配使用，这倒是给我们省去了不少麻烦。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            韩航  2019-02-28 14:28:03
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            var a = 1;<br>foo();<br><br>在别处定义了 foo：<br><br>var b = 2;<br>function foo(){<br>    console.log(b); &#47;&#47; 2<br>    console.log(a); &#47;&#47; error<br>}<br>为什么我执行出来是undefined ，1 [43赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            郭鹏飞277  2019-02-28 09:37:25
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师，这个例子中的最后一行代码o.showThis(); &#47;&#47; global<br>好像写错了，应该是C的实例o吧。<br><br>class C {<br>    showThis() {<br>        console.log(this);<br>    }<br>}<br>var o = new C();<br>var showThis = o.showThis;<br><br>showThis(); &#47;&#47; undefined<br>o.showThis(); &#47;&#47; global<br> [22赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-03-01 14:58:49</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">哦哦 对的对的 我改一下</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            钟凯  2019-02-28 10:47:21
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            关于this，Kyle Simpson有四条总结：<br>1. 由new调用? 绑定到新创建的对象。<br>2. 由call或者apply(或者bind)调用? 绑定到指定的对象。<br>3. 由上下文对象调用? 绑定到那个上下文对象。<br>4. 默认:在严格模式下绑定到undefined，否则绑定到全局对象。<br>例外：箭头函数不适用以上四条规则，它会继承外层函数调用的 this 绑定(无论 this 绑定到什么)。 [17赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Rushan-Chen  2019-03-02 16:21:34
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师写的 &quot;在别处定义了foo&quot; 的意思是，这句话上下两部分的代码，不在同一个文件哒~<br>已经有同学贴了代码，是这样的：<br>```js<br>&#47;&#47; 这是 foo.js 文件里的代码<br>var b = 2;<br>module.exports = function() { &#47;&#47; 导出function<br>  console.log(b);<br>  console.log(a);<br>};<br>```<br>```js<br>&#47;&#47; 这是test.js 文件里的代码<br>var foo = require(&quot;.&#47;foo.js&quot;); &#47;&#47; 引入function 为foo<br>var a = 1;<br>foo();<br>&#47;&#47; node 执行 test.js 输出：<br>&#47;&#47; -&gt; 2<br>&#47;&#47; -&gt; ReferenceError: a is not defined<br>``` [12赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Thomas Cho  2019-02-28 10:42:36
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我发现啊，不能只看文中代码结果，还是得自己跑一下，我看了文章后很是疑惑，跑了一下[[Environment]]下方那段代码后，打印出来的是 undefined和1。而不是2和error，不知为何 [7赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Geek_376ed4  2019-03-01 16:23:22
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            &#47;&#47; foo.js<br>var b=2;<br>module.exports = function() {<br> console.log(b);&#47;&#47;2<br> console.log(a);&#47;&#47;error<br><br>};<br><br>var foo = require(&quot;.&#47;foo.js&quot;);<br><br>var a=1;<br><br>foo();<br><br> [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            zhangbao  2019-02-28 09:28:54
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师，您好，看完文章后，我有几个问题：<br><br>1.  代码段<br><br>```<br>class C {<br>    showThis() {<br>        console.log(this);<br>    }<br>}<br>var o = new C();<br><br>o.showThis(); &#47;&#47; 这里打印的 this 应该是 o 吗？<br>```<br><br>2. 介绍函数时提到了“方法”，定义是“在 class 中定义的函数”。但是举代码例子时，举了对象方法的例子。方法定义成“作为属性值的函数”，是不是更贴切一点呢？<br><br>3. 执行代码段<br><br>```<br>var a = 1;<br>foo();<br><br>&#47;&#47; 在别处定义了 foo：<br><br>var b = 2;<br>function foo(){<br>    console.log(b); &#47;&#47; 2<br>    console.log(a); &#47;&#47; error<br>}<br>```<br><br>后，控制台，打印出的 b 是 undefined，a 是 1。跟老师描述的不一样，是我理解错了吗？<br><br>麻烦老师您解答一下，谢谢啦！ [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-03-16 15:42:04
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            这里先说声抱歉，之前可能误导了大家...<br>这里更新一下答案😅<br>@Rushan-Chen（虽然你并不能收到，希望极客时间赶紧增加@或者评论的功能，至少也展示个邮箱啊...不然找人都找不到，影响大家交流）<br>--------------分割线-------------------<br>文中，winter老师所说的“在别处定义”的意思，应该就是指在另一个模块中定义，即：<br><br>在另一个模块中定义...这样引入这个模块时，b就定义且初始化了，而且在这个模块中访问不到变量a...<br>&#47;&#47; module a.js<br>import {foo} from &#39;b.js&#39;<br>var a = 1<br>foo()<br><br>&#47;&#47; module b.js<br>var b = 2;<br>export function foo () {<br>  console.log(b); &#47;&#47; 2<br>  console.log(a); &#47;&#47; error<br>}<br><br>其实，只要foo访问不到变量a就可以了嘛:<br>var b = 2;<br>function foo () {<br>  console.log(b); &#47;&#47; 2<br>  console.log(a); &#47;&#47; error<br>}<br><br>void function () {<br>	var a = 1<br>	foo()<br>}() [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            itgou  2019-03-09 11:47:31
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            var a = 1;<br>foo();<br><br>在别处定义了 foo：<br><br>var b = 2;<br>function foo(){<br>    console.log(b); &#47;&#47; 2<br>    console.log(a); &#47;&#47; error<br>}<br>这段代码我在chrome上执行出来是undefined,1.<br>我是写在一个js文件中，然后通过HTML的script引入，不知道老师说的在别处定义是什么意思，是写在两个js文件吗？<br><br>如果是两个文件，HTML中引入文件的顺序不同，会有不同的结果，一种报错，一种两个值都正常打印，我都试了的，总之怎么也不会有老师说的那种结果。<br><br>请老师看看是不是我哪里理解错了，还是老师写错了 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Tony  2019-03-04 21:36:56
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            晕得一塌糊涂... 结合上一章的 let var 来看, js 这门语言居然还能火成这样, 世界实在是太奇妙了😥 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            乃乎  2019-03-04 10:45:04
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            `[[thisMode]]` 这个讲的很棒 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Rushan-Chen  2019-03-02 16:47:30
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            @阿成 我试了下你说的第二种方法，但是在全局里，只要在foo调用之前定义了a，a就可以被访问到：<br>```js<br>var foo = (function() {<br>  let b = 2;<br>  return function() {<br>    console.log(b);<br>    console.log(a);<br>  };<br>})();<br><br>let a = 1;<br>foo();<br>&#47;&#47; 2<br>&#47;&#47; 1<br>```<br>想问你说的第2种方法，你是怎么实现的？（虽然你可能不会看到😂）<br> [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            拼命十一郎  2019-02-28 15:00:41
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            var a = 1;<br>foo();<br><br>在别处定义了 foo：<br><br>var b = 2;<br>function foo(){<br>    console.log(b); &#47;&#47; 2<br>    console.log(a); &#47;&#47; error<br>}<br><br><br>js里，调用函数的时候，如果上面没有找到函数定义，会向下搜索用function开头定义的函数，但是其他的代码是不会识别的，所以我觉得执行函数foo()时，向下找到了foo()函数的定义，执行内部内容，这时已知的只有a＝1，b的值还没有定义，所以console.log(b) undefined，console.log(a)＝1。还是说这里的在别处定义有什么条件么？ [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Scorpio  2019-02-28 08:13:35
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            自从用了箭头后，都很少使用call apply bind了。。。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Carson  2019-02-28 04:05:29
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            之前对“切换上下文”的具体步骤没有了解，进而不了解 this 的机制。豁然开朗。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            简单  2019-04-16 21:55:02
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            “不难验证出：生成器函数、异步生成器函数和异步普通函数跟普通函...”这里完全没听懂！！！ 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            谷鱼  2019-04-11 09:35:06
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            用过方法，类，普通函数，一直觉得模块是一个很好的编程模式，但是原生的window 浏览器环境写起来比较费劲 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Mr.杨  2019-04-04 16:53:56
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            默认this  就是普通方法的this<br>隐式this 变量接收方法后的this 会发生隐式指向错误<br>显式this 对象.方法的this<br>固定this call apply bind 的this<br>分为四种 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            bingo  2019-03-25 07:10:13
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            outer lexical environment 应该指向environment?老师是不是多写了lexical 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            存  2019-03-18 22:26:20
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            var a = 1;<br>foo();<br><br>在别处定义了 foo：<br><br>var b = 2;<br>function foo(){<br>    console.log(b); &#47;&#47; 2<br>    console.log(a); &#47;&#47; error<br>}<br>为什么我执行出来是2，1 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

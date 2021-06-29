@@ -1,0 +1,159 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                18讲总结课：数据结构、编程语句和基础算法体现了哪些数学思想
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/f4/c4/f49f2a8a6588f5ba4684d40f53a5e7c4.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>之前的17讲，我们从小处着眼，介绍了离散数学中最常用的一些知识点。我讲到了很多<strong>数据结构</strong>、<strong>编程语句</strong>和<strong>基础性算法</strong>。这些知识点看似是孤立的，但是内部其实有很多联系。今天这一节，我们就来总结一下前面讲过的内容，把之前讲过的内容串联起来。</p><h2>数据结构</h2><p>首先，我们来看一些基本的数据结构，<strong>你可别小看这些数据结构，它们其实就是一个个解决问题的“模型”</strong><strong>。</strong>有了这些模型，你就能把一个个具体的问题抽象化，然后再来解决。</p><p>我们从最简单的数据结构数组开始说。自从你开始接触计算机编程，<strong>数组</strong>一定是你经常使用的数据结构。它的特点你应该很清楚。数组可以通过下标，直接定位到所需的数据，因此数组特别适合快速地随机访问。它常常和循环语句相结合，来实现迭代法，例如二分查找、斐波那契数列等等。</p><p>另外，我们将要在“线性代数篇”介绍的矩阵，也可以使用多维数组来表示。不过，数组只对稠密的数列更有效。如果数列非常稀疏，那么很多数组的元素就是无效值，浪费了存储空间。此外，数组中元素的插入和删除也比较麻烦，需要进行数据的批量移动。</p><p>那么对于稀疏的数列而言，什么样的数据结构更有效呢？答案是<strong>链表</strong>。链表中的结点存储了数据，而链表结点之间的相连关系，在C和C++语言中是通过指针来实现的，而在Java语言中是通过对象引用来实现的。</p><!-- [[[read_end]]] --><p>链表的特点是不能通过下标来直接访问数据，而是必须按照存储的结构逐个读取。这样做的优势在于，不必事先规定数据的数量，也不再需要保存无效的值，表示稀疏的数列时可以更有效的利用存储空间，同时也利于数据的动态插入和删除。但是，相对于数组而言，链表无法支持快速地随机访问，进行读写操作时就更耗时。</p><p>和数组一样，链表也可以是多维的。对于非常稀疏的矩阵，也可以用多维链表的结构来表达。此外，在链表结构中，点和点之间的连接，分别体现了图论中的顶点和边。因此，我们还可以使用指针、对象引用等来表示图结构中的顶点和边。常见的图模型，例如多叉树、无向图和有向图等，都可以用指针或引用来实现。</p><p>在数组和链表这些基础的数据结构之上，我们可以构建更复杂的数据结构，比如哈希表、队列和栈等等。这些数据结构，提供了逻辑更复杂的模型，可以通过数组、链表或两者的结合来实现。</p><p><a href="https://time.geekbang.org/column/article/72163">第2讲</a>我提到了哈希的概念，而哈希表就可以通过数组和链表来构造。在很多编程语言中，哈希表的实现采用的是<strong>链地址哈希表</strong>。这种方法的主要思想是，先分配一个很大的数组空间，而数组中的每一个元素都是一个链表的头部。随后，我们就可以根据哈希函数算出的哈希值（也叫哈希的key），找到数组的某个元素及对应的链表，然后把数据添加到这个链表中。</p><p>之所以要这样设计，是因为存在<strong>哈希冲突</strong>。对于不同的数据，哈希函数可能产生相同的哈希值，这就是哈希冲突。如果数组的每个元素都只能存放一个数据，那就无法解决冲突。如果每个元素对应了一个链表，那么当发生冲突的时候，我们就可以把多个数据添加到同一个链表中。可是，把多个数据存放在一个链表，就代表访问效率不高。所以，我们要尽量找到一个合理的哈希函数，减少冲突发生的机会，提升检索的效率。</p><p>在第2讲中，我还提到了使用求余相关的操作来实现哈希函数。我这里举个例子。你可以看我画的这幅图。</p><p><img src="https://static001.geekbang.org/resource/image/83/c2/834ad2a0c5aefd05e0c57aa6d0528fc2.jpg" alt=""></p><p>我们把对100求余作为哈希函数。因此数组的长度是100。对于每一个数字，通过它对100求余，确定它在数组中的位置。如果多个数字的求余结果一样，就产生冲突，使用链表来解决。我们可以看到，表中位置98的链表没有冲突，而0、1、2、3和99位置的链表都有冲突。</p><p>说完了哈希，我们来看看栈这种数据结构。我在介绍树的深度优先搜索时讲到栈。它是先进后出的。在我们进行函数递归的时候，函数调用和返回的顺序，也是先进后出，所以，栈体现了递归的思想，可以实现基于递归的编程。实际上，计算机系统里的函数递归，在内部也是通过栈来实现的。虽然直接通过栈来实现递归不如函数递归调用那么直观，但是，由于栈可以避免过多的中间变量，它可以节省内存空间的使用。</p><p>我在介绍广度优先搜索策略时，谈到了队列。队列和栈最大的不同在于，它是一种先进先出的数据结构，先进入队列的元素会优先得到处理。队列模拟了日常生活中人们排队的现象，其思想已经延伸到很多大型的数据系统中，例如消息队列。</p><p>在消息系统中，生产者会源源不断地推送新的数据，而消费者会对这些消息进行处理。可是，有时消费者的处理速度会慢于生产者推送的速度，这会带来很多复杂的后续问题，因此我们可以通过队列实现消息的缓冲。新产生的数据会先进入队列，直到消费者处理它。经过这样的异步处理，消息的队列实现了生产者和消费者的松耦合，对消费者起到了保护作用，使它不容易被数据洪流冲垮。</p><p>比哈希表，队列和栈更为复杂的数据结构是基于图论中的各种模型，例如各种二叉树、多叉树、有向图和无向图等等。通常，这些模型表示了顶点和顶点之间的稀疏关系，所以它们常常是基于指针或者对象引用来实现的。我在讲前缀树、社交关系图和交通地图的案例中，都使用了这些模型。另外，树模型中的多叉树、特别是二叉树体现了递归的思想。之前的递归编程的案例中的图示也可以对应到多叉树的表示。</p><h2>编程语句</h2><p>在你刚刚开始学习编程的时候，肯定接触过条件语句、循环语句和函数调用这些基本的语句。</p><p>条件语句的一个关键元素是布尔表达式。它其实体现了逻辑代数中逻辑和集合的概念。逻辑代数，也被称为布尔代数，主要包括了逻辑表达式及其相关的逻辑运算，可以帮助我们消除自然语言所带来的歧义，并严格、准确地描述事物。在编程语言中，我们把逻辑表达式和控制语言结合起来，比如Java语言的If语句：</p><pre><code>if(表达式) {函数体1} else {函数体2}：若表达式为真，执行函数体1，否则执行函数体2。
+</code></pre><p>当然，逻辑代数在计算机中的应用，远不止条件语句。例如SQL语言中的Select语句和布尔检索模型。Select是SQL查询语言中十分常用的语句。这个语句将根据指定的逻辑表达式，在一个数据库中进行查询并返回结果，而返回的结果就是满足条件的记录之集合。类似地，布尔检索模型利用逻辑表达式，确定哪些文档满足检索的条件并把它们作为结果返回。</p><p>这里顺便提一下，除了条件语句中的布尔表达式，逻辑代数还体现在编程中的其他地方。例如，SQL语言中的Join操作。Join有多种类型，每种类型其实都对应了一种集合的操作。</p><ul>
+<li>
+<p>内连接（inner join）：假设被连接的两张数据表分别是左表和右表，那么内连接查询能将左表和右表中能关联起来的数据连接后返回，返回的结果就是两个表中所有相匹配的数据。如果认为左表是集合A，右表是集合B，那么从集合的角度来说，内连接产生的结果是A、B两个集合的交集。</p>
+</li>
+<li>
+<p>外连接（outer join）：外连接可以保留左表，右表或全部表。根据这些行为的不同，可分为左外连接、右外连接和全连接。无论哪一种，都是对应于不同的集合操作。</p>
+</li>
+</ul><p>循环语句可以让我们进行有规律性的重复性操作，直到满足某个条件。这和迭代法中反复修改某个值的操作非常一致。所以循环常用于迭代法的实现，例如二分或者牛顿法求解方程的根。在之前的迭代法讲解中，我经常使用循环来实现编码。另外，循环语句也会经常和布尔表达式相结合。嵌套的多层循环，常常用于比较多个元素的大小，或者计算多个元素之间的相似度等等，这也体现了排列组合的思想。</p><p>至于函数的调用，一个函数既可以调用自己，也可以调用其他不同的函数。如果不断地调用自己，这就体现了递归的思想。同时，函数的递归调用也可以体现排列组合的思想。</p><h2>基础算法</h2><p>在前面的专栏中，我介绍了一些常见算法及其对应的数学思想。而这些思想，在算法中的体现无处不在。</p><p>介绍分治思想的时候，我谈及了MapReduce的数据切分。在分布式系统中，除了数据切分，我们还要经常处理的问题是：如何确定服务请求被分配到哪台机器上？这就引出了负载均衡算法。</p><p>常见的包括轮询或者源地址哈希算法。轮询算法把请求按顺序轮流地分配到后端服务器上，它并不关心每台服务器当前的负载。如果我们对每个请求标上一个自动增加的ID，我们可以认为轮询算法是对请求的ID进行求余操作（或者是求余的哈希函数），被除数就是可用服务器的数量，余数就是接受请求的服务器ID。而源地址哈希进一步扩展了这个思想，扩展主要体现在：</p><ul>
+<li>
+<p>它可以对请求的IP或其他唯一标识进行哈希，而不一定是请求的ID；</p>
+</li>
+<li>
+<p>哈希函数的变换操作不一定是求余。</p>
+</li>
+</ul><p>不管是对何种数据进行哈希变换，也不管是何种哈希函数，只要能为每个请求确定哈希key之后，我们就能为它查找对应的服务器。</p><p>另外，在<a href="https://time.geekbang.org/column/article/75807">第9节</a>中，我谈到了字符串的编辑距离，但是没有涉及字符串匹配的算法。知名的RK（Rabin-Karp）匹配算法，在暴力匹配（Brute Force）基础之上，充分利用了迭代法和哈希，提升了算法的效率。</p><p>首先，RK算法可以根据两个字符串哈希后的值。来判断它们是不是相同。如果哈希值不同，则两个字符串肯定不同，不用再比较；此外，RK算法中的哈希设计非常巧妙，让相邻两个子字符串的哈希值产生了固定的联系，让我们可以通过前一个子串的哈希值，推导出后一个子串的哈希值，这样就能使用迭代法来计算每个子串的哈希值，大大减少了用于哈希函数的计算。</p><p>除了分治和动态规划，另一个常用的算法思想是回溯。我们可以使用回溯来解决的问题包括八皇后和0/1背包等等。回溯实际上体现了递归和排列的思想。不过，它对搜索空间做了一些优化，提前排除了不可能的情况，提升了算法整体的效率。当然，既然回溯体现了递归的思想，也可以把整个搜索状态表示成树，而对结果的搜索就是树的深度优先遍历。</p><p>在前两节讲述算法复杂度分析的时候，我已经从数学的角度出发，总结了几个常用的法则，包括四则运算、主次分明、齐头并进、排列组合、一图千言和时空互换。这些法则体现了数学中的运算优先级、数量级、多元变量、图论等思想。这些我们上两节刚刚讲过，我就不多说了，你可以参考之前的内容快速复习一下。</p><h2>小结</h2><p>这一讲，我对常用的数据结构、编程语句和算法中所体现的数学思想，做了一个大体的梳理。可以看到，<strong>不同的数据结构，都是在编程中运用数学思维的产物。每种数据结构都有自身的特点，有利于我们更方便地实现某种特定的数学模型。</strong></p><p>从数据结构的角度来看，最基本的数组遍历体现了迭代的思想，而链表和树的结构可用于刻画图论中的模型。栈的先进后出、以及队列的先进先出，分别适用于图的深度优先和广度优先遍历。哈希表则充分利用了哈希函数的特点，大幅降低了查询的时间复杂度。</p><p>当然，仅仅使用数据结构来存储数据还不够，我们还需要操作这些数据。为了实现操作的流程，条件语句使用了布尔代数来控制编程逻辑，循环和函数嵌套使用迭代、递归和排列组合等思想来实现更精细的数学模型。</p><p>但是，有时候我们面对的问题太复杂了，除了数据结构和基本的编程语句，我们还需要发明一些算法。为了提升算法的效率，我们需要对其进行复杂度分析。通常，这些算法中的数学思想就更为明显，因为它们都是为了解决特定的问题，根据特定的数学模型而设计的。</p><p>有的时候，某个算法会体现多种数学思想，例如RK字符串匹配算法，同时使用了迭代法和哈希。此外，多种数学思维可能都是相通的。比如，递归的思想、排列的结果、二进制数的枚举都可以用树的结构来图示化，因此我们可以通过树来理解。</p><p>所以，在平时学习编程的时候，你可以多从数学的角度出发，思考其背后的数学模型。这样不仅有利于你对现有知识的融会贯通，还可以帮助你优化数据结构和算法。</p><h2>思考题</h2><p>在你日常的工作项目中，应该经常用到数据结构和算法，能不能列举一下，其中有哪些数学思想呢？</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/41/27/3ff1a1d6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">hua168</span>
+                            </div>
+                            <div class="bd">老师，问3个很重要的题外问题：<br>1. 大专学历，想直接自学考本科或研究生，自考学历中大型公司承认的吗？<br>2. 大公司对年龄有限制的吗？<br>3. 30多岁，运维，只有小公司工作经验，技术一般，发展方向是什么？<br>   很多IT公司好像都不要年龄大点的~~人生80，那不是40岁就没得工作了？ <br></div>
+                            <span class="time">2019-01-23 16:59</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我一个个来回答<br>第一个，我个人对这方面不太清楚，不过我觉得关键看结果，如果你能考上大学，拿到合格的文凭，应该就没问题。具体你可以咨询一下大公司的人事。<br>第二个，一般情况下没有特殊要求，关键看你牛不牛。<br>第三个，这个很难给出一个具体的答案，要看你个人的兴趣和特长，如果能找到一个结合点就最好了。<br>至于年龄问题，我觉得如果一个公司只看年龄，那就太片面了。从另一个方面来考虑，我们自己也要不断地充电，才不会被时代所淘汰。<br></p>
+                                <p class="reply-time">2019-01-24 03:46</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/18/5c/fbf4486c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">草原上的奔跑</span>
+                            </div>
+                            <div class="bd">本篇黄申老师讲了数学的思想在编程里的具体实践落地，讲的太好了。数据结构，编程语句，基础算法，这些都有数学的思想在里面。之前自己没有去联想它们，造成的结果就是数学的思想悬在空中，写代码是写代码，数学思想是数学思想，两者不沾边，偶尔两者会碰撞一下，就会觉的很开心。黄申老师在这里给我指明了方向，让数学思想实际内化到编程之中，编程背后的逻辑支撑，提供给了我们为什么这么做的理由。想起来一句话，知识点我都知道，但是，实际去做，去把知识点串联起来，融会贯通，我就不知道了！！！ <br></div>
+                            <span class="time">2019-01-25 06:39</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">很高兴我的专栏能给你带来帮助！在后面的几大模块中，我会继续发挥这种风格</p>
+                                <p class="reply-time">2019-01-26 00:52</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/63/14/06eff9a4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jerry银银</span>
+                            </div>
+                            <div class="bd">很喜欢今天的文章。把编程中的细节和数学关联，让人茅塞顿开 <br></div>
+                            <span class="time">2019-01-23 12:29</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/ec/0d/43d46889.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">alic</span>
+                            </div>
+                            <div class="bd">干货 <br></div>
+                            <span class="time">2019-01-23 10:18</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

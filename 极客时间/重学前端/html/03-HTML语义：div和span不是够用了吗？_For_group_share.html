@@ -1,0 +1,1306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>03-HTML语义：div和span不是够用了吗？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>03-HTML语义：div和span不是够用了吗？</h1>
+<p>你好，我是winter。</p><p>今天这篇是我们正式开篇的第一篇文章，我想和你聊聊HTML。</p><p>我猜屏幕那一边的你估计会说：“HTML我很熟悉了，每天写，这不是初级程序员才学的内容么，这我还能不会吗？”</p><p>其实在我看来，HTML并不简单，它是典型的“入门容易，精通困难”的一部分知识。深刻理解HTML是成为优秀的前端工程师重要的一步。</p><p>我们在上一篇文章中讲到了，HTML的标签可以分为很多种，比如head里面的元信息类标签，又比如img、video、audio之类的替换型媒体标签。我今天要讲的标签是：语义类标签。</p><h2>语义类标签是什么，使用它有什么好处？</h2><p>语义类标签也是大家工作中经常会用到的一类标签，它们的特点是视觉表现上互相都差不多，主要的区别在于它们表示了不同的语义，比如大家会经常见到的section、nav、p，这些都是语义类的标签。</p><p>语义是我们说话表达的意思，多数的语义实际上都是由文字来承载的。语义类标签则是纯文字的补充，比如标题、自然段、章节、列表，这些内容都是纯文字无法表达的，我们需要依靠语义标签代为表达。</p><p>在讲语义之前，我们来说说为什么要用语义。</p><p>现在我们很多的前端工程师写起代码来，多数都不用复杂的语义标签， 只靠div 和 span 就能走天下了。</p><!-- [[[read_end]]] --><p>这样做行不行呢？毫无疑问答案是行。那这样做好不好呢？按照正确的套路，我应该说不好，但是在很多情况下，答案其实是好。</p><p>这是因为在现代互联网产品里，HTML用于描述“软件界面”多过于“富文本”，而软件界面里的东西，实际上几乎是没有语义的。比如说，我们做了一个购物车功能，我们一定要给每个购物车里的商品套上ul吗？比如说，加入购物车这个按钮，我们一定要用Button吗？</p><p>实际上我觉得没必要，因为这个场景里面，跟文本中的列表，以及表单中的Button，其实已经相差很远了，所以，我支持在任何“软件界面”的场景中，直接使用div和span。</p><p><strong>不过，在很多工作场景里，语义类标签也有它们自己无可替代的优点。正确地使用语义标签可以带来很多好处。</strong></p><ul>
+<li>语义类标签对开发者更为友好，使用语义类标签增强了可读性，即便是在没有CSS的时候，开发者也能够清晰地看出网页的结构，也更为便于团队的开发和维护。</li>
+<li>除了对人类友好之外，语义类标签也十分适宜机器阅读。它的文字表现力丰富，更适合搜索引擎检索（SEO），也可以让搜索引擎爬虫更好地获取到更多有效信息，有效提升网页的搜索量，并且语义类还可以支持读屏软件，根据文章可以自动生成目录等等。</li>
+</ul><p>不过，不恰当地使用语义标签，反而会造成负面作用。这里我们举一个常见的误区作为例子。我们都知道ul是无序列表，ol是有序列表，所以很多接触过语义这个概念，半懂不懂的前端工程师，特别喜欢给所有并列关系的元素都套上ul。</p><p>实际上， ul 是长成下面的这种样子的(以下来自HTML标准)。</p><p>I have lived in the following countries:</p><ul>
+<li>Switzerland</li>
+<li>Norway</li>
+<li>United Kingdom</li>
+<li>United States</li>
+</ul><p>ul多数出现正在行文中间，它的上文多数在提示：要列举某些项。但是，如果所有并列关系都用ul，会造成大量冗余标签。</p><p>错误地使用语义标签，会给机器阅读造成混淆、增加嵌套，给CSS编写加重负担。</p><p>所以，对于语义标签，<strong>我的态度是：“用对”比“不用”好，“不用”比“用错”好。当然了，我觉得有理想的前端工程师还是应该去追求“用对”它们。</strong></p><hr></hr><p>与JavaScript这样严格的编程语言相比，HTML中语义标签的使用更接近我们平常说话用的自然语言。我们说话并没有唯一的标准措辞，语义标签的使用也是一样。下面，我挑选了几种（我认为）比较重要的语义标签使用场景，来为你介绍一下。</p><h2>作为自然语言延伸的语义类标签</h2><p>其实语义问题不仅仅属于理科，它还是个文科问题。</p><p><strong>所以我们这里讲语义标签的使用的第一个场景，也是最自然的使用场景，就是：作为自然语言和纯文本的补充，用来表达一定的结构或者消除歧义。</strong></p><p>我们先来看看“表达一定的结构”这个场景。</p><p>在日语中，有一个语法现象叫做：ルビ，它的读音是ruby（著名的ruby语言就是据此命名的），它中文的意思大约类似于注音或者意思的注解，它的形式可以看下图：</p><p><img src="https://static001.geekbang.org/resource/image/d4/45/d464f16955d1629b9911699e99d03f45.png" alt=""></p><p>图中的例子选自动画片《某科学的超电磁炮》第二季第一话。图中把teleport放在空间移动上方的用法，就是日文中ruby的用法。“空间移动”是动画中白井黑子的技能，这里动画字幕上写的是“空间移动”，动画里的台词则用了英文发音“Teleport”，这里就形成了一个使用ruby的场景。</p><p>ruby的这个形式，在中国的网友中间最近被玩出了新花样，比如表情包。</p><p><img src="https://static001.geekbang.org/resource/image/67/15/67e0027f9a35eac8170b758f420ff815.jpeg" alt=""></p><p>有时候微信聊天，不能用ruby这样的东西真的是好急啊，只好用括号代替，效果真是差了不少。</p><p>在HTML5中，就引入了这个表示ruby的标签，它由ruby、rt、rp三个标签来实现。</p><p>所以说，这些情况里存在的语义，其实原本就存在了，只是我们用纯文字是没法表达的，HTML作为一种“超文本”语言，支持这些文字表达就是必要的了。</p><p><strong>还有一种情况是，HTML的有些标签实际上就是必要的，甚至必要的程度可以达到：如果没有这个标签，文字会产生歧义的程度。</strong></p><p>这里我们可以介绍一下em标签。</p><pre><code>今天我吃了一个苹果.
+</code></pre><p>我们看看这句话，看上去它很清楚，但是实际上，这句话放到不同上下文中，可能表达完全不同的意思。</p><pre><code>昨天我吃了一个香蕉。
+今天我吃了一个苹果。
+</code></pre><p>再比如：</p><pre><code>昨天我吃了两个苹果。
+今天我吃了一个苹果。
+</code></pre><p>试着读一读，这两段里面的“今天我吃了一个苹果”，你是不是发现读音不自觉地发生了变化？</p><p>实际上，不仅仅是读音，这里的意思也发生了变化。前一段中，表示我今天吃的是苹果，而不是别的什么东西，后一段中，则表示我今天只吃了一个苹果，没有多吃。</p><p>当没有上下文时，如何消除歧义呢？这就要用到我们的em标签了。em表示重音：</p><pre><code>今天我吃了一个&lt;em&gt;苹果&lt;/em&gt;。
+今天我吃了&lt;em&gt;一个&lt;/em&gt;苹果。
+</code></pre><p>通过em标签，我们可以消除这样的歧义。</p><p>一些文章常常会拿em和strong做对比，实际上，我们只要理解了em的真正意思，它和strong可谓天差地别，并没有任何混淆的可能。</p><h2>作为标题摘要的语义类标签</h2><p>介绍完自然语言的语义场景后，我想介绍的另一个语义重要使用场景，就是文章的结构。中国古代小说就形成了“章-回”的概念，西方的戏剧也有幕的区分，所以人类的自然语言作品也是如出一辙。</p><p>HTML也应该支持这样的需求。HTML语义标签中，有不少是用于支持这样的结构的标签。</p><p>语义化的HTML能够支持自动生成目录结构，HTML标准中还专门规定了生成目录结构的算法，即使我们并不打算深入实践语义，也应该尽量在大的层面上保证这些元素的语义化使用。</p><p>首先我们需要形成一个概念，一篇文档会有一个树形的目录结构，它由各个级别的标题组成。这个树形结构可能不会跟HTML元素的嵌套关系一致。</p><pre><code>例如：
+
+&lt;h1&gt;HTML语义&lt;/h1&gt;
+&lt;p&gt;balah balah balah balah&lt;/p&gt;
+&lt;h2&gt;弱语义&lt;/h2&gt;
+&lt;p&gt;balah balah&lt;/p&gt;
+&lt;h2&gt;结构性元素&lt;/h2&gt;
+&lt;p&gt;balah balah&lt;/p&gt;
+......
+</code></pre><p>这段HTML几乎是平铺的元素，但是它的标题结构是：</p><ul>
+<li>HTML语义
+<ul>
+<li>弱语义</li>
+<li>结构性元素</li>
+<li>……</li>
+</ul>
+</li>
+</ul><p>h1-h6是最基本的标题，它们表示了文章中不同层级的标题。有些时候，我们会有副标题，为了避免副标题产生额外的一个层级，我们使用hgroup标签。</p><p>我们来看下有/无hgroup的对比：</p><pre><code>&lt;h1&gt;JavaScript对象&lt;/h1&gt;
+&lt;h2&gt;我们需要模拟类吗？&lt;/h2&gt;
+&lt;p&gt;balah balah&lt;/p&gt;
+......
+</code></pre><p>此段生成以下标题结构：</p><ul>
+<li>JavaScript对象
+<ul>
+<li>我们需要模拟类吗？</li>
+<li>…</li>
+</ul>
+</li>
+</ul><pre><code>&lt;hgroup&gt;
+&lt;h1&gt;JavaScript对象&lt;/h1&gt;
+&lt;h2&gt;我们需要模拟类吗？&lt;/h2&gt;
+&lt;/hgroup&gt;
+&lt;p&gt;balah balah&lt;/p&gt;
+......
+</code></pre><p>这一段生成以下标题结构：</p><ul>
+<li>JavaScript对象——我们需要模拟类吗？
+<ul>
+<li>…</li>
+</ul>
+</li>
+</ul><p>我们通过两个效果的对比就可以知道，在hgroup中的h1-h6被视为同一标题的不同组成部分。</p><p>从HTML 5开始，我们有了section标签，这个标签可不仅仅是一个“有语义的div”，它会改变h1-h6的语义。section的嵌套会使得其中的h1-h6下降一级，因此，在HTML5以后，我们只需要section和h1就足以形成文档的树形结构：</p><pre><code>&lt;section&gt;
+    &lt;h1&gt;HTML语义&lt;/h1&gt;
+    &lt;p&gt;balah balah balah balah&lt;/p&gt;
+    &lt;section&gt;
+        &lt;h1&gt;弱语义&lt;/h1&gt;
+        &lt;p&gt;balah balah&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;结构性元素&lt;/h1&gt;
+        &lt;p&gt;balah balah&lt;/p&gt; 
+    &lt;/section&gt;
+......
+&lt;/section&gt;
+</code></pre><p>这段代码同样会形成前面例子的标题结构：</p><ul>
+<li>HTML语义
+<ul>
+<li>弱语义</li>
+<li>结构性元素</li>
+<li>……</li>
+</ul>
+</li>
+</ul><h2>作为整体结构的语义类标签</h2><p>我们想介绍的最后一个场景是，随着越来越多的浏览器推出“阅读模式”，以及各种非浏览器终端的出现，语义化的HTML适合机器阅读的特性变得越来越重要。</p><p>应用了语义化结构的页面，可以明确地提示出页面信息的主次关系，它能让浏览器很好地支持“阅读视图功能”，还可以让搜索引擎的命中率提升，同时，它也对视障用户的读屏软件更友好。</p><p>我们正确使用整体结构类的语义标签，可以让页面对机器更友好。比如，这里一个典型的body类似这样：</p><pre><code>&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            ……
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;aside&gt;
+        &lt;nav&gt;
+            ……
+        &lt;/nav&gt;
+    &lt;/aside&gt;
+    &lt;section&gt;……&lt;/section&gt;
+    &lt;section&gt;……&lt;/section&gt;
+    &lt;section&gt;……&lt;/section&gt;
+    &lt;footer&gt;
+        &lt;address&gt;……&lt;/address&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre><p>在body下面，有一个header，header里面是一个nav，跟header同级的有一个aside，aside里面也有一个nav。接下来是文章的整体，也就是一个一个的section。section里面可能还有嵌套，但是我们就不管了，最后是一个footer，这个footer里面可能有address这样的内容。</p><p>除此之外，还有article，article是一种特别的结构，它表示具有一定独立性质的文章。所以，article和body具有相似的结构，同时，一个HTML页面中，可能有多个article存在。</p><p>一个典型的场景是多篇新闻展示在同一个新闻专题页面中，这种类似报纸的多文章结构适合用article来组织。</p><pre><code>&lt;body&gt;
+    &lt;header&gt;……&lt;/header&gt;
+    &lt;article&gt;
+        &lt;header&gt;……&lt;/header&gt;
+        &lt;section&gt;……&lt;/section&gt;
+        &lt;section&gt;……&lt;/section&gt;
+        &lt;section&gt;……&lt;/section&gt;
+        &lt;footer&gt;……&lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+        ……
+    &lt;/article&gt;
+    &lt;article&gt;
+        ……
+    &lt;/article&gt;
+    &lt;footer&gt;
+        &lt;address&gt;&lt;/address&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre><p>body里面有自己的header和footer，然后里面是竖篇的article，每一个article里面都有自己的header、section、footer。这是一个典型的多文章结构。</p><p>在这个结构里，我们看到了一些新标签，我也来逐个介绍一下。</p><ul>
+<li>header，如其名，通常出现在前部，表示导航或者介绍性的内容。</li>
+<li>footer，通常出现在尾部，包含一些作者信息、相关链接、版权信息等。</li>
+</ul><p>header和footer一般都是放在article或者body的直接子元素，但是标准中并没有明确规定，footer也可以和aside，nav，section相关联（header不存在关联问题）。</p><ul>
+<li>aside表示跟文章主体不那么相关的部分，它可能包含导航、广告等工具性质的内容。</li>
+</ul><p>aside很容易被理解为侧边栏，实际上二者是包含关系，侧边栏是aside，aside不一定是侧边栏。</p><p>aside和header中都可能出现导航（nav标签），二者的区别是，header中的导航多数是到文章自己的目录，而aside中的导航多数是到关联页面或者是整站地图。</p><p>最后footer中包含address，这是个非常容易被误用的标签。address并非像date一样，表示一个给机器阅读的地址，而是表示“文章（作者）的联系方式”，address明确地只关联到article和body。</p><h2>总结</h2><p>本篇中我们介绍了一些基本原则和HTML文档的整体结构，从整体上了解了HTML语义。</p><p>至此，我们可以回答是否要语义化的问题：我们应该分开一些场景来看语义，把它用在合适的场景下，可以获得额外的效果。本篇文中，我们至少涉及了三个明确的场景：</p><ul>
+<li>自然语言表达能力的补充；</li>
+<li>文章标题摘要；</li>
+<li>适合机器阅读的整体结构。</li>
+</ul><p>下一篇中，我们会继续深入到更细致的结构中，进一步了解语义。你在工作中是否在使用语义化的标签开发？学习过本篇之后，答案有没有变化呢？你可以给我留言，我们一起讨论。</p><h1>猜你喜欢</h1><p><a href="https://time.geekbang.org/course/intro/163?utm_term=zeusMTA7L&amp;utm_source=app&amp;utm_medium=chongxueqianduan&amp;utm_campaign=163-presell"><img src="https://static001.geekbang.org/resource/image/1a/08/1a49758821bdbdf6f0a8a1dc5bf39f08.jpg" alt="unpreview"></a></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            莲  2019-01-22 00:51:40
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我写前端时间不长，写的都是小东西，确实觉得div和span够用<br><br>我认为html标签和自然语言的演化肯定会是一种逻辑：<br><br>汉语中「地」「的」「得」的正确用法今天大部分中国人根本不会，都只用「的」字，也不影响表达。另外很多字的读音标准都变了，英语也有类似的历史，都是人民的选择成了标准<br><br>所以我的观点是：html也一样，设计者的初衷有他自己的思考，但最后开发者的习惯会成为标准（微信小程序最基本的标签不就是view和text嘛），除非这些标签会影响人数更广大的普通用户 [72赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            王大可  2019-01-22 07:59:26
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            咦？根据目录，难道不是该介绍模块一 javascript相关的吗 [43赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Scorpio  2019-01-22 08:15:19
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师也有看炮姐吗？(〃•⊖•〃) [41赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-26 00:59:03</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">哈哈哈 不然怎么能从里面挑出ruby</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            👽  2019-01-22 09:17:41
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            完了...今天文章中的一半标签都不认识...... [40赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            人艰不拆  2019-01-23 23:46:09
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老夫写页面就是一把梭，div，div，div，什么都是div，display改一改什么都能写 [39赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            馒头小哥  2019-01-22 11:19:42
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            其实语义化更重要的是在于规范，渲染出来的网页是给大多数用户看的。还有一小部分用户比如 程序员、机器人、视障用户。<br><br>如果一个页面只有 span 和 div，视障软件如果把这个网页读给用户？ 读 “ div 开始 class=&quot;tile&quot; 今天天气很好 div 结束” 还是读 “标题：今天天气很好” 那个方式更好呢？<br><br>就好比家里的排插，有做得精致美观的、也有简约朴素的，但是大家都是遵循统一插座规范，所以都能正常插上家电使用。<br><br>无规矩不成方圆，语义化能更好的帮助到这些用户去读取、去认知、去使用，这是我所理解的语义化好处。 [30赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Derrickxyz  2019-01-22 07:34:59
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            目前开发的是企业应用，也就是更关注于“软件界面”，没有使用语义化标签。使用div，span等就实现了需求。<br>企业应用不需要做针对性的SEO，也不需要像文章那样分层，划分章节。<br>语义化标签在企业应用中，除了增加可读性外，是否还有其他提升？<br>谢谢～<br> [23赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            雪松  2019-01-22 08:43:34
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            就拿写一个页面来说，直接div&#47;span，让我更加专注页面布局样式内容等信息，如果去语义化，反而造成困扰，不过这个困扰是建立在自己不熟悉语义化的基础之上的。<br>所以我认为应该尽量追求语义化，这不仅是便于浏览器搜索引擎，也是竞争力的一种体现。 [17赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Artyhacker  2019-01-22 10:29:24
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            以前学习的时候刻意使用过语义化标签，但工作以后直接用react，组件也直接上ant-design，几乎就只需要div和span了。。 [14赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Zp  2019-01-22 14:24:19
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            不是该先讲js？ [12赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            mfist  2019-01-22 06:23:32
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            1html语义化的优点，有利于人或机器更好的解析语义。<br>2日常业务开发中很多时候只用div span，站在应该走出自己舒适区的角度，应该正确的用语义化<br>3 我觉得在封装项目通用ui组件更需要考究语义化，这样就帮助使用者获取语义化的优点，屏蔽语义化的缺点 [12赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            sprinty  2019-01-22 08:59:37
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            语义化标签适合的场景是不是很有限？<br><br>现实开发中除了文档、博客等类型的项目很少用到，我自己也很少用到语义化标签，因为想到其语义就觉得不适合现在的场景。 [10赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Mowtwo  2019-01-23 10:55:31
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            虽然文章确实讲了很多有用的东西，但是对于hgroup的例子我觉得还是可以得到一些指正。<br>至少到目前为止，我尝试了一下，hgroup已经不再可以在网页上有人和作用了...而我搜索以后，也找到了一篇关于hgroup已经在HTML5.1标准下被取消的信息。所以文章中所提出的部分内容已经不再有效，希望重视。 [9赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-26 01:39:01</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">我本人比较倾向于WHATWG的living standard，所以保留了这个标签。<br><br>多数语义标签都不会产生实际效果，hgroup针对outline算法仍然有效。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            北京知府  2019-01-22 19:44:12
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我们是做业务系统的，团队中有一个同事（纯前端偏UI）特别喜欢使用语义化标签，但是我们在维护他的代码时总感觉他的代码乱糟糟的不好维护，很多样式就直接写标签来定义；而我们其他人（擅长做后台的）则喜欢用div，然后通过有业务含义的class来定义样式。<br>个人觉得做业务系统，特别是团队一起协作开发，还是尽量少用语义化标签，这样能减少后期维护的成本。 [9赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-26 01:14:03</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">1. 用语义化标签，跟用标签名选择器是两码事。<br>2. 给自己贴“做业务系统“的标签，潜台词是给自己找借口。<br>3. 不要跟没希望的团队一起工作。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Geek_be7add  2019-01-24 15:43:29
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            例如「地」「的」「得」、「他」「她」「它」的区分，我觉得不应该因为分不清而不再区分，而是因为它有意义而去刻意地区分，而且也未必都不分，至少每年几百几千万的本科毕业生应该分得清。同理，虽然it行业入门是英雄不问出处，但是也大部分都有一定基础，所以有助于梳理页面结构的语义化概念还是应该大力推行的。 [8赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            无羡  2019-01-22 09:32:30
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            语义开发确实能很好地提升源码的结构，方便阅读。但前提是团队人员都能正确使用语义化标签，否则就会出现div&#47;span和语义标签各种嵌套，很难受 [7赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            hhk  2019-01-23 12:19:43
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我理解的语义化，就是对机器友好对人友好。在富文本这类场景时，我们应该尽量地语义化；写软件界面时，保持整体上的结构化即可 [6赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            huayonbryant  2019-01-22 01:24:52
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            几乎不用语义化的开发 [6赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            leslee  2019-01-22 00:23:50
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            感觉只有特别适用的场景才能适用语义化标签。工作中的需求太乱了。 [6赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            没错！是我～  2019-01-22 18:08:39
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            有的同学说标签冗余的问题，其实我觉得对于标签来说，还是要控制的足够的精细比较好一点，比如说常用的一个按钮，A要用一个普通的按钮，B要用含有图标的按钮，C要用大一号的按钮，D要用带有悬浮提示窗的按钮。假如你来做基础组件，满足所有人的需求，你如何设计结构呢，至少我觉的冗余标签的情况不太容易避免~ [4赞]
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

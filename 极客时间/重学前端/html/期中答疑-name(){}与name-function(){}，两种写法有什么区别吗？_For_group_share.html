@@ -1,0 +1,1162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>期中答疑-name(){}与name-function(){}，两种写法有什么区别吗？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>期中答疑-name(){}与name-function(){}，两种写法有什么区别吗？</h1>
+<p>你好，我是winter。</p><p>随着专栏进度过半，我们专栏的评论区留言量也日渐上涨。除了大家的小作业和学习心得，我还看见很多同学们在学习过程中提出了不少问题。</p><p>这其实是一种很好的学习方式，通过问题，我们可以对这部分知识记得更为牢固。</p><p>所以，我鼓励你在阅读文章之外，多思考，多提问，把自己不懂的地方暴露出来，及时查缺补漏，这样可以更好地吸收知识。同时，你也可以通过回答别人的问题来检验自己对知识的掌握情况。</p><p>我们一起来看看，大家都提出什么问题。</p><hr></hr><p><strong>1.老师你好！我语义化标签用得很少，多数用到的是header、footer、 nav等语义化标签，想问老师section和div混合使用，会不会效果不好呢？</strong></p><p>答：不会效果不好的，因为本来就是这么用的。遇到不确定的情况，请千万不要乱用标签，用div和span就好。</p><p><strong>2.我一直看见闭包这个词，但是一直也没有弄清楚它是什么东西，老师可以简单概括一下什么是闭包吗？</strong></p><p>答：你可以这样理解，闭包其实就是函数，还是能访问外面变量的函数。</p><p><strong>3.“事实上，JavaScript 中的“类”仅仅是运行时对象的一个私有属性，而 JavaScript 中是无法自定义类型的。”</strong></p><ul>
+<li><strong>文中说“类”是私有属性，可以具体表现是什么，不是很能理解具体含义？</strong></li>
+</ul><!-- [[[read_end]]] --><p>答：私有属性当然是你无法访问的属性了，但是具体表现的话，还是有的，那就是Object.prorotype.toString.call(x) 的行为。</p><ul>
+<li><strong>无法自定义类型？请问如下编码是属于什么操作，应该怎么理解这个“类”？</strong></li>
+</ul><pre><code>function Person（）｛｝
+var person = new Person（）；
+</code></pre><p>答：这个代码是定义类的操作，这里注意一下，你千万不要把类和类型的概念混淆。</p><p><strong>4.请教老师在对象中<code>name(){}</code> 等同于<code>name: function() {}</code> ，这两个写法有什么区别呢？</strong></p><p>答：这两个写法在使用上基本没什么区别。只有一点区别，就是函数的name属性不一样。可以看下这段代码：</p><pre><code class="language-JavaScript">var o = {
+   myfunc(){}
+}
+console.log(o.myfunc.name)
+</code></pre><p>我们这里按照你的第一种方法定义了方法，然后输出它的name属性，我们看到name属性是"myfunc"。</p><p>值得一提的是，如果我们给你的第二种方法添加了名字，行为还是不一样，区别在于能否在函数内用名字递归，我们看看代码：</p><pre><code class="language-JavaScript">var o2 = {
+    myfunc(){
+        consoe.log(myfunc); //error
+    }
+}
+var o1 = {
+    myfunc: function myfunc(){
+        consoe.log(myfunc); //function myfunc
+    }
+}
+o1.myfunc();
+o2.myfunc();
+</code></pre><p>这段代码中，我们试着在用两种方式定义的方法中输出函数自身的名字变量，结果是不一样的。</p><p>不过现实中，我们几乎不会关心函数的name属性，所以不用太在意两种定义方式的区别。</p><p><strong>5.我对于JavaScript中Number安全整数有个疑问。</strong></p><p><strong>MDN中是（-(2^53-1)~(2^53-1)）, 犀牛书中是（-2^53~2^53）感觉都有道理。</strong></p><p><strong>JavaScript中采用IEEE754浮点数标准进行存储， 1个符号位，11位指数位， 52位尾数位。</strong></p><p><strong>按照分析，不考虑符号位，尾数位取值52个1就是表示的最大值了，不会有精度损失，此时指数位代表数值是52+1023=1075，此时即为(-(2^53-1)~(2^53-1))。</strong></p><p><strong>但是2^53这个值，存储的时候尾数是52个0， 指数位为53+1023=1076，这个值也是刚好没有精度损失的，这时表示的就是（-2^53~2^53）。</strong></p><p><strong>用Math.isSafeInteger()判断安全数范围和MDN中描述一样。</strong><strong>所以被问到这个的时候， 感觉两个都是有道理的吧！老师你说对吗？</strong></p><p>答：你分析得非常好，我觉得我都没啥可补充的了。这个地方JavaScript标准写得也非常模糊，我简单瞄了一下，似乎是用实验的方式来给出的安全数范围。考虑到犀牛书的时效性肯定不如MDN，应该是参考了某一版本旧引擎给出来的数据。</p><p>所以，这类行为我们还是以实测为准吧，我们不必纠结。</p><p><strong>6.老师您好，下面这个自己练习的例子希望您能帮解答：</strong></p><pre><code>console.log('sync1');
+
+setTimeout(function () {
+    console.log('setTimeout1')
+}, 0);
+
+var promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        console.log('setTimeoutPromise')
+    }, 0);
+    console.log('promise');
+    resolve();
+});
+
+
+promise.then(() =&gt; {
+    console.log('pro_then');
+    setTimeout(() =&gt; {
+        console.log('pro_timeout');
+    }, 0)
+})
+
+setTimeout(function () {
+    console.log('last_setTimeout')
+}, 0);
+console.log('sync2');
+</code></pre><p>答：这个例子挺经典的，虽然我觉得这样设计面试题非常不合适，但是我们可以以它为例，学习一下分析异步的方法。</p><p>首先我们看第一遍同步执行，这是第一个宏任务。</p><p>第一个宏任务中，调用了三次setTimeout（Promise中的代码也是同步执行的），调用了一次resolve，打印了三次。</p><p>所以它产生了三个宏任务，一个微任务，两次打印。</p><p>那么，首先显示的就是 sync1、promise 和 sync2。这时，setTimeout1，setTimeoutPromise，last_setTimeout在宏任务队列中，pro_then在微任务队列中。</p><p>接下来，因为微任务队列没空，第一个宏任务没有结束，继续执行微任务队列，所以pro_then，被显示出来，然后又调用了一次setTimeout，所以pro_timeout进入宏任务队列，成为第5个宏任务。</p><p>然后，没有微任务了，执行第二个宏任务，所以接下来顺次执行宏任务，显示setTimeout1，setTimeoutPromise，last_setTimeout，pro_timeout。</p><p>最终显示顺序是这样的。</p><ul>
+<li><strong>宏任务1</strong>
+<ul>
+<li>微任务1
+<ul>
+<li>sync 1</li>
+<li>promise</li>
+<li>sync 2</li>
+</ul>
+</li>
+<li>微任务2
+<ul>
+<li>pro_then</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>宏任务2</strong>
+<ul>
+<li>setTimeout1</li>
+</ul>
+</li>
+<li><strong>宏任务3</strong>
+<ul>
+<li>setTimeoutPromise</li>
+</ul>
+</li>
+<li><strong>宏任务4</strong>
+<ul>
+<li>last_setTimeout</li>
+</ul>
+</li>
+<li><strong>宏任务5</strong>
+<ul>
+<li>pro_timeout</li>
+</ul>
+</li>
+</ul><p><strong>7.为什么 promise.then中的settimeout是最后打印的？不用管是宏任务依次执行吗？</strong></p><p>答：因为then是第一个宏任务中最后执行的微任务，所以它发起的宏任务是最后入队的，依次执行就是最后。</p><p><strong>8.怎么确定这个微任务属于一个宏任务呢，JavaScript主线程跑下来，遇到setTImeout会放到异步队列宏任务中，那下面的遇到的promise怎么判断出它是属于这个宏任务呢？</strong></p><p>答：resolve在哪个宏任务中调用，对应的then里的微任务就属于哪个宏任务。宏任务没有从异步队列中取出，中间所碰到的所有微任务都属于这个宏任务。</p><p><strong>9.为什么要设计微任务（micro task），我知道这样JavaScript引擎可以自主地执行任务，但这样的好处是什么？提高性能吗？</strong></p><p>答：不是，微任务是JavaScript引擎内部的一种机制，如果不设计微任务，那么JavaScript引擎中就完全没有异步了呀，所以必须要设计微任务。</p><p><strong>10.现在浏览器多数实现是从右往左匹配的，那么无法保证选择器在 DOM 树构建到当前节点时，已经可以准确判断当前节点是否被选中。现在浏览器又是怎么实现在生成DOM树，同时进行CSS属性计算？</strong></p><p>答：其实现代浏览器已经为<code>:empty</code>、<code>:last</code>等伪元素写了很多例外了，不过你说的从右往左匹配，左边的要么是当前节点的父元素，要么是前置元素，所以是可以保证准确判断的呀。</p><p><strong>11.请问老师，页面资源的预加载是不是可以用link标签实现，还有其他的方式吗？</strong></p><p>答：预加载的方法就多啦，还可以用JavaScript代码预加载，甚至用本地存储缓存。</p><p><strong>12.老师，我有一个疑问：“词法环境”和“词法作用域”这两个概念的区别是什么？希望你能帮我解惑。</strong></p><p>答：词法环境是运行时概念，词法作用域是语言概念，就是说，作用域指的是变量生效的那段代码，而词法环境是指运行起来之后，你这段代码访问的存储变量的内存块。</p><p><strong>13.想问一个问题：import 进来的引用为什么可以获取到最新的值，是类似于 getter 的机制吗?</strong></p><p>答：这个地方略微有些复杂，我们在运行时并没有讲import的运行时机制，这里涉及了一个叫做ImportEntry Record的机制，它比getter的实现更底层。</p><p>我想这个地方我们没有必要去深究模块的运行时机制，它很复杂而且并不是经常要用到。你如果想了解的话，可以查阅一下。</p><p><strong>14.请问老师，JavaScript 的call stack size是多少，这个size的单位是啥，是调用栈中函数的个数，还是一个存储单位，比如MB之类的。如果调用栈中就一个函数，这个函数的参数有100万个，浏览器端依然会溢出，看起来是存储单位，但是没得到验证。</strong></p><p>答：这个似乎并没有什么特别规定，我知道JSC里面这个东西是可以用C++代码来调整的，至于浏览器调用JavaScript引擎的时候会怎么做，还真不好说。</p><p>不过，从编码风格上建议，不要把这种事情用函数解决啦，真要干这样的事，数组可能都不合适了，请老老实实写ArrayBuffer吧。</p><p><strong>15.老师您好，我一直有一个困惑，浏览器的鼠标事件是怎么识别到的，是碰撞检测的吗？</strong></p><p>答：这个问题很不错，我后面在浏览器API的事件部分会详细讲，可以先简单说一下，这里的检测方式是从外到内，逐级分配给子元素，所以我们的事件会有捕获过程。</p><p><strong>16.有个问题，如果我javaScript代码改变了DOM树元素的位置，需要启动重新排版（位置改变的元素只会影响其他部分元素的位置，甚至不影响其他元素的位置。），这时会导致这棵DOM树的所有元素都需要重新排版、绘制和渲染吗？</strong></p><p>答：排版应该是会重新排的，但是如果有些元素的尺寸没有改变，那么它内部不需要重排，当然也就更不需要重新渲染了，但是绘制应该是要重绘的，目前来看，浏览器还没有那么智能。</p><p><strong>17.老师，我是12年左右踏进半只脚到前端领域的，后来考研就放弃了，觉得前端不够高深，和传统工程师来说觉得门槛低很多，甚至前期我都觉得自己不是个程序员。</strong></p><p><strong>直到研究生毕业，才又选择前端，这是三大框架风靡，我却有点迷惘，感觉和自己认知的前端不一样，直到现在工作了差不多两年，才悟出了点道道。</strong></p><p><strong>作为工程师，我始终觉得前端也应该熟练算法和数据结构、数据库这些所谓的后端知识，但是平时工作场景中用到又少，不知如何学习？</strong></p><p>答：算法和数据结构可不是什么后端知识呀，是所有程序员的基本技能。</p><p>算法主要是靠大量练习提高，数据结构可以一个一个学习，不要指望工作中用到恰巧就学了，毕竟学习要教学费而工作是领工资的，哪里会有这样的好事呢，所以还是自己多多练习呀。</p><p><strong>18.重学前端是夯实前端基础，那前端进阶方向在哪里?还是一定要修一门后端语言扩展服务端，希望老师可以指点迷津。</strong></p><p>答：我觉得任何编程相关岗位的进阶方式都是做出某某东西，而不是学会某某东西。我会在专栏课程的第四模块会讲到一些进阶可能的方向，你可以关注一下。</p><p><strong>19.我主业是后端，工作中也会带着做前端，自认还是能完美还原设计师的设计。但是现在感觉很多时候提前端就是vue等，而我还是在用jQuery，想请老师说说看，我是不是落伍了？</strong></p><p>答：落伍的问题不是你用什么框架，而是你在做什么东西，学什么东西。</p><p>框架不是赶时髦，追潮流，每个框架都有解决的问题，我觉得你该焦虑的不是你用的框架为什么这么老，而是你该知道这些新框架要解决什么问题，以及这些问题为什么在你的工作中不存在。</p><p><strong>最后，我们来看看我在JavaScript类型那一篇中给你留的实践问题。</strong></p><p><strong>如果我们不用原生的Number和parselnt，用JavaScript代码实践String到Number，该怎么做呢？</strong></p><p>答：其实这个问题我在后台没看到特别满意的答案，好像大家都很喜欢偷懒啊。</p><p>我这里给你留个例子，处理十进制整数。</p><pre><code>function atoi(a){
+    let chars = a.split(&quot;&quot;).map(e =&gt; e.charCodeAt(0) - &quot;0&quot;.charCodeAt(0));
+    let n = 0;
+    for(var char of chars) {
+        n *= 10;
+    	n += char;
+    }
+    return n;
+}
+atoi(&quot;1001&quot;)
+</code></pre><p>我比较期待大家有人能写出来带小数，甚至带科学计数法的代码，你可以尝试一下。</p><p>好了，今天的答疑环节就进行到这里，你也可以把自己想要解答的问题留言。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-03-30 10:16:14
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            &#47;**<br> * @param {string} str<br> *&#47;<br>function str2num (str) {<br>  const [m, e = &#39;&#39;] = str.split(&#39;e&#39;)<br>  const [i, f = &#39;&#39;] = m.split(&#39;.&#39;)<br>  let result = 0<br>  &#47;&#47; handle int<br>  let sign = 1<br>  for (let x of i) {<br>    if (x === &#39;+&#39;) {<br>      continue<br>    } else if (x === &#39;-&#39;) {<br>      sign *= -1<br>      continue<br>    } else {<br>      result *= 10<br>      result += c2n(x)<br>    }<br>  }<br><br>  &#47;&#47; handle fraction<br>  if (f) {<br>    result += str2num(f) &#47; (10 ** f.length)<br>  }<br><br>  &#47;&#47; handle exponent<br>  if (e) {<br>    let exponent<br>    let sign = 1<br>    if (e[0] === &#39;-&#39;) {<br>      sign = -1<br>      exponent = str2num(e.slice(1))<br>    } else if (e[0] === &#39;+&#39;) {<br>      exponent = str2num(e.slice(1))<br>    } else {<br>      exponent = str2num(e)<br>    }<br>    if (sign === -1) {<br>      result &#47;= 10 ** exponent<br>    } else {<br>      result *= 10 ** exponent<br>    }<br>  }<br><br>  &#47;&#47; handle sign<br>  result *= sign<br>  return result<br>}<br><br>function c2n (char) {<br>  const n = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9][char]<br>  if (n == null) throw new Error(`unknown char: &quot;${char}&quot;`)<br>  return n<br>}<br><br>function assert (input) {<br>  let output = str2num(input)<br>  let expect = Number(input)<br>  if (output !== expect) {<br>    throw new Error(`input ${input}, got ${output}, while expect ${expect}`)<br>  }<br>}<br><br>void function test () {<br>  assert(&#39;13.4e-7&#39;)<br>  assert(&#39;.4e+7&#39;)<br>  assert(&#39;-.2e+1&#39;)<br>  assert(&#39;+.6e+0&#39;)<br>  assert(&#39;0&#39;)<br>  assert(&#39;-0e-0&#39;)<br>  assert(&#39;0e0&#39;)<br>  assert(&#39;123&#39;)<br>  assert(&#39;2e1&#39;)<br>  assert(&#39;2e-0&#39;)<br>  assert(&#39;.1&#39;)<br>  console.log(&#39;All right.&#39;)<br>}()<br> [3赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Geeker1992  2019-04-04 12:29:36
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我知道答案了。在 promise 出现之前，javascript 并没有异步，有异步的是宿主环境。 [2赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-04-09 18:19:14</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">对的</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            sprinty  2019-03-30 10:44:06
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师您好，把JS代码缓存在 localStorage 中，从 localStorage 取出后怎么执行？ 如果缓存的是 css 呢？ [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-03-30 10:39:33
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            写的过程中遇到了个精度问题：<br>比如13.4e-7，一开始我的结果是0.0000013399999999999999，然后我把乘法改成了对应的除法，就可以了。这说明JS引擎对除法的处理不是简单的乘以相应的倒数，具体的机制不知道 winter 老师能不能给个解释。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            veath  2019-04-16 01:03:01
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            请问下，link preload 解析执行时机和构建 CSSOM一样吗---html从上往下解析到link preload才会解析执行？还是说并行解析html 和preload 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            自由之翼  2019-04-03 10:30:53
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            一般都是缓存 数据 吧 ,个人感觉 缓存 js css 纯属没事儿找事儿. 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Geeker1992  2019-04-03 09:01:53
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师，为什么说没有了微任务就没有了异步？不是还有 setTimeout 的吗？ 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-04-09 18:23:25</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">因为那是宿主的东西呀，不在JS引擎里</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            xiaolu289  2019-04-01 22:57:47
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            js如果取出来是字符串，目前我想到一个方案是用eval去执行，不过感觉直接用localstrage存储js代码这种操作可能会有安全问题，毕竟locastrage在浏览器是随便我怎么改都行的....<br>css的话，直接插一个style不就好了嘛....js其实也可以插一个script....所以具体什么场景采用什么方案，还得根据业务场景来决定<br><br>不知道我理解得是否正确.. 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Daniel  2019-04-01 18:11:27
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师您好，请教你个问题。 link与script都可以引用js代码，这两者的区别是什么呢？ 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Geek_c43534  2019-04-01 11:28:19
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师，jquery ajax 同步请求的原理是?目前用axios库，不支持同步请求，如果希望执行同步请求有什么解决办法？ 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            杨学茂  2019-03-30 09:09:51
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            请问：var,let 和 const 在 babel 中都会被编译为 var, 那怎么区分 const 是常量呢？ 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Jy  2019-03-30 08:48:58
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            name()和name: function，本质上前面的是Method，后面是函数属性。<br>具体的差异不大，有个小栗子: 在name: function中使用super会报错，而name()不会。 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

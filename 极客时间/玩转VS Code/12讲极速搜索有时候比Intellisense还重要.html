@@ -1,0 +1,325 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                12讲极速搜索有时候比Intellisense还重要
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/c6/96/c6917c5df6c4ef58a9bc1c56e480ce96.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>在前面的几个章节中，我们介绍了 VS Code 如何在语言服务的支持下提供了代码检查和修复、智能跳转、自动补全等功能。</p>
+<p>但是，语言支持并不总是完美的。像 Rust、TypeScript 等语言的支持，是由语言实现者们直接操刀的，所以它们做得就相对完整些；而第三方开发者提供的语言服务，可能就不一定尽善尽美了。那这是不是就意味着想要快速查询代码并且跳转就没有办法呢？</p>
+<p>所以今天我们重新回到原点，来看一下如何使用编辑器自带的文本搜索功能，快速地穿梭于海量的代码之中。在我看来，一个功能丰富且快速的搜索，在很多情况下甚至会比语言服务还要来得有用。</p>
+<h2>单文件搜索</h2>
+<p>我们把光标放在编辑器当中，然后按下 “Cmd + F” （Windows 上是 Ctrl + F），就能够快速地调出搜索窗口（可能这个命令你早就发现了或者经常使用了）。当我们调出搜索窗口的时候，编辑器就会把当前光标所在位置的单词自动填充到搜索框中。与此同时，当前文件里和搜索关键词相同的单词都会被高亮出来。</p>
+<p>自动填充搜索关键词的好处在于，当我们按下 “Cmd +F” 搜索这个单词之后，我们还能够立刻通过回车键或者 “shift+回车键” 在所有搜索结果当中快速跳转。</p>
+<p><img src="https://static001.geekbang.org/resource/image/5c/f0/5c7502e7fbee2bf39cbc69042f5edff0.gif" alt="" /></p>
+<center><span class="reference">“Cmd +F”搜索，按下 Enter 键在搜索结果当中快速跳转</span></center><!-- [[[read_end]]] -->
+<p>这里需要注意的事情是，当我们开始搜索的时候，光标已经被移动到了搜索框当中，如果在这时候我们继续打字的话，那原有的搜索关键词将会被修改。</p>
+<p><img src="https://static001.geekbang.org/resource/image/77/49/77097c1866d0fc1e0bf58087faf65149.gif" alt="" /></p>
+<center><span class="reference">按下“Cmd +F”调出搜索框，修改搜索关键词</span></center>
+<p>如果我们希望找到搜索结果后，接下来就直接修改编辑器中的内容，那么就得将光标重新移动到编辑器当中，听起来就挺不方便的，是不是？</p>
+<p>这种情况下，我们不妨换一个快捷键。首先我们将光标移动到我们想要搜索的单词处，然后按下 “Cmd + G”（Windows 上是 F3），此时我们同样调出了搜索框，但与前面 “Cmd +F ”这个快捷键不同的是，这时光标依然是在编辑器当中，而不是在搜索框中。</p>
+<p>然后我们通过不断按下“Cmd + G”就能够在搜索结果之间自上而下地循环跳转，这时我们只需直接打字就能对代码进行修改了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/2c/b2/2ce9c1454ccdda41f65349403fcb46b2.gif" alt="" /></p>
+<center><span class="reference">“Cmd + G”直接搜索关键字并在编辑器内跳转，可以直接修改编辑器中的内容</span></center>
+<p>当然如果我们想要在搜索结果里自下而上地跳转，也是可以通过快捷键实现的，只需多增加一个 shift 键即可，也就是按下 “Cmd + Shift + G” （Windows 上是 Shift + F3）来实现自下而上的跳转。</p>
+<p>如果你的键盘上有功能键的话，那这个快捷键实现起来就更方便了。你可以通过 F3 和 “Shift + F3” 实现 “Cmd + G” 和 “Cmd + Shift + G” 一样的功能。</p>
+<p>下面我们再一起来看下这个搜索框中都有哪些功能。</p>
+<p>当我们在搜索框中打字的时候，搜索操作是自动触发的，而无需我们再按下回车键去手动地执行搜索这个操作。</p>
+<p>除了搜索纯文本以外，搜索框还支持多种不同的搜索方式。比如，在搜索框的最右侧，就有三个配置按钮。</p>
+<p><img src="https://static001.geekbang.org/resource/image/fa/ba/fa4be0c78df3dcde5512185f584989ba.png" alt="" /></p>
+<center><span class="reference">搜索框最右侧的三个配置按钮</span></center>
+<p><strong>第一个是大小写敏感</strong>。这个很好理解，就是在文档中搜索关键词的时候，搜索的结果是否要跟关键词大小写完全一致。默认情况下，VS Code 的搜索是不区分大小写的，也就是说哪怕大小写不一样，也会算到搜索结果里去。但如果我们不想要这个特性，就可以点击这个按钮，或者按下 “Cmd+Option+C” （Windows 上是 Alt + C）来关闭它。</p>
+<p><img src="https://static001.geekbang.org/resource/image/79/89/794c0ece3641a0a409482c248ac06c89.gif" alt="" /></p>
+<center><span class="reference">打开大小写敏感设置</span></center>
+<p><strong>第二个是全单词匹配</strong>。有的时候我们搜索的单词恰好是别的某个单词中间的一部分，如果我们不希望这样的结果出现在搜索结果中，那么就可以点击这个按钮或按下 “Cmd+Option+W”（Windows 上是 Alt + W）来关闭它。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c5/18/c5640fa152c2adb719128f7b353c5b18.gif" alt="" /></p>
+<center><span class="reference">打开全单词匹配设置</span></center>
+<p><strong>第三个，就是正则表达式匹配了</strong>。当我们点击这个按钮或按下 “Cmd + Option + R”（Windows 上是 Alt + R），就能够打开正则表达式的支持，然后在搜索框中输入正则表达式来搜索。要注意的是，编辑器中的这个搜索框，它里面的正则表达式使用的是 JavaScript 的正则引擎。</p>
+<p><img src="https://static001.geekbang.org/resource/image/04/f4/048f0b7a1e554aa9a0f86130a31efcf4.gif" alt="" /></p>
+<center><span class="reference">打开正则表达式匹配</span></center>
+<p>这三个功能的快捷键的配置，相信你已经看出其中的诀窍了，它们分别使用了 Case、Word 和 Regular Expression 的第一个字母作为快捷键的一部分，若你知道是这几个单词，那相信对应的快捷键你就不会容易忘了。</p>
+<p>除了这三个搜索设置以外，在搜索窗口关闭按钮的左侧，相信你还能看到一个特别的图标。那这个按钮的功能是什么呢？</p>
+<p>我们可以先选中一段文本，然后按下 “Cmd + F” 调出搜索框，这之后点击这个按钮，就可以将这段文本的范围设置为接下来的搜索区域。然后当我们在输入框里输入关键字后，编辑器就只会在这个区域里进行搜索。</p>
+<p><img src="https://static001.geekbang.org/resource/image/31/0a/31e1b32cf5e0142496d1e05b2eb1c20a.gif" alt="" /></p>
+<center><span class="reference">在文本选择范围内进行搜索</span></center>
+<h2>搜索配置</h2>
+<p>上面我们提到的功能，都是 VS Code 的默认行为。但也有部分用户不喜欢搜索框的一部分行为，比如说自动填充搜索关键词。那你可以打开设置，搜索 “editor.find.seedSearchStringFromSelection”来关闭它。</p>
+<p>也有个别用户觉得，如果选中了多行文本，那么当开始搜索时，应该自动地只在这几行代码里进行搜索。要达成这样的目的，你则需要打开设置“editor.find.autoFindInSelection” 。</p>
+<h2>单文件替换</h2>
+<p>在搜索到我们想要的结果之后，我们可以直接在文件中进行修改，也可以使用替换窗口进行批量替换。如果你在使用鼠标或者是触控板的话，只需按一下搜索窗口最左侧的箭头按钮即可打开替换框。</p>
+<p><img src="https://static001.geekbang.org/resource/image/2f/b9/2f9084b5ded6e893f20f3e2184d8a8b9.gif" alt="" /></p>
+<center><span class="reference">打开替换框</span></center>
+<p>替换框的后面，一共有两个按钮：第一个能够替换单个搜索结果，第二个则能够替换全部的搜索结果。它们对应的快捷键我就不多加赘述，我们只需把鼠标指针移动到它们上面，就能够看到了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/99/e6/99f5c4e521a9e4cccec96dd94d5e5ae6.gif" alt="" /></p>
+<center><span class="reference">替换框后面的两个按钮：替换单个和替换全部</span></center>
+<p>我们也可以通过快捷键直接调出替换窗口。最常用的命令就是按下 “Cmd + Option + F”（Windows 上是 Ctrl + H）键，这样当前光标所在的单词就会被用作为搜索关键词，同时编辑器将光标移动到替换窗口中，我们只需直接输入想要替换的关键词就行了，是不是很便捷呢？</p>
+<p><img src="https://static001.geekbang.org/resource/image/99/3e/9907692214c0ddbdaac04da5f881d23e.gif" alt="" /></p>
+<center><span class="reference">“Cmd + Option + F”直接调出替换窗口</span></center>
+<p>当然，如果你在书写完替换文本后，觉得搜索关键词需要修改，那你可以按下“Shift + Tab” 键将光标移动到上面的搜索输入框里。“Tab”和“Shift + Tab”键能够帮助你在这两个输入框直接进行跳转。</p>
+<h2>多文件搜索和替换</h2>
+<p>虽然在“基础入门”这个部分中，我们一直都在介绍编辑器的各种功能，但是，为了把搜索这样的一个功能介绍完整，我们今天就再讲一下在 VS Code 当中如何使用多文件搜索。</p>
+<p>多文件搜索的运行方法跟单文件搜索非常类似。单文件搜索，我们是通过按下“Cmd+ F”来调出搜索窗口的，而多文件搜索则是通过按下 “Cmd + Shift + F” （Windows 上是 Ctrl + Shift + F）来调出多文件搜索的视图。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b1/3f/b13750a49b4742440f35e880573f083f.gif" alt="" /></p>
+<center><span class="reference">“Cmd + Shift + F” ，调出多文件搜索视图</span></center>
+<p>在这样一个视图中，我们看到了熟悉的搜索输入框，以及大小写敏感、全单词匹配和正则表达式三个配置按钮。搜索框的左侧则是下拉按钮，点击即可调出替换框。</p>
+<p>默认情况下，当我们调出多文件搜索的视图时，VS Code 会在当前打开的文件夹下进行搜索。不过，要发挥多文件搜索的更大功效，我们可以通过书写配置来决定在哪些子文件夹下进行搜索，以及过滤掉哪些特殊的文件或者文件夹。</p>
+<p>要完成这样的配置，我们需要点击搜索框下三个点形状的图标，点开后，我们能看到两个输入框，它们的名字分别是“<strong>包含的文件</strong>” 和 “<strong>排除的文件</strong>”。这两个配置的书写格式是 glob，很多编程语言和配置都会使用 glob 来模糊匹配文件名和文件夹，估计你已经有所了解。而如果你不熟悉的话，就当作是课后作业了，这一定不是你最后一次需要书写 glob。</p>
+<h2>多文件搜索配置</h2>
+<p>多文件的配置比单文件里的搜索框还要更多一些，你可以打开设置搜索 “search” 看看都有哪些。这里我主要介绍两个被用户修改比较频繁的设置。</p>
+<p><strong>第一个是“search.collapseResults”</strong>。它是用来控制是否自动展开搜索结果。默认的配置是 “auto” 自动，  也就是说，VS Code 会根据搜索结果的多少来决定是否要将某个文件下的搜索结果展开，如果某个文件夹下的结果过多的话，就会将其暂时折叠，用户需要展开结果。我自己喜欢将其设置为 “alwaysExpand”，这样我每次都能直接看到结果了。</p>
+<p><strong>第二个是 “search.location” ，也就是多文件搜索视图的位置</strong>。默认情况下，搜索视图会出现在侧边栏。但是 VS Code 同样允许你把搜索视图放到底部面板中去，你只需将其修改为 “panel” 即可。相信很多用户都跟我一样，使用过非常多把搜索视图放在底部的开发工具，并且很习惯了，那这个设置就能够帮助到我们。</p>
+<p>最后，我再给 macOS 用户介绍一个 macOS 系统上特有的搜索功能，叫做<strong>共享搜索记录</strong>。这个功能需要通过设置 “editor.find.globalFindClipboard” 和 “search.globalFindClipboard” 打开。当这个功能被打开之后，我们在 VS Code 中的搜索关键词和搜索记录，都会被共享给系统，然后当我们打开别的支持这个功能的应用时，比如 Safari 或者 Chrome 浏览器，按下 “Cmd + F”键，就会发现同样的搜索关键词已经被自动填充到搜索框中了。</p>
+<h2>小结</h2>
+<p>我在今天文章的最开头说，一个功能丰富且快速的搜索，在很多情况下甚至比语言服务还要来得有用。这是因为，VS Code 里的多文件搜索太快了，就拿我自己来说，当我对某个类或者函数的名字有个大概的印象，我都会使用多文件搜索，进行模糊匹配，基本都能找到想要的结果。这比绞尽脑汁想出到底是哪个具体的类、名字是啥，然后使用语言服务来找到它在哪里被使用了，要快捷得多。虽说很暴力，但不得不说也很有效。</p>
+<p>好了，总结来说，今天我们一起研究了如何利用搜索这样一个最基础的功能，让我们在代码之间自由穿梭。不过要想掌握好搜索，你还得学好正则表达式，得学习 glob 语法，“课业压力”不小，加油！</p>
+<hr />
+<p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI8qNibLrzJyrNv6C3BKRm0ibbibrSrcLxiaWOicQUEcUuk75hG5tdCnAYiapHrHuSdxyXhp1B5ZDKiahHIg/0" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">王永旺</span>
+                            </div>
+                            <div class="bd">mac 下 按cmd+G 只有第一次会把选中的单词填充到搜索框，之后就不会被填充了。cmd+F是好用的，每次都能填充。这个是bug么？ <br></div>
+                            <span class="time">2018-10-09 15:40</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这确实是个 bug，good catch ，谢谢。我得修</p>
+                                <p class="reply-time">2018-10-10 10:19</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c5/37/bb5465cf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">冰山北极熊</span>
+                            </div>
+                            <div class="bd">老师，windows10的多文件搜索按钮没有生效，是什么原因呢？CTRL+SHIFT+F <br></div>
+                            <span class="time">2018-10-09 13:28</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">按下快捷键没有任何反应吗</p>
+                                <p class="reply-time">2018-10-10 10:11</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/7d/75/c812597b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">yulibaozi</span>
+                            </div>
+                            <div class="bd">设置选项 editor.find.autoFindInSelection 和 editor.find.seedSearchStringFromSelection 在文中的位置放反了吧 <br></div>
+                            <span class="time">2018-10-09 10:41</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">谢谢提醒，从编辑器里复制出来放错位置了</p>
+                                <p class="reply-time">2018-10-10 10:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/4f/6fb51ff1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">一步</span>
+                            </div>
+                            <div class="bd">对 Vscode 的搜索更了解了 <br></div>
+                            <span class="time">2018-10-09 10:07</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/cd/37/daadbe17.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">阿弥陀佛么么哒</span>
+                            </div>
+                            <div class="bd">我的编辑器必须先使用cmd+f 才能使用cmd+g，这样还不如直接enter <br></div>
+                            <span class="time">2018-10-26 10:44</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/bd/ec/cc7abf0b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">L</span>
+                            </div>
+                            <div class="bd">搜索的exclud设置失效了是为什么？现在总是搜到了node_modules里面的内容<br>  &quot;search.exclude&quot;: {<br>      &quot;**&#47;.git&quot;: true,<br>      &quot;**&#47;node_modules&#47;&quot;: true,<br>      &quot;**&#47;bower_components&quot;: true,<br>      &quot;**&#47;tmp&quot;: true,<br>      &quot;**&#47;dist&#47;&quot;:true<br>  }<br>在工作区跟用户这里都设置了 <br></div>
+                            <span class="time">2018-10-23 15:55</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/86/fb/4add1a52.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">兵戈</span>
+                            </div>
+                            <div class="bd">搜索功能果然强大且实用！ <br></div>
+                            <span class="time">2018-10-15 19:23</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c5/37/bb5465cf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">冰山北极熊</span>
+                            </div>
+                            <div class="bd">是的，老师 <br></div>
+                            <span class="time">2018-10-10 10:15</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/7e/97/746261a8.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Cody Yang</span>
+                            </div>
+                            <div class="bd">有没有什么办法在 VS Code 中在不使用 vim 插件的情况下，像 vim 一样进行行内搜索并跳转（normal 模式下  f + 关键词首字母）？ <br></div>
+                            <span class="time">2018-10-09 20:35</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b3/26/cc28a05a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">悬炫</span>
+                            </div>
+                            <div class="bd">如果我要在编辑器已经打开的所有文件里面搜索关键字，我该怎么做呢？（不是当前编辑的文件，而是在编辑器中已经打开的所有文件） <br></div>
+                            <span class="time">2018-10-09 14:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这个 VSCode 还不支持</p>
+                                <p class="reply-time">2018-10-10 10:12</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c8/f0/a37daf86.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">👹</span>
+                            </div>
+                            <div class="bd">搜索配置里面那两个配置反了 <br></div>
+                            <span class="time">2018-10-09 11:38</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">谢谢啦 马上修改</p>
+                                <p class="reply-time">2018-10-10 10:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b3/26/cc28a05a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">悬炫</span>
+                            </div>
+                            <div class="bd">也有个别用户觉得，如果选中了多行文本，那么当开始搜索时，应该应该自动地只在这几行代码里进行搜索。要达成这样的目的，你则需要打开设置editor.find.seedSearchStringFromSelection<br><br>这句话中editor.find.seedSearchStringFromSelection应改为editor.find.autoFindInSelection<br><br><br><br> <br></div>
+                            <span class="time">2018-10-09 10:16</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">已经修改了 谢谢</p>
+                                <p class="reply-time">2018-10-10 10:33</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

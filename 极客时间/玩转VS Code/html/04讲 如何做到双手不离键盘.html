@@ -1,0 +1,440 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ群170701297</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                04讲 如何做到双手不离键盘
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/08/44/0812cd3f700f747d76c18d7b030a6c44.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>要想提高编码效率，你首先要掌握基本的文本操作快捷键。Vim 编辑器就因为其高效且独特的文本操作方式而知名。</p>
+<p>2016年的时候，我同时在开发维护 VS Code 中的编辑器以及 Vim 插件，经常在这两套完全不同的快捷键之间切换。我的切实感受是，熟记 VS Code 的这套快捷键后，很多核心操作的效率是可以和 Vim 匹敌的，而且很多 VS Code 不支持的 Vim 快捷键也可以通过插件的方式来实现。</p>
+<h2>双手不离键盘</h2>
+<p>关于快捷键插件的开发，我在后面会讲，今天先来谈一谈核心的键盘操作：<strong>光标的移动、文本的选择、文本的删除，以及如何为编辑器命令绑定快捷键</strong>。</p>
+<h3>1. 光标移动</h3>
+<p>移动光标最常用的就是方向键，但是方向键每次只能把光标移动一个位置，可以说是一种相对低效的方式。试想你打算把光标移动到当前行的行末，在没有鼠标的情况下，你可能需要按下右方向键几秒甚至十几秒钟。</p>
+<p>不过，不用担心。虽然 VS Code 是基于 Web 技术开发的非原生应用，但是它支持针对单词、行、代码块、整个文档等多种光标移动方式。</p>
+<p>今天，我会借助一段非常简单的 5 行 JavaScript 代码来讲解这些操作。</p>
+<pre><code>function foo() {
+  bar();
+}
+
+foo();
+</code></pre>
+<p><strong>首先是针对单词的光标移动</strong>。这个你应该比较熟悉，绝大多数原生的编辑应用和文本框都支持。这也是我自己最常用的一组快捷键。</p><!-- [[[read_end]]] -->
+<p>下面这张图显示，第一行代码中的第一个单词是 function，一共8个字符，光标的位置在第五个字符 t 的后面。当你想把光标直接移动到整个单词，也就是 function 的前面，你只需按下 Option（Windows 上是 Ctrl 键）和左方向键。相反，如果要把光标移动到单词的末尾，只需要按下 Option 和右方向键就好了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/9c/9e/9c94073cf27382f45070564cbbfc729e.gif" alt="" /></p>
+<center><span class="reference">按下 Option 和左方向键，把光标移动到当前单词的最前面</span></center>
+<p>我们都知道，一直按着方向键，光标就可以不停地，一个字符一个字符地在文档中移动。但如果你<span class="orange">同时按住 Option 和方向键，那么光标移动的颗粒度就变成了单词，你就可以在文档中以单词为单位不停地移动光标了</span>。</p>
+<p><img src="https://static001.geekbang.org/resource/image/aa/36/aa6236f011422c0279871390944cde36.gif" alt="" /></p>
+<center><span class="reference">持续按下 Option 和右方向键，在文档中以单词为单位不停移动</span></center>
+<p><strong>第二种方式是把光标移动到行首或者行末</strong>。比如第一行代码是 function foo() {，你只需按住 Cmd + 左方向键（Windows 上是 Home 键），就可以把光标移动到了这行的第一列；而如果你按住 Cmd 和右方向键（Windows 上是 End 键），光标就会被移动到 { 的后面。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d2/88/d2de827a337e5881e4a8e4728c4da388.gif" alt="" /></p>
+<center><span class="reference">按住 Cmd 和左右键把光标移动到行首或者行尾</span></center>
+<p><strong>接下来一种是对于代码块的光标移动</strong>。很多编程语言都使用花括号将代码块包裹起来，比如 if、for 语句等，你很可能会希望通过一个快捷键，就能实现在代码块的始末快速跳转。比如在这5行代码示例中，第一行到第三行代码是函数 foo 的定义，由一对花括号包裹起来，当你把光标放在花括号上时，只需按下 Cmd + Shift + \（Windows 上是 Ctrl + Shift + \），就可以在这对花括号之间跳转。</p>
+<p><img src="https://static001.geekbang.org/resource/image/89/fe/890576ecffacc7102b7ecb3381550ffe.gif" alt="" /></p>
+<center><span class="reference">按下 Cmd + Shift + \ 在一对花括号之间跳转</span></center>
+<p><strong>最后一种基础的光标操作就是移动到文档的第一行或者最后一行</strong>，你只需按下 Cmd 和上下方向键即可（Windows 上是 Ctrl + Home/End 键）。</p>
+<p><img src="https://static001.geekbang.org/resource/image/27/ff/2717787e8f8340b0e629534237ea88ff.gif" alt="" /></p>
+<center><span class="reference">按下 Cmd 加上下方向键跳转到文档第一行或者最后一行</span></center>
+<h3>2. 文本选择</h3>
+<p>掌握了上面的快捷键之后，你还可以非常轻松地掌握文本选择的操作。因为对于基于单词、行和整个文档的光标操作，<span class="orange">你只需要多按一个 Shift 键，就可以在移动光标的同时选中其中的文本。</span></p>
+<p>比如说，你把光标放在第一行代码第四个字符 c 的后面，按下 Option 加左方向键，你就可以把光标跳转到 function 这个单词的开头，这个在前面我有讲过。如果你同时按下 Option + 左方向键+ Shift 键，那么你就能把光标到 function 单词开头之间的所有字符全部选中，也就是选中 func 这四个字符。</p>
+<p><img src="https://static001.geekbang.org/resource/image/f9/e3/f9996b47d7cc567a1f7cfc4e51616be3.gif" alt="" /></p>
+<center><span class="reference">同时按住 Option + 左方向键 + Shift 键，选中当前单词开头到光标之间的所有字符</span></center>
+<p>同理，假设说光标放在第二行，然后你按下 Cmd、Shift 和上下方向键，就能把第二行光标到第一行，或者最后一行之间的字符选中。是不是很简单呢？</p>
+<p><img src="https://static001.geekbang.org/resource/image/6a/b9/6aceba0d33cac46f31529f877c529eb9.gif" alt="" /></p>
+<center><span class="reference">macOS: Cmd + Shift + Up/Down</span></center>
+<p>对于代码块的文本选择， VS Code 默认没有绑定快捷键。那么，是不是就没办法了呢？</p>
+<p>当然不是。你可以先使用命令面板找到命令 “选择括号所有内容” 并运行。后面我还会讲述如何为一些未绑定快捷键的命令绑定自己熟悉的快捷键，请稍安勿躁。</p>
+<p><img src="https://static001.geekbang.org/resource/image/9d/ed/9d5c9cd0e8b248444ac16bf7447287ed.gif" alt="" /></p>
+<h3>3. 删除操作</h3>
+<p>了解了光标移动和文本选择，再来看删除操作，就变得相对简单了。</p>
+<p>比如你想把当前行中光标之前的文本全部删除，就可以先选中这段文本（Windows/Linux: Home + Shift，macOS: Cmd + Left + Shift )，然后再按删除键。不过对于频繁使用的删除操作，你肯定希望单次操作就可以完成任务，而不是重复地选择文本然后删除，那么你需要记住下面几个命令。</p>
+<p>(1)假设你把光标放在第二行代码的中间位置，然后按下 Cmd 和 <span class="orange">Backspace（MacOS上就是“fn + delete”的组合</span>，Windows 上未绑定快捷键，可以打开命令面板运行“删除右侧所有内容”），就能够把第二行代码光标后（右侧）的字符全部删掉。</p>
+<p><img src="https://static001.geekbang.org/resource/image/aa/b6/aa97cec11e4234de62f7c104d91177b6.gif" alt="" /></p>
+<center><span class="reference">按下 Cmd + Backspace 删除当前行光标后所有文本</span></center>
+<p>(2)按下 Cmd 和 Delete 键则是删除当前行中光标前（左侧）的所有内容（Windows 上未绑定快捷键，可以打开命令面板运行“删除左侧所有内容”）。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d3/ff/d3e7e86e5c3589ae027418f179ee71ff.gif" alt="" /></p>
+<center><span class="reference">按下 Cmd + Delete 删除当前行光标前的所有文本</span></center>
+<p>(3)删除单词内的字符与此类似。假设把光标放在第一行第四个字符 c 的后面。Option 加左方向键把光标<strong>移动</strong>到 function 这个单词的开头，Option加左方向键再加 Shift 即可<strong>选中</strong> func 这四个字符，而Option 加 Delete 则会<strong>删除</strong> func 这四个字符。这里你可能看出来了，这些快捷键共同的是 Option 键，然后通过按下 Shift 或者 Delete 键，来达到不同的效果。</p>
+<p><img src="https://static001.geekbang.org/resource/image/45/ec/45390489d815350cf3f49ed09229edec.gif" alt="" /></p>
+<center><span class="reference">Option + Delete 把当前单词里光标前的字符删除</span></center>
+<p>(4)相反地，Option 加 Backspace（MacOS上就是“fn + delete”的组合） 则会删除 function 的后四个字符 tion。</p>
+<p><img src="https://static001.geekbang.org/resource/image/47/1c/4774c8e20f0719d815242d827f44871c.gif" alt="" /></p>
+<center><span class="reference">Option + Backspace 把当前单词里光标后的字符删除</span></center>
+<h3>4. 自定义快捷键</h3>
+<p>前面我们提到，VS Code 内置了很多的命令，但是并没有为每个命令都提供一个快捷键，毕竟快捷键的组合总是有限的。不过 VS Code 提供了快捷键的修改和自定义功能，这样<span class="orange">你就可以根据自己的使用习惯，给自己常用的命令指定顺手的快捷键。</span></p>
+<p>首先你可以打开命令面板（你还记得它的快捷键不？），搜索“打开键盘快捷方式”然后执行，这时你将看到相对应的界面。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c6/9b/c61523aaf4e87d2d216339eb9463f49b.png" alt="" /></p>
+<center><span class="reference">键盘快捷方式界面</span></center>
+<p>然后通过搜索找到你希望修改快捷键的命令，双击，接下来你只要按下你期望的快捷键，最后按下回车键就可以了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/2e/73/2eb309a2acf1b915ce01598aa676f873.png" alt="" /></p>
+<center><span class="reference">修改快捷键界面</span></center>
+<p>比如，你可以搜索“选择括号内所有内容”，双击，按下&quot;Cmd + Shift + ]&quot;，然后按下回车，这个快捷键就绑定上了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/10/5d/106f376ae125a8421a3ab4bf3f34a25d.gif" alt="" /></p>
+<center><span class="reference">按下 Cmd Shift ] 选中括号内所有内容</span></center>
+<p>有了这个快捷键，你就不需要打开命令面板找到这个命令再执行了。看到这里你可能会问，“如果我按下某个快捷键所绑定的命令不是我想要的，但是我又不知道这个命令的名字怎么办？”</p>
+<p>VS Code 的快捷键修改界面已经考虑到了这一点，你可以在搜索框内搜索你使用的快捷键，然后就可以看到这个快捷键当前对应的命令是哪个。</p>
+<p><img src="https://static001.geekbang.org/resource/image/07/2e/0708bbc930900f45f4214a8aa829cd2e.gif" alt="" /></p>
+<center><span class="reference">快捷键搜索界面</span></center>
+<p>比如，在上面的示例里，你通过搜索 “cmd+backspace”这组快捷键，发现它对应的命令是“删除左侧所有内容”，但你不希望使用这个命令，那你就可以通过右键选择删除该快捷键的绑定。</p>
+<h2>小结</h2>
+<p>今天这篇文章主要讲解了光标的移动、文本的选择和删除所对应的快捷键，并且研究了如何修改和自定义快捷键。你不妨试着刻意地把这些快捷键运用到日常的编码中去，刚开始肯定会慢一些，不过你的肌肉肯定能迅速记住它们。</p>
+<p>如果你早就熟悉了这些快捷键，那么不妨试试对快捷键进行修改，我相信 VS Code 内置的快捷键绑定不总是完美的，希望你能找到你自己的最佳实践。</p>
+<p>还是老话，我在评论区等你，欢迎交流讨论。</p>
+<hr />
+<p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7e/5b/35005438.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">甄心cherishm</span>
+                            </div>
+                            <div class="bd">Windows用户看mac下的快捷键的使用说明...有点精神分裂... <br></div>
+                            <span class="time">2018-09-20 13:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我们文章统一给大家标识下</p>
+                                <p class="reply-time">2018-09-21 16:26</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/6a/74/7041b928.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">坚硬</span>
+                            </div>
+                            <div class="bd">这一集，让hhkb很是尴尬呀。 <br></div>
+                            <span class="time">2018-09-21 09:28</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/82/6c/7124a89d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">涛</span>
+                            </div>
+                            <div class="bd">感觉一套vim走天下 <br></div>
+                            <span class="time">2018-09-20 08:53</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">必须的</p>
+                                <p class="reply-time">2018-09-20 09:57</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/9e/e8/fdeb58a0.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">caimaoy</span>
+                            </div>
+                            <div class="bd">vim 党 ＋ HHKB 无力修改。。。 其实我还很喜欢Emacs 的 移动和删除方式  <br></div>
+                            <span class="time">2018-09-20 09:53</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/58/93/e94b727f.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">思考问题的熊</span>
+                            </div>
+                            <div class="bd">建议涉及到快捷键差异明显的地方做好Windows同时加以备注和说明，对读者应该会更友好些 <br></div>
+                            <span class="time">2018-09-20 09:51</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">没问题</p>
+                                <p class="reply-time">2018-09-20 10:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/4f/6fb51ff1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">一步</span>
+                            </div>
+                            <div class="bd">哈哈，我把删除的快捷键改为：delete+r删除右边的，delete+l删除左边的,cmd+delete删除一行 <br></div>
+                            <span class="time">2018-09-20 08:40</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">改成 h 和 l 是不是更有意思</p>
+                                <p class="reply-time">2018-09-20 09:59</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b3/26/cc28a05a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">悬炫</span>
+                            </div>
+                            <div class="bd">vscode有没有快捷键能实现在类似于<br>&lt;div&gt;&lt;&#47;div&gt;这种元素开闭标签之间的快速跳转呢？atom上是ctrl+m，vscode上我一直没找到 <br></div>
+                            <span class="time">2018-09-20 08:55</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这是个很好的 feature request</p>
+                                <p class="reply-time">2018-09-20 09:59</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7a/86/655307b3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">江湖小虾</span>
+                            </div>
+                            <div class="bd">分享一下mac控制光标的快捷键<br>ctrl + p  上<br>ctrl + n  下<br>ctrl + b  左<br>ctrl + f   右<br>ctrl + a   将光标移至行首<br>ctrl + e   将光标移至行尾<br>…… <br></div>
+                            <span class="time">2018-10-14 21:43</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/ee/44/26ac883e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">桃翁</span>
+                            </div>
+                            <div class="bd">老师，我是不是在用vim快捷键，这一节就不用学了 <br></div>
+                            <span class="time">2018-09-21 09:42</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/df/63/8b022d3a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">fengtalk</span>
+                            </div>
+                            <div class="bd">Mac OS下的delete键在电源键下方。 <br></div>
+                            <span class="time">2018-09-24 14:53</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/4a/9a/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">九哥</span>
+                            </div>
+                            <div class="bd">vscode 有什么好的 vim 插件吗 <br></div>
+                            <span class="time">2018-10-10 20:20</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/4f/04/613c2611.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小珂</span>
+                            </div>
+                            <div class="bd">方向键还是不够快捷, 如何使用ihjk代替方向键 <br></div>
+                            <span class="time">2018-09-27 01:11</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">要使用 hjkl 来代替方向键，那就得区分开编辑模式和鼠标移动，Vim 插件是一种做法，我自己会跟ctrl 键组合使用，这样就区分开了。</p>
+                                <p class="reply-time">2018-09-28 08:26</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/6d/38/580faa2e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">腾松</span>
+                            </div>
+                            <div class="bd">总结一下：<br>一、行内操作快捷键可以拆分出三个维度来理解<br>1、操作内容：移动（无），选择（⇧），删除（⌫）<br>2、操作方向：移动和选择都是左右方向键（→、←），删除的方向键（⌫、 fn⌫）<br>3、操作范围：单字符（无），单词（⌥），行（⌘）<br>因此，针对行内的操作的快捷键从以上三个维度进行组合即可。<br><br>二、跨行操作<br>操作范围：代码块（⌘⇧），html标签块（不支持），文档（⌘）<br>代码块的移动 ⌘⇧\<br>代码块的选择 ⌘⇧]  （需要自定义）<br>代码块的删除 目前看来只能先选择，在⌫删除<br><br>文档的移动 ⌘↑  ⌘↓<br>文档的选择 ⌘⇧↑  ⌘⇧↓<br>文档的选择 目前看来只能先选择，在⌫删除<br><br>记得老师在开篇词中讲过，快捷键是尤其内在逻辑的，不知道是否可以如此总结，有没有更恰当的表述来帮我我们理解这些。 <br></div>
+                            <span class="time">2018-09-25 22:12</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/93/4a/de82f373.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">AICC</span>
+                            </div>
+                            <div class="bd">mac pro上没有delete键。。。作者确一直提到detele <br></div>
+                            <span class="time">2018-09-23 22:55</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">那你的 = 键旁边是什么？</p>
+                                <p class="reply-time">2018-09-25 11:01</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/4c/b5/ae6ee5c2.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">异刃剑主</span>
+                            </div>
+                            <div class="bd">要用到方向键啊……我这种一百年手都不会伸到那个位置的人，无法理解了 <br></div>
+                            <span class="time">2018-09-23 20:07</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">VSCode 的默认快捷键里很多使用了方向键，你可以绑定成别的</p>
+                                <p class="reply-time">2018-09-25 11:04</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/cc/94/91ce97ee.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">henry</span>
+                            </div>
+                            <div class="bd">教程是用vim插件的快捷键还是VS code自带的快捷键？ <br></div>
+                            <span class="time">2018-09-21 19:19</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/cb/7f/47ee1472.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jarric</span>
+                            </div>
+                            <div class="bd">建议老师写清楚不同平台下的键位对应关系啊，毕竟用mac的是少数啊，谢谢 <br></div>
+                            <span class="time">2018-09-21 07:23</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">已经和编辑商量了，后面会在文中标识的</p>
+                                <p class="reply-time">2018-09-21 16:25</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/74/10/c273af57.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">码农story</span>
+                            </div>
+                            <div class="bd">老师请教一下，我在windows上有些快捷键并不起作用，比如home+shift，是什么原因呢？ <br></div>
+                            <span class="time">2018-09-20 10:36</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/4f/6fb51ff1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">一步</span>
+                            </div>
+                            <div class="bd">为什么删除改为h和l更有意思呢？l我知道代表左边，h是代表什么意思呢？不会是hand吧，delete+l+h代表删除左手边呢？ <br></div>
+                            <span class="time">2018-09-20 10:04</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/5a/76/3f8dcda6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈亦凡</span>
+                            </div>
+                            <div class="bd">这节的字符操作vim来得更快更方便些，操作幅度也小 <br></div>
+                            <span class="time">2018-09-20 09:11</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

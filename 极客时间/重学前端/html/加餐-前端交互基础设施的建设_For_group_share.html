@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>加餐-前端交互基础设施的建设</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>加餐-前端交互基础设施的建设</h1>
+<p><video preload="none" controls=""><source src="https://media001.geekbang.org/customerTrans/6f475a24b1498919eb0a38bef256c23a/2ba280a8-168673570be-0000-0000-01d-dbacd.mp4" type="video/mp4"><source src="https://media001.geekbang.org/9831a6108af1414fac15b29280985b9a/ad9e636417e04567a4df0b71bca07bb8-694dc6b55c8aa0b8583001c73c094855-sd.m3u8" type="application/x-mpegURL"><source src="https://media001.geekbang.org/9831a6108af1414fac15b29280985b9a/ad9e636417e04567a4df0b71bca07bb8-f84b49730144dc5dcebe88f1c5b9a07e-hd.m3u8" type="application/x-mpegURL"></video></p><h2>分享内容大纲</h2><p>Vue、React等现代前端框架很好地解决了组件化和数据视图解耦问题。而对前端来说，新交互永远是花费时间最多的工作，新交互也是前端团队的自然价值和核心竞争力之一。</p><p>在这次话题中，我会分享在交互的基础设施的建设上的一些思考和实践，包括图形图像基础、事件机制与视图层架构模式、交互管理框架等内容。</p><p><img src="https://static001.geekbang.org/resource/image/79/1c/7917180b45e4d591bf3aaaada17c911c.jpg" alt=""></p><p>首先我们要了解一下历史。在70年代，大概是70年代的尾巴，1979年左右，有了特别有名的，MVC架构。</p><p>MVC之后，经过了差不多十几年的发展，到了90年代，准确地说应该是95年左右的时候，这个有一个公司的CTO，叫Mike，Mike在MVC的基础上，提出来了MVP。</p><p>到了 2005年，2005年微软的一个架构师，做WPF的，提出了MVVM模式。</p><p>2014年左右的时候，出现了FLUX，这个是Facebook为了它的JSX和React提出的一种模式。</p><p>后来隔了短短的一年，2015年，同样是在React社区，出现了REDUX。</p><p>对于前端来说，我们为用户创造价值才是特别回答的一个问题，这么多年过去了，前端到底为用户创造了什么价值呢？</p><p><img src="https://static001.geekbang.org/resource/image/b4/35/b46a898e8a5bc31280f8754cdfe1ed35.jpg" alt=""></p><p>这是70年代，施乐公司做的一个软件管理的流程图软件，那个时代，整个的界面就是这个样子，施乐已经算比较先进的了。</p><!-- [[[read_end]]] --><p>再到90年代，当时这个画面还是很惊艳，按钮键是立体的。现在来看这个东西就有不那么美观了。</p><p>2006年左右的时候，Vista的界面已经开始有了一个非常大的变化了，这时已经是设计师在主导这个界面的了，但是性能并不佳。</p><p>再之后，手机出现了，比如iPhone的界面，这时不但交互模式发生了巨大的改变，而且屏幕也变了，甚至我们熟悉的鼠标不见了，变成了触屏。虽然两者之间操作上有一定的相似，但是变化还是非常的。</p><p><img src="https://static001.geekbang.org/resource/image/25/30/25648bd93fef8871c1eccc612f7f3530.jpg" alt=""></p><p>视图的职责也在演变，70年代，视图的职责是：任何一个视图，永远不应该知道用户的输入。</p><p>我们这个时代的视图则既负责输入，也负责输出，并且与Model之间有一个交互。</p><p><img src="https://static001.geekbang.org/resource/image/cb/ab/cb57a540ec3779002c7c31d0960005ab.jpg" alt=""></p><p>计算机的功能也在演变。70年代，计算机主要用来计算。</p><p>我们今天计算机主要用来上网，基本上，大家的计算机都是24小时联网的，你的手机也是24小时联网的，所以计算机的职责在发生变化。</p><p>这个变化对于UI有很大的影响，1970年的那个MVC那篇论文里的图，model很大，view很小，而到了2018年，今天我们很多的model，都是放在服务端的，而今天model的大小已经不是说一台机器上能去存的，你存在本地的只是视图展现一点点的model，这个是很小的一部分的东西。而同时view却越来越重要了。</p><p><img src="https://static001.geekbang.org/resource/image/62/0e/6287d6cb49f51c13b2ba89bd121cc30e.jpg" alt=""></p><p>我们来看一下视图的技术。</p><p>从最底层的有很多人是做显卡和drivers，有这样的大佬人才。</p><p>还有现在非常流行的OpenGL等的GL层，做这一层的人非常专业，基本上都集中在各种大公司，最近苹果和安卓还竞争，推出了新一代的这个GL架构。</p><p>还有一个这个Draw层，这一层的内容非常多，基本上就爆发了，skia是安卓的底层绘制系统，graphics.h是最早的C语言带的一个图形库，基本上相当于一个基础库，还有很多3D引擎。</p><p>UI Framework这一层，它提供了一套基本的UI结构，有了绘制层， 一般人都不会在绘制层直接去工作，需要有些控件，这层有我们比较熟悉的Dom。GJI是Windows的图形系统，WPF也是Windows的图形系统。</p><p>最上面其实会有一些DSL，这是描述图形的语言，WPF对应的就是XAML，JSX对应的是React，HTML大家都知道了，想说这个视图技术变得越来越复杂，</p><p><img src="https://static001.geekbang.org/resource/image/ae/20/ae5b0f0cb1e5e42370d97fa518307a20.jpg" alt=""></p><p>那么我们的主战场是怎么样的，我们可以看一下淘宝终端技术在各层上的分布状况。</p><p>交互体系其实是这里面的一部分，但它不是这里面的全部，我觉得我们要讲这个交互呢，我们还是要做一下抽象的，我们要认识到，交互的本质是什么。</p><p><img src="https://static001.geekbang.org/resource/image/7b/18/7b1cbcd358431b45ef23fc13f4732e18.jpg" alt=""></p><p>交互的本质是什么呢，我画了一个手和一个眼睛，其实无非是操作和看。</p><p>操作最常见的一个抽象的模式就是事件。这个比如说这个touch-screen事件，陀螺仪事件，或者是时钟芯片触发的持续事件，这些作为输入。</p><p>输出一定是通过属性的形式体现的，在任何一个现在的UI框架下，都是通过属性的方式反映出来的。transform是变形，opacity是透明度，color是颜色，这就是一个比较完整的抽象了。你在任意的输入和输出连成一条线后，它都会产生一种效果。</p><p><img src="https://static001.geekbang.org/resource/image/59/8e/597261cebd9e48d115f6c8ae2a9b098e.jpg" alt=""></p><p>不过直接把陀螺仪得到的参数输入到transform里肯定是不行的，它需要有个关系，我们在这里面选择了Expression。我们可以用JavaScript去做计算。我觉得这是一个完备的抽象。</p><p><img src="https://static001.geekbang.org/resource/image/cb/ee/cba8a0fac235bd1186a9a470b50564ee.jpg" alt=""></p><p>不过这里还有一个坑是需要迈过去的，对计算机理解的输入跟人类理解的输入有非常大的偏差，对计算机来说呢，有多少种硬件，就有多少种输入。</p><p>我们发现输入非常复杂，在做基础设施建设的时候，我们在输入上面其实投入了很大的精力，最后出来的是一个更接近于人脑概念的一系列的输入。</p><p><img src="https://static001.geekbang.org/resource/image/ff/95/ff41ffacad1377e0caf5a3890cf17f95.jpg" alt=""></p><p>比如说，touch和gesture，我们知道触屏其实是触屏事件，触屏事件其实非常简单，只有四个，touch start，touch  move，touch  end，touch cancel则不太常用。</p><p>比如我想摁或者点一个东西，它都是是touch start，touch  move，touch  end，如果你要监听这些事件，中间的判断很繁琐，作为交互的基础设施，我们不可能提供这些给我们的前端工程师使用，我们肯定做一些操作。</p><p>比如手指移动10px，我们就认为这个touch  start到了pan  start，这个后面就是pan  move，pan  end这样，</p><p>手指很快离开，那么它就会产生一个tap事件。</p><p>如果超过1.5秒那就一个press start，如果手指没移呢，就会产生一个press end，如果手指移了，它还会产生一个pan start。所以gesture已经比touch复杂了很多了。</p><p><img src="https://static001.geekbang.org/resource/image/0e/f6/0edd194d6926619cf994444f9b4b54f6.jpg" alt=""></p><p>scroll就在gesture的基础上又复杂了一层，它不但手指在屏幕的时候响应，手指离开屏幕的时候它也响应，比如说轮播，它是一个变形的轮播，它在轮播的过程中，不但产生位移，还会产生大小的变化，这就让用户更舒服一些。</p><p>还有一个滚动导航，一边滚动出来一个导航，近年来还有一个交互设计，不是滚动到某个位置导航出来，而是一直再往下滚动的时候它不出来，突然往上滚动一下，导航就出来。这个部分还有更难的设计交互，所以我们还需要在scroll的基础上再做一层。</p><p><img src="https://static001.geekbang.org/resource/image/55/df/55553181bd8ff7feaebc7a5afda03cdf.jpg" alt=""></p><p>我们再来看陀螺仪，它只提供了三个分量，并且它是0到360度，所以如果不经过任何处理，前端工程师基本上是没有办法用的，比如在某个角度，它可能会突然从0跳变成360度，这个在数据计算时候非常可怕。</p><p>所以我们建立这样一个模型，我们把手机看作这样一个立方体，去计算在空间中对立方体产生的旋转效果，我们拿着立方体上面的一个点呢，去做我们定位的一个依据。</p><p><img src="https://static001.geekbang.org/resource/image/40/a6/406d0e28e45424ad7a5f7f55b0def8a6.jpg" alt=""></p><p>因为我们在用Weex，所以有一个Native跟JS通讯的问题，比如说从gesture事件到gesture handler，这一步就会到JS去执行，图中我们可以看到这个线，跨过中间JS和Native的分界线，跨越地非常频繁。</p><p>假如一个Touch  move事件或者Pan  move事件，你手指每移动一小点它都会触发一次JS跟Native的一个跨语言通讯，所以说整个的性能会非常差，最后基本上会有5毫秒到10毫秒左右的一个延迟，有60帧的话，每一秒钟有300毫秒被占掉了，帧率就下去了。</p><p><img src="https://static001.geekbang.org/resource/image/ce/66/cec057f7bc548c01e0ef3bafa6975766.jpg" alt=""></p><p>这就是我们最初开始做Binding模式的原因。我们的Binding模式，expression传递一次给Native，然后它会去做大量的绑定，所有的过程都是由Native来完成的，Native做完了以后，还需要再更新一下VDOM，所以这操作就完全由Native完成，通讯次数就降下来了。除此之外，我们还额外收获了性能上的收益。</p><p><img src="https://static001.geekbang.org/resource/image/3f/c5/3f1c0f0a6313fac231e3328e0a07f7c5.jpg" alt=""></p><p>我们的结论，其实淘宝一个交互体系是这样的，是以Binding为核心，下面的平台支持了weex，Web，React Native。DSL上面，我们支持了View和Rax两种，在上面，是由我们自己建的Components体系。</p><p><img src="https://static001.geekbang.org/resource/image/c2/92/c25d8385b4fba22294bbab5e30b95a92.jpg" alt=""></p><p>最后，还有一个展望，我们用绘制层相结合，会有更多的想象空间，我们通过各种各样的输入、手势、时间、陀螺仪，我们其实可以去控制矢量图，也可以去控制绘制，这些都是前端未来的想象空间。</p><p>如果你对今天的内容有所思考，可以给我留言，我们一起讨论。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            爱微笑的酒窝  2019-05-05 09:59:33
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            这一餐吃的饱，不容易消化 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

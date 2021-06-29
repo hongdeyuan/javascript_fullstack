@@ -1,0 +1,235 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                20讲概率基础（上）：一篇文章帮你理解随机变量、概率分布和期望值
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/75/92/75408056c491011a6fc9bb2bdf150d92.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>相信你对变量这个概念并不陌生，数学方程式和编程代码里经常会用到变量。那什么是变量呢？我们在概率中常说的<strong>随机变量</strong>（ random variable）和普通的<strong>变量</strong>（variable）又有什么不同呢？</p><p>这些问题其实很简单，我一说你就明白了。</p><p>在没有发生运算之前，普通变量的值并不会发生变化，也就是说，它可以取不同的值，但是一旦取值确定之后，它总会是一个固定的值，除非有新的运算操作。而随机变量的值并不固定，比如说，某个随机变量可能有10%的概率等于10，有20%的概率等于5，有30%的概率等于28等等。</p><p>我们上节说了，随机变量根据其取值是否连续，可分为离散型随机变量和连续型随机变量。举几个例子，抛硬币出现正反面的次数以及每周下雨的天数，都是离散的值，所以对应的随机变量为离散型。而汽车每小时行驶的速度和银行排队的时间，都是连续的值，对应的随机变量为连续型。换句话，从计算的角度来说，我们可以直接求和得出的，就是“离散的”，需要用积分计算的，就是“连续的”。</p><p>而随机变量的取值对应了随机现象的一种结果。正是结果的不确定性，才导致了随机变量取值的不确定性，于是我们就引入了概率。我们可以说，每种值是以一定的概率出现的。</p><!-- [[[read_end]]] --><h2>概率分布</h2><p>随机变量的每种取值的出现都遵从一定的可能性，把这个可能性用具体的数值表示出来就是<strong>概率</strong>。如果将随机变量所有可能出现的值，及其对应的概率都罗列出来，我们就能获得这个变量的概率分布。</p><p>我们拿最简单的抛硬币事件来看。从理论上说来，出现正面和反面的概率都是50%（我们假设不存在硬币站立的情况）。</p><p><img src="https://static001.geekbang.org/resource/image/53/8e/534e71694ac590887737299ddcd5f48e.png" alt=""></p><p>我们可以通过一小段Python代码，做个模拟实验，验证一下这个分布。</p><pre><code>import random
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+def flip_coin(times):
+  data_array = np.empty(times)
+  weights_array = np.empty(times)
+  weights_array.fill(1 / times)
+
+  for i in range(0, times):                       #抛times次的硬币
+    data_array[i] = random.randint(0, 1)        #假设0表示正面，1表示反面
+
+  data_frame = pd.DataFrame(data_array)
+  data_frame.plot(kind = 'hist', legend = False)  #获取正反面统计次数的直方图
+  data_frame.plot(kind = 'hist', legend = False, weights = weights_array).set_ylabel(&quot;Probability&quot;)  #获取正反面统计概率的直方图
+  plt.show()
+
+flip_coin(10)
+</code></pre><p>该代码随机生成若干次的0或1（0表示硬币正面朝上，1表示硬币反面朝上）。下表是我生成10次的结果，其中正面4次，反面6次。</p><p><img src="https://static001.geekbang.org/resource/image/b0/37/b0d2b522b903b2adcf706d47312a3537.png" alt=""></p><p>对应的正反面次数和概率直方图如下，而概率的直方图就表示了其概率分布。</p><p><img src="https://static001.geekbang.org/resource/image/07/9d/07b7a79563da20219034a3eb0afd3c9d.png" alt=""></p><p><img src="https://static001.geekbang.org/resource/image/34/eb/34703edccffa3b566924c785ffb17eeb.png" alt=""></p><p>通过修改flip_coin函数中的数字，我们可以修改抛硬币的次数。我又尝试“抛了”100次，得到的结果是正面47次，反面53次。</p><p><img src="https://static001.geekbang.org/resource/image/be/2e/beb0f943c9f4c0900d2d53a8afdcb42e.png" alt=""></p><p>接下来是抛10000次的结果，正面是4982次，反面是5018次。</p><p><img src="https://static001.geekbang.org/resource/image/2c/ec/2caf3cf4ee18c553e48524c01c5680ec.png" alt=""></p><p>你可能已经发现了，根据计算机模拟的结果所统计的概率，并不是精确的正反面各50%。如果你运行同样的代码，也会发现类似的情况。这是因为理论上的概率，是基于无限次的实验。而我们这里实验的次数是有限的，是一种统计采样。</p><p>从10次、100次到10000次，我们能看到，概率会变得越来越稳定，越来越趋近于正反各50%的分布。也就是说，<strong>统计的采样次数越多，越趋近于我们理论上的情况</strong>。因此，从这个统计实验我们可以看出，<strong>概率分布描述的其实就是随机变量的概率规律</strong>。</p><p>抛硬币正面次数、每周下雨天数这种离散型随机变量，对应的概率分布是很好理解的，但是对于连续型的随机变量，如何理解它们的概率分布呢？</p><p>如果我们把连续的值离散化，你会发现这个问题其实不难理解。就拿汽车每小时行驶的公里数来说吧。现实生活中我们通过汽车的仪表盘所读取速度，都是整数值，例如每小时60公里。也许比较高档的车会显示数字化的速度，带有小数位，但实际上汽车最精确的速度是一个无限位数的小数，是从0到最高公里数的一个任意数值。所以仪表盘所显示的数字，是将实际速度离散化处理之后的数字。除了仪表盘上的速度，汽车行驶在时间维度上也是连续的。类似地，我们还需要对时间进行离散化，比如每分钟查看仪表盘一次并读取速度值。</p><p>好的，理解了这些之后，我同样使用代码来随机一些行驶速度的数据。第一次模拟，假设我们手头上有一辆老爷车，它的仪表盘最小刻度是5，也就是说，它只能显示55、60、65这种公里数。然后我们每1分钟采样一次（读一次仪表盘），那么1小时内我们将生成60个数据。示例代码如下：</p><pre><code>def check_speed(time_gap, speed_gap, total_time, min_speed, max_speed):
+
+  times = (int)(total_time / time_gap)   #获取读取仪表盘的次数
+
+  data_array = np.empty(times)
+  weights_array = np.empty(times)
+  weights_array.fill(1 / times)
+
+  for i in range(0, times):
+    if (speed_gap &lt; 1):
+      data_array[i] = random.random() * max_speed  #随机生成一个最高速和最低速之间的速度
+    else:
+      data_array[i] = random.randint(0, max_speed / speed_gap) * speed_gap  #随机生成一个最高速和最低速之间的速度，先除以speed_gap然后乘以speed_gap进行离散化
+
+  data_frame = pd.DataFrame(data_array)
+  bin_range = np.arange(0, 200, speed_gap)
+  data_frame.plot(kind = 'hist', bins = bin_range, legend = False)  #获取时速统计次数的直方图
+  data_frame.plot(kind = 'hist', bins = bin_range, legend = False, weights = weights_array, ).set_ylabel(&quot;Probability&quot;)  #获取时速统计概率的直方图
+  plt.show()
+
+check_speed(1, 5, 60, 0, 200)
+</code></pre><p>对生成的60个数据，我们统计其出现在每个速度区间的频次以及相应的概率。</p><p><img src="https://static001.geekbang.org/resource/image/92/da/92e5097642a26c6ff5d0ac727e7e1dda.png" alt=""></p><p>我们将频次和概率以直方图的形式来展示。</p><p><img src="https://static001.geekbang.org/resource/image/08/66/08ec24a94441da4f4c59b5ec65e5bf66.png" alt=""></p><p><img src="https://static001.geekbang.org/resource/image/5f/e8/5f2c939a75584eadd38fce7eac68e5e8.png" alt=""></p><p>第二次模拟，假设我们把车升级到当今的主流车，仪表盘的最小刻度已经到1了，然后时间维度上，我们细分到0.1分钟，那么1小时我们将生成600个数据。我们还可以进行第三次、第四次、甚至是无穷次的模拟，每次模拟的时候我们都将行驶速度的精度进一步提升、将时间间隔进一步缩小，让两者都趋近于0，那么我们的模拟就从离散逐步趋近于连续的值了。</p><p>随机变量的概率分布由离散型的直方图变为了连续型的曲线图。通过下面的图，你可以看到这整个演变的过程。</p><p>当速度间隔和时间间隔（精度）逐步缩小的时候，直方图的分组（bin）就越小，所以你会看到x轴上的数据越浓密，y轴上的数据越平滑。当间隔或精度无穷小并趋近于0的时候，y轴的数据就会随着x轴连续变化而变化。</p><p><img src="https://static001.geekbang.org/resource/image/d6/29/d6bad265a25873d453bc326740688829.png" alt=""></p><p>不过，当时间间隔小于数秒时，我们需要考虑随机产生的数据是否具备真实性，毕竟现实中汽车的速度不可能在数秒中从0到200公里，因此临近两次的采样数据不能相差太大。</p><p>上面我通过两个模拟实验，分别展示了离散型和连续型概率的分布。其实，人们在实际运用中，已经总结出了一些概率分布，我这里挑几个最常见的给你讲解。</p><p>首先我们来看看离散分布模型。常用的离散分布有伯努利分布、分类分布、二项分布、泊松分布等等，这里我重点给你介绍两个。</p><p>第一个是<strong>伯努利分布</strong>（Bernoulli Distribution），这是单个随机变量的分布，而且这个变量的取值只有两个，0或1。伯努利分布通过参数λ来控制这个变量为1的概率，我把具体的公式列出来，并画了张图便于你理解。</p><p><img src="https://static001.geekbang.org/resource/image/ef/10/efb6477333146f0ee91302532fc46210.png" alt=""></p><p>或者写作：</p><p><img src="https://static001.geekbang.org/resource/image/66/03/664d462b28f84da64951ae0b3516f103.png" alt=""></p><p>其中x只能为0或1。</p><p><img src="https://static001.geekbang.org/resource/image/1a/d0/1a64837e5e00b4be301c25da3eb56bd0.png" alt=""></p><p>从这个图也可以看出，之前抛硬币的概率分布就属于伯努利分布。</p><p>另一个是<strong>分类分布</strong>（Categorical Distribution），也叫Multinoulli分布。它描述了一个具有k个不同状态的单个随机变量。这里的k，是有限的数值，如果k为2的时候，那么分类分布就变成了伯努利分布。我把这个分布的公式和图解都列了出来。</p><p><img src="https://static001.geekbang.org/resource/image/0b/11/0bf15a6219b095a5e98a65c52966ac11.png" alt=""></p><p><img src="https://static001.geekbang.org/resource/image/a2/0a/a2142147a07d4bc4cd45b730cac6850a.png" alt=""></p><p>离散型随机变量的状态数量是有限的，所以可以通过伯努利和分类分布来描述。可是对于连续型随机变量来说，状态是无穷多的，这时我们就需要连续分布模型。比较经典的连续分布有正态分布、均匀分布、指数分布、拉普拉斯分布等等。如果你只需要掌握一个的话，那肯定是正态分布。</p><p>这个分布可以近似表示日常生活中很多数据的分布，我们经常使用它进行机器学习的特征工程，对原始数据实施标准化，使得不同范围的数据具有可比性。所以，如果想要学习机器学习，一定要掌握正态分布。</p><p><strong>正态分布</strong>（Normal Distribution），也叫高斯分布（Gaussian Distribution）。我把这个分布的公式列在这里：</p><p><img src="https://static001.geekbang.org/resource/image/6e/34/6e732d5fdca4786ead38e439493a8d34.png" alt=""></p><p>在这个公式中有两个参数，μ表示均值，σ表示方差。看这个公式不太直观，我们来看一看对应的分布图。</p><p><img src="https://static001.geekbang.org/resource/image/b5/82/b514674826625cfec19bbe3bfec89e82.png" alt=""></p><p>从这个图可以看出，越靠近中心点μ，出现的概率越高，而随着渐渐远离μ，出现的概率先是加速下降，然后减速下降，直到趋近于0。蓝色区域上的数字，表示了这个区域的面积，也就是数据取值在这个范围内的概率。例如，数据取值在[-1σ, μ]之间的概率为34.1%。</p><p>现实中，很多数据分布都是近似于正态分布的。例如人类的身高体重。拿身高来说，大部分人都是接近平均值身高，偏离平均身高越远，相对应的人数越少。这也是为什么正态分布很常用的原因。</p><p>正态分布可以扩展到多元正态分布或多维正态分布（Multivariate Normal Distribution），不过最实用的还是一元标准正态分布，这种分布的μ为0，σ为1。在专栏后面的内容里，我会详细介绍如何使用这种分布，进行特征值的标准化。</p><h2>期望值</h2><p>理解了概率分布，你还需要了解期望值。为什么要了解期望值呢？</p><p>期望值，也叫数学期望，是每次随机结果的出现概率乘以其结果的总和。如果我们把每种结果的概率看作权重，那么期望值就是所有结果的加权平均值。它在我们的生活中十分常见，例如计算多个数值的平均值，其实就是求期望值，只不过我们假设每个数值出现的概率是相同的。</p><p>上一节，我提到如何使用概率来解决复杂度分析，通过概率的加权平均来获得平均时间复杂度，就是时间复杂度的期望值。当然，这个概念能帮助你解决的实际问题远不止这些。</p><p>在我看来，一个问题只要满足两个要素，我们就可以考虑使用期望值：</p><p>第一个要素，在这个问题中可能出现不同的情况，而且各种情况的出现满足了一定的概率分布；</p><p>第二个要素，每种情况都对应一个数值，这个数值代表了具体的应用含义。</p><p>如果你觉得这个还是过于抽象，我再回到本节的案例给你讲解。我先给你提个问题：给定了行驶速度的概率分布，如何计算汽车在1小时内每分钟行驶的平均速度？我们还从比较容易理解的离散型随机变量开始。</p><p>没错，这个问题的答案就是使用1小时所行驶的总距离除以60分钟。以之前的每分钟读取仪表盘、仪表盘最小刻度是5为例。概率分布如下图。</p><p><img src="https://static001.geekbang.org/resource/image/fb/a3/fb92ed0e83943a61579c55759fa0caa3.png" alt=""></p><p>1小时行驶的总距离为每种速度乘以用该速度行驶的时间的乘积之总和。</p><p><img src="https://static001.geekbang.org/resource/image/b3/3d/b31d1664765392d57c21f1ffd3a2b53d.png" alt=""></p><p>1小时内每分钟平均的行驶速度为总距离除以60分钟。</p><p><img src="https://static001.geekbang.org/resource/image/6c/c2/6c9704ffe74872dde0930ecc02d0e7c2.png" alt=""></p><p>将上述式子变化一下，我们可以得到：</p><p><img src="https://static001.geekbang.org/resource/image/7c/cd/7c65637c636ec02333334f4478ecbacd.png" alt=""></p><p>你会发现，每分钟的平均值，就是每种速度的加权平均，而每种速度的权重就是其在概率分布中出现的概率。汽车可能按照不同的速度行驶，每种速度都有一个出现的概率，就是我前面提到的第一个要素。而每种速度所对应的每分钟多少公里这个数值，就是第二个要素。结合这两个要素，计算得到的平均值，也是汽车每分钟行驶速度的期望值。</p><p>那么，对于连续型的随机变量，这种期望值应该如何计算呢？你可能已经注意到，<strong>离散随机变量的期望值，其实就是随机分布直方图的面积</strong>。这就变成了一个简单的数学计算的问题。</p><p>我们一起看这个图。x轴表示速度，y轴表示每一个速度值出现的概率。很显然，x值乘以对应的y值就是一个柱子的面积。再将所有乘积求和，就是直方图中蓝色区域的总面积，也就是我们要求的期望值。</p><p><img src="https://static001.geekbang.org/resource/image/e5/0a/e5e927bd4f23c3fc7ec72c10a344100a.png" alt=""></p><p>有了离散型的基础，连续型变量的期望值就很好理解了。一维连续型随机变量的概率分布，由直方图变为了连续曲线和x轴之间的区域。我们将这个区域记作A，所以期望值就是区域A的面积。</p><p><img src="https://static001.geekbang.org/resource/image/09/43/099905959548f7dce1ccc59907d58f43.png" alt=""></p><p>区域A的面积，我们可以通过积分来求解。</p><p><img src="https://static001.geekbang.org/resource/image/24/d4/2424745d2fd25e6ed7921733c155fdd4.png" alt=""></p><p>相反地，使用微分，让面积函数对x进行求导，我们就可以计算出现某种速度的概率。</p><p><img src="https://static001.geekbang.org/resource/image/df/1e/dfb498d36557b3397892d6c40729f51e.png" alt=""></p><h2>总结</h2><p>通过这讲的内容，你对概率的基本知识应该有所了解。本讲中，我通过抛硬币和汽车驾驶的例子，讲述了概率论中一些最基本，也是最重要的概念，包括随机现象、随机变量、概率分布和期望值。</p><p>离散型的随机变量在计算机编程中的应用更为广泛。它可以和排列组合的思想结合起来，通过不同排列或组合的数量，计算每种情况出现的概率。如果把这种概率和每种情况下的复杂度数值结合起来，就可以计算复杂度的期望值。</p><p>另外，离散型概率也可以运用在机器学习的分类算法中。例如，对于文本进行分类时，我们可以通过离散型随机变量，表示每个分类或者每个单词出现的概率。当然，仅靠今天的内容，还不足以让我们打造一个分类算法。我们还需要了解联合概率、条件概率、贝叶斯定理等重要的概念。下一讲，我会详细解释它们。</p><h2>思考题</h2><p>每天我们的朋友圈都会浮现很多新的“动态”。假设我们按照字数，把这些动态分为以下几类：10个字以内，10～30个字，30～50字，50～100字，100字以上。</p><p>尝试统计一下你朋友圈某个时间段的动态，看看每个类有多少条，转换成概率分布应该如何表示？你的分布和今天介绍的哪个概率分布最接近？请注意，统计字数时只需要看你朋友自己所写的内容，无需考虑转发的文章。</p><p><span class="orange">欢迎留言和我分享，也欢迎你在留言区写下今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">老师，发现一个问题：<br>文中那个“一维连续型随机变量的概率分布”图（就是标着大A的那个图）的所有随机事件的概率总和超过1了。<br>按照文中的意思此图横坐标代表速度，纵坐标代表对应速度的概率。而所有事件的总概率等于所有点的概率之和，很显然[0,200]这个区间上有无穷多个点，且这个连续区间上的每一个点都对应一个正数概率，那么按照此图所描述的，所有事件的总概率是无穷大，这很显然是不对的。<br><br>（后面还有很多内容，但留言提示我有“敏感词”，后面想办法贴出来） <br></div>
+                            <span class="time">2019-01-30 22:40</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">可以想象点无穷多，不过还要我在积分公式漏的那个x，就不会无穷大了</p>
+                                <p class="reply-time">2019-02-01 01:56</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">分类分布下面那个公式标错了，<br>P(x=k)=拉姆达的k次方，<br>那个k应该是下标。 <br></div>
+                            <span class="time">2019-01-30 18:51</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">感谢指正，我稍后修改</p>
+                                <p class="reply-time">2019-01-31 01:10</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/31/a0/96698bbc.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">三七</span>
+                            </div>
+                            <div class="bd">您好，关于文中“离散随机变量的期望值就是随机分布直方图的面积”我不是很理解，当x轴表示速度，y轴表示概率，那x*y应该是从0到x的一个大的柱形面积，而不是某一个点的小柱形面积，而小柱形面积应该是Δx*y吧？麻烦老师解答下。谢谢 <br></div>
+                            <span class="time">2019-02-23 16:48</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">连续型概率分布期望定义：<br>             +∞<br>E(X) = ∫              xf(x)dx<br>             -∞<br>其中f(x)为分布的概率密度函数。<br>不能贴图将就看，具体参见百度百科：<br>https:&#47;&#47;baike.baidu.com&#47;item&#47;%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B<br> <br></div>
+                            <span class="time">2019-01-30 23:01</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">确实漏了一个x，稍后补上</p>
+                                <p class="reply-time">2019-02-01 01:55</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">测试发现，提示“敏感词”的原因不是留言真的包含敏感词，而是留言页面开得太久了。<br>搞得我都想写几行代码测试一下到底哪个词是敏感词了。 <br></div>
+                            <span class="time">2019-01-30 22:45</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">下面开始debug<br>我反复看了关于期望那一部分好几遍，终于发现问题所在了。<br>首先，前面计算离散分布的公式是没错的；<br>问题出在下面这句话：<br>“离散随机变量的期望值，其实就是随机分布直方图的面积。”<br>以直方图中[25,30]这个区间为例来说，这个区间的高度0.05代表了落在这个区间的概率。那么如果把这个区间拆分成5个更小的区间[25,26),[26,27),[27,28),[28,29),[29,30]，很显然速度落在这每一个区间都是有一定概率的，并且，这里的每一个区间的概率都是小于[25,30]这个大区间的概率的。也就是说，统计更精确的直方图的每一个区间都比相对没有那么精确的区间高度低。如果一直这样进行下去，每一个区间的宽度趋向于0，那么它的高度也将趋向于0！最终得到的将是一条贴在横轴上的线段。<br>补充一下，前面那个描述正态分布的函数全称叫“正态分布概率密度函数”，横轴代表随机变量，纵轴代表“概率密度”不是概率本身，分布图曲线包围的面积才是概率。<br>从离散的“概率密度”分布可以增加采样点逐步逼近转化成连续的“概率密度”分布，但离散的概率本身不可以。<br><br>但，通过概率密度函数求期望的方法又不一样了。<br> <br></div>
+                            <span class="time">2019-01-30 22:41</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">确实有描述不准确的地方，我稍后重新修改一下，感谢</p>
+                                <p class="reply-time">2019-02-01 02:44</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/7d/6b/648c30bc.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">予悠悠</span>
+                            </div>
+                            <div class="bd">关于期望值有个问题不太懂，对于连续型随机变量，如果期望值是曲线下面积，那为什么正态分布的期望是μ呢？ <br></div>
+                            <span class="time">2019-01-30 22:24</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">纵轴是0-1之间，比如中间μ的概率只有0.4，你可以把整个面积离散化成直方图来想象，面积就是所有可能的值加权平均，权重是对应的概率，所以整个面积加起来就是μ</p>
+                                <p class="reply-time">2019-02-01 01:32</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

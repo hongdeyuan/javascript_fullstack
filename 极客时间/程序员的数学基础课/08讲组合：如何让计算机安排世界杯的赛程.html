@@ -1,0 +1,422 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                08讲组合：如何让计算机安排世界杯的赛程
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/d3/58/d3876b8757e118dea28503e4e4279e58.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>2018年足球世界杯结束有半年了，当时激烈的赛况你现在还记忆犹新吧？你知道这场足球盛宴的比赛日程是怎么安排的吗？如果现在你是组委会，你会怎么安排比赛日程呢？我们可以用上一节的排列思想，让全部的32支入围球队都和其他球队进行一次主客场的比赛。</p><p>自己不可能和自己比赛，因此在这种不可重复的排列中，主场球队有32种选择，而客场球队有31种选择。那么一共要进行多少场比赛呢？很简单，就是32x31=992场！这也太夸张了吧？一天看2场，也要1年多才能看完！即使球迷开心了，可是每队球员要踢主客场共62场，早已累趴下了。</p><p>好吧，既然这样，我们是否可以取消主客场制，让任意两个球队之间只要踢1场就好啦？取消主客场，这就意味着原来两队之间的比赛由2场降为1场，那么所有比赛场次就是992/2=496场。还是很多，对吧？</p><p>是的，这就是为什么要将所有32支队伍分成8个小组先进行小组赛的原因。一旦分成小组，每个小组的赛事就是(4x3)/2=6场。所有小组赛就是6x8=48场。</p><p>再加上在16强阶段开始采取淘汰制，两两淘汰，所以需要8+4+2+2=16场淘汰赛（最后一次加2是因为还有3、4名的决赛），那么整个世界杯决赛阶段就是48+16=64场比赛。</p><!-- [[[read_end]]] --><p>当然，说了这么多，你可能会好奇，这两两配对比赛的场次，我是如何计算出来的？让我引出今天的概念，<strong>组合</strong>（Combination）。</p><p>组合可以说是排列的兄弟，两者类似但又有所不同，这两者的区别，不知道你还记得不，上学的时候，老师肯定说过不止一次，那就是，组合是不考虑每个元素出现的顺序的。</p><p>从定义上来说，组合是指，从n个不同元素中取出m（1≤m≤n）个不同的元素。例如，我们前面说到的世界杯足球赛的例子，从32支球队里找出任意2支球队进行比赛，就是从32个元素中取出2个元素的组合。如果上一讲中，田忌赛马的规则改一下，改为从10匹马里挑出3匹比赛，但是并不关心这3匹马的出战顺序，那么也是一个组合的问题。</p><p>对于所有m取值的组合之全集合，我们可以叫作<strong>全组合</strong>（All Combination）。例如对于集合{1, 2, 3}而言，全组合就是{空集, {1}, {2}, {3}, {1, 2}, {1,3} {2, 3}, {1, 2, 3}}。</p><p>如果我们安排足球比赛时，不考虑主客场，也就是不考虑这两只球队的顺序，两队只要踢一次就行了。那么从n个元素取出m个的组合，有多少种可能呢？</p><p>我们假设某种运动需要3支球队一起比赛，那么32支球队就有32x31x30种排列，如果三支球队在一起只要比一场，那么我们要抹除多余的比赛。三支球队按照任意顺序的比赛有3x2x1=6场，所以从32支队伍里取出3支队伍的组合是(32x31x30)/(3x2x1)。基于此，我们可以扩展成以下两种情况。</p><ul>
+<li>
+<p>n个元素里取出m个的组合，可能性数量就是n个里取m个的排列数量，除以m个全排列的数量，也就是(n! / (n-m)!) / m!。</p>
+</li>
+<li>
+<p>对于全组合而言，可能性为2^n种。例如，当n=3的时候，全组合包括了8种情况。</p>
+</li>
+</ul><p>这两点都可以用数学归纳法证明，有兴趣的话你可以自己尝试一下。</p><h2>如何让计算机来组合队伍？</h2><p>上一节，我用递归实现了全排列。全组合就是将所有元素列出来，没有太大意义，所以我这里就带你看下，如何使用递归从3个元素中选取2个元素的组合。</p><p>我们假设有3个队伍，t1，t2和t3。我还是把递归的选择画成图，这样比较直观，你也好理解。从图中我们可以看出，对于组合而言，由于{t1, t2}已经出现了，因此就无需{t2, t1}。同理，出现{t1, t3}，就无需{t3, t1}等等。对于重复的，我用叉划掉了。这样，最终只有3种组合了。</p><p><img src="https://static001.geekbang.org/resource/image/82/4b/827020c47c2c4b825dc5d51697f5cd4b.jpg" alt=""></p><p>那么，如何使用代码来实现呢？一种最简单粗暴的做法是：</p><ol>
+<li>
+<p>先实现排列的代码，输出所有的排列。例如{t1, t2}, {t2, t1}；</p>
+</li>
+<li>
+<p>针对每种排列，对其中的元素按照一定的规则排序。那么上述两种排列经过排序后，就是{t1, t2}, {t1, t2}；</p>
+</li>
+<li>
+<p>对排序后的排列，去掉重复的那些。上述两种排列最终只保留一个{t1, t2}。</p>
+</li>
+</ol><p>这样做效率就会比较低，很多排列生成之后，最终还是要被当做重复的结果去掉。</p><p>显然，还有更好的做法。从图中我们可以看出被划掉的那些，都是那些出现顺序和原有顺序颠倒的元素。</p><p>例如，在原有集合中，t1在t2的前面，所以我们划掉了{t2, t1}的组合。这是因为，我们知道t1出现在t2之前，t1的组合中一定已经包含了t2，所以t2的组合就无需再考虑t1了。因此，我只需要在原有的排列代码中，稍作修改，每次传入嵌套函数的剩余元素，不再是所有的未选择元素，而是出现在当前被选元素之后的那些。具体代码是这样的：</p><pre><code>import java.util.ArrayList;
+import java.util.Arrays; 
+
+public class Lesson8_1 {
+	
+	/**
+    * @Description:	使用函数的递归（嵌套）调用，找出所有可能的队伍组合
+    * @param teams-目前还剩多少队伍没有参与组合，result-保存当前已经组合的队伍
+    * @return void
+    */
+	
+    public static void combine(ArrayList&lt;String&gt; teams, ArrayList&lt;String&gt; result, int m) {
+    	
+    	// 挑选完了m个元素，输出结果
+    	if (result.size() == m) {
+    		System.out.println(result);
+    		return;
+    	}
+    	
+    	for (int i = 0; i &lt; teams.size(); i++) {
+    		// 从剩下的队伍中，选择一队，加入结果
+    		ArrayList&lt;String&gt; newResult = (ArrayList&lt;String&gt;)(result.clone());
+    		newResult.add(teams.get(i));
+    		
+    		// 只考虑当前选择之后的所有队伍
+    		ArrayList&lt;String&gt; rest_teams = new ArrayList&lt;String&gt;(teams.subList(i + 1, teams.size()));
+    		
+    		// 递归调用，对于剩余的队伍继续生成组合
+    		combine(rest_teams, newResult, m);
+    	}
+    	
+    }
+    
+}
+
+</code></pre><p>这是一段测试代码，可以帮助我们找到从3个元素中选择2个元素的所有组合。</p><pre><code>public static void main(String[] args) {
+  
+  ArrayList&lt;String&gt; teams = new ArrayList&lt;String&gt;(Arrays.asList(&quot;t1&quot;, &quot;t2&quot;, &quot;t3&quot;));
+  Lesson8_1.combine(teams, new ArrayList&lt;String&gt;(), 2);
+  
+ }
+
+</code></pre><h2>组合的应用：如何高效地处理词组？</h2><p>组合在计算机领域中也有很多的应用场景。比如大型比赛中赛程的自动安排、多维度的数据分析以及自然语言处理的优化等等。</p><p>在我之前的研究工作中，经常要处理一些自然语言，用组合的思想提升系统性能。今天我结合自己亲身的经历，先来说说组合在自然语言处理中的应用。</p><p>当时，我们需要将每篇很长的文章，分隔成一个个的单词，然后对每个单词进行索引，便于日后的查询。但是很多时候，光有单个的单词是不够的，还要考虑多个单词所组成的词组。例如，“red bluetooth mouse”这样的词组。</p><p>处理词组最常见的一种方式是<strong>多元文法</strong>。什么是多元文法呢？这词看起来很复杂，其实就是把临近的几个单词合并起来，组合一个新的词组。比如我可以把“red”和“bluetooth”合并为“red bluetooth”，还可以把“bluetooth”和“mouse”合并为“bluetooth mouse”。</p><p>设计多元文法只是为了方便计算机的处理，而不考虑组合后的词组是不是有正确的语法和语义。例如“red bluetooth”，从人类的角度来看，这个词就很奇怪。但是毕竟它还会生成很多合理的词组，例如“bluetooth mouse”。所以，如果不进行任何深入的语法分析，我们其实没办法区分哪些多元词组是有意义的，哪些是没有意义的，因此最简单的做法就是保留所有词组。</p><p>普通的多元文法本身存在一个问题，那就是定死了每个元组内单词出现的顺序。例如，原文中可能出现的是“red bluetooth mouse”，可是用户在查询的时候可能输入的是“bluetooth mouse red”。这么输入肯定不符合语法，但实际上互联网上的用户经常会这么干。</p><p>那么，在这种情况下，如果我们只保留原文的“red bluetooth mouse”，就无法将其和用户输入的“bluetooth red mouse”匹配了。所以，如果我们并不要求查询词组中单词所出现的顺序和原文一致，那该怎么办呢？</p><p>我当时就在想，可以把每个二元或三元组进行全排列，得到所有的可能。但是这样的话，二元组的数量就会增加1倍，三元组的数量就会增加5倍，一篇文章的数据保存量就会增加3倍左右。我也试过对用户查询做全排列，把原有的二元组查询变为2个不同的二元组查询，把原有的三元组查询变为6个不同的三元组查询，但是事实是，这样会增加实时查询的耗时。</p><p>于是，我就想到了组合。多个单词出现时，我并不关心它们的顺序（也就是不关心排列），而只关心它们的组合。因为无需关心顺序，就意味着我可以对多元组内的单词进行某种形式的标准化。即使原来的单词出现顺序有所不同，经过这个标准化过程之后，都会变成唯一的顺序。</p><p>例如，“red bluetooth mouse”，这三个词排序后就是“bluetooth,mouse,red”，而“bluetooth red mouse”排序后也是“bluetooth,mouse,red”，自然两者就能匹配上了。我需要做的事情就是在保存文章多元组和处理用户查询这两个阶段分别进行这种排序。这样既可以减少保存的数据量，同时可以减少查询的耗时。这个问题很容易就解决了。怎么样，组合是不是非常神奇？</p><p>此外，组合思想还广泛应用在多维度的数据分析中。比如，我们要设计一个连锁店的销售业绩报表。这张报表有若干个属性，包括分店名称、所在城市、销售品类等等。那么最基本的总结数据包括每个分店的销售额、每个城市的销售额、每个品类的销售额。除了这些最基本的数据，我们还可以利用组合的思想，生成更多的筛选条件。</p><h2>小结</h2><p>组合和排列有相似之处，都是从n个元素中取出若干个元素。不过，排列考虑了取出的元素它们之间的顺序，而组合无需考虑这种顺序。这是排列和组合最大的区别。因此，组合适合找到多个元素之间的联系而并不在意它们之间的先后顺序，例如多元文法中的多元组，这有利于避免不必要的数据保存或操作。</p><p>具体到编程，组合和排列两者的实现非常类似。区别在于，组合并不考虑挑选出来的元素之间，是如何排序的。所以，在递归的时候，传入下一个嵌套调用函数的剩余元素，只需要包含当前被选元素之后的那些，以避免重复的组合。</p><p><img src="https://static001.geekbang.org/resource/image/b2/ee/b2cbd776947f32b6a3e5e30f388e0eee.jpg" alt=""></p><h2>思考题</h2><p>假设现在需要设计一个抽奖系统。需要依次从100个人中，抽取三等奖10名，二等奖3名和一等奖1名。请列出所有可能的组合，需要注意的每人最多只能被抽中1次。</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">从100人中选10人得3等奖，C(100, 10) = 17310309456440<br>再从剩下90人中选3人的3等奖，C(90, 3) = 117480<br>再从剩下87人中选1人得1等奖， C(87, 1) = 87<br>总共有大约有1.8×10^20种可能性，<br>假设我们的计算机每1ns就能输出1个结果，全部输出来大约要5610年！<br>假设每个结果占13个字节，把结果保存下来大约要占1995EB，远远大于世界上存储总容量！<br><br>当数据量比较小时，还是可以算的：<br>public class Combination {<br><br>    &#47;**<br>     * 求组合数<br>     * <br>     * @param n<br>     * @param r<br>     * @return<br>     *&#47;<br>    static int c(int n, int r) {<br>        if (r &gt; n) {<br>            return 0;<br>        }<br>        int R =  n - r;<br>        int ret = 1;<br>        while (n &gt; R) {<br>            ret *= n--;<br>        }<br>        while (r &gt; 1) {<br>            ret &#47;= r--;<br>        }<br>        return ret;<br>    }<br><br>    &#47;**<br>     * 求组合情况<br>     * @param es<br>     * @param r<br>     * @param I 数组es开始取数位置<br>     * @return<br>     *&#47;<br>    static int[][] C(int[] es, int r, int I) {<br>        int[][] rst = new int[c(es.length - I, r)][];<br>        if (r == 1) {<br>            for (int rsti = 0; rsti &lt; rst.length; rsti++, I++) {<br>                rst[rsti] = new int[] { es[I] };<br>            }<br>        } else {<br>            for (int rsti = 0; I &lt; es.length; I++) {<br>                int[][] srst = C(es, r - 1, I + 1);<br>                for (int[] sc : srst) {<br>                    int[] t = rst[rsti] = new int[sc.length + 1];<br>                    t[0] = es[I];<br>                    System.arraycopy(sc, 0, t, 1, sc.length);<br>                    rsti++;<br>                }<br>            }<br>        }<br>        return rst;<br>    }<br><br>    public static void main(String[] args) {<br>        int[][] c = C(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 3, 0);<br>        for (int[] cc : c) {<br>            System.out.println(Arrays.toString(cc));<br>        }<br>        &#47;**<br>         * 输出结果<br>         * [1, 2, 3]<br>         * [1, 2, 4]<br>         * [1, 2, 5]<br>         * [1, 2, 6]<br>         * ··· 省略111行 ···<br>         * [6, 9, 10]<br>         * [7, 8, 9]<br>         * [7, 8, 10]<br>         * [7, 9, 10]<br>         * [8, 9, 10]<br>         * <br>         *&#47;<br>    }<br>}<br> <br></div>
+                            <span class="time">2018-12-31 16:12</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">确实数字取得太大了</p>
+                                <p class="reply-time">2019-01-01 11:27</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/d2/df/48378afe.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">行者</span>
+                            </div>
+                            <div class="bd">案例python实现：<br><br>comb = [&#39;t1&#39;, &#39;t2&#39;, &#39;t3&#39;, &#39;t4&#39;, &#39;t5&#39;]<br>import copy<br><br>def combination(n, comb, result):<br><br>    if n == 0:<br>        print(result)<br>        return<br>    for i in comb:<br>        newResult = copy.copy(result)<br>        newComb = copy.copy(comb)<br>        newResult.append(i)<br>        newComb = list(set(newComb).difference(set(comb[:comb.index(i) + 1])))<br>        combination(n - 1, newComb, newResult)<br><br>combination(4, comb, []) <br></div>
+                            <span class="time">2019-01-02 09:07</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/77/da/54c663f3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Wing·三金</span>
+                            </div>
+                            <div class="bd">思路一：<br>先运行combine(100, 1)，将所有结果保存。然后用一层迭代对每个结果运行combine(99, 3)，将所有结果append进去。<br>然后再来一层迭代对上一结果运行combine(96, 10)，同样依次append进去。<br>此处的关键点在于每个迭代下得将上一结果中的数拿掉，以及得保存临时结果。<br><br>此思路也等价于直接上三个嵌套循环+运行递归程序。<br><br>思路二：<br>先运行combine(100, 14)，对每个结果运行combine(14, 10)，再对每个更新的结果运行combine(4, 3)。其实就是思路一逆过来。<br><br>理论上二者的复杂度是一样的，用scipy验证了下确实如此。<br> <br></div>
+                            <span class="time">2018-12-31 17:32</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/e4/f0/82281239.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Ricky</span>
+                            </div>
+                            <div class="bd">#include &lt;iostream&gt;<br>#include &lt;vector&gt;<br><br>using namespace std;<br>void winPrize(int f, int s, int t,<br>        vector&lt;int&gt; &amp;first, vector&lt;int&gt; &amp;second, vector&lt;int&gt; &amp;third, vector&lt;int&gt; &amp;base) {<br><br>    if (first.size() == f &amp;&amp; second.size() == s &amp;&amp; third.size() == t) {<br>        cout &lt;&lt; &quot;\nAwards Notification&quot; &lt;&lt; endl;<br>        cout &lt;&lt; &quot;Prize 1: &quot; &lt;&lt; first.back() &lt;&lt; endl;<br>        cout &lt;&lt; &quot;Prize 2: &quot;;<br>        for (int x: second) {<br>            cout &lt;&lt; x &lt;&lt; &quot; &quot;;<br>        }<br>        cout &lt;&lt; endl;<br>        cout &lt;&lt; &quot;Prize 3: &quot;;<br>        for (int y: third) {<br>            cout &lt;&lt; y &lt;&lt; &quot; &quot;;<br>        }<br>        cout &lt;&lt; endl;<br>        return;<br>    }<br>    for (int x: base) {<br>        &#47;&#47; 每次仅添加一个成员进奖项圈, 优先级按照一等奖 &gt; 二等奖 &gt; 三等奖<br>        auto f1 = first, s1 = second, t1 = third, left = base;<br>        if (first.size() &lt; f) {<br>            f1.push_back(x);<br>        } else if (second.size() &lt; s) {<br>            s1.push_back(x);<br>        } else if (third.size() &lt; t) {<br>            t1.push_back(x);<br>        }<br>        &#47;&#47; 删除成员<br>        auto iter = left.begin();<br>        while (iter != left.end()) {<br>            if (*iter == x) {<br>                iter = left.erase(iter);<br>            } else iter++;<br>        }<br>        winPrize(f, s, t, f1, s1, t1, left);<br>    }<br>}<br><br>void winPrize(int tl, int f, int s, int t) {<br>    vector&lt;int&gt; first, second, third, base;<br>    for (int i = 0; i &lt; tl; ++i) {<br>        base.push_back(i);<br>    }<br><br>    winPrize(f, s, t, first, second, third, base);<br>}<br>int main() {<br>    cout &lt;&lt; &quot;Prize Result&quot; &lt;&lt; endl;<br>    winPrize(10, 1, 2, 3);<br>    return 0;<br>}<br>******************结果********************<br>Awards Notification<br>Prize 1: 2<br>Prize 2: 0 6<br>Prize 3: 8 3 1<br><br>Awards Notification<br>Prize 1: 2<br>Prize 2: 0 6<br>Prize 3: 8 3 4<br><br>Awards Notification<br>Prize 1: 2<br>Prize 2: 0 6<br>Prize 3: 8 3 5<br><br>Awards Notification<br>Prize 1: 2<br>Prize 2: 0 6<br>Prize 3: 8 3 7 <br></div>
+                            <span class="time">2019-01-10 13:24</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/5c/b2/dca010e5.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Youngggg</span>
+                            </div>
+                            <div class="bd">由于数量过大 设置10个人中 1等奖1名 2等奖2名 3等奖3名<br>import copy<br>word = []<br>for i in range(1,11):<br>    word.append(i)<br>def sort(one_num, two_num, three_num, one_result=[], two_result=[], three_result=[]):<br>    if len(one_result) == one_num and len(two_result) == two_num and len(three_result) == three_num:<br>        print(&quot;一等奖&quot;, one_result)<br>        print(&quot;二等奖&quot;, two_result)<br>        print(&quot;三等奖&quot;, three_result)<br>        return<br>    else:<br>        i = 0<br>        while i &lt; len(word):<br>            if word[i] not in one_result and len(one_result) &lt; one_num:<br>                if len(one_result)&gt;0:<br>                    if one_result[-1] &gt; word[i]:<br>                        i = i+1<br>                        continue<br>                new_one_result = copy.copy(one_result)<br>                new_one_result.append(word[i])<br>                i = i+1<br>                sort(one_num, two_num, three_num, new_one_result, [], [])<br>            elif word[i] not in one_result and word[i] not in two_result and len(two_result) &lt; two_num:<br>                if len(two_result)&gt;0:<br>                    if two_result[-1] &gt; word[i]:<br>                        i = i + 1<br>                        continue<br>                new_two_result = copy.copy(two_result)<br>                new_two_result.append(word[i])<br>                i = i+1<br>                sort(one_num, two_num, three_num, one_result, new_two_result, [])<br>            elif word[i] not in one_result and word[i] not in two_result and word[i] not in three_result and len(three_result) &lt; three_num:<br>                if len(three_result)&gt;0:<br>                    if three_result[-1] &gt; word[i]:<br>                        i = i+1<br>                        continue<br>                new_three_result = copy.copy(three_result)<br>                new_three_result.append(word[i])<br>                i = i+1<br>                sort(one_num, two_num, three_num, one_result, two_result, new_three_result)<br>            else:<br>                i = i+1<br>                continue<br>sort(1, 2, 3, [], [], [])<br>运行结果：<br>一等奖 [1]<br>二等奖 [2, 3]<br>三等奖 [4, 5, 6]<br>.....<br> <br></div>
+                            <span class="time">2019-01-02 17:34</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/3a/da/6ab6d2b9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">proZhanng</span>
+                            </div>
+                            <div class="bd">老师能否给个稍微规范点的代码解答，个人基础弱，解题有思路，但是代码实现有点困难，留言区代码稍微有点难以阅读 <br></div>
+                            <span class="time">2019-02-12 23:35</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我后期会整理好所有的代码和注释，然后上传到github</p>
+                                <p class="reply-time">2019-02-13 05:21</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/18/d0/49b06424.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">qinggeouye</span>
+                            </div>
+                            <div class="bd">python (比较粗暴的解法...)<br>import copy<br><br>def lucky_draw_combination(n, m, result=None, all_results=None):<br>    &quot;&quot;&quot;<br>    使用函数的递归（嵌套）调用，找出所有可能的中奖者的组合<br>    :param all_results: 中奖者的所有组合<br>    :param n: 参与抽奖的人<br>    :param result: 抽奖结果<br>    :param m: 中奖的人数<br>    :return: None<br>    &quot;&quot;&quot;<br>    if result is None:<br>        result = []<br>    if all_results is None:<br>        all_results = []<br>    if len(result) == m:<br>        # print(result)<br>        return all_results.append(result)<br>    for i in range(len(n)):<br>        # 从剩下的人中，抽出一个人加入结果<br>        new_result = copy.copy(result)<br>        new_result.append(n[i])<br>        # 每人最多只能被抽中一次，当前被抽中的人之后的人，进入下一次抽奖<br>        rest_n = n[i + 1: len(n)]<br>        # 递归调用 在剩下的人中继续抽奖<br>        lucky_draw_combination(rest_n, m, new_result, all_results)<br>    return all_results<br><br><br>if __name__ == &quot;__main__&quot;:<br>    total = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # 被抽奖人列表<br>    m_ = [3, 2, 1]  # 三等奖、二等奖、一等奖的个数<br>    lucky1 = lucky_draw_combination(total, m_[0])<br>    for k1 in lucky1:<br>        total2 = copy.copy(total)<br>        for j1 in k1:<br>            total2.remove(j1)<br>        lucky2 = lucky_draw_combination(total2, m_[1])<br>        for k2 in lucky2:<br>            total3 = copy.copy(total2)<br>            for j2 in k2:<br>                total3.remove(j2)<br>            lucky3 = lucky_draw_combination(total3, m_[2])<br>            for k3 in lucky3:<br>                print(k1, k2, k3)<br> <br></div>
+                            <span class="time">2019-02-10 03:47</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/69/66/e8c207e6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">夏微凉</span>
+                            </div>
+                            <div class="bd">黄老师，我这几天一直在纠结思考题，总共10人，一等名1名，二等奖2名，三等3名，还是没有完全理解思路，希望老师方便的时候解答下 <br></div>
+                            <span class="time">2019-01-14 22:45</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这道题是用到了组合及排列，先看100个人里取1人的数量是C100,1 (格式问题，C100,1表示从100人里取1人的组合数量)，剩下99人里取2人为C99,2，再剩下97人里取3人为C97,3，然后再利用排列，总共可能为C100,1 x C99,2 x C97,3</p>
+                                <p class="reply-time">2019-01-16 01:48</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6a/8e/7b6ea886.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Joe</span>
+                            </div>
+                            <div class="bd">C++实现<br>#include &lt;cmath&gt;<br>  #include &lt;iostream&gt;<br>  #include &lt;vector&gt;<br>  <br>  using namespace std;<br><br>  class Combination {<br>    private:<br>    const int firstPrize;<br>    const int secondPrize;<br>    const int thirdPrize;<br>  <br>    public:<br>    Combination(int x, int y, int z)<br>        : firstPrize(x), secondPrize(y), thirdPrize(z) {<br>    }<br>    &#47;**<br>    * @description:<br>    * 从10个人中选出三等奖3人，二等奖2人，一等奖1人，不能重复获奖。<br>    * @param {type} rewardNum- 指定赏金数， result- 奖赏方式结果。<br>    * @return: null<br>    *&#47;<br>  void rewardMethods(vector&lt;int&gt; result, vector&lt;int&gt; candidate) {<br>      unsigned int len = thirdPrize + secondPrize + firstPrize;<br>      if (result.size() == len) {<br>        &#47;&#47; 输出结果<br>        resultOutput(result);<br>        return;<br>      } else {<br>        for (unsigned int i = 0; i &lt; candidate.size(); i++) {<br>          vector&lt;int&gt; resultNew = result;<br>          resultNew.push_back(candidate[i]);<br>  <br>          vector&lt;int&gt; candidateNew;<br>          copyElem(candidate, candidateNew, i + 1);<br>          rewardMethods(resultNew, candidateNew);<br>        }<br>      }<br>    }<br>    &#47;&#47; 数据复制函数<br>    void copyElem(vector&lt;int&gt;&amp; input, vector&lt;int&gt;&amp; output, int i) {<br>      vector&lt;int&gt;::iterator it = input.begin() + i;<br>      for (; it &lt; input.end(); it++) {<br>        output.push_back(*it);<br>      }<br>    }<br>  &#47;&#47; 数据复制函数<br>    void copyElem(vector&lt;int&gt;&amp; input, vector&lt;int&gt;&amp; output, int i) {<br>      vector&lt;int&gt;::iterator it = input.begin() + i;<br>      for (; it &lt; input.end(); it++) {<br>        output.push_back(*it);<br>      }<br>    }<br>    &#47;&#47; 输出结果<br>    void resultOutput(vector&lt;int&gt; res) {<br>      for (unsigned int i = 0; i &lt; res.size(); i++) {<br>        if (i == thirdPrize) cout &lt;&lt; &#39;*&#39;;<br>        if (i == thirdPrize + secondPrize) cout &lt;&lt; &#39;*&#39;;<br>        cout &lt;&lt; res[i] &lt;&lt; &#39; &#39;;<br>      }<br>      cout &lt;&lt; endl;<br>    }<br>  };<br>  <br>  &#47;&#47; test<br>  int main(void) {<br>    Combination test(1, 2, 3);<br>    vector&lt;int&gt; res;<br>    vector&lt;int&gt; candidate;<br>    &#47;&#47; 输入<br>    for (unsigned int i = 0; i &lt; 10; i++) {<br>      candidate.push_back(i + 1);<br>    }<br>    test.rewardMethods(res, candidate);<br>  }<br> <br></div>
+                            <span class="time">2019-01-10 22:46</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">神蛊温皇</span>
+                            </div>
+                            <div class="bd">100人中抽取14个中奖者，每人只能一次，可能的组合有 100!&#47;(100-14)! 种。 <br></div>
+                            <span class="time">2019-01-09 15:17</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这个是排列的数量</p>
+                                <p class="reply-time">2019-01-14 02:15</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/aa/1f/38b1bb9e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">曹宇</span>
+                            </div>
+                            <div class="bd">思路：先抽一等奖，然后在剩余的人中抽二等奖，最后然后在剩余的人中抽三等奖。<br><br><br>public static void recGenComb2(final ArrayList&lt;String&gt; originalList, ArrayList&lt;String&gt; remainderList, ArrayList&lt;String&gt; resultList, int remainderNum, int selectNum){<br><br>if (remainderNum == 1 &amp;&amp; selectNum == 1){<br><br>logger.debug( &quot;一等奖：&quot;+resultList );<br><br>ArrayList&lt;String&gt; remainOriginalList = cloneExt(originalList, resultList);<br><br>recGenComb2(remainOriginalList,remainOriginalList,new ArrayList&lt;&gt;(),0,2);<br><br>return;<br><br>}<br><br>if (remainderNum == 3 &amp;&amp; selectNum == 2){<br><br>logger.debug( &quot;二等奖：&quot; + resultList );<br><br>ArrayList&lt;String&gt; remainOriginalList = cloneExt(originalList, resultList);<br><br>recGenComb2(remainOriginalList,remainOriginalList,new ArrayList&lt;&gt;(),0,3);<br><br>return;<br><br>}<br><br>if (remainderNum == 10 &amp;&amp; selectNum == 3){<br><br>logger.debug( &quot;三等奖：&quot; + resultList );<br><br>return;<br><br>}<br><br>for (int i=0;i&lt;remainderList.size();i++){<br><br>ArrayList&lt;String&gt; copyResultList = (ArrayList&lt;String&gt;)resultList.clone();<br><br>copyResultList.add( remainderList.get( i ) );<br><br>ArrayList&lt;String&gt; copyRemainderList = new ArrayList&lt;&gt;(remainderList.subList( i+1, remainderList.size() ));<br><br>recGenComb2(originalList, copyRemainderList,copyResultList,remainderNum+1,selectNum);<br><br>}<br><br>}<br><br> <br></div>
+                            <span class="time">2019-01-09 10:16</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">思路是对的</p>
+                                <p class="reply-time">2019-01-14 02:12</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/98/12/a169bdcd.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Geek_477c02</span>
+                            </div>
+                            <div class="bd">老师，可以说下文章里的“词组”是如何总结出来的么？ <br></div>
+                            <span class="time">2019-01-08 09:56</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你是指词组如何生成的吗？基本的方法是使用n元文法，把相邻的2个或3个单词（或者中文词）合并起来，比如句子&quot;a red bluetooth mouse&quot;，二元文法就可以得到&quot;a red&quot;, &quot;red bluetooth&quot;, &quot;bluetooth mouse&quot;。我们可以把这个过程，想做从n个元素里跳出2个元素的组合，然后利用组合内不区别元素顺序的特点，对这些单词进行统一的排序，这样&quot;red bluetooth&quot;和&quot;bluetooth red&quot;都能对应的上</p>
+                                <p class="reply-time">2019-01-08 23:34</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/92/fd/6b0e58fe.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">文刂 氵共 超</span>
+                            </div>
+                            <div class="bd">使用C++实现组合问题-从n个数中取出m个不同的元素，不考虑顺序<br><br>#include &lt;iostream&gt;<br>#include &lt;vector&gt;<br><br>using namespace std;<br><br>template &lt;class T&gt;<br>void PrintVector(vector&lt;T&gt; &amp; DataVec)<br>{<br>	for (size_t i = 0; i &lt; DataVec.size(); ++i)<br>	{<br>		cout &lt;&lt; DataVec[i] &lt;&lt; &quot;  &quot;;<br>	}<br>	cout &lt;&lt; endl;<br>}<br><br>template &lt;class T&gt;<br>void Combination(vector&lt;T&gt; &amp;DataVec, int m, vector&lt;T&gt; &amp;resultVec)<br>{<br>	if (m &lt;= 0 &amp;&amp; m &gt; DataVec.size())<br>	{<br>		return;<br>	}<br><br>	if (resultVec.size() == m)<br>	{<br>		PrintVector(resultVec);<br>		return;<br>	}<br><br>	for (size_t i = 0; i &lt; DataVec.size(); ++i)<br>	{<br>		vector&lt;T&gt; tempResultVec = resultVec;<br>		tempResultVec.push_back(DataVec[i]);<br><br>		vector&lt;T&gt; tempDataVec(DataVec.begin()+i+1, DataVec.end());<br><br>		Combination(tempDataVec, m, tempResultVec);<br>	}<br>}<br><br>int _tmain(int argc, _TCHAR* argv[])<br>{<br>	vector&lt;int&gt; resultV;<br>	int dataList[] = {2,6,8,23,78,45,32,64};<br>	vector&lt;int&gt; dataV(dataList, dataList+8);<br><br>	Combination(dataV, 5, resultV);<br><br>	PrintVector(resultV);<br><br>	return 0;<br>} <br></div>
+                            <span class="time">2019-01-04 15:57</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">使用栈来实现递归过程的想法很棒</p>
+                                <p class="reply-time">2019-01-14 01:45</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/39/98/4c96c6f4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">焦太郎</span>
+                            </div>
+                            <div class="bd">晕了已经，为什么共32X31场比赛，每队却只踢62场？ <br></div>
+                            <span class="time">2019-01-03 10:43</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">因为每场球有两个球队参与，或者换个角度想，每对需要和另外31队踢，主客场制，所以31*2</p>
+                                <p class="reply-time">2019-01-04 02:33</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/40/5e/b8fada94.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Ryoma</span>
+                            </div>
+                            <div class="bd">在组合的定义中，老师你说m的范围是1≤m≤n，那全组合应该是不包括的空集的。<br><br>不知我说的对不对？ <br></div>
+                            <span class="time">2019-01-02 20:47</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">全组合应该是包括空集的，组合中没有考虑m=0是为了计算组合数量</p>
+                                <p class="reply-time">2019-01-02 23:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/f9/3d/3e20a86a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">樊少皇</span>
+                            </div>
+                            <div class="bd">public static void lottery(ArrayList&lt;Integer&gt; resultF, ArrayList&lt;Integer&gt; resultS, ArrayList&lt;Integer&gt; resultT,<br>			ArrayList&lt;Integer&gt; remain,ArrayList&lt;Integer&gt; remainList, int f, int s, int t) {	<br>		if(resultT.size() == t){<br>			remain = (ArrayList&lt;Integer&gt;) remainList.clone();<br>			remain.removeAll(resultT);<br>			if(resultS.size() == s){<br>				remain = (ArrayList&lt;Integer&gt;) remainList.clone();<br>				remain.removeAll(resultT);<br>				remain.removeAll(resultS);<br>				if(resultF.size() == f){<br>					System.out.print(&quot;三等奖:&quot; + resultT + &quot;;&quot;);<br>					System.out.print(&quot;二等奖:&quot; + resultS+ &quot;;&quot;);<br>					System.out.println(&quot;一等奖:&quot; + resultF);<br>					return;<br>				} else {<br>					for (int i = 0; i &lt; remain.size(); i++) {<br>						ArrayList&lt;Integer&gt; newResult = (ArrayList&lt;Integer&gt;) resultF.clone();<br>						newResult.add(remain.get(i));<br>						ArrayList&lt;Integer&gt; newRemain = new ArrayList&lt;Integer&gt;(remain.subList(i + 1, remain.size()));<br>						lottery(newResult, resultS, resultT, newRemain,remainList, f, s, t);<br>					}<br>				}<br>			} else {<br>				for (int i = 0; i &lt; remain.size(); i++) {<br>					ArrayList&lt;Integer&gt; newResult = (ArrayList&lt;Integer&gt;) resultS.clone();<br>					newResult.add(remain.get(i));<br>					ArrayList&lt;Integer&gt; newRemain = new ArrayList&lt;Integer&gt;(remain.subList(i + 1, remain.size()));<br>					lottery(resultF, newResult, resultT, newRemain,remainList, f, s, t);<br>				}<br>			}<br>		} else {<br>			for (int i = 0; i &lt; remain.size(); i++) {<br>				ArrayList&lt;Integer&gt; newResult = (ArrayList&lt;Integer&gt;) resultT.clone();<br>				newResult.add(remain.get(i));<br>				ArrayList&lt;Integer&gt; newRemain = new ArrayList&lt;Integer&gt;(remain.subList(i + 1, remain.size()));<br>				lottery(resultF, resultS, newResult, newRemain,remainList, f, s, t);<br>			}<br>		}<br>	} <br></div>
+                            <span class="time">2019-01-02 17:56</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">菩提</span>
+                            </div>
+                            <div class="bd">思考题，我对题目的理解是从100个选14个排列，C100,4。程序实现，将老师文章中的示例代码从3个选2排列修改，t1,t2,t3改为 t1,t2......t99,t100,排列方法调用第三个参数2改为14。<br>100x99x......87&#47;(14x13x......x2x1)种结果。 <br></div>
+                            <span class="time">2019-01-01 10:06</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/94/e3/ed118550.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Being</span>
+                            </div>
+                            <div class="bd">老师，这个数是不是特别大呀，用排列的公式   P(14,100) &#47;P(1,1)&#47;P(3,3)&#47;P(10,10)     对吗？思路就是一共有1+3+10=14个人中奖，即在100个人中取14个人进行排序，然后去掉一、二、三等奖各自的重复情况，就得到了最终中奖情况的组合。<br>我用Python实现的，但是数值太大，输出不了，我就改用小的数进行了验证<br>rewordMap = {&#39;一等奖&#39;:1,&#39;二等奖&#39;:2,&#39;三等奖&#39;:3}<br>peopleSize = 7<br>peopleList = []<br><br>for i in range(peopleSize):<br>    peopleList.append(&quot;People&quot; + str(i + 1))<br><br>def CombinationReword(rewordList, rewordSet, peopleList, rewordSize):<br>    if len(rewordSet) == rewordSize:<br>        rewordList.append(rewordSet.copy())<br>        return <br><br>    for people in peopleList:<br>        newRewordSet =  rewordSet.copy()<br>        newRewordSet.add(people)<br>        <br>        newPeopleList = peopleList[peopleList.index(people) + 1:]<br>        CombinationReword(rewordList, newRewordSet, newPeopleList, rewordSize)<br>        <br>#===== 计算各个奖项的组合情况     <br>rewordFirstList = []<br>CombinationReword(rewordFirstList,set(), peopleList, rewordMap[&#39;一等奖&#39;])<br><br>rewordSecondList = []<br>CombinationReword(rewordSecondList,set(), peopleList, rewordMap[&#39;二等奖&#39;])<br><br>rewordThridList = []<br>CombinationReword(rewordThridList,set(), peopleList,rewordMap[&#39;三等奖&#39;])<br>#=====<br><br>#===== 将各个奖项的的set取交集，若有重复，去除，未有重复，则为一种情况，输出<br>count = 0<br>for thirdSet in rewordThridList:<br>    for secondSet  in rewordSecondList:<br>        for firstSet in rewordFirstList:<br>            set1 = thirdSet &amp; secondSet<br>            if len(set1) != 0:<br>                continue<br>            set2 = thirdSet &amp; firstSet<br>            if len(set2) != 0:<br>                continue<br>            set3 = secondSet &amp; firstSet<br>            if len(set3) != 0:<br>                continue<br><br>            count += 1<br>            print(&quot;First&quot;)<br>            print(firstSet)<br>            print(&quot;Second&quot;)<br>            print(secondSet)<br>            print(&quot;Third&quot;)<br>            print(thirdSet)<br>            print(&quot;=======================&quot;)<br><br>print(count)<br><br> <br></div>
+                            <span class="time">2018-12-31 16:27</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">确实是很大的数字，可以用小的数字来测试</p>
+                                <p class="reply-time">2019-01-01 11:31</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/9d/42/a7da3229.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">JonathanShi</span>
+                            </div>
+                            <div class="bd">依次抽奖的话，三等奖为 C100 10  ( 100! ÷90!)÷10!<br>二等奖。C90 3；(90!÷87!)÷3!<br>一等奖C 87 1 <br>总的可能应该是三项的和，不知道是不是这个结果，请老师指正 <br></div>
+                            <span class="time">2018-12-31 16:18</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">总的可能是三者的乘积，是个非常大的数字</p>
+                                <p class="reply-time">2019-01-01 11:30</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

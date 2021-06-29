@@ -1,0 +1,1227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>01-明确你的前端学习路线与方法</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+    <div><center><h2>itjc8.com-收集整理<h2></center><br></div>
+<div class="_29HP61GA_0">
+<h1>01-明确你的前端学习路线与方法</h1>
+<p>你好，我是winter。今天我们一起来聊聊前端的学习路线与方法。</p><p>在“开篇词”中，我和你简单回顾了前端行业的发展，到现在为止，前端工程师已经成为研发体系中的重要岗位之一。可是，与此相对的是，我发现极少或者几乎没有大学的计算机专业愿意开设前端课程，更没有系统性的教学方案出现。大部分前端工程师的知识，其实都是来自于实践和工作中零散的学习。</p><p>这样的现状就引发了一系列的问题。</p><p><strong>首先是前端的基础知识</strong>，常常有一些工作多年的工程师，在看到一些我认为很基础的JavaScript语法的时候，还会惊呼“居然可以这样”。是的，基础知识的欠缺会让你束手束脚，更限制你解决问题的思路。</p><p><strong>其次，技术上存在短板，就会导致前端开发者的上升通道不甚顺畅。</strong>特别是一些小公司的程序员，只能靠自己摸索，这样就很容易陷入重复性劳动的陷阱，最终耽误自己的职业发展。</p><p><strong>除此之外，前端工程师也会面临技术发展问题带来的挑战。</strong>前端社区高度活跃，前端标准也在快速更新，这样蓬勃发展对技术来说无疑是好事，但是副作用也显而易见，它使得前端工程师的学习压力变得很大。</p><p>我们就拿JavaScript标准来说，ES6中引入的新特性超过了过去十年的总和，新特性带来的实践就更多了，仅仅是一个Proxy特性的引入，就支持了VueJS从2.0到3.0的内核原理完全升级。</p><!-- [[[read_end]]] --><p>缺少系统教育+技术快速革新，在这样的大环境下，前端工程师保持自学能力就显得尤其重要了。</p><p>那么，前端究竟应该怎么学呢？我想，我可以简单分享一下自己的经验。</p><h2>学习路径与学习方法</h2><p>首先是<strong>0基础入门</strong>的同学，你可以读几本经典的前端教材，比如《JavaScript高级程序设计》《精通CSS》等书籍，去阅读一些参考性质的网站也是不错的选项，比如<a href="https://developer.mozilla.org">MDN</a>。</p><p>如果你至少已经<strong>有了1年以上的工作经验</strong>，希望在技术上有一定突破，那么，这个专栏就可以是你技术进阶的一个选项了。</p><p>在这个专栏中，我希望传达的不仅仅是具体的知识点，还有体系架构和学习方法。我希望达到三个目标：</p><ul>
+<li>带你摸索出适合自己的前端学习方法；</li>
+<li>帮助你建立起前端技术的知识架构；</li>
+<li>让你理解前端技术背后的核心思想。</li>
+</ul><p>在开始具体的知识讲解之前，这篇文章中，我想先来谈两个前端学习方法。</p><h2>第一个方法：建立知识架构</h2><p>第一个方法是建立自己的知识架构，并且在这个架构上，不断地进行优化。</p><p>我们先来讲讲什么叫做知识架构？我们可以把它理解为知识的“目录”或者索引，<strong>它能够帮助我们把零散的知识组织起来，也能够帮助我们发现一些知识上的盲区。</strong></p><p>当然，知识的架构是有优劣之分的，最重要的就是逻辑性和完备性。</p><p>我们来思考一个问题，如果我们要给JavaScript知识做一个顶层目录，该怎么做呢？</p><p>如果我们把一些特别流行的术语和问题，拼凑起来，可能会变成这样：</p><ul>
+<li>类型转换；</li>
+<li>this指针；</li>
+<li>闭包；</li>
+<li>作用域链；</li>
+<li>原型链；</li>
+<li>……</li>
+</ul><p>这其实不是我们想要的结果，因为这些知识点之间，没有任何逻辑关系。它们既不是并列关系，又不是递进关系，合在一起，也就没有任何意义。这样的知识架构，无法帮助我们去发现问题和理解问题。</p><p>如果让我来做，我会这样划分：</p><ul>
+<li>文法</li>
+<li>语义</li>
+<li>运行时</li>
+</ul><p>为什么这样分呢，因为对于任何计算机语言来说，必定是“用规定的文法，去表达特定语义，最终操作运行时的”一个过程。</p><p>这样，JavaScript的任何知识都不会出现在这个范围之外，这是知识架构的完备性。我们再往下细分一个层级，就变成了这个样子：</p><ul>
+<li>文法
+<ul>
+<li>词法</li>
+<li>语法</li>
+</ul>
+</li>
+<li>语义</li>
+<li>运行时
+<ul>
+<li>类型</li>
+<li>执行过程</li>
+</ul>
+</li>
+</ul><p>我来解释一下这个划分。</p><p>文法可以分成词法和语法，这来自编译原理的划分，同样是完备的。语义则跟语法具有一一对应关系，这里暂时不区分。</p><p>对于运行时部分，这个划分保持了完备性，<strong>我们都知道：程序 = 算法 + 数据结构，那么，对运行时来说，类型就是数据结构，执行过程就是算法。</strong></p><p>当我们再往下细分的时候，就会看到熟悉的概念了，词法中有各种直接量、关键字、运算符，语法和语义则是表达式、语句、函数、对象、模块，类型则包含了对象、数字、字符串等……</p><p>这样逐层向下细分，知识框架就初见端倪了。在顶层和大结构上，我们通过逻辑来保持完备性。如果继续往下，就需要一些技巧了，我们可以寻找一些线索。</p><p>比如在JavaScript标准中，有完整的文法定义，它是具有完备性的，所以我们可以根据它来完成，我们还可以根据语法去建立语义的知识架构。实际上，因为JavaScript有一份统一的标准，所以相对来说不太困难。</p><p>如果是浏览器中的API，那就困难了，它们分布在w3c的各种标准当中，非常难找。但是我们要想找到一些具有完备性的线索，也不是没有办法。我喜欢的一个办法，就是用实际的代码去找：for in 遍历window的属性，再去找它的内容。</p><p>我想，学习的过程，实际上就是知识架构不断进化的过程，通过知识架构的自然延伸，我们可以更轻松地记忆一些原本难以记住的点，还可以发现被忽视的知识盲点。</p><p>建立知识架构，同样有利于面试，没人能够记住所有的知识，当不可避免地谈到一个记不住的知识，如果你能快速定位到它在知识架构中的位置，把一些相关的点讲出来，我想，这也能捞回不少分。（关于前端具体的知识架构，我会在02篇文章中详细讲解。）</p><h2>第二个方法：追本溯源</h2><p>第二个方法，我把它称作追本溯源。</p><p>有一些知识，背后有一个很大的体系，例如，我们对比一下CSS里面的两个属性：</p><ul>
+<li>opacity；</li>
+<li>display。</li>
+</ul><p>虽然都是“属性”，但是它们背后的知识量完全不同，opacity是个非常单纯的数值，表达的意思也很清楚，而display的每一个取值背后都是一个不同的布局体系。我们要讲清楚display，就必须关注正常流（Normal Flow）、关注弹性布局系统以及grid这些内容。</p><p>还有一些知识，涉及的概念本身经历了各种变迁，变得非常复杂和有争议性，比如MVC，从1979年至今，概念变化非常大，MVC的定义几乎已经成了一段公案，我曾经截取了MVC原始论文、MVP原始论文、微软MSDN、Apple开发者文档，这些内容里面，MVC画的图、箭头和解释都完全不同。</p><p>这种时候，就是我们做一些考古工作的时候了。追本溯源，其实就是关注技术提出的背景，关注原始的论文或者文章，关注作者说的话。</p><p>操作起来也非常简单：翻翻资料（一般wiki上就有）找找历史上的文章和人物，再顺藤摸瓜翻出来历史资料就可以了，如果翻出来的是历史人物（幸亏互联网的历史不算悠久），你也可以试着发封邮件问问。</p><p>这个过程，可以帮助我们理解一些看上去不合理的东西，有时候还可以收获一些趣闻，比如JavaScript之父 Brendan Eich 曾经在Wikipedia的讨论页上解释JavaScript最初想设计一个带有prototype的scheme，结果受到管理层命令把它弄成像Java的样子（如果你再挖的深一点，甚至能找到他对某位“尖头老板”的吐槽）。</p><p>根据这么一句话，我们再去看看scheme，看看Java，再看看一些别的基于原型的语言，我们就可以理解为什么JavaScript是现在这个样子了：函数是一等公民，却提供了new this instanceof等特性，甚至抄来了Java的getYear这样的Bug。</p><h2>结语</h2><p>今天我带你探索了前端的学习路径，并提出了两个学习方法：你要试着建立自己的知识架构，除此之外，还要学会追本溯源，找到知识的源头。</p><p>这个专栏中，我并不奢望通过短短的40篇专栏，事无巨细地把前端的所有知识都罗列清楚，这本身是MDN这样的参考手册的工作。但是，我希望通过这个专栏，把前端技术背后的设计原理和知识体系讲清楚，让你能对前端技术产生整体认知，这样才能够在未来汹涌而来的新技术中保持领先的状态。</p><p>在你的认识中，前端知识的结构是怎样的？欢迎留言告诉我，我们一起讨论。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            莲  2019-01-17 02:49:45
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            问题一提出来不知道怎么回答，看评论区才反应过来，我的认识中前端就是html负责骨架,css负责外表和js负责行为 [88赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            新哥  2019-01-17 09:35:08
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            前端不是切页面的吗？ [48赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Carson  2019-01-17 03:18:57
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            在阅读这篇文章之前，我对于前端知识结构的划分是基于「语言」：<br><br>前端 = HTML + CSS + JavaScript<br><br>每种语言下，又混杂了基础知识以及相关的工具。<br><br>比如我之前认为的 JavaScript 包括：<br>* JavaScript 基础<br>* Package Manager (NPM, Yarn)<br>* Build tools (NPM Scripts, ESLint, Webpack...)<br>* Frameworks (React, Vue.js, Angular)<br>* Testing tools (Jest ...)<br><br>现在知道自己的认识有两个误区：<br><br>1. 这个知识架构没有完备性，这样划分，总有在这个结构之外的知识；<br><br>2. 学习的时候会疲于奔命，总想“完整”的学完所有的知识，却走了弯路。<br><br>感谢 winter 老师。 [40赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-22 02:24:50</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">我觉得你不妨思考下，如果我要讲Package Manager、Build tools，你猜我会放到哪个部分？</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            芳玥  2019-01-17 10:59:06
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我所认为的前端的话，基础系列html+css+js，进阶一点就css3+js高级应用+前端框架+构建工具。工作快近2年，最近觉得焦虑。是自己太水，看看面试要求，反省自己，一看只会基础的但又不精。现在跟着课程体系，想建立好自己的知识体系，把握19年，不至于荒废时光。 [32赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            周群华  2019-01-17 23:02:56
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            建议正式开始的时候能够图文并茂 而不只是纯粹的文字 还有音频和看文字区别不大  [30赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            nbili  2019-01-17 08:35:51
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            如果让自己描述前端的知识结构，大致会按照下面这个roadmap来。<br><br>https:&#47;&#47;github.com&#47;kamranahmedse&#47;developer-roadmap&#47;blob&#47;master&#47;readme.md<br><br>winter老师第一种建立知识架构的方式，更像是做了进一步抽象。 [21赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-22 02:29:03</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">要自己整理才行哦。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            YUANWOW  2019-01-17 08:15:14
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            大家都觉得HTML容易，非常简单<br>就算不会，坐下来花一天时间看看MDN几乎都能写出来了<br>我们都知道写HTML要语义化，但是HTML5的语义我感觉非常复杂<br>有多少人能保证写出来的网页完完全全遵循了正确的语义？<br>能达到屏幕阅读器理解的程度？<br>我们想写语义正确的网页，但是也不想被语义复杂性所拖累（本来读的也不是文科，div一分钟能写出来的东西在语义上要纠结好久）<br>程老师，我的问题是，作为一名前端工程师，平常工作的时候写HTML究竟要语义化到哪种程度呢？ [21赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-22 02:26:57</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">这是个好问题，在语义化部分我有讲这个问题，很快你就能看到了。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            jviLee  2019-01-17 09:33:00
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            粗鄙认为前端知识架构可以分为渲染层和网络层两方面，不论前端如何发展变化，比如react，vue，ng，还是flutter，小程序等等，本质上脱离不了这两方面，另外前端工程师在接触一个新语言或新框架，最难不是学习语言本身（官方文档可以解决），反而棘手的是如何去工程化（更好组织代码，打包工程）和去优化，这是做前端两年的感受 [20赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-22 02:34:32</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">渲染层和网络层这个分法听起来是有一定思考了，不过可以再想想，是不是还有别的层？<br><br>另外就是，如何定义渲染层呢？</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            把那个产品经理祭天  2019-01-17 01:02:16
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            对于科班出身的学技术都是这一套思路吧！<br>感觉 winter 叔这篇主要是站在非科班出身或半路出家的前端从业者的角度来看的，确实我刚开始接触前端这一陌生领域来说就是这样，没有知识体系，都是知识点拼接的一张记忆网络，很多点觉得不可思议，难以记忆。实际是上不了解本质，不了解来龙去脉，所以很多知识在脑海中就不够形象。<br>期待接下来 winter 的思路！ [16赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            reece  2019-01-17 08:57:36
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            1.1，代码打包，如何打包代码发送到服务器。<br>1.1.1，资源加载<br>1.1.2，webpack打包<br>1.1.3，摇树优化<br><br>1.2，网络传输，因为传统上是浏览器发起页面请求，然后服务器端发送html页面。<br>1.2.1，资源加载<br>1.2.2，首屏页面加载优化<br><br>1.3，浏览器端的页面渲染。<br>1.3.1，浏览器如何渲染一张html页面<br>1.3.2，渲染性能优化<br><br>1.4代码编写<br>1.4.1，html页面架构<br>1.4.1.1 .....<br>...<br>1.4.2，css页面样式<br>1.4.2.1， ......<br>.....<br>1.4.3，js交互<br>1.4.3.1，.....<br>.....<br> [15赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;line-height:1.2">作者回复2019-01-22 02:30:52</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">不错，比较认真了，但是你有没考虑过除了打包、传输还有什么？它们跟代码编写是一个维度的概念吗？</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            棚头傀儡  2019-01-17 00:43:25
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我是黑马出身，emmm我的知识体系是初级前端要会哪些，中级要会哪些，又比如原型链和this之类的是中级必会的 [10赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Destroy、  2019-01-17 11:12:55
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            说实在，我现在知识体系都是乱的。都是东看一点西看一点拼凑起来的。 [8赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            _1024  2019-02-13 10:18:51
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            17年大学毕业之后开始接触前端，刚接触的时候觉得JavaScript特别简单，容易上手，但用了半年之后，发现不行了，就像 winter 老师所说的，经常会有“XX，还有这种用法”的感叹，于是，在 18 年，我自己把 JavaScript 的基础恶补了一遍，于是把一些概念开始聚合起来，有了一些比较清晰的脉络，学习的主要内容也是阮一峰老师的一些教程，在去年一年，也形成了自己的知识体系，有了一些落地的笔记，当然也还需要很多时间去修补<br>https:&#47;&#47;docs.itellboy.wang&#47;es5&#47; <br>共勉 [7赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Jake  2019-02-14 14:46:29
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+                首先特别认同大佬现在的图形化学习的重要性，比如谷歌出的flutter，flutter的野心在于他想统一所有端的开发模式，他的核心思想就是抛开一切html, css, js，xml等的束缚(flutter也在计划支持web端了)，用户界面即画布，用户想要得到的视觉，画给用户就可以了，而现在无论是web端还是ios，安卓其实都只是图形学的其中一个分支，想要彻底攻克其本质，其实对于底层语言的学习，学习计算机绘图原理可能是大前端的终极的学习目标。<br>   前端发展到现在，无论是jquery时代，还是现在三大框架，还是说vue in all的时代，归根结底这些工具的产生都是为了解决工作效率等问题。结合现在互联网行业的发展来看，后期的前端生存之道可能更多的是思考如何把前端当成一个应用来做，不仅仅局限于网页。而应用可能要思考的是易用性，可扩展性，可维护性，甚至可移植性，那么这一切都需要夯实的基础来支撑。<br>  [6赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            王智  2019-01-17 09:04:31
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            学习后端的我也来蹭点经验.无论是前端还是后端,我感觉学习方法都是相通的,甚至有时候我觉得前端的更新以及新技术的出现会更甚于后端,所以学习方法很有必要.我觉得老师说的两个方法都很好,追本溯源了解技术出现的背景和解决的问题,可以更快地了解这个技术以及进行学习,根据自己的问题来学习技术. 同样,构建知识架构也是很有必要的,我一直想总结一下后端的知识体系,一直没有思路,等下篇文章看看前端的知识体系来总结一下吧.   (•̀ᴗ•́)و<br><br>加油加油!!! [6赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            梁山伯与伏地魔  2019-01-18 17:02:55
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            看了后 我心中浮现的结构大概如下吧：<br>1.html 骨架<br>2.css css3 外观<br>3.js 行为<br>4.浏览器（<br>   1.插件 草料二维码 vue dectools这类<br>   2.http协议<br>   3.工具 network console...<br>   4.window对象等<br>   5.兼容<br>   6.渲染模式）<br>5.工具（<br>   1.编辑器 webstorm vscode hbuilder<br>   2.git&#47;webpack<br>6.框架（vue react...<br>7.插件库&#47;ui库（axios moment 富文本编辑器 element antd<br><br>大概就是这个样子吧..<br>希望可以看到后面的课程取精华去糟粕有所进步 [5赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            远恒之义  2019-01-17 22:53:42
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            刚看完了老师的直播，学到了很多的东西。<br>又重新复习了一遍今天的内容：学习路径和学习方法。<br><br>学习路径就是看书和建设性网站，购买老师的专栏，我觉得看不错的视频教程也是一种路径。<br><br>学习方法就是搭建知识架构和追本溯源。<br>老师讲解的学习方法都是三个维度（what、how、why）一步步由浅入深，从概念到方法再到收获，逻辑清晰同时具有完备性。<br><br>我是做 iOS 开发，知识架构是通过印象笔记中 iOS 功能知识点划分的笔记本加标签共同构建的目录和索引。学习了老师的方法之后，后面重新思考再梳理一下有逻辑具有完备性的知识体系吧。 [5赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            岑中归月  2019-01-17 10:01:30
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            工作一年多，我对前端的知识架构的认识就是：顶层目录html+css+javascript，二级目录是把这三个里面的知识点生硬并且毫无关联的列出来，三级目录是继续划分，，，，，，看了老师的讲解，觉得这样划分的知识架构毫无逻辑可言，期待老师后面的课程。 [5赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Sunshine  2019-01-17 14:02:21
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+                   任何计算机语言都是用来解决实际问题，解决人工痛点，用程序化来提高效率。而前段在这一个过程中是离用户最近的，为用户提供了友好的交互界面，承接着后端数据逻辑和用户沟通的功能<br>        从技术角度web前端=js（动态交互）+css（样式负责装饰）+html（页面骨架结构）。这一体系每一部分技术都在不断演进，出新的标准知识等。随着前端的不断复杂引入了工程化的配套知识体系帮助简化工作，提升效率，解决各种实际问题等。工程化演进过程有grunt、gulp、rollup、webpack等等。前端框架也在不断的演进发展。就web前端而言js、css、html又都是运行在浏览器上的深入学习不可避免需要了解浏览器原理，不同内核又不太一样，在了解差异过程也是那些优秀工程师解决问题的思路也有助于个人提高。目前前端知识体系比如es新标准，可编程css类似sass、less、postcss等这些浏览器还不识别需要工程化工具去做转译 [4赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            七七  2019-01-17 00:13:08
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            半路出家自学上岗，没有经过系统的学习，基础不扎实，有一定的全局意识，做了管理岗，总希望做的更好一点，奈何技术不够过硬，焦虑又慌张，希望听完课有所收获和提升 [4赞]
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

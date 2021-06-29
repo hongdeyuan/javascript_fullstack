@@ -1,0 +1,956 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>46-搭建系统：大量的低价值需求应该如何应对？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>46-搭建系统：大量的低价值需求应该如何应对？</h1>
+<p>你好，我是winter。</p><p>不知道你在工作中有没有遇到过这样的事情：一个运营找过来说，有一个紧急又简单的临时活动页面要做，希望打断现有的产品开发节奏临时插入。</p><p>这类页面技术难度不高，业务上通常属于“紧急不重要”的事情。</p><p>这些需求技术上没挑战，线上存在时间短，上线时间紧又没有任何调整空间，它们往往会成为前端团队里人人都不喜欢的“垃圾需求”，谁要是接了这种需求，就只能自认倒霉。</p><p>但是，这些真的是垃圾需求吗？换个视角来看，我认为它反而是宝藏。</p><p>所谓工程师，就是为了解决这些问题而存在的岗位，我们从工程的视角来看，“大量紧急不重要的页面”，才是真正的需求，现在需求有了，我们就应该按照工程的方式，定目标、设计方案、做实施、拿结果来解决问题。这就是我们今天要讲的搭建系统。</p><h2>搭建系统的目标</h2><p>搭建系统的目标是解决大量的简单页面生产问题。衡量这个目标的指标应该是生产页面的数量，这部分非常的明确，你如果要做搭建系统，可以根据业务的体量和服务的范围来决定具体的指标要求。</p><h2>搭建系统的设计</h2><p>搭建系统设计大概有几种流派，这里我介绍几种常见的搭建系统的设计：</p><p>第一种，是模板化搭建，由前端工程师生产页面模板，再由运营提供数据来完成页面，可以用以下公式来理解：</p><!-- [[[read_end]]] --><blockquote>
+<p>模板 + 数据 = 页面</p>
+</blockquote><p>模板化搭建是一种简单的思路，它的优点是整个系统实现简单。</p><p>第二种思路是，模块化搭建，由前端工程师生产模块，由运营把模块和数据组织成页面。</p><p>第三种思路，是数据驱动界面，这是一种比较新的思路，即数据中包含了展现自身所需要的模块相关的信息，本身决定了界面。</p><p>但是不论何种流派，都可以认为是数据、模块、模板、页面几种实体的相互作用，下面我就来详细讲解一下这几样实体。</p><h3>数据</h3><p>数据是用于展现界面所需要的信息。</p><p>我们按照数据用途，可以分成界面配置数据和内容数据。</p><ul>
+<li>界面配置数据：决定了页面上颜色、尺寸、位置、图片、文字等展现形式的数据，通常是以页面为单位的配置。</li>
+<li>内容数据：页面要展示的信息，如电商活动页面的商品信息、文章的文字信息等。</li>
+</ul><p>按照数据来源，我们又可以分成运营人员手工填写的数据和来自API产生的数据。</p><ul>
+<li>运营手工填写固定数据：运营人员依靠自己的专业技能决定的数据，可能包含线下招商信息、商品选品、文章等。</li>
+<li>来自API的数据：
+<ul>
+<li>固定数据，由服务端逻辑到指定存储处获取的数据；</li>
+<li>用户相关数据，由算法系统或者服务端逻辑，根据用户信息或者用户喜好推荐的数据。</li>
+</ul>
+</li>
+</ul><p>搭建系统本身是个产品，我们针对数据这个实体，要设计增、删、改、查的能力，根据我们以上的分析，搭建系统的数据部分有两个难点。</p><p>第一个难点是数据的手工编辑能力，现在一般的数据都会采用JSON格式，JSON格式中有数字、字符串、数组、对象、布尔等数据类型，我们需要根据数据的格式定义为每一种类型设计编辑器。</p><p>但是仅仅是基本类型还不够，我们实际开发中，还需要跟实际业务结合来设计编辑器，下面，我就把我在之前的工作中设计的数据编辑器列一下。</p><ul>
+<li>整数：整数编辑器，可用HTML原生输入框<code>&lt;input type=number min=1 max=100/&gt;</code>实现。</li>
+<li>数字：数字编辑器，可用<code>&lt;input type=number min=1.0 max=100.0/&gt;</code>实现</li>
+<li>字符串：字符串编辑器，可用<code>&lt;input /&gt;</code>实现。</li>
+<li>URL：URL编辑器，可用<code>&lt;input /&gt;</code>配合格式校验。</li>
+<li>图片：图片编辑器，需要自研图片上传功能。</li>
+<li>固定字段对象：对象和字段编辑器，可用多个<code>&lt;input /&gt;</code>和<code>&lt;label&gt;</code>实现。</li>
+<li>布尔型：开关，可用<code>&lt;select&gt;</code>或者自研组件实现。</li>
+<li>自由字段对象：需要自研KV输入组件。</li>
+<li>数组：需要自研列表组件实现。</li>
+<li>对象数组：需要自研表格组件或者列表组件实现。</li>
+<li>矩形区域：需要自研区域选择组件。</li>
+</ul><p>这里要注意JSON是一个级联的格式，所以对象、数组中很可能需要插入各种不同的数据类型的编辑器，这部分技术上有一定挑战。此外，实践中，对象数组很多时候都来自Excel数据，Excel导入也是非常重要的。</p><p>第二个难点则是跟服务端API的对接，对于服务端系统统一性较好的公司，这不是什么难事，对服务端系统比较奔放的公司，如果服务端API调用方式不统一，就非常麻烦了。这一块只能根据实际情况见招拆招，我这里没办法详细介绍，</p><h3>模板</h3><p>模板可以简单得理解成挖了许多坑的页面，它一般是由前端工程师来生产的一种实体。与数据之间的连接是数据的格式，对JSON格式来说，JSON Schema是社区接受度较高的一个方案。</p><p>最简单的模板可以用字符串模板来设计，复杂一点的模板则可以由JavaScript进行渲染，通过约定全局变量名称或者约定调用函数入口做到把数据传递给模板，你可以根据实际需求复杂程度选择合适的方案。</p><p>需要注意，在产品设计上，模板可不是“增、删、改、查”那么简单，考虑到实际工程需要，模板必须是版本化的，也就是说，前端每发布一个模板，都需要永久性存储一条记录，并且产品设计上必须保持可以回滚，这样，一旦线上发现问题，可以迅速回滚到一个可工作的版本，有效降低不可用时长。</p><p>此外，模板设计还有批量更新的需求，一些运营活动可能包含数百个页面，它们使用同一套模板，产品设计上必须要注意提供批量更新机制。</p><h3>模块</h3><p>模块跟模板非常相似，但是从产品的角度，模块是可组合的。跟模板相似的部分如数据连接、版本化发布、批量更新等，这里就不再赘述。</p><p>模块化搭建有额外的技术难点，就是可拖拽的模块编辑器，移动端搭建布局相对简单，可以通过简单的自上而下布局和拖拽改变位置来实现。</p><p>桌面的模块拖拽比较复杂，一般都会采用一些变通的思路简化设计，如提供几种固定的布局模板，提供布局容器，或者采用纯绝对定位布局。</p><p>在一些产品设计中，会先用模块拼成模板，再指定数据源，这种模式中的”模块“，我们认为是一种开发模板的技术方案，跟我们此处讲的产品上的模块概念不同。因为在我们的认知中，模板应该是由前端工程师产生的，具有复用性的一种实体。</p><h3>页面</h3><p>不论是模板搭建还是模块搭建，我们的最终生产的目标都是页面。页面同样需要版本化发布，便于回滚。</p><p>页面部分实现的难点是跟发布系统的结合，在我们前面讲的所有产品实体中，模板、模块、数据都是存储在搭建系统本身的，但是页面不一样，页面必须要提供线上服务，所以页面是要发布到线上生产环境的。</p><p>如我们上一课讲的，假设前端持续集成系统有校验规则，页面也必须经过这个过程。</p><p>在我之前的工作中，是通过自建静态Web服务器+CDN回源的方式来支撑搭建系统的线上应用的。</p><p>因为服务器上只发布静态内容，并且有CDN挡住用户流量，所以只需要少量几台线上机器即可。</p><h2>搭建系统的实施</h2><p>在我工作的实践中，搭建系统的实施可以说是所有系统中最容易的了，对多数公司来说搭建系统是一种刚性需求，只要完成了产品开发，立刻会有大量的用户。</p><p>所以只要正确识别了需求，搭建系统的推行几乎完全不需要担心。</p><h2>搭建系统的监控</h2><p>作为一个工具型技术产品，搭建系统同样会产生大量有价值的数据，搭建系统的用户访问和生产页面数量是衡量自身的重要指标。</p><h2>总结</h2><p>本课我为你讲解了搭建系统，搭建系统是为了应对大量简单页面的生产需求而设计的一种工具型产品，它的目标非常明确，就是快速生产大量的页面。</p><p>方案上，它重点和难点在于几个产品实体的设计，数据部分重点在于编辑器和跟服务端API的对接，模板部分则主要是版本化和数据的格式定义，模块除了模板的重点，还有拖拽系统，最终产生的页面主要的难点是跟生产环境的对接。</p><p>搭建系统的实施主要是把产品在做出来，一般来讲推广是非常自然的事情，最后，搭建系统产生的数据监控关键的指标是用户访问数和生产页面数。</p><p>本课的思考问题是，请你分析一下你们公司是否有搭建系统的需求，尝试用本课的知识来设计或者改进一下你们的搭建系统。</p><p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt=""></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            yuxina  2019-05-16 09:20:19
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            活动页布局设计多变，搭建系统在构建中怎么寻求平衡点 [2赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            胡琦  2019-05-16 20:28:21
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            目前正准备搭 看到一些优秀的案例  可惜本人现在的水平真没法实现他们那样全面的 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            翰弟  2019-05-16 09:25:46
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            公司恰好有这样的系统  捋捋 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

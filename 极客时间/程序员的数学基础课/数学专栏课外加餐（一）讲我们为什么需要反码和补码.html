@@ -1,0 +1,398 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                数学专栏课外加餐（一）讲我们为什么需要反码和补码
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/7a/5c/7a3dd69f0fd436808cb39b9ecbcf045c.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。欢迎来到第一次课外加餐时间。</p><p>专栏已经更新了几讲，看到这么多人在留言区写下自己的疑惑和观点，我非常开心。很多同学在留言里提出了很多非常好的问题，所以我决定每隔一段时间，对留言里的疑问、有代表性的问题做个集中的解答，也是对我们主线内容做一个补充，希望对你有帮助。</p><h2>什么是符号位？为什么要有符号位？</h2><p>在<a href="https://time.geekbang.org/column/article/71840">第1讲</a>里，我介绍了十进制数转二进制数。这里面很多人对逻辑右移和算术右移中提到的符号位和补码有疑惑。这里面涉及了几个重要的概念，包括符号位、溢出、原码、反码和补码。我详细讲一下这几个点的来龙去脉。</p><p>首先我们来看，<strong>什么是符号位，为什么要有符号位</strong>？用一句话来概括就是，<strong>符号位是有符号二进制数中的最高位，我们需要它来表示负数。</strong></p><p>在实际的硬件系统中，计算机CPU的运算器只实现了加法器，而没有实现减法器。那么计算机如何做减法呢？我们可以通过加上一个负数来达到这个目的。比如，3-2可以看作3+(-2)。因此，负数的表示对于计算机中的二进制减法至关重要。</p><p>那么，接下来的问题就是，<strong>如何让计算机理解哪些是正数，哪些是负数呢</strong>？为此，人们把二进制数分为有符号数（signed）和无符号数（unsigned）。</p><p>如果是有符号数，那么最高位就是符号位。当符号位为0时，表示该数值为正数；当符号位为1时，表示该数值为负数。例如一个8位的有符号位二进制数10100010，最高位是1，这就表示它是一个负数。</p><!-- [[[read_end]]] --><p>如果是无符号数，那么最高位就不是符号位，而是二进制数字的一部分，例如一个8位的无符号位二进制数10100010，我们可以通过第1讲讲过的内容，换算出它所对应的十进制数是162。由于没有表示负数的符号位，所有无符号位的二进制都代表正数。</p><p>有些编程语言，比如Java，它所有和数字相关的数据类型都是有符号位的；而有些编程语言，比如C语言，它有诸如unsigned int这种无符号位的数据类型。</p><p>下面我们来看，<strong>什么是溢出？</strong></p><p>在数学的理论中，数字可以有无穷大，也有无穷小。可是，现实中的计算机系统，总有一个物理上的极限（比如说晶体管的大小和数量），因此不可能表示无穷大或者无穷小的数字。对计算机而言，无论是何种数据类型，都有一个上限和下限。</p><p>在Java中，int型是32位，它的最大值也就是上限是2^31-1（最高位是符号位，所以是2的31次方而不是32次方），最小值也就是下限是-2^31。而long型是64位，它的最大值，也就是上限是2^63-1；最小值，也就是下限是-2^63。</p><p>对于n位的数字类型，符号位是1，后面n-1位全是0，我们把这种情形表示为-2^(n-1) ，而不是2^(n-1)。一旦某个数字超过了这些限定，就会发生溢出。如果超出上限，就叫<strong>上溢出</strong>（overflow）。如果超出了下限，就叫<strong>下溢出</strong>（underflow）。</p><p>那么<strong>溢出之后会发生什么呢？</strong>我以上溢出为例来给你解释。</p><p>n位数字的最大的正值，其符号位为0，剩下的n-1位都为1，再增大一个就变为了符号位为1，剩下的n-1位都为0。而符号位是1，后面n-1位全是0，我们已经说过这表示-2^(n-1)。</p><p><img src="https://static001.geekbang.org/resource/image/10/36/10974fab2acf1ebd3cd3938387b65c36.jpg" alt=""></p><p>那么就是说，上溢出之后，又从下限开始，最大的数值加1，就变成了最小的数值，周而复始，这不就是余数和取模的概念吗？下面这个图可以帮助你的理解。</p><p><img src="https://static001.geekbang.org/resource/image/57/71/57e275c509cb477588b8c19b63df0b71.jpg" alt=""></p><p>其中右半部分的虚线表示已经溢出的区间，而为了方便你理解，我将溢出后所对应的数字也标在了虚线的区间里。由此可以看到，所以说，<strong>计算机数据的溢出，就相当于取模。</strong>而用于取模的除数就是数据类型的上限减去下限的值，再加上1，也就是(2^(n-1)-1)-(-2^(n-1))+1=2x2^(n-1)-1+1=2^n-1+1。</p><p>你可能会好奇，这个除数为什么不直接写成2^n呢？这是因为2^n已经是n+1位了，已经超出了n位所能表示的范围。</p><h2>二进制的原码、反码及补码</h2><p>理解了符号位和溢出，我接下来说说，什么是二进制的原码、反码和补码，以及我们为什么需要它们。</p><p><strong>原码</strong>就是我们看到的二进制的原始表示。对于有符号的二进制来说，原码的最高位是符号位，而其余的位用来表示该数字绝对值的二进制。所以+2的原码是000…010，-2的的原码是100.…010。</p><p>那么我们是不是可以直接使用负数的原码来进行减法计算呢？答案是否定的。我还是以3+(-2)为例。</p><p>假设我们使用Java中的32位整型来表示2，它的十进制是000…010。最低的两位是10，前面的高位都是0。如果我们使用-2的原码，也就是100…010，然后我们把3的二进制原码000…011和-2的二进制原码100…010相加，会得到100…0101。具体计算你可以看我画的这幅图。</p><p><img src="https://static001.geekbang.org/resource/image/26/6b/267986137720c8a14e45fa3bb46f736b.jpg" alt=""></p><p>二进制编码上的加减法和十进制类似，只不过，在加法中，十进制是满10才进一位，二进制加法中只要满2就进位；同样，在减法中，二进制借位后相当于2而不是10。</p><p>相加后的结果是二进制100…0101，它的最高位是1，表示负数，而最低的3位是101，表示5，所以结果就是-5的原码了，而3+(-2)应该等于1，两者不符。</p><p>如果负数的原码并不适用于减法操作，那该怎么办呢？这个问题的解答还要依赖计算机的溢出机制。</p><p>我刚刚介绍了溢出以及取模的特性，我们可以充分利用这一点，对计算机里的减法进行变换。假设有i-j，其中j为正数。如果i-j加上取模的除数，那么会形成溢出，并正好能够获得我们想要的i-j的运算结果。如果我说的还是不太好理解，你可以参考下面这张图。</p><p><img src="https://static001.geekbang.org/resource/image/d3/4f/d3788c6ecac1f8d8eee9552c7452ca4f.jpg" alt=""></p><p>我们把这个过程用表达式写出来就是i-j=(i-j)+(2^n-1+1)=i+(2^n-1-j+1)。</p><p>其中2^n-1的二进制码在不考虑符号位的情况下是n-1位的1，那么2^n-1-2的结果就是下面这样的：</p><p><img src="https://static001.geekbang.org/resource/image/41/0e/413470413ff2fe1ce02fa51f07884c0e.jpg" alt=""></p><p>从结果可以观察出来，所谓2^n-1-j相当于对正数j的二进制原码，除了符号位之外按位取反（0变1，1变0）。由于负数-j和正数j的原码，除了符号位之外都是相同的，所以，2^n-1-j也相当于对负数-j的二进制原码，除了符号位之外按位取反。我们把2^n-1-j所对应的编码称为负数-j的反码。所以，-2的反码就是1111…1101。</p><p>有了反码的定义，那么就可以得出i-j=i+(2^n-1-j+1)=i的原码+(-j的反码)+1。</p><p>如果我们把-j的反码加上1定义为-j的补码，就可以得到i-j=i的原码+(-j的补码)。</p><p>由于正数的加法无需负数的加法这样的变换，因此正数的原码、反码和补码三者都是一样的。最终，我们可以得到i-j=i的补码+(-j的补码)。</p><p>换句话说，计算机可以通过补码，正确地运算二进制减法。我们再来用3+(-2)来验证一下。正数3的补码仍然是0000…0011，-2的补码是1111…1110，两者相加，最后得到了正确的结果1的二进制。</p><p><img src="https://static001.geekbang.org/resource/image/3f/1f/3f4133ef63fd467bd389f58820c72d1f.jpg" alt=""></p><p>可见，溢出本来是计算机数据类型的一种局限性，但在负数的加法上，它倒是可以帮我们大忙。</p><p>最后，给你留一道思考题吧。理解了负数的原码、反码和补码之后，你能算算看，8位的有符号位二进制数10100010，对应的是哪个十进制数吗？</p><p>好了，关于二进制的补充内容就到这里了。<span class="orange">欢迎你继续留言给我。你也可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/2a/4c/eaeef951.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">老板来几袋面粉</span>
+                            </div>
+                            <div class="bd">好复杂，开始慌了 <br></div>
+                            <span class="time">2018-12-24 15:36</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/ae/bd/d12f8907.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">梓航(﹏)</span>
+                            </div>
+                            <div class="bd">老师，你讲的那个取模和反码的关系那一段我看不懂，之前看书也没有遇到你说的这种概念，请问还有其他学习资料吗？ <br></div>
+                            <span class="time">2018-12-24 20:26</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">其他的材料一般都没有将“为什么”这么算说清楚，我画了张图，你结合图来理解。简单的说，你可以认为a-b的减法就是给a加上一个特别大的数，导致溢出，然后剩下的反而比a小，这就达到了减法的目的</p>
+                                <p class="reply-time">2018-12-25 05:42</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/18/34/c082419c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风轨</span>
+                            </div>
+                            <div class="bd">思考题<br>0b10100010 = 0b10000000 + 0b00100010<br>其中<br>0b10000000 = -128<br>0b00100010 = 34<br>所以答案是 -94<br><br>2进制取相反数公式<br>相反数 = 原数减一再取反<br><br>- 0b10100010 = !(0b10100010-1) = 0b01011110 = 94<br> <br></div>
+                            <span class="time">2018-12-24 10:27</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的</p>
+                                <p class="reply-time">2018-12-24 13:01</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/d9/0a/ce61e397.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">石佳佳_Gemtra</span>
+                            </div>
+                            <div class="bd">思考题：<br>原码：10100010<br>对补码除符号位取反得<br>反码：11011101<br>+1操作得<br>补码：11011110<br>对应十进制数：-94<br>还有一种方法，把负数原码除符号位外求和，减去 （2^n-1+1），即 2+32-(2^7-1+1)=-94 <br></div>
+                            <span class="time">2018-12-24 10:01</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的</p>
+                                <p class="reply-time">2018-12-24 13:01</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/4a/6f/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Sunsun</span>
+                            </div>
+                            <div class="bd">为什么负数的补码等于反码加一<br>1，基本概念（看看了解一下就好）<br><br>计算机通过将最高位设置为符号位来表示正负数：<br>符号位为1时，代表这个数为负数；符号位为0时，代表这个数为正数。<br><br>为了方便理解，本文中的例子全部用4位二进制数举例<br><br>原码：除符号位外的其他位，保存该二进制数的绝对值。<br>例如 1：0001   -1：1001<br><br>反码：正数的反码等于原码；<br>           负数的反码就是其原码除符号位外，按位取反。<br>例如 1：0001   -1: 1110<br><br>补码：正数的补码等于其原码<br>            负数的的补码等于反码加一<br>例如 1：1001    -1：1111<br><br>2，原码、补码<br>原码、反码、补码都可以通过符号位非常方便的表示正负数，但是在进行加法计算时，原码和反码都存在这样或那样的问题：<br><br>注: 计算机cpu的运算器只实现了加法器，而没有实现减法器，计算机是通过加上一个负数来做减法的<br><br>原码：<br><br>1 + 1 = 0001 + 0001 = 0010 = 2 <br>1 + -1 = 0001 + 1001 = 1010 = -2<br><br>从上面的计算可以看出，原码无法通过加上一个负数来实现减法<br><br>反码<br><br>1 + -1 = 0001 + 1110 = 1111 = -0<br>1 + -2 = 0001 + 1010 = 1011 = -4<br><br>从上面的计算可以看出，反码也无法实现加上一个负数来实现减法<br><br>原码和反码都不能解决的事情，只有通过寻找一种可以完美支持件“减法“的二进制数的表示方法来解决！<br><br>3，补码<br>一个4位的二进制数能表示的数是有限的，从 0000 ~ 1111 ，0000表示0，1111表示 - 1，最大值7（0111），最小值-8（1000）。<br><br>看下面这组计算：<br><br><br>0000 + 0001 =  0 + 1 = 0001 = 1<br>0001 + 0001 = 1 + 1 = 0010 = 2<br>0010 + 0001 = 2 + 1 = 0011 = 3<br>...<br>0111 + 0001 = 7 + 1 = 1000 = -8  <br>1000 + 0001 = -8 + 1 = 1001 = -7<br>1001 + 0001 = -7 + 1 = 1010 = -6<br>...<br>1111 + 0001 = -1 + 1 = 0000 = 0<br>0000 + 0001 =  0 + 1 = 0001 = 1<br><br><br>0000 每次加上 0001 ；当最大值7 + 1时，正溢出，结果为最小值-8；最小值-8加上8后，又变成了0000，就像钟表一样，循环往复。<br><br>比如说现在有一个数字2，我们想让它变成0，怎么办？<br>有两种方法:<br>1. 减去 2 个 1  即：0010 - 0010 = 0000<br>2. 加上  14 个 1 即：0010 + 1110 = 0000<br><br>我们可以总结出，当一个四位的二进制数abcd 减去 另一个四位的二进制数 efgh ： abcd - efgh = abcd + (1111 + 1 - efgh) 。<br><br>efgh 和 (1111 + 1 - efgh) 对模 （1111 + 1）同余。<br><br>如果不太理解，就可以想象一个钟表的时针停在10点的位置，如果想让时针停在8点的位置，可以逆时针的旋转2个刻度，也可以顺时针的旋转10个刻度。<br><br>通过公式abcd - efgh = abcd + (1111 + 1 - efgh) ，我们可以得出，如果计算机使用（1111 + 1 -efgh）来表示 -(efgh) ，就可以解决减法的问题。这就是我们补码的原理。<br><br>由于1111 - efgh 等于 efgh 的反码 ，所以 efgh 的补码等于 efgh的反码加上1。<br><br> <br></div>
+                            <span class="time">2019-01-02 10:41</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/08/17/e63e50f3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">彩色的沙漠</span>
+                            </div>
+                            <div class="bd">老师您好<br>1、文中提到的&quot;对于 n 位的数字类型，符号位是 1，后面 n-1 位全是 0，我们把这种情形表示为 -2^n ，而不是 2^n。&quot;<br>第一小问为什么不是-2^(n-1)而是你说的-2^n<br>第二小问是不是应该这样描述&quot;对于 n 位的数字类型，符号位是 1，后面 n-1 位全是 0，我们把这种情形表示为-2^(n-1)，而不是2^(n-1)&quot;更合适？这个问题依赖第一小问的答案<br>2、java中int的最小值是-2^63<br>二进制源码:1 000 0000 0000 0000 0000 0000 0000 0000<br>二进制反码:1 111 1111 1111 1111 1111 1111 1111 1111<br>那他的补码怎么表示 反码+1<br>感谢老师的解答！ <br></div>
+                            <span class="time">2018-12-26 13:06</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">第一处有个笔误，我的原意是-2^(n-1)，而不是2^n<br><br>第二个问题很好 -2^63的补码还是它自己，符号位进位舍弃</p>
+                                <p class="reply-time">2018-12-26 15:09</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6e/c4/df9d1126.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">二十八画生</span>
+                            </div>
+                            <div class="bd">本文重要的是说清了补码的由来，为啥这样定义补码 <br></div>
+                            <span class="time">2019-01-02 23:45</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/0c/0f/93d1c8eb.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">mickey</span>
+                            </div>
+                            <div class="bd">                           1010 0010<br>除符号位取反 -&gt;  1101 1101<br>加1                -&gt;  1101 1110<br>转十进制        -&gt;  -94 <br></div>
+                            <span class="time">2018-12-24 16:35</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/79/35/0f9fcaea.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">枫暂</span>
+                            </div>
+                            <div class="bd">不错的文章，读罢对溢出，原码，反码，补码的由来有了点线成面的认识，以前对这些数字在计算机中的二进制表示相关知识的理解更多是零散的，串不起来，需要记忆的成分在里面，过上一段时间后，总得重新梳理好半会才理清楚。阅读了本文后，终于有水到渠成，一以贯之之感😁，为作者大大点赞😊 <br></div>
+                            <span class="time">2019-01-04 11:10</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">感谢支持 我们继续努力</p>
+                                <p class="reply-time">2019-01-05 08:39</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/52/65/d984d4e8.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">令</span>
+                            </div>
+                            <div class="bd">通篇读了2遍，j、-j反码研究了半个小时才彻底明白，感觉容易被绕晕，学习作者的额外加餐，“味道”很美~ <br></div>
+                            <span class="time">2018-12-28 17:17</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/d0/db/8b8173d0.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">OzoraTsubasa</span>
+                            </div>
+                            <div class="bd">老师，请教您2个问题：<br>      1.您文章说的，Java Int类型是32位，最大值是2^31-1，这个最大值是去除符号位第31位的最大值还是从0位按照2^*n 这个算法 从0位相加一直加到31位得到的值那？<br><br>     2.为什么最大正值01111..11+1之后就变成10000..00啦 ，按照逢二进一也应该是01111..10,不明白老师？ <br></div>
+                            <span class="time">2018-12-28 12:42</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">第一个问题的回答是，除符号位之外，最大值是31个1，也就是2^31-1<br><br>第二个问题，缝二进一要一直进位，直到最高位</p>
+                                <p class="reply-time">2018-12-29 01:42</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/89/73/c76eba0c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">KISS</span>
+                            </div>
+                            <div class="bd">“其中 2^n-1 的二进制码在不考虑符号位的情况下是 n-1位的1“<br>这个地方不理解，2^n-1的符号位不是0吗？<br>而2^n - 1是有位的1啊。<br>这个地方不理解，希望老师能解答一下~ <br></div>
+                            <span class="time">2018-12-27 20:06</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对于有符号的数据类型，2^n-1是n位1，但是第一个是符号位，所以符号位是1</p>
+                                <p class="reply-time">2018-12-28 01:06</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6a/f2/db90fa96.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Oli张帆</span>
+                            </div>
+                            <div class="bd">说的题外话，我发现每次看文字的时候，都很容易走神，但是听语音就好很多。不知道别的同学是怎样的。 <br></div>
+                            <span class="time">2018-12-27 17:23</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我会努力将普通话发音说得更标准😄</p>
+                                <p class="reply-time">2018-12-28 01:02</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b1/55/249c3abd.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">包美丽</span>
+                            </div>
+                            <div class="bd">为什么Java中int的下限是-2^31，怎么计算出来的？ <br></div>
+                            <span class="time">2018-12-26 20:53</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">假设无符号，那么32个1表示2^32-1，所以范围是0到2^32-1，共2^32个数。Java的int是有符号的，所以最高位是符号位，那么正负各分一半，正的是0到2^31-1，一共2^31个数，负的是-1到-2^31，也是2^31个数。可以将1后面n-1个0看作负0，但是没必要要两个0，所以将它看作-2^31</p>
+                                <p class="reply-time">2018-12-27 01:06</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/08/17/e63e50f3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">彩色的沙漠</span>
+                            </div>
+                            <div class="bd">老师，不好意思<br>问题有一处错误，我纠正一下，以免误导后来的同学<br>java中int的最小值是-2^31<br>二进制源码:1 000 0000 0000 0000 0000 0000 0000 0000<br>二进制反码:1 111 1111 1111 1111 1111 1111 1111 1111<br>-2^31的补码还是自己，符号位进位舍弃 <br></div>
+                            <span class="time">2018-12-26 16:56</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的👍</p>
+                                <p class="reply-time">2018-12-27 00:55</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">学徒</span>
+                            </div>
+                            <div class="bd">“对于 n 位的数字类型，符号位是 1，后面 n-1 位全是0，我们把这种情形表示为 -2^n ，而不是 2^n”，这里不应该是-2^(n-1)吗？<br><br> <br></div>
+                            <span class="time">2018-12-26 13:05</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对 应该是-2^(n-1)</p>
+                                <p class="reply-time">2018-12-26 15:10</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/7a/99/9f22eaa9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">okawari</span>
+                            </div>
+                            <div class="bd">黄老师还能看到吗，肥宅大哭ing，不知道理解的对不对，还请黄老师指正，谢谢黄老师～<br><br>我是这样理解的，-2就是再加2就到0的意思，0表示为全0，所以-2需要表示为11111110，这样加两个单位，最高位溢出后就归零了，即为补码。而原码为补码的一个映射，目的是使得人更加容易理解。 <br></div>
+                            <span class="time">2018-12-26 11:57</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这样理解也是可以的</p>
+                                <p class="reply-time">2018-12-26 15:29</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/c2/19/16863a09.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">独孤</span>
+                            </div>
+                            <div class="bd">“对于 n 位的数字类型，符号位是 1，后面 n-1 位全是 0，我们把这种情形表示为 -2^n ，而不是 2^n”，是不是写错了，应该是-2^n-1,而不是2^n-1 <br></div>
+                            <span class="time">2018-12-26 08:23</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对 你的理解是对的</p>
+                                <p class="reply-time">2018-12-26 15:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/7d/25/f59a0d5c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">李雷</span>
+                            </div>
+                            <div class="bd">32位的int值，最大值不应该是31个1么，那应该是2^32-1吧？ <br></div>
+                            <span class="time">2018-12-26 08:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">比如4个1是15，相当于2^4-1，所以31个1相当于2^31-1</p>
+                                <p class="reply-time">2018-12-26 11:53</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/4e/4f/755382ad.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">C·K</span>
+                            </div>
+                            <div class="bd">老师为什么有符号n位二进制数溢出后是-2^n，范围不应该是-2^(n-1)到2^(n-1)-1吗？ <br></div>
+                            <span class="time">2018-12-26 00:33</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">上溢出后应该是-2^(n-1)</p>
+                                <p class="reply-time">2018-12-26 15:24</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

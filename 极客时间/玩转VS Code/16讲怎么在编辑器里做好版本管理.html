@@ -1,0 +1,280 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                16讲怎么在编辑器里做好版本管理
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/01/f3/0186b641f06ae607c989f674894a70f3.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>软件版本管理（Version Control）的重要性，恐怕已经是一个老生常谈的问题。无论是团队开发，还是个人项目，都能够从版本管理中获利。其中，团队可以通过版本管理有效地处理团队成员各自代码之间的冲突，管理代码历史和发布；个人则可以借助版本管理实现代码的备份，通过版本变化历史记录掌握自己的工作进展等等。</p>
+<p>Git 以及 GitHub、GitLab 等在线代码托管服务，更是将分布式的开发协作和版本管理推到了极致。假如你还没有使用过版本管理，那么请先花点时间学习研究一下某个相对主流的版本管理软件。比如 Git、Subversion、Mercurial、CVS、Perforce，它们各有各的历史使命和特点。如果一定要我做个推荐的话，我觉得Git 或者 Subversion 都值得尝试。</p>
+<p>不过，版本管理本身不是我们今天学习的重点，我们要研究的是如何在 VS Code 中使用版本管理，以及如何借助 VS Code 的 UI 让版本管理更便捷。今天的文章里的例子，会使用 Git 和 Subversion 来进行讲解，但 VS Code 里给版本管理的提供的 UI 都是一致的，所以如果你使用的是别的版本管理软件，也不必担心。</p>
+<p>如果你使用的是 Git ，那你无需做任何设置，VS Code 自带了 Git 的版本支持。如果你是使用 SVN，则需要先<a href="https://marketplace.visualstudio.com/items?itemName=johnstoncode.svn-scm">下载安装插件</a>。</p><!-- [[[read_end]]] -->
+<h2>版本管理视图</h2>
+<p>首先，在工作台的左侧活动栏上，我们能看到一个版本管理的图标。</p>
+<p><img src="https://static001.geekbang.org/resource/image/08/4f/080789df1a989fc9bc8c045b0bd3744f.png" alt="" /></p>
+<center><span class="reference">左侧活动栏，版本管理图标</span></center>
+<p>如果在当前的文件夹下有尚未被提交的改动，我们能够在这个图标上面看到一个数字。数字代表了有多少个文件被修改了，只是虽改动但还未被提交。</p>
+<p><img src="https://static001.geekbang.org/resource/image/81/0c/8109a7777e996043dc65e6b77433630c.png" alt="" /></p>
+<center><span class="reference">一个文件被修改了</span></center>
+<p>当我们点击这个图标，或者是按下 Ctrl + Shift + G 快捷键，就能够打开版本管理这个视图。这个视图的最上方是一个多行输入框，用于输入代码提交时候的描述内容。在这个输入框的下面，我们则能够看到各种不同状态下的代码改动，按照它们的不同状态被归类到不同的列表中。</p>
+<p>比如在下图中，我们只有一个更改：</p>
+<p><img src="https://static001.geekbang.org/resource/image/44/0f/44fbc5d6029024cec60944ef154ab10f.png" alt="" /></p>
+<center><span class="reference">代码改动</span></center>
+<p>不同的版本管理有不同的状态管理方式，不过 VS Code 的版本管理界面为它们提供了统一的界面，并且相同状态下的文件会被归类在一起。</p>
+<p>我们先拿 Git 来举例。比如说 Git 中有三种主要的文件状态：已提交（Committed）、修改（Modified）和暂存（Staged）。这里借用 Git-SCM 文档 Git - Git Basics 里的一张图来解释，一个文件或者修改，能够在这三个状态直接切换。</p>
+<p>当我们修改了一个文件，它会变成修改状态（Modified）；然后我们可以通过脚本 “git add ${filename}” 把这个文件的状态改为暂存（Staged），被标记为暂存状态的文件，才有机会被提交。 最后我们可以通过 “git commit” 来提交所有在暂存状态里的文件。</p>
+<p><img src="https://static001.geekbang.org/resource/image/8a/24/8a23ac396473c68bba3175d707784b24.png" alt="" /></p>
+<center><span class="reference">Git 里状态变化</span></center>
+<p>回到 VS Code 的版本管理界面，在下图里，我们能够看到两种不同的状态。第一个是 “暂存的修改”，也就是所有处于暂存状态的修改，它们都有机会被提交；第二种则是普通的修改。此时侧边活动栏上的版本管理图标已经显示了数字 2，它提示我们当前项目里有两个不同的修改。</p>
+<p><img src="https://static001.geekbang.org/resource/image/f5/ba/f592493549141c3714fad1f6bef499ba.png" alt="" /></p>
+<center><span class="reference">SCM 状态</span></center>
+<p>在 SVN 中，则有一个变更列表（changelist 的概念），即可以使用变更列表来将不同任务里的代码变更统一到一起。在下图里，我们能够看到一个“两个分组”，一个是尚未被添加到变更列表里的代码变动，另一个是名叫 TEST 的变更列表。</p>
+<p><img src="https://static001.geekbang.org/resource/image/a6/79/a6fffb608cb369a112ea41e778961a79.png" alt="" /></p>
+<center><span class="reference">SVN 变更列表</span></center>
+<p>当我们点击某个代码改动项时，VS Code 则会打开一个差异编辑器（diff editor ）。这个编辑器显示了这次代码改动之前和之后对应的文件内容。这样我们就能够很清楚地分辨出对哪些代码做了改动。</p>
+<p><img src="https://static001.geekbang.org/resource/image/e8/07/e88f76b832a1c3feb360dfd74e852707.png" alt="" /></p>
+<center><span class="reference">差异编辑器</span></center>
+<p>通常我在提交代码之前，都会依次打开这次改动的所有文件，并在差异编辑器中重新审查一下每个改动，进行最后一次的查漏补缺。</p>
+<p>上面我们提到，在 Git 中提交代码前，我们需要先将代码改动变成暂存状态。这个操作的对应的命令行是 <code>git add ${fileName}</code>。我们同样也可以通过版本管理的视图来完成这样的操作：只需将鼠标移动到我们想要提交的文件上，就能够看到三个图标。</p>
+<p><img src="https://static001.geekbang.org/resource/image/bc/ae/bcd6b325ec5f984705e5f39be43f6fae.png" alt="" /></p>
+<center><span class="reference">Git SCM 中文件项上的按钮</span></center>
+<p>它们分别是：<strong>打开文件</strong>、<strong>放弃更改</strong>和<strong>暂存更改</strong>。我们只需点击 “暂存更改” 这个按钮，就能完成跟上面<code>git add</code> 一样的操作。</p>
+<p>而如果我们使用的是 SVN，鼠标移动到文件改动上时，只能看到一个按钮 “Set Changelist”。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b2/52/b253aea9213ac41b9433eb440b033a52.png" alt="" /></p>
+<center><span class="reference">SVN SCM 中文件项上的按钮</span></center>
+<p>按下这个按钮后，我们就能看到一个列表，通过这个列表，可以选择创建新的变更列表（changelist），或者选择将这个改动增加到现有的某个变更列表中。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c4/32/c43aeeb0202dc9096d696fbe6d0b7f32.gif" alt="" /></p>
+<center><span class="reference">将代码改动添加到变更列表中</span></center>
+<p>在选择完哪些代码变更要提交之后，下一步就是填写描述信息并提交了。在版本管理视图的上方，有一个输入框，我们把描述信息填入到这个输入框后，按下 Cmd + Enter 就能提交了（Subversion 是 Ctrl + Enter），也可以通过输入框上方的对号按钮来提交。</p>
+<p><img src="https://static001.geekbang.org/resource/image/69/cf/692b48ad16b301bd21935611b17f58cf.gif" alt="" /></p>
+<center><span class="reference">提交变更</span></center>
+<p>查看代码变化、改变文件状态和代码提交，这就是我们日常最常使用的几个操作了。而其他的操作，比如更新、回退、发布、储藏代码等等，我们可以通过点击输入框上方最右侧的三个点的图标，打开一个下拉菜单，选择我们想要的功能并执行。</p>
+<p><img src="https://static001.geekbang.org/resource/image/cd/30/cda8de7b58d6dab993c9eb2bcf953230.gif" alt="" /></p>
+<center><span class="reference">SCM 的其他操作</span></center>
+<h2>差异编辑器</h2>
+<p>下面我们来说一下差异编辑器。在差异编辑器的右上角，我们能够看到一排按钮。</p>
+<p><img src="https://static001.geekbang.org/resource/image/31/e9/311ead01bdefd186b16db0700fc2f9e9.png" alt="" /></p>
+<center><span class="reference">差异编辑器的功能按钮</span></center>
+<h3>前四个按钮</h3>
+<p>第一个按钮的功能是从差异编辑器跳转到一个普通的编辑器，并且打开这个文件。这样我们能够无干扰地进行编辑操作了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d4/e7/d4de915b52512f954c5cae62b7aa48e7.gif" alt="" /></p>
+<center><span class="reference">差异编辑器跳转到普通编辑器</span></center>
+<p>第二个按钮控制的是：是否要在差异编辑器里显示代码里行末的空格符的变化。比如说你不小心在行末添加了几个空格，默认情况下，VS Code 觉得这几个空格不影响代码，就不会在差异编辑器里显示。但我建议把它打开，这样你就可以确保能够看到所有的代码改动。</p>
+<p><img src="https://static001.geekbang.org/resource/image/09/3a/09d3a9d63625e1dacd82d3c76422b83a.gif" alt="" /></p>
+<center><span class="reference">差异编辑器是否检测行末空格的变化</span></center>
+<p>接下来的两个箭头按钮，就是用于在当前文件里的多个变动之间进行跳转了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/74/60/740bafce92cba1d25f0cfa36dbc87d60.gif" alt="" /></p>
+<center><span class="reference">差异编辑器，在改动之间跳转</span></center>
+<h3>下拉菜单</h3>
+<p>最后是一个三个点的图标，想必不用点击开你也知道，它意味着里面有更多的功能，点击后即可看到一个下拉菜单。</p>
+<p>这个下拉框里的命令，前三个是和 Git 相关的。在版本管理视图里我们只能够对文件的状态进行操作，但是 Git 同样允许我们修改文件中某一段代码变动的状态，就是通过这三个命令实现的。</p>
+<p><img src="https://static001.geekbang.org/resource/image/00/d6/00447755fd64692b907975edcfedc3d6.gif" alt="" /></p>
+<center><span class="reference">Git 差异编辑器，暂存某段代码变动</span></center>
+<p>比如在上面的动图中，index.js 文件里有两段不同的改动，现在我只想把第一段代码改动变为暂存状态。那接下来我要做的就是选中这段代码，从下拉菜单里选择 “暂存所选范围”运行。这之后，我们在版本管理视图里就能够看到两组代码变动，“暂存的更改”这个组里是我刚才选中的那段代码变动，而“更改”组里则是第二个代码变动。</p>
+<p>相信你已经猜想到了这个功能的用途，有的时候我们在修一个 bug 或者完成一个功能时，对代码做了一些临时的变动，但我们既不想提交这个变动，也不想把它清除掉，那通过这几个命令我们就能够真正按需提交代码变动了。</p>
+<p>不过遗憾的是，SVN 这个插件并没有支持这个功能。</p>
+<p>下拉菜单里的第四个则是和差异编辑器呈现方式相关的。默认情况下，差异编辑器采取并排的方式显示两个编辑器，<strong>左边的编辑器显示改动前的文件内容，右侧则是改动后的文件内容</strong>。其实我们也可以使用 “切换内联视图”，将代码改动显示在同一个编辑器里。</p>
+<p><img src="https://static001.geekbang.org/resource/image/29/14/29166d28c0c7b30a7a5cb95e037e8314.png" alt="" /></p>
+<center><span class="reference">差异编辑器的内联功能</span></center>
+<p>在这个内联的差异编辑器里，我们依然可以看出代码变动的情况。</p>
+<p>至于最后的三个则是通用的编辑器命令，打开任意编辑器时，我们都能够使用它们。这里就不多赘述。</p>
+<h2>编辑器内置版本管理操作</h2>
+<p>上面我们一起学习了如何使用版本管理视图和差异编辑器对代码变动进行管理，其实我们同样也能够在普通的编辑器里完成这样的操作。当我们对一个文件作了修改后，我们能够在普通编辑器里，行号的右侧看到不同颜色的竖线。它们代表着不同状态的代码变动，比如代码增加、修改和删除。</p>
+<p><img src="https://static001.geekbang.org/resource/image/dc/74/dcf81c3bc0ae8ce86a0dfb58c59a1f74.png" alt="" /></p>
+<center><span class="reference">编辑器里的 SCM 状态装饰</span></center>
+<p>当我们点击这个竖线时，我们就能在当前编辑器里，立刻看到一个内置的差异编辑器。这样我们就不用每次都打开版本管理视图里去查看代码变动了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/93/36/938beadcbf91cb07a8448578ebe10d36.gif" alt="" /></p>
+<center><span class="reference">在普通编辑器里打开差异编辑器</span></center>
+<p>在这个内置的差异编辑器的内侧，我们能够看到一些按钮。它们的作用跟差异编辑器右上角的那些按钮是一样的，你能够通过它们暂存、撤销代码改动，以及在代码改动之间跳转。当我们把鼠标移动上去时，还能够看到它们对应的快捷键。</p>
+<p><img src="https://static001.geekbang.org/resource/image/bd/19/bddffc1fd326aeebefc3eca0054e2819.png" alt="" /></p>
+<center><span class="reference">内联的差异编辑器的功能按钮</span></center>
+<h2>状态栏和资源管理器</h2>
+<p>除了版本管理视图以外，另外一个能够快速了解项目版本状态的就是状态栏了。无论是使用 Git，还是 SVN 来做版本管理的项目里，我们都能在状态栏的左侧看到当前代码属于哪个分支。不仅如此，我们还能通过点击它来进行分支的创建与切换。</p>
+<p><img src="https://static001.geekbang.org/resource/image/3f/0b/3fd9d45f820bbc7c3a6eaeec8ca3870b.gif" alt="" /></p>
+<center><span class="reference">从状态栏创建新分支</span></center>
+<p>此外，当我们在专心于写代码的时候，大部分情况下我们打开的都是资源管理器。为了方便我们在这种情况下快速地了解哪些文件被修改了、有什么类型的改动，<strong>VS Code 会把资源管理器中对应的文件项的颜色改变，同时在这个文件项的最后附上一个简单的字母，用于表明这个文件的状态</strong>。比如说我们在下面的图中看到，index.js 这个文件被修改了，那么在资源管理器里，这个文件项变成了黄色的，同时最后还有一个字母 M，也就是修改 Modified 的首字母。</p>
+<p><img src="https://static001.geekbang.org/resource/image/28/3e/2873d9ee2916b9ff1bee8bf65e99e33e.png" alt="" /></p>
+<center><span class="reference">资源管理器上的文件状态装饰</span></center>
+<h2>小结</h2>
+<p>以上，就是我们今天关于 VS Code 内版本管理功能的知识了。</p>
+<p>不知道你是否还记得，我们在专栏的最一开始聊 VS Code 的设计哲学的时候，我提到过 VS Code 并不想当一个黑盒，而是尽可能地开放给你。就好比说版本管理，Git 非常流行，但它的学习成本也很高，即便是一个熟练使用它的工程师，也偶尔会遇到奇怪的情况，更不要说刚刚学习它的新手了。为了保证你知道你按下某个按钮后，VS Code 最终转化成了哪个 Git 命令，或者你遇到意外情况的时候 Git 发生了什么，VS Code 会把所有这些信息全部输出到输出面板中。你可以打开输出面板，点击下拉框，然后选择你使用的版本管理工具的 log 进行查看。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b9/a6/b924776d0717875129fddf254bf4d5a6.png" alt="" /></p>
+<center><span class="reference">输出面板里的 SCM 输出</span></center>
+<p>此外，今天我们的文章，也没有系统介绍版本管理的命令操作，你可以打开命令面板，搜索 “git” 或者 “svn”，看看它们都支持哪些命令，相信你一定会有别样的收获。希望你在 VS Code 里使用版本管理的过程中，能够做到知其然、知其所以然，加油！</p>
+<hr />
+<p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/4f/6fb51ff1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">一步</span>
+                            </div>
+                            <div class="bd">Vscode 能把查看提交历史树的功能内置进去，就完美了 <br></div>
+                            <span class="time">2018-10-18 10:05</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">叶小轩</span>
+                            </div>
+                            <div class="bd">vscode有扩展，去扩展里面可以看到很容易使用的git扩展，可以可视化看分支，我觉得可以提一下。 <br></div>
+                            <span class="time">2018-10-19 12:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你说的是 GitLens ，后面我们会黑大家推荐的</p>
+                                <p class="reply-time">2018-10-22 11:28</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/bd/ec/cc7abf0b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">L</span>
+                            </div>
+                            <div class="bd">老师怎么消除在写js的时候的一些ts的警告啊。。。在写js的时候有时候会给出Declaration expected.这个警告 这个是ts的吧 <br></div>
+                            <span class="time">2018-10-18 21:08</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/56/1a/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">cylim</span>
+                            </div>
+                            <div class="bd">可以用gitlens插件。 <br></div>
+                            <span class="time">2018-10-18 16:38</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/13/70/45b6ccc6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">万事如意</span>
+                            </div>
+                            <div class="bd">可不可以再详细的介绍一下 svn 的操作流程，总感觉 vscode 的 git 操作要比 svn 的好很多！ <br></div>
+                            <span class="time">2018-10-18 15:28</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b3/26/cc28a05a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">悬炫</span>
+                            </div>
+                            <div class="bd">还是sourceTree 用起来更加直观，并且也更加强大 <br></div>
+                            <span class="time">2018-10-18 12:50</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">felix</span>
+                            </div>
+                            <div class="bd">如果能像visual studio那样好用就好了，最不可缺的就是tree view，不然不直观！ <br></div>
+                            <span class="time">2018-10-18 09:11</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/23/f6/1ef70cab.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">你看起来很好吃</span>
+                            </div>
+                            <div class="bd">虽然vscode提供了很方便的可视化版本管理界面，我还是喜欢用命令的方式做这些 <br></div>
+                            <span class="time">2018-10-18 07:37</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

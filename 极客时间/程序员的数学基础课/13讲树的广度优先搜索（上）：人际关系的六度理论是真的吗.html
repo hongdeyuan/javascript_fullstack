@@ -1,0 +1,272 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                13讲树的广度优先搜索（上）：人际关系的六度理论是真的吗
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/c7/f7/c7c67c5b90574d3780146949202498f7.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>上一节，我们探讨了如何在树的结构里进行深度优先搜索。说到这里，有一个问题，不知道你有没有思考过，树既然是两维的，我们为什么一定要朝着纵向去进行深度优先搜索呢？是不是也可以朝着横向来进行搜索呢？今天我们就来看另一种搜索机制，广度优先搜索。</p><h2>社交网络中的好友问题</h2><p>LinkedIn、Facebook、微信、QQ这些社交网络平台都有大量的用户。在这些社交网络中，非常重要的一部分就是人与人之间的“好友”关系。</p><p>在数学里，为了表示这种好友关系，我们通常使用图中的结点来表示一个人，而用图中的边来表示人和人之间的相识关系，那么社交网络就可以用图论来表示。而“相识关系”又可以分为单向和双向。</p><p>单向表示，两个人a和b，a认识b，但是b不认识a。如果是单向关系，我们就需要使用有向边来区分是a认识b，还是b认识a。如果是双向关系，双方相互认识，因此直接用无向边就够了。在今天的内容里，我们假设相识关系都是双向的，所以我们今天讨论的都是无向图。</p><p><img src="https://static001.geekbang.org/resource/image/26/52/26d0c89c9d6b968a9cd3fb889663f752.jpg" alt=""></p><p>从上面的例图可以看出，人与人之间的相识关系，可以有多条路径。比如，张三可以直接连接赵六，也可以通过王五来连接赵六。比较这两条通路，最短的通路长度是1，因此张三和赵六是一度好友。也就是说，这里我用两人之间最短通路的长度，来定义他们是几度好友。照此定义，在之前的社交关系示意图中，张三、王五和赵六互为一度好友，而李四和赵六、王五为二度好友。</p><!-- [[[read_end]]] --><p><img src="https://static001.geekbang.org/resource/image/3d/cb/3da7b008f235bfde1ca29ff8d66415cb.jpg" alt=""></p><p>寻找两个人之间的最短通路，或者说找出两人是几度好友，在社交中有不少应用。例如，向你推荐新的好友、找出两人之间的关系的紧密程度、职场背景调查等等。在LinkedIn上，有个功能就是向你推荐了你可能感兴趣的人。下面这张图是我的LinkedIn主页里所显示的好友推荐。</p><p><img src="https://static001.geekbang.org/resource/image/61/8f/61bfeb62a8d60da3a8aeb5c4b2a32d8f.png" alt=""></p><p>这些被推荐的候选人，和我都有不少的共同连接，也就是共同好友。所以他们都是我的二度好友。但是，他们和我之间还没有建立直接的联系，因此不是一度好友。也就是说，对于某个当前用户，LinkedIn是这么来选择好友推荐的：</p><ul>
+<li>
+<p>被推荐的人和当前用户不是一度好友；</p>
+</li>
+<li>
+<p>被推荐的人和当前用户是二度好友。</p>
+</li>
+</ul><p>那为什么我们不考虑“三度“甚至是“四度”好友呢？我前面已经说过，两人之间最短的通路长度，表示他们是几度好友。那么三度或者四度，就意味着两人间最短的通路也要经历2个或更多的中间人，他们的关系就比较疏远，互相添加好友的可能性就大大降低。</p><p>所以呢，总结一下，如果我们想进行好友推荐，那么就要优先考虑用户的“二度“好友，然后才是“三度”或者“四度”好友。那么，下一个紧接着要面临的问题就是：给定一个用户，如何优先找到他的二度好友呢？</p><h2>深度优先搜索面临的问题</h2><p>这种情况下，你可能会想到上一篇介绍的深度优先搜索。深度优先搜索不仅可以用在树里，还可以应用在图里。不过，我们要面临的问题是图中可能存在回路，这会增加通路的长度，这是我们在计算几度好友时所不希望的。所以在使用深度优选搜索的时候，一旦遇到产生回路的边，我们需要将它过滤。具体的操作是，判断新访问的点是不是已经在当前通路中出现过，如果出现过就不再访问。</p><p>如果过滤掉产生回路的边，从一个用户出发，我们确实可以使用深度优先的策略，搜索完他所有的n度好友，然后再根据关系的度数，从二度、三度再到四度进行排序。这是个解决方法，但是效率太低了。为什么呢？</p><p>你也许听说过社交关系的六度理论。这个理论神奇的地方在于，它说地球上任何两个人之间的社交关系不会超过六度。咋一听，感觉不太可能。仔细想想，假设每个人平均认识100个人（我真心不觉得100很多，不信你掰着指头数数看自己认识多少人），那么你的二度好友就是100^2，这个可以用我们前面讲的排列思想计算而来。</p><p>以此类推，三度好友是100^3，到五度好友就有100亿人了，已经超过了地球目前的总人口。即使存在一些好友重复的情况下，例如，你的一度好友可能也出现在你的三度好友中，那这也不可能改变结果的数量级。所以目前来看，地球上任何两个人之间的社会关系不会超过六度。</p><p>六度理论告诉我们，你的社会关系会随着关系的度数增加，而呈指数级的膨胀。这意味着，在深度搜索的时候，每增加一度关系，就会新增大量的好友。但是你仔细回想一下，当我们在用户推荐中查看可能的好友时，基本上不会看完所有推荐列表，最多也就看个几十个人，一般可能也就看看前几个人。所以，如果我们使用深度优先搜索，把所有可能的好友都找到再排序，那效率实在太低了。</p><h2>什么是广度优先搜索？</h2><p>更高效的做法是，我们只需要先找到所有二度的好友，如果二度好友不够了，再去找三度或者四度的好友。这种好友搜索的模式，其实就是我们今天要介绍的广度优先搜索。</p><p><strong>广度优先搜索</strong>（Breadth First Search），也叫<strong>宽度优先搜索</strong>，是指从图中的某个结点出发，沿着和这个点相连的边向前走，去寻找和这个点距离为1的所有其他点。只有当和起始点距离为1的所有点都被搜索完毕，才开始搜索和起始点距离为2的点。当所有和起始点距离为2的点都被搜索完了，才开始搜索和起始点距离为3的点，如此类推。</p><p>我用上一节介绍深度优先搜索顺序的那棵树，带你看一下广度优先搜索和深度优先搜索，在结点访问的顺序上有什么不一样。</p><p><img src="https://static001.geekbang.org/resource/image/8f/d4/8feed421333ad442eb8dec4e574eb4d4.jpg" alt=""></p><p>同样，我们用结点上的数字表示结点的ID，用虚线表示遍历前进的方向，用结点边上的数字表示该结点在广度优先搜索中被访问的顺序。从这个图中，你有没有发现，广度优先搜索其实就是横向搜索一颗树啊！</p><p>尽管广度优先和深度优先搜索的顺序是不一样的，它们也有两个共同点。</p><p>第一，在前进的过程中，我们不希望走重复的结点和边，所以会对已经被访问过的点做记号，而在之后的前进过程中，就只访问那些还没有被标记的点。这一点上，广度优先和深度优先是一致的。有所不同的是，在广度优先中，如果发现和某个结点直接相连的点都已经被访问过，那么下一步就会看和这个点的兄弟结点直接相连的那些点，从中看看是不是有新的点可以访问。</p><p>例如，在上图中，访问完结点945的两个子结点580和762之后，广度优先策略发现945没有其他的子结点了，因此就去查看945的兄弟结点131，看看它有哪些子结点可以访问，因此下一个被访问的点是906。而在深度优先中，如果到了某个点，发现和这个点直接相连的所有点都已经被访问过了，那么不会查看它的兄弟结点，而是回退到这个点的父节点，继续查看和父结点直接相连的点中是不是存在新的点。例如在上图中，访问完结点945的两个子结点之后，深度优先策略会回退到点110，然后访问110的子结点131。</p><p>第二，广度优先搜索也可以让我们访问所有和起始点相通的点，因此也被称为广度优先遍历。如果一个图包含多个互不连通的子图，那么从起始点开始的广度优先搜索只能涵盖其中一个子图。这时，我们就需要换一个还没有被访问过的起始点，继续深度优先遍历另一个子图。深度优先搜索可以使用同样的方式来遍历有多个连通子图的图，这也回答了上一讲的思考题。</p><h2>如何实现社交好友推荐？</h2><p>第12讲中我说深度优先是利用递归的嵌套调用、或者是栈的数据结构来实现的。然而，广度优先的访问顺序是不一样的，我们需要优先考虑和某个给定结点距离为1的所有其他结点。等距离为1的结点访问完，才会考虑距离为2的结点。等距离为2的结点访问完，才会考虑距离为3的结点等等。在这种情况下，我们无法不断地根据结点的边走下去，而是要先遍历所有距离为1的点。</p><p>那么，如何在记录所有已被发现的结点情况下，优先访问距离更短的点呢？仔细观察，你会发现和起始点更近的结点，会先更早地被发现。也就是说，越早被访问到的结点，越早地处理它，这是不是很像我们平时排队的情形？早到的人可以优先接受服务，而晚到的人需要等前面的人都离开，才能轮到。所以这里我们需要用到队列这种先进先出（First In First Out）的数据结构。</p><p>如果你不是很熟悉队列的数据结构，我这里简短地回顾一下。队列是一种线性表，要被访问的下一个元素来自队列的头部，而所有新来的元素都会加入队列的尾部。</p><p>我画了张图给你讲队列的工作过程。首先，读取已有元素的时候，都是从队列的头部来取，例如$x_{1}$，$x_{2}$等等。所有新的元素都加入队列的尾部，例如$x_{m}$，$x_{m+1}$。</p><p><img src="https://static001.geekbang.org/resource/image/b2/a1/b2962dffa28a5c2f3b51bd6039242da1.jpg" alt=""></p><p>那么在广度优先搜索中，队列是如何工作的呢？这主要分为以下几个步骤。</p><p>首先，把初始结点放入队列中。然后，每次从队列首位取出一个结点，搜索所有在它下一级的结点。接下来，把新发现的结点加入队列的末尾。重复上述的步骤，直到没有发现新的结点为止。</p><p>我以上面的树状图为例，并通过队列实现广度优先搜索。</p><p><img src="https://static001.geekbang.org/resource/image/bf/90/bf8188bd3eccee22dcdda1b2a939c790.jpg" alt=""></p><p>第1步，将初始结点110加入队列中。</p><p>第2步，取出结点110，搜出下一级结点123、879、945和131。</p><p>第3步，将点123、879、945和131加入队列的末尾。</p><p>第4步，重复第2和第3步，处理结点123，将新发现结点162和587加入队列末尾。</p><p>第5步，重复第2和第3步，处理结点879，没有发现新结点。</p><p>第6步，重复第2和第3步，处理结点945，将新发现的结点580和762加入队列末尾。</p><p>……</p><p>第n-1步，重复第2和第3步，处理结点906，没有发现新结点。</p><p>第n步，重复第2和第3步，处理结点681，没有发现新的结点，也没有更多待处理的结点，整个过程结束。</p><p>理解了如何使用队列来实现广度优先搜索之后，我们就可以开始着手编写代码。我们现在没有现成的用户关系网络数据，所以我们需要先模拟生成一些用户结点及其间的相识关系，然后利用队列的数据结构进行广度优先的搜索。基于此，主要使用的数据结构包括：</p><ul>
+<li>
+<p><strong>用户结点Node</strong>。这次设计的用户结点和前缀树结点TreeNode略有不同，包含了用户的ID user_id，以及这个用户的好友集合。我用HashSet实现，便于在生成用户关系图的时候，确认是否会有重复的好友。</p>
+</li>
+<li>
+<p>表示整个图的<strong>结点数组Node[]</strong>。由于每个用户使用user_id来表示，所以我可以使用连续的数组表示所有的用户。用户的user_id就是数组的下标。</p>
+</li>
+<li>
+<p><strong>队列Queue</strong>。由于Java中Queue是一个接口，因此需要用一个拥有具体实现的LinkedList类。</p>
+</li>
+</ul><p>首先我们列出结点Node类的示例代码。</p><pre><code>public class Node {
+		
+		public int user_id;		// 结点的名称，这里使用用户id
+		public HashSet&lt;Integer&gt; friends = null;	
+				// 使用哈希映射存放相连的朋友结点。哈希便于确认和某个用户是否相连。
+		public int degree;		// 用于存放和给定的用户结点，是几度好友
+		
+		// 初始化结点
+		public Node(int id) {
+			user_id = id;
+			friends = new HashSet&lt;&gt;();
+			degree = 0;
+  }		
+	}
+</code></pre><p>我们可以用代码随机生成用户间的关系。首先根据指定的用户数量，生成Node[]数组，以及数组中的每个用户的节点Node。然后根据边的数量，生成用户之间的相识关系。需要注意的是，自己不能是自己的好友，而且某个用户的所有好友之中不能有重复的人。</p><pre><code>Node[] user_nodes = new Node[user_num];
+
+// 生成所有表示用户的结点
+for (int i = 0; i &lt; user_num; i++) {
+	user_nodes[i] = new Node(i);
+}
+
+// 生成所有表示好友关系的边
+for (int i = 0; i &lt; relation_num; i++) {
+	int friend_a_id = rand.nextInt(user_num);
+	int friend_b_id = rand.nextInt(user_num);
+	if (friend_a_id == friend_b_id) continue;	
+      // 自己不能是自己的好友。如果生成的两个好友id相同，跳过
+	Node friend_a = user_nodes[friend_a_id];
+	Node friend_b = user_nodes[friend_b_id];
+
+          friend_a.friends.add(friend_b_id);
+          friend_b.friends.add(friend_a_id);
+}
+</code></pre><p>其中，user_num-用户的数量，也就是结点的数量。relation_num-好友关系的数量，也就是边的数量。由于HashSet有去重的功能，所以我这里做了简化处理，没有判断是否存在重复的边，也没有因为重复的边而重新生成另一条边。</p><p>随后我们的主角，广度优先搜索就要出场了。这里我使用了一个visited变量，存放已经被访问过的结点，防止回路的产生。</p><pre><code>/**
+* @Description:	通过广度优先搜索，查找好友
+* @param user_nodes-用户的结点；user_id-给定的用户ID，我们要为这个用户查找好友
+* @return void
+*/
+
+public static void bfs(Node[] user_nodes, int user_id) {
+		
+		if (user_id &gt; user_nodes.length) return;	// 防止数组越界的异常
+		
+		Queue&lt;Integer&gt; queue = new LinkedList&lt;Integer&gt;();	// 用于广度优先搜索的队列
+		
+		queue.offer(user_id);		// 放入初始结点
+		HashSet&lt;Integer&gt; visited = new HashSet&lt;&gt;();	// 存放已经被访问过的结点，防止回路
+		visited.add(user_id);
+		
+		while (!queue.isEmpty()) {
+			int current_user_id = queue.poll();		// 拿出队列头部的第一个结点
+			if (user_nodes[current_user_id] == null) continue;
+			
+			// 遍历刚刚拿出的这个结点的所有直接连接结点，并加入队列尾部
+			for (int friend_id : user_nodes[current_user_id].friends) {
+				if (user_nodes[friend_id] == null) continue;
+				if (visited.contains(friend_id)) continue;
+				queue.offer(friend_id);
+				visited.add(friend_id);	// 记录已经访问过的结点
+				user_nodes[friend_id].degree = user_nodes[current_user_id].degree + 1;		// 好友度数是当前结点的好友度数再加1
+				System.out.println(String.format(&quot;\t%d度好友：%d&quot;,  user_nodes[friend_id].degree, friend_id));
+			}
+		}
+		
+	}
+</code></pre><p>需要注意的是，这里用户结点之间的边是随机生成的，所以每次结果会有所不同。如果想重现固定的结果，可以从某个文件加载用户之间的关系。</p><h2>小结</h2><p>在遍历树或者图的时候，如果使用深度优先的策略，被发现的结点数量可能呈指数级增长。如果我们更关心的是最近的相连结点，比如社交关系中的二度好友，那么这种情况下，广度优先策略更高效。也正是由于这种特性，我们不能再使用递归编程或者栈的数据结构来实现广度优先，而是需要用到具有先进先出特点的队列。</p><p><img src="https://static001.geekbang.org/resource/image/2b/40/2b985dc5dba11a41d968cca57254d640.jpg" alt=""></p><h2>思考题</h2><p>在计算机的操作系统中，我们常常需要查看某个目录下的文件或子目录。现在给定一个目录的路径，请分别使用深度优先和广度优先搜索，列出该目录下所有的文件和子目录。对于子目录，需要进一步展示其下的文件和子目录，直到没有更多的子目录。</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6a/8e/7b6ea886.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Joe</span>
+                            </div>
+                            <div class="bd">C++实现DFS显示ubuntu指定目录下所有的文件，请老师指点。<br>#include &lt;dirent.h&gt;<br>#include &lt;stdlib.h&gt;<br>#include &lt;string.h&gt;<br>#include &lt;unistd.h&gt;<br>#include &lt;iostream&gt;<br>#include &lt;regex&gt;<br>#include &lt;stack&gt;<br>using namespace std;<br><br>class FileSearch {<br>  private:<br>  stack&lt;string&gt; path; &#47;&#47; 路径栈<br><br>  public:<br>  &#47;**<br>   * Detail: DFS显示ubuntu指定目录下文件<br>   * basePath- 文件路径<br>   * return: null<br>   *&#47;<br>  void DfsFile(char *basePath) {<br>    DIR *dir;<br>    struct dirent *ptr;<br>    char base[1000];<br>    char temp[1000];<br>    &#47;&#47; 路径入栈<br>    path.push(basePath);<br>    &#47;&#47; 遍历开始<br>    while (!path.empty()) {<br>      &#47;&#47; 打开当前目录<br>      strcpy(temp, path.top().c_str());<br>      path.pop();<br>      cout &lt;&lt; &quot;Current path: &quot; &lt;&lt; temp &lt;&lt; endl;<br>      if ((dir = opendir(temp)) == NULL) {<br>        perror(&quot;Open dir error, please input the right path&quot;);<br>        exit(1);<br>      }<br>      &#47;&#47; 显示当前路径下的文件<br>      while ((ptr = readdir(dir)) != NULL) {<br>        &#47;&#47; 忽略隐藏文件和路径: .and..<br>        if (regex_match(ptr-&gt;d_name, regex(&quot;\\.(.*)&quot;))) {<br>          continue;<br>        }<br>        if (ptr-&gt;d_type == 8) {<br>          &#47;&#47; A regular file<br>          &#47;&#47;cout &lt;&lt; &quot;file: &quot; &lt;&lt; basePath &lt;&lt; &quot;&#47;&quot; &lt;&lt; ptr-&gt;d_name &lt;&lt; endl;<br>          cout &lt;&lt; ptr-&gt;d_name &lt;&lt; endl;<br>        } else if (ptr-&gt;d_type == 4) {<br>          &#47;&#47; 检测为文件夹<br>          memset(base, &#39;\0&#39;, sizeof(base));<br>          strcpy(base, temp);<br>          strcat(base, &quot;&#47;&quot;);<br>          strcat(base, ptr-&gt;d_name);<br>          path.push(base);<br>          continue;<br>        }<br>      }<br>    }<br>    &#47;&#47; 关闭文件<br>    closedir(dir);<br>  }<br>};<br>int main(void) {<br>  FileSearch test;<br>  &#47;&#47; 需要遍历的文件夹目录<br>  char basePath[] = {&quot;&#47;home&#47;joe&#47;Desktop&#47;leetcode&quot;};<br>  test.DfsFile(basePath);<br>  return 0;<br>}<br>&#47;&#47; 大致输出结果为：<br>Current path: &#47;home&#47;joe&#47;Desktop&#47;leetcode<br>leetcodePractice.cpp<br>a.out<br>README.md<br>Current path: &#47;home&#47;joe&#47;Desktop&#47;leetcode&#47;math_fundamental_algorithms<br>recursion.cpp<br>tree_depth_first_search.cpp<br>recursion_integer.cpp<br>permutation.cpp<br>dynamic_programming.md<br>iteration_way.cpp<br>tree_breadth_first_search.md<br>a.out<br>tree_breadth_first_search.cpp<br>math_induction.cpp<br>byte_operation.cpp<br>...... <br></div>
+                            <span class="time">2019-01-20 23:50</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">注意到了隐藏路径和文件的处理，很棒</p>
+                                <p class="reply-time">2019-01-21 02:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c1/0e/2b987d54.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">蜉蝣</span>
+                            </div>
+                            <div class="bd">老师你好。请问这句话是什么意思：“这时，我们就需要换一个还没有被访问过的起始点，继续深度优先遍历另一个子图。”   为什么换了一个起始点之后就要用深度优先遍历呢？ <br></div>
+                            <span class="time">2019-01-28 23:27</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这里是一个笔误，应该是继续“广度”优先。我稍后改一下</p>
+                                <p class="reply-time">2019-01-29 01:49</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">菩提</span>
+                            </div>
+                            <div class="bd">我好好检查了一下我的代码逻辑，您的逻辑是正确的。<br><br>我这边visited集合没有把user_id加入，导致的问题。<br><br>控制台的输出日志。我查询的是user_id是 0， 而控制台打印了一行记录是  2度好友:0 。  出现这个打印的原因是遍历0的好友。该好友的friends包含了0，在for循环中算了user_id=0的情况。<br><br>谢谢老师指正！ <br></div>
+                            <span class="time">2019-01-16 09:17</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">找到问题就好👍</p>
+                                <p class="reply-time">2019-01-17 07:44</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">菩提</span>
+                            </div>
+                            <div class="bd">广度优先搜索那块有2个小瑕疵，您看一下。<br>1. 防止数组越界的异常，user_id 等于数组长度也会越界。<br>2.遍历子节点的时候，如果子节点friends中存在需要查询的user_id,则出现错误的打印输出。如果是查询的user_id应该continue。<br><br>控制台打印<br>0:[3]:0<br>1:[3]:0<br>2:[3]:0<br>3:[0, 1, 2, 4]:0<br>4:[3]:0<br>	1 度好友:3<br>	2 度好友:0<br>	2 度好友:1<br>	2 度好友:2<br>	2 度好友:4<br><br>代码如下，<br>	public static Node[] init(int user_num, int relation_num) {<br>		Random rand = new Random();<br><br>		Node[] user_nodes = new Node[user_num];<br><br>		&#47;&#47; 生成所有表示用户的节点<br>		for (int i = 0; i &lt; user_num; i++) {<br>			user_nodes[i] = new Node(i);<br>		}<br><br>		&#47;&#47; 生成所有表示好友关系的边<br>		for (int i = 0; i &lt; relation_num; i++) {<br>			int friend_a_id = rand.nextInt(user_num);<br>			int friend_b_id = rand.nextInt(user_num);<br>			if (friend_a_id == friend_b_id)<br>				continue;<br>			Node friend_a = user_nodes[friend_a_id];<br>			Node friend_b = user_nodes[friend_b_id];<br>			friend_a.friends.add(friend_b_id);<br>			friend_b.friends.add(friend_a_id);<br>		}<br><br>		return user_nodes;<br>	}<br><br>	public static void bfs(Node[] user_nodes, int user_id) {<br>		&#47;&#47; 防止数组越界异常<br>		if (user_id &gt;= user_nodes.length)<br>			return;<br><br>		&#47;&#47; 用于广度优先搜索的队列<br>		Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();<br><br>		&#47;&#47; 放入初始节点<br>		queue.offer(user_id);<br><br>		&#47;&#47; 存放已经被访问过的节点，防止回路<br>		HashSet&lt;Integer&gt; visited = new HashSet&lt;&gt;();<br><br>		while (!queue.isEmpty()) {<br>			&#47;&#47; 取出队列头部的第一个节点<br>			int current_user_id = queue.poll();<br>			if (user_nodes[current_user_id] == null)<br>				continue;<br><br>			&#47;&#47; 遍历刚刚拿到的这个节点的所有直接连接节点，并加入队列尾部<br>			for (int friend_id : user_nodes[current_user_id].friends) {<br>				if (user_nodes[current_user_id] == null)<br>					continue;<br>				if (visited.contains(friend_id))<br>					continue;<br>				queue.offer(friend_id);<br>				&#47;&#47; 记录已经访问过的节点<br>				visited.add(friend_id);<br>				&#47;&#47; 好友度数是当前节点的好友度数再加1<br>				user_nodes[friend_id].degree = user_nodes[current_user_id].degree + 1;<br>				System.out.println(String.format(&quot;\t%d 度好友:%d&quot;, user_nodes[friend_id].degree, friend_id));<br>			}<br>		}<br>	}<br><br>	public static void main(String[] args) {<br>		Node[] user_nodes = init(5, 8);<br>		for (Node d : user_nodes) {<br>			System.out.println(d.user_id + &quot;:&quot; + d.friends + &quot;:&quot; + d.degree);<br>		}<br>		bfs(user_nodes, 0);<br>	}<br> <br></div>
+                            <span class="time">2019-01-15 10:50</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">第一点是很好的发现，我稍后加一下。<br>第二点没有看太明白，能否补充说明一下？</p>
+                                <p class="reply-time">2019-01-16 01:58</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/94/e3/ed118550.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Being</span>
+                            </div>
+                            <div class="bd">使用C++的双端队列deque实现的BFS和DFS<br>namespace FilePathOperator {<br>	struct St_FilePathNode;<br>	typedef std::set&lt;St_FilePathNode*&gt; SetterFilePathNode;<br>	typedef void(*FilPathOperator)(const St_FilePathNode&amp; rStFilePathNode);<br>	typedef struct St_FilePathNode {<br>		int m_nLevel;<br>		std::string m_strFilePath;<br>		SetterFilePathNode m_setChildernPathNodes;<br>	}StFilePathNode;<br>};<br>void FilePathOperator::BFSFilePathNodes(StFilePathNode * pRoot, FilPathOperator nodeOperator, int nMaxLevel)<br>{<br>	if (NULL == pRoot)<br>		return;<br><br>	std::deque&lt;StFilePathNode*&gt; queNode;<br>	queNode.push_front(pRoot);<br><br>	pRoot-&gt;m_nLevel = 0;	&#47;&#47; Root Level is first one<br><br>	while (!queNode.empty())<br>	{<br>		StFilePathNode* pNode = queNode.back();<br>		queNode.pop_back();<br>		if (NULL == pNode) continue;<br>	<br>		int nNodeLevel = pNode-&gt;m_nLevel;<br>		nodeOperator(*pNode);<br><br>		if (nNodeLevel + 1 &gt; nMaxLevel)	continue; &#47;&#47; childern  beyond MaxLevel<br><br>		SetterFilePathNode::iterator ChildItr = pNode-&gt;m_setChildernPathNodes.begin();<br>		for (; ChildItr != pNode-&gt;m_setChildernPathNodes.end(); ChildItr++） {<br>			if (NULL == *ChildItr)<br>				continue;<br><br>			(*ChildItr)-&gt;m_nLevel = nNodeLevel + 1;<br>			queNode.push_front(*ChildItr);<br>		}<br>	}<br>}<br>void FilePathOperator::DFSFilePathNodes(StFilePathNode * pRoot, FilPathOperator nodeOperator, int nMaxLevel)<br>{<br>	if (NULL == pRoot)<br>		return;<br><br>	std::deque&lt;StFilePathNode*&gt; deqNode;<br>	deqNode.push_front(pRoot);<br><br>	pRoot-&gt;m_nLevel = 0;	&#47;&#47; Root Level is first one<br><br>	while (!deqNode.empty())<br>	{<br>		StFilePathNode* pNode = deqNode.front();<br>		deqNode.pop_front();<br>		if (NULL == pNode) continue;<br><br>		int nNodeLevel = pNode-&gt;m_nLevel;<br>		nodeOperator(*pNode);<br><br>		if (nNodeLevel + 1 &gt; nMaxLevel)	continue; &#47;&#47; childern beyond MaxLevel<br><br>		SetterFilePathNode::iterator ChildItr = pNode-&gt;m_setChildernPathNodes.cbegin();<br>		for (; ChildItr != pNode-&gt;m_setChildernPathNodes.cend(); ChildItr++) {<br>			if (NULL == *ChildItr)<br>				continue;<br><br>			(*ChildItr)-&gt;m_nLevel = nNodeLevel + 1;<br>			deqNode.push_front(*ChildItr);<br>		}<br>	}<br>}<br>（其他的Create、Destroy、Print就暂时不贴出来了） <br></div>
+                            <span class="time">2019-01-11 21:39</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">Deque确实是个好东西，只是名字有时让人联想不到stack :)</p>
+                                <p class="reply-time">2019-01-14 03:07</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c7/12/4158bfdc.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">strentchRise</span>
+                            </div>
+                            <div class="bd">自己代码功力不行，尽力写一个python版本的<br><br>class Node:<br>    def __init__(self, number):<br>        self.num = number<br>        self.nodes = []<br><br>    def setNode(self, num):<br>        if(self.nodes.__contains__(num) == False):<br>            node = Node(num)<br>            self.nodes.append(node)<br>            return node<br>        else:<br>            return None<br><br>    def setNodeUnder(self, num, base):<br>        if (self.num == num):<br>            return self.setNode(num)<br><br>        baseNode = self.get(base, self.nodes)<br>        if baseNode == None:<br>            return None<br>        else:<br>            return baseNode.setNode(num)<br><br>    def get(self, num, nodes=None):<br>        if(self.nodes == None or len(nodes) == 0):<br>            return None<br>        else:<br>            someNodes = []<br>            for node in nodes:<br>                if node.num == num:<br>                    return node<br>                for n in node.nodes:<br>                    someNodes.append(n)<br>            return self.get(num, someNodes)<br>    <br>    def search(self):<br>        print(self.num)<br>        self.printNodes(self.nodes)<br><br>    def printNodes(self, nodes=None):<br>        if nodes == None or len(nodes) == 0:<br>            return<br>        else:<br>            someNodes = []<br>            for node in nodes:<br>                print(node.num)<br>                for n in node.nodes:<br>                    someNodes.append(n)<br>            return self.printNodes(someNodes)<br><br>root = Node(110)<br>root.setNode(123)<br>root.setNode(879)<br>root.setNode(945)<br>root.setNode(131)<br>root.setNodeUnder(162, 123)<br>root.setNodeUnder(587, 123)<br>root.setNodeUnder(580, 945)<br>root.setNodeUnder(762, 945)<br>root.setNodeUnder(906, 131)<br>root.setNodeUnder(681, 587)<br><br>root.search()<br><br>output:<br>110<br>123<br>879<br>945<br>131<br>162<br>587<br>580<br>762<br>906<br>681<br>finish...<br> <br></div>
+                            <span class="time">2019-01-11 16:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">很好的还原了原文的示例👍</p>
+                                <p class="reply-time">2019-01-14 03:02</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                30讲如何在VSCode中配置、部署和调试Docker
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/85/15/85599d9a2d6144588492936483bcff15.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>今天我们要介绍的内容是，如何在 VS Code 中配置、部署和调试 Docker。</p><p>在阅读本文之前，首先你需要对 Docker 容器化的知识有所了解，我推荐阅读<a href="http://jm.taobao.org/2016/05/12/introduction-to-docker/">阿里中间件团队博客对 Docker 的介绍</a>。其次，Docker 的操作，都可以通过命令行来实现。所以今天我要着重介绍的就是：VS Code里如何使用 UI 和命令来简化命令行操作，以及如何对 Docker 容器里的代码进行调试，这里我会借助两个简单的例子来讲解。</p><h2>一、安装</h2><p>VS Code 的 Docker 支持，是由插件来完成的，这个插件是 VS Code 官方团队维护的，所以它的发布者是 Microsoft。你可以在市场上<a href="https://marketplace.visualstudio.com/search?term=docker&amp;target=VSCode&amp;category=All%20categories&amp;sortBy=Relevance">点击下载</a>，也可以直接在 VS Code 插件视图里搜索 Docker 进行安装。</p><p>当然了，这个插件的正确运行，离不开一个正确安装的 Docker 环境。关于 Docker 的安装，还请参考<a href="https://www.docker.com/get-started">官方文档</a>。</p><p><img src="https://static001.geekbang.org/resource/image/73/fe/73e32f130d5237459e00e16cee6fa9fe.png" alt=""></p><center><span class="reference">Docker 插件安装</span></center><p>安装完Docker插件后，在活动栏上，我们就能够看到一个集装箱的图标，点击它，我们就能够看到 Docker 相关的信息了。</p><p><img src="https://static001.geekbang.org/resource/image/79/b2/7978ec4041f85648aba8db6d8298f0b2.png" alt=""></p><center><span class="reference">Docker 视图</span></center><p>在这个视图中，我们能够看到以下信息：</p><ul>
+<li>当前环境中所有的 image；</li>
+<li>当前环境中存在的 container；</li>
+<li>以及 Docker 的仓库列表。</li>
+</ul><p>当我们在 image 上右击时，能够看到一系列的操作，比如查看 image 的信息、发布这个 image、运行 image 等。当然，这些操作同样也可以在命令面板中找到。</p><!-- [[[read_end]]] --><p><img src="https://static001.geekbang.org/resource/image/b0/5b/b02b9df20bdc64db74460cbba2febc5b.png" alt=""></p><center><span class="reference">Images 上下文菜单</span></center><p>我们在 containers 上右击调出的上下文菜单就要简单一些，有三个命令：删除 container、重启 container以及查看这个 container 运行的日志。</p><p><img src="https://static001.geekbang.org/resource/image/b7/b8/b70e4aaafd5104211777a1d41f4f50b8.png" alt=""></p><center><span class="reference">Containers 上下文菜单</span></center><h2>二、Dockerfile</h2><p>除了提供了一个视图，Docker 插件还能够对 Dockerfile 文件进行语法高亮。</p><p><img src="https://static001.geekbang.org/resource/image/c9/bc/c944d6d966497a8f0e49bfc456ec53bc.png" alt=""></p><center><span class="reference">Dockerfile 语法高亮</span></center><p>而且也支持自动补全，这样我们就可以通过建议列表来输入 Dockerfile 中的命令了。</p><p><img src="https://static001.geekbang.org/resource/image/5a/fb/5a701652560d6ffc04bf3edd8d7feffb.gif" alt=""></p><center><span class="reference">Dockerfile 建议列表</span></center><h2>三、构建和运行</h2><p>在书写了正确的 Dockerfile 之后，我们就可以通过这个 Dockerfile 来构建 image 了。为了方便理解，下面我们创建一个新的文件夹，在其中创建一个 Dockerfile。内容如下：</p><pre><code>FROM alpine:latest
+
+RUN apk --no-cache add \
+    htop
+
+CMD [ &quot;htop&quot; ]
+</code></pre><p>这段 Dockerfile 的意思是，<strong>我们希望基于 alpine 系统，安装 htop 这个包，最后运行一个命令 htop，查看当前运行的各种进程</strong>。</p><h3>1. docker build</h3><p>接下来，我们就可以打开命令面板，执行 “Docker: Build image” 命令。这个命令会打开集成终端，然后执行 docker build 命令。</p><p><img src="https://static001.geekbang.org/resource/image/25/13/25081bf3a41aa23701b353ce869c2f13.gif" alt=""></p><center><span class="reference">Docker build</span></center><h3>2. docker run</h3><p>生成了 image 之后，我们就可以通过这个 image 来创建 container 了。此时，我们可以通过 Docker 视图的上下文菜单来生成“运行 container”，也可以从命令面板中，运行 “Docker: Run” 命令。然后 VS Code 就会询问我们想要使用哪个 image。</p><p><img src="https://static001.geekbang.org/resource/image/d0/25/d06938b2909a00686ebfc73760998425.gif" alt=""></p><center><span class="reference">Docker Run</span></center><h3>3. docker run interactive</h3><p>除了 Run 这个命令外，另一个非常有用的命令就是 Run Interactive。通过这个命令，<strong>我们可以创建并运行 container，然后进入到这个 container 的 shell 环境汇总</strong>。</p><p><img src="https://static001.geekbang.org/resource/image/1b/f8/1b8098a9bbbeed57175acbcd9d9b64f8.gif" alt=""></p><center><span class="reference">Docker  run interactive</span></center><p>在上面的例子里，我们在 container 里运行的命令是 htop，也就是实时监控系统运行的情况；当我们执行了 “Run interactive” 命令，运行了 contaienr 并且进入到它的 shell 环境中后，我们就立刻看到了 htop 的运行界面。</p><p>看到这里你可能已经发现了：<span class="orange">对于命令面板里执行每个命令，VS Code 都会打开集成终端，然后运行相对应 Docker 脚本。</span>在你还在学习 Docker 的过程中，你可以先依赖于 VS Code 提供的命令，然后试着去理解 VS Code 每个命令背后的脚本的含义。</p><p>而下面这些就需要我们具备一定的 docker 命令行的知识。</p><h3>4. 输出 log</h3><p>首先，我们对 Dockerfile 按如下稍作修改。</p><pre><code>FROM alpine:latest
+RUN apk --no-cache add \
+    htop
+CMD [ &quot;pwd&quot; ]
+</code></pre><p>我们将Dockerfile中，最后一个配置 CMD 进行了修改。那么，从这个 image 生成的 container 运行起来后，会执行 pwd 命令，而非 htop 命令。</p><p>修改完 Dockerfile 之后，第一件要做的事情，就是重新构建 image。在构建这个 image 时，我们可以覆盖之前的那个 image，也可以重新起个名字来创建一个新的 image。比如我就给新的 image 取名为"vscode-docker-sample2:latest"。</p><p>有了新的 image 后，接下来就是从 “vscode-docker-sample2:latest” 创建一个新的 container。</p><p><img src="https://static001.geekbang.org/resource/image/13/17/138c2368f5ccefae4a0d801e15ea2d17.gif" alt=""></p><center><span class="reference">输出 log</span></center><p>在运行 docker run 的时候，如果你有留意左侧视图里 “containers” 这个列表的话，你会发现，一个名叫 vscode-docker-sample2 的 container 出现了一下然后又消失了。这是为什么呢？</p><p>我们来看一下集成终端，此时集成终端里运行的脚本是：</p><pre><code>docker run --rm -d vscode-docker-sample2:latest
+</code></pre><p>这行脚本中有一个参数 ‘–rm’，它的意思是：如果 container 里的命令执行结束的话，那就将这个 container 删除。由于这个 container 中运行的命令是 pwd，这个命令很快就结束了，所以我们来不及在视图中看到并且操作它。如果我们不希望这个 container 被删除该怎么办呢？</p><p>我们可以选择手动地运行如下的脚本：</p><pre><code>docker run -d vscode-docker-sample2:latest
+</code></pre><p>这一次，我们创建的 container 运行结束后就不会被删除了。也就是此时我们能够在左侧 Containers 列表里，看到 vscode-docker-sample2:latest (dreamy_…) 这个 container 了。它前面的图标里有一个红色的点，这说明这个 container 已经结束工作了。</p><p>我们可以在这个 container 上右击调出上下文菜单，选择 Show logs 命令。接着，我们就能够看到这个 container 中 pwd 命令执行的结果了，就是 ‘/’。</p><p><img src="https://static001.geekbang.org/resource/image/0d/89/0d1dcefa1a3149169863cbaa4849a089.gif" alt=""></p><center><span class="reference">Show logs</span></center><h2>四、Docker Compose</h2><p>除了 Dockerfile 的支持，Docker 插件还支持 Docker Compose。<strong>Docker Compose 是用于配置多个 container 并且将其同时运行的</strong>。和 Dockerfile 一样，我们一样也可以在 Docker compose file 里获得自动补全和错误检查。</p><p>这里，让我们用一个 Node.js 的代码示例，来展示 Docker Compose 以及接下来调试相关的内容。</p><p>首先，让我们将上文中创建的 Dockerfile 删除。然后在文件夹下创建一个 JavaScript 文件 index.js，内容如下：</p><pre><code>function foo() {
+    bar(&quot;Hello World&quot;);
+}
+
+function bar(str) {
+    console.log(str);
+}
+
+foo();
+</code></pre><p>（上面这段 JavaScript 代码，我们在专栏前面的内容里也经常使用，非常简单。）</p><p>接着，我们就需要为这个 JavaScript 代码准备 Docker 相关的配置了。不过值得庆幸的是，Docker 插件已经为我们提供了 Docker 配置的快捷生成方式了。</p><h3>1. 自动创建 Dockerfile 和 compose 配置</h3><p>我们只需调出命令面板，然后搜索执行命令 “Docker: Add docker files to workspace”。</p><p><img src="https://static001.geekbang.org/resource/image/d6/7e/d6a5491cc0c74756349a24116c6f9a7e.gif" alt=""></p><center><span class="reference">自动创建 Dockerfile</span></center><p>接着 VS Code 会问我们想要创建什么环境的 Docker image。这里我们选择 Node.js，这样就可以运行上面创建的 index.js 文件了。</p><p>命令执行后，工作区内多出了三个文件。</p><p>第一个文件是<strong>Dockerfile</strong>。</p><pre><code>FROM node:8.9-alpine
+ENV NODE_ENV production
+WORKDIR /usr/src/app
+COPY [&quot;package.json&quot;, &quot;package-lock.json*&quot;, &quot;npm-shrinkwrap.json*&quot;, &quot;./&quot;]
+RUN npm install --production --silent &amp;&amp; mv node_modules ../
+COPY . .
+EXPOSE 3000
+</code></pre><p>这个文件里，指定了 Node.js 8.9 作为基础 image，然后将当前工作目录下的 package.json 、package-lock.json 等都拷贝到 container 中去。接着运行 npm install 命令来安装代码运行所需的 dependencies。不过，由于我们只有一个简单的 JavaScript 文件，我们并不需要 npm，所以我们不妨把这个文件修改为：</p><pre><code>FROM node:8.9-alpine
+ENV NODE_ENV production
+WORKDIR /usr/src/app
+COPY . .
+EXPOSE 3000
+</code></pre><p>第二个文件是<strong>docker-compose.yml</strong> 。这个文件里指定了当前只有一个 container 需要被创建并运行，而且这个 container 需要使用端口 3000。</p><pre><code>version: '2.1'
+
+services:
+  vscode-sample:
+    image: vscode-sample
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+</code></pre><p>第三个文件是<strong>docker-compose.debug.yml</strong>。顾名思义，它是用于调试时的 compose 文件，跟上面的 docker-compose.yml 文件相比，它只多了两行代码，也就是：</p><ul>
+<li>9229:9229，使用 9229 端口；</li>
+<li>command: node --inspect index.js ，在 container 运行起来后，运行 node 程序，并且调试 index.js 文件。</li>
+</ul><pre><code>version: '2.1'
+
+services:
+  vscode-sample:
+    image: vscode-sample
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    ## set your startup file here
+    command: node --inspect index.js
+</code></pre><h3>2. Compose Up</h3><p>在有了这三个配置文件后，要想构建并且运行 container 就简单了。我们不再需要先执行 “Docker: build image ” 再运行 “Docker: run” 了，而是直接运行单个命令——“Docker: compose up” 即可。</p><p><img src="https://static001.geekbang.org/resource/image/da/58/da5c4ad6a6b63ca72469e71df6c03658.gif" alt=""></p><center><span class="reference">Docker Compose Up</span></center><p>运行 “Docker: compose up”  后，我们需要选择使用哪个 compose 配置文件。只要准备好了 compose 配置文件，那么在 VS Code 中操作就非常简单了，一共只有三个命令：</p><ul>
+<li>Docker compose up</li>
+<li>Docker compose down</li>
+<li>Docker compose start</li>
+</ul><p>如果你想看看 VS Code 是不是真的成功运行了 container，你可以从 Docker 的视图里，找到这个新创建出来的 container，查看它的 log。你能够看到以下结果：</p><p><img src="https://static001.geekbang.org/resource/image/06/3d/06795ce277a0f6c436a6ceac9b182d3d.png" alt=""></p><center><span class="reference">查看 container 的日志 log</span></center><p>index.js 在 container 里被成功地运行了，而且输出了 Hello World。</p><h2>五、调试</h2><p>我们在前面的文章里，做了这么多的准备工作，既创建了 JavaScript 文件，又使用了 Docker compose。不过这些操作，都是为调试内容做的准备。</p><p>在专栏<a href="https://time.geekbang.org/column/article/42775">第 20 讲《聊 debugger 时，我们在聊什么》</a>时，我们介绍过 launch.json 里调试配置中，有一个属性是 request。</p><blockquote>
+<p>这个 JSON 文件里的 configurations 的值就是当前文件夹下所有的配置了。现在我们只有一个调试配置，它有四个属性：</p>
+<p>第一个是 type，代表着调试器的类型。它决定了 VS Code 会使用哪个调试插件来调试代码。</p>
+<p>第二个是 request，代表着该如何启动调试器。如果我们的代码已经运行起来了，则可以将它的值设为 attach，那么我们则是使用调试器来调试这个已有的代码进程；而如果它的值是 launch，则意味着我们会使用调试器直接启动代码并且调试。</p>
+<p>……</p>
+</blockquote><p>当 request 的值被设置为 attach 后，我们就可以将调试器附着到已经处于调试状态的代码进程上了，接着我们就能够调试代码了。而调试 Docker 中的代码，就是使用的 attach 这个方法。我们可以在 Docker container 里以命令行的方式调试代码，并且开放调试端口，接着我们让 VS Code 里的调试插件附着到这个端口上即可。<span class="orange">这就是在 VS Code 中调试非本地环境运行的代码的理论知识了。</span>下面，我们一起看看怎么做。</p><p>首先，我们对  docker-compose.debug.yml 做一点修改，将 command 改成如下的值：</p><pre><code>command: node --inspect-brk=0.0.0.0:9229 index.js
+</code></pre><p>这个命令是说，<strong>将调试 index.js 文件，然后在第一行停下来，并且使用 9229 这个端口进行调试</strong>。接着，让我们运行 “Docker: compose up” 将 container 运行起来。</p><p>下一步就是调试代码了。关于如何创建 launch.json 以及如何借助自动补全来书写调试配置，还请参考专栏<a href="https://time.geekbang.org/column/article/42775">第 20 讲</a>。这里，我们使用的 .vscode/launch.json 文件内容如下：</p><pre><code>{
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;type&quot;: &quot;node&quot;,
+            &quot;request&quot;: &quot;attach&quot;,
+            &quot;name&quot;: &quot;Docker: Attach to Node&quot;,
+            &quot;port&quot;: 9229,
+            &quot;address&quot;: &quot;localhost&quot;,
+            &quot;localRoot&quot;: &quot;${workspaceFolder}&quot;,
+            &quot;remoteRoot&quot;: &quot;/usr/src/app&quot;,
+            &quot;protocol&quot;: &quot;inspector&quot;
+        }
+    ]
+}
+</code></pre><p>这个调试配置有几个属性值得注意：</p><ul>
+<li>request 是 attach，也就是附着到已经运行的代码上；</li>
+<li>port 就是调试的端口；</li>
+<li>localRoot 是本地代码的根目录；</li>
+<li>remoteRoot 是指在远程运行的代码的根目录。在我们的例子里，我们已经在Dockerfile里指明了工作目录是 /usr/src/app （不记得的话还请翻上去看一看），所以此处我们输入 /usr/src/app。</li>
+</ul><p>有了这个调试配置后，F5 我们就能够调试 Docker container 中的代码了，并且停到了第一行代码上。</p><p><img src="https://static001.geekbang.org/resource/image/16/47/168c068a15af5974e290034c681ffc47.gif" alt=""></p><center><span class="reference">调试 Docker container</span></center><p>到这里，我们就成功地将一段 JavaScript 代码运行在 Docker 中，并且从 VS Code 里调试起来了。</p><h2>小结</h2><p>以上就是今天内容的全部了，如果你对 Docker 还不熟悉，那么今天的内容会让你觉得有些陌生。就我的使用经验来看，Docker 这个插件很好地将一些常用的 docker 命令行，简化成单个命令，而且提供了一个独立的视图，我们就能够快速查看 docker image 和 container 了。而调试 Docker 内的代码，也不是全新的知识，它其实是使用了调试器的 attach 功能，只要你能够在 Docker container 里以命令行的形式调试代码，基本上你也可以在 VS Code 里进行调试。关于使用的语言或者框架是否能够在 Docker 中运行并调试，建议你参考这门语言调试插件的 Remote Debugging 相关的知识。</p><hr></hr><p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/4f/6fb51ff1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">一步</span>
+                            </div>
+                            <div class="bd">老师 我有个问题哈，进行调试 attach 到 docker container 调试后，调试的代码是  docker container 里面的代码呢，还是外面工作区的代码呢？  还是会把远程的 代码 down 下来一份呢？<br><br>&gt; 现在只是看了文章，还没尝试，如果还是调试的本地的已有的代码就意义不大了 <br></div>
+                            <span class="time">2018-11-20 17:36</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/96/63/fdbf75eb.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">捞鱼的搬砖奇</span>
+                            </div>
+                            <div class="bd">VS code新建文件时候怎么做到指定类型。还是只可以保存的时候靠文件扩展名决定的。 <br></div>
+                            <span class="time">2018-11-20 09:56</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

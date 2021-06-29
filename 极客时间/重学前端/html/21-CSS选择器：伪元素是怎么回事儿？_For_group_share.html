@@ -1,0 +1,1174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>21-CSS选择器：伪元素是怎么回事儿？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>21-CSS选择器：伪元素是怎么回事儿？</h1>
+<p>你好，我是winter。</p><p>在上一篇文章中，我已经给你介绍了一些简单选择器，这一节课我会继续给你介绍选择器的几个机制：选择器的组合、选择器的优先级和伪元素。</p><h2>选择器的组合</h2><p>在CSS规则中，选择器部分是一个选择器列表。</p><p>选择器列表是用逗号分隔的复杂选择器序列；复杂选择器则是用空格、大于号、波浪线等符号连接的复合选择器；复合选择器则是连写的简单选择器组合。</p><p>根据选择器列表的语法，选择器的连接方式可以理解为像四则运算一样有优先级。</p><ul>
+<li>
+<p>第一优先级</p>
+<ul>
+<li>无连接符号</li>
+</ul>
+</li>
+<li>
+<p>第二优先级</p>
+<ul>
+<li>“空格”</li>
+<li>“~”</li>
+<li>“+”</li>
+<li>“&gt;”</li>
+<li>“||”</li>
+</ul>
+</li>
+<li>
+<p>第三优先级</p>
+<ul>
+<li>“,”</li>
+</ul>
+</li>
+</ul><p>例如以下选择器：</p><pre><code>.c,.a&gt;.b.d {
+    /*......*/
+}
+</code></pre><p>我们应该理解为这样的结构。</p><ul>
+<li>.c,.a&gt;.b.d
+<ul>
+<li>.c</li>
+<li>.a&gt;.b.d
+<ul>
+<li>.a</li>
+<li>.b.d
+<ul>
+<li>.b</li>
+<li>.d</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><p>复合选择器表示简单选择器中“且”的关系，例如，例子中的“ .b.d ”，表示选中的元素必须同时具有b和d两个class。</p><p>复杂选择器是针对节点关系的选择，它规定了五种连接符号。</p><ul>
+<li><strong>“空格”</strong>：后代，表示选中所有符合条件的后代节点， 例如“ .a .b ”表示选中所有具有class为a的后代节点中class为b的节点。</li>
+<li><strong>“&gt;”</strong> ：子代，表示选中符合条件的子节点，例如“ .a&gt;.b ”表示：选中所有“具有class为a的子节点中，class为b的节点”。</li>
+<li><strong>“~” </strong>: 后继，表示选中所有符合条件的后继节点，后继节点即跟当前节点具有同一个父元素，并出现在它之后的节点，例如“ .a~.b ”表示选中所有具有class为a的后继中，class为b的节点。</li>
+<li><strong>“+”</strong>：直接后继，表示选中符合条件的直接后继节点，直接后继节点即nextSlibling。例如 “.a+.b ”表示选中所有具有class为a的下一个class为b的节点。</li>
+<li><strong>“||”</strong>：列选择器，表示选中对应列中符合条件的单元格。</li>
+</ul><!-- [[[read_end]]] --><p>我们在实际使用时，比较常用的连接方式是“空格”和“&gt;”。</p><p>工程实践中一般会采用设置合理的class的方式，来避免过于复杂的选择器结构，这样更有利于维护和性能。</p><p>空格和子代选择器通常用于组件化场景，当组件是独立开发时，很难完全避免class重名的情况，如果为组件的最外层容器元素设置一个特别的class名，生成CSS规则时，则全部使用后代或者子代选择器，这样可以有效避免CSS规则的命名污染问题。</p><p>逗号表示“或”的关系，实际上，可以把它理解为“两条内容一样的CSS规则”的一种简写。如我们开头的例子，可以理解成与下面的代码等效：</p><pre><code>.c {
+    /*......*/
+}
+.a&gt;.b.d {
+    /*......*/
+}
+</code></pre><p>到这里，我们就讲完了如何用简单选择器组合成复合选择器和复杂选择器，形成选择器列表，这能够帮助我们应对各种复杂的需求。</p><p>CSS选择器是基于规则生效的，同一个元素命中多条规则是非常常见的事情。不同规则指定同一个属性为不同值时，就需要一个机制来解决冲突。这个机制，就是接下来我们要讲的选择器优先级。</p><h2>选择器的优先级</h2><p>CSS标准用一个三元组 (a, b, c) 来构成一个复杂选择器的优先级。</p><ul>
+<li>id选择器的数目记为a；</li>
+<li>伪类选择器和class选择器的数目记为b；</li>
+<li>伪元素选择器和标签选择器数目记为c；</li>
+<li>“*” 不影响优先级。</li>
+</ul><p>CSS标准建议用一个足够大的进制，获取“ a-b-c ”来表示选择器优先级。</p><p>即：</p><pre><code>specificity = base * base * a + base * b + c
+
+</code></pre><p>其中，base是一个“足够大”的正整数。关于base，历史中有些趣闻，早年IE6采用256进制，于是就产生“256个class优先级等于一个id”这样的奇葩问题，后来扩大到65536，基本避免了类似的问题。</p><p>现代浏览器多采用了更大的数量，我们正常编写的CSS规则数量不太可能达到数万，因此我们可以认为这样的base就足够大了。</p><p>行内属性的优先级永远高于CSS规则，浏览器提供了一个“口子”，就是在选择器前加上“!import”。</p><p>这个用法非常危险，因为它相当于一个新的优先级，而且此优先级会高于行内属性。</p><p>同一优先级的选择器遵循“后面的覆盖前面的”原则，我们可以看一个例子：</p><pre><code class="language-HTML">&lt;div id="my" class="x y"&gt;text&lt;div&gt;
+</code></pre><pre><code class="language-CSS">.x {
+    background-color:lightblue;
+}
+.y {
+    background-color:lightgreen;
+}
+</code></pre><p>调换“.x”和“.y”我们可以得到不同的显示效果。选择器的优先级是针对单条规则的，多条规则的选择器同时命中元素，优先级不会发生叠加。</p><pre><code class="language-HTML">&lt;div id="my" class="x y z"&gt;text&lt;div&gt;
+</code></pre><pre><code class="language-CSS">.x {
+    background-color:lightblue;
+}
+.z {
+    background-color:lightblue;
+}
+.y {
+    background-color:lightgreen;
+}
+</code></pre><p>在这个例子中，“.x ”和“.z ”都指定了背景色为浅蓝色，但是因为“.y ”规则在最后，所以最终显示结果为浅绿色。另外一个需要注意的是，选择器的优先级是针对复杂选择器的优先级，选择器列表不会合并计算优先级。</p><p>我们看一个例子：</p><pre><code>&lt;div id=&quot;my&quot; class=&quot;x y z&quot;&gt;text&lt;div&gt;
+</code></pre><pre><code>.x, .z {
+    background-color:lightblue;
+}
+.y {
+    background-color:lightgreen;
+}
+</code></pre><p>这里选择器列表“ .x, .z”命中了div，但是它的两项分别计算优先级，所以最终优先级仍跟“ .y” 规则相同。</p><p>以上就是选择器优先级的相关规则了，虽然我们这里介绍了详细的计算方式，但是我认为选择器的使用上，如果产生复杂的优先级计算，代码的可读性一定是有问题的。</p><p>所以实践中，建议你“根据 id 选单个元素”“class和class的组合选成组元素”“tag选择器确定页面风格”这样的简单原则来使用选择器，不要搞出过于复杂的选择器。</p><h2>伪元素</h2><p>在上一课，我们有意忽略了一种重要的简单选择器：伪元素。</p><p>我之所以没有把它放在简单选择器中，是因为伪元素本身不单单是一种选择规则，它还是一种机制。</p><p>所以本节课，我就来讲一讲伪元素机制。伪元素的语法跟伪类相似，但是实际产生的效果却是把不存在的元素硬选出来。</p><p>目前兼容性达到可用的伪元素有以下几种。</p><ul>
+<li>::first-line</li>
+<li>::first-letter</li>
+<li>::before</li>
+<li>::after</li>
+</ul><p>下面我们就来分别讲讲它们。</p><p><strong>::first-line 和 ::first-letter 是比较类似的伪元素</strong>，其中一个表示元素的第一行，一个表示元素的第一个字母。</p><p>我们可以看一个示例：</p><pre><code>&lt;p&gt;This is a somewhat long HTML
+paragraph that will be broken into several
+lines. The first line will be identified
+by a fictional tag sequence. The other lines
+will be treated as ordinary lines in the
+paragraph.&lt;/p&gt;
+</code></pre><pre><code>p::first-line { 
+    text-transform: uppercase 
+}
+</code></pre><p>这一段代码把段落的第一行字母变为大写。注意这里的第一行指的是排版后显示的第一行，跟HTML代码中的换行无关。</p><p>::first-letter 则指第一个字母。首字母变大并向左浮动是一个非常常见的排版方式。</p><pre><code>&lt;p&gt;This is a somewhat long HTML
+paragraph that will be broken into several
+lines. The first line will be identified
+by a fictional tag sequence. The other lines
+will be treated as ordinary lines in the
+paragraph.&lt;/p&gt;
+</code></pre><pre><code>p::first-letter { 
+    text-transform: uppercase;
+    font-size:2em;
+    float:left; 
+}
+</code></pre><p>虽然听上去很简单，但是实际上，我们遇到的HTML结构要更为复杂，一旦元素中不是纯文本，规则就变得复杂了。</p><p>CSS标准规定了first-line必须出现在最内层的块级元素之内。因此，我们考虑以下代码。</p><pre><code class="language-HTML">&lt;div&gt;
+  &lt;p id=a&gt;First paragraph&lt;/p&gt;
+  &lt;p&gt;Second paragraph&lt;/p&gt;
+&lt;/div&gt;
+</code></pre><pre><code class="language-CSS">div&gt;p#a {
+    color:green;
+}
+
+div::first-line { 
+    color:blue; 
+}
+</code></pre><p>这段代码最终结果第一行是蓝色，因为p是块级元素，所以伪元素出现在块级元素之内，所以内层的color覆盖了外层的color属性。</p><p>如果我们把p换成span，结果就是相反的。</p><pre><code>&lt;div&gt;
+  &lt;span id=a&gt;First paragraph&lt;/span&gt;&lt;br/&gt;
+  &lt;span&gt;Second paragraph&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><pre><code>div&gt;span#a {
+    color:green;
+}
+
+div::first-line { 
+    color:blue; 
+}
+</code></pre><p>这段代码的最终结果是绿色，这说明伪元素在span之外。</p><p>::first-letter的行为又有所不同，它的位置在所有标签之内，我们把前面的代码换成::first-letter。</p><pre><code>&lt;div&gt;
+  &lt;span id=a&gt;First paragraph&lt;/span&gt;&lt;br/&gt;
+  &lt;span&gt;Second paragraph&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><pre><code>div&gt;span#a {
+    color:green;
+}
+
+div::first-letter { 
+    color:blue; 
+}
+</code></pre><p>执行这段代码，我们可以看到，首字母变成了蓝色，这说明伪元素出现在span之内。</p><p>CSS标准只要求 ::first-line 和 ::first-letter 实现有限的几个CSS属性，都是文本相关，这些属性是下面这些。</p><p><img src="https://static001.geekbang.org/resource/image/6e/48/6e050ee9f7a0b1657388271cceb0c548.png" alt=""></p><p><strong>接下来我们说说 ::before 和 ::after 伪元素。</strong></p><p>这两个伪元素跟前面两个不同的是，它不是把已有的内容套上一个元素，而是真正的无中生有，造出一个元素。</p><p>::before 表示在元素内容之前插入一个虚拟的元素，::after 则表示在元素内容之后插入。</p><p>这两个伪元素所在的CSS规则必须指定content属性才会生效，我们看下例子：</p><pre><code>&lt;p class=&quot;special&quot;&gt;I'm real element&lt;/p&gt;
+</code></pre><pre><code>p.special::before {
+    display: block;
+    content: &quot;pseudo! &quot;;
+}
+</code></pre><p>这里要注意一点，::before 和 ::after 还支持content为counter，如：</p><pre><code>&lt;p class=&quot;special&quot;&gt;I'm real element&lt;/p&gt;
+p.special::before {
+    display: block;
+    content: counter(chapno, upper-roman) &quot;. &quot;;
+}
+</code></pre><p>这对于实现一些列表样式是非常有用的。</p><p>::before 和 ::after 中支持所有的CSS属性。实际开发中，这两个伪元素非常有用，有了这两个伪元素，一些修饰性元素，可以使用纯粹的CSS代码添加进去，这能够很好地保持HTML代码中的语义，既完成了显示效果，又不会让DOM中出现很多无语义的空元素。</p><h2>总结</h2><p>这一课，我们讲了CSS选择器的三种机制：选择器的组合、选择器优先级、以及伪元素。</p><p>在选择器组合这一部分，我们讲到了，选择器的连接方式像四则运算一样有优先级，</p><p>第一优先级是无连接符号；第二优先级是：“空格”“~”“+”“&gt;”“||”；第三优先级是“,”。</p><p>然后我们又介绍了选择器优先级的计算方式。</p><p>最后我们为大家介绍了伪元素，我们逐次讲解了</p><ul>
+<li>::first-line</li>
+<li>::first-letter</li>
+<li>::before</li>
+<li>::after</li>
+</ul><p>四种伪元素。伪元素的语法跟伪类相似，但是实际产生的效果是把不存在的元素硬选出来。这一点就与伪类不太一样了。</p><p>结合上一节课我们讲的简单选择器，对它们灵活运用，就能够满足大部分CSS的使用场景的需求了。</p><p>最后，留给你一个问题，你所在的团队，如何规定CSS选择器的编写规范？你觉得它好吗？</p><h1>猜你喜欢</h1><p><a href="https://time.geekbang.org/course/intro/163?utm_term=zeusMTA7L&amp;utm_source=app&amp;utm_medium=chongxueqianduan&amp;utm_campaign=163-presell"><img src="https://static001.geekbang.org/resource/image/1a/08/1a49758821bdbdf6f0a8a1dc5bf39f08.jpg" alt="unpreview"></a></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Scorpio  2019-03-08 08:09:32
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我们团队没有规范。。。 [6赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿成  2019-03-07 07:49:00
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            有两个问题想请教一下winter老师：<br>1. 您对styled-component类似的方案怎么看<br>2. 您对使用属性选择器代替class怎么看 [5赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Carson  2019-03-07 02:33:38
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            如果是注重复用的开发，一般采用组件化的形式，给组件一套命名空间；<br><br>如果是页面较少的网页开发，不太在意复用和扩展，一般采用 BEM 的规则。<br><br>”根据 id 选单个元素，class 和 class 的组合选择成组元素，tag 选择器确定页面风格。“ 从这个原则中收获很大。<br> [4赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            阿歡。  2019-03-13 22:47:18
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            老师您好,下面例子中 把&lt;br&gt;去掉，会变成First paragraph为绿色，Second paragraph为蓝色，这是为何？<br>&lt;div&gt;<br>            &lt;span id=&quot;a&quot;&gt;First paragraph&lt;&#47;span&gt;&lt;br&gt;<br>            &lt;span&gt;Second paragraph&lt;&#47;span&gt;<br> &lt;&#47;div&gt;<br><br>           div&gt;span#a {<br>                color:green;<br>            }<br>            div::first-line { <br>                color:blue; <br>            } [2赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            qqq  2019-03-22 11:38:17
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            提醒下：伪元素那部分说的是子元素 color 覆盖父元素 color，而非 CSS 规则覆盖 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Lcina  2019-03-18 12:54:07
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            行内属性的优先级永远高于 CSS 规则，浏览器提供了一个“口子”，就是在选择器前加上“!import”。应该是 important 吧 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Geek_8c1d64  2019-03-07 01:14:39
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            img、br等不能包含子元素的标签不能创建::before和::after。但一个例外是hr，不知道为什么。或许是我的理解有问题？ [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            靠人品去赢  2019-04-03 15:49:25
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            我放一个伪类和伪元素的链接吧，这两者属于见过但是没注意更没区分过，估计有人会需要https:&#47;&#47;developer.mozilla.org&#47;zh-CN&#47;docs&#47;Learn&#47;CSS&#47;Introduction_to_CSS&#47;Pseudo-classes_and_pseudo-elements 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;line-height:1.2">
+            Ranjay  2019-03-24 21:54:52
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6">
+            BEM规范实际上就已经是很好的实践 
+        </div>
+        
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>

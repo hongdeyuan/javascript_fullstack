@@ -1,0 +1,288 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                18讲为你的项目打造Workflow（上）
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/f4/d8/f4eac917382fec08d0331560f0a316d8.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>在上一讲中，我们一起学习了如何在编辑器中使用集成终端。有了集成终端，我们在运行构建、测试脚本，甚至是产品发布的时候，就可以不用离开编辑器了。但是，我们有没有办法让这些工作再快一点？或者有没有办法能够更方便地得到这些任务运行的反馈？能不能够将这些任务的执行跟我们的日常代码操作结合到一起？</p>
+<p>好了，我就不卖关子了，今天我们就一起来了解一下 VS Code 的任务系统。</p>
+<h2>执行任务</h2>
+<p><strong>任务系统的目的，是将各种形形色色的任务脚本尽可能地统一化，然后提供一套简单但又定制化强的方式操作它们。</strong></p>
+<p>这里举个我自己的例子。比如，我在使用 git 进行版本管理，当我在终端里要创建一个的新的分支时，得输入 “git checkout -b  branchName”，但是要每次都打全这个命令太麻烦了，于是我自己创建了一个 bash 的别名（alias）gco  用来替代 “git checkout -b”。而 VS Code 的版本管理更近了一步，它在状态栏上添加了一个按钮，我只需点击一下状态栏，就可以创建分支了。</p>
+<p>任务系统也希望提供一样的效果，比如把我们日常使用的脚本命令，通过命令面板或者快捷键迅速执行，并且还可以将这一套快捷操作的方式，分享给工作在同一个项目上的同事。</p><!-- [[[read_end]]] -->
+<h3>任务自动检测</h3>
+<p>VS Code 的任务系统的第一大功能，就是对任务的自动检测。下面我们一起来看下这个功能。</p>
+<p>如果你的项目或者文件夹里有 typescript、grunt、jake、gulp、npm 这几个脚本工具的配置文件的话，VS Code 会自动读取当前文件夹下的配置。举个例子，我们打开一个文件夹，这个文件夹下有个 package.json 的文件，它是 npm 的配置文件，代码内容如下：</p>
+<pre><code>{
+ &quot;name&quot;: &quot;sample&quot;,
+ &quot;scripts&quot;: {
+  &quot;test&quot;: &quot;&quot;
+ }
+}
+</code></pre>
+<p>然后当我们打开命令面板，搜索 “运行任务”（Run Task）时，紧接着我们就能看到两条跟npm相关的任务：</p>
+<ul>
+<li>npm install</li>
+<li>npm test</li>
+</ul>
+<p>第一条npm install是 npm 用于安装包的命令；第二条 npm test，则是我们在 package.json 里指定的脚本名称，但是 VS Code 也同样检测出来了。此时我们选择 npm install 这条命令的话，VS Code 就会打开一个集成终端，然后运行这条脚本。</p>
+<p><img src="https://static001.geekbang.org/resource/image/eb/c8/eb4e0651a53ef5c845e92439d4ab6dc8.gif" alt="" /></p>
+<center><span class="reference">自动检测任务并且运行</span></center>
+<p>在上面的动图中，除了 npm 的两条任务，我们还能看到 typescript 关于编译的两条任务，这是因为当前文件夹下有 tsconfig 文件，VS Code 觉得这是一个 typescript 项目，所以进行了自动任务检测。</p>
+<p>上面我们提到的 npm 等五个脚本工具相关的任务，VS Code 是会自动检测的，同时 VS Code 还开放了类似的 API 给插件，允许插件来实现一样的功能。比如说我曾经在 Ruby 插件里也实现了 Rake 的自动检测，所以当你安装 Ruby 插件后，打开一个使用了 Rake 的 Ruby 项目，从命令面板里执行 “运行任务”，你同样可以看到所有的 Rake 任务。如果你使用的某个脚本工具相关的插件还不支持这个功能，可以去提 issue 建议插件加上。</p>
+<p>自动检测任务，还只是小小的第一步，因为它只是从我们已经写好的脚本里把任务读取出来。下面我们看看，如何来自己配置任务。</p>
+<h3>自定义任务</h3>
+<p>首先我们在命令面板里，搜索 “配置任务”（Configure Task）并执行。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7f/d5/7faf41c6b53f4c831ee31359d75318d5.png" alt="" /></p>
+<center><span class="reference">配置任务</span></center>
+<p>我们能够看到一个下拉框，这里面提供了多个不同的选项。</p>
+<p><img src="https://static001.geekbang.org/resource/image/0c/2a/0c00333ad708218e0425ee1151818a2a.png" alt="" /></p>
+<center><span class="reference">选择要配置的任务</span></center>
+<p>如果我们选择第一个，也就是<code>npm: install</code>这一项的话，VS Code 会立刻在 <code>.vscode</code>文件夹下创建一个 tasks.json 文件，它的格式是 JSON，可读性很好且易于修改。</p>
+<pre><code>{
+ // See https://go.microsoft.com/fwlink/?LinkId=733558
+ // for the documentation about the tasks.json format
+ &quot;version&quot;: &quot;2.0.0&quot;,
+ &quot;tasks&quot;: [
+  {
+   &quot;type&quot;: &quot;npm&quot;,
+   &quot;script&quot;: &quot;install&quot;,
+   &quot;problemMatcher&quot;: []
+  }
+ ]
+}
+</code></pre>
+<p>我们能够看到，这个文件里有一个属性叫做tasks，它的值是一个数组，这就是我们可以在当前文件夹下使用的所有任务了。现在这个模板里，只有一个任务 npm，它有三个属性。</p>
+<p>第一个属性是 type，它代表着你要使用哪个脚本工具，我们这里使用是 npm。第二个是 script 脚本，则是我们想要 npm 工具执行的某个脚本。第三个属性 problemMatcher，这个我放在后面的内容里介绍，暂时看不懂也没关系，稍安勿躁。</p>
+<p>可以看得出来，这个任务相当于上面自动检测的任务系统的一个映射。我们把 npm 脚本自己的配置文件，转变成了 VS Code 任务系统的配置文件，也就是tasks.json。</p>
+<p>但是这种类型的任务，受限于 VS Code 或者插件所支持的脚本工具，缺乏一定的灵活性。我们把 <code>.vscode/tasks.json</code> 文件先删除，然后重新打开命令面板，执行 “配置任务”（Configure Task）。不过这一次，我们选择最后一项，使用模板创建 tasks.json 文件。（请注意，这里我们是为了从 0 了解任务系统，所以才把之前的 tasks.json 文件删除，如果你已经在项目中使用 tasks.json ，大可不必这么做，照着文章读下去就可以了。）</p>
+<p><img src="https://static001.geekbang.org/resource/image/57/c4/572510c984e4b00f4c9874b9c0dabfc4.png" alt="" /></p>
+<center><span class="reference">选择使用模板来创建任务</span></center>
+<p>紧接着 VS Code 就问我们了，希望使用哪种模板。这里模板的多少，同样取决于你装了哪些插件。默认情况下，VS Code 为 MSBuild、Maven、.NET Core 提供了模板，而最后一个 Others，则是一个通用的模板，我们一起来看下它。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c8/de/c891f2dc998b93ed4694d49e61d8edde.png" alt="" /></p>
+<center><span class="reference">选择任务模板</span></center>
+<p>选择完 Others 之后，VS Code 在当前文件夹根目录下的 .vscode 文件夹中，创建了 tasks.json 文件。</p>
+<p><img src="https://static001.geekbang.org/resource/image/26/8a/26b72e05ad5cb19809d9399a171e278a.png" alt="" /></p>
+<center><span class="reference">自定义任务模板</span></center>
+<p>这个文件的内容如下：</p>
+<pre><code>{
+ // See https://go.microsoft.com/fwlink/?LinkId=733558
+ // for the documentation about the tasks.json format
+ &quot;version&quot;: &quot;2.0.0&quot;,
+ &quot;tasks&quot;: [
+  {
+   &quot;label&quot;: &quot;echo&quot;,
+   &quot;type&quot;: &quot;shell&quot;,
+   &quot;command&quot;: &quot;echo Hello&quot;
+  }
+ ]
+}
+</code></pre>
+<p>这个文件跟最开始我们看到的非常接近，tasks 属性下有一个任务，只不过它的三个属性跟之前很不一样。</p>
+<p>第一个属性是 label 标签，就是这个任务的名字。我们在命令面板里执行任务会需要读到它，所以它的值应该尽可能地描述这个任务是干什么的。</p>
+<p>第二个属性是 type 类型。对于<strong>自定义的任务</strong>来说，这个类型可以有两种选择，一种是这个任务被当作进程来运行，另一种则是在 shell 中作为命令行来运行。默认情况下我们会在 shell 下运行，而且这个 shell 命令行将会在集成终端里执行，shell 的选择则会尊重我们在集成终端的配置。比如在我的例子中，我是在 macOS 下运行的，系统默认的 shell 是 zsh，那么当我运行这个脚本时，就会在 zsh 里执行。</p>
+<p><img src="https://static001.geekbang.org/resource/image/f8/57/f8bdabbec6e41138cbf258f3e6d97457.png" alt="" /></p>
+<center><span class="reference">自定义任务类型</span></center>
+<p>第三个属性是命令command，它代表着我们希望在 shell 中运行哪一个命令，或者我们希望运行哪个程序。</p>
+<p>好了，看完这三个属性，你一定希望第一时间试试看这个任务。下面我们要做的就是打开命令面板，搜索“运行任务”，选择“echo”这个任务（这个就是我们在label里写的名字），按下回车后，VS Code 会问我们 “选择根据何种错误和警告扫描任务输出”，这个问题涉及到任务系统的另一个重要功能，我会在后面介绍，现在就选择第一个选项 “继续而不扫描任务输出” 好了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/a0/a1/a06cd6229defe412739fc781905455a1.gif" alt="" /></p>
+<center><span class="reference">执行自定义的任务</span></center>
+<p>到这里你可能会吐槽，为了完成一个任务，搞得好复杂啊。别着急，等我们把各个功能都介绍完毕，就能够选择快速的方式运行了。</p>
+<p>刚才上面我们提到了 “type” 类型，还支持 “process”， 也就是以进程的形式运行。如果我们选择这个类型，那么就需要在 “command” 里提供程序的地址。比如下面的例子里，我提供了 Chrome 浏览器在 macOS 下的地址。</p>
+<pre><code>{
+ &quot;version&quot;: &quot;2.0.0&quot;,
+ &quot;tasks&quot;: [
+  {
+   &quot;label&quot;: &quot;chrome&quot;,
+   &quot;type&quot;: &quot;process&quot;,
+   &quot;command&quot;: &quot;/Applications/Google Chrome.app/Contents/MacOS/Google Chrome&quot;
+  }
+ ]
+}
+</code></pre>
+<p>我们运行看看它的效果：</p>
+<p><img src="https://static001.geekbang.org/resource/image/31/d9/31a5852b2a78507ae1394f6ef79d5bd9.gif" alt="" /></p>
+<center><span class="reference">使用任务打开 Chrome</span></center>
+<p>我们成功地执行这个任务，打开了浏览器。如果我们把这个任务分享给同事，而他们使用的系统是 Windows 或者 Linux，那么这个任务就没法使用了，因为Chrome 的地址完全对不上号。不过我们可以为 Windows 或者 Linux 系统指定特定的地址，书写的方式如下（请注意，在你的操作系统上，Chrome 的地址可能不完全跟下面的代码样例一样）：</p>
+<pre><code>{
+ &quot;version&quot;: &quot;2.0.0&quot;,
+ &quot;tasks&quot;: [
+  {
+   &quot;label&quot;: &quot;chrome&quot;,
+   &quot;type&quot;: &quot;process&quot;,
+   &quot;command&quot;: &quot;/Applications/Google Chrome.app/Contents/MacOS/Google Chrome&quot;，
+   &quot;windows&quot;: {
+    &quot;command&quot;: &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot;
+      },
+      &quot;linux&quot;: {
+          &quot;command&quot;: &quot;/usr/bin/google-chrome&quot;
+      }
+  }
+ ]
+}
+</code></pre>
+<h2>分组和结果显示</h2>
+<p>下面我们再看一个更复杂一些的任务，来学习一下任务系统配置里的其他属性。在下面的任务里，我们能够看到 “label”“type”“command” 这几个熟悉的属性，它们的意思是，在 shell 下运行 “./scripts/test.sh” 这个脚本。不过又多了三个属性 “group” “presentation” 和 “options”，它们分别是干什么的呢？</p>
+<pre><code>{
+ &quot;version&quot;: &quot;2.0.0&quot;,
+ &quot;tasks&quot;: [
+  {
+   &quot;label&quot;: &quot;test shell&quot;,
+   &quot;type&quot;: &quot;shell&quot;,
+   &quot;command&quot;: &quot;./scripts/test.sh&quot;,
+   &quot;windows&quot;: {
+    &quot;command&quot;: &quot;.\\scripts\\test.cmd&quot;
+   },
+   &quot;group&quot;: &quot;test&quot;,
+   &quot;presentation&quot;: {
+    &quot;reveal&quot;: &quot;always&quot;,
+    &quot;panel&quot;: &quot;new&quot;
+   },
+   &quot;options&quot;: {
+    &quot;cwd&quot;: &quot;&quot;,
+    &quot;env&quot;: {},
+    &quot;shell&quot;: {
+     &quot;executable&quot;: &quot;bash&quot;
+    }
+   }
+  }
+ ]
+}
+</code></pre>
+<p>“group” 属性就是分组，我们可以通过这个属性指定这个任务被包含在哪一种分组当中。关于分组，我们有三种选择：“build” 编译生成、“test”测试和 “none”。在这个例子里，我们把它设置为了 “test”。那么，当我们在命令面板里搜索 “运行测试任务” (Run Test Task) 时，只有这个任务会被显示出来。</p>
+<p><img src="https://static001.geekbang.org/resource/image/6a/76/6a2b0e10e277529956246e203b08cf76.gif" alt="" /></p>
+<center><span class="reference">任务分组：构建、测试</span></center>
+<p>如果我们把这个分组 group 改为 “build”，那么在我们执行 “运行生成任务” （Run Build Task）时，则同样能够看到它。</p>
+<p>分组的意思很好理解，但是你可能感觉还是不够意思，因为虽然有专门的命令去执行生成任务，或者测试任务，但是它们还是调出了一个列表让我们进行选择，多此一举，有没有办法一键运行？</p>
+<p>当然没问题，我们只需将分组 “group” 的值改成下面这样即可。“isDefault” 代表着这条任务是不是这个分组中的默认任务，“kind” 则是代表分组。</p>
+<pre><code>&quot;group&quot;: {
+    &quot;isDefault&quot;: true,
+    &quot;kind&quot;: &quot;test&quot;
+   },
+</code></pre>
+<p>当把“group”改成以上的值后，再当我们执行 “运行测试任务” (Run Test Task)  命令时，我们会发现这条测试任务被直接执行了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b0/02/b0b79b76702625d8788eb515200a8202.gif" alt="" /></p>
+<center><span class="reference">自动运行默认测试任务</span></center>
+<p>而 “运行生成任务” 就更方便了，这个命令已经绑定了一组快捷键。我们只需按下 Cmd + Shift + B （Windows 上是 Ctrl + Shift + B）就可以自动运行默认的那个生成任务了（build task）。</p>
+<p>接下里的两个属性：“presentation” 是用于控制任务运行的时候，是否要自动调出运行的界面，让我们看到结果，或者是否要新创建一个窗口执行任务；而 “options” 则是用于控制任务执行时候的几个配置，比如控制任务脚本运行的文件夹地址 “cwd”，控制环境变量 “env”，或者控制任务脚本运行的时候使用哪个 shell 环境。</p>
+<p>你可以看到，在上面的例子里，我把 shell 环境指定为了 bash，那么这个脚本运行的时候，虽然还是使用的集成终端，但是它会使用 bash 而不是 zsh 来运行这个脚本。</p>
+<h2>小结</h2>
+<p>任务系统的知识体系相对复杂，一篇文章难以完全覆盖，所以我将其分为上下两讲来介绍，以争取对任务系统有个更全面的认知。</p>
+<p>以上就是任务系统的上半部分知识，我们介绍了如何使用自动任务检测，如何持久化任务，如何创建自定义的任务等等。在我们进入到下一讲之前，希望你能够熟悉今天所讲的内容，这样学习下一讲的知识时，就不会云里雾里了。</p>
+<hr />
+<p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/fb/51/870a6fcb.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Trust me ҉҉҉҉҉҉҉❀</span>
+                            </div>
+                            <div class="bd">能不能绑定UI按钮之类的<br>配置能不能存储到用户级别<br>能不能到dir根路径 <br></div>
+                            <span class="time">2018-10-23 22:58</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/cd/37/daadbe17.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">阿弥陀佛么么哒</span>
+                            </div>
+                            <div class="bd">配置 group 的 isDefault 的属性还是检测不到默认的呢，也没有修改过快捷键 <br></div>
+                            <span class="time">2018-11-08 12:37</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/57/f1/a6e4770a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">那句诺言</span>
+                            </div>
+                            <div class="bd">希望能多给点例子和参考资料，只是看还是有点不太清楚 <br></div>
+                            <span class="time">2018-10-23 09:23</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

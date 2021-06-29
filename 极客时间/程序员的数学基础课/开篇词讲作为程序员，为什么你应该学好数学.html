@@ -1,0 +1,368 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                开篇词讲作为程序员，为什么你应该学好数学
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/fc/9d/fcfad6325d547791f895830540dc009d.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申，目前在LinkedIn从事数据科学的工作，主要负责全球领英的搜索引擎优化，算法和数据架构的搭建。</p><p>2006年，我博士毕业于上海交通大学计算机科学与工程专业，在接下来十余年时间里，我曾经在微软亚洲研究院、IBM研究院、eBay中国研发中心做机器学习方向的研究工作，也负责过大润发飞牛网和1号店这两家互联网公司的核心搜索和推荐项目，还写过一本书《大数据架构商业之路》。</p><p>对于数学和计算机编程的联系，我之前也没有思考过。直到有一次，在硅谷的一个技术交流Meetup上，我听到一位嘉宾分享说：“如果你只想当一个普通的程序员，那么数学对你来说，并不重要。但是如果你想做一个顶级程序员，梦想着改变世界，那么数学对你来说就很重要了。”</p><p>听完这句话，我马上感受到强烈的共鸣，因为就我自己的工作经历而言，越是往高处走，就越能发现数学的重要性。我知道，数学对于我们每一个程序员来说，都是最熟悉的陌生人。你从小就开始学习数学，中考、高考、研究生考试还要考数学，所以那些熟悉的数学定理、数学公式，陪伴你至少也有10年时间了。</p><p>但是，自从做了程序员，你可能早就把数学抛在了脑后，甚至觉得曾经为了应试而“硬学”的数学应该是彻底没什么用了，终于可以和他们say goodbye了。毕竟作为一个基础学科，数学肯定是没操作系统、数据结构、计算机网络这样的课程看起来“实用”。</p><!-- [[[read_end]]] --><p>起码我之前就是这么认为的。大学的时候，我非常喜欢编程，甚至还翘过数学课，专门在图书馆看计算机类的图书。那会儿我觉得，数学这东西，完全就是应试教育，我更喜欢计算机这样操作类的课程，不喜欢待在教室里听数学老师讲那些枯燥的理论和定理。</p><p>再到后来，我读了硕士，开始接触机器学习，猛然间才发现，机器学习表面上是“写程序”，但实际上剥去外表，本质上就是在研究数学。从那会儿开始，我对数学的认知也才逐步客观和理性起来。</p><p>再到现在，我参加了工作，写了这么多年代码，我想说，数学学得好不好，将会直接决定一个程序员有没有发展潜力。因为往大了说，<strong>数学它其实是一种思维模式，考验的是一个人归纳、总结和抽象的能力</strong>。把这个能力放到程序员的世界里，其实就是解决问题的能力。</p><p>往小了说，不管是数据结构与算法还是程序设计，其实底层很多原理或者思路都是源自于数学，所以很多大公司，在招人时，也会优先考虑数学专业的毕业生，这些人他们数学基础很好，学起编程也更容易上手。</p><p>所以我觉得，<strong>如果编程语言是血肉，数学的思想和知识就是灵魂</strong>。它可以帮助你选择合适的数据结构和算法、提升系统效率、并且赋予机器智慧。尤其是在大数据和智能化的时代，更是如此。</p><p>举个例子，比如我们小学就学到的余数，其实在编程的世界里也有很多应用。你经常用到的分页功能，根据记录的总条数和每页展示的条数，最后来计算整体的页数，这里面就会有余数的思想。再难一点，奇偶校验、循环冗余检验、散列函数、密码学等等都有余数相关的知识。</p><p>遇到这些问题的时候，你能说你不懂余数吗？我想你肯定懂，只是很多时候没有想到可以用余数的思想来解决相关问题罢了。那为什么没有想到呢？我认为，本质原因还是你没有数学思维，还是你数学的基础不够好。</p><p>所以，在这个专栏里，我想和你重点聊聊数学。当然，我知道数学博大精深，所以在一开始做专栏的时候，我就和极客时间团队一起定义好了专栏的边界，用一句话来说就是“<strong>只做程序员需要学的数学知识</strong>”。</p><p>首先，我梳理了编程中最常用的数学概念，由浅入深剖析它们的本质，希望能够帮你彻底掌握这些最基础、也最核心的数学知识。这其中包括那些你曾经熟悉的数学名词，比如数学归纳法、迭代法、递归、排列、组合等等。</p><p>其次，我把线性代数和概率统计中的抽象概念、公式、定理都由内而外地讲了出来，并分析它们在编程中的应用案例，帮助你提升编程的高阶能力。对于这些内容，我会从基本的概念入手，结合生活和工作中的实际案例，让你更轻松地理解概念的含义。</p><p>比如，对于朴素贝叶斯方法，我会从基本的随机现象、随机变量和概率分布等着手。随后，我会逐步深入，结合这些数学知识在编程算法中的应用进行展开。比方说，贝叶斯定理是什么，随机变量之间的独立性是什么，这些是如何构成朴素贝叶斯方法的，而最终朴素贝叶斯又是如何被运用在机器学习的分类算法之中的。</p><p><img src="https://static001.geekbang.org/resource/image/72/61/7288e9715163adb95f7047ae0c263a61.jpg" alt=""></p><p>这样的讲解路线，既能让你巩固基础的概念和知识，同时也能让你明白这些基础性的内容，对计算机编程和算法究竟意味着什么。</p><p>不过话又说回来，我认为数学理论和编程实践的结合其实是“决裂”的，所以学习数学的时候，你不能太功利，觉得今天学完明天就能用得着，我觉得这个学习思路可以用在其他课程上，但放在数学里绝对不合适。</p><p>因为数学知识总是比较抽象，特别是概率统计和线性代数中的概率、数据分布、矩阵、向量等概念。它们真的很不好理解，也需要我们花时间琢磨，但是对于高级一点的程序设计而言，特别是和数据相关的算法，这些概念就非常重要了，这可都是先人总结出来的经验。</p><p>如果你能够将这些基本概念和核心理论都搞懂、搞透，那么面对系统框架设计、性能优化、准确率提升这些难题的时候，你就能从更高的角度出发去解决问题，而不只是站在一个“熟练工”的视角，去增删改查。</p><p>最后，我希望数学能够成为你的一种基础能力，希望这个专栏能帮你用数学思维来分析问题和解决问题。数学思想是启发我们思维的中枢，如果你对数学有更好的理解，遇到问题的时候就能追本溯源，快、准、稳地找到解决方案。</p><p>伽利略曾经说过，“宇宙这本书是用数学语言写成的”，数学是人类科学进步的重要基础，所以，你我都要怀着敬畏的心态去学习、思考数学。同样，我还要求我自己的孩子一定要学好数学，因为我确信，这对于他未来的发展来说，至关重要。</p><p>编程的世界远不止条件和循环语句，程序员的人生应当是创造的舞台。我希望，通过这个专栏的学习，能够让你切实感受到数学这个古老学科的活力和魅力。</p><p>好了，说了这么多，相信你已经下定决心和我一起攻克数学。重新开始就要告别过去，你可以在留言区做个“<strong>数学学习复盘</strong>”，在之前的学习过程中，你的学习状况是怎样的？你遇到的最大困难是什么？现在，你最希望学到的是什么？</p><p>Now，你说，我听！</p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/3d/77/45e5e06d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">胡鹏</span>
+                            </div>
+                            <div class="bd">已经迫不及待了 ， 希望快快更新 <br> <br></div>
+                            <span class="time">2018-12-04 00:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">快了快了，12月7日开始，每周三篇^_^</p>
+                                <p class="reply-time">2018-12-04 03:57</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/a2/71/e5ab2ad0.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">嘿，luo</span>
+                            </div>
+                            <div class="bd">高中学文科，数学相对于理科容易点，大学没学过数学（专业不需要学），当然智商也不是很高，担心是否跟得上，学得懂 <br></div>
+                            <span class="time">2018-12-03 17:14</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/42/f7/45fd5e3b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">C家族的铁粉儿</span>
+                            </div>
+                            <div class="bd">黄申老师是真大神！！机器学习表面上是“写程序”，但实际上剥去外表，本质上就是在研究数学。这话太有道理。<br><br>最近开始学机器学习和深度学习，才发现数学真的很有用(捂脸)。大学里不管高数、线代还是概率论，基本都靠考前刷题，学完就忘，也一直感觉没什么用。然后一看机器学习的书，简直崩溃，可以说是贝叶斯主导的世界，还要考虑一些向量问题。<br><br>三个月前买了概率论和线性代数的经典大块头，厚厚的原书第几版来着，到现在只看过目录，，，太厚了，真看不下去。终于知道数学重要，但是学不进去的崩溃啊。。。。<br><br>希望大神能带我入门！<br><br> <br></div>
+                            <span class="time">2018-12-03 16:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">感谢支持！机器学习等算法里的数学知识，确实不太好懂，我从自己的理解出发，做了一些讲解，希望对你有所启发！</p>
+                                <p class="reply-time">2018-12-04 02:43</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/41/d6/84449200.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">李帅帅</span>
+                            </div>
+                            <div class="bd">我个人的一个拙见：“对于程序开发这个职业来说，数学和英语是非常重要” 这句话我一直记着！这是大一时一个老师说的！<br> 但是在整个大学过程中，在开发中有意识的去应用数学是极少的，可能偶尔会想想！<br> 在做项目的过程中，基本是搭积木的过程！库和自带函数就能满足需求！运用到的数学也是基本的初中数学！连高中的求导都没用过！<br> 那会做数学题时能想到多种解法，而且会去思考更好的解题方法！更重要的是很开心！<br> 目前我就是老师所说的普通程序员吧！或许自己选的职位与数学有点距离！更重要的是激情变少了！<br> <br>数学的重要性对于自己的技术成长是不言而喻的！<br><br>如果大家看到，我的一点建议就是：<br>要乐观与希望，坚持而不急躁！ <br></div>
+                            <span class="time">2018-12-04 21:39</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">最后两句总结的太好了👍</p>
+                                <p class="reply-time">2018-12-05 06:17</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/28/4f/a094d08a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">王锦啊</span>
+                            </div>
+                            <div class="bd">看到概率论和线性代数果断入手，上学的时候算了一堆，感觉就没明白过……这回希望能搞定，立个flag！ <br></div>
+                            <span class="time">2018-12-03 16:26</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/4c/d0/97e8ae87.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">披荆斩棘</span>
+                            </div>
+                            <div class="bd">我是做Android开发的，工作不到两年还是菜鸟一枚，虽然是计算机系毕业，但是基础还是很薄弱，尤其是有关数学方面的，最简单的进制甚至是字节还搞不清，今天看到博文里面讲color色值运算，一堆进制，矩阵就一脸懵逼，想学新东西，只要关于数学方面的基本就是看不懂，啥也不会，想去补补基础的数学知识，又不知道如何下手，希望老师能带我系统的复习一遍计算机数学知识，不求面面俱到，只求老师给我们指引一条通往高阶工程师的大道，如果老师能给我们这些刚入开发不久的小菜鸟们指导下学习规划那就更好了😁，很期待即将学习的东西，加油！！ <br></div>
+                            <span class="time">2018-12-03 21:06</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/52/7e/b5b59ae4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">上善若水（德水）</span>
+                            </div>
+                            <div class="bd">第一时间购买，数据结构和算法很重要，但是很多算法又离不开数学，数学是对现实问题的抽象，也就是解决不能靠直觉解决的问题，比如从1加到10， 我们直接加就可以，但是从1加到1亿，如果不抽像总结出规律和公式，是很难实际算正确的。希望作者能结合编程里简单的例子来应用这些知识点，这样我们很容易把这些数学知识记下来。同时能少点理论，多点图帮助理解。 <br></div>
+                            <span class="time">2018-12-03 18:32</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/cc/58/c593587c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">ahnselina</span>
+                            </div>
+                            <div class="bd">以前最大的问题是学了数学，不知道具体有什么用 <br></div>
+                            <span class="time">2018-12-03 20:52</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">有同感，有的时候我用了数学的思维都不自知……</p>
+                                <p class="reply-time">2018-12-04 04:04</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/54/9a/76c0af70.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">每天晒白牙</span>
+                            </div>
+                            <div class="bd">高考，考研都败在了数学上，工作了希望不要再败了 <br></div>
+                            <span class="time">2018-12-03 21:45</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/cc/20/22039d0a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">勇</span>
+                            </div>
+                            <div class="bd">希望老师能帮助我们提升数学公式的推导能力，引导普通程序员走进机器学习的大门！我发现大多数学机器学习者都是卡在公式看不懂，无法推导上，希望老师能帮我们答疑解惑！ <br></div>
+                            <span class="time">2018-12-03 17:43</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/96/8a/a7a75da9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">大胡子叔叔</span>
+                            </div>
+                            <div class="bd">高中的数学知识都忘的差不多了，有些信心不足。但我还是果断购买了专栏，给自己下个决心。 <br></div>
+                            <span class="time">2018-12-03 19:55</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/42/28/68eeb317.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">余衫酉</span>
+                            </div>
+                            <div class="bd">我是艺术系程序员，大学没有接触过数学。最近看机器学习的公式完全不明白。 <br></div>
+                            <span class="time">2018-12-03 19:46</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/78/8c/364c5ed7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">TomFish</span>
+                            </div>
+                            <div class="bd">目前水平约等于高中水平 <br></div>
+                            <span class="time">2018-12-03 19:39</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">georgesuper</span>
+                            </div>
+                            <div class="bd">黄老师两本大数据书都买过，有幸等到黄老师开专栏讲数学 <br></div>
+                            <span class="time">2018-12-03 18:01</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">感谢一贯的支持，之前的书籍涵盖的面比较广，这次专栏我会侧重数学部分，争取讲出不一样的精彩</p>
+                                <p class="reply-time">2018-12-04 04:53</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/4c/03/a088be52.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">寻水的🐟</span>
+                            </div>
+                            <div class="bd">希望老师多讲 学习人工智能的数学知识 <br></div>
+                            <span class="time">2018-12-11 12:54</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">人工智能的范畴比较大，我将的内容会涉及一些基础相关的</p>
+                                <p class="reply-time">2018-12-11 23:10</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/67/58/960b71b7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">蔡雪钧</span>
+                            </div>
+                            <div class="bd">也是想入坑机器学习准备开始学数学，无奈时间太零碎了，而且很多知识忘了，不知道从何开始 <br></div>
+                            <span class="time">2018-12-10 08:33</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/b5/33/2af9ccd1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">panda</span>
+                            </div>
+                            <div class="bd">老师  我毕业很多年了，数学忘的都差不多了（在学校里面也没感觉学得有多好）有点怕跟不上，有书博客之类补充阅读推荐吗 <br></div>
+                            <span class="time">2018-12-07 21:07</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这个专栏是由浅入深的，不用担心一开始就看不懂。至于后面比较难的部分，我也会给出一些参考资料</p>
+                                <p class="reply-time">2018-12-08 14:36</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/8b/d8/ef16fc1e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">leiyan</span>
+                            </div>
+                            <div class="bd">工作了十来年了，自打开始涉足机器学习，才发现原来大学里读得那么辛苦的高数原来可以这么用。如果当初老师能多举一些高数的应用，相信学起来会更加卖力。现在为了机器学习，又要重新学数学喽 <br></div>
+                            <span class="time">2018-12-06 23:11</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">可能当时机器学习还没有那么广泛的应用</p>
+                                <p class="reply-time">2018-12-07 03:25</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/e1/0b/a399af4d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">土土</span>
+                            </div>
+                            <div class="bd">我就想知道有产品来学的么。。 <br></div>
+                            <span class="time">2018-12-06 21:59</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我一直觉得吧，懂一些技术的产品经理是更有前途的😀</p>
+                                <p class="reply-time">2018-12-07 03:26</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/d4/f3/b73d8abf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">三木子</span>
+                            </div>
+                            <div class="bd">吴军老师将 1+1=2 作为人类文明的第一个公式！ <br></div>
+                            <span class="time">2018-12-05 21:22</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">很早就拜读了吴军老师的书，写得很赞，也给我了不少灵感</p>
+                                <p class="reply-time">2018-12-06 02:36</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

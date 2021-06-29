@@ -1,0 +1,203 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                34讲插件开发（三）：自定义语言支持
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/21/6d/219fef348221e4f837ad8471798dd86d.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>今天我们的主题是：<strong>自定义语言支持</strong>。在开始今天的内容前，我首先要说的就是 Don’t Panic，别害怕。自定义语言支持听起来可能有点复杂，而且似乎距我们的日常工作有些遥远。</p><p>其实不然，我们在工作中可能经常会自定义一些配置文件，甚至要自定义一些 DSL （Domain Specific Language），如果能够为这些特殊的内容和文件，提供必要的语言支持，那么工作效率就能够得到很大的提升。</p><p>另外，在 VS Code 中自定义语言支持，并不只是 TypeScript、Rust 等语言开发者的特权，任何人都可以借助 VS Code 的插件定义和 API 实现它们，甚至不需要书写 Language Server，也能达成一样的效果。</p><p>好了，闲话少说，让我们开始今天的内容。</p><h2>一、创建语言支持模板</h2><p>首先要做的就是创建一个语言支持相关的插件模板。这一次我们要做的选择是 “New Language Support”。</p><p><img src="https://static001.geekbang.org/resource/image/2f/62/2fcbeb4acea8fd28afe4d098bf8fe062.png" alt=""></p><center><span class="reference">New Language Support</span></center><p>接着，我们就遇到算是棘手的问题：脚手架工具让我们提供 tmLanguage。</p><p><img src="https://static001.geekbang.org/resource/image/0c/4f/0c1e47937f7144fd30c47333a0867b4f.png" alt=""></p><center><span class="reference">选择 Grammar</span></center><p>tmLanguage 就是 TextMate 创造的定义语言语法的文件，Sublime、Atom 以及 VS Code 都是继承自此。如果其他的编辑器已经支持了某个语言，你大可将其直接引入。这也是为什么 VS Code 插件 API 一经发布，很快大部分在 Textmate、Sublime 上支持的语言就在 VS Code 上得到了支持，都拥有不错的语法高亮。</p><!-- [[[read_end]]] --><p>关于如何书写 tmLanguage，TextMate 官方有一个简短但翔实的文档：<a href="https://macromates.com/manual/en/language_grammars">Language Grammars — TextMate 1.x Manual </a>。 这里我们不会对其展开，不过在我看来，它的精髓是通过书写正则表达式，对代码进行搜索匹配，最后给每个代码片段标注上类型（token type）。</p><p>面对这个问题，我们不妨直接按下回车，暂时不提供 tmLanguage。</p><p>在输入完插件名、描述信息和发布者信息后，yeoman 提了三个跟语言相关的问题：</p><p><img src="https://static001.geekbang.org/resource/image/89/6e/899cd8c6ca7e8d061a9af2b3ba60ee6e.png" alt=""></p><center><span class="reference">选择语言 id、姓名和文件后缀</span></center><p>第一个是 id ， id 是这门语言的唯一标识，最重要的就是不要和已经存在的主流语言产生冲突。第二个和第三个是语言的名字和后缀，这个就很好理解了。</p><p>最后脚手架工具问了一个跟 tmLanguage 有关的问题，就是指定这个语言的 scope name。我们依葫芦画瓢，就叫它 source.mylanguage 好了。</p><p><img src="https://static001.geekbang.org/resource/image/0b/f8/0b8bfcb7c73ea8f0abfe31f49c3d5bf8.png" alt=""></p><center><span class="reference">选择 Grammar root scope</span></center><p>回答了全部的问题后，我们就可以创建出模板了，下面我们来看看它的文件结构：</p><p><img src="https://static001.geekbang.org/resource/image/b4/40/b44efdcef473576acb3c354a09925d40.png" alt=""></p><center><span class="reference">语言插件文件结构</span></center><h2>二、Language Configuration</h2><p>通过 package.json 中 contributes 的值，我们可以发现这个插件注册两个信息。一个是 tmLanguage，用于语法高亮。另一个是 languages，也就是 mylanguage 这个语言的信息。它的信息包含以下几点：</p><ul>
+<li>id，也就是语言独一无二的标识；</li>
+<li>alias，也就是语言的名字、别称；</li>
+<li>extensions，就是这个语言相关文件的后缀名，设置了这个值之后，当我们打开一个后缀为 .mylanguage 的文件，VS Code 就知道把它识别成什么语言了；</li>
+<li>configurations，是这个语言的配置信息所在文件的相对地址。</li>
+</ul><p>前面三个都是我们使用 yeoman 创建插件时提供的，那么最后这个 language-configuration.json 是干什么的呢？下面我们一起来看看它的内容：</p><pre><code>{
+    &quot;comments&quot;: {
+        // symbol used for single line comment. Remove this entry if your language does not support line comments
+        &quot;lineComment&quot;: &quot;//&quot;,
+        // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
+        &quot;blockComment&quot;: [ &quot;/*&quot;, &quot;*/&quot; ]
+    },
+    // symbols used as brackets
+    &quot;brackets&quot;: [
+        [&quot;{&quot;, &quot;}&quot;],
+        [&quot;[&quot;, &quot;]&quot;],
+        [&quot;(&quot;, &quot;)&quot;]
+    ],
+    // symbols that are auto closed when typing
+    &quot;autoClosingPairs&quot;: [
+        [&quot;{&quot;, &quot;}&quot;],
+        [&quot;[&quot;, &quot;]&quot;],
+        [&quot;(&quot;, &quot;)&quot;],
+        [&quot;\&quot;&quot;, &quot;\&quot;&quot;],
+        [&quot;'&quot;, &quot;'&quot;]
+    ],
+    // symbols that that can be used to surround a selection
+    &quot;surroundingPairs&quot;: [
+        [&quot;{&quot;, &quot;}&quot;],
+        [&quot;[&quot;, &quot;]&quot;],
+        [&quot;(&quot;, &quot;)&quot;],
+        [&quot;\&quot;&quot;, &quot;\&quot;&quot;],
+        [&quot;'&quot;, &quot;'&quot;]
+    ]
+}
+</code></pre><p>这个设置已经为我们提供了一些语言相关信息的模板了。</p><h3>1、Comments</h3><p>第一个就是代码注释 comments 的格式。VS Code 允许我们提供两种不同格式的注释——<strong>单行注释</strong>和<strong>多行注释</strong>。提供了这两个信息后，当我们在编辑器里使用 Toggle Comment 命令时，VS Code 就会根据我们选择的内容的行数，来决定使用哪个格式的注释。</p><h3>2、Brackets</h3><p>第二个 brackets 就是指这个语言支持的括号类型。不过要注意的是，这里输入的括号类型，只支持单个字符，比如 Ruby 的 <code>def/end</code> 就不能在这里使用了。</p><h3>3、autoClosingPairs</h3><p>第三个 autoClosingPairs 是括号自动配对，比如说我们输入了 “{ ”，编辑器会自动替我们补上 “}” 了。autoClosingPairs 的书写格式有两种。第一种是类似于[“{”, “}”] 的数组形式，其中第一个元素就是开括号，第二个则是关括号。第二种书写格式则是输入一个对象，比如：</p><pre><code>{ &quot;open&quot;: &quot;/**&quot;, &quot;close&quot;: &quot; */&quot;, &quot;notIn&quot;: [&quot;string&quot;] }
+</code></pre><p>通过 open 和 close 属性来指定开关括号。这里的 “括号” 则是一个相对抽象的概念，并不一定真的是一对括号，比如在上面的例子里，open 属性的值是 <code>/<strong></code>，而 close 属性则是 <code>*/</code> ，那么当我们输入 <code>/</strong></code> 后，  编辑器就会立刻替你补上 <code>*/</code>。相信到这里你就明白了，我们是<strong>可以通过这个来实现注释的自动补全</strong>。</p><p>与此同时，这种写法还支持一个新的属性，叫做 notIn。它的意思是，<strong>在哪种代码里不进行自动补全</strong>。比如我们在写注释的时候，可能就不希望将引号自动补全，不然的话，当我们输入 it’s 这种单词时，输入完单引号后，如果编辑器自作主张帮忙输入了另一个单引号，可就多此一举了。此时，我们就可以通过 notIn 巧妙地避开了这一功能。</p><pre><code>{ &quot;open&quot;: &quot;'&quot;, &quot;close&quot;: &quot;'&quot;, &quot;notIn&quot;: [&quot;string&quot;, &quot;comment&quot;] }
+</code></pre><p>notIn 可以填入的值有 “string” 和 “comment”。</p><h3>4、surroundingPairs</h3><p>surroundingPairs 里的字符对，适用于对选中的字符串进行自动包裹。这句话是什么意思呢？比如当我们选中了 abc 这三个单词，然后按下双引号，此时，VS Code 就会把 abc 直接变成 “abc” ，而不是将 abc 替换成双引号。这个功能就叫做<strong>auto surround</strong>。我们可以通过这个属性来决定我们的语言里面，哪些字符对可以直接 auto surround。</p><h3>5、WordPattern、Folding和Indentation</h3><p>除了上面这几个外，在 language-configuration.json 里，我们还可以使用的属性有 WordPattern、Folding和Indentation。</p><p>这三个属性，分别定义了在这门语言中，<strong>一个单词长什么样、可被折叠的代码段的开头和结尾各长什么样以及如何根据一行的内容来控制缩进</strong>。下面我们可以看看它们的例子：</p><pre><code>&quot;folding&quot;: {
+    &quot;markers&quot;: {
+        &quot;start&quot;: &quot;^\\s*//#region&quot;,
+        &quot;end&quot;: &quot;^\\s*//#endregion&quot;
+    }
+},
+&quot;wordPattern&quot;: &quot;(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\#\\%\\^\\&amp;\\*\\(\\)\\-\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\&quot;\\,\\.\\&lt;\\&gt;\\/\\?\\s]+)&quot;,
+&quot;indentationRules&quot;: {
+  &quot;increaseIndentPattern&quot;: &quot;^\\s*((begin|class|(private|protected)\\s+def|def|else|elsif|ensure|for|if|module|rescue|unless|until|when|while|case)|([^#]*\\sdo\\b)|([^#]*=\\s*(case|if|unless)))\\b([^#\\{;]|(\&quot;|'|\/).*\\4)*(#.*)?$&quot;,
+  &quot;decreaseIndentPattern&quot;: &quot;^\\s*(<a href="[,">}\\]</a>]?\\s*(#|$)|\\.[a-zA-Z_]\\w*\\b)|(end|rescue|ensure|else|elsif|when)\\b)&quot;
+ }
+</code></pre><p>这三个属性的键（key）都还是很好理解的，不过要注意，它们的值有一个共同点，那就是它们都是正则表达式。VS Code 在读取了这些正则表达式后， 就会拿它们对代码进行匹配。比如当我们用鼠标双击代码，编辑器就会尝试着选中当前的单词，而这个单词就可以由 wordPattern 来决定；再比如默认情况下，VS Code 会认为空格符并不是单词的一部分，但是有些语言则不然，空格也能成为合法的变量名称，这种时候，我们就可以在 wordPattern 中添加空格符以达到这一目的。</p><p>folding 设置里的 start 和 end，相信读过专栏<a href="https://time.geekbang.org/column/article/40922">第11讲《一定要用好代码折叠、小地图和面包屑特性》</a>的话，你一定记得，我介绍过可以通过在代码中输入特殊注释的形式，告诉编辑器哪一行代码是可折叠代码的开始和结束，而这些语法规则，就是来自 folding 里的 start 和 end。</p><p>indentationRules 这条规则则是来自于 TextMate，感兴趣的同学可以阅读 TextMate 相关的文档 <a href="https://macromates.com/manual/en/appendix">Appendix — TextMate 1.x Manual</a>。</p><h2>三、Language Server Protocol</h2><p>上面提到的 language-configuration.json 和 tmLanguage，一个控制了语言的 Folding、括号、单词等基础信息，另一个控制了语言的语法 tokenization 规则。有了这两个文件，我们就可以获得语法高亮和基于文本的各类编辑器功能了。</p><p>不过，如果我们想在编辑器内提供一定的自动补全或者代码跳转，好像这两个文件也不够哇。</p><p>没错，要实现智能语言服务，光靠配置文件肯定是不行的，我们还要写一点代码。在<a href="https://time.geekbang.org/column/article/69768">插件开发第一讲</a>里，我提到过 VS Code 的插件架构，VS Code 允许我们实现一个 Language Server跑在独立的进程里，然后跟插件进行通讯，最后为 VS Code 提供智能语言服务。</p><p><img src="https://static001.geekbang.org/resource/image/87/9e/87761d4170897e7f9e5001a86e05199e.png" alt=""></p><p>不过，是不是只有实现 Language Server 这一种方法呢？</p><p>当然不是，VS Code 的插件 API 里包含了 Language Server Protocol 的这一套 API 。也就是说，我们可以通过书写简单的 JavaScript 代码，就可以为 VS Code 提供语言服务了，不理解 Language Server Protocol 也没关系，因为每个 API 都可以单独拿出来使用。</p><p>下面，我们就来看看，如何实现一个实现了自动补全的插件。我们还是沿用<a href="https://time.geekbang.org/column/article/69768">《插件开发（一）：why、how 和 what》</a>里的那个插件模板。这个插件只有一个代码文件，就是 extension.js 。</p><p><img src="https://static001.geekbang.org/resource/image/4c/8f/4cde294d09de7941b1b6e779771cff8f.png" alt=""></p><center><span class="reference">插件模板</span></center><p>不过这一次啊，我们不再是注册一个命令，而是要注册一个自动补全提供者（provider）。我们可以先输入 <code>vscode.languages.</code>，然后看看自动补全都提示了什么。</p><p><img src="https://static001.geekbang.org/resource/image/bd/0b/bd581497cd60f0d71b94056876adf30b.png" alt=""></p><center><span class="reference">vscode.languages下的 API</span></center><p>从上图中可以看到，languages 下能够注册各种不同的语言功能，比如自动补全（CompletionItemProvider）、代码跳转（DefinitionProvider）、格式化（DocumentFormattingEditProvider）等等。一个完整的 Language Server，其实就将这些方法通通实现，只不过 Language Server 是运行在另一个独立的进程里。而使用插件 API 时，我们选择只实现某些 API。今天，我们选择 CompletionItemProvider，</p><p><img src="https://static001.geekbang.org/resource/image/87/6e/8751ec2c5a62b57fcdc9a0686237946e.png" alt=""></p><center><span class="reference">选择 registerCompletionItemProvider</span></center><p><code>registerCompletionItemProvider</code> 需要提供三个参数。</p><p><strong>第一个是 DocumentSelector</strong>。通过这个参数，我们能够控制在哪些文件中提供自动补全。这个参数的类型，可以是字符串，也可以是 DocumentFilter。这里我们先试用 “plaintext”，之后我会介绍如何查看和使用其他类型。</p><p><strong>第二个就是我们的 CompletionItemProvider了</strong>。这个对象至少要拥有下面这个函数属性：</p><pre><code>provideCompletionItems(document: TextDocument, position: Position, token: CancellationToken, context: CompletionContext): ProviderResult&lt;CompletionItem[] | CompletionList&gt;;
+</code></pre><p>这个函数就是建议列表内容的来源了。VS Code 在调用这个函数时，会提供：当前的文档 document，光标所在的位置 position，用于监测用户取消建议操作的 CancellationToken，以及最后一个当前补全项的上下文 context。</p><p>有了 document 和 position，我们就能够分析全文代码并且推测当前光标处可能的建议选项了。而返回值可以是 <code>CompletionItem[]</code> 或者 <code>CompletionList</code> 。我们来看看它们的定义：</p><pre><code> export class CompletionItem {
+  label: string;
+  kind?: CompletionItemKind;
+  detail?: string;
+  documentation?: string | MarkdownString;
+  sortText?: string;
+  filterText?: string;
+  preselect?: boolean;
+  insertText?: string | SnippetString;
+  range?: Range;
+  commitCharacters?: string[];
+  keepWhitespace?: boolean;
+  additionalTextEdits?: TextEdit[];
+  command?: Command;
+  constructor(label: string, kind?: CompletionItemKind);
+ }
+
+ export class CompletionList {
+  isIncomplete?: boolean;
+  items: CompletionItem[];
+  constructor(items?: CompletionItem[], isIncomplete?: boolean);
+ }
+</code></pre><p>虽然 <code>CompletionItem</code> 的属性非常多，但实际上除了 label 以外，其他都是 optional 的。label 就是这个建议项的名字，用于建议列表里的显示。不过，除了 label，我们还必须告诉 VS Code，当用户从建议列表里选择了这个建议项之后，按下回车，我们该如何修改光标处的代码。这时候我们就要使用 insertText 和 range 这两个属性了，它们决定了将哪段代码替换成什么新的文本。</p><p><strong><code>registerCompletionItemProvider</code> 的第三个属性，就是 triggerCharacters</strong>。这个属性决定了，当用户按下哪个字符之后，编辑器就应该立刻询问 CompletionItemProvider 以提供自动补全建议。比如说，我们可以只在用户按下 . 和 ( 时触发自动补全，那么这里我们要输入的就是 [‘.’, ‘(’]</p><p>讲了这么多 API 的用途，下面我们就来将插件运行起来看看是什么样。现在的 extension.js 内容如下：</p><pre><code>const vscode = require('vscode');
+
+function activate(context) {
+    vscode.languages.registerCompletionItemProvider('plaintext', {
+        provideCompletionItems: (document, position) =&gt; {
+            return [
+                {
+                    label: 'mySuggestion',
+                    insertText: 'mySuggestion'
+                }
+            ]
+        }
+    }, ['.'])
+}
+exports.activate = activate;
+
+function deactivate() {
+}
+exports.deactivate = deactivate;
+</code></pre><p>然后，我们需要将 package.json 里的 activationEvents 改成 <code>*</code>，</p><pre><code>    &quot;activationEvents&quot;: [
+        &quot;*&quot;
+    ],
+</code></pre><p>F5 启动插件运行后，我们打开一个纯文本，然后输入 <code>this.</code>， 当我们输入 <code>.</code> 之后，我们就能立刻看到了建议列表。</p><p><img src="https://static001.geekbang.org/resource/image/ff/27/fff8f3ceaea0704d1f2c96480492e427.gif" alt=""></p><center><span class="reference">调试代码，然后输入 this. 获得自动补全</span></center><p>然后我们按下回车，插件提供的建议就被插入到编辑器里了。</p><h2>四、如何查询 API</h2><p>到这里，我们就成功地将自动补全的 API 运行起来了。你可能要问了，“我对 VS Code 的 API 不熟悉啊，怎么知道有哪个 API 可以使用，然后它有哪些函数可以使用，参数又该是什么类型呢？”</p><p>还是使用上面的样例代码，当你将光标移动到 <code>vscode.languages</code>上时，按下 F12，VS Code 就立刻跳转到了 VS Code 插件 API 的 typings 文件里了。这个文件里，就是所有插件 API 的定义了。</p><p><img src="https://static001.geekbang.org/resource/image/98/bb/98c2a44befac8d9e8f66075894a8b6bb.gif" alt=""></p><center><span class="reference">跳转到 VS Code 插件 API 的定义文件</span></center><p>如果你是在 registerCompletionItemProvider 上按下 F12，则是直接跳转到这个 API 的定义处；接着你可以通过跳转定义命令（F12），一个个查询每个类型。</p><p><img src="https://static001.geekbang.org/resource/image/e4/41/e4837aad17755022fd6d9c0687fd0c41.gif" alt=""></p><center><span class="reference">跳转到 registerCompletionItemProvider API 的定义处</span></center><p>VS Code 的插件 API 太多了，很多我自己都不熟悉，不过有了这个 typings 文件，我不离开 VS Code，就能够了解到它们各自是怎么使用的。</p><h2>小结</h2><p>以上就是今天内容的全部了。我介绍了如何通过 language configuration 定义一门语言的基础信息，同时介绍了如何使用 VS Code 的基础 API 来提供自动补全。关于如何实现更多的智能语言功能，相信你可以通过 vscode.languages 下的各个 API 得到答案。</p><hr></hr><p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/fb/51/870a6fcb.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Trust me ҉҉҉҉҉҉҉❀</span>
+                            </div>
+                            <div class="bd">楼上那哥们怎么没法离线安装， 拷贝~&#47;.vscode插件即可 <br></div>
+                            <span class="time">2018-11-30 17:55</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/21/57/ee02ef41.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">大龄小学生</span>
+                            </div>
+                            <div class="bd">老师，用vscode最坑的是没法离线安插件。 <br></div>
+                            <span class="time">2018-11-29 21:52</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

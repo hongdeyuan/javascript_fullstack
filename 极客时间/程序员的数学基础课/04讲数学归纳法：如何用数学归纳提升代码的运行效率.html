@@ -1,0 +1,468 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                04讲数学归纳法：如何用数学归纳提升代码的运行效率
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/fc/b1/fc32016d1f5e2d3e387bbce613fd36b1.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>上次我们聊了迭代法及其应用，并用编程实现了几个小例子。不过你知道吗，对于某些迭代问题，我们其实可以避免一步步的计算，直接<strong>从理论上证明某个结论</strong>，节约大量的计算资源和时间，这就是我们今天要说的<strong>数学归纳法</strong>。</p><p>平时我们谈的“归纳”，是一种从经验事实中找出普遍特征的认知方法。比如，人们在观察了各种各样动物之后，通过它们的外观、行为特征、生活习性等得出某种结论，来区分哪些是鸟、哪些是猫等等。比如我这里列出的几个动物的例子。</p><p><img src="https://static001.geekbang.org/resource/image/f6/37/f606627d96040653c5eeca1541788a37.jpg" alt=""></p><p>通过上面的表格，我们可以进行归纳，并得出这样的结论：</p><ul>
+<li>
+<p>如果一个动物，身上长羽毛并且会飞，那么就是属于鸟；</p>
+</li>
+<li>
+<p>如果一个动物，身上长绒毛、不会飞、而且吃小鱼和老鼠，那么就属于猫。</p>
+</li>
+</ul><p>通过观察$5$个动物样本的$3$个特征，从而得到某种动物应该具有何种特征，这种方法就是我们平时所提到的归纳法。</p><p>我们日常生活中所说的这种归纳法和数学归纳法是不一样的，它们究竟有什么区别呢？具体数学归纳法可以做什么呢？我们接着上一节舍罕王赏麦的故事继续说。</p><h2>什么是数学归纳法？</h2><p>上节我们提到，在棋盘上放麦粒的规则是，第一格放一粒，第二格放两粒，以此类推，每一小格内都比前一小格多一倍的麦子，直至放满$64$个格子。</p><!-- [[[read_end]]] --><p>我们假想一下自己穿越到了古印度，正站在国王的身边，看着这个棋盘，你发现第$1$格到第$8$格的麦子数分别是：$1、2、4、8、16、32、64、128$。这个时候，国王想知道总共需要多少粒麦子。我们小时候都玩过“找规律”，于是，我发现了这么一个规律，你看看是不是这样？</p><p><img src="https://static001.geekbang.org/resource/image/8e/8c/8eba65a8d57d5cc84cb6ea4dd20ba68c.jpg" alt=""></p><p>根据这个观察，我们是不是可以大胆假设，前$n$个格子的麦粒总数就是$2^{n}-1$ 呢？如果这个假设成立，那么填满64格需要的麦粒总数，就是$1+2+2^{2}+2^{3}+2^{4}+……＋ 2^{63}$<br>
+$＝2^{64}-1＝18446744073709551615$。</p><p>这个假设是否成立，我们还有待验证。但是对于类似这种无穷数列的问题，我们通常可以采用<strong>数学归纳法</strong>（Mathematical Induction）来证明。</p><p>在数论中，数学归纳法用来证明任意一个给定的情形都是正确的，也就是说，第一个、第二个、第三个，一直到所有情形，概不例外。</p><p>数学归纳法的一般步骤是这样的：</p><ul>
+<li>
+<p><strong>证明基本情况（通常是$n=1$的时候）是否成立</strong><strong>；</strong></p>
+</li>
+<li>
+<p><strong>假设$n=k-1$成立，再证明$n=k$也是成立的</strong><strong>（$k$为任意大于$1$的自然数）</strong>。</p>
+</li>
+</ul><p>只要学过数学，我想你对这个步骤都不陌生。但是，现在你需要牢记这个步骤，然后我们用这个步骤来证明下开头的例子。</p><p>为了让你更好地理解，我将原有的命题分为两个子命题来证明。第一个子命题是，第$n$个棋格放的麦粒数为$2^{n-1}$。第二个子命题是，前$n$个棋格放的麦粒数总和为$2^{n}-1$。</p><p>首先，我们来证明第一个子命题。</p><ul>
+<li>
+<p>基本情况：我们已经验证了$n=1$的时候，第一格内的麦粒数为$1$，和$2^{1-1}$相等。因此，命题在$k=1$的时候成立。</p>
+</li>
+<li>
+<p>假设第$k-1$格的麦粒数为$2^{k-2}$。那么第$k$格的麦粒数为第$k-1$格的$2$倍，也就是$2^{k - 2}*2=2^{k-1}$。因此，如果命题在$k=n-1$的时候成立，那么在$k=n$的时候也成立。</p>
+</li>
+</ul><p>所以，第一个子命题成立。在这个基础之上，我再来证明第二个子命题。</p><ul>
+<li>
+<p>基本情况：我们已经验证了$n=1$的时候，所有格子的麦粒总数为$1$。因此命题在$k=1$的时候成立。</p>
+</li>
+<li>
+<p>假设前$k-1$格的麦粒总数为$2^{k-1}-1$，基于前一个命题的结论，第k格的麦粒数为$2^{k-1}$。那么前$k$格的麦粒总数为$(2^{k-1}-1)+(2^{k-1})=2*2^{k-1}-1=2^{k}-1$。因此，如果命题在$k=n-1$的时候成立，那么在$k=n$的时候也成立。</p>
+</li>
+</ul><p>说到这里，我已经证明了这两个命题都是成立的。<strong>和使用迭代法的计算相比，数学归纳法最大的特点就在于“归纳”二字。它已经总结出了规律。只要我们能够证明这个规律是正确的，就没有必要进行逐步的推算，可以节省很多时间和资源。</strong></p><p>说到这里，我们也可以看出，数学归纳法中的“归纳”是指的从第一步正确，第二步正确，第三步正确，一直推导到最后一步是正确的。这就像多米诺骨牌，只要确保第一张牌倒下，而每张牌的倒下又能导致下一张牌的倒下，那么所有的骨牌都会倒下。从这里，你也能看出来，这和开篇提到的广义归纳法是不同的。数学归纳法并不是通过经验或样本的观察，总结出事物的普遍特征和规律。</p><p>好了，对数学归纳法的概念，我想你现在已经理解了。这里，我对上一节中有关麦粒的代码稍作修改，增加了一点代码来使用数学归纳法的结论，并和迭代法的实现进行了比较，你可以看看哪种方法耗时更长。</p><pre><code>public static void main(String[] args) {
+  
+  int grid = 63;
+  long start, end = 0;
+  start = System.currentTimeMillis();
+  System.out.println(String.format(&quot;舍罕王给了这么多粒：%d&quot;, Lesson3_1.getNumberOfWheat(grid)));
+  end = System.currentTimeMillis();
+  System.out.println(String.format(&quot;耗时%d毫秒&quot;, (end - start)));
+  
+  start = System.currentTimeMillis();
+  System.out.println(String.format(&quot;舍罕王给了这么多粒：%d&quot;, (long)(Math.pow(2, grid)) - 1));
+  end = System.currentTimeMillis();
+  System.out.println(String.format(&quot;耗时%d毫秒&quot;, (end - start)));
+  
+ }
+</code></pre><p>在我的电脑上，这段代码运行的结果是：舍罕王给了$9223372036854775807$粒，耗时$4$毫秒。舍罕王给了这么多粒：$9223372036854775806$，耗时$0$毫秒。</p><p>你可能已经发现，当grid=$63$时，结果差了$1$个。这个是由于Math.pow()函数计算精度导致的误差。正确的结果应该是$9223372036854775807$。不过，基于数学归纳结论的计算明显在耗时上占有优势。虽然在我的笔记本电脑上只有4毫秒的差距，但是在生产项目的实践中，这种点点滴滴的性能差距都有可能累积成明显的问题。</p><h2>递归调用和数学归纳的逻辑是一样的？</h2><p>我们不仅可以使用数学归纳法从理论上指导编程，还可以使用编程来模拟数学归纳法的证明。如果你仔细观察一下数学归纳法的证明过程，会不会觉得和函数的<strong>递归调用</strong>很像呢？</p><p>这里我通过总麦粒数的命题来示范一下。首先，我们要把这个命题的数学归纳证明，转换成一段伪代码，这个过程需要经过这样两步：</p><p>第一步，如果$n$为$1$，那么我们就判断麦粒总数是否为$2^{1-1}=1$。同时，返回当前棋格的麦粒数，以及从第$1$格到当前棋格的麦粒总数。</p><p>第二步，如果$n$为$k-1$的时候成立，那么判断$n$为$k$的时候是否也成立。此时的判断依赖于前一格$k-1$的麦粒数、第$1$格到$k-1$格的麦粒总数。这也是上一步我们所返回的两个值。</p><p>你应该看出来了，这两步分别对应了数学归纳法的两种情况。在数学归纳法的第二种情况下，我们只能假设$n=k-1$的时候命题成立。但是，在代码的实现中，我们可以将伪代码的第二步转为函数的递归（嵌套）调用，直到被调用的函数回退到$n=1$的情况。然后，被调用的函数逐步返回$k-1$时命题是否成立。</p><p>如果要写成具体的函数，就类似下面这样：</p><pre><code>class Result {
+ public long wheatNum = 0;  // 当前格的麦粒数
+ public long wheatTotalNum = 0;  // 目前为止麦粒的总数
+}
+
+public class Lesson4_2 {
+ 
+ /**
+    * @Description: 使用函数的递归（嵌套）调用，进行数学归纳法证明
+    * @param k-放到第几格，result-保存当前格子的麦粒数和麦粒总数
+    * @return boolean-放到第k格时是否成立
+    */
+ 
+    public static boolean prove(int k, Result result) {
+     
+     // 证明n = 1时，命题是否成立
+     if (k == 1) {
+      if ((Math.pow(2, 1) - 1) == 1) {
+       result.wheatNum = 1;
+       result.wheatTotalNum = 1;
+       return true;
+      } else return false;
+     }
+     // 如果n = (k-1)时命题成立，证明n = k时命题是否成立
+     else {
+      
+      boolean proveOfPreviousOne = prove(k - 1, result);
+      result.wheatNum *= 2;
+      result.wheatTotalNum += result.wheatNum;
+      boolean proveOfCurrentOne = false;
+      if (result.wheatTotalNum == (Math.pow(2, k) - 1)) proveOfCurrentOne = true; 
+      
+      if (proveOfPreviousOne &amp;&amp; proveOfCurrentOne) return true;
+      else return false;
+      
+     }
+     
+    }
+
+}
+
+</code></pre><p>其中，类Result用于保留每一格的麦粒数，以及目前为止的麦粒总数。这个代码递归调用了函数prove(int, Result)。</p><p>从这个例子中，我们可以看出来，<strong>递归调用的代码和数学归纳法的逻辑是一致的</strong>。一旦你理解了数学归纳法，就很容易理解递归调用了。只要数学归纳证明的逻辑是对的，递归调用的逻辑就是对的，我们没有必要纠结递归函数是如何嵌套调用和返回的。</p><p>不过，和数学归纳证明稍有不同的是，递归编程的代码需要返回若干的变量，来传递$k-1$的状态到$k$。这里，我使用类Result来实现这一点。</p><p>这里是一段测试的代码。</p><pre><code>public static void main(String[] args) {
+  
+  int grid = 63;
+  
+  Result result = new Result();
+  System.out.println(Lesson4_2.prove(grid, result));
+  
+ }
+
+</code></pre><p>我们最多测试到$63$。因为如果测试到第$64$格，麦粒总数就会溢出Java的long型数据。</p><p>你可以自己分析一下函数的调用和返回。我这里列出了一开始嵌套调用和到递归结束并开始返回值得的几个状态：</p><p><img src="https://static001.geekbang.org/resource/image/02/2d/02dfa54d6968676b90ac757a0711342d.png" alt=""></p><p>从这个图可以看出，函数从$k=63$开始调用，然后调用$k-1$，也就是$62$，一直到$k=1$的时候，嵌套调用结束，$k=1$的函数体开始返回值给$k=2$的函数体，一直到$k=63$的函数体。从$k=63, 62, …, 2, 1$的嵌套调用过程，其实就是体现了数学归纳法的核心思想，我把它称为<strong>逆向递推</strong>。而从$k=1, 2, …, 62, 63$的值返回过程，和上一篇中基于循环的迭代是一致的，我把它称为<strong>正向递推</strong>。</p><h2>小结</h2><p>今天，我介绍了一个编程中非常重要的数学概念：数学归纳法。</p><p>上一节我讲了迭代法是如何通过重复的步骤进行计算或者查询的。与此不同的是，数学归纳法在理论上证明了命题是否成立，而无需迭代那样反复计算，因此可以帮助我们节约大量的资源，并大幅地提升系统的性能。</p><p>数学归纳法实现的运行时间几乎为$0$。不过，数学归纳法需要我们能做出合理的命题假设，然后才能进行证明。虽然很多时候要做这点比较难，确实也没什么捷径。你就是要多做题，多去看别人是怎么解题的，自己去积累经验。</p><p>最后，我通过函数的递归调用，模拟了数学归纳法的证明过程。如果你细心的话，会发现递归的函数值返回实现了从$k=1$开始到$k=n$的迭代。说到这里，你可能会好奇：既然递归最后返回值的过程和基于循环的迭代是一致，那为什么还需要使用递归的方法呢？下一节，我们继续聊这个问题。</p><p><img src="https://static001.geekbang.org/resource/image/0d/81/0dc6eaf8597eccad3ee4411e14acf081.jpg" alt=""></p><h2>思考题</h2><p>在你日常工作的项目中，什么地方用到了数学归纳法来提升代码的运行效率？如果没有遇到过，你可以尝试做做实验，看看是否有提升？</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/d4/c2/910d231e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">oddrock</span>
+                            </div>
+                            <div class="bd">递归把计算交给计算机，归纳把计算交给人，前者是拿计算机的计算成本换人的时间，后者是拿人的时间换计算机的计算成本 <br></div>
+                            <span class="time">2018-12-18 08:18</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">精辟的总结👍</p>
+                                <p class="reply-time">2018-12-18 09:15</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">cafu_chino</span>
+                            </div>
+                            <div class="bd">老师下次可以提供Python的代码示例吗？对Java的使用不是很熟练<br> <br></div>
+                            <span class="time">2018-12-17 15:01</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">可以，后期会整理出来</p>
+                                <p class="reply-time">2018-12-17 23:09</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/f0/89/130a91a6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Zoctopus</span>
+                            </div>
+                            <div class="bd">项目中还没碰到，但在以前做编程题时经常碰到找规律的问题，这时候只需抽象出一个公式即可。<br>另外可否给老师提个建议，就是在github上建一个仓库，这样我们可以fork下来，用自己熟悉的编程语言把老师讲的思路写进代码里push上去，方便大家相互学习 ^_^ <br></div>
+                            <span class="time">2018-12-17 19:48</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这是个好建议，我先问下是否版权问题</p>
+                                <p class="reply-time">2018-12-17 22:51</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6d/7f/e1c189c7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈诚</span>
+                            </div>
+                            <div class="bd">我觉得加深学习数学效果的方式，就是自己实现一遍，我这里用C语言实现了一下递归求麦粒总数的问题以求抛砖引玉<br>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br><br>struct result {<br>	long cur_grid_wheat;<br>	long sum_of_wheat;<br>};<br><br>struct result wheat(int grid)<br>{<br>	struct result rst;<br><br>	if (grid == 1) {<br>		rst.cur_grid_wheat = 1;<br>		rst.sum_of_wheat = 1;<br>	} else {<br>		struct result last_rst;<br>		last_rst = wheat(grid - 1);<br>		rst.cur_grid_wheat = last_rst.cur_grid_wheat * 2;<br>		rst.sum_of_wheat = last_rst.sum_of_wheat + rst.cur_grid_wheat;<br>	}<br><br>	return rst;<br>}<br><br>int main(int argc, char *argv[])<br>{<br>	struct result rst;<br>	int grid_index = 0;<br><br>	if (argc != 2) {<br>		printf(&quot;Usage: %s grid_index\n&quot;, argv[0]);<br>		return -1;<br>	}<br>	grid_index = atoi(argv[1]);<br><br>	rst = wheat(grid_index);<br><br>	printf(&quot;grid_index: %d\ncur_grid_wheat: %ld\nsum_of_wheat: %ld\n&quot;,<br>		grid_index, rst.cur_grid_wheat, rst.sum_of_wheat);<br><br>	return 0;<br>}<br><br> <br></div>
+                            <span class="time">2018-12-19 08:26</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/99/0f/96ae2695.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">!不求甚解</span>
+                            </div>
+                            <div class="bd">我觉得看留言也是一种精进，以后多多看留言。 <br></div>
+                            <span class="time">2018-12-25 13:03</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6d/7f/e1c189c7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈诚</span>
+                            </div>
+                            <div class="bd">个人觉得有时候虽然用迭代和递归都能解决问题，但是使用递归时，由于有数学归纳法保证递归关系的正确性，所以只要专注于解决2个相邻层的关系就可以了，然后使用数学归纳法的基本情况作为递归出口。当然，在实际编程中，递归会增加函数调用栈的开销，也是要考虑的一方面 <br></div>
+                            <span class="time">2018-12-17 07:55</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/e9/0b/53bf91d3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">WL</span>
+                            </div>
+                            <div class="bd">老师我感觉递归和归纳法还是有些区别的, 递归是自顶向下的拆解问题, 直到终止条件后再一层层返回结果, 但是归纳法好像没有自顶向下拆解问题的这个环节. <br></div>
+                            <span class="time">2018-12-17 07:41</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/f2/aa/c04fda0e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">失火的夏天</span>
+                            </div>
+                            <div class="bd">个人觉得动态规划就是归纳法思想的处理，一个问题分解为多个字问题的最优解 <br></div>
+                            <span class="time">2018-12-17 07:27</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/3d/e1/5279ea2f.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">鱼鱼鱼培填</span>
+                            </div>
+                            <div class="bd">用Python实现数学归纳法，一开始使用math.pow()函数发现不对，Python中该函数会使用科学技术法导致结果出错<br>#-*- coding:UTF-8 -*-<br>class result(object):<br>	wheatNum = 0<br>	wheatTotalNum = 0<br><br>class getWheatTotalNum(object):<br>	&#39;&#39;&#39;<br>	函数说明：使用递归嵌套， 进行数学归纳法证明<br>	Param： k - 表示放到第几格   result - 表示当前格子的麦粒数<br>	Return: boolean - 放到第K格时是否成立<br>	&#39;&#39;&#39;<br>	def prove(self, k, result):<br>		if k == 1:<br>			if (2 ** 1 - 1) == 1:<br>				result.wheatNum = 1<br>				result.wheatTotalNum = 1<br>				return True<br>			else:<br>				return False <br><br>		else:<br>			proveOfPreviousOne = self.prove(k - 1, result)<br>			result.wheatNum *= 2<br>			result.wheatTotalNum += result.wheatNum<br>			proveOfCurrentOne = False<br>			if result.wheatTotalNum == (2 ** k - 1):<br>				proveOfCurrentOne = True<br>			if (proveOfPreviousOne &amp; proveOfCurrentOne):<br>				return True<br>			else:<br>				return False<br><br><br>if __name__ == &#39;__main__&#39;:<br>	grid = 64<br>	result = result()<br>	g = getWheatTotalNum()<br>	print(g.prove(grid, result)) <br></div>
+                            <span class="time">2018-12-19 23:35</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">研究了细节，很赞👍</p>
+                                <p class="reply-time">2018-12-20 01:24</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/91/78/ccd75c94.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">田野</span>
+                            </div>
+                            <div class="bd">关于这节课讲的内容在编程中具体的应用能这样理解不？  迭代法在实际应用中，如果迭代层次过深 ，会导致各种问题(耗时\内存占用等) ，遇到这种情况可以总结规律， 使用数学归纳法将其简化。(代码中不再使用迭代 使用数学归纳总结出来的结果) <br></div>
+                            <span class="time">2018-12-17 15:25</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的，特别是递归的实现比较耗资源</p>
+                                <p class="reply-time">2018-12-17 23:09</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/04/48/ef6082a5.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">mikukuma</span>
+                            </div>
+                            <div class="bd">数据归纳法通俗易懂的说法就是一个个经典的数学公式的证明。我们要去证明这个公式是否正确，需要根据两个步骤，1：n=1时，公式是否正确；2: 假设n = k-1成立，那么去证明n=k公式是成立的。就跟数学做证明题一样的思路。然后我们去做这些算法题的时候，就可以直接根据已经证明的公式，很快就能得到我们需要的答案。 <br></div>
+                            <span class="time">2018-12-17 11:29</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6b/13/683b4c5e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">未明。</span>
+                            </div>
+                            <div class="bd">数字全变成了math_progress_error了 <br></div>
+                            <span class="time">2018-12-17 08:37</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/77/7f/8ca84997.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">仁</span>
+                            </div>
+                            <div class="bd">老师~我没有学习JAVA，只学了C++和python。。。请问能否多发几种语言的代码哈 <br></div>
+                            <span class="time">2019-01-06 20:49</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">好的 后面我会统一加上</p>
+                                <p class="reply-time">2019-01-07 10:17</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/fa/fd/ec24cba7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">fcb的鱼</span>
+                            </div>
+                            <div class="bd">每节课后可以多留一些编程题，每节课就2个例子感觉不过瘾！ <br></div>
+                            <span class="time">2018-12-25 09:35</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/73/67/9250035c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">十指流玉</span>
+                            </div>
+                            <div class="bd">老师您好！如果有一些程序我们自己归纳出了规矩，那如何快速的应用到程序中呢，还是说程序中本身就有一些函数就是归纳法的体现？ <br></div>
+                            <span class="time">2018-12-25 08:54</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这里你说的“有一些程序我们自己归纳出了规律”，具体是指什么？</p>
+                                <p class="reply-time">2018-12-25 13:48</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/cf/f4/c1f41ff7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">吴...</span>
+                            </div>
+                            <div class="bd">老师，您讲这些数学知识的时候能不能更加深入一点，最好能够结合工程项目或者一些著名的库函数呢？ <br></div>
+                            <span class="time">2018-12-19 19:34</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">后面会结合更多实际的项目。至于你说的库函数，具体是指哪方面？能否举个例子？</p>
+                                <p class="reply-time">2018-12-19 22:51</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/8d/b7/326a90c4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">吾本糊涂</span>
+                            </div>
+                            <div class="bd">python中计算n的阶乘<br>def func(n):<br>　　if n == 0:<br>　　　　return 1<br>　　else:<br>　　　　return n * func(n-1)<br><br>n! = func(n)<br>Python3默认递归的深度不能超过100层<br>  <br></div>
+                            <span class="time">2018-12-17 13:52</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/18/d0/49b06424.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">qinggeouye</span>
+                            </div>
+                            <div class="bd">清理服务器的文件夹（包括文件），清理文件夹里的文件夹（包括文件）...<br>～(￣▽￣～)~ <br></div>
+                            <span class="time">2019-02-03 11:53</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对的，这就是递归的思想</p>
+                                <p class="reply-time">2019-02-04 01:21</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">sloth-yp</span>
+                            </div>
+                            <div class="bd">个人理解： 计算机实现递归的过程，其实还是一层层迭代。本文是利用了计算机的递归调用的方式，来证明了舍罕王这个特定问题中，用“数学归纳法”得出的公式的正确性。但是编程实践中，应该尽可能用数学归纳法来总结出简化的算法，来节约计算机的资源。 <br></div>
+                            <span class="time">2019-01-31 16:04</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的</p>
+                                <p class="reply-time">2019-02-01 01:33</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b3/26/cc28a05a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">悬炫</span>
+                            </div>
+                            <div class="bd">希望提供一下JavaScript的实现方式，或者像其他同学说的一样，提供一个仓库，让读者来贡献其他语言的实现方式，方便互相交流和学习 <br></div>
+                            <span class="time">2019-01-24 16:51</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">嗯，我们正在准备GitHub中，准备好了，及时通知大家</p>
+                                <p class="reply-time">2019-01-24 23:33</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

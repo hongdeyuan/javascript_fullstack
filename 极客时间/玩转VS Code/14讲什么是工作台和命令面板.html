@@ -1,0 +1,267 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                14讲什么是工作台和命令面板
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/0e/66/0e46bce2b61b3d363b1c6da4d38ded66.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>在专栏的第一部分，我已经简单地介绍了 VS Code 有哪些核心组件，比如欢迎界面、命令面板的基础使用，紧接着我们就一起深入研究了 VS Code 核心编辑器的使用和拓展。但是相信在你的日常工作中，可能早就在使用 VS Code 的其他组件了。</p>
+<p>那么今天，我们就一起从头开始，全面而系统地梳理一下 VS Code 的界面上都有哪些功能，以及它们都是怎么被组织起来的。</p>
+<h2>工作台</h2>
+<p>我们把 VS Code 的整个界面统称为<strong>工作台（Workbench）</strong>，它就像是木匠的工作桌，上面摆放着做木工活时需要的各式工具。一个好的匠人一定会精心摆置自己的工作台，把最需要的、频繁使用的工具放在最顺手的地方，并充分利用桌子的空间，但又不喧宾夺主。</p>
+<p>编程也是一样，除了使用核心的编辑器，我们也经常需要快速访问文件目录，使用终端运行一些脚本或者使用版本管理工具等等，因此我们就需要了解 VS Code 的工作台上都有哪些工具，它们是干什么的，以及工作时需要使用哪些才有可能事半功倍。</p>
+<p>所以，从今天开始，我将和你一起探索 VS Code 工作区里的各个组件。</p>
+<p>首先，你打开欢迎界面，并且点击界面右侧的“界面概览”。</p>
+<p><img src="https://static001.geekbang.org/resource/image/01/12/0112d3d26cbda8fc602745e1f89c9012.png" alt="" /></p>
+<center><span class="reference">打开“界面概览”</span></center>
+<p>这时你能够看到，在默认设置下 VS Code 的左侧侧边栏有五个组件，它们分别是：</p><!-- [[[read_end]]] -->
+<ol>
+<li>文件资源管理器，主要用于浏览和管理文件和文件夹。</li>
+<li>跨文件搜索，用于在当前文件夹内进行跨文件的搜索。</li>
+<li>源代码管理，用于对当前文件夹下的代码进行版本管理，默认 VS Code 支持的版本管理软件是 Git。</li>
+<li>启动和调试，用于对当前文件夹下的项目进行运行和调试。</li>
+<li>扩展管理，用于下载和管理 VS Code 里的插件。</li>
+</ol>
+<p>如果有哪个功能是你不需要的话，你可以在 VS Code 的最左侧，右键打开上下文菜单，然后将那个组件隐藏。你还可以拖动这几个小图标，然后将这些功能按照你需要的方式排序。</p>
+<p><img src="https://static001.geekbang.org/resource/image/54/6d/54a5cf9de7ebdbc7b9de9544ab93096d.png" alt="" /></p>
+<center><span class="reference">管理视图的顺序和是否隐藏</span></center>
+<p>在侧边栏的最下角还有一个齿轮形状的按钮，它提供了一些 VS Code 系统管理常用的快捷键，点击打开后，你可以看到命令面板、设置、键盘快捷方式、管理扩展等等一系列快速入口。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d0/be/d0880c34f982a9b0547fcabcdb7cb8be.png" alt="" /></p>
+<center><span class="reference">最左下角的快速入口</span></center>
+<p>界面的最下面一行则是状态栏，顾名思义，这个组件的作用就是将当前文件夹、编辑器状态、代码版本、代码错误等的简略讯息呈现给你。除此之外，很多插件也会选择将信息呈现在状态栏上。</p>
+<p><img src="https://static001.geekbang.org/resource/image/e3/c5/e327d39c2ffaea96de6ef323c5e874c5.png" alt="" /></p>
+<center><span class="reference">最下面的状态栏讯息</span></center>
+<p>不过“界面概览”并没有覆盖所有的组件，其中一个非常重要的部分就是面板（Panel），你可以在命令面板中执行“切换面板”命令来打开它。</p>
+<p><img src="https://static001.geekbang.org/resource/image/6b/8a/6b04d7dfc6a55e460698c5fa74464f8a.png" alt="" /></p>
+<center><span class="reference">面板</span></center>
+<p>打开后，你会看到面板的四个组件：<strong>问题面板、输出面板、调试控制台</strong>和<strong>终端</strong>。</p>
+<p><strong>问题面板</strong>（Problems Panel）的作用是展示当前文件夹下代码里的所有问题和警告，比如你的代码有语法错误、格式问题、拼写错误等，这些问题和警告都会被收集在这个面板中。你可以通过这个面板浏览这些问题并且访问对应的文件。</p>
+<p><strong>输出面板</strong>（Output Panel）的存在是我特别喜欢 VS Code 的一个原因。GUI 的很大一个作用就是将很多命令行工具以一个更易用的形式呈现给用户，但是当你按下一个按钮后究竟发生了什么，你往往是不清楚的。如果这个按钮所对应的命令执行失败了，你估计更是一头雾水，不知如何是好。</p>
+<p>对于这样的问题，VS Code 的答案是避免做一个黑盒，相信用户有能力且有必要了解自己在使用的工具。输出面板的作用就是将核心命令和插件的运行状态和结果输出来，比如你使用 Git 来管理你的代码版本，你的每个 UI 上的版本操作，你都能在输出面板里看到这个操作对应的 Git 命令行以及它的运行结果。这样即使意外发生了， VS Code 无法完成指定的 Git 命令，你依然可以通过阅读输出面板找到问题所在，然后自行修复。</p>
+<p><strong>调试控制台</strong>主要是在调试代码时使用，之后我会有专门的一讲来介绍。</p>
+<p><strong>终端</strong>是开发工作中不可或缺的一个工具，VS Code 则更进一步，把终端直接集成了进来。集成终端的存在，使得 VS Code 保持轻量级成为了可能性。</p>
+<p>这里我继续使用 Git 这个例子，Git 的命令行是极其丰富的，但我估计没有人敢声称自己熟练掌握每条命令。VS Code 的版本管理 UI 不可能把所有功能都实现了然后呈现给用户，而且对于绝大多数人而言，大部分时间接触的可能就是几条或者十几条 Git 命令，VS Code 只为这些命令提供 UI。</p>
+<p>但如果你对其他功能有需要，那么你可以打开集成终端，使用 Git 命令行进行操作。这里你可能会问，为什么不直接使用系统自带的终端呢？请允许我卖个关子，我会在之后跟你探讨。</p>
+<p>剩下还有两个 UI 组件。第一个是菜单栏，这个没有太多可以讲的，VS Code 把常用的命令按功能进行归类放到菜单中，这样你就可以使用操作系统支持的快捷方式进行搜索和访问。</p>
+<p><img src="https://static001.geekbang.org/resource/image/f1/cc/f176d7e0e644851fa6714ba44a7bfccc.png" alt="" /></p>
+<center><span class="reference">搜索和访问菜单栏</span></center>
+<p>第二个 UI 组件就是我们接下来要讲述的命令面板了。</p>
+<h2>命令面板</h2>
+<p>命令面板，我们在之前的学习过程中已经多次使用了。命令面板是一个非常特殊的 UI 组件，假如说你从来没有用过 VS Code 或者 Sublime 之类的编辑器，第一次打开 VS Code 后，你可以无障碍地使用资源管理器、搜索等组件，因为它们是直接可见的。</p>
+<p>但是没有任何提示的话，你可能很长时间都不会发现命令面板。虽然它的可发现性（discoverability）不太好，但也是 VS Code 最重要的组件之一。在我看来，它是一个基于文本的交互界面。怎么理解这句话呢？你可以先通过快捷键 F1 或者 Cmd + Shift + P 打开命令面板，打开之后，命令面板的输入框里已经有一个字符：&gt;（大于号） 。</p>
+<p><img src="https://static001.geekbang.org/resource/image/0a/63/0a4ad887f9074a74fb6f18e2e19a5b63.png" alt="" /></p>
+<center><span class="reference">F1 或者 Cmd + Shift + P打开命令面板</span></center>
+<p>你可能会好奇，这个大于号是干嘛用的呢？你可以回想一下在前面“编辑器 —&gt; 快速代码跳转”文章里介绍的快速访问文件中的符号 ，当你按下 Cmd + Shift + O （Windows 上是 Ctrl + Shift + O）打开了命令面板，控制面板显示了当前文件里的所有符号，此时输入框里的第一个字符是 @。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d2/63/d2772024df4cdfdf3b97b1897a8ae363.png" alt="" /></p>
+<center><span class="reference">Cmd + Shift + O打开命令面板快速访问符号</span></center>
+<p>看到这里你应该猜到了，命令面板是根据输入框里的第一个字符来决定提供什么功能的。你甚至不难猜出 VS Code 是怎么实现命令面板的，VS Code 会先处理输入框里的文本，然后根据第一个字符来选择不同的处理方案。</p>
+<p>如果第一个符号是&gt;（大于号），那么就提供所有的命令。当你继续输入字符时，VS Code 就会在所有命令里进行搜索；如果第一个字符是@，那么就扫描当前文件，提供所有的符号。</p>
+<p>那么命令面板里一共支持多少不同的功能呢？这里你可以把输入框里的所有字符全部删掉，看看 VS Code 给你的提示。</p>
+<p><img src="https://static001.geekbang.org/resource/image/8b/52/8bc0f152c5980cb52e43978fe9cb8152.png" alt="" /></p>
+<center><span class="reference">删除输入框里的所有字符</span></center>
+<p>当输入框里没有任何的字符时，命令面板提供的功能是访问最近使用的文件。同时你会在输入框内看到一段提示文字：键入 “？”从此处获取有关可进行的操作的帮助。接下来，你就依照这个提示，输入问号。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d5/cb/d54429471ec8bf6ee90432c4a0c72fcb.png" alt="" /></p>
+<center><span class="reference">在输入框里输入问号</span></center>
+<p>紧接着你就可以看到十几条选项，分别代表着你能在命令面板里使用的不同的功能。虽然有十几条选项，但是记住它们并不是太难。</p>
+<p>首先是几个<strong>符号</strong>：</p>
+<ol>
+<li><code>&gt;</code>（大于号） ，用于显示所有的命令。</li>
+<li>@ ，用于显示和跳转文件中的“符号”（Symbols），在@符号后添加冒号：则可以把符号们按类别归类。</li>
+<li><code>#</code>号，用于显示和跳转工作区中的“符号”（Symbols）。</li>
+<li>：（冒号）， 用于跳转到当前文件中的某一行。</li>
+</ol>
+<p>这几个符号所对应的命令我们在之前的文章中已经研究过，比较好记。输入这些符号后，继续输入相应内容就可以对结果进行搜索了。</p>
+<p>剩下的都是<strong>英文单词或者缩写</strong>，知道它们的含义后就可以轻松掌握了：</p>
+<ol>
+<li>edt 是 edit（编辑）的缩写，输入 edt 和一个空格，命令面板就会显示所有已经打开的文件；而<code>edt active</code>则只会显示当前活动组中的文件。</li>
+<li>ext 是 extension（插件）的缩写，输入 ext 和一个空格，就可以进行插件的管理；<code>ext install</code> 则可以在命令面板中搜索和安装插件。</li>
+<li>task和debug 分别对应于任务和调试功能。这两个功能的使用我会在之后的章节中详细讲解。</li>
+<li>term 是 terminal（终端）的缩写，你可以用这个命令来创建和管理终端实例。</li>
+<li>view 则是用于打开 VS Code 的各个 UI 组件。</li>
+</ol>
+<p>跟前面符号不同的是，在输入某个英文缩写的前缀后，你还需要输入一个空格键，然后这个功能就被自动执行了。同时，你能够继续输入字符，在这个功能执行的结果里面进行搜索。</p>
+<h2>有趣的设置</h2>
+<p>命令面板本身功能非常强大，你能在里面完成大部分的操作，但命令面板还有两个有趣的设置，现在我将其分享给你。</p>
+<p>第一个设置是“workbench.commandPalette.history”。你在命令面板里搜索并执行操作后，这些刚刚执行过的操作就会被记录下来，并且刚刚被执行的命令会出现在命令面板的最上面，这样的话，你能够立刻看到你常用的那几个命令。默认情况下，VS Code 会保存 50 个历史记录，当然你也可以通过这个设置来修改。比如，当你把这个设置的值改成为 0 的时候，这个历史记录的功能就相当于被关闭了。</p>
+<p>另一个设置是 “workbench.commandPalette.preserveInput”，它的默认值是 false。如果你把它的值改成 true 的话，那么你在命令面板里搜索了某个命令并执行了，当你下次打开命令面板的时候，之前输入的值还在命令面板的输入框里。这个功能是否有用，那就见仁见智啦。</p>
+<h2>小结</h2>
+<p>好了，这就是我们今天的全部内容了。</p>
+<p>我们一起简单了解了 VS Code 除了编辑器以外的其他 UI 组件，相信很多你都已经在使用了，在后面的章节里，我们还会深入到这些组件中去。同时我们还了解了下命令面板的使用，无论在哪个 UI 组件里，只要按下 Cmd + Shift + P （Windows 上是 Ctrl + Shift + P）或者 F1，总能调出命令面板，然后通过文字输入来操控 VS Code。</p>
+<p>如果你在使用命令面板上有什么心得的话，不妨在评论区与我们分享，谢谢！</p>
+<hr />
+<p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/60/a9/66d90640.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">sonong</span>
+                            </div>
+                            <div class="bd">老师，每次更新的发行说明，怎么转成中文版？ <br></div>
+                            <span class="time">2018-10-14 08:28</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/c6/41/04d0b43d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">仰望星空</span>
+                            </div>
+                            <div class="bd">请问一下左侧边栏的todo是什么插件？ <br></div>
+                            <span class="time">2018-10-13 15:52</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/b3/26/cc28a05a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">悬炫</span>
+                            </div>
+                            <div class="bd">edt active则只会显示当前活动组中的文件，请问这里的活动组是个什么概念呢？能否介绍一下 <br></div>
+                            <span class="time">2018-10-13 09:15</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/43/96/14844463.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">孙源辉</span>
+                            </div>
+                            <div class="bd">请问从其它UI组件有直接回到编辑器的快捷键吗？例如从文件资源管理或是跨文件搜索再或是终端等组件直接返回到编辑器。 <br></div>
+                            <span class="time">2018-10-13 09:08</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/5a/76/3f8dcda6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈亦凡</span>
+                            </div>
+                            <div class="bd">发现了，这个todo+的应用挺有意思的，好像跑题了 <br></div>
+                            <span class="time">2018-10-24 18:14</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/7e/97/746261a8.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Cody Yang</span>
+                            </div>
+                            <div class="bd">请问：如何删除打开md文件时，右上方的“打开侧边栏预览”按钮？（因为装了MPE插件后，会自动再多出一个按钮） <br></div>
+                            <span class="time">2018-10-18 07:33</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">zzuse</span>
+                            </div>
+                            <div class="bd">同求多个panel跳转的快捷键 <br></div>
+                            <span class="time">2018-10-16 10:27</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这个下个月 vscode 就会支持了</p>
+                                <p class="reply-time">2018-10-17 12:01</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/ce/90/fafbbe0b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">mccrms</span>
+                            </div>
+                            <div class="bd">左侧侧边栏组件移动位置后，界面概览的指示就变成谎言了[阴笑]<br><br> <br></div>
+                            <span class="time">2018-10-14 10:52</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

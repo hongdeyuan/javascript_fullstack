@@ -1,0 +1,152 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                31讲一些你可能不知道的Tips&Tricks
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/08/91/086f972211b3e1821eaad9028217df91.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>今天，我们一起来聊一聊 VS Code 中一些你可能不知道的 <strong>Tips &amp; Tricks</strong>。这篇文章不会太长，因为很多内容，我在专栏前面的内容里，根据每一篇文章的主题已经逐步渗透了。今天我们这篇算是再做一次查漏补缺，看看还有哪些好玩的功能我们没有涉及过。要注意，既然是tips&amp;tricks，那么今天的内容，不一定完全实用哦。</p><h2>跳转</h2><p>我们在编辑器里，可以通过 F12 跳转到代码的定义处，这个快捷键在阅览代码的时候特别有用，但是问题来了，当你阅读完定义处的代码，想跳转回去怎么办呢？</p><p>这时候你可以使用 “Ctrl + -” （Windows 上是 Alt + Left）跳转回上一次光标所在的位置。而如果你按下 “Ctrl + Shift + -” （Windows 上是 Alt + Right）则可以跳到下一次光标所在的位置。有了这两个快捷键，我们就能够在阅读代码时快速来回跳转了。</p><p><img src="https://static001.geekbang.org/resource/image/73/64/731bcbc38dc3adef579483129955c164.gif" alt=""></p><center><span class="reference">跳转到上一次光标所在位置</span></center><h2>转到上一次编辑位置</h2><p>VS Code 最近还加了一个命令，就是跳转到上一次代码编辑的位置。比如你在书写代码，然后想要查看某个 API，接着你通过 F12 不断地在不同的代码之间跳转进行阅读，结束后，如果通过 “Ctrl + - ”来回退，实在是太慢了。这时可以通过运行命令 “转到上一编辑位置”来实现。</p><!-- [[[read_end]]] --><p><img src="https://static001.geekbang.org/resource/image/7c/41/7ce6254cca591dccc171d6d966a1fd41.gif" alt=""></p><center><span class="reference">跳转到上一次编辑位置</span></center><h2>复制粘贴</h2><p>复制粘贴是很简单的功能，但是 VS Code 里也有几个小巧的设计。比如说，当你从 VS Code 里复制了代码，然后粘贴到 Outlook、Evernote 等应用中时，默认情况下，这些应用会粘贴富文本。什么意思呢？请看下图：</p><p><img src="https://static001.geekbang.org/resource/image/7a/c9/7afbbdffeda42af1d92f5c24a9e056c9.gif" alt=""></p><center><span class="reference">复制代码高亮</span></center><p>没错，当你按下“Cmd + V”时能把代码高亮也粘贴进去，而你按下“Cmd + Shift + V”则是粘贴纯文本。</p><p>如果你不喜欢这个功能，当然也可以通过 editor.copyWithSyntaxHighlighting 来关闭。</p><h2>复制当前行</h2><p>除此之外，VS Code 里的复制功能，还有一个大家不太容易注意到的地方。如果你把光标放到某一行，并没有选中任何代码，然后按下“Cmd + C”，这一行的代码就会被复制到粘贴板中了，这比按下“Cmd + i”选中一行代码，然后再按“Cmd + C”方便多了。</p><h2>移动编辑窗口</h2><p>我们在介绍编辑器的快捷键时，只介绍了如何移动代码或者如何移动光标，其实 VS Code 也有命令来移动窗口。你不妨打开快捷键设置窗口，然后搜索 “scrollLine” ，能看到两个命令 scrollLineDown 和 scrollLineUp，它们的作用就是将窗口向上或者向下移动一行。这两个命令没法在命令面板里找到，你可以给它们绑定上两个快捷键然后使用。</p><p><img src="https://static001.geekbang.org/resource/image/3a/55/3adf458e0ee5310a54a902388c435955.gif" alt=""></p><center><span class="reference">将窗口向上移动一行</span></center><p>你可以发现，使用这两个命令时，光标并不会移动，就跟使用鼠标移动窗口一样。</p><h2>鼠标打开新编辑器窗口</h2><p>我们在介绍编辑器里的鼠标操作时，介绍过我们可以通过“Cmd + 鼠标左键”来实现跟 F12 “跳转到到定义处”一样的功能，而如果我们按下“Cmd + Option + 鼠标左键”的话，则可以将定义处的代码，打开在新的编辑器组中。</p><p><img src="https://static001.geekbang.org/resource/image/7b/90/7bc7fbf1ec63e489afa0ffd2a530fb90.gif" alt=""></p><center><span class="reference">鼠标打开新编辑器窗口</span></center><h2>Font ligatures</h2><p>相信你在社交网络上会经常看到下面这样的代码截图，在编辑器里有一些并不常见的符号，但是你又可以一眼看出它们的作用，比如“大于等于”“不等于”。它们的特点是，原本的多个字符现在变成了单个符号。这个功能叫做<strong>字体连字</strong>（font ligatures）。</p><p><img src="https://static001.geekbang.org/resource/image/27/47/27b4baca300577ad7dd0e2638bde4547.png" alt=""></p><center><span class="reference">Font ligatures</span></center><p>要使用这个功能，首先你需要一款支持连字的字体，比如 Fira Code，然后你需要打开 editor.fontLiagures 这个设置，并添加如下配置。</p><pre><code>&quot;editor.fontFamily&quot;: &quot;Fira Code&quot;,
+&quot;editor.fontLigatures&quot;: true
+</code></pre><h2>更快速的自动补全</h2><p>VS Code 里的自动补全，会在你输入完了之后等待片刻，然后再给你进行提示，这么做是为了减少不必要的计算。但是如果你的机器性能非常不错，并且你完全不在乎多用一些电的话，可以修改配置 “editor.quickSuggestionsDelay: 0”，不再等待。</p><h2>文件删除</h2><p>当你在 VS Code 中删除文件时，VS Code 会多次提示你是否一定要删除文件，当你选择“确定”后，VS Code 会把文件放到废纸篓中而非完全删除。这么做的目的是防止你误删除文件。当然如果你觉得 VS Code 太多此一举了，也可以通过设置 <code>file.trash</code> 修改，选择每次将其直接完全删除。</p><h2>创建多层子文件夹和文件</h2><p>在 VS Code 的资源管理中，当你需要创建一个文件夹，然后在这个文件夹中创建一个新文件时，你其实可以做到一步完成它们的创建。方法是：点击创建文件的按钮，然后在输入框中输入<code>folderName/fileName</code>即可。</p><p><img src="https://static001.geekbang.org/resource/image/cc/10/ccabbe9410289e2b20cd0991b3088310.gif" alt=""></p><center><span class="reference">创建多层子文件夹</span></center><h2>为不同工作区设置标题栏颜色</h2><p>如果你同时打开了多个工作区，在这些工作区切换多次后，你可能就搞不明白自己在哪个工作区了。这里就有必要介绍主题修改相关的小技巧了。</p><p>你可以在每个工作区的设置里，添加如下配置：</p><pre><code>    &quot;workbench.colorCustomizations&quot;: {
+        &quot;titleBar.activeBackground&quot;: &quot;#33ffff&quot;
+    }
+</code></pre><p>通过修改标题栏的颜色，你可以为每个不同的工作区指定一个特殊的颜色，这样你就可以一眼区分出来了。</p><p><img src="https://static001.geekbang.org/resource/image/ad/91/adf2b346bc7f79d0f903453946151a91.png" alt=""></p><center><span class="reference">不同工作区不同标题栏颜色</span></center><h2>复制搜索结果</h2><p>当你使用了多文件搜索后，可以在搜索结果上右击，调出上下文菜单，选择 “全部复制”，这之后你就可以将所有的搜索结果相关的信息粘贴到编辑器中作进一步处理了。</p><p><img src="https://static001.geekbang.org/resource/image/95/59/957ffc95e1879ac9392f27c9a7195859.gif" alt=""></p><center><span class="reference">复制粘贴搜索结果</span></center><h2>固定调试工具条位置</h2><p>在最近几个版本里，你可以通过 debug.toolBarLocation 设置，调整工具栏的位置，比如说 debug.toolBarLocation: docked 就可以将工具栏固定到调试窗口中了。</p><p><img src="https://static001.geekbang.org/resource/image/ac/f1/ac6c00d28063c5cbc3137e5b9f7149f1.png" alt=""></p><center><span class="reference">固定调试工具条位置</span></center><h2>语言相关的设置</h2><p>我介绍 VS Code 设置时提到过，工作区的设置会覆盖个人设置。除此之外，VS Code 还允许你为某个语言指定特别的设置。</p><pre><code>&quot;editor.insertSpaces&quot;: false,
+&quot;[json]&quot;: {
+    &quot;editor.insertSpaces&quot;: true
+}
+</code></pre><p>比如上面的代码示例，你可以指定只在 JSON 文件中时，按下 Tab 会插入空格键而非 Tab 键。</p><h2>如何挑选键盘</h2><p>最后，就是我个人的一个 tip。VS Code 的默认快捷键设置，对方向键的使用非常多，同时很多功能，可以通过 Function 键一键完成，而如果不使用 Function 键的话，就得使用多个按键了。</p><p>所以，最适合 VS Code 的键盘，要属 87 键键盘，也就是常说的 Tenkeyless。Function 和方向键，保证了你不需要太频繁地使用组合键，而小键盘的用处在 VS Code 中不大。</p><h2>小结</h2><p>好了，上面就是我今天要介绍的 VS Code 里使用的小 tips。不过如果你是跟着专栏一步步学习过来的话，你应该留意到，前面的专栏里，还介绍过非常多有用的小功能。比如说我自己最喜欢的就是 files.defaultLanguage 了，通过将其设置为 markdown，每次我创建了一个新文件时，这个文件的类型就会被自动设置为 markdown，然后我就能快速记录文档了。</p><p>你在学习专栏的过程中，是不是也有自己非常喜欢的快捷键或者设置呢？不妨分享给大家，一起学习！</p><hr></hr><p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/c2/ba/b3b3befd.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">光天化日下</span>
+                            </div>
+                            <div class="bd">老师，那个跳转到代码定义处的功能，如果我路径用了alias，不再是..&#47;..&#47;，要怎么配置，网上搜索说要建一个jscong.json的配置文件，但是好像不起作用，麻烦能指点下，或者给个相关帖子的链接么？ <br></div>
+                            <span class="time">2018-12-06 23:31</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/9a/cc/54fa5c6d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">吴佰清</span>
+                            </div>
+                            <div class="bd">感谢老师的分享，全文看过后，受益匪浅。 <br></div>
+                            <span class="time">2018-11-23 10:10</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/c5/37/bb5465cf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">冰山北极熊</span>
+                            </div>
+                            <div class="bd">谢谢老师，非常有用的总结 <br></div>
+                            <span class="time">2018-11-22 17:36</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/cd/37/daadbe17.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">阿弥陀佛么么哒</span>
+                            </div>
+                            <div class="bd">我的 cmd 和 option 各自加鼠标点击的功能好像是反着的，怎么能设置回来。 <br></div>
+                            <span class="time">2018-11-22 11:22</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/4e/a0/67782623.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">贺子华</span>
+                            </div>
+                            <div class="bd">老师，怎么在执行函数的位置跳转到定义函数的位置 <br></div>
+                            <span class="time">2018-11-22 10:46</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

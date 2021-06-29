@@ -1,0 +1,251 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                11讲树的深度优先搜索（上）：如何才能高效率地查字典
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/b8/5f/b8d342fb4c48ff9a48419914e11c755f.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>你还记得迭代法中的的二分查找吗？在那一讲中，我们讨论了一个查字典的例子。如果要使用二分查找，我们首先要把整个字典排个序，然后每次都通过二分的方法来缩小搜索范围。</p><p>不过在平时的生活中，咱们查字典并不是这么做的。我们都是从单词的最左边的字母开始，逐个去查找。比如查找“boy”这个单词，我们一般是这么查的。首先，在a～z这26个英文字母里找到单词的第一个字母b，然后在b开头的单词里找到字母o，最终在bo开头的单词里找到字母y。</p><p>你可以看我画的这种树状图，其实就是从树顶层的根结点一直遍历到最下层的叶子结点，最终逐步构成单词前缀的过程。对应的数据结构就是<strong>前缀树</strong>（prefix tree）<strong>，或者叫字典树</strong>（trie）。我个人更喜欢前缀树这个名称，因为看到这个名词，这个数据结构的特征就一目了然。</p><p><img src="https://static001.geekbang.org/resource/image/f4/34/f4cffbdefa0cd94eda18294c47bf8e34.jpg" alt=""></p><p>那前缀树究竟该如何构建呢？有了前缀树，我们又该如何查询呢？今天，我会从图论的基本概念出发，来给你讲一下什么样的结构是树，以及如何通过树的深度优先搜索，来实现前缀树的构建和查询。</p><h2>图论的一些基本概念</h2><p>前缀树是一种有向树。那什么是有向树？顾名思义，有向树就是一种树，特殊的就是，它的边是有方向的。而树是没有简单回路的连通图。</p><!-- [[[read_end]]] --><p>如果一个图里所有的边都是有向边，那么这个图就是有向图。如果一个图里所有的边都是无向边，那么这个图就是无向图。既含有向边，又含无向边的图，称为混合图。</p><p><img src="https://static001.geekbang.org/resource/image/bb/7d/bb472743016ead750fc7a80d8fc6bf7d.jpg" alt=""></p><p>在有向图中，以结点$v$为出发点的边的数量，我们叫作$v$的<strong>出度</strong>。而以$v为$终点的边之数量，称为$v$的<strong>入度</strong>。在上图中，结点$v_{2}$的入度是1，出度是2。</p><p>还有两个和有向树有关的概念，回路和连通，我这里简单给你解释一下，你很容易就能明白了。</p><p>结点和边的交替序列组成的就是<strong>通路</strong>。所以，通路上的任意两个结点其实就是互为连通的。如果一条通路的起始点$v_{1}$和终止点$v_{n}$相同，这种特殊的通路我们就叫作<strong>回路</strong>。从起始点到终止点所经过的边之数量，就是通路的长度。这里我画了一张图，这里面有1条通路和1条回路，它们的长度都是4。</p><p><img src="https://static001.geekbang.org/resource/image/e6/c0/e666c8cd453d503b62dc246c1ab005c0.jpg" alt=""></p><p>理解了图的基本概念，我们再来看树和有向树。<strong>树</strong>是一种特殊的图，它是没有简单回路的连通无向图。这里的简单回路，其实就是指，除了第一个结点和最后一个结点相同外，其余结点不重复出现的回路。你可以看我画的这几幅图。</p><p><img src="https://static001.geekbang.org/resource/image/e8/92/e8705553ef8e27adf0e2f5005671f492.jpg" alt=""></p><p>那么，什么是<strong>有向树</strong>呢？顾名思义，有向树是一种特殊的树，其中的边都是有向的，而且它满足以下几个条件：</p><ul>
+<li>
+<p>有且仅有一个结点的入度为0，这个结点被称为根；</p>
+</li>
+<li>
+<p>除根以外的所有结点，入度都为1。从树根到任一结点有且仅有一条有向通路。</p>
+</li>
+</ul><p>除了这些基本定义，有向树还有几个重要的概念，父结点、子结点、兄弟结点、先辈结点、后辈结点、叶子结点、结点的高度（或深度）、树的高度（或深度）。这些都不难理解，我画个图展示一下，你就能明白了。我把根结点的高度设置为0，根据需要你也可以设置为1。</p><p><img src="https://static001.geekbang.org/resource/image/36/13/366d75b7566adfb09f71f3ae4ad7dd13.jpg" alt=""></p><h2>前缀树的构建和查询</h2><p>好了，说了这么些，你对有向树应该有了理解。接下来，我们来看，如何使用有向树来实现前缀树呢？这整个过程主要包括两个部分：构建前缀树和查询前缀树。</p><h3>1. 构建前缀树</h3><p>首先，我们把空字符串作为树的根。对于每个单词，其中每一个字符都代表了有向树的一个结点。而前一个字符就是后一个字符的父结点，后一个字符是前一个字符的子结点。这也意味着，每增加一个字符，其实就是在当前字符结点下面增加一个子结点，相应地，树的高度也增加了1。</p><p>我们以单词geek为例，从根结点开始，第一次我增加字符g，在根结点下增加一个“g”的结点。第二次，我在“g”结点下方增加一个“e”结点。以此类推，最终我们可以得到下面的树。</p><p><img src="https://static001.geekbang.org/resource/image/d0/26/d06e56e85242f66552672d0f7ada7b26.jpg" alt=""></p><p>那如果这个时候，再增加一个单词，geometry会怎样？我们继续重复这个过程，就能得到下面这个图。</p><p><img src="https://static001.geekbang.org/resource/image/95/8f/950f2b49edf271a36a5f96cf2187638f.jpg" alt=""></p><p>到这里为止，我们已经建立了包含两个单词的前缀树。在这棵树的两个叶子结点“k”和“y”上，我们可以加上额外的信息，比如单词的解释。那么在匹配成功之后，就可以直接返回这些信息，实现字典的功能了。假设我把牛津词典里所有的英文单词都按照上述的方法处理一遍，就能构造一棵包含这个字典里所有单词的前缀树，并实现常用单词的查找和解释。</p><h3>2. 查询前缀树</h3><p>假设我们已经使用牛津词典，构建完了一个完整的前缀树，现在我们就能按照开篇所说的那种方式，查找任何一个单词了。从前缀树的根开始，查找下一个结点，顺着这个通路走下去，一直走到到某个结点。如果这个结点及其前缀代表了一个存在的单词，而待查找的单词和这个结点及其前缀正好完全匹配，那就说明成功找到了一个单词。否则，就表示无法找到。</p><p>这里还有几种特殊情况，需要注意。</p><ul>
+<li>
+<p>如果还没到叶子结点的时候，待查的单词就结束了。这个时候要看最后匹配上的非叶子结点是否代表一个单词；如果不是，那说明被查单词并不在字典中。</p>
+</li>
+<li>
+<p>如果搜索到前缀树的叶子结点，但是被查单词仍有未处理的字母。由于叶子结点没有子结点，这时候，被查单词不可能在字典中。</p>
+</li>
+<li>
+<p>如果搜索到一半，还没到达叶子结点，被查单词也有尚未处理的字母，但是当前被处理的字母已经无法和结点上的字符匹配了。这时候，被查单词不可能在字典中。</p>
+</li>
+</ul><p>前缀树的构建和查询这两者在本质上其实是一致的。构建的时候，我们需要根据当前的前缀进行查询，然后才能找到合适的位置插入新的结点。而且，这两者都存在一个不断重复迭代的查找过程，我们把这种方式称为<strong>深度优先搜索</strong>（Depth First Search）。</p><p>所谓树的深度优先搜索，其实就是从树中的某个结点出发，沿着和这个结点相连的边向前走，找到下一个结点，然后以这种方式不断地发现新的结点和边，一直搜索下去，直到访问了所有和出发点连通的点、或者满足某个条件后停止。</p><p>如果到了某个点，发现和这个点直接相连的所有点都已经被访问过，那么就回退到在这个点的父结点，继续查看是否有新的点可以访问；如果没有就继续回退，一直到出发点。由于单棵树中所有的结点都是连通的，所以通过深度优先的策略可以遍历树中所有的结点，因此也被称为<strong>深度优先遍历</strong>。</p><p>为了让你更容易理解，我用下面这张图来展示在一棵有向树中进行深度优先搜索时，结点被访问的顺序。</p><p><img src="https://static001.geekbang.org/resource/image/fd/f9/fdc74a1d4797eee2b397e7c6fe5992f9.jpg" alt=""></p><p>其中，结点上的数字表示结点的ID，而虚线表示遍历前进的方向，结点边上的数字表示该结点在深度优先搜索中被访问的顺序。在深度优先的策略下，我们从点110出发，然后发现和110相连的点123，访问123后继续发现和123相连的点162，再往后发现162没有出度，因此回退到123，查看和123相连的另一个点587，根据587的出度继续往前推进，如此类推。</p><p>把深度优先搜索，和在前缀树中查询单词的过程对比一下，你就会发现两者的逻辑是一致的。不过，使用前缀树匹配某个单词的时候，只需要沿着一条可能的通路搜索下去，而无需遍历树中所有的结点。</p><h2>小结</h2><p>在这一讲，我从数学中图的一些基本定义入手，介绍了有向树，以及有向树的一个应用，前缀树。树在计算机领域中运用非常广泛。比如，二叉树和满二叉树。</p><p>二叉树是每个结点最多有两个子树的树结构，它可用于二叉查找树和二叉堆。二叉树甚至可以用于图示化我们之前聊过的二分迭代。</p><p>满二叉树是一棵高度为n（高度从1开始计），且有2^n-1个结点的二叉树。在高度为k(0&lt;k≤n）的这一层上，结点的数量为2^(k-1)。如果把树的根标为0，每个结点的左子结点标为0，每个结点的右子结点标为1，那么把根到叶子结点的所有0或1连起来，就正好对应一个二进制数。</p><p><img src="https://static001.geekbang.org/resource/image/56/89/564ee1181fe4b351a12f8af690311d89.jpg" alt=""></p><p>既然树是如此重要，那么我们该如何高效率地访问树中的结点呢？下一讲，我会继续前缀树的话题，讨论如何遍历树中所有结点。</p><p><img src="https://static001.geekbang.org/resource/image/79/09/79701ece6ee3d1a7efdcba51c5684e09.jpg" alt=""></p><h2>思考题</h2><p>现在给你一个字典，请尝试实现其前缀树，包括树的构建和查询两个过程。这里，字典可以用字符串数组来表示，每个字符串代表一个单词。</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Handongyang</span>
+                            </div>
+                            <div class="bd">老师讲解得非常好，谈下个人对前缀树的了解，前缀树主要应用于以下场景：<br>1.预测文本输入功能：搜索引擎的输入框中输入搜索关键词的预测文本提示、IDE代码编辑器和浏览器网址中输入时的预测文本提示，借助老师讲的前两节动态规划实现预测文本的纠错功能；<br>2.使用前缀树结构对字符串或单词按字母顺序实现排序并进行输出的功能；<br>3.前缀树也可用于实现近似匹配，包括拼写检查和连字软件使用的算法；<br><br>前缀树的主要优劣对比：<br>1.使用前缀树可以高效地进行前缀搜索字符串和插入字符串，时间复杂度为O(length)；<br>2.使用前缀树可以按字母顺序轻松打印所有字符串，该功能是散列表不易实现的，但前缀树的搜索效率可能不如散列表快；<br>3.前缀树的缺点在于，需要大量的内存来存储字符串，对于每个节点需要太多的节点指针。倘若关注内存空间上的优化，可以考虑使用三元搜索树。三元搜索树是实现字典的首选结构，其搜索字符串的时间复杂度是O(height)； <br></div>
+                            <span class="time">2019-01-07 14:18</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">总结的很好，还有实用的场景</p>
+                                <p class="reply-time">2019-01-08 08:00</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Handongyang</span>
+                            </div>
+                            <div class="bd">下面是构建前缀树和查询的代码实现：<br>package com.string.test;<br><br>&#47;**<br> * Created by hanyonglu on 2019&#47;1&#47;7.<br> *&#47;<br>public class TrieTest {<br>    private static final int CHARACTER_SIZE = 26;<br><br>    private TrieNode root;<br><br>    private static class TrieNode {<br>        private TrieNode[] children;<br><br>        private boolean isWordEnd;<br><br>        public TrieNode() {<br>            isWordEnd = false;<br><br>            children = new TrieNode[CHARACTER_SIZE];<br>            for (int index = 0; index &lt; CHARACTER_SIZE; index++) {<br>                children[index] = null;<br>            }<br>        }<br>    }<br><br>    public void insert(String key) {<br>        TrieNode newNode = root;<br>        int index;<br><br>        for (int i = 0; i &lt; key.length(); i++) {<br>            index = key.charAt(i) - &#39;a&#39;;<br><br>            if (newNode.children[index] == null) {<br>                newNode.children[index] = new TrieNode();<br>            }<br><br>            newNode = newNode.children[index];<br>        }<br><br>        newNode.isWordEnd = true;<br>    }<br><br>    public boolean search(String key) {<br>        TrieNode searchNode = root;<br>        int index;<br><br>        for (int i = 0; i &lt; key.length(); i++) {<br>            index = key.charAt(i) - &#39;a&#39;;<br><br>            if (searchNode.children[index] == null) {<br>                return false;<br>            }<br><br>            searchNode = searchNode.children[index];<br>        }<br><br>        return (searchNode != null &amp;&amp; searchNode.isWordEnd);<br>    }<br><br>    public static void main(String args[]) {<br>        String[] keys = {&quot;my&quot;, &quot;name&quot;, &quot;is&quot;, &quot;hanyonglu&quot;, &quot;the&quot;, &quot;son&quot;, &quot;handongyang&quot;, &quot;home&quot;, &quot;near&quot;, &quot;not&quot;, &quot;their&quot;};<br><br>        TrieTest trieTest = new TrieTest();<br>        trieTest.root = new TrieNode();<br><br>        for (int index = 0; index &lt; keys.length ; index++) {<br>            trieTest.insert(keys[index]);<br>        }<br><br>        System.out.println(&quot;home result : &quot; + trieTest.search(&quot;home&quot;));<br>        System.out.println(&quot;their result : &quot; + trieTest.search(&quot;their&quot;));<br>        System.out.println(&quot;t result : &quot; + trieTest.search(&quot;t&quot;));<br>    }<br>} <br></div>
+                            <span class="time">2019-01-07 14:06</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">实现很简洁👍</p>
+                                <p class="reply-time">2019-01-14 02:05</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/8f/ad/6e3e9e15.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">产品助理</span>
+                            </div>
+                            <div class="bd">从起始点到终止点所经过的边之数量，就是通路的长度。这里我画了...<br><br>极客时间版权所有: https:&#47;&#47;time.geekbang.org&#47;column&#47;article&#47;76481<br><br>这里的通路的长度应该是3啊。 <br><br>边有：v1——v2，v2——v3，v3——v4 三条，所以边的长度是3对吗？ <br></div>
+                            <span class="time">2019-01-07 12:06</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对 应该是3，我稍后该一下</p>
+                                <p class="reply-time">2019-01-08 07:58</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/18/d0/49b06424.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">qinggeouye</span>
+                            </div>
+                            <div class="bd">查找到一个 python 版本，分别用迭代循环和递归的方法，实现在树中添加和查找单词。动手实现了一遍：～<br>https:&#47;&#47;github.com&#47;qinggeouye&#47;GeekTime&#47;blob&#47;master&#47;MathematicProgrammer&#47;11_deepFirstSearch&#47;lesson11_1.py<br><br> <br></div>
+                            <span class="time">2019-02-20 02:23</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="http://thirdwx.qlogo.cn/mmopen/vi_32/ibZVAmmdAibBeVpUjzwId8ibgRzNk7fkuR5pgVicB5mFSjjmt2eNadlykVLKCyGA0GxGffbhqLsHnhDRgyzxcKUhjg/132" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">pyhhou</span>
+                            </div>
+                            <div class="bd">简单实现了下，跑了几个例子是可以work的，这里build的时候用Map是考虑到字典里面的单词和解释以key-value的形式出现，search函数输入是单词输出是解释，没有该单词的话返回null<br><br>public class Trie {          <br>     private class TrieNode {<br>          private TrieNode[] children = new TrieNode[26];<br>          private String word = null;<br>          private String explanation = null;<br>     }<br><br>     private TrieNode root = new TrieNode();<br><br>          public void buildTrie(Map&lt;String, String&gt; dictionary) {<br>               if (dictionary == null || dictionary.size() == 0) {<br>                    return;<br>               }<br><br>               for (String word : dictionary.keySet()) {<br>                    char[] wordArr = word.toCharArray();<br>                    TrieNode tmp = root;<br><br>                     for (char c : wordArr) {<br>                          if (tmp.children[c - &#39;a&#39;] == null) {<br>                               tmp.children[c - &#39;a&#39;] = new TrieNode();<br>                          }<br>                          tmp = tmp.children[c - &#39;a&#39;];<br>                     }<br><br>                     tmp.word = word;<br>                     tmp.explanation = dictionary.get(word);<br>                }<br>           }<br><br>          public String searchTrie(String targetWord) {<br>               if (targetWord == null || targetWord.isEmpty()) {<br>                    return null;<br>               }<br><br>               char[] targetWordArr = targetWord.toCharArray();<br>               TrieNode tmp = root;   <br><br>               for (char c : targetWordArr) {<br>                    if (tmp.children[c - &#39;a&#39;] == null) {<br>                         return null;<br>                    }<br><br>                    tmp = tmp.children[c - &#39;a&#39;];<br>                }<br><br>           return tmp.explanation;<br>      } <br></div>
+                            <span class="time">2019-01-18 08:47</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">逻辑上没问题，使用26个英文字母对于字典而言足够了👍</p>
+                                <p class="reply-time">2019-01-19 01:04</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/fe/30/c9b568c3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">asc</span>
+                            </div>
+                            <div class="bd">老师讲的很好，非常容易理解。😁这次就不做作业了 <br></div>
+                            <span class="time">2019-01-09 08:49</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/94/e3/ed118550.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Being</span>
+                            </div>
+                            <div class="bd">关于思考题的一点想法：其实可以将单词以及字母抽象出来，利用组合模式，形成树形关系，实现递归调用。 <br></div>
+                            <span class="time">2019-01-07 23:17</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">如果使用前缀树，对给定的一些单词进行处理，就无需排列组合了</p>
+                                <p class="reply-time">2019-01-14 02:10</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/15/33/5be2710e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">李尧</span>
+                            </div>
+                            <div class="bd">老师好，根节点的高度可以随意设置吗，假如设置为1，子节点的高度是不是都需要加1 <br></div>
+                            <span class="time">2019-01-07 18:44</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的 通常根结点高度只会设置为0或1</p>
+                                <p class="reply-time">2019-01-08 07:56</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/ec/0d/43d46889.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">alic</span>
+                            </div>
+                            <div class="bd">哪位大佬实现了放上去看一下 <br></div>
+                            <span class="time">2019-01-07 10:11</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/e9/0b/53bf91d3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">WL</span>
+                            </div>
+                            <div class="bd">不错不错, 又把大学忘掉的知识复习了一遍 <br></div>
+                            <span class="time">2019-01-07 07:34</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

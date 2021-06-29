@@ -1,0 +1,410 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.3;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                09讲动态规划（上）：如何实现基于编辑距离的查询推荐
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/55/2a/5599120436220859aad4034436b9032a.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是黄申。</p><p>上一篇讲组合的时候，我最后提到了有关文本的关键字查询。今天我接着文本搜索的话题，来聊聊查询推荐（Query Suggestion）的实现过程，以及它所使用的数学思想，<strong>动态规划</strong>（Dynamic Programming）。</p><p>那什么是动态规划呢？在递归那一节，我说过，我们可以通过不断分解问题，将复杂的任务简化为最基本的小问题，比如基于递归实现的归并排序、排列和组合等。不过有时候，我们并不用处理所有可能的情况，只要找到满足条件的最优解就行了。在这种情况下，我们需要在各种可能的局部解中，找出那些可能达到最优的局部解，而放弃其他的局部解。这个寻找最优解的过程其实就是动态规划。</p><p>动态规划需要通过子问题的最优解，推导出最终问题的最优解，因此这种方法特别注重子问题之间的转移关系。我们通常把这些子问题之间的转移称为<strong>状态转移</strong>，并把用于刻画这些状态转移的表达式称为<strong>状态转移方程</strong>。很显然，找到合适的状态转移方程，是动态规划的关键。</p><p>因此，这两节我会通过实际的案例，给你详细解释如何使用动态规划法寻找最优解，包括如何分解问题、发现状态转移的规律，以及定义状态转移方程。</p><h2>编辑距离</h2><p>当你在搜索引擎的搜索框中输入单词的时候，有没有发现，搜索引擎会返回一系列相关的关键词，方便你直接点击。甚至，当你某个单词输入有误的时候，搜索引擎依旧会返回正确的搜索结果。</p><!-- [[[read_end]]] --><p><img src="https://static001.geekbang.org/resource/image/1c/eb/1c337d39b48ef544ef811c926c70fbeb.png" alt=""></p><p>搜索下拉提示和关键词纠错，这两个功能其实就是<strong>查询推荐</strong>。查询推荐的核心思想其实就是，对于用户的输入，查找相似的关键词并进行返回。而测量拉丁文的文本相似度，最常用的指标是<strong>编辑距离</strong>（Edit Distance）。</p><p>我刚才说了，查询推荐的这两个功能是针对输入有缺失或者有错误的字符串，依旧返回相应的结果。那么，将错误的字符串转成正确的，以此来返回查询结果，这个过程究竟是怎么进行的呢？</p><p>由一个字符串转成另一个字符串所需的最少编辑操作次数，我们就叫作<strong>编辑距离</strong>。这个概念是俄罗斯科学家莱文斯坦提出来的，所以我们也把编辑距离称作莱文斯坦距离（Levenshtein distance）。很显然，编辑距离越小，说明这两个字符串越相似，可以互相作为查询推荐。<strong>编辑操作</strong>有这三种：把一个字符替换成另一个字符；插入一个字符；删除一个字符。</p><p>比如，我们想把mouuse转换成mouse，有很多方法可以实现，但是很显然，直接删除一个“u”是最简单的，所以这两者的编辑距离就是1。</p><h2>状态转移</h2><p>对于mouse和mouuse的例子，我们肉眼很快就能观察出来，编辑距离是1。但是我们现实的场景中，常常不会这么简单。如果给定任意两个非常复杂的字符串，如何高效地计算出它们之间的编辑距离呢？</p><p>我们之前讲过排列和组合。我们先试试用排列的思想来进行编辑操作。比如，把一个字符替换成另一个字符，我们可以想成把A中的一个字符替换成B中的一个字符。假设B中有m个不同的字符，那么替换的时候就有m种可能性。对于插入一个字符，我们可以想成在A中插入来自B的一个字符，同样假设B中有m个不同的字符，那么也有m种可能性。至于删除一个字符，我们可以想成在A中删除任何一个字符，假设A有n个不同的字符，那么有n种可能性。</p><p>可是，等到实现的时候，你会发现实际情况比想象中复杂得多。</p><p>首先，计算量非常大。我们假设字符串A的长度是n，而B字符串中不同的字符数量是m，那么A所有可能的排列大致在m^n这个数量级，这会导致非常久的处理时间。对于查询推荐等实时性的服务而言，服务器的响应时间太长，用户肯定无法接受。</p><p>其次，如果需要在字符串A中加字符，那么加几个呢，加在哪里呢？同样，删除字符也是如此。因此，可能的排列其实远不止m^n。</p><p>我们现在回到问题本身，其实编辑距离只需要求最小的操作次数，并不要求列出所有的可能。而且排列过程非常容易出错，还会浪费大量计算资源。看来，排列的方法并不可行。</p><p>好，这里再来思考一下，其实我们并不需要排列的所有可能性，而只是关心最优解，也就是最短距离。那么，我们能不能每次都选择出一个到目前为止的最优解，并且只保留这种最优解？如果是这样，我们虽然还是使用迭代或者递归编程来实现，但效率上就可以提升很多。</p><p>我们先考虑<strong>最简单的情况</strong>。假设字符串A和B都是空字符串，那么很明显这个时候编辑距离就是0。如果A增加一个字符a1，B保持不动，编辑距离就增加1。同样，如果B增加一个字符b1，A保持不动，编辑距离增加1。但是，如果A和B有一个字符，那么问题就有点复杂了，我们可以细分为以下几种情况。</p><p>我们先来看<strong>插入字符</strong>的情况。A字符串是a1的时候，B空串增加一个字符变为b1；或者B字符串为b1的时候，A空串增加一个字符变为a1。很明显，这种情况下，编辑距离都要增加1。</p><p>我们再来看<strong>替换字符</strong>的情况。当A和B都是空串的时候，同时增加一个字符。如果要加入的字符a1和b1不相等，表示A和B之间转化的时候需要替换字符，那么编辑距离就是加1；如果a1和b1相等，无需替换，那么编辑距离不变。</p><p>最后，我们取上述三种情况中编辑距离的最小值作为当前的编辑距离。注意，这里我们只需要保留这个最小的值，而舍弃其他更大的值。这是为什么呢？因为编辑距离随着字符串的增长，是单调递增的。所以，要求最终的最小值，必须要保证对于每个子串，都取得了最小值。有了这点，之后我们就可以使用迭代的方式，一步步推导下去，直到两个字符串结束比较。</p><p>刚才我说的情况中没有删除，这是因为删除就是插入的逆操作。如果我们从完整的字符串A或者B开始，而不是从空串开始，这就是删除操作了。</p><p>从上述的过程可以看出，我们确实可以把求编辑距离这个复杂的问题，划分为更多更小的子问题。而且，更为重要的一点是，我们在每一个子问题中，都只需要保留一个最优解。之后的问题求解，只依赖这个最优值。这种求编辑距离的方法就是动态规划，而这些子问题在动态规划中被称为不同的状态。</p><p>如果文字描述不是很清楚的话，我这里又画一张表，把各个状态之间的转移都标示清楚，你就一目了然了。</p><p>我还是用mouuse和mouse的例子。我把mouuse的字符数组作为表格的行，每一行表示其中一个字母，而mouse的字符数组作为列，每列表示其中一个字母，这样就得到下面这个表格。</p><p><img src="https://static001.geekbang.org/resource/image/3f/cd/3f696455617c8a0da422df3cdb64d0cd.png" alt=""></p><p>这张表格里的不同状态之间的转移，就是<strong>状态转移</strong>。其中红色部分表示字符串演变（或者说状态转移）的方式以及相应的编辑距离计算。对于表格中其他空白的部分，我暂时不给出，你可以试着自己来推导。</p><p>编辑距离是具有对称性的，也就是说从字符串A到B的编辑距离，和从字符串B到A的编辑距离，两者一定是相等的。这个应该很好理解。</p><p>你可以把刚才那个状态转移表的行和列互换一下，再推导一下，看看得出的编辑距离是否还是1。我现在从理论上解释下这一点。这其实是由编辑距离的三种操作决定的。比如说，从字符串A演变到B的每一种操作，都可以转换为从字符串B演变到A的某一种操作。</p><p><img src="https://static001.geekbang.org/resource/image/18/e8/1824ca86219e0f05591aa48fe7f6dee8.jpg" alt=""></p><p>所以说，从字符串A演变到B的每一种变化方式，都可以找到对应的从字符串B演变到A的某种方式，两者的操作次数一样。自然，代表最小操作次数的编辑距离也就一样了。</p><h2>小结</h2><p>我今天介绍了用于查询推荐的编辑距离。编辑距离的定义很好理解，不过，求任意两个字符串之间的编辑距离可不是一件容易的事情。我先尝试用排列来分析问题，发现这条路走不通，而后我们仍然使用了化繁为简的思路，把编辑距离的计算拆分为3种情况，并建立了子串之间的联系。</p><p>你不要觉得这样的分析过程比较繁琐，我想说的是，学数学固然是为了得到结果，但是学习的过程，是要学会解决问题的方法和思路。比如面对一个问题的时候，你可能不知道用什么方法来解决，但是你可以尝试用我们学过的这些基础思想去分析，去比对，在这个分析的过程中去总结这些方法的使用规律，久而久之，你就能摸索出自己解决问题的套路。</p><p>比如说，动态规划虽然也采用了把问题逐步简化的思想，但是它和基于递归的归并排序、排列组合等解法有所不同。能够使用动态规划解决的问题，通常只关心一个最优解，而这个最优解是单调改变的，例如最大值、最小值等等。因此，动态规划中的每种状态，通常只保留一个当前的最优解，这也是动态规划效率比较高的原因。</p><p><img src="https://static001.geekbang.org/resource/image/f3/94/f37da4a1ef98494dea70016b90922594.jpg" alt=""></p><h2>思考题</h2><p>理解了动态规划法和状态转移之后，你觉得根据编辑距离来衡量字符串之间的相似程度有什么局限性？你有什么优化方案吗？</p><p><span class="orange">欢迎在留言区交作业，并写下你今天的学习笔记。你可以点击“请朋友读”，把今天的内容分享给你的好友，和他一起精进。</span></p><p><img src="https://static001.geekbang.org/resource/image/ff/4b/ff788ad682d27efbdf823b0af52e114b.jpg" alt=""></p>
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/d8/d6/47da34bf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">任鹏斌</span>
+                            </div>
+                            <div class="bd">关于编辑距离的计算看了好多遍还是不太理解<br>1、A、B都为空A转化为B或者B转化为A不需要做任何操作编辑距离为0（可以理解）<br>2、A增加一个字符a1，B保持不动，编辑距离为1。或者B增加一个字符b1，A保持不动，编辑距离为1.（初始为空的情况，可以理解）<br>3、如何A和B有一个字符那么情况就有点复杂了，具体如下：<br>（1）插入字符的情况，A字符串为a1的时候，B空串增加一个字符变为b1，或者B字符串为b1的时候，A空串增加一个字符变为a1。很明显这种情况下编辑距离都要增加1<br>问题：这时候如果b1和a1是一样的字符A或者B再插入后已经是一样的了也不需要再做转化了，这时候编辑距离是否应该就是1？下面的表格中A、B串的m与m处的插入情况与这里一样插入的编辑距离为什么是2？<br>（2）替换字符的情况，可以理解为不相等的情况下才替换所以此时编辑距离加1，如果相等不需要替换则编辑距离为0？<br>麻烦老师解答一下，谢谢！ <br></div>
+                            <span class="time">2019-01-07 13:53</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">（2）基本是对的，只是明确一下，“如果相等不需要替换则编辑距离 “加” 0”<br>（1）中的情况比较绕，你可以这么来看，一开始A、B都是空串，A增加一个字符m，两者编辑距离是1，然后B增加一个字符m，即使两个m相等，编辑距离也会由1变为2，而不是维持在1，也不会降到0。因为编辑距离2表示的是A添加一个m字符，B再添加一个m字符。虽然在人看来两者相等，但对于计算机而言要遍历这种情况。至于两者相等的情况，由替换操作表示，因此可以取到最小值0</p>
+                                <p class="reply-time">2019-01-08 08:39</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erdpKbFgRLnicjsr6qkrPVKZcFrG3aS2V51HhjFP6Mh2CYcjWric9ud1Qiclo8A49ia3eZ1NhibDib0AOCg/132" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">西北偏北</span>
+                            </div>
+                            <div class="bd">搜索引擎中的自动纠错和提示功能，是对用户输入字符串，计算其相似字符串。<br>比如mouse就是用户输入mouuse的相似字符串。<br>一个字符串有哪些相似字符串，无非是把该字符串进行一系列可能的变形编辑。比如把某个字母删掉，或增加一个字母，或替换该字母<br>最后看变形后的单词，是否是一个合法单词。如果是，则给用户提示。<br><br>原始单词或字符变形到一个合法字符串的步数，称为这两个单词之间的编辑距离。<br><br>但一个单词随着长度增加，其对应的合法单词，编辑距离计算将会很多。不可取。<br><br>所以需要最优解，找出用户输入词，编辑距离最小的目标词即可 <br></div>
+                            <span class="time">2019-01-15 10:59</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">分析的很好，在实际项目中还可以考虑其他因素，例如用户搜索的次数、对应的搜索结果数量等等。</p>
+                                <p class="reply-time">2019-01-16 01:56</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/fd/89/cbca1b8e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">银时空de梦</span>
+                            </div>
+                            <div class="bd">1.表格里边的三种情况，第一种跟第二种写的一样<br>2.分析到总体编辑距离是2，2，0，后边总结又说1，1，0<br>麻烦老师能不能把步骤分解解释一下 <br></div>
+                            <span class="time">2019-01-07 10:02</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">应该是2，2，0。我稍后改一下<br>具体的分解你可以看图表中的注释，分三种情况，每种情况都对应于红色箭头的指向</p>
+                                <p class="reply-time">2019-01-08 08:06</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/2b/ec/af6d0b10.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">caohuan</span>
+                            </div>
+                            <div class="bd">本篇所得：动态规划 为寻找的最优解，它只关心 最优的一个解，其他的不会再考虑，比如求解 数组的最大 和最小值，一般只有一个（可能有重复的最值，但最值是相等的）。<br><br>工作和生活中，我们一般把大问题分解为小问题，再把小问题 分解为容易解答的问题，动态规划 就是在 容易解答的问题中选择最优解。<br><br>黄老师 在文中提到：搜索引擎输入的搜索词的查询和推荐，就是对 缺失和错误的字符串进行操作，比如我们输入错误的字符串A，和正确的字符串B，需要把字符串A改到B，需要把字符串 分解到字符 的小问题，然后进行‘增、删、改’等操作，这里运用 动态规划 寻找最优解，不需要使用排列 这么复杂的方法 因为排列计算消耗的时间会很长，运用动态规划 很节能。<br><br>今天所得：解决问题的方法 （1）不断的分解问题，把大问题分解为小问题，把小问题 再分解...直至到可以解答的问题;（2）使用动态规划 求解 小问题的 最优解。<br><br>回答老师的问题：用编辑距离对字符串状态转移资源消耗的标记，会浪费很多 内存和运算资源，可以把 字符串 再分割成字符，把 二个字符串的不同的字符 掏出来，再用编辑距离 处理，应该会更快一下、占用资源也少一些，老师是否同意，也期待 黄老师的指正。<br><br>老师 可以用 斐波那契数列 来说明 动态规划的问题，更让我们易理解。 <br></div>
+                            <span class="time">2019-01-21 17:28</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">感谢你关于斐波那契数列的建议，我之前也考虑过，由于这个例子非常直观，也可以使用迭代实现，所以担心无法体现状态转移的特点。</p>
+                                <p class="reply-time">2019-01-22 09:54</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/63/14/06eff9a4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jerry银银</span>
+                            </div>
+                            <div class="bd">老师，如果让您给计算机相关的职场人推荐一本关于数学的书，您会推荐什么？ <br></div>
+                            <span class="time">2019-01-08 13:00</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我会写篇加餐，给大家推荐几本书</p>
+                                <p class="reply-time">2019-01-08 23:29</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/1d/7d/e8617ccc.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">清如許</span>
+                            </div>
+                            <div class="bd">有时候编辑距离最短的字符串并不能代表用户真正想输入的正确字符串，例如用户输出了 worder，实际上是想查 worker，但编辑距离为 1 的有很多，如 warder，wonder，我在想是不是应该按用户输入的字符串前辍最一致的字符串开始再计算编辑距离，例子中的 mouuse 和 mouse ，先直接替换掉前面一样的 mou,直接计算 use 和 se 的编辑距离，再从替换后面一样的 se，这样就是直接计算 u 和空串的编辑距离，这样就可以很快计算出距离为1，不知道这样理解优化是否正确，请老师指点。<br><br> <br></div>
+                            <span class="time">2019-01-06 16:30</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">很好的思考，在不同的应用场景我们可以考虑不同的侧重点。比如你这里说的前缀更重要，你可以考虑一下如何修改编辑距离的定义，以及对应的状态转移方程，来体现前缀更重要。<br>除基于编辑距离的相似度，还可以考虑其他的因素，例如查询的次数（热度），查询对应的搜索结果数量、个性化等等，不过这是另一个很大的话题</p>
+                                <p class="reply-time">2019-01-07 10:21</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">菩提</span>
+                            </div>
+                            <div class="bd">老师，表格中插入一个字符m，编辑距离增加1。为什么说整体编辑距离是2呢？ <br>如果推导表格往下移动一格，字符串A变成mo，字符串B变成了m，这时应该如何推导啊？希望您帮忙解答一下，第一次实际接触动态规划，谢谢！<br>最近反复看这两篇动态规划，表格推导看的有点似懂非懂。望老师指导一下 <br></div>
+                            <span class="time">2019-01-06 16:06</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你问题的第一句，具体是指表格中三种情况的第一种，是吧？这是指AB两者一开始都为空，那么A字符串增加1个m，编辑距离加1，然后B再增加一个m，所以编辑距离再加1变为2，当然这种不是最小值，最小值是0，也就是表中第三种情况</p>
+                                <p class="reply-time">2019-01-07 13:38</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/c0/50/90a8543a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">uiop</span>
+                            </div>
+                            <div class="bd">老师好，关于m行m列最大编辑距离是2，我的理解是:m和m我们用肉眼就很容易区别是相同的字母，所以编辑距离是0。但是计算机不是人，他必须遍历所有的方案，然后我们再从所有方案里的取最小的编辑距离。既然计算机是遍历所有的方案，那么最麻烦或者最复杂的方案也会遍历，那就是字符A和字符B都为空，同时插入m，所以最大编辑距离是2。<br><br>但是老师，也有另外一个思路感觉和上面我说的有点相悖。比如字符 mouuse 最终要匹配上 mouse，正确的单词mouse已经是存在的，我们只是拿用户输入的字符去匹配现成的合法单词，所以用户输入的m(字符A)，字符B是已经存在的了，因此不存在字符A和字符B同时为空的情况，那么就只需要字符A插入m即可，如果是这样的话，m行m列理解起来最大编辑距离也确实是1才对！ <br></div>
+                            <span class="time">2019-02-20 22:18</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你第一段的理解是对的。<br><br>你说的第二段，其实是因为查询纠错的特殊性导致的，在实现的时候可以根据这个来优化，可以不需要完全遵守最基本的求编辑距离方法。我之所以还是选择讲解最基本的版本，主要是为了让大家能理解这个概念。</p>
+                                <p class="reply-time">2019-02-21 01:14</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/04/c8/68263086.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">哈珀朋友</span>
+                            </div>
+                            <div class="bd">动态规划唯一印象深的就是如何转递归为迭代 <br></div>
+                            <span class="time">2019-02-12 11:21</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/d4/ec/b6fa1dcf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">猫茂懋</span>
+                            </div>
+                            <div class="bd">编辑距离究竟怎么算的，怎么算都不对... <br></div>
+                            <span class="time">2019-01-28 09:19</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">你可以先根据本讲最后的状态转移表来推，第10讲有最终推算结果供参考</p>
+                                <p class="reply-time">2019-01-28 23:46</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/1c/a4/3a7a0213.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">microsnow</span>
+                            </div>
+                            <div class="bd">A字符串是m，B字符串是mo，直行替换操作，怎么是2？ <br></div>
+                            <span class="time">2019-01-17 20:15</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这部分确实比较绕，这个推导过程不是按照我们直观的理解，它是列举了所有的可能。比从m到mo，可能的路径是删掉一个m，在分别增加m和o，那么编辑距离就是3了，不过这不是最优的，在后面min函数会取直接在m上加o的这种可能，距离为1</p>
+                                <p class="reply-time">2019-01-18 03:27</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/1c/a4/3a7a0213.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">microsnow</span>
+                            </div>
+                            <div class="bd">看懵了。下一节表格下面说明，三种编辑距离分别是：替换、插入和删除字符。<br>本节：三种编辑距离 2,2,0。最后一个是替换。<br><br>替换操作理解，插入和删除不理解。老师帮忙分析下。<br>一种情况：<br>A字符为：m B字符为：mo<br><br>第二种情况：<br>A字符为：mo B字符为：mo<br> <br></div>
+                            <span class="time">2019-01-17 20:13</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/1c/a4/3a7a0213.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">microsnow</span>
+                            </div>
+                            <div class="bd">学习有点吃力，慌了。得补充一下相关资料。(已经网上查了，还是没看懂)黄老师，推荐下资料。 <br></div>
+                            <span class="time">2019-01-16 08:51</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">具体是哪里不明白？我可以再详细解释一下</p>
+                                <p class="reply-time">2019-01-17 07:43</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/6a/8e/7b6ea886.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Joe</span>
+                            </div>
+                            <div class="bd">编辑距离可能不能很好处理英文单词中的时态问题吧，比如has和have，have和had，对于搜索而言，其实意思差不多。<br>其它衡量字符串的相似性指标有：余弦相似性和欧式距离，之前做自然语言处理有所了解，但也不怎么清楚，麻烦老师解答下。谢谢 <br></div>
+                            <span class="time">2019-01-13 10:54</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">确实编辑距离是一个很基础的指标，主要针对单个词。你说的问题可以使用取词干（stemming）来部分解决。<br>余弦相似度和欧式距离更多的是用于衡量两段文本之间的相似度，每个unique的单词都是向量的一维度，我会在第三大部分线性代数中，介绍这个例子。</p>
+                                <p class="reply-time">2019-01-14 03:12</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/e4/f0/82281239.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Ricky</span>
+                            </div>
+                            <div class="bd">#include &lt;iostream&gt;<br><br>using namespace std;<br>void levenshteinDis(const char* str1, const char* str2, int m, int n,<br>                    int i, int j, int edist, int &amp;mind) {<br>    if (i == m || j == n) {<br>        if (i &lt; m) edist += (m-i);<br>        if (j &lt; n) edist += (n-j);<br>        if (edist &lt; mind) mind = edist;<br>        return;<br>    }<br><br>    if (str1[i] == str2[j]) {<br>        levenshteinDis(str1, str2, m, n, i+1, j+1, edist, mind);<br>    } else {<br>        &#47;&#47; 删除或增加<br>        levenshteinDis(str1, str2, m, n, i+1, j, edist+1, mind);<br>        levenshteinDis(str1, str2, m, n, i, j+1, edist+1, mind);<br>        &#47;&#47; 替换操作<br>        levenshteinDis(str1, str2, m, n, i+1, j+1, edist+1, mind);<br>    }<br>}<br><br>int levenshteinDis(const char* a, const char* b, int m, int n) {<br>    int mind = 0xfffffff;<br>    levenshteinDis(a, b, m, n, 0, 0, 0, mind);<br>    return mind;<br>}<br><br>&#47;*<br> * 状态转移方程<br> * 1.当a[i] != b[j], min_edist(i,j) = min(min_edist(i-1,j)+1, min_edist(i,j-1)+1, min_edist(i-1, j-1)+1)<br> * 2.当a[i] == b[j], min_edist(i,j) = min(min_edist(i-1,j)+1, min_edist(i,j-1)+1, min_edist(i-1, j-1))<br> *&#47;<br>int levenshteinDisDP(const char* a, const char* b, int m, int n) {<br>    &#47;&#47; 初始化dp数组<br>    int dp[m][n];<br>    for (int i = 0; i &lt; m; ++i) {<br>        for (int j = 0; j &lt; n; ++j) {<br>            dp[i][j] = 0;<br>        }<br>    }<br><br>    &#47;&#47; 初始化第0列<br>    for (int i = 0; i &lt; m; ++i) {<br>        if (a[i] == b[0]) dp[i][0] = i;<br>        else if (i != 0) dp[i][0] = dp[i-1][0] + 1;<br>        else dp[i][0] = 1;<br>    }<br><br>    &#47;&#47; 初始化第0行<br>    for (int i = 0; i &lt; n; ++i) {<br>        if (a[0] == b[i]) dp[0][i] = i;<br>        else if (i &gt; 0) dp[0][i] = dp[0][i-1] + 1;<br>        else dp[0][i] = 1;<br>    }<br><br>    &#47;&#47; 填表余下部分<br>    for (int i = 1; i &lt; m; ++i) {<br>        for (int j = 1; j &lt; n; ++j) {<br>            dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1,<br>                    a[i] == b[j] ? dp[i-1][j-1]:dp[i-1][j-1]+1);<br>        }<br>    }<br>    return dp[m-1][n-1]; <br>}<br> <br></div>
+                            <span class="time">2019-01-10 15:26</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/25/2c/2bbd84ef.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">elephant</span>
+                            </div>
+                            <div class="bd">好多人没看明白，主要体现在三种情况的2，2，0是怎么回事。写成0+1+1，0+1+1，0+0可能可以更清楚的表现整个过程 <br></div>
+                            <span class="time">2019-01-08 16:26</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">好提议 我稍微修改一下</p>
+                                <p class="reply-time">2019-01-08 23:30</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/fe/30/c9b568c3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">asc</span>
+                            </div>
+                            <div class="bd">我觉得中文可以先转化为拼音 <br></div>
+                            <span class="time">2019-01-06 09:37</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这是很好的思路👍！假设用户使用的拼音输入法</p>
+                                <p class="reply-time">2019-01-07 10:26</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/14/70/24/f6ab564c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">NIXIHISI</span>
+                            </div>
+                            <div class="bd">老师，有个疑问，对文中&#39;&#39;对于插入一个字符，我们可以想成在 A 中插入来自 B 的一个字符，同样假设 B 中有 m 个不同的字符，那么也有 m 种可能性。&#39;&#39;这段话。疑问是：在A中插入字符只需要考虑B有m个不同字符（m种可能），而不用考虑插入到A的位置吗？考虑位置的话应该是m * （n+1）种可能吧？ <br></div>
+                            <span class="time">2019-01-05 11:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">对，如果考虑位置可能性就多了，所以这个不适合排列这种暴力的穷举法</p>
+                                <p class="reply-time">2019-01-06 03:30</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">梅坊帝卿</span>
+                            </div>
+                            <div class="bd">看不太懂 为啥插入字符不讨论插入字符是否相同 替换字符时没实际的替换 而是讨论空串增加字符 增加字符不就是插入字符么 能否详细解释下 谢谢 <br></div>
+                            <span class="time">2019-01-04 16:18</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">具体你是指原文的何处？能否引用一点原文，我来查看</p>
+                                <p class="reply-time">2019-01-05 08:53</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/15/33/5be2710e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">李尧</span>
+                            </div>
+                            <div class="bd">表格推算到uu和us位置，多出的u不知道怎么处理了，可不可以补充下完整表格 <br></div>
+                            <span class="time">2019-01-02 15:12</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">在下一讲我会补充完整</p>
+                                <p class="reply-time">2019-01-02 23:16</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

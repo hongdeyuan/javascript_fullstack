@@ -1,0 +1,291 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        <p class="x">更多课程请加QQ1046877154，微信loveu_110获取</p>
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                19讲为你的项目打造Workflow（下）
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/a2/2e/a2d4304098d67aae4086901d8d13172e.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>在上一讲中，我们一起学习了如何使用任务系统的自动检测功能，如何持久化任务，以及如何创建自定义任务。如果你还没有学习或者略有遗忘，不妨回过去再快速阅览一下。</p>
+<p>任务系统的知识体系相对复杂，所以今天我们会继续介绍任务系统的内容：<strong>任务配置的更多参数以及任务结果的分析功能</strong>。</p>
+<h2>Command相关属性和特殊处理</h2>
+<p>在上一讲中，我们说到可以在自定义的任务里使用 command 属性，并在这个属性里指定我们想要运行的脚本或者程序。但是有的时候我们运行这个脚本的时候需要传入一些参数，这时候就可以简单地把这些参数全部写在 command 里，比如说在运行 <code>echo ‘Hello World’</code> 这样的脚本时，我们可以把它直接放入 command 这个属性的值中：</p>
+<pre><code>{
+  &quot;label&quot;: &quot;echo&quot;,
+  &quot;type&quot;: &quot;shell&quot;,
+  &quot;command&quot;: &quot;echo 'Hello World'&quot;
+}
+</code></pre>
+<p>我们也可以使用一个新的属性，叫做<strong>args</strong>。它是一个字符串的数组，在运行指定 command 的时候，args 里的每个值都会被当作其参数传入，所以就上面的例子，我们还可以写为：</p>
+<pre><code>{
+ &quot;label&quot;: &quot;echo&quot;,
+ &quot;type&quot;: &quot;shell&quot;,
+ &quot;command&quot;: &quot;echo&quot;,
+ &quot;args&quot;: [
+  &quot;hello world&quot;
+ ]
+}
+</code></pre>
+<p>但这里要注意的是，因为我们使用的是 JSON 来存储这些参数，而 JSON 的数据格式并不一定能够满足 shell 的要求，比如不同的 shell 对空白符、$<!-- [[[read_end]]] --> 符之类的都有不同的解析方式，这时候就需要对这些符号进行转义。我们可以将参数调整为下面的格式：</p>
+<pre><code>&quot;args&quot;: [
+        {
+            &quot;value&quot;: &quot;Hello World&quot;,
+            &quot;quoting&quot;: &quot;escape&quot;
+        }
+]
+</code></pre>
+<p>我们可以看到，args 里的值，从一个字符串，变成一个对象。它的第一个键是 value 值，也就是原先的字符串，而第二个键 quoting 则决定了该如何处理这段字符串。</p>
+<p>quoting在默认情况下是使用<strong>escape</strong>转义，也就是说任务系统会根据我们所使用的 shell 的要求，对这段字符串进行转义。比如说，bash 下我们使用“\”来转义特殊字符，那么当我们执行这个任务时，真正运行的脚本如下：</p>
+<pre><code>echo Hello\ World
+</code></pre>
+<p>从上面的代码示例里，你可以看到空格被转义成了 <code>\</code> 。</p>
+<p>除此之外，“quoting”这个参数还有另外两个值。第一个是 “<strong>strong</strong>”，那么在 bash里， 我们将会使用单引号包裹这段字符串，然后传给脚本，那么最终执行的脚本是：</p>
+<pre><code>echo 'Hello World'
+</code></pre>
+<p>另一个值是 “<strong>weak</strong>”，在 bash 里我们则会使用双引号来包裹这段字符串。如：</p>
+<pre><code>echo &quot;Hello World&quot;
+</code></pre>
+<p>“strong” 和 “weak” 分别对应了 shell 不同的使用引号的策略，而bash、cmd、powershell 也都有各自的策略。如果你不熟悉，可以搜索 “quoting mechanism” 来查找，当然我们在<a href="https://code.visualstudio.com/docs/editor/tasks#_custom-tasks">VS Code关于 Task 参数转义部分的文档</a>也有涉及。</p>
+<p>对了，当你在 VS Code 里编辑这个 tasks.json 文件的时候是提供了自动补全和提示的，所以你可以看看它还支持什么别的属性，也可以试着根据提示进行修改。我们在文章的最后，还会介绍几个其他重要的属性的。</p>
+<h2>结果分析</h2>
+<p>到这里我已经基本把任务系统是如何设置的、如何运行的跟你简单地介绍了一遍，相信你已经可以将一些简单的脚本用任务系统来执行了。但是如果说任务系统只是提供一种新的运行脚本的方式，或者说几个快捷键进行一键的脚本运行的话，那跟集成终端比只能说是往前迈了小小的一步。</p>
+<p>不过，任务系统还有一个真正的威力，就是我们可以自动地去分析任务运行的结果。</p>
+<p>任务运行的结果是由 tasks.json 里任务的一个属性 “<strong>problemMatcher</strong>” 来控制的。我们可以选择 VS Code 内置的，或者其他插件提供的结果分析器，甚至可以自己书写结果分析器来分析任务运行结果，然后将其中出现的错误或者警告，显示在问题面板中。</p>
+<p>比如说我们跑一个构建脚本，有的时候代码写的不对了，构建脚本就会打印出在哪个文件的第几行有一个什么类型的错误，然后我们再借助合适的结果分析器，去解析相对冗余的结果日志，最后把它们塞入问题面板中。这样我们在书写的过程当中，就不需要到结果日志里去找错误和警告了，只需要查看问题面板，点击错误跳转到代码处，直接进行修改就可以了。</p>
+<p>另外，如果我们在运行一些脚本的时候使用了观察模式 （watch mode），那么每次代码有更新，就会重新运行脚本输出日志，这时一个实时分析日志并提供反馈的结果分析器就大大提升效率了。</p>
+<p><strong>VS Code 现在已经自带了以下几种问题分析器</strong>：</p>
+<ol>
+<li><code>$tsc</code>，用于分析 TypeScript 编译的结果，<code>$tsc-watch</code> 则是用于分析运行在观察模式下的 TypeScript 编译器的结果；</li>
+<li><code>$jshint</code>用于分析 JSHint 的结果，<code>$jshint-stylish</code> 用于分析JSHint Stylish的运行结果；</li>
+<li><code>$eslint-compact</code> 和 <code>$eslint-stylish</code> 分别用于分析 ESLint Compact  和 ESLint Stylish；</li>
+<li><code>$go</code> 是 Go 编译器的分析器；</li>
+<li><code>$mscompile</code> 用于分析 CSharp 和 VB 的编译结果；</li>
+<li><code>$lessc</code>  是用于分析 Lessc 的运行结果的；</li>
+<li><code>$node-sass</code> 用于分析 Node Sass 编译结果。</li>
+</ol>
+<p>如果这些还不适用于你的项目，那你可以看看插件市场上有没有问题分析器相关的插件<a href="https://marketplace.visualstudio.com/search?term=problem%20matcher&amp;target=VSCode&amp;category=All%20categories&amp;sortBy=Relevance">Search results - problem matcher | Visual Studio Code , Visual Studio Marketplace</a>，或者看看你使用的语言插件是否已经支持了相对应的结果分析。</p>
+<h2>自定义问题分析器</h2>
+<p>VS Code 还支持我们自己书写结果分析器，不过这个涉及一定的正则表达式的知识，如果你已经有所了解，那么可以继续看下去。如果还未有涉及，还请学习正则表达式，然后阅读下面的示例。</p>
+<p>首先我们将下面的配置，放入任务配置文件 tasks.json。</p>
+<pre><code>{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        {
+            &quot;label&quot;: &quot;echo&quot;,
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;command&quot;: &quot;echo&quot;,
+            &quot;args&quot;: [
+                {
+                    &quot;value&quot;: &quot;index.js:5:3: warning: unused variable&quot;,
+                    &quot;quoting&quot;: &quot;escape&quot;
+                }
+            ],
+            &quot;problemMatcher&quot;: {
+                &quot;owner&quot;: &quot;echo&quot;,
+                &quot;fileLocation&quot;: [&quot;relative&quot;, &quot;${workspaceFolder}&quot;],
+                &quot;pattern&quot;: {
+                    &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,
+                    &quot;file&quot;: 1,
+                    &quot;line&quot;: 2,
+                    &quot;column&quot;: 3,
+                    &quot;severity&quot;: 4,
+                    &quot;message&quot;: 5
+                }
+            }
+        }
+    ]
+}
+</code></pre>
+<p>这个示例，较之前我们介绍的示例，多一个 problemMatcher，其他都是一样的。但是这个 problemMatcher 不再是一个字符串，而是一个对象；我们在这个对象里，自定义了如何去分析任务运行的结果。</p>
+<p>这个任务执行的脚本是：</p>
+<pre><code>echo index.js:5:3:\ warning:\ unused\ variable
+</code></pre>
+<p>在 bash 下执行的结果如下：</p>
+<pre><code>index.js:5:3: warning: unused variable
+</code></pre>
+<p>这是我们通常能够看到的构建或者测试脚本报错时的输出结果，我们需要从中把以下几个信息提取出来：</p>
+<ul>
+<li>文件地址</li>
+<li>行号</li>
+<li>列号</li>
+<li>错误的重要级别</li>
+<li>错误信息</li>
+</ul>
+<p>通过文件的地址、行号和列号，我们能够快速定位到错误的位置，而错误的级别和信息则能够帮助我们了解错误的具体情况。为了把这个信息提取出来，我们将会使用正则表达式的捕获组（group capture）。比如在我们的例子里，我们提供了一个正则表达式：</p>
+<pre><code>&quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;
+</code></pre>
+<p>当我们拿这个正则表达式去匹配下面的字符串时，</p>
+<pre><code>index.js:5:3: warning: unused variable
+</code></pre>
+<p>捕获组 1 对应的是文件的名字，捕获组 2 则是行号，以此类推。然后我们通过给这个任务的 problemMatcher 设置 pattern 来告诉 VS Code，我们想使用什么样的正则表达式去匹配，以及文件名 file、行号 line 、列 column 等该从第几个捕获组读取出来。</p>
+<pre><code>&quot;pattern&quot;: {
+    &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,
+    &quot;file&quot;: 1,
+    &quot;line&quot;: 2,
+    &quot;column&quot;: 3,
+    &quot;severity&quot;: 4,
+    &quot;message&quot;: 5
+}
+</code></pre>
+<p>除了 pattern 这个属性，我们还需要 fileLocation 文件位置来告诉 VS Code，如何在当前文件夹下定位这个文件。比如我们从错误信息里得到 <code>index.js</code> 是一个相对的地址，然后我们通过把 fileLocation 设置为 [“relative”, “${workspaceFolder}”] 来提示 VS Code，请把 <code>index.js</code>当作相对地址，然后在当前文件夹下定位。</p>
+<p>最后，当我们运行了这个任务，我们就能够在问题面板里看到这个错误信息，而当我们点击这个错误时，则能够在编辑器里打开 index.js 这个文件并跳转到第五行。</p>
+<p>上面就是一个非常基础的问题分析器 problemMatcher 了。它能够逐行使用正则表达式分析任务执行的结果，并输出给问题面板。但是如果你的任务执行的结果里，错误信息横跨多行，那么这个分析器就不起作用了。这时候你就需要一个更强大的多行结果分析器，这个我会在后面的 VS Code 高级定制章节里进一步介绍，如果你非常感兴趣现在就想动手试一试的话，也可以阅读<a href="https://code.visualstudio.com/docs/editor/tasks#_defining-a-multiline-problem-matcher">Tasks in Visual Studio Code</a> 自行学习。</p>
+<h2>多任务</h2>
+<p>今天文章的最后，我们来一起聊一聊任务系统里的多任务。</p>
+<p>很多时候，我们的项目并不只包含一种语言、一个框架，这导致我们需要同时使用多种不同的构建或者测试工具，并需要额外写一些脚本把它们同时运行起来。不过不用担心，VS Code 的任务系统也为这种情况提供了便捷的任务定制方案。比如说我们的项目里有前端和后端两种代码，然后我们希望同时把它们运行起来，这时我们就要首先为前、后端分别定义好各自的任务，这里我们将它们称为 “frontend”“backend”。我们可以新建一个任务，内容如下：</p>
+<pre><code>{
+ &quot;taskName&quot;: &quot;compile&quot;,
+ &quot;dependsOn&quot;: [
+  &quot;frontend&quot;,
+  &quot;backend&quot;
+ ],
+ &quot;group&quot;: {
+  &quot;kind&quot;: &quot;build&quot;,
+  &quot;isDefault&quot;: true
+ }
+}
+</code></pre>
+<p>这个任务有个新的属性，叫做 “<strong>dependsOn</strong>”。它指定了“compile”这个任务依赖于 “frontend” 和 “backend” 这两个脚本，而这个任务本身并没有制定任何的命令 （command），同时我们还制定了这个任务为默认的生成任务（build），所以当我们按下 Cmd + Shift + B，我们就能够看到“frontend” 和 “backend” 这两个任务都被触发执行了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/85/b1/855f070a8c1d6753fbab8bc61b513db1.gif" alt="" /></p>
+<center><span class="reference">同时启动 frontend 和 backend 两个任务</span></center>
+<p>通过多任务的设置，我们就真正做到一键运行了。不过要注意，这个功能在 VS Code 里叫做 Compound tasks ，这可能并不是一个特别好记的英文名字。</p>
+<h2>小结</h2>
+<p>以上就是我们今天的全部内容了。VS Code 的任务系统，在我看来，精髓全在这个 tasks.json 的书写，也就是说一个 JSON 对象，控制了任务的方方面面。而我只是根据我的理解和学习方式，为你做了一次梳理：</p>
+<ul>
+<li>
+<p>VS Code 和一些语言相关的插件，能够自动检测我们本地已经有的任务脚本配置，这样我们就能够直接使用任务系统去直接执行它们了。你不妨看看，你的项目里正在使用的任务脚本，是否能够被 VS Code 检测出来？如果不能，那有没有插件能够做到这点呢？</p>
+</li>
+<li>
+<p>我们可以将自动检测出来的任务，以 tasks.json 的形式储存在 .vscode 文件夹中，成为项目的一部分。同时，我们也可以在 tasks.json 中，对它们进行修改定制。</p>
+</li>
+<li>
+<p>除了自动检测，我们还能够自己书写自定义的任务，在书写自定义任务配置时，有以下几个要点：</p>
+<ul>
+<li>在处理脚本或者文件地址的时候，我们要非常小心。比如说在指定 command 的时候，我们使用了绝对地址，那这个地址在其他同事的机器上就不一定存在了；而如果我们使用了当前文件夹下的相对地址，或者说使用预定义变量 <code>${workspaceFolder}</code>，就能很好地避免了这样的问题。</li>
+<li>我们要考虑不同操作系统可能对格式有不同的要求。如果遇到了类似的问题，我们可以为某个特定的操作系统指定配置。</li>
+<li>我们可以指定默认的 Build 或者 Test 任务，以及使用多任务，争取做到一键执行。</li>
+</ul>
+</li>
+<li>
+<p>任务结果的分析也很重要，虽然我们能够去阅读任务脚本的全部输出结果，自己去查找错误，但是如果我们使用了合适的错误分析器，就能够将错误和警告自动放入到问题面板中。</p>
+</li>
+</ul>
+<p>对一个个体而言，任务系统的优势可能还不明显。但是如果你通过设置任务系统、添加错误分析器，把工作流程针对 VS Code 进行一次优化，这样你的同事在使用 VS Code 的时候，也就可以直接使用 VS Code 的任务系统和问题面板了，而无需为命令行脚本工具而烦恼了。</p>
+<p>当然，你熟悉完我上面所讲的那些知识点后，可能还会有更多的问题提出来，我们可以在讨论区里交流。另外，我也鼓励你自己动手调试这个文件，VS Code 为这个文件做了专门的自动补全，所以你可以通过提示来研究学习。由于篇幅所限，我可能无法将任务系统的每个知识点都覆盖到，比如说任务系统的配置支持预定义参数 （<a href="https://code.visualstudio.com/docs/editor/tasks#_variable-substitution">https://code.visualstudio.com/docs/editor/tasks#_variable-substitution</a>），但是这个知识点我们在介绍代码片段里涉及到了，如果你对代码片段的预定义参数很熟悉，这个也就不陌生了。</p>
+<p>总之，如果你遇到什么问题，或者有配置任务系统的经验，都可以留言分享给大家。</p>
+<p>任务系统是个硬骨头，但相信你一定可以攻克难关！</p>
+<hr />
+<p><img src="https://static001.geekbang.org/resource/image/92/06/92862660523add24b3168f22954fa506.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/e8/91/059d8a83.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Ruhm</span>
+                            </div>
+                            <div class="bd">老师好，有个疑问，task 可以引用 vscode extension 里面提供的命令么？比如这样一个需求，写完markdown文档后，通过task一键格式化，并加上toc，再导出html，这些功能是不同的extension提供的，该怎么做？ <br></div>
+                            <span class="time">2018-10-30 16:38</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">felix</span>
+                            </div>
+                            <div class="bd">用Angular想实现输入“ng abc”就等于运行“ng serve --project app-abc --configuration=dev”,输入“ng xyz”就等于运行“ng serve --project app-xyz --configuration=dev”的效果。<br>在package.json里可以直接实现arg参数定义吗？如果不行，用task该怎么写呢？是用&quot;type&quot;: &quot;npm&quot;吗？<br>谢谢<br> <br></div>
+                            <span class="time">2018-10-25 16:04</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/cb/82/d01f40b4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">deiphi</span>
+                            </div>
+                            <div class="bd">老师，我有个疑问，怎么创建一个全局性的任务，不依赖于当前项目的tasks.json，在所有项目里面都可以调用？ <br></div>
+                            <span class="time">2018-10-25 08:41</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
