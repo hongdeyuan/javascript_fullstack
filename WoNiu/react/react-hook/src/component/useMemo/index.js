@@ -1,41 +1,71 @@
 // useMemo(useCallBack) 优化React Hooks 程序的性能
 
-import React, { useState, useMemo} from 'react'
+import React, { useState, useMemo, memo } from 'react'
 
 function Example() {
-  const [dhyuan, setDhyuan] = useState('dhyuan代码狂魔')
-  const [ljc, setLjc] = useState('ljc is a girl')
+  const [step, setStep] = useState(0);
+  const [count, setCount] = useState(0);
+  const [number, setNumber] = useState(0);
 
-  return (
-    <div>
-      {/* {dhyuan} - {ljc} */}
-      <button onClick={() => { setDhyuan(new Date().getTime())}}>dhyuan</button>
-      <button onClick={() => { setLjc(new Date().getTime()+'ljc很漂亮')}}>ljc</button>
-      <ChildComponent name={ljc}>{dhyuan}</ChildComponent>
-    </div>
-  )
-}
-
-function ChildComponent({name, children}) {
-  
-  function changeLjc(name) {
-    console.log(name + '不知道去哪了')
-
-    return name + '去哪儿了'
+  const handleSetStep = () => {
+    setStep(step + 1);
   }
 
-  const actionLjc = useMemo(() => changeLjc(name), [name])
+  const handleSetCount = () => {
+    setCount(count + 1);
+  }
+
+  const handleCalNumber = () => {
+    setNumber(count + step);
+  }
+
+  // React.useEffect(() => {
+  //   setInterval(() => {
+  //     setStep(pre => pre + 1);
+  //   }, 5000);
+  // }, [])
+
+  console.log('render father...')
 
   return (
     <div>
-      <div>
-        {children}
-      </div>
-      <div>
-        {actionLjc}
-      </div>
+      <button onClick={handleSetStep}>step is : {step} </button>
+      <button onClick={handleSetCount}>count is : {count} </button>
+      <button onClick={handleCalNumber}>number is : {number} </button>
+      <hr />
+      <Child step={step} count={count} number={number} /> <hr />
+      <ChildMemo step={step} count={count} number={number} />
     </div>
-  )
+  );
 }
+
+const Child = (props = {}) => {
+  console.log(`--- re-render ---`);
+  return (
+    <div>
+      {/* <p>step is : {props.step}</p> */}
+      {/* <p>count is : {props.count}</p> */}
+      <p>number is : {props.number}</p>
+    </div>
+  );
+};
+
+const isEqual = (prevProps, nextProps) => {
+    if (prevProps.number !== nextProps.number) {
+        return false;
+  }
+  return true;
+}
+
+const ChildMemo = memo((props = {}) => {
+    console.log(`--- memo re-render ---`);
+    return (
+        <div>
+            {/* <p>step is : {props.step}</p> */}
+            {/* <p>count is : {props.count}</p> */}
+            <p>number is : {props.number}</p>
+        </div>
+    );
+}, isEqual);
 
 export default Example
