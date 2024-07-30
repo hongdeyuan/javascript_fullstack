@@ -4,6 +4,12 @@ const path = require('path')
 
 http.createServer((req, res) => {
   const filePath = path.join(__dirname, req.url)
+    if (path.normalize(decodeURI(req.url)) !== decodeURI(req.url)) {
+        res.statusCode = 403;
+        res.end();
+        return;
+    }
+
   fs.stat(filePath, (err, stats) => {
     if (err) {
       res.statusCode = 404
